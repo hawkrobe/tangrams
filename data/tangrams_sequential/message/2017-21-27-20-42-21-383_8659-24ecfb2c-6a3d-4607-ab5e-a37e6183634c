@@ -1,0 +1,157 @@
+gameid,time,roundNum,occurrenceNum,sender,intendedName,timeElapsed,contents
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490647360229,1,1,matcher,I,7319,hello there, director :-) i await your instructions!
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490647365958,1,1,director,I,11127,hey! it's the dude who's standing on one leg
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490647377227,1,1,director,I,5582,the other leg is stretched out to the right
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490647394179,1,1,matcher,I,20750,okey doke. i think i know what you mean
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490647419600,2,1,director,F,16405,yay! okay this one is in a reclining position
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490647435016,2,1,director,F,9585,you can't see the arms, the feet are to the left
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490647445587,2,1,matcher,F,7061,does it almost look like he's sitting with his knees up a little?
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490647448848,2,1,director,F,768,yes
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490647486811,3,1,director,G,20660,awesome! this one has both arms stretched out behind him (to the right), one really high and one really low
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490647518378,4,1,matcher,K,4504,let's hope i can keep this up lol
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490647551553,4,1,director,K,41729,lol good luck! standing up, weird triangle to the right that's one arm i think, and the left knee is up
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490647583645,4,1,director,K,7082,the top is almost like two diamonds on top of each other
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490647627890,4,1,matcher,K,47574,hmm. i'm having a tough time with this one~~~ just gonna go for it haha
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490647648058,5,1,director,H,3045,did we get that right?
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490647652100,5,1,matcher,H,1874,it says we did :-)
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490647655548,5,1,director,H,1416,sweet
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490647686635,5,1,director,H,23288,okay, this one is upright, no arms or legs sticking out so it's mostly rectangular
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490647703554,5,1,matcher,H,2744,i think i know what ya mean
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490647712894,6,1,matcher,C,1201,got it :-)
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490647730452,6,1,director,C,15429,yay! this dude is freaking out. both arms in the air~~~ doesn't have legs~~~
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490647742138,7,1,matcher,E,2460,that one was easy :D
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490647762865,7,1,director,E,16659,yup. okay, windmill head~~~ sitting down with knees up
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490647834228,8,1,director,B,42901,umm this one barely looks like a person? there's a square and triangle on top
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490647864333,8,1,director,B,16707,and then two partial triangles pointing left in the middle and bottom
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490647875471,9,1,matcher,L,1353,got it :-)
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490647904176,9,1,director,L,26596,yay! this one has knees bent but is standing. looks like he's offering something
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490647937406,10,1,matcher,D,11772,you're really good at describing these btw. i'm kinda glad i didn't get picked to be the director haha
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490647944882,10,1,director,D,24796,standing up, upside down graduation hat sticking out to the left
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490647949310,10,1,director,D,3971,haha yeah it's hard :p
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490647983423,10,1,director,D,6498,or wait is that a right side up graduation hat?
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490647985416,10,1,matcher,D,4219,hmm having a little trouble with this one
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490647997360,10,1,matcher,D,11633,i have no idea haha, i've never been to a graduation ceremony :p
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648018450,10,1,director,D,13438,okay, it's an upside down triangle with a square under it
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648024195,10,1,matcher,D,13461,it's not the guy who looks like an enormous bird, is it? no, his thing is sticking out to the right
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648040134,10,1,director,D,4831,nah
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648052356,10,1,director,D,4535,his feet are a triangle to the left too
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648086019,11,1,matcher,A,3683,dang, got that one wrong :-( sorry!
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648093637,11,1,director,A,8147,aww man. we couldn't keep it up forever!
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648108232,11,1,matcher,A,12179,lol. sorry!! he reminds me of a monk in a big robe haha~~~ oops~~~
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648164736,11,1,director,A,53539,this one is standing, left leg is up, kind of cyclopsy cause his head is leaning way back instead of being at the normal spot
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648184314,11,1,matcher,A,6350,does it look like he has enormous triangle shaped boobs?
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648192902,11,1,director,A,3742,nope lol
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648200633,11,1,director,A,5393,the leg that's up is the one on the left
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648209450,11,1,matcher,A,15033,oh okay haha. hmm ~~~~~~~~~ and it's not enormous bird guy?
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648220422,11,1,director,A,4668,i think it is bird guy
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648228403,12,1,matcher,J,1009,it was!
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648231317,12,1,director,J,949,yay!
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648261219,12,1,director,J,18144,this one is almost entirely a square except the right part is jagged
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648274615,13,2,matcher,A,3387,that one was easy .~~~ phew
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648278762,13,2,director,A,754,sweet
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648284332,13,2,director,A,4433,this is bird man again
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648319518,14,2,director,F,14393,sitting down with knees up, facing left. no arms
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648332431,15,2,matcher,G,959,woot
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648353877,15,2,director,G,19694,yay! this is the one with arms stretched behind him, we had him before
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648375215,15,2,matcher,G,5648,hmm. i don't remember that one~~~ freaking out guy?
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648385140,15,2,director,G,8028,sitting down
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648386865,15,2,director,G,1473,nope
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648392418,15,2,director,G,2308,arms are to the right
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648447671,15,2,director,G,12402,legs are straight horizontal to the left
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648469592,15,2,matcher,G,7418,they don't look like the bottom of a hockey stick, do they?
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648471304,15,2,matcher,G,1512,the legs i mean
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648493751,15,2,director,G,9594,i don't know what a hockey stick looks like
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648498151,15,2,director,G,4063,it's kind of a parallelogram
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648499624,15,2,matcher,G,4128,lol ok i'm just gonna guess
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648506827,16,2,director,H,1095,yay!
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648509636,16,2,matcher,H,4591,kinda surprised i got that one right haha
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648516672,16,2,director,H,2089,good job
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648522357,16,2,matcher,H,1514,thanks :D
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648541952,16,2,director,H,20676,this one has no arms or legs and is kinda bent towards the right
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648562045,17,2,matcher,L,1072,got it woo
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648588157,17,2,director,L,22840,yes! um, creepy knees bent dude offering something, arms to the right
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648594781,17,2,director,L,5155,we should start nicknaming these guys
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648601516,17,2,matcher,L,4298,we really should haha
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648610634,18,2,director,C,2781,let's call that one the nun
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648621990,18,2,matcher,C,3776,hahha works for me
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648626927,18,2,director,C,3064,this is crazy arm waver
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648661217,19,2,director,I,8322,enormous boobs! i've been waiting for this one
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648666317,19,2,matcher,I,1592,OMG ME TOO haha
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648674271,20,2,director,B,1023,lol!
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648727418,20,2,director,B,46654,this is the non human that i guess is sitting down? with a hood on that's triangle shaped? and then a square and triangle to the right of his hood
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648797090,21,2,matcher,E,4787,whoo, wasn't sure i'd get that one haha
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648804395,21,2,director,E,5018,yeah, it's a weird one
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648808874,21,2,director,E,3031,windmill head is back
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648825314,22,2,director,J,6244,square dude with a jagged right side
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648867816,23,2,director,D,13125,yay! did we figure out graduation hat because this is him again
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648885346,23,2,matcher,D,11183,i think so, the one i thought looked like a monk, i think
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648893196,24,2,matcher,K,964,yep!
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648894541,24,2,director,K,781,nice!
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648946721,24,2,director,K,44328,umm, a diamond head on top of a diamond torso, then triangle arm to the right, triangle knee sticking up on the left
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648973374,24,2,matcher,K,10643,the one who looks kinda like the nun, but with a sharp edge on the left?
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648985047,24,2,director,K,978,yes
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649002214,25,3,director,G,5708,dude with arms stretching out behind him
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649027078,26,3,director,I,2725,enormous boobs!
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649042019,27,3,director,H,5677,no arms no legs, bent right
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649058070,28,3,director,J,6130,square with the jagged right
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649077413,29,3,director,K,6052,the one that's like the nun but isn't
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649097416,30,3,director,D,9606,we're killing it now! monk/graduation hat
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649118062,31,3,matcher,A,11377,yeah, i think we're gettng more familiar with some of them. some of them i'm still not sure of though lol
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649132140,31,3,director,A,10240,we'll figure it out. bird man is back!
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649143130,32,3,director,L,1122,nun!
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649166864,33,3,director,B,8012,hoodie dude with the square and triangle
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649185927,34,3,matcher,F,7355,phew. wasn't sure about that one haha
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649201968,34,3,director,F,13163,you got it! sitting down, knees up to the left
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649212373,35,3,director,C,1562,crazy arms
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649220768,36,3,director,E,1729,windmill head
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649237546,37,4,director,K,4243,the nun that isn't the nun
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649248367,38,4,director,E,2632,windmill head
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649261877,39,4,director,F,5685,sitting down, knees up to left
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649274671,40,4,director,D,6133,i'm gonna call that one lazy boy btw
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649280738,40,4,matcher,D,1600,works for me haha
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649282154,40,4,director,D,5114,this is the monk
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649298354,41,4,director,H,4779,no arms or legs, bent right
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649309817,42,4,matcher,I,4136,can we just call that one "the blob" lol
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649318813,42,4,director,I,2316,works for me
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649324477,42,4,director,I,2902,enormous boobs!
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649335625,43,4,director,B,3610,hoodie dude
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649343572,43,4,matcher,B,2894,w/the square and triangle?
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649346501,43,4,director,B,832,yup!
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649353365,44,4,director,A,963,bird man
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649372894,45,4,director,G,5623,arms behind him to the right
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649393297,46,4,director,J,4622,square with the jagged edge
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649403046,47,4,director,C,1220,crazy arms
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649414130,48,4,director,L,1362,the nun!
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649427449,49,5,director,C,2167,crazy arms
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649437487,50,5,director,I,1311,boobs
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649451297,51,5,director,J,3443,square w jagged edge
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649461387,52,5,director,E,1024,windmill
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649473041,53,5,director,F,1208,lazy boy
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649480558,54,5,director,D,508,monk
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649491158,55,5,director,H,2211,blob
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649500654,56,5,director,A,1228,bird man
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649510721,57,5,director,K,1749,weirdo nun
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649522880,58,5,director,G,4186,arms behind him dude
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649535694,59,5,matcher,B,2904,crap, sorry, got em mixed up
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649539154,59,5,director,B,4297,aww man
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649543327,59,5,director,B,2685,we were on a roll
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649551553,59,5,director,B,6837,this is the one you just guessed
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649551729,59,5,matcher,B,6171,i knooow :'( i thought we'd get em all from here on out!!
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649561703,59,5,director,B,2582,so close!
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649573746,59,5,matcher,B,4395,which one? sorry i forget that one lol
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649576499,59,5,director,B,1921,mr. hoodie
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649588887,60,5,director,L,2372,nun
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649602291,61,6,director,A,969,bird man
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649611273,62,6,director,E,1213,windmill
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649619659,63,6,director,H,778,blob
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649641131,64,6,director,G,10885,arms behind him to the right, legs to left
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649654242,65,6,director,F,1432,lazy boy
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649663258,66,6,director,K,1993,weirdo nun
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649673981,67,6,director,C,1584,crazy arms
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649685093,68,6,director,J,3260,square w jagged edge
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649694022,69,6,director,I,722,boobs
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649703322,70,6,director,D,2922,monk
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649718679,70,6,matcher,D,18471,we're getting to the end, so i just wanted to say you were a pleasure to work with :-) thanks for putting up w/my slow pace.~~~~~~ this took way longer than it hsould have lol
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649749536,71,6,director,L,23685,haha no worries you've been great! thanks for working with my weird descriptions
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649757995,71,6,director,L,3040,nun is back
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649775905,72,6,director,B,6790,and for the last one, it's mr hoodie.

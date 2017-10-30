@@ -1,0 +1,142 @@
+gameid,time,roundNum,occurrenceNum,sender,intendedName,timeElapsed,contents
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490644125636,1,1,matcher,C,5459,hello
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490644133775,1,1,director,C,2533,hihi
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490644149725,1,1,director,C,14519,choose the picture that looks like a man holding two hand up in the air
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490644182051,2,1,matcher,H,7088,ready for details
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490644182566,2,1,director,H,27143,man kneeling straight
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490644195044,2,1,director,H,2734,hands to the side
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490644200428,2,1,director,H,1743,looking right
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490644235054,3,1,matcher,E,1031,ready
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490644296654,3,1,director,E,12840,looks like a man sitting down with two triangles on its head
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490644301183,3,1,director,E,2870,looking to the right
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490644332007,4,1,director,I,15743,looks like a man facing left with to hands and a foot in the air
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490644336089,4,1,director,I,929,two*
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490644388887,5,1,director,G,29758,a man with his two hands point right and a foot pointing right and his head and another foot facing left
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490644414354,5,1,director,G,7804,standing like he's dancing
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490644448319,6,1,matcher,A,16698,sorry - that was facing left
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490644458879,6,1,director,A,8078,it's fine hard to explain for me lol
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490644483911,6,1,director,A,21952,man standing with right food in the air head facing right both arms in the air
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490644487957,6,1,director,A,1158,foot*
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490644519391,7,1,matcher,D,6619,thought i had that one - urggg
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490644543856,7,1,director,D,33294,man standing straight looking left and down with hands straight wfoward like he's reading something
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490644587048,8,1,matcher,J,2149,yay!
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490644631944,8,1,director,J,41504,figure is standing up and has his hands to the right  and his head is like in a perfect diamond shape position
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490644710705,9,1,director,B,27767,figure is on his knees and facing right one hand to the left and another to the right
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490644725590,9,1,director,B,14422,you can see one of his feet from kneeling on the left side
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490644790162,10,1,director,K,20567,figure looks like he's praying and looking up facing the right
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490644818557,11,1,matcher,L,3678,chose left again
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490644868735,11,1,director,L,37825,same kind of picture with a man looking up like he's praying he looks like he's squatting with his knees bending to the right
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490644879398,11,1,director,L,2936,facing the right side
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490644935542,12,1,director,F,16855,figure sitting down with his legs out looking down
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490644943647,12,1,director,F,3856,facing left
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490644987815,13,2,director,H,26350,figure sanding straight with arms at his side.~~~~~~looks a little fatter lol
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490644992213,13,2,director,H,2024,facing right
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490644999086,13,2,director,H,2519,standing*
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490645056977,14,2,director,G,25709,figure looks like they are dancing with hands in the air to the right and one foot sticking out to the right
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490645096158,15,2,matcher,L,8546,2 in a row - hope this continues
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490645119199,15,2,director,L,32111,figure has knees bent a little to the right 
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490645195277,16,2,director,J,34686,figure is standing up with one hand pointing right 
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490645223484,16,2,matcher,J,5166,facing?
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490645250734,16,2,director,J,22013,looks like he's facing right but not looking anyway, perfect diamond shape not tilting any way
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490645291046,17,2,director,C,16337,figure looks like he's flying to the left with both hands in the air
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490645360854,18,2,director,E,18264,figure is sitting down facing left and with two triangle shapes on his head
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490645368398,18,2,director,E,2240,facing r ight*
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490645461534,19,2,director,I,16856,the last picture you choose of the guy flying that was wrong lol
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490645468606,19,2,director,I,5359,he has a foot in the air
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490645489583,19,2,matcher,I,9772,oh my    
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490645510607,19,2,director,I,12631,both hand in the air facing left he looks like he's ice skating
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490645546652,20,2,director,A,17048,figure has right foot in the air standing straight and looking to the right
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490645556502,20,2,director,A,8400,body facing left head faicing to the right
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490645591630,21,2,director,D,11409,figure looks like he's reading something head tilted down and facing left
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490645645855,22,2,director,B,31831,figure is on their knees facing right with both hands in the air  head titling right and down
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490645660235,22,2,matcher,B,34233,we should name these figures to go faster maybe
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490645668968,22,2,director,B,5037,yeah i think so too
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490645723887,22,2,director,B,19192,i'll describe and if you get it right then we can name the picture something you would remember
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490645770622,22,2,matcher,B,37025,or a number but struggling with this one
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490645812752,22,2,director,B,26991,they look like they are sliding on their knees one hand to the left and one to the right and head facing right and down
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490645890927,23,2,matcher,F,34975,lets call that last one  the number 1
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490645898042,23,2,director,F,1334,ok
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490645927227,23,2,director,F,20896,this one is a man sitting down with legs out facing left his head is down
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490645936288,23,2,director,F,3152,like he is napping
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490645966226,24,2,matcher,K,2541,that ones 2
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490646030077,24,2,director,K,64661,figure looks like they are on their knees looking up, (not the one with the knees bent they exactly the same though)
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490646052273,24,2,director,K,8533,figure is facing right
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490646129497,25,3,matcher,D,1155,dammit
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490646144535,25,3,matcher,D,11779,now i cant remember which one it was to label it 3
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490646188971,25,3,director,D,62776,figure is facing left standing up with hands to the left looking down like he's reading something
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490646240635,26,3,matcher,B,24226,3
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490646253468,26,3,director,B,16407,ok this one is #1 --the one that looks like they are sliding
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490646276240,27,3,matcher,J,1830,nice!
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490646285451,27,3,director,J,14151,figure is standing up looks fatter and has a hand pointed to the right
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490646322345,28,3,matcher,F,33871,4
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490646342555,28,3,director,F,1381,2
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490646344867,28,3,director,F,711,#2
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490646352635,28,3,director,F,4621,man looks like he's sleeping
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490646384839,29,3,director,L,24765,knees bent facing right with a hand facing right
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490646419220,30,3,matcher,K,41513,5
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490646472356,30,3,director,K,34595,skinnier verson of the a person kneeling to the right with a hand to the right 
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490646491757,31,3,matcher,H,69416,6
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490646515158,31,3,director,H,31215,fatter figure with hands to the side standing up
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490646534290,32,3,matcher,E,36641,7
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490646558038,32,3,director,E,17232,figure sitting facing right with two triangles on it's head
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490646576370,33,3,matcher,A,12547,8
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490646625142,33,3,director,A,35523,figure standing up right foot in the air.~~~~~~hands in the air~~~~~~~~~body facing left and head facing right
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490646648280,34,3,matcher,G,69901,9
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490646673295,34,3,director,G,5461,figure looks like they are dancing
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490646690536,35,3,matcher,I,39738,10
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490646710599,35,3,director,I,4302,figure looks like they are skating
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490646732029,36,3,matcher,C,33184,11
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490646747666,36,3,director,C,12064,figure looks like they are flying with both hands in the air
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490646786214,37,4,matcher,H,18523,12
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490646794090,37,4,director,H,909,#7
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490646795646,37,4,matcher,H,6219,is that all 12 labeled?
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490646798689,37,4,director,H,447,yeah
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490646820777,38,4,matcher,I,2853,awesome
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490646821232,38,4,director,I,1583,11
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490646834137,39,4,director,C,614,12
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490646846618,40,4,director,J,604,4
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490646885258,41,4,director,A,579,9
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490646912195,42,4,director,D,349,3
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490646931564,43,4,director,E,199,8
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490646957564,44,4,director,K,183,6
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490646985516,45,4,director,L,567,4
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490647002733,46,4,director,G,4920,oops i had that wrong
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490647007895,46,4,matcher,G,3018,thats ok
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490647015854,46,4,director,G,2032,10
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490647027227,46,4,matcher,G,16333,my hit timed out but ill finish this
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490647050850,47,4,director,F,384,2
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490647073680,48,4,director,B,8193,just message them did you submit?
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490647093039,48,4,matcher,B,10796,no i didn't submit it
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490647120652,48,4,matcher,B,14141,its ok - lets get you a nice bonus!
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490647142099,48,4,director,B,380,1
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490647189683,49,5,director,A,10513,9
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490647230397,50,5,director,J,721,4
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490647258778,51,5,director,I,926,11
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490647273618,52,5,director,G,592,10
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490647296708,53,5,director,E,247,8
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490647313300,54,5,director,C,15504,not sure how to look up their email but this is their TO site
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490647314847,54,5,director,C,1102,https://turkopticon.ucsd~~~edu/A1BOIDKD33QSDK
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490647337689,54,5,director,C,21510,i think if you send them an email with the code they make you a hit or something cause this takes forever X_X lol
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490647338002,54,5,matcher,C,15353,please don't even worry about it.  I do this for fun more than for the money
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490647353005,54,5,director,C,935,12
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490647356741,54,5,director,C,942,ok lol
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490647380253,55,5,director,D,608,3
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490647404166,56,5,director,K,392,6
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490647426574,57,5,director,L,559,5
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490647448446,58,5,director,H,574,7
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490647462176,59,5,director,F,632,2
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490647479147,60,5,director,B,747,1
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490647503503,61,6,director,H,1415,7
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490647522179,62,6,director,I,1263,11
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490647538648,63,6,director,A,840,9
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490647553285,64,6,director,E,323,8
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490647565046,65,6,director,G,479,10
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490647581160,66,6,director,J,639,4
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490647600970,67,6,director,F,366,2
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490647615530,68,6,director,K,927,6
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490647643058,69,6,director,B,335,1
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490647661003,70,6,director,C,9391,12
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490647680666,71,6,director,L,1015,5
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490647705861,72,6,director,D,768,3
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490647712177,72,6,director,D,5215,thanks for sticking around!
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490647733274,72,6,matcher,D,7187,no problem

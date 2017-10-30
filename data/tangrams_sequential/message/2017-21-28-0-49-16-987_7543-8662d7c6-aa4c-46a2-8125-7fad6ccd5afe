@@ -1,0 +1,265 @@
+gameid,time,roundNum,occurrenceNum,sender,intendedName,timeElapsed,contents
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662176366,1,1,matcher,I,1839,hi
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662179035,1,1,director,I,1176,hi
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662200501,1,1,director,I,17296,it has a tail
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662234719,1,1,matcher,I,11173,standing on one leg?
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662238329,1,1,director,I,986,yes
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662274251,2,1,matcher,K,4077,this is neat
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662281866,2,1,director,K,8200,looks like pacman
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662293009,2,1,director,K,8861,when he's chomping
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662329750,2,1,matcher,K,4256,is it knealing?
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662339209,2,1,director,K,1684,sort of
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662352613,3,1,matcher,B,2968,darn it sorry
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662359311,3,1,director,B,3891,it's ok
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662384667,3,1,director,B,21981,this one kind of look like a bow in a girl's haar
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662387851,3,1,director,B,1475,oops
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662390069,3,1,director,B,1403,hair
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662407884,4,1,matcher,D,1758,nuts
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662410023,4,1,matcher,D,1121,lol
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662418765,4,1,director,D,8205,it was close:)
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662458578,4,1,director,D,26155,this one like a monk
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662469428,4,1,director,D,6907,holding something in his hand
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662486862,4,1,matcher,D,4563,facing left or right?
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662493424,4,1,director,D,3521,facing left
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662514112,5,1,matcher,G,1318,yay
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662517789,5,1,director,G,1527,yay
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662526894,5,1,director,G,8761,can we survive 72 rounds
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662535901,5,1,matcher,G,4409,yes! lol
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662546409,5,1,director,G,5254,someone doing the tango
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662582505,5,1,matcher,G,9918,do you think it looks like a shoe?
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662623354,5,1,director,G,21430,a shoe with a heal but the top doesn't look like a shoe
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662683966,6,1,matcher,E,14046,3 whole cents for the bonus! yay! lol
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662685259,6,1,director,E,11293,someone meditating facing right
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662743971,7,1,matcher,H,15161,I bet your end is hard trying to describe these lol
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662771405,7,1,director,H,8569,yes they are starting to look alike
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662821176,7,1,director,H,47591,this one looks like someone sitting on they have no arms
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662850981,7,1,matcher,H,4317,which way they facing?
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662857523,7,1,director,H,10521,just a triangle head
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662886343,7,1,director,H,1307,right
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662902506,8,1,director,L,4159,wow you got that one
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662909237,8,1,matcher,L,1728,lol
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662913253,8,1,director,L,1679,your good
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662926697,8,1,director,L,10146,this one looks like a woman
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662926854,8,1,matcher,L,3040,your clues are good
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662934936,8,1,director,L,3109,facing right
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662963579,8,1,matcher,L,13885,look like she sitting on knees?
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662978144,8,1,director,L,788,yes
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662981462,8,1,matcher,L,4729,hunch backed as well?
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663018417,9,1,matcher,F,10773,wasn't the one I was thinking sorry
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663022435,9,1,director,F,13672,sleeping man leaning against something
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663027120,9,1,director,F,1478,it's ok
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663058989,9,1,director,F,4932,facing left
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663081026,10,1,director,A,11886,this one looks like their looking at their feet facing left
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663107955,11,1,matcher,C,5446,I hit the wrong one!
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663127346,11,1,matcher,C,10857,thought I was closer to the other one grrr.~~~~~~lol~~~~~~
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663151896,11,1,matcher,C,21087,I hope this does not take to long I am cutting it close. OH NO!
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663185973,11,1,director,C,41037,a singer leaning backwards with arms raised upwards
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663239712,11,1,matcher,C,11617,does it look like they are falling backwards?
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663254641,11,1,director,C,1180,yes
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663291984,12,1,director,J,16994,this looks like a triangle sitting on top of a half square
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663331826,12,1,matcher,J,19046,is it the square part cracked or jagged looking?
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663342684,12,1,director,J,2437,jagged
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663390991,13,2,director,J,6140,same as the last round
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663405240,13,2,matcher,J,2304,jagged?
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663408464,13,2,director,J,1359,yes
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663422239,14,2,director,E,8430,didnt think we would get the same image in a row
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663437224,14,2,director,E,13075,this one looks like alice has her head in a book
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663452160,14,2,director,E,1948,facing right
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663457575,14,2,matcher,E,4430,facing left or right?
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663468437,14,2,director,E,1143,right
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663498951,14,2,matcher,E,14374,knees or squatting?
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663500006,14,2,director,E,11834,she has a bow her hair
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663541586,15,2,director,K,3497,a geisha
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663543185,15,2,director,K,2787,facing right
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663556702,15,2,director,K,6405,with the bow behind her
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663601754,16,2,director,F,7981,this is the man leaning against the wall again
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663631045,17,2,director,I,5572,standing on leg
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663649314,17,2,matcher,I,6851,one leg left or right?
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663650105,17,2,director,I,8245,looks like chicken
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663654282,17,2,director,I,2607,facing left
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663690644,18,2,matcher,G,7994,30 minutes to go for me lol
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663694402,18,2,director,G,4591,lady doing th tango
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663720097,19,2,director,C,6603,lady with arms facing upwards
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663782589,19,2,matcher,C,6898,knees or squatting?
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663791841,19,2,director,C,5371,like she's falling backways
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663795441,19,2,director,C,3374,with arms in the air
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663825728,20,2,director,H,5639,we didn't get this one the first time
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663825729,20,2,director,H,699,hmm
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663897535,20,2,director,H,17402,sitting lady liike\
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663907071,20,2,director,H,8098,with kness facing right
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663946519,21,2,director,L,1320,darn
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663968254,21,2,matcher,L,6219,its ok
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663978939,21,2,director,L,19873,geisha carrying something facing right
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664037562,22,2,director,B,16431,this one faces left 
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664046092,22,2,director,B,4813,pointy nose
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664088170,22,2,director,B,1219,ok
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664104619,22,2,director,B,3504,kneeling
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664107905,22,2,director,B,2763,facing left
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664144810,23,2,director,D,1338,wow 
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664165977,23,2,director,D,13231,this one is like the other but standing
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664178218,23,2,director,D,7073,or carrying something facing left
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664222392,24,2,director,A,5486,looking at feet
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664224611,24,2,matcher,A,8835,hit the wrong one! lol
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664248309,24,2,matcher,A,5820,facing left or right?
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664252056,24,2,director,A,5647,or facing left
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664255364,24,2,director,A,2031,one foot up
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664289037,25,3,director,C,7085,arms open facing up
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664299493,25,3,director,C,3435,falling backwards
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664316609,25,3,director,C,5145,not the one with the long dress
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664356653,26,3,director,A,6545,looking wtih one foot up
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664381714,26,3,matcher,A,4942,head thrown back?
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664390538,26,3,director,A,5752,no looking at the foot
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664437079,26,3,director,A,3018,head down
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664442662,26,3,matcher,A,7478,sitting or standing?
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664447757,26,3,director,A,3453,standing 
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664478108,27,3,matcher,J,13562,that was the one one with the head thrown back
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664479285,27,3,matcher,J,692,lol
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664480861,27,3,director,J,15157,triangle on top of a jagged square
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664499273,28,3,director,I,8114,this one is the one\\\\
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664524183,28,3,director,I,14154,like a chicken about the look at the ground
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664529307,28,3,director,I,1880,facing left
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664547583,29,3,director,G,3867,we're half way there
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664552110,29,3,matcher,G,13353,nicely played!
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664558412,29,3,director,G,7493,lady dancing facing right
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664578430,30,3,director,F,5409,man sitting back against the wall
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664582940,30,3,director,F,1477,facing left
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664588986,30,3,matcher,F,16723,20 cents for bonus so far woot woot
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664616422,31,3,director,B,8237,kneeling facing left
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664674439,32,3,matcher,E,15668,I did it again clicked when I thought I was on the right one 
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664675492,32,3,director,E,14973,sitting facing right with back against the wall
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664704377,33,3,director,D,17617,monk facing left
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664727172,33,3,director,D,14089,i'm sure the time pressure is getting to both of us
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664806769,34,3,director,H,11305,sitting lady like with knees facing right
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664819700,34,3,matcher,H,23675,its ok. on the time~~~~~~we will get through this one way I promise
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664823062,34,3,director,H,5564,no hands or feet
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664844354,35,3,director,L,6780,kneeling with a book
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664848374,35,3,director,L,1962,facing right
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664874594,36,3,matcher,K,9071,I swear I know my directions lol
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664901021,36,3,director,K,9642,this one looks just like the one before
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664911653,36,3,director,K,9872,except
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664937066,37,4,director,A,7349,looking at the ground with one foot up
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664944276,37,4,matcher,A,10469,sorry I seen you typed except 
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664955617,38,4,director,E,1682,it's ok
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664964050,38,4,director,E,7082,sitting with back against the wall facing right
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664971692,38,4,matcher,E,11361,how much time do you have left on your end?
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664976760,38,4,director,E,11002,we're doing the best we can
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664993177,39,4,matcher,H,5703,yes we are
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665002172,39,4,director,H,14160,stting lady like, knees facing right
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665020388,39,4,director,H,4234,nothing in hands
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665042828,40,4,director,D,3589,monk facing left
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665046890,40,4,director,D,3693,carrying something
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665050851,40,4,matcher,D,19069,try to remember what you used before that is easier for me 
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665078673,41,4,director,K,8741,geisha with bow behing her
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665084668,41,4,director,K,1000,standing
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665108743,41,4,director,K,4435,the bow is on the right
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665168661,42,4,director,J,17927,the triangle on top the jagged square
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665192594,43,4,director,I,8813,the one legged chicken 
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665221593,44,4,director,B,7510,the kneeling one facing left
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665245131,45,4,director,L,8740,the lady like with the book facing right
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665259236,45,4,director,L,13604,we can't seem to get the other one lol
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665288610,45,4,director,L,10489,or can this one be a chicken singing
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665301182,45,4,director,L,5550,with mouth open to the right
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665333127,46,4,director,G,1622,daning tango
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665363700,46,4,director,G,6526,i have about 20 mins
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665377717,47,4,director,C,3640,arms upwards
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665380919,47,4,matcher,C,6035,mine expired
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665381421,47,4,director,C,3271,falling backwards
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665399519,48,4,director,F,8364,sitting with back against the wall
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665408999,48,4,matcher,F,16298,screen shot it and email him I guess is what I will do.
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665409517,48,4,director,F,5548,facing left
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665434318,49,5,director,J,11786,trianle on jagged suqare
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665437653,49,5,director,J,611,oops
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665449093,50,5,director,F,2948, they honor it
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665450613,50,5,director,F,985,for you
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665463331,50,5,matcher,F,8575,they better if I have a code lol
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665464943,50,5,director,F,11466,back against the wall facing left
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665470726,50,5,director,F,1036,sitting
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665471766,50,5,matcher,F,6212,are you new to mturk?
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665489245,50,5,director,F,9759,been trying at it since 2015
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665504754,51,5,director,C,5580,falling arms facing upwards
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665520949,51,5,matcher,C,21484,a little over a year for me full time. and most will if you email them
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665536189,51,5,matcher,C,4478,falling backwards one?
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665539482,51,5,director,C,461,yes
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665563886,52,5,director,I,2476,one leg
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665573107,52,5,director,I,8459,standing on one leg
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665578545,52,5,director,I,4115,I'm trying full time 
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665588794,52,5,matcher,I,6304,head thrown bach?
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665593005,52,5,director,I,14219,can't seem to earn more than about 15o a weeks
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665603576,52,5,director,I,3044,facing left
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665617525,52,5,director,I,11139,this one you asked if was standing on one leg
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665650139,53,5,director,L,2043,yes!
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665662015,53,5,director,L,7319,sitting lady like book facing right
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665673328,53,5,matcher,L,24781,there are 2 here working this full time and make over 300 a week
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665692163,53,5,director,L,18342,i think is how we described this
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665701778,53,5,matcher,L,11644,knees or squatting?
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665712051,53,5,director,L,2728,knees
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665720750,54,5,matcher,K,2261,squatting
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665723696,54,5,director,K,11223,did
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665725428,54,5,matcher,K,3085,lol its ok
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665727396,54,5,director,K,720,oops
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665757978,54,5,director,K,15207,this the geisha
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665770152,54,5,director,K,9488,witht he bow behind
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665778192,55,5,director,D,471,grr
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665780735,55,5,director,D,750,monk
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665783946,55,5,matcher,D,3226,its ok 
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665790009,55,5,matcher,D,1599,facing?
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665794334,55,5,director,D,657,left
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665808078,56,5,director,G,11741,it's kind of tedious
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665809564,56,5,director,G,985,tango
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665812941,56,5,matcher,G,3530,36 in bonus lol
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665834839,57,5,director,B,13677,this is the one you thought I was talkign about when I said geisha
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665854416,58,5,director,A,2097,one leg up
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665859276,58,5,director,A,3728,looking down at the foot
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665875259,58,5,matcher,A,8013,heaD thrown back?
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665888816,58,5,director,A,9142,head looking to the ground
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665892541,58,5,director,A,480,wait
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665908801,58,5,director,A,4752,two legs
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665912833,58,5,matcher,A,6870,leg up behind him?
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665919178,58,5,director,A,7095,one up one down
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665922048,58,5,matcher,A,2320,or in front?
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665926060,58,5,director,A,1134,in front
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665937765,59,5,matcher,E,1091,nice
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665940873,59,5,director,E,6887,sitting alice with head in a book
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665946644,59,5,director,E,3574,back agaisnt the wall
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665949747,59,5,director,E,2322,facing righ
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665975769,60,5,director,H,10802,this one we get mixed up on
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665986113,60,5,director,H,9596,the lady facing right
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665994371,60,5,director,H,6300,with her knees facing right
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665994745,60,5,director,H,1188,no book
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666034495,61,6,director,C,4372,falling backwards
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666041184,61,6,director,C,5887,arms open upwards
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666054383,62,6,director,H,5881,repeat on the lady no book
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666062605,62,6,director,H,5825,knees facing right
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666083737,63,6,matcher,L,4415,grr srry
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666089293,63,6,director,L,8587,this is the one you just chose
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666104858,63,6,director,L,7129,o wait maybe i wrong
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666116055,64,6,director,A,3654,one leg up
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666119622,64,6,director,A,2202,facing left
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666123086,64,6,matcher,A,1428,its ok
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666125738,64,6,director,A,2947,leg in front
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666151189,65,6,director,K,4652,carrying the book
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666157464,65,6,director,K,2411,going to the right
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666169623,65,6,matcher,K,6155,knees or squatting?
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666181621,65,6,director,K,6113,more like standing
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666183658,65,6,director,K,2484,the bottom
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666189641,65,6,director,K,5453,looks like a fish
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666194613,65,6,director,K,3004,tail on the left
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666215072,66,6,matcher,I,13221,knee
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666218495,66,6,director,I,13228,this one is the chicken looking down
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666224669,66,6,matcher,I,5270,that is what I call knees
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666234205,66,6,director,I,7889,or forwards
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666244988,67,6,director,G,896,tango
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666263811,68,6,director,B,6166,this we get mixed too:(\
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666276226,68,6,director,B,5119,kneeling facing left
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666283025,68,6,director,B,4599,arms out
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666290835,69,6,director,D,975,monk
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666319557,69,6,matcher,D,29916,still had it mixed lol it ws to close to the other one I was not on it all the way I guess
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666339254,70,6,director,J,7999,triangle on jagged square
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666393617,71,6,director,F,9550,back against the wall
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666399164,71,6,director,F,6431,facing left
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666403228,71,6,director,F,1701,not alice
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666410097,71,6,director,F,2765,with bow in hair
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666453623,71,6,director,F,3413,sitting
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666461654,72,6,director,E,2345,this one is alice
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666465498,72,6,director,E,1768,facing left
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666466949,72,6,director,E,1004,book

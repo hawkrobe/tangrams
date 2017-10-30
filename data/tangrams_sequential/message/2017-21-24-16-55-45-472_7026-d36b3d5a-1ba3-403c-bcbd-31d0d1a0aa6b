@@ -1,0 +1,109 @@
+gameid,time,roundNum,occurrenceNum,sender,intendedName,timeElapsed,contents
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490374558980,1,1,director,B,6036,Hello, I am going to describe them as people almost.
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490374560623,1,1,director,B,1344,Is that okay?
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490374564028,1,1,matcher,B,194,yes
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490374576714,1,1,director,B,11538,This one kinda looks like they are looking a little down and kneeling with both arms out
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490374582838,1,1,director,B,4642,wearing a dress maybe.
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490374595750,2,1,director,F,5062,Good job1 This one is sitting down
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490374598659,2,1,director,F,2478,iwth his knees up
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490374614016,3,1,director,C,4924,This one looks like a ghost almost
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490374618559,3,1,director,C,2471,with his arms raised up
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490374631975,4,1,director,I,7680,This one looks like he is balancing on one leg wit hhis arms out
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490374654711,5,1,director,G,13007,This one looks like a woman in a dress who is throwing her head back
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490374657767,5,1,director,G,2768,and walking with her hand up
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490374677767,6,1,director,D,8370,This one looks like a preacher holding a book and standing straight
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490374691919,7,1,director,E,3256,This one has bunny ears
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490374707322,8,1,director,L,7089,This one looks like the preacher except he is bending his knees
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490374719895,8,1,matcher,L,3967,bending them back?
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490374729434,8,1,matcher,L,2663,bending or kneeling
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490374731611,8,1,director,L,3990,Hmm he is facing right 
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490374734618,8,1,director,L,2202,bending not kneeling
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490374752449,9,1,director,A,9994,This one looks like a man with a block on his back
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490374757336,9,1,director,A,4528,maybe hes wearing a hazmat suit
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490374774168,10,1,director,J,10735,This one kinda looks like a smaller kid whos a little overweight
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490374790562,10,1,matcher,J,2792,right arm out?
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490374791446,10,1,director,J,5607,his chest has a pointy part
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490374810702,11,1,director,K,11123,This one looks like a person kneeling with their hand out and has a hood
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490374830995,11,1,matcher,K,600,?
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490374837779,11,1,matcher,K,3279,kneeling preacher?
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490374849784,11,1,director,K,495,hmm
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490374857060,11,1,director,K,6958,yes looks like the bended knee preacher
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490374859249,11,1,director,K,1848,except kneeling
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490374874950,12,1,director,H,7422,looks like the small kid but no pointy chest
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490374895148,13,2,director,G,12016,woman with arm and leg forward in a dress with head back.
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490374913592,13,2,matcher,G,3751,sitting on ground?
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490374924721,13,2,matcher,G,4008,or the one we did aready
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490374925351,13,2,director,G,9507,no shes definitely not sitting
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490374935481,14,2,director,E,1153,bunnyears
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490374945513,15,2,director,C,1400,ghostman
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490374959515,16,2,director,K,5751,kneeling preacher
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490374968585,17,2,director,A,1272,hazmat suit
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490374988424,18,2,director,F,14857,laying on his back with a hump
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375003635,18,2,director,F,6660,he has a square head and his feet are on the left side
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375016587,19,2,director,J,2254,kid with pointy chest
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375028491,20,2,director,L,1546,bendy preacher
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375052662,21,2,director,I,18039,hmm i dunno what to call this guy, hes like a dancing man with arms out to the left
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375066284,22,2,director,D,10570,standing preacher
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375084790,23,2,director,B,2556,dont think we had this one
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375090894,23,2,director,B,5468,square head with diamond on right side
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375107490,24,2,director,H,2112,similar to kid 
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375113494,24,2,director,H,1799,no pointy chest
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375120336,25,3,director,J,547,kid
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375125546,25,3,matcher,J,1288,pointy
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375127442,25,3,director,J,264,yes
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375134822,26,3,director,C,1551,ghostman
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375149237,27,3,director,B,3046,square triangle on side
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375155199,27,3,director,B,1238,like last time
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375163554,28,3,director,D,1808,standing preacher
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375174342,29,3,director,E,1638,bunnyears
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375189668,30,3,director,G,4848,err the woman with dress with her head back
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375201612,31,3,matcher,H,2360,call her dancing lady
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375203985,31,3,director,H,3984,kid with nonpointy chest
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375206065,31,3,director,H,255,ok
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375213117,32,3,director,I,1079,dancing man
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375221869,33,3,director,F,941,humpman
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375227373,33,3,director,F,995,on ground
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375234974,34,3,matcher,L,2176,call him on ground
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375236175,34,3,director,L,2393,bendy preacher
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375237442,34,3,director,L,241,ok
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375251289,35,3,director,K,5098,kneeling preacher
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375258873,36,3,director,A,688,hazmat
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375270099,37,4,director,I,1153,dancingman
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375280483,38,4,director,H,2849,kid with nonpointy chest
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375291615,39,4,director,L,2190,bendy preacher
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375294091,39,4,matcher,L,4679,call him kid and other pointy kid
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375304137,40,4,director,K,3677,ok kneeling preacher
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375306650,40,4,director,K,544,wait
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375320359,41,4,director,D,10782,standing preacher
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375334000,42,4,director,G,4479,dancing lady
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375343161,43,4,director,A,781,hazmat
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375351392,44,4,director,C,444,ghost
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375367443,45,4,director,B,5856,square triangle on side forgot that one
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375379799,46,4,matcher,J,2112,call him triangle
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375383634,46,4,director,J,6167,kid pointy chest
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375392586,47,4,director,E,1983,bunnyears
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375400459,48,4,director,F,1007,humpman
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375414718,49,5,director,K,11965,kneeling preacher
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375424028,50,5,director,C,870,ghostman
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375431774,51,5,director,F,939,humpman
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375439756,52,5,director,A,983,hazmat
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375449739,53,5,director,I,1074,dancing man
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375459977,54,5,director,D,1422,standing preach
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375471640,55,5,director,H,2312,kid non pointy
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375482305,56,5,director,L,1511,bendy preach
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375492072,57,5,director,J,2286,kid pointy chest
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375501047,58,5,director,E,1343,bunnyears
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375513066,59,5,director,B,2360,square triangle head
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375522173,60,5,director,G,1865,dancing lady
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375531113,61,6,director,G,1780,dancing lady again
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375540330,62,6,director,L,1456,bendy preach
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375550619,63,6,director,B,2384,traingle square head
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375560971,64,6,director,D,1473,standing preach
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375570591,65,6,director,K,1838,kneeling preach
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375580281,66,6,director,E,1306,bunnyears
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375588056,67,6,director,F,1040,humpman
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375597442,68,6,director,H,2550,kid nonpointy
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375607961,69,6,director,J,1342,kid pointy
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375617381,70,6,director,I,1093,dancing man
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375626838,71,6,director,C,962,ghostman
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,1490375635016,72,6,director,A,703,hazmat

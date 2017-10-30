@@ -1,0 +1,13 @@
+gameid,time,roundNum,occurrenceNum,sender,intendedName,timeElapsed,contents
+6204-a43f5a5f-e31c-4088-9302-9920af958b33,1490652174463,1,1,director,F,1470,Ok I'm here
+6204-a43f5a5f-e31c-4088-9302-9920af958b33,1490652176786,1,1,director,F,1655,How are you?
+6204-a43f5a5f-e31c-4088-9302-9920af958b33,1490652176795,1,1,matcher,F,728,Ok
+6204-a43f5a5f-e31c-4088-9302-9920af958b33,1490652179699,1,1,matcher,F,1897,Good how are you
+6204-a43f5a5f-e31c-4088-9302-9920af958b33,1490652182719,1,1,director,F,1329,good
+6204-a43f5a5f-e31c-4088-9302-9920af958b33,1490652187350,1,1,director,F,976,here we go
+6204-a43f5a5f-e31c-4088-9302-9920af958b33,1490652190772,1,1,matcher,F,665,Ready
+6204-a43f5a5f-e31c-4088-9302-9920af958b33,1490652195606,1,1,director,F,6711,it looks like a man sitting with his legs facing left
+6204-a43f5a5f-e31c-4088-9302-9920af958b33,1490652214291,2,1,matcher,L,766,Sorry
+6204-a43f5a5f-e31c-4088-9302-9920af958b33,1490652219269,2,1,director,L,1479,it's all right
+6204-a43f5a5f-e31c-4088-9302-9920af958b33,1490652232959,2,1,director,L,13016,it looks like a person with knees slightly bent, with a large protrusion from middle of stomach
+6204-a43f5a5f-e31c-4088-9302-9920af958b33,1490652242030,2,1,director,L,3303,protrusion facing right

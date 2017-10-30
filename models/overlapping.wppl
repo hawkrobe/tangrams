@@ -1,0 +1,165 @@
+///fold:
+var _powerset = function(set) {
+  if (set.length == 0)
+    return [[]];
+  else {
+    var rest = _powerset(set.slice(1));
+    return map(function(element) {
+      return [set[0]].concat(element);
+    }, rest).concat(rest);
+  }
+};
+
+var powerset = function(set, opts) {
+  var res = _powerset(set);
+  return opts.noNull ? filter(function(x){return !_.isEmpty(x);}, res) : res;
+};
+
+var cartesianProd = function(listOfLists) {
+  return reduce(function(b, a) { 
+    return _.flatten(map(function(x) {     
+      return map(function(y) {             
+        return x.concat([y]);                   
+      }, b);                                       
+    }, a), true);                                  
+  }, [ [] ], listOfLists);                                   
+};
+var constructAnyMeaning = function(label) {
+  return function(trueState) {
+    return any(function(labelState){
+      return labelState == trueState;
+    }, label.split('|'));
+  }
+};
+var conjunction = function(meanings) {
+  return function(trueState) {
+    return all(function(meaning) {
+      return meaning(trueState);
+    }, meanings);
+  }
+}
+var nullMeaning = function(x) {return true;};
+
+var initList = function(n, val) {
+  return repeat(n, function() {return val})
+}
+
+var uniformPs = function(vs) {
+  return initList(vs.length, 1/vs.length)
+}
+
+var getRatio = function(dist) {
+  return Math.exp(dist.score('t1_a') - dist.score('t1_a and t1_b'));
+};
+///
+
+// possible states of the world
+var states = ['t1', 't2'];
+var statePrior =  Categorical({vs: states, ps: [1/2, 1/2]});
+
+// possible utterances (include null utterance to make sure dists are well-formed)
+var unconstrainedUtterances = ['hat', 'skater','man'];
+var derivedUtterances = ['skater man', 'hat man', 'n0'];
+var utterances = unconstrainedUtterances.concat(derivedUtterances);
+var utterancePrior = Categorical({vs: utterances, ps: uniformPs(utterances)});
+
+var lexiconPrior = Infer({method: 'enumerate'}, function(){
+  var meaningSet = map(function(utt) {
+    var t1_match = utt.split('_')[0] === 't1';
+    var highProb = uniformDraw([.5, .6, .7, .8, .9, 1]);
+    var meaningProbs = {
+      't1' : t1_match ? highProb : 1-highProb,
+      't2' : t1_match ? 1-highProb : highProb
+    };
+    return meaningProbs;
+  }, unconstrainedUtterances);
+  return _.object(unconstrainedUtterances, meaningSet);
+})
+
+// speaker optimality
+var alpha = 5;
+
+// null utterance costly; everything else cheap
+var uttCost = function(utt) {
+  return (utt == 'n0' ? 10 :
+	  _.contains(utt.split(' '), 'and') ? 2 :
+	  1);
+};
+
+// Looks up the meaning of an utterance in a lexicon object
+var uttFitness = cache(function(utt, state, lexicon) {  
+  if(utt === 'n0') {
+    return 0;
+  } else {
+    return reduce(function(subUtt, memo) {
+      return lexicon[subUtt][state] + memo;
+    }, 0, utt.split(' and '));
+  }
+});
+
+// literal listener
+var L0 = function(utt, lexicon) {
+  return Infer({method:"enumerate"}, function(){
+    var state = sample(statePrior);
+    factor(uttFitness(utt, state, lexicon));
+    return state;
+  });
+};
+
+// pragmatic speaker
+var S1 = function(state, lexicon) {
+  return Infer({method:"enumerate"}, function(){
+    var utt = sample(utterancePrior);
+    factor(alpha * (L0(utt, lexicon).score(state))
+           - uttCost(utt));
+    return utt;
+  });
+};
+
+var L2 = cache(function(perceivedUtt, lexicon) {
+  return Infer({method: 'enumerate'}, function() {
+    var state = sample(statePrior);
+    observe(S1(state, lexicon), perceivedUtt);
+    return state;
+  });
+});
+
+// conventional listener
+var L = function(utt, data) {
+  return Infer({method:"enumerate"}, function(){
+    var state = sample(statePrior);
+    var lexicon = sample(lexiconPrior);
+    observe(S1(state, lexicon), utt);
+    mapData({data: data}, function(datum){
+      observe(S1(datum.obj, lexicon), datum.utt);
+    });
+    return state;
+  });
+};
+
+// conventional speaker
+var S = function(state, data) {
+  return Infer({method:"enumerate"}, function(){
+    var utt = sample(utterancePrior);
+
+//    var listener = Infer({method: 'enumerate'}, function() {
+      var lexicon = sample(lexiconPrior);
+    
+      mapData({data: data}, function(datum){
+	observe(L2(datum.utt, lexicon), datum.obj); 
+      });
+    //   return sample(L2(utt, lexicon));
+    // });
+
+    factor(alpha * L2(utt,lexicon).score(state)
+           - uttCost(utt));
+    return utt;
+  });
+};
+
+console.log(getRatio(S('t1', [])))
+//console.log(S('t1', []));
+console.log(getRatio(S('t1', [{utt: 't1_a and t1_b', obj: 't1'}])))
+console.log(getRatio(S('t1', [{utt: 't1_a and t1_b', obj: 't1'},
+			      {utt: 't2_a and t2_b', obj: 't2'}])))
+//console.log(S('t1', [{utt: 't1_a and t1_b', obj: 't1'}]))

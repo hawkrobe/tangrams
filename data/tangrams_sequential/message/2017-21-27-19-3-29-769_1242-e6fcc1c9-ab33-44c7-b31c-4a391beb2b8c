@@ -1,0 +1,88 @@
+gameid,time,roundNum,occurrenceNum,sender,intendedName,timeElapsed,contents
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490641423181,1,1,matcher,L,2779,Hello
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490641428989,1,1,director,L,13358,squatting and facing right
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490641453587,2,1,director,E,5230,A bunny rabbit with triangular ears
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490641473359,3,1,director,D,8767,a pries facing left holding a tablet
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490641504288,4,1,director,F,17810,Sitting facing left with knees up
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490641534109,5,1,director,I,18531,standing on one foot, facing left, raised leg extended
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490641576499,6,1,director,H,27338,sitting on knees (japanese style), facing right -but not squatting - you don't see the lower legs OR any arms
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490641627149,7,1,director,B,20920,Sort of like an angel kneeling, facing right, with a triangle in her teeth
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490641659108,8,1,director,C,8520,A ghost flying to the left with arms outstretched
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490641698469,9,1,director,K,24061,Kneeling, facing right, back very straight, holding a gook or tablet
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490641703452,9,1,director,K,1910,book, not gook
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490641709999,9,1,director,K,3350,You can ask questions, too
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490641736369,10,1,director,J,18851, head on a pedestal - straight left side, sculpted right side
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490641747088,10,1,matcher,J,24270,There's so many rounds, I'm just going to go for what looks closest.
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490641758919,10,1,director,J,2070,OK
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490641774761,11,1,director,G,5280,Shoveling Show, facing left
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490641814461,12,1,director,A,18087,A bear walking to the left, but looking behind him (one leg raised toward the left)
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490641835191,13,2,director,A,3270,The same as last time - bear
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490641840169,13,2,matcher,A,9704,So I know bear and ghost(flying) if that helps
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490641861080,14,2,director,I,5457,Yoga - standing on one foot, facing left, raised leg extended
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490641876044,15,2,matcher,F,3086,okay so that's yoga
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490641888052,15,2,director,F,11439,Sitting, facing left, knees bent
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490641929462,16,2,director,K,24091,"Kneeling Presenter" - Kneeling, facing right, way down on knees, head up, holding a table or something
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490641941481,16,2,director,K,2239,tablet, not table
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490641964521,17,2,director,B,4078,Angel -  Sort of like an angel kneeling, facing right, with a triangle in her teeth
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490641987126,18,2,director,E,7860,Bunny - with triangle ears
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490641996641,19,2,director,C,1220,ghost
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642025562,20,2,director,H,16130,Japanese - sitting, facing sort of forward/right, no arms, no lower legs
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642076615,21,2,director,G,25409,I called this shoveling snow last time - faces right, arm like they're pushign a shovel - sort of behind them, with a bunch of stuff lower right
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642082932,21,2,director,G,2079,I mean lower left.~~~~~~
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642124023,22,2,director,D,19599,Priest - A priest, facing left, wearing robes, presenting a tablet or something
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642150675,23,2,director,L,10652,Squatter - squatting, facing right, presenting a tablet
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642181934,24,2,director,J,13572,Head on a pedestal - straight left side, angled right side - no arms
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642203430,25,3,matcher,L,5470,call that vampire, i'll get it
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642203583,25,3,director,L,5070,Priest - A priest, facing left, wearing robes, presenting a tablet or something
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642209774,25,3,director,L,2569,No - squatter!!!!
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642218033,25,3,director,L,937,Squatter - squatting, facing right, presenting a tablet
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642234474,26,3,director,E,4109,Bunny - sorry about that last one
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642241885,26,3,matcher,E,3698,its okay
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642281715,27,3,director,K,26590,"Kneeling Presenter" - Kneeling, facing right, way down on knees, head up, holding a tablet or something
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642306346,28,3,director,J,6230,Head on a pedestal - straight left side, angled right side - no arms
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642327016,29,3,matcher,I,4714,just call that vampire
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642327335,29,3,director,I,1492,Yoga - standing on one foot, facing left, raised leg extended
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642344115,30,3,director,B,975,Angel -  Sort of like an angel kneeling, facing right, with a triangle in her teeth
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642355825,31,3,director,C,990,ghost
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642366435,32,3,director,D,543,Priest - A priest, facing left, wearing robes, presenting a tablet or something
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642387426,33,3,director,H,541,Japanese - sitting, facing sort of forward/right, no arms, no lower legs
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642400126,34,3,director,A,1489,bear
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642420397,35,3,director,F,7330,Sitting, legs bent, facing left
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642433667,36,3,director,G,2391,shoveling snow
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642445556,37,4,director,I,1300,yoga
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642459546,38,4,director,G,5300,shoveling snow
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642469787,39,4,director,E,751,bunny
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642480897,40,4,director,F,299,Sitting, legs bent, facing left
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642490157,41,4,director,A,1120,bear
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642506147,42,4,director,H,459,Japanese - sitting, facing sort of forward/right, no arms, no lower legs
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642522047,43,4,director,K,579,"Kneeling Presenter" - Kneeling, facing right, way down on knees, head up, holding a tablet or something
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642537727,44,4,director,J,438,Head on a pedestal - straight left side, angled right side - no arms
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642552637,45,4,director,B,999,angel
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642568277,46,4,director,L,800,Squatter - squatting, facing right, presenting a tablet
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642585025,47,4,director,D,487,Priest - A priest, facing left, wearing robes, presenting a tablet or something
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642596574,48,4,director,C,801,ghost
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642607583,49,5,director,I,509,yoga
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642615283,50,5,director,A,540,bear
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642626623,51,5,director,H,319,Japanese - sitting, facing sort of forward/right, no arms, no lower legs
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642638861,52,5,director,J,502,Head on a pedestal - straight left side, angled right side - no arms
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642648731,53,5,director,B,939,angel
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642659590,54,5,director,D,990,Priest - A priest, facing left, wearing robes, presenting a tablet or something
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642676589,55,5,director,F,320,Sitting, legs bent, facing left
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642685961,56,5,director,L,484,Squatter - squatting, facing right, presenting a tablet
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642701828,57,5,director,G,2610,shoveling snow
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642711208,58,5,director,C,710,ghost
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642722479,59,5,director,K,522,"Kneeling Presenter" - Kneeling, facing right, way down on knees, head up, holding a tablet or something
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642735646,60,5,director,E,1020,bunny
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642744666,61,6,director,C,1370,ghost
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642756025,62,6,director,A,930,bear
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642765404,63,6,director,F,421,Sitting, legs bent, facing left
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642777584,64,6,director,K,359,"Kneeling Presenter" - Kneeling, facing right, way down on knees, head up, holding a tablet or something
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642790383,65,6,director,B,689,angel
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642802033,66,6,director,L,789,Squatter - squatting, facing right, presenting a tablet
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642814492,67,6,director,J,2900,head on  a pedestal
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642823532,68,6,director,D,359,Priest - A priest, facing left, wearing robes, presenting a tablet or something
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642834861,69,6,director,I,1359,yoga
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642842101,70,6,director,E,960,bunny
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642851800,71,6,director,H,1210,japanese
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642867440,72,6,director,G,7369,shoveling snow - Thanks! You're the best!
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642878500,72,6,matcher,G,6429,Good work :) 

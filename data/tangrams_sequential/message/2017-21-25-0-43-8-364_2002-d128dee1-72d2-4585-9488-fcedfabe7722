@@ -1,0 +1,119 @@
+gameid,time,roundNum,occurrenceNum,sender,intendedName,timeElapsed,contents
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490402603825,1,1,matcher,C,2040,hi
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490402621402,1,1,director,C,1206,hi
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490402650394,1,1,director,C,16539,pick the shape that looks like a person flying 
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490402706889,2,1,director,I,31345,pick the shape that looks like its arms are stretched out and about to  kick a ball
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490402761785,3,1,director,B,33186,pick the shape that looks like a person and has a triangle pointed toward its mouth 
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490402827801,4,1,director,A,38047,pick the shape that looks like it has a box on its back and has its right leg lifted up
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490402951512,5,1,director,H,45661,pick the fat shape that has no arms and a box on to setting on a corner edge
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490402960582,5,1,director,H,6573,you can ask questions
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490402988221,5,1,matcher,H,15017,is it the one with legs?
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490402993734,5,1,director,H,1301,no
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490403047068,6,1,director,J,33938,the top of the shape is flat and a box is setting on its cornor edge 
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490403137591,7,1,director,L,65023,its shaped  kinda like a lighting bolt with a box setting on top on its corner edge
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490403176112,7,1,matcher,L,8872,is the part the box is touching a point?
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490403209251,7,1,director,L,14621,yes it kinda looks like a S
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490403238595,8,1,director,F,16712,looks like a guy seeting on his butt with his back against the wall
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490403243410,8,1,director,F,1830,setting
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490403331043,9,1,director,G,66256,at the bottom of this object its flat than goes up 45 degrees at the end of the angle is a triangle 
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490403377801,9,1,matcher,G,5992,does the whole bottom look like a triangle
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490403389648,9,1,director,G,1522,no
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490403493215,10,1,director,K,30801,looks like a Chinese lady  on her knees 
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490403537219,10,1,matcher,K,3781,does it have two triangles on top?
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490403549295,10,1,director,K,5660,no a box
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490403608446,11,1,director,D,24818,it look like some standing and looking down at its hands
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490403644563,12,1,director,E,19202,looks like a girl with a bow in her hair
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490403671327,13,2,director,E,6992,same one you just picked
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490403702717,14,2,director,I,17157,looks like a person fixing to kick a ball you picked it earlier
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490403728445,14,2,matcher,I,2236,is a leg in the air
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490403733052,14,2,director,I,870,yes
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490403790428,15,2,director,A,39100,this one look like it has a pointed beak  a box is on it back  right leg is lifted
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490403886807,16,2,director,F,45077,looks like a person setting with there knees bent up and their back is against a wall
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490403906937,16,2,matcher,F,3339,are they facing left or right
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490403919147,16,2,director,F,1374,left
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490403992417,17,2,director,K,52869,looks like a Chinese lady on her knees  with her hands out facing right  and it not the one you picked earlier
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490404051971,17,2,matcher,K,7331,is there two diamonds on the top or one?
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490404069032,17,2,director,K,1732,one
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490404125608,18,2,director,H,37177,its the fat one with no features like arms or legs just a box on top
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490404217144,19,2,director,L,45525,kinda shaped like a S or a lighting bolt  it is facing right 
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490404255190,20,2,director,C,10408,the one that looks like a person flying
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490404337350,21,2,director,J,51794,this shape has a diamond on top and its straight on the left side and the bottom 
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490404381796,22,2,director,B,11197,the one with the triangle at its mouth 
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490404474948,23,2,director,G,35298,this one has a 2 triangle  and a box in it 
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490404548836,24,2,director,D,37917,its standing up arms out  facing left kinda looks like someone looking at a book
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490404578834,25,3,director,D,7212,same one you just picked
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490404597458,26,3,director,E,7679,girl with bow in her hair
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490404619394,26,3,director,E,19005,my hit is expire i dont know if it will let me finiish or not
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490404645025,27,3,matcher,H,6790,you have to submit it and then message them the code
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490404645426,27,3,director,H,10047,the fat one with no features 
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490404699411,28,3,director,I,27015,looks like a person kicking a ball leg raised facing left 
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490404706325,28,3,director,I,5753,it wouldnt let me submit 
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490404777264,29,3,director,B,48720,the one with a triangle point at the mouth it touching the box
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490404800221,29,3,matcher,B,3118,facing left or right?
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490404809280,29,3,director,B,4819,facing right
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490404907935,30,3,director,J,75918,the diamond shape is on top of  this one it looks centered  kinda like it a table 
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490404966542,31,3,director,G,31332,this one has 2 triangle on the right side and a box on the left
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490405035166,32,3,director,L,39232,the one thats shaped light a lighting bolt facing right 
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490405157824,33,3,director,K,90195,the one that look like a chinese lady on her knees facing right  there is another one that look similar but this one has a point on its back 
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490405224954,34,3,director,A,25888,pointed has looks like it looking at its right shoe the leg is raised 
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490405236969,34,3,director,A,3385,pointed face]
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490405274281,35,3,director,C,12202,the one that looks like its flying 
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490405336138,36,3,director,F,43374,amagine your setting on your butt with your knees bend reading a book thats what this one looks like
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490405355448,37,4,director,C,4115,flying one again
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490405388472,38,4,director,D,12646,the one standing straight up  facing left 
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490405423048,38,4,director,D,16443,looks like it looking at something in its hands
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490405461079,39,4,director,K,24606,Chinese lady again facing left 
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490405507159,39,4,matcher,K,4578,standing or sitting?
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490405516119,39,4,director,K,5611,on her knees
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490405576182,40,4,director,A,23384,person with pointed face looking at there right shoe 
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490405628263,41,4,director,B,32777,the one you picked as the chinese lady  triangle at her mouth 
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490405670564,42,4,director,F,10355,person with knees bend reading a book
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490405719585,43,4,director,L,15226,light bolt shaped one
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490405768707,44,4,director,G,14341,the one with 2 triangle on the left and a box on the right 
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490405773587,44,4,director,G,1433,wait
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490405787554,44,4,director,G,8659,the traigles are on the right 
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490405793346,44,4,director,G,4640,and box on the left
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490405807059,44,4,director,G,3128,triangles 
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490405897602,45,4,director,E,7902,girl with bow in her hair
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490405937250,46,4,director,I,25196,guy kicking a ball has his right leg lifted high facing left 
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490405976512,47,4,director,J,5762,diamond on a table
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490405999584,48,4,director,H,8394,fat one with no features 
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406014688,49,5,director,C,5383,flying one
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406066033,50,5,director,B,35230,the one you picked as the chinese lady triangle look like its in her mouth 
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406118656,51,5,director,I,22724,guy kicking a ball not the one you picked earlier with the pointed face 
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406147950,51,5,director,I,7393,it has a triangle for a foot
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406152893,51,5,matcher,I,7351,I don't see that guy with the leg back behind him
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406185086,52,5,director,L,5705,the lighting bolt one
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406203264,53,5,director,H,6521,fat one with no features
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406211133,53,5,director,H,6608,how much time do you have 
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406227117,53,5,matcher,H,6417,I was able to submit already
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406231422,53,5,director,H,14671,fat one with no features again 
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406265261,54,5,director,D,23110,the one standing straight up looking at something in its hands facing left 
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406317100,55,5,director,G,26077,2 traingle on the left and a box on the right 
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406343455,55,5,director,G,13786,sorry they are on the right 
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406350060,55,5,director,G,5694,the triangles
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406363275,55,5,director,G,4325,box is on the right 
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406417803,56,5,director,F,16075,guy reading with knees bend setting on his butt 
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406445930,57,5,director,A,15113,pointed faced one  looking at his shoe
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406468107,58,5,director,J,7854,diamond on a table
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406484682,59,5,director,E,2769,bow in hair
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406553242,60,5,director,K,51397,chinese lady on her knees facing right does not have a triangle pointed toward its mouth 
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406573065,60,5,director,K,8260,its arms are stright out 
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406609017,61,6,director,D,18551,guy standing straight up looking at a book 
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406636504,62,6,director,B,14992,triangle in its mouth 
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406715192,63,6,director,G,51352,2 triangles on the right and a box on the left  the box and 1 triangle are side by side at the top 
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406790760,64,6,director,I,43850,the guy kicking a ball no the pointed face one it is standing on one leg 
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406809126,65,6,director,A,5315,pointed face one
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406831781,66,6,director,L,4205,lighting bolt one
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406852707,66,6,matcher,L,7036,I don't see the one I think it is 
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406873269,67,6,director,J,9471,diamond on a table
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406903174,68,6,director,F,18803,guy with his knees bent setting on his but 
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406906423,68,6,matcher,F,15176,if you can't submit it, contact the requester, he was responsive when I messaged him 
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406936165,69,6,director,K,18157,his email now the hit expired 
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406948581,69,6,director,K,11229,its ok i just didnt want you to miss out 
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406958474,69,6,matcher,K,3994,I'm ok thank you
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406984580,69,6,director,K,17190,Chinese lady  arms pointed straight out 
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490407009060,70,6,director,H,6816,fat one with no features 
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490407023539,71,6,director,E,2618,bow in hair
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490407037376,71,6,matcher,E,5785,so weird that one is not on my screen right now
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490407057459,72,6,director,C,4349,flying one

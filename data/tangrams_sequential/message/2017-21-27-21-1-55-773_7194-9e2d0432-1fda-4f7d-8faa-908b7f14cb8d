@@ -1,0 +1,104 @@
+gameid,time,roundNum,occurrenceNum,sender,intendedName,timeElapsed,contents
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490648524769,1,1,director,J,2390,hi
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490648526827,1,1,matcher,J,353,hi
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490648574247,1,1,director,J,44133,the one you need to pick is one with a rectangle base with the right side a little bit missing, and a diamond square at the top middle of the rectangle
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490648634585,2,1,director,B,36991,the one you need looks like a person sitting down, legs pointed left, head tilted back, with a triangle stuck to the right side neck
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490648701338,3,1,director,H,33148,this one has somewhat of a hexagonal base, with a triangle jutting out the bottom right of it. Diamond square at the very top~~~
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490648742578,4,1,director,E,19305,triangular base with a 'head' and rabbit ears to the top left
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490648785306,5,1,director,I,30002,looks like an ice skater doing a move, left is a diamond on top of two triangles, right side has a smaller triangle
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490648810976,6,1,director,A,16496,looks like a person pitching a ball in baseball, with the diamond head at the very top right
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490648857502,7,1,director,D,22547,person pointing left, rectangular base with left pointed feet
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490648893765,8,1,director,L,17341,person with legs that look like ">" pointing right
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490648940380,9,1,director,K,21959,person pointing right, but not">" instead it looks like two triangles pointing right
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490648986974,10,1,director,F,17186,person sitting/laying down to the left. upside down triangle at the bottom left
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649034672,11,1,director,G,20182,parallologram at the bottom, with two triangles to the right side of the thing
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649056156,11,1,director,G,10006,the triangles seem to be only touching by the tips
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649099744,12,1,director,C,17127,looks like a person raising both arms, with a body slanted pointing to the bottom right
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649127014,13,2,director,H,1196,hexagon person with the triangle to bottom right
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649142895,14,2,director,E,1628,rabbit ears
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649155071,14,2,director,E,3423,with the triangle base
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649168757,15,2,director,L,924,person with the ">" legs
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649213056,16,2,director,G,21143,the one with a parallelogram on the bottom left, and two triangles touching with the tip on the right side
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649250443,17,2,director,C,1959,person raising both arms, with a body slanted pointing to the bottom right
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649270371,18,2,director,B,8223,the sitting person getting stabbed in the neck by a triangle
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649330958,19,2,director,A,17194,the one that looks like he's about to throw a pitch, with the square head to the top right, 2 feet pointed left
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649346603,19,2,matcher,A,6530,The Pitcher
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649355356,20,2,director,F,3177,that wasnt it
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649355583,20,2,matcher,F,1192,Mis click
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649358022,20,2,director,F,440,oh
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649368853,20,2,director,F,10471,the person laying down, with the upside down triangle on the bottom left
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649375944,20,2,matcher,F,1360,The hobo
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649387597,21,2,director,I,2991,ice skater
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649430771,22,2,director,D,8870,the rectangle base with feet/arms pointing left
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649448741,22,2,director,D,7312,and the diamond head on top of the triangle
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649453697,22,2,matcher,D,8575,Monk left?
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649457326,22,2,director,D,319,yeah
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649472715,23,2,director,J,8853,rectangle  base, right part somewhat missing
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649491193,23,2,matcher,J,7616,toddler facing right?
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649497073,23,2,director,J,728,no
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649510739,23,2,director,J,12210,the rectangle base, not hexagon
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649529108,24,2,matcher,K,4121,That is what i meant
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649535404,24,2,director,K,351,ok
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649536052,24,2,matcher,K,4119,todller facing right
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649578837,24,2,director,K,32270,kneeling facing right, but not the ">" legs. looks like a fast forward icon for the legs
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649594148,24,2,matcher,K,5303,Squatting Monk?
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649605356,24,2,director,K,5763,isn't the squatting one the ">"
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649621838,25,3,matcher,H,1368,Kneeling
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649641259,25,3,director,H,10895,hexagon base with the triangle bottom right
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649647466,25,3,matcher,H,880,Baby
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649664792,26,3,director,G,9263,parallelogram on the bottom left, and two triangles touching with the tip on the right side
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649701955,26,3,director,G,21843,with the square looks like it's sliding down a left slope at the top 
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649715308,27,3,matcher,F,1047,Low kick
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649717890,27,3,director,F,1028,hobo
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649727004,28,3,director,E,1072,rabbit ears
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649736753,29,3,director,A,1253,pitcher
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649745318,30,3,director,I,614,skater
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649756385,31,3,director,B,1354,neck stab
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649773917,32,3,director,K,3801,kneeling to the right
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649784322,33,3,director,L,2063,">" right
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649803245,34,3,director,C,9930,person raising both arms, with a body slanted pointing to the bottom right
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649808643,34,3,matcher,C,1391,ghost
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649825902,35,3,director,J,7499,the rectangle with the missing right side
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649837685,36,3,director,D,9440,monk left
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649847235,37,4,director,I,921,skater
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649874403,38,4,director,G,5074,parallelogram on the bottom left, and two triangles touching with the tip on the right side low kick (forgot what it's called)
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649885150,39,4,matcher,D,1272,low kick
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649890950,39,4,director,D,716,oh right
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649893673,39,4,director,D,975,monk left
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649914369,40,4,director,H,7618,toddler facing right
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649922848,41,4,matcher,K,519,baby
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649925194,41,4,director,K,359,oh
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649929588,41,4,director,K,1056,my mistake
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649946302,41,4,director,K,7443,kneeling monk right
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649957535,42,4,director,E,1285,rabbit ears
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649965241,43,4,director,A,743,pitcher
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649976279,44,4,director,F,586,hobo
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649987351,45,4,director,C,414,ghost
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490649999143,46,4,director,J,2243,toddler facing right
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490650008903,47,4,director,L,1461,">" legs
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490650020419,48,4,director,B,1833,triangle stab
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490650028952,49,5,director,E,1070,rabbit ears
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490650037185,50,5,director,L,998,">" legs
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490650045945,51,5,director,C,480,ghost
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490650053743,52,5,director,A,731,pitcher
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490650064088,53,5,director,I,605,skater
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490650071161,54,5,director,F,460,hobo
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490650079856,55,5,director,B,1610,triangle stab
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490650090841,56,5,director,G,1416,low kick
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490650099986,57,5,director,J,2056,toddler facing right
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490650109565,58,5,director,H,1034,baby
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490650119943,59,5,director,D,1311,monk left
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490650130057,60,5,director,K,801,kneeling monk right
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490650138888,61,6,director,G,893,low kick
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490650146687,62,6,director,E,1224,rabbit ears
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490650155068,63,6,director,I,1156,skater
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490650163250,64,6,director,B,1936,triangle stab
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490650172656,65,6,director,D,1344,monk left
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490650184924,66,6,director,J,2479,toddler facing right
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490650192689,67,6,director,A,808,pitcher
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490650213018,68,6,director,K,3646,kneeling monk right
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490650219863,69,6,matcher,L,1136,sorry
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490650223268,69,6,director,L,1223,">" legs
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490650235144,70,6,director,F,514,hobo
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490650246252,71,6,director,C,466,ghost
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,1490650254404,72,6,director,H,1009,baby

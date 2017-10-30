@@ -1,0 +1,91 @@
+gameid,time,roundNum,occurrenceNum,sender,intendedName,timeElapsed,contents
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490648771203,1,1,matcher,D,2979,Hello
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490648775706,1,1,director,D,35128,triangle arm pointing to left, standing straight upright, square on angle on top
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490648777536,1,1,director,D,704,hi
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490648834662,2,1,director,H,30159,standing upright square on angle at top, triangle foot to right
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490648981069,3,1,director,A,68741,square on right side at top, legs and arm on left side
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490649122962,4,1,director,C,79331,body tilted toward left, square at top, holding arms up - one on each side - V
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490649221963,5,1,director,G,35338,the one you just picked - arms back - head forward on left
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490649336936,6,1,director,E,17392,two triangles on top of square at top
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490649476932,7,1,director,L,75098,square at top, flat back on left, arm pointed to right, knees pointed to right
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490649602232,8,1,director,I,25346,standing on one leg, body bent to left
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490649637010,9,1,matcher,B,7563,We need to watch the timer
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490649719344,9,1,director,B,76472,kneeling, square tilted downward to right, feet stretched out
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490649769823,9,1,director,B,15511,hit is hour and a half
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490649814776,10,1,director,F,11920,how can I make these more clear to you?
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490649836398,10,1,matcher,F,9246,I guess it's not as easy as I thought
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490649853862,10,1,matcher,F,3456,62 more to go
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490649878584,10,1,director,F,37400,i am typing a literal description of the image, match each with my description
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490649907830,10,1,director,F,27269,next one: sitting, facing left, no arms
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490650000725,11,1,director,J,47364,standing upright, flat on left side, arm to right, feet to right
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490650113465,12,1,director,K,30434,kneeling, feet bent upwards, arms to right
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490650188129,13,2,director,I,44155,think of these as people.~~~~~~~~~ standing on one leg, bent towards left, one leg to the right
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490650266519,14,2,director,B,53606,kneeling, feet stretched out, head bent downward on right,  arm to right
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490650351195,15,2,director,L,18313,standing upright, knees bent to right, arms to right
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490650426185,16,2,director,A,36160,standing upright, arms and legs to left, heading on right side - like looking over your shoulder
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490650473419,17,2,director,J,2709,good :)
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490650502418,17,2,director,J,28072,standing upright, nothing on left side, arm and feet on right
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490650569400,18,2,director,G,36197,sitting down facing left, arms behind body towards the right
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490650655900,19,2,director,H,17495,upright, no arms, feet towards right
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490650723812,20,2,director,D,21713,upright, arms and legs pointed to left, nothing on right side
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490650785364,21,2,director,F,31394,sitting down facing left, nothing on the right
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490650828393,22,2,director,E,11895,sitting down facing right, two triangles on head
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490650922460,23,2,director,C,68452,upright, body tilted to left, arms rasied straight up - V
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490650977239,24,2,director,K,37449,kneeling, feet point upwards on left side, arms on right
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490651035716,25,3,director,B,25938,kneeling towards right, head bent down, feet stretched out on left
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490651115797,26,3,director,D,18203,standing upright, facing left - arms and legs both to left
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490651192957,27,3,director,H,15997,squatting down, facing right - NO arms or legs
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490651248871,28,3,director,I,24924,standing on one leg, leaning to left
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490651292950,29,3,director,K,23435,kneeling to right, feet pointed up on left, arms on right
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490651363212,30,3,director,F,22225,sitting down, facing left, NO arms
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490651401848,31,3,director,J,3786,we've gotta hurry
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490651418771,31,3,director,J,14032,standing upright, nothing on left, arm and feet on right
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490651476662,32,3,director,L,31060,facing to the right, knees bent, arm straight out NOT KNEELING
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490651531379,33,3,director,E,10097,sitting facing to the right, two triangles on head
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490651585065,34,3,director,A,22851,standing up, arms and legs to left, head on the right
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490651631624,35,3,director,G,15383,sitting facing left, arms behind body to the right
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490651701597,36,3,matcher,C,9651,darn it we are just halfway
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490651702989,36,3,director,C,27590,upright tilted to left, arms straight up V
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490651711556,36,3,director,C,4772,only 30 mins left
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490651757476,37,4,director,I,22154,standing on one left to the left
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490651825367,38,4,director,K,25029,I'm sorry,,,, I'm doing everything I can to get you to see these as people
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490651853104,38,4,director,K,25532,next --- kneeling and facing right, feet pointed up, arms to right'
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490651934281,39,4,director,E,11522,sitting, two triangles on head
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490651963282,40,4,director,G,18151,sitting facing left, arms behind
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490652001465,41,4,director,F,8455,sitting facing left, nothing on right side
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490652047323,42,4,director,H,5643,squatting, no arms or legs
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490652099920,43,4,director,C,33528,upright tilted to left, arms straight up V --- pretend your are standing with your arms raised
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490652155692,44,4,director,B,20948,kneeling towards right, feet straight out, head down
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490652206189,45,4,director,J,13529,standing, arms and feet to right
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490652210311,45,4,director,J,2296,nothing on left
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490652235728,46,4,director,D,10509,standing, nothing on right, facing left
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490652267364,47,4,director,A,15202,standing arms and legs to left, head on the right
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490652313013,48,4,director,L,25232,kneeling towards right, NO FEET
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490652350354,49,5,director,H,1987,23 mins left
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490652358996,49,5,director,H,6048,squatting, no arms or legs
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490652409398,50,5,director,L,8211,kneeling to right - NO FEET
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490652448681,51,5,director,F,14508,sitting facing left, legs stretched, NO ARMS
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490652483370,52,5,director,A,13189,standing, legs/arms to left, head on right side
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490652517332,53,5,director,D,11934,standing, nothing on right
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490652539959,54,5,director,E,5743,sitting, two triangles on head
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490652570564,55,5,director,I,17832,santing one leg, towards left
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490652595235,56,5,director,J,6333,standing nothing on left
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490652612323,57,5,director,G,7863,sitting towards left, arms back
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490652648809,58,5,director,C,4298,arms up like V
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490652663987,59,5,director,K,5685,kneeling to right feet up
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490652691397,60,5,director,B,7424,kneeling feet stretched
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490652713039,61,6,director,F,6393,sitting facing left NO ARMS
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490652733013,62,6,director,H,8595,squatting NO arms or feet
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490652762617,63,6,director,G,5542,sitting to left, arms back
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490652789179,64,6,director,K,2071,gotta hurry
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490652796622,64,6,director,K,6289,kneeling feet up
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490652804349,64,6,director,K,4749,just pick on
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490652807317,64,6,director,K,518,one
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490652832077,65,6,director,A,6358,standind arms feet to left
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490652852630,66,6,director,E,5082,sitting 2 tirangles
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490652868098,67,6,director,C,3847,arms up V
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490652882263,68,6,director,D,5674,nothing on right standing
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490652905392,69,6,director,J,9440,standing nothing on left
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490652924415,70,6,director,L,5113,knees bent to rgith
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490652942130,71,6,director,B,4332,kneeling feet stretched
+2081-2275809d-523b-432f-b3aa-7c7870c4c18e,1490652959590,72,6,director,I,5040,one leg to left

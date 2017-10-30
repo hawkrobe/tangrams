@@ -1,0 +1,94 @@
+gameid,time,roundNum,occurrenceNum,sender,intendedName,timeElapsed,contents
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490653629394,1,1,matcher,C,13275,is there a triangle on it?
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490653723090,2,1,matcher,L,13460,are there triangles on it?
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490653735239,2,1,director,L,1119,kinda
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490653742344,2,1,director,L,6856,theres a triangle sticking out to the right
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490653764952,2,1,director,L,11808,looks like a person with their knees bent to the right
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490653798977,3,1,director,D,15615,Looks like a person standing with something in their hands facing left
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490653835574,4,1,director,B,16647,Triangles on left and right and a tilted box on top
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490653851992,4,1,director,B,9120,looks kinda like someone is kneeling
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490653879872,5,1,director,G,7352,this one kinda weird
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490653888785,5,1,director,G,8119,triangle on bottom and top right
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490653894599,5,1,director,G,4991,box on top like a head
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490653905278,5,1,director,G,3239,shaped like a "J"
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490653956861,6,1,director,K,16247,diamond for a head
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490653963071,6,1,director,K,6049,pointed triangles sticking right
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490653970709,6,1,director,K,7143,looks like someone kneeling again
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490654014190,7,1,director,H,22511,not much sticking out, kinda looks like used tooth paste
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490654038389,8,1,director,A,9343,looks like a guy facing left with a leg sticking up
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490654067144,9,1,director,J,10943,resembles a bottle with a diamond shaped cap
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490654086206,9,1,director,J,11615,flat surface that the diamond is sitting on
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490654124013,10,1,director,I,11311,uhh has kinda a T shape
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490654128917,10,1,director,I,4518,with lots going on the left side
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490654137779,10,1,director,I,5831,2 triangles and a diamond on top
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490654181562,11,1,director,E,14270,looks like a mountain side with a cube and 2 triangles on top
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490654219213,12,1,director,F,16391,looks like a person sitting down with legs slightly bent
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490654227423,12,1,director,F,4903,like leaned up against a wall
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490654242929,13,2,director,G,2479,"J" shape again
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490654307033,14,2,director,K,20495,person kneeling with 2 diamonds on top
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490654363727,15,2,director,I,16487,Weird T or Y shape with traingles+diamond on left side
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490654405242,16,2,director,C,10855,looks like a man with both arms raised into the air
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490654410032,16,2,director,C,1527,leaning left
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490654427311,17,2,director,E,8271,mountain side with cube and traingles on top
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490654451889,18,2,director,D,7599,man holding an object facing left
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490654470109,19,2,director,A,7695,man with leg lifted in the air facing left
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490654495492,20,2,director,H,9959,used toothpaste again
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490654526974,21,2,director,B,12007,man on knees with triangles facing left and right
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490654568726,22,2,director,L,14079,bent legs facing right with triangle sticking out
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490654592702,23,2,director,F,6015,man sitting up against a wall
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490654618007,24,2,director,J,9583,diamond ontop a table or head
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490654652284,25,3,director,B,13839,triangles facing left and right with diamond on top
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490654694695,26,3,director,K,13847,two diamonds on top and 2 triangle sticking right
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490654751774,27,3,director,D,5455,man holding an object to the left
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490654768047,28,3,director,J,5191,diamond ontop head/table
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490654796616,29,3,director,L,12343,knees bent, triangle right, diamond top
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490654826048,30,3,director,I,11087,diamond ontop two triangles facing left
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490654856484,31,3,director,E,8695,mountain side, diamond 2 triangles
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490654877619,32,3,director,C,4535,man with hands in the air
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490654903791,33,3,director,A,3335,man with a leg up
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490654922314,34,3,director,G,3280,"J" shape
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490654956590,35,3,director,F,9703,man sitting against a wall
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490654974277,36,3,director,H,7231,used toothpaste
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490654996636,37,4,director,I,7311,diamond ontop of 2 left triangles
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490655019568,38,4,director,J,6360,diamond ontop head/table
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490655047733,39,4,director,L,10976,man with knees slighty bent
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490655052902,39,4,director,L,4993,triangle sticking out right
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490655066538,40,4,director,G,2056,"J" Shape
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490655086961,41,4,director,B,8848,man on knees arms sticking left and right
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490655112781,42,4,director,H,2415,used toothpaste
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490655123003,43,4,director,C,2959,man with arms in air
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490655137599,44,4,director,F,3247,man sitting against wall
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490655175123,45,4,director,K,17239,man on knees two diamonds on upper section
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490655200104,46,4,director,E,8062,mountainside with cube+2 triangles
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490655212506,47,4,director,A,3631,man with leg up
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490655227195,48,4,director,D,3817,man with object facinf left
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490655230788,48,4,director,D,1046,*facing
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490655248847,49,5,director,E,10863,mountain side with cube+2 triangles
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490655268867,50,5,director,I,7163,diamond ontop 2 left triangles
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490655303046,51,5,director,B,11640,man on knees, triangle arms facing both sides
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490655323511,52,5,director,H,2471,used toothpaste
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490655337722,53,5,director,J,3863,diamond ontop head/table
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490655346703,54,5,director,A,1743,man with leg up
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490655375754,55,5,director,K,12902,man on knees with large triangle right
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490655392304,56,5,director,G,1455,"J" Shape
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490655418204,57,5,director,L,11304,man on knees with large triangle facing right
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490655422600,57,5,director,L,4208,same one you chose last time
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490655435397,57,5,matcher,L,5942,with the flat bottom?
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490655453467,57,5,director,L,11591,yeah. it came up the choice before last
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490655468113,58,5,director,F,5287,man sitting against a wall
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490655479626,59,5,director,C,3127,man with arms up
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490655493337,60,5,director,D,3838,man with object facing left
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490655502353,61,6,director,G,1360,"J" shape
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490655513928,62,6,director,C,3831,man with arms in the air
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490655537015,63,6,director,B,12031,man on knees, two triangles left, 1 right
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490655574201,64,6,director,E,10375,mountain side, cube + 2 tirangles
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490655588949,65,6,director,A,7232,man with a leg up
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490655605455,66,6,director,D,5526,man with object facing left
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490655615475,67,6,director,H,2246,used toothpaste
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490655641285,68,6,director,K,14935,man on knees with 2 triangles ontop
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490655650092,68,6,director,K,4624,*diamond sorry
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490655667515,69,6,director,F,4246,man sitting against a wall
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490655687452,70,6,director,L,8151,man with knees slightly bent
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490655689107,70,6,director,L,1391,flat bottom
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490655713677,71,6,director,I,14768,diamond ontop 2 triangles facing left
+0413-e4a76b36-4367-4e30-abf9-93e823913630,1490655733691,72,6,director,J,6680,diamond ontop head/table

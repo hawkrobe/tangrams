@@ -1,0 +1,110 @@
+gameid,time,roundNum,occurrenceNum,sender,intendedName,timeElapsed,contents
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490643588143,1,1,matcher,B,406,hi
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490643594570,1,1,director,B,888,hello
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490643622235,1,1,director,B,19288,ok this one is mostly long and flat at the bottom
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490643644134,1,1,director,B,15575,but it is not completely flat
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490643658193,1,1,director,B,12008,and it looks like it has angel wings
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490643705394,2,1,director,D,14267,this one looks like a person standing straight up and pointing from its side
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490643736414,2,1,director,D,11080,straight legs, straight back, and he is pointing to the left
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490643781504,3,1,director,E,26349,this person looks like he is sitting with his back against the wall. square head with a crazy hat
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490643811069,3,1,matcher,E,8410,is he sitting with his back on the left
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490643821117,3,1,director,E,6563,back is on the left, head facing to the right
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490643867610,4,1,director,J,16471,back and legs are straight up on the left
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490643878787,4,1,director,J,5559,pointing to the right from the shoulder
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490643921729,5,1,director,I,24481,standing on one leg, 2 arms facing to the left, looks like his back leg is facing to the right
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490643957759,6,1,director,K,15536,on knees with 1 arm facing to the right
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490643988131,6,1,director,K,19389,completely on knees, with a point that goes upwards on the left side
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490644013898,7,1,director,F,9230,sitting down facing the left
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490644023253,7,1,director,F,871,head down
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490644039306,8,1,director,C,3128,the Y in the YMCA dance
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490644083281,9,1,director,H,18726,shoulders and torso are going straight down
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490644096428,9,1,director,H,8694,bottom 1/4 faces slightly to the right
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490644148815,10,1,director,G,24527,the legs stretch the furthest across all of them, he looks like he is gonna pull out a sword
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490644155047,10,1,director,G,1031,standing up
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490644224267,11,1,director,L,11420,knees are bent, pointing from the torso to the right side
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490644268974,12,1,director,A,11400,one leg up in the air, pointy face facing to the left, with a flag on his back
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490644278440,12,1,director,A,2007,u picked it 2 games ago
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490644305071,13,2,director,K,15168,this is the one that looks like its praying on its knees, the arm is facing to the right
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490644319902,13,2,director,K,3119,only 1 arm visible
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490644361866,14,2,director,I,15429,standing on one leg, the back leg is facing the right
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490644380372,15,2,director,A,2617,flag guy again
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490644408064,15,2,director,A,3543,pointy face, standing on 1 leg
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490644431185,16,2,director,J,10984,flat back/torso/legs on the left, pointing from shoulder to the right
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490644449855,17,2,director,C,591,YMCA
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490644495145,18,2,director,B,22649,on knees. looks like 1 arm to the left and one arm to the right
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490644509120,18,2,director,B,846,dabbing
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490644518944,19,2,matcher,F,4580,that was the angel one, my bad
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490644534571,19,2,director,F,15391,sitting down, facing the left
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490644564415,20,2,director,L,4376,knees bent, pointing to the right
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490644612025,21,2,director,H,28175,straight torso and sides, with legs bent to the right. ill call him middle guy if we get this right
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490644649587,22,2,director,E,9825,sitting, facing the right
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490644668095,22,2,matcher,E,4769,rabbit guy?
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490644696598,23,2,director,G,9854,this will be dueling guy
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490644731172,23,2,director,G,29986,its the guy with the weird big J shaped leg an the tiny triangle back foot on the right side
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490644768129,23,2,matcher,G,4570,standing on one leg
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490644777576,23,2,director,G,792,no
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490644783762,23,2,director,G,5783,its the big fat J leg
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490644793867,23,2,director,G,5920,not the normal sized leg
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490644806521,24,2,director,D,2904,left pointing guy
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490644816661,25,3,director,E,189,rabbit
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490644824316,26,3,director,C,512,ymca
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490644860029,27,3,director,B,20552,on knees with arms wide open. creed guy is his name if we get it
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490644889316,27,3,matcher,B,5627,pointing right?
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490644903731,27,3,director,B,8328,left arm is pointing, right arm is pointing a lil bit higher
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490644925330,27,3,director,B,6095,head facing downwards to the right
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490644966484,28,3,director,F,3755,sitting facing left
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490644994555,29,3,director,J,9616,right pointing guy, standing straight up
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490645008434,30,3,director,H,1065,middle guy'
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490645024897,31,3,director,G,1431,dueling guy
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490645030264,31,3,director,G,943,fat J leg
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490645067644,32,3,director,I,4663,calling this yoga guy
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490645081399,32,3,director,I,13288,standing on one leg, 2 arms pointing to the left, back leg to the right
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490645101539,33,3,director,A,1700,flag guy
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490645127490,33,3,matcher,A,5849,i forget which one we said was flag guy
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490645143319,33,3,director,A,7117,u picked it last round, the guy on one leg
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490645156269,34,3,director,D,3207,pointing left stand guy
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490645182948,35,3,director,K,11511,this will be praying guy
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490645197451,35,3,director,K,13823,on knees, hands out facing the right
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490645248052,36,3,director,L,14048,guy with bent knees pointing to the right. knee guy
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490645263878,37,4,director,A,1103,flag guy
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490645282377,38,4,director,D,2583,stand point left guy
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490645297283,39,4,director,G,1074,dueling guy
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490645361497,40,4,director,K,3894,praying guy 
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490645399616,41,4,director,B,7504,on knees with angel wings guy
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490645411533,42,4,director,H,1848,middle guy
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490645432070,43,4,director,L,4827,knee bent pointing right guy
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490645448515,44,4,director,I,3360,yoga guy
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490645459955,45,4,director,F,2423,sitting facing left
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490645470490,46,4,director,E,647,rabbit
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490645481946,47,4,director,J,2606,standing point right
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490645491820,48,4,director,C,285,ymca
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490645500164,49,5,director,A,384,flag
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490645510450,50,5,director,L,1527,knee bent guy
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490645526249,51,5,director,B,4989,creed guy, arms wide open
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490645543796,52,5,director,G,8330,thats dueling guy from last round
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490645548373,52,5,director,G,1368,pick the smae one
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490645549244,52,5,director,G,384,same
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490645559169,52,5,matcher,G,5905,the same one i picked dueling guy?
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490645577104,53,5,director,D,471,yep
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490645579582,53,5,director,D,2167,pointing left guy
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490645592165,54,5,director,C,3,ymca
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490645601368,55,5,director,F,1592,sitting left
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490645612750,56,5,director,H,688,middle
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490645621858,57,5,director,I,1559,yoga
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490645631499,58,5,director,E,1536,rabbit
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490645646604,59,5,director,J,2724,standing point right
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490645656994,60,5,director,K,430,praying
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490645668219,61,6,director,D,1641,point left
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490645681260,62,6,director,B,2201,arms wide open
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490645694865,63,6,director,H,1095, middle
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490645704368,64,6,director,I,1111,yoga
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490645713767,65,6,director,E,697,rabbit
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490645727059,66,6,director,L,4120,knee bent point right
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490645738164,67,6,director,G,911,dueling
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490645757349,68,6,director,K,767,praying
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490645766839,69,6,director,A,574,flag
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490645779151,70,6,director,J,1839,stand point right
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490645789830,71,6,director,F,887,sit left
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490645801550,72,6,director,C,2538,gg its been fun
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490645810711,72,6,matcher,C,5715,yea thanks you were awesome
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490645814069,72,6,director,C,590,ymca

@@ -1,0 +1,105 @@
+gameid,time,roundNum,occurrenceNum,sender,intendedName,timeElapsed,contents
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490641579306,1,1,matcher,A,743,hello
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490641606532,1,1,director,A,38562,Hello. The one that looks like a guy walking with a box on his back~~~
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490641620998,2,1,matcher,C,1146,type something
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490641639969,2,1,director,C,10599,an angle flying
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490641685877,3,1,director,B,28428,a woman kneeling with a triangle in the front
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490641772385,4,1,director,I,73091,square on head looks like a bird beak on left with a tail, you know you can ask questions
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490641826164,4,1,matcher,I,3142,what is the position of the body?
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490641877205,4,1,director,I,43448,one leg down triangle tail 2 triangles on left that look like a beak and a diamond on top
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490641926837,5,1,director,F,23264,a person leaning against a wall with head bowed
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490641944059,5,1,director,F,5232,facing left
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490641995412,6,1,director,H,32512,looks like a person in a cap and gown, kind of floating
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490642015355,6,1,director,H,3576,no arms
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490642115071,7,1,director,K,71721,diamond head, kneeling, point to the right, upward point to the left
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490642204488,8,1,director,E,43489,looking to the right, 2 triangles on square head, looks like wrapped in a blanket
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490642223955,9,1,matcher,D,2408,we're on a roll
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490642261175,9,1,director,D,30754,yeah! Looks like a grad holding something out to the right
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490642271198,9,1,director,D,1311,left
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490642348281,10,1,director,G,57192,lsomeone walking taking big steps with a train trailing behind, going to the right, diamond head
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490642410401,11,1,director,J,38992,diamond head body straight on the left side with angles on the right side
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490642470921,12,1,director,L,31514,diamond head, triangle to the right of body , looks like knees are bent
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490642534305,13,2,director,D,30060,grad with something on left side of body, we have done before
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490642555807,14,2,matcher,L,2474,you're doing a good job
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490642561849,14,2,director,L,3530,thanks
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490642580336,14,2,director,L,17949, bent knee diamond head, done before
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490642613437,15,2,director,H,14323,floating grad again
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490642655211,16,2,director,A,22635,guy stepping with box on back, first one we did
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490642710242,17,2,director,E,26762,2 triangles on head, square head, wrapped in blanket, old one
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490642752326,18,2,director,C,19304,flying gran, the one you picked for floating grad
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490642770684,19,2,matcher,K,2422,the angle grad
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490642774667,19,2,matcher,K,1173,angel
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490642834955,19,2,director,K,53572,that's what it was, kneeling diamond head with triangle to the right
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490642886961,20,2,director,G,20546,big steps with a train following, diamond head
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490642939063,21,2,director,I,34461,looks like a bird tith a diamond on head, 1 leg, tail to the right
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490642993461,22,2,director,J,24284,diamond head straight on left side angles on right
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490643008833,23,2,matcher,F,1396,grad right
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490643029700,23,2,director,F,4390,got it
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490643052171,23,2,director,F,20996,leaning on wall head bowed feet to the left
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490643068703,23,2,matcher,F,1269,poncho
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490643114297,24,2,director,B,27589,kneeling triangle to right, feet to left
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490643142657,24,2,director,B,2739,short one
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490643154503,24,2,matcher,B,3317,short or taller?
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490643161008,24,2,director,B,2250,short
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490643194897,25,3,director,E,16844,2 triangles on head wrapped in blanket
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490643200799,25,3,matcher,E,1522,bunny ears
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490643224414,26,3,director,L,15124,bent knees, standing
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490643243127,27,3,director,H,4434,floating grad
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490643259240,28,3,director,G,2844,big steps
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490643272997,28,3,matcher,G,1706,with train?
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490643276077,28,3,director,G,963,yes
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490643292630,29,3,director,I,8981,bird with diamond
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490643331077,30,3,director,F,17804,leaning on wall feet to the left, head bowed
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490643349537,31,3,matcher,K,748,poncho
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490643375685,31,3,director,K,21216,I forgot, we just need to agree on the bird. LOL
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490643385520,31,3,matcher,K,294,yes
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490643401267,31,3,director,K,16164,kneeling , tall one
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490643438859,32,3,director,D,14972,grad, with something on the left
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490643455194,33,3,director,J,4468,right grad
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490643494545,34,3,director,A,19836,pointy face guy with box on his back, facing left
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490643502826,34,3,director,A,1788,walking
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490643515264,35,3,matcher,C,1391,frankenstein
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490643528605,35,3,director,C,14545,angel grad
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490643548377,36,3,director,B,4867,kneeling short
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490643562185,37,4,director,G,3075,big steps
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490643587077,38,4,director,B,4687,kneeling short
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490643614008,39,4,director,D,16372,grad left
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490643628832,40,4,director,K,3595,kneeling tall
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490643642888,41,4,director,H,4860,floating grad
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490643675729,42,4,director,E,22620,2 triangles is this poncho 
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490643691884,42,4,director,E,2523,on head
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490643701811,42,4,matcher,E,5452,poncho is leaning against wall, feet left
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490643711729,42,4,director,E,4204,not him
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490643719269,42,4,matcher,E,3831,bunny ears
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490643737968,43,4,director,F,4251,poncho
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490643757489,44,4,director,A,10939,Frankenstein 
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490643768796,45,4,director,C,3357,angel grad
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490643781742,46,4,director,J,3580,grad right
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490643793422,47,4,director,I,1771,bird
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490643817825,48,4,director,L,7899,bent knees
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490643834896,49,5,director,J,5612,grad right
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490643848720,50,5,director,B,4389,kneeling short
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490643862094,51,5,director,H,5540,floating grad
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490643872935,52,5,director,A,2364,frank
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490643888589,53,5,director,L,3289,bent knees
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490643903157,54,5,director,E,5796,bunny ears
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490643913071,55,5,director,C,3532,angel grad
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490643928461,56,5,director,F,2296,poncho
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490643940814,57,5,matcher,D,3098,think we have it figured out now lol
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490643952529,57,5,director,D,13444,grad left. we are doing great noe
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490643965854,58,5,director,I,2531,bird
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490643977031,59,5,director,G,3187,big step
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490643994028,60,5,director,K,7076,kneeling tall
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490644015485,61,6,director,K,13805,kneeling tall, again
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490644028180,62,6,director,E,2988,bunny ears
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490644037388,63,6,director,I,2007,bird
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490644048421,64,6,director,G,2483,big step
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490644066637,65,6,director,B,10311,kneeling short
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490644078132,66,6,director,D,3557,grad left
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490644090846,67,6,director,L,3172,bent knees
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490644103251,68,6,director,J,4517,grad right
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490644113037,69,6,director,A,2181,frank
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490644124740,70,6,director,H,4868,floating grad
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490644138050,71,6,director,C,4416,angel grad
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490644147549,72,6,director,F,2211,poncho
+4824-58d5c545-a718-4653-89db-4be922da59d7,1490644147782,72,6,matcher,F,1239,last one!

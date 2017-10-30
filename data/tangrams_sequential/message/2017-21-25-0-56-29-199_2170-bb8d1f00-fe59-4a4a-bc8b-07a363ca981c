@@ -1,0 +1,34 @@
+gameid,time,roundNum,occurrenceNum,sender,intendedName,timeElapsed,contents
+2170-bb8d1f00-fe59-4a4a-bc8b-07a363ca981c,1490403408832,1,1,matcher,D,1004,hello
+2170-bb8d1f00-fe59-4a4a-bc8b-07a363ca981c,1490403414277,1,1,director,D,14157,Hello. It's the man that is standing in a robe facing the left~~~
+2170-bb8d1f00-fe59-4a4a-bc8b-07a363ca981c,1490403447434,2,1,director,E,18902,It is the person sitting while facing right with the bunny ears.
+2170-bb8d1f00-fe59-4a4a-bc8b-07a363ca981c,1490403487598,3,1,director,I,27146,It is the man standing on one leg with one extended behind him. He is facing left
+2170-bb8d1f00-fe59-4a4a-bc8b-07a363ca981c,1490403508617,4,1,matcher,J,6774,miss clicked, oops
+2170-bb8d1f00-fe59-4a4a-bc8b-07a363ca981c,1490403512294,4,1,director,J,1582,no prob
+2170-bb8d1f00-fe59-4a4a-bc8b-07a363ca981c,1490403545142,4,1,director,J,2095,this one is hard
+2170-bb8d1f00-fe59-4a4a-bc8b-07a363ca981c,1490403559352,4,1,director,J,13837,It the person with a short triangle on the right where the arm would be
+2170-bb8d1f00-fe59-4a4a-bc8b-07a363ca981c,1490403568564,4,1,director,J,6431,They have a diamond head.
+2170-bb8d1f00-fe59-4a4a-bc8b-07a363ca981c,1490403613791,5,1,director,G,19400,The 'head' is leaning to the left with the two 'arms' towards the right.
+2170-bb8d1f00-fe59-4a4a-bc8b-07a363ca981c,1490403625294,5,1,director,G,8663,the lower body is extended to the left.
+2170-bb8d1f00-fe59-4a4a-bc8b-07a363ca981c,1490403658519,6,1,director,F,11775,the person is sitting with their head bowed. 
+2170-bb8d1f00-fe59-4a4a-bc8b-07a363ca981c,1490403660765,6,1,director,F,2022,facing left
+2170-bb8d1f00-fe59-4a4a-bc8b-07a363ca981c,1490403690050,7,1,director,L,25299,the person is facing right with arms extended and almost kneeling.
+2170-bb8d1f00-fe59-4a4a-bc8b-07a363ca981c,1490403705784,7,1,director,L,2085,legs are bent
+2170-bb8d1f00-fe59-4a4a-bc8b-07a363ca981c,1490403744592,8,1,director,C,20169,it's the floating ghost with the arms up
+2170-bb8d1f00-fe59-4a4a-bc8b-07a363ca981c,1490403753815,8,1,director,C,6817,head is slightly to the left
+2170-bb8d1f00-fe59-4a4a-bc8b-07a363ca981c,1490403801782,9,1,director,H,21245,it the head and body with the lower right part sticking out
+2170-bb8d1f00-fe59-4a4a-bc8b-07a363ca981c,1490403826692,9,1,director,H,1921,no arms
+2170-bb8d1f00-fe59-4a4a-bc8b-07a363ca981c,1490403890977,10,1,director,A,27844,one foot is up and extending to the left. the head is facing down with a large pointed nose
+2170-bb8d1f00-fe59-4a4a-bc8b-07a363ca981c,1490403902015,10,1,director,A,10210,There is a square or wing on the back
+2170-bb8d1f00-fe59-4a4a-bc8b-07a363ca981c,1490403936028,11,1,director,K,25053,A person is kneeling while facing right with arms extended with a pointing thing on their back 
+2170-bb8d1f00-fe59-4a4a-bc8b-07a363ca981c,1490403943254,11,1,director,K,4844,it's pointing up from the back left
+2170-bb8d1f00-fe59-4a4a-bc8b-07a363ca981c,1490403984076,12,1,director,B,20121,another kneeler facing left with a triangle on their back
+2170-bb8d1f00-fe59-4a4a-bc8b-07a363ca981c,1490404026957,13,2,director,A,22728,man with the large nose.
+2170-bb8d1f00-fe59-4a4a-bc8b-07a363ca981c,1490404031351,13,2,director,A,3904,one leg is up
+2170-bb8d1f00-fe59-4a4a-bc8b-07a363ca981c,1490404041385,13,2,director,A,3455,facing left
+2170-bb8d1f00-fe59-4a4a-bc8b-07a363ca981c,1490404062618,14,2,director,E,11368,person sitting with the bunny ears
+2170-bb8d1f00-fe59-4a4a-bc8b-07a363ca981c,1490404070866,14,2,matcher,E,9036,seems like the way they face might be inverted for us
+2170-bb8d1f00-fe59-4a4a-bc8b-07a363ca981c,1490404088609,15,2,director,B,4896,it might be me
+2170-bb8d1f00-fe59-4a4a-bc8b-07a363ca981c,1490404182710,15,2,director,B,35086,this person is sitting with their foot extending and arms to the left. head is up and triangle on their back~~~ I said they were kneeling last time
+2170-bb8d1f00-fe59-4a4a-bc8b-07a363ca981c,1490404195663,15,2,director,B,8349,the triangle is on the right
+2170-bb8d1f00-fe59-4a4a-bc8b-07a363ca981c,1490404205113,15,2,director,B,4511,above their butt

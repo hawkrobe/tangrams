@@ -1,0 +1,119 @@
+gameid,time,roundNum,occurrenceNum,sender,intendedName,timeElapsed,contents
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490641486270,1,1,director,E,1411,Hello
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490641489535,1,1,matcher,E,959,hi
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490641504590,1,1,director,E,12575,Alright let's get started.
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490641543084,1,1,director,E,32451,square head, sitting down, with Native American looking headdress
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490641568457,1,1,matcher,E,4431,facing which way?
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490641577131,1,1,director,E,1107,right
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490641618942,2,1,director,I,30407,facing left, standing on one foot,both arms out and facing left, diamond head
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490641667172,3,1,director,D,22592,diamond head, facing left with one arm sticking out of what looks like a robe
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490641673720,3,1,director,D,4212,pointing left 
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490641714700,4,1,director,F,13006,sitting down with knees bent facing left, diamond head
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490641734194,4,1,director,F,4700,looks like they are reading a book
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490641800685,5,1,director,A,34812,square head, facing left, standing on one foot with the other foot sticking out, hands bent downwards
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490641847690,6,1,director,K,16291,diamond head, kneeling down, facing right with hands out
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490641881130,7,1,matcher,J,2055,ops
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490641884611,7,1,director,J,1632,no worries
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490641890512,7,1,director,J,4888,only a penny per round
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490641911727,7,1,director,J,19920,diamond head, facing forward, right hand slightly out to the right
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490641956116,7,1,matcher,J,12006,is the left side missing some feature?
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490641960202,7,1,director,J,420,yes
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490641987393,8,1,director,H,20040,diamond head, sitting down and facing forward, no limbs visible
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490642050044,9,1,director,C,20424,diamond head, both arms out, looks like they are falling backwards
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490642055197,9,1,director,C,3426,no feet
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490642098216,9,1,matcher,C,6551,falling backward to the left?
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490642116422,9,1,director,C,5172,yea I suppose
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490642123932,10,1,director,B,999,nice
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490642155146,10,1,matcher,B,12120,the 30 min estimation seem about right.~~~~~~
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490642159538,10,1,director,B,35329,not to be rude but can we speed through this. the max bonus is only 72 cents so just go with whatever you think is right at first glance
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490642165314,10,1,matcher,B,479,sure
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490642167443,10,1,director,B,6878,I won't be mad if it's wrong
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490642175623,10,1,director,B,5548,cool
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490642206057,10,1,director,B,26090,square head, arms out, looks like a ninja pose, left foot out
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490642246915,11,1,director,L,21209,diamond head, facing left, knees bent to the left, hand facing left
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490642307041,12,1,director,G,35469,diamond head, kneeling on left foot, right foot and hand out facing the left
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490642362468,13,2,director,B,35296,square head, foot facing left, triangle hand facing the left
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490642390348,14,2,director,H,8954,diamond head, sitting, no limbs visible 
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490642435059,15,2,director,I,28672,diamond head, facing left, arms facing left, standing on one foot while the other sticks out to the right
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490642476345,16,2,director,C,13295,diamond head, hands up and out, looks like they are falling, no feet
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490642519750,17,2,director,D,27331,diamond head, facing left, one hand and one foot are slightly visible
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490642563565,18,2,director,J,23060,diamond head, facing forward, right hand and right foot are out
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490642587070,19,2,director,K,13091,diamond head, kneeling and pointing to the left
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490642597314,20,2,director,F,1882,close lol
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490642609026,20,2,matcher,F,5783,u could abbreviate a bit
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490642616882,20,2,matcher,F,6815,dont need to do all the work typing it out
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490642627841,20,2,director,F,27462,D head and S head?
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490642631065,20,2,matcher,F,616,yea
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490642633073,20,2,director,F,923,cool
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490642639392,20,2,matcher,F,4400,l/r direction
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490642653222,20,2,director,F,17862,d head, sitting down facing left like reading a book
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490642685575,21,2,director,L,16025,d head, standing with knees bent facing left, left hand out
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490642693962,21,2,director,L,2429,sorry right hand out
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490642730043,22,2,director,E,18157,s head, sitting down facing right, feathers on head
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490642774915,23,2,director,A,26858,s head, standing one leg with other foot sticking out to the left 
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490642785637,23,2,director,A,2626,hands down
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490642829469,24,2,director,G,34764,s head facing right, kneeling on left foot with right pointing to the right, doing karate chop
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490642872238,25,3,director,A,30168,s head, looking left, standing on one foot with other foot up and also to the left
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490642901018,26,3,director,J,13950,D head, looking forward, right hand out. no left hand visible
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490642946332,27,3,director,L,25376,d head, facing right, bent knees and arm pointing right
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490642984976,28,3,director,K,25333,d head, knees bent facing right and hand also facing right ( one you picked last round)
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490643004257,29,3,director,G,596,lol
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490643026063,29,3,matcher,G,8423,sorry brb 1 min errand
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490643044729,29,3,director,G,36805,s head, standing up doing a karate chop to the right
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490643100303,30,3,director,E,4161,that's the falling one
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490643102654,30,3,director,E,1949,ok next.~~~~~~
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490643114978,30,3,director,E,9314,s head, sitting facing right, feathers on head
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490643154688,31,3,director,D,25331,d head, pointing left, hand slightly visible
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490643175798,32,3,director,H,9891,d head, sitting down facing forward, no limbs
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490643197228,33,3,director,C,9239,d head, both hands out, falling
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490643225742,34,3,director,F,13483,d head, sitting down facing left with knees bent
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490643230058,34,3,director,F,1042,no arms
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490643270987,35,3,director,I,29810,d head, standing on one foot, both hands out in front to the left
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490643325786,36,3,director,B,32611,s head, one foot facing right, one hand left, and triangle arm facing right
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490643364848,37,4,director,F,21476,d head, facing left with knees bent, looks like they are reading a book sitting up against something
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490643402268,38,4,director,L,26254,d head, facing right , knees bent, one hand facing right
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490643430666,39,4,director,B,17707,s head, foot out to the right, triangle hand on the right
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490643452795,40,4,director,C,5605,d head, arms out, falling
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490643495751,41,4,director,G,23280,s head, karate chop to the left, foot out to the left
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490643530545,42,4,director,K,19181,d head, arms out to the left 
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490643565448,43,4,director,I,11816,d head, both hands out to the left
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490643583546,44,4,director,H,8689,d head, sitting facing forward, no limbs
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490643617117,45,4,director,A,18950,s head, facing left, standing on one foot with other foot out, hands pointing down
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490643637619,46,4,director,E,2681,feathers on head
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490643661018,47,4,director,J,12686,d head, facing forward with slight hand out to right
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490643665965,47,4,director,J,2281,no left hand
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490643690482,48,4,director,D,12473,d head, facing left, hand slightly point to left
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490643723973,49,5,director,L,19707,d head, knees bent with right hand out to the right
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490643726826,49,5,director,L,1925,screen right
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490643755457,50,5,director,I,21380,d head, standing on one foot facing left, both hands out facing left
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490643772977,51,5,director,C,5965,d headm arms up, falling
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490643790527,52,5,director,D,9046,d head, facing left, hand slightly out to left
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490643804773,53,5,director,H,4682,d head, sitting, no limbs
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490643843677,54,5,director,G,11151,s head, karate chop to the left
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490643855506,55,5,matcher,B,5448,atleast i know what that is now
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490643857563,55,5,director,B,5214,opps that should have been to the right
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490643862607,55,5,director,B,4852,sorry i keep mixing it uup
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490643869746,55,5,matcher,B,3528,lol
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490643885056,55,5,director,B,16397,s head, triangle hand to the right
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490643886530,55,5,matcher,B,10848,it fine, sorry to have type all this crap
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490643919082,56,5,director,K,19707,d head, kneeling facing left, hand out to the left
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490643942029,57,5,director,E,6026,i call that one the triangle hand lol
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490643950016,57,5,director,E,3280,s head, feathers
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490643974040,58,5,director,F,15723,d head, sitting facing the left, reading a book
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490644015087,59,5,director,A,28006,s head, standing on one foot with the other foot pointed left, hand pointing down and to the left
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490644037538,60,5,matcher,J,5879,he look like a zombie imo
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490644043709,60,5,director,J,652,lol
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490644064697,60,5,director,J,20533,d head, arm out to the right, no left hand
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490644106232,61,6,director,D,24754,d head, facing left, arm slightly visible pointing left
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490644131687,62,6,director,H,7343,d head, facing forward, no limbs
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490644165269,63,6,director,I,22584,d head, facing left,standing on one foot, both arms out and pointing left 
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490644190233,64,6,director,L,12081,d head, knees bent facing the right, one hand to the right
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490644208285,65,6,director,A,1576,zombie
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490644218504,66,6,director,G,581,nice
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490644231047,66,6,director,G,9198,s head, karate chop to the right
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490644252117,67,6,director,B,12914,s head, triangle hand to the right, 
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490644288838,68,6,director,J,16701,d head, hand pointing right, no left hand
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490644300348,69,6,director,E,1270,feathers
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490644327278,70,6,director,K,18999,d head, kneeling facing right, hand out to the right
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490644344779,71,6,director,C,6890,d head, falling back, no feet
+3980-e156a142-fc10-4a2f-8b6a-03d4f18343b9,1490644368327,72,6,director,F,12654,d head, sitting facing left, reading book

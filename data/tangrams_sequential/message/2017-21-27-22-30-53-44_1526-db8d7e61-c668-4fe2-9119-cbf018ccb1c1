@@ -1,0 +1,104 @@
+gameid,time,roundNum,occurrenceNum,sender,intendedName,timeElapsed,contents
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490653873938,1,1,director,I,13940,pick the one that looks like a person on one leg 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490653903210,2,1,director,D,14005,pick the one that has a diamond on top and a square-type shape on the left 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490653940170,3,1,director,F,9039,the one that is sitting down, diamond head 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490653967673,4,1,director,A,15150,the one that has a square in the top right, looks like its balancing on one foot 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490654010578,5,1,director,H,22463,the one that has a diamond at top, and big blob, and points in the bottom right
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490654059852,6,1,director,J,6134,a diamond on top, a straight line on the left 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490654090945,7,1,director,G,7768,square on top left, 2 points on the right
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490654138463,8,1,director,E,16198,the one that looks like it has bunny ears
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490654156431,9,1,director,C,7662,a person who has both arms in the air
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490654172072,10,1,director,L,6638,a person squatting with his hand out 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490654176875,10,1,director,L,1439,on the right 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490654191708,11,1,director,K,7303,2 diamonds, 3 triangles, 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490654198933,11,1,director,K,4580,2 triangles point right 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490654247287,12,1,director,B,13159,a square on top, a triangle to the bottom right of it, a blob on the bottom
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490654292397,13,2,director,D,17447,a standing person with a diamond head and his arm out 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490654304439,13,2,director,D,8382,hand outward to our left 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490654334376,14,2,director,G,15078,one square, one triangle facing upper left, one triangle facing down
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490654417272,15,2,director,J,8419,a diamond on top, straight line on left 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490654437484,16,2,director,I,11478,this one looks like a figure skater with both arms pointing to our left 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490654443603,16,2,director,I,3119,standing on one leg 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490654463451,17,2,director,L,14686,this looks like a person squatting down, so 2 points on the right, looks like a bent knee
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490654484539,18,2,director,C,5879,person with both arms out in the air 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490654504731,19,2,director,A,7790,looks like a dinosaur with a flag 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490654507820,19,2,director,A,1391,on one foot 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490654511522,19,2,director,A,1887,square upper right 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490654534290,20,2,director,E,2510,bunny ears 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490654555761,21,2,director,H,12950,diamond on top, blob, looks like a persons body if theyre sitting down 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490654576546,21,2,director,H,3008,2 vertical lines 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490654583508,21,2,director,H,3142,goes to the right at the bottom 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490654620451,22,2,director,K,17254,looks like a diamond on top, diamond beneath it, 2 points on the right 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490654633594,22,2,director,K,7837,looks like 2 diamonds and 3 triangles overlapping
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490654658169,23,2,director,B,9142,square on top, triangle touching it to the bottom right of it 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490654669845,23,2,director,B,645,blob 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490654685792,24,2,director,F,5800,looks like a person sitting on the floor looking down 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490654689312,24,2,director,F,2839,bent knee 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490654703846,25,3,matcher,H,2005,my bad on that one
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490654712532,25,3,director,H,10831,triangle, blob that looks like a person 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490654715047,25,3,director,H,2271,like a portrait 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490654737851,25,3,director,H,4374,goes to the right at the bottom 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490654753094,26,3,director,L,6670,this looks like a person sitting down on a chair
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490654759898,26,3,director,L,3766,triangle points right 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490654768457,26,3,director,L,2550,knees bent to the right 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490654776277,27,3,director,E,1263,bunny ears 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490654790307,28,3,director,J,4375,diamond on top, straight line on left 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490654812478,29,3,director,F,8493,person sat on the floor, looking down, knees bent, knee faces up 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490654843142,30,3,director,B,13246,the square on the top tilts right, triangle touches it to the right 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490654846354,30,3,director,B,2031,blob on bottom 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490654870988,31,3,director,G,14678,square tilts left, one triangle points to it, one triangle points to the bottom 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490654893157,31,3,director,G,1278,flat bottom 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490654917976,32,3,director,C,2792,person with hands in the air 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490654934857,33,3,director,D,6895,diamond head, person standing, their arm out to the left 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490654941495,33,3,director,D,3262,square under arm 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490654953582,34,3,director,I,4494,figure skater, both arms to the left 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490654960109,34,3,director,I,3176,one leg 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490654985037,35,3,director,K,10014,2 diamonds on top of eachother, 3 triangles overlap
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490655021141,36,3,director,A,10103,dinosaur with a flag. square upper right~~~  one leg
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490655044771,37,4,director,D,13888,looks like a person standing, diamond head, left arm 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490655079464,38,4,matcher,B,14306,that one makes me think of a magician holding a top hat
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490655085094,38,4,director,B,15982,square tilts right, triangle on right touches it, blob on bottom 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490655092250,38,4,director,B,3217,oh yeah it does 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490655118033,39,4,director,L,7262,person squatting down onto chair, arm out on right 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490655122660,39,4,director,L,4152,knee bent towards right 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490655143120,39,4,matcher,L,4598,triangle out of back or no?
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490655151929,39,4,director,L,974,no 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490655163705,40,4,director,A,5000,dinosaur with flag on one leg 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490655182179,41,4,director,G,9344,square upper left tilts left
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490655188978,41,4,director,G,5550,bottom right triangle faces down 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490655192599,41,4,director,G,2671,flat on bottom left 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490655209426,42,4,director,I,5590,the figure skater, one leg, 2 arms on left 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490655219744,43,4,director,E,1198,bunny ears 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490655232423,44,4,director,J,4159,diamond on top, straight line on left 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490655256502,45,4,director,H,15374,this is the one that i think looks like a person posing for portrait.  diamond on top, goes to the right at the bottom 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490655281797,46,4,director,K,9864,2 diamonds stacked, 3 triangles, overlapping
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490655303079,47,4,director,C,2761,person with both arms in air 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490655334560,48,4,director,F,3950,person sitting on the ground looking down 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490655339762,48,4,director,F,3135,knee bent towards ceiling
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490655350866,49,5,director,D,2742,the magician w/ top hat 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490655361767,50,5,director,E,1343,bunny ears 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490655383632,51,5,director,G,15014,square tilts left, 2 triangles, flat on bottom left 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490655402385,52,5,director,J,5040,diamond on top, straight line on left 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490655426540,53,5,director,H,9525,portrait person, diamond on top, goes to the right at the bottom 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490655440908,54,5,director,C,5806,person with both arms waving in air 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490655459204,55,5,director,B,10071,square tilts right, 2 triangles point towards it 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490655468308,55,5,director,B,4463,triangle in bottom left corner 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490655501020,56,5,director,F,6727,person sat on ground looking down knee bent towards ceiling
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490655518378,57,5,director,L,6327,person squatting down, arm and knee point right 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490655544195,57,5,matcher,L,2946,diamond on back?
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490655551015,57,5,director,L,4902,no 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490655566782,58,5,director,A,9047,dinosaur with flag, one leg, square top right 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490655583662,59,5,director,K,6798,2 diamonds stacked, 3 triangles overlap 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490655606375,60,5,director,I,7862,figure skater, 2 arms left, standing on one leg 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490655625846,61,6,director,H,8519,portrait person, diamond on top, goes to right at bottom
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490655641403,62,6,director,J,7544,diamond on top, straight line on left 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490655658867,63,6,director,K,6184,2 diamonds stacked, 3 triangles overlap
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490655679811,64,6,director,L,9329,person squatting down, arm and knee to the right, straight back
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490655702229,65,6,director,F,8405,person sat on ground, head down, knee bent towards ceiling
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490655718408,66,6,director,C,3269,person with both arms in the air 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490655735168,67,6,director,A,7534,dinosaur with flag, one leg, square upper right 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490655757896,68,6,director,G,11653,square tilts left, 2 triangles on right, flat on bottom left 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490655783793,69,6,director,B,12862,square tilts right, 2 triangles point towards it, triangle on the bottom left 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490655813521,70,6,director,I,4317,figure skater, 2 arms left, on one leg 
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490655822697,71,6,director,E,1311,bunny ears
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,1490655830439,72,6,director,D,1367,the magician 

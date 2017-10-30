@@ -1,0 +1,115 @@
+gameid,time,roundNum,occurrenceNum,sender,intendedName,timeElapsed,contents
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490651406478,1,1,matcher,B,831,hi
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490651411002,1,1,director,B,973,hi
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490651441574,1,1,director,B,20734,the small square is on top with a rectangle to the right
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490651459346,1,1,director,B,11983,the rectangle is touching the square
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490651487899,1,1,matcher,B,4671,sitting or standing person
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490651498181,1,1,director,B,4374,kneeling
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490651504879,1,1,director,B,4822,facing the right
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490651522614,1,1,matcher,B,6544,feet kinda up behind them or flat
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490651532128,1,1,director,B,2507,flat
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490651562215,2,1,director,D,6190,standing facing the left
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490651582548,2,1,matcher,D,6287,both feet on ground?
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490651584000,2,1,director,D,7288,arms are straight out
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490651591401,2,1,director,D,4236,yes both feet on ground
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490651614989,2,1,matcher,D,10831,like they are holding a bowl or something in their arms?
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490651618911,2,1,director,D,364,yea
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490651668371,3,1,director,L,7344,halfway kneeling and facing the right
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490651687758,3,1,director,L,3171,back is flat
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490651700763,3,1,matcher,L,15008,S shape almost to body? hands and feet
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490651706168,3,1,director,L,738,yes
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490651736822,4,1,director,A,8981,one leg up facing the left
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490651750122,4,1,matcher,A,3392,both arms out?
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490651761237,4,1,director,A,5139,no arms
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490651780242,4,1,matcher,A,9504,looks like head is going to fall off to the right?
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490651784508,4,1,director,A,708,yea
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490651792713,5,1,director,H,2400,thanks good work
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490651803928,5,1,director,H,8354,this one looks like it has no arms or legs
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490651828222,5,1,matcher,H,9887,oval shape body sitting or more square one?
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490651829218,5,1,director,H,1705,just sitting
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490651864382,5,1,director,H,4162,kind of oval
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490651905996,6,1,director,K,27768,kneeling with a small triangle on the back and it looks like a triangle for their arms
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490651944907,7,1,matcher,C,2687,bah sorry
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490651963523,7,1,director,C,9528,no problem im trying to describe better
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490651980440,7,1,director,C,14233,this one looks like they would be doing the ymca dance
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490651992341,7,1,director,C,1672,no legs
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652013219,8,1,director,F,10187,sitting with their knees up
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652017125,8,1,director,F,1977,facing left
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652048024,8,1,matcher,F,23328,like they kinda fell asleep? head tipped down
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652056484,8,1,director,F,3202,yea slunched over
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652079840,9,1,director,J,9577,the body looks like a cliff
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652088860,9,1,director,J,3694,facing the right
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652112538,9,1,matcher,J,11039,so almost a solid rectangle with a diamond on top
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652119991,9,1,director,J,1494,yea
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652134519,10,1,director,E,3778,looks like rabbit ears
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652142788,10,1,director,E,2566,facing right
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652178453,11,1,director,G,12538,triangle arm and foot on right side
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652190366,11,1,director,G,5037,almost like they are doing the splits
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652225836,11,1,matcher,G,17759,with the arms in the air streching
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652258230,11,1,director,G,18595,it haso ne big leg and then a triangle on the opposite side
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652263548,11,1,director,G,2309,arms are up
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652292621,12,1,director,I,20998,one leg up behind them and they are facing left
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652306696,13,2,director,E,2928,rabbit again
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652327049,14,2,director,G,8346,dancer that is doing the splits again
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652340722,15,2,director,D,4288,one holding the bowl
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652362454,16,2,director,F,11836,slouched or sleeping with knees up
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652376572,17,2,director,H,2085,oval body
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652387564,18,2,director,L,1687,s shape
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652430143,19,2,director,K,25082,kneeling with the small triangle on back could appear to be holding a bowl
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652433145,19,2,director,K,2135,facing right
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652452600,20,2,director,C,1653,ymca
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652470025,21,2,director,A,4589,head falling of the back
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652486637,22,2,director,J,3202,cliff with the diamond
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652521516,23,2,director,B,24797,kneeling with large recatangle facing right looks like a megaphone is on their mouth
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652574239,24,2,director,I,11417,leg up straight behind them 
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652588430,25,3,director,D,4890,holding a bowl facing left
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652601822,26,3,director,A,3045,head falling off back
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652610698,27,3,director,B,1699,megaphone
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652619654,28,3,director,C,1048,ymca
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652627944,29,3,director,E,990,rabbit
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652644372,30,3,director,F,9578,sloucher 
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652656476,31,3,director,I,4892,leg straight behind
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652664826,32,3,director,J,1140,cliff
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652674507,33,3,director,G,1479,dancer
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652682911,34,3,director,L,912,s
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652692111,35,3,director,H,1070,oval
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652704723,36,3,director,K,2966,kneeling with bowl
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652721106,37,4,director,I,3864,leg out straight behind them
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652728892,38,4,director,C,861,ymca
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652741121,39,4,director,D,3698,holding bowl facing left
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652753346,40,4,director,F,1318,slouch
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652762889,41,4,director,H,816,oval
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652774479,42,4,director,K,3434,kneeling holding bowl
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652786095,43,4,director,E,1343,rabbit
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652795517,44,4,director,B,1942,megaphone
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652805573,45,4,director,J,875,cliff
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652812925,46,4,director,G,924,dancer
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652820136,47,4,director,L,470,s
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652832923,48,4,director,A,5322,heading falling off back
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652843722,49,5,director,K,2559,kneeling with bowl
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652855658,50,5,director,C,3607,ymca
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652864095,51,5,director,E,448,rbbait
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652876568,52,5,director,I,4467,leg straight out behind
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652883302,53,5,director,L,448,s
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652892463,54,5,director,H,1050,oval
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652901895,55,5,director,F,1153,slouch
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652910593,56,5,director,B,2006,megaphone
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652921528,57,5,director,D,2476,holding bowl
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652931709,58,5,director,G,941,dancer
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652941282,59,5,director,A,3008,head falling off back
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652949968,60,5,director,J,1158,cliff
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652958449,61,6,director,B,2068,megaphone
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652967830,62,6,director,J,1335,cliff
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652975468,63,6,director,E,1254,rabbit
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652982946,64,6,director,F,1345,slouch
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490652992368,65,6,director,A,2769,head falling off back
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490653000908,66,6,director,G,994,dancer
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490653015371,67,6,director,L,355,s
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490653023158,68,6,director,H,800,oval
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490653037227,69,6,director,I,3170,leg straight behind
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490653049735,70,6,director,K,4778,kneeling with bowl
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490653064919,71,6,director,D,4773,standing with bowl
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490653081769,72,6,director,C,5736,great job
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490653083011,72,6,matcher,C,10001,great work thanks!
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490653084802,72,6,director,C,2553,this was fun
+9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,1490653088535,72,6,director,C,1064,ymca

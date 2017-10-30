@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Experiment</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../lib/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="../../lib/css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
+    </script>
+    <!-- Custom styles for this template -->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body role="document">
+
+    <div class="container theme-showcase" role="main">
+
+      </br>
+
+      <div id="show">
+	
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100" style="width: 1%;"><span class="sr-only">1% Complete</span></div>
+      </div>
+
+      <div style="text-align: center; margin-left: auto; margin-right: auto">
+	<img src="images/cocologo.png" width="200px" length="200px" alt="Stanford CoCoLab" id="cocologo"></img>
+      </div>
+      
+      <div class="page-header" style="text-align: center">
+        <h3>Stanford CoCoLab</h3>
+      </div><!--<p id="cocolab">Stanford CoCoLab: Questions and Answers</p> -->
+      
+      <div class="well" style="width: 500px; margin: 0 auto"> 
+
+      <p align="left" id="instruct-text">In this HIT, you will play a fun matching game with another turker. Before starting the game, you will be given further instructions and must pass a short quiz testing your understanding of the instructions. It should take approximately 30 minutes, including the time it takes to read instructions and wait for another turker. Please pay attention and think carefully before responding! Thank you!</p>
+
+      </div>
+
+      <p>
+        <center><button id="agree" type="button" style="display: none" class="btn btn-sm btn-primary">CONTINUE</button></center>
+	<noscript><strong>JavaScript must be enabled to start.</strong></noscript>
+      </p>
+      <hr>
+      
+      <u><p id="legal">Legal information:</p></u>
+
+      <p id="legal">By answering the following questions, you are
+      participating in a study being performed by cognitive scientists
+      in the Stanford Department of Psychology. If you have questions
+      about this research, please contact <b> Robert Hawkins</b>
+      at <b><a href="mailto://rxdh@stanford.edu">rxdh@stanford.edu</a> </b>
+      or Noah Goodman, at ngoodman@stanford.edu. You must be at least
+      18 years old to participate. Your participation in this research
+      is voluntary. You may decline to answer any or all of the
+      following questions. You may decline further participation, at
+      any time, without adverse consequences. Your anonymity is
+      assured; the researchers who have requested your participation
+      will not receive any personal information about you.</p>
+
+      </div> <!-- show -->
+
+    </div> <!-- /container -->
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        var urlParams;
+        var match,
+	      pl     = /\+/g,  // Regex for replacing addition symbol with a space
+	      search = /([^&=]+)=?([^&]*)/g,
+	      decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
+	      query  = location.search.substring(1);
+
+      urlParams = {};
+      while (match = search.exec(query))
+      urlParams[decode(match[1])] = decode(match[2]);
+      
+      console.log(urlParams)
+      if(urlParams.assignmentId != "ASSIGNMENT_ID_NOT_AVAILABLE") {
+         $("#agree").show()
+      } 
+
+      document.getElementById("agree").onclick = function () {
+        var workerId = urlParams.workerId;
+        var assignmentId = urlParams.assignmentId;
+        var hitId = urlParams.hitId;
+        var turkSubmitTo = urlParams.turkSubmitTo;
+        location.replace("./instructions.html?workerId=" + workerId
+                         + "&assignmentId=" + assignmentId
+                         + "&hitId=" + hitId + "&turkSubmitTo=" + turkSubmitTo);
+      };
+      });
+
+    </script>
+    <script src="../../lib/js/bootstrap.min.js"></script>
+  </body>
+</html>

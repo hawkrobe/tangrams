@@ -1,0 +1,182 @@
+html , body {
+     background: #000000; 
+     color: #fff; 
+     font-family: Helvetica;
+     margin: 0; 
+     padding: 0;
+}
+
+.alignleft {
+	float: left;
+}
+
+.alignright {
+	float: right;
+}
+
+#header {
+    height: 20%;
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#roleLabel {
+	height: 2%;
+	width: 50%;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: auto ;
+	left:0; right:0; top:0; bottom: 0;
+	position: absolute;
+}
+
+#instructs {
+	height: 2%;
+	width: 50%;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: auto ;
+	left:0; right:0; top:4%; bottom: 0;
+	position: absolute;
+	font-size: 120%
+}
+
+#roundnumber {
+	height: 2%;
+	width: 8%;
+	text-align: center;
+	margin-left: 85%;
+	margin-top: 1%;
+	margin-right: auto;
+	margin-bottom: auto ;
+	left:0; right:0; top:20%; bottom: 0;
+	position: absolute;
+	font-size: 150%
+}
+
+#score {
+	height: 10%;
+	width: 20%;
+	text-align: center;
+	margin-left: 1%;
+	margin-top: 1%;
+	margin-right: auto;
+	margin-bottom: auto ;
+	left:0; right:0; top:20%; bottom: 0;
+	position: absolute;
+	font-size: 150%;
+}
+
+#submitbutton {
+    height: 6%;
+    width: 5%;
+    float: left;
+    margin-left: 10%;
+    margin-top: 2%;
+    background: rgb(255,255,255);
+    border: none;
+    padding: 5px;
+
+/*trying to change around attributes of click button reduces the clickable area
+ALOT...don't understand how to adjust that.*/
+}
+
+#main {
+	height: auto;
+	width: auto;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: auto ;
+	left:0; right:0; top:10%; bottom: 0;
+	position: absolute;
+}
+
+/*height and width originally 80vh*/
+#viewport {
+    float: bottom;
+    border:solid 1px #333;
+    height: 50vh;
+    width: 150vh;
+    margin: center;    
+    /*margin-right: 2.5%;*/
+    background: #383838;
+    /*opacity: .5;*/
+
+}
+
+#message_panel {
+	height: 40vh;
+	width: 100vh;
+ 
+	float: top;
+	/*centers message_panel*/
+	margin: auto;
+	list-style-type: none; 
+
+	border: solid 1px #999; 
+}
+
+#exit_survey {
+    height: auto;
+    width: auto;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto ;
+    left:0; right:0; top:10%; bottom: 0;
+    position: absolute;
+}
+
+#messages {
+	height:85%;
+	text-align: left;
+	font-size: 200%;
+	overflow-y: scroll;
+}
+
+#chatarea form {
+	padding: 3px; 
+	height: 5vh;
+	width: 100vh; 
+}
+
+#chatarea input {
+	border: 0; 
+	height: 99%;
+	font-size: 125%;
+	width: 89%; 
+	margin-left: .5%;
+	margin-right: .5%;
+	margin-top: .5%;
+	margin-bottom: .5%;
+	padding: 5px;
+	float: left;
+}
+
+#chatarea button {
+	width: 9%; 
+	height: 5vh;
+	font-size: 150%;
+	background: rgb(130, 224, 255); 
+	border: none; 
+	padding: 5px;
+	margin-left: .5%;
+	margin-right: .5%;
+}
+
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(255,255,255,.5);
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}

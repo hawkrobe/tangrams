@@ -1,0 +1,77 @@
+gameid,time,roundNum,occurrenceNum,sender,intendedName,timeElapsed,contents
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490641744376,1,1,director,A,8013,Hi there!
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490641756284,1,1,matcher,A,3160,Hi. Let's do this!
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490641807289,2,1,director,J,61958,The shape is holding one foot up in the air with the head to the side
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490641815872,2,1,director,J,2116,oops
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490641822578,2,1,director,J,6105,hold on 
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490641845119,4,1,director,L,11787,shape is sitting with hands in front
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490641857704,5,1,director,K,1940,awesome
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490641880550,6,1,matcher,G,7066,nice job
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490641887187,7,1,matcher,I,1438,missed that one
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490641900298,8,1,matcher,D,1213,mised it
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490641913815,9,1,director,H,5241,sitting no hands
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490641933976,10,1,director,E,8954,looks like indian
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490641952449,11,1,director,B,4621,sitting bird
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490641978778,12,1,director,C,8027,like a bird no legs
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490642017502,13,2,director,J,10877,one hand to the right
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490642049078,14,2,director,B,10112,spread out bird, sitting
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490642083928,15,2,director,D,11633,hands in front like in the prayer
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490642109487,16,2,director,F,2528,slumbering
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490642154750,17,2,director,L,22816,hands in front, like in the prayer, but knees bended
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490642192419,18,2,director,I,16762,one leg up in the air, from behind
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490642236575,19,2,director,G,27460,one leg in front, sort of bent towards back
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490642270504,20,2,director,H,14332,just a shape, no legs or arms visible
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490642292988,21,2,director,A,7528,walking like a zombie
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490642340238,22,2,director,K,24371,sitting like praying, kneeling
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490642366718,23,2,matcher,E,3837,You are doing fantastic!
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490642378091,23,2,director,E,6805,indian, you are too!
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490642403242,24,2,director,C,7600,ghost
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490642424492,25,3,director,I,10116,one leg , bird pose
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490642457638,26,3,director,J,17612,just a shape of a body, one arm visible
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490642509529,27,3,director,K,21546,prayer, on the knees. you are great!
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490642536604,28,3,director,D,7298,begger pose
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490642573833,29,3,director,B,16613,crane pose , knees bent
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490642594671,30,3,director,E,1823,indian
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490642631919,31,3,director,L,17100,begger pose, but knees bent
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490642646947,32,3,director,C,2328,ghost
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490642671499,33,3,director,H,13681,just a shape, no arms and legs visible
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490642682578,34,3,director,A,2058,zombie
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490642726687,35,3,director,G,26776,body bent backwards, leg is up and arm
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490642746832,36,3,director,F,6916,slumbering
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490642758592,37,4,director,E,1501,indian
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490642781781,38,4,director,B,10595,crane pose, knees bent
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490642810658,39,4,director,K,12649,begging on the knees
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490642825226,40,4,director,F,3077,slumber
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490642850856,41,4,director,D,14237,standing, begging
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490642882087,42,4,director,J,17122,just shape, but you see a small hand :)
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490642920041,43,4,director,I,15797,bird pose, leg is up. You are awesome!
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490642938837,44,4,matcher,L,3259,Thanks! You too! =)
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490642964426,44,4,director,L,22318,LoL, trying. Begger, knees slightly bent
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490642982122,45,4,director,C,1823,ghost
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490642995200,46,4,director,A,2957,zombie
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490643021021,47,4,director,G,23665,some are easier to explain. bent backwards~~~~~~
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490643047273,48,4,director,H,8424,shape, no arms or legs
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490643066070,49,5,director,H,8657,the same shape again
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490643096347,50,5,director,B,11687,bird pose, but sort of sitting
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490643120221,51,5,director,C,1395,ghost
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490643145154,52,5,director,L,13152,begger, knees bent slightly
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490643164418,53,5,director,F,3096,slumber
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490643179336,54,5,director,D,5094,begger, standing
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490643210941,55,5,director,J,16641,shape, but you can see right arm
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490643237354,56,5,director,E,13275,indian. This one easy
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490643269544,57,5,director,K,15305,begger on the knees
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490643282281,58,5,director,A,1837,zombie
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490643294661,59,5,director,I,2597,bird
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490643326945,60,5,director,G,7933,bent backwards
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490643351330,61,6,director,I,6022,awesome! bird pose
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490643365346,62,6,director,C,1443,ghost
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490643384390,63,6,director,D,4823,begger standing
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490643395926,64,6,director,A,2349,zombie
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490643419886,65,6,director,L,11430,begger, knees bent slightly
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490643434948,66,6,director,E,1532,indian
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490643446008,67,6,director,F,1930,slumber
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490643461470,68,6,director,J,6398,shape and right arm
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490643479901,69,6,director,B,6237,bird, but sitting
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490643506355,70,6,director,K,6296,begger on the knees
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490643522835,71,6,director,H,3906,just shape
+3733-534a13bf-9bb8-42ca-be0e-56dc63630898,1490643536865,72,6,director,G,5203,bent backwards

@@ -1,0 +1,136 @@
+gameid,time,roundNum,occurrenceNum,sender,intendedName,timeElapsed,contents
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490668775353,1,1,director,A,10958,looks like someone carrying something on their back
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490668806607,1,1,director,A,11033,and they have one foot raised and are standing up straight
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490668811533,1,1,matcher,A,4262,looking
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490668864480,2,1,director,J,21829,body looks very square and blocky, like they're squatting, and facing to the right
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490668907840,2,1,matcher,J,1784,checking
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490668914054,2,1,director,J,13022,has a right angle for a shoulder
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490668965465,3,1,director,K,15184,kneeling with hand extended and facing to the right
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490668978036,3,1,director,K,5838,looks like they have a small tail
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490668998962,3,1,director,K,3848,head raised not bowed
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669035306,4,1,director,B,14386,kneeling and facing to the left
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669041762,4,1,director,B,6084,head tilted and very near hands
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669046980,4,1,director,B,2915,sorry to the right i mean
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669054835,4,1,matcher,B,2588,ok checking
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669075963,4,1,director,B,4602,hands look like a big triangle
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669100882,5,1,director,D,8271,facing the left
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669109039,5,1,director,D,7824,looks like they have a large square shirtsleeve
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669125746,5,1,director,D,2287,standing up straight
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669159649,6,1,director,H,4661,sitting down, no limbs visible
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669176098,6,1,director,H,1950,no ears either
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669189177,6,1,matcher,H,10405,facing right or left?
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669193184,6,1,director,H,779,right
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669211352,7,1,director,I,4189,one leg raised in air
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669213583,7,1,director,I,2046,like ice skating
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669232809,8,1,director,F,5235,sitting facing left
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669234796,8,1,director,F,1704,leg extended
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669282110,9,1,director,L,14338,facing right, arms look like a triangle
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669291887,9,1,director,L,9420,foot not visible behind them, at least not raised
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669304421,9,1,director,L,3769,back looks straight
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669342344,10,1,director,G,6936,looks like they are dancing
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669348137,10,1,director,G,5542,body at sharp angles
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669356545,10,1,director,G,4800,right left is extended from body
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669376666,11,1,director,C,5620,both arms raised
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669380993,11,1,director,C,4042,legs not really visible
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669396747,12,1,director,E,4441,looks like rabbit ears
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669401354,12,1,director,E,4411,body looks like triangles
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669426183,13,2,director,L,10005,standing facing right
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669445607,13,2,director,L,7635,back is not one continuous straight line
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669465399,13,2,matcher,L,3710,are there arms?
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669474409,13,2,director,L,5581,yes looks like a triangle
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669496572,14,2,director,F,6380,sitting facing left
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669499515,14,2,director,F,2708,leg is well defined
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669508329,14,2,director,F,1046,head down
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669525173,15,2,director,E,2786,rabbit ears
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669542575,16,2,director,D,4070,facing left
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669545796,16,2,director,D,3096,square shirtsleeve
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669550489,16,2,director,D,2464,hand somewhat defined
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669559027,17,2,director,C,3463,both arms raised
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669591352,18,2,director,B,14664,kneeling facing right i think
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669593034,18,2,director,B,1171,head bowed
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669609259,18,2,matcher,B,1812,no arms?
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669613916,18,2,director,B,4997,leg looks like a triangle
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669617113,18,2,director,B,2962,arm looks like a triangle
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669640255,19,2,director,K,9705,kneeling facing right
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669646615,19,2,director,K,5040,looks like it has a tail
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669659473,20,2,director,A,3856,carrying load on back
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669685499,20,2,director,A,934,big nose
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669721521,21,2,director,J,5273,body looks very square
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669726198,21,2,director,J,4353,kneeling facing right
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669753146,22,2,director,G,7272,looks like it is dancing but not ice skating
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669773028,23,2,director,I,8110,same one as a moment ago (the one you picked)
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669796638,24,2,director,H,6008,kneeling facing right
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669799286,24,2,director,H,2021,no arms visible
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669823146,25,3,director,D,8489,standing with square sleeve
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669858537,26,3,director,J,14045,left shoulder is square, right arm is a small triangle
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669894681,27,3,director,L,9049,kneeling facing right, shoulder looks well defined and natural
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669897195,27,3,director,L,2221,arm is a triangle
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669902397,27,3,director,L,2209,knee is pointy
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669919036,28,3,director,F,5760,sitting facing left
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669923050,28,3,director,F,3735,leg and foot looks realistic
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669945068,29,3,director,E,1670,rabbit ears
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669957202,29,3,director,E,962,sitting
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669958335,29,3,matcher,E,8109,favorite
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490669984297,30,3,director,G,7802,dancing with one leg looking fat
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490670013469,31,3,director,K,9115,kneeling facing right
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490670019457,31,3,director,K,5787,with leg looking like a vertical tail
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490670049388,32,3,director,B,4623,kneeling with head down
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490670058687,32,3,director,B,4753,facing right
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490670084837,33,3,director,I,11813,dancing with thin and natural looking leg
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490670111017,33,3,director,I,5351,head is not bent
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490670112027,33,3,matcher,I,5886,like ice skating?
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490670127205,33,3,director,I,8360,arm is not behind them
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490670145677,34,3,director,A,4798,carrying square on back
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490670147656,34,3,director,A,1485,with big nose
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490670160893,34,3,director,A,4475,and raised leg
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490670180199,35,3,director,H,4862,kneeling facing right
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490670181705,35,3,director,H,1404,with no arms
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490670192092,36,3,director,C,2149,both arms raised
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490670207669,37,4,director,A,8093,carrying square on back
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490670242925,38,4,director,F,4660,sitting facing left
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490670246454,38,4,director,F,3206,with natural looking leg
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490670261098,38,4,director,F,1824,and bent head
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490670263693,38,4,matcher,F,21937,(ill remember that square on back)
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490670289576,39,4,director,L,5308,kneeling facing right
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490670296842,39,4,director,L,6824,with leg not raised or sticking up
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490670310610,39,4,director,L,8195,maybe not kneeling
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490670314681,39,4,director,L,3718,arm looks like a triangle
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490670320815,39,4,matcher,L,2220,legs bent?
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490670330722,39,4,director,L,4429,yes knee is very visible
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490670339487,40,4,director,E,2309,rabbit ears
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490670361863,41,4,director,K,12564,kneeling facing right with legs visible behind body
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490670371495,41,4,director,K,3305,legs are vertical
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490670376834,41,4,director,K,2915,head is straight
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490670411296,42,4,director,I,15270,ice skating/dancing with natural looking legs
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490670437633,43,4,director,J,13514,square left shoulder and triangle red arm
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490670453312,44,4,director,D,4433,square sleeve facing left
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490670469103,45,4,director,G,4892,dancing with unnatural legs
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490670479918,46,4,director,C,2698,both arms raised
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490670494466,47,4,director,H,5343,sitting facing right with no arms
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490670515693,48,4,director,B,7947,kneeling facing right with head bent
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490670528918,49,5,director,D,2104,square sleeve
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490670542680,50,5,director,A,2664,square on back
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490670557942,51,5,director,H,4689,no arms kneeling
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490670588637,52,5,director,L,18153,facing right with pointy knee and no raised legs in the back
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490670616953,53,5,director,F,11542,sitting facing left with lowered head
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490670632684,54,5,director,G,4557,dancing with unnatural legs
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490670665269,55,5,director,K,20561,kneeling facing right with legs forming a vertical tail
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490670679965,56,5,director,E,1701,rabbit ears
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490670690475,57,5,director,I,2488,dancing with natural legs
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490670713567,58,5,director,B,15666,kneeling facing right with crooked head and bumpy legs
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490670732629,58,5,matcher,B,5106,pointed knees guy?
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490670761733,58,5,director,B,17824,no the one with the crooked head and two triangle arms
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490670784830,59,5,director,C,2867,both arms raised
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490670804256,60,5,director,J,10308,square left shoulder and triangle right arm
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490670823644,61,6,director,F,9155,sitting facing left with natural leg
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490670843589,62,6,director,J,7754,same square shoulder one from a moment ago
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490670859774,63,6,director,E,1775,rabbit ears
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490670884699,64,6,director,B,14469,kneeling facing right with two triangle arms and multi part leg
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490670913553,65,6,director,I,7089,dancing with thin/natural legs
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490670937504,66,6,director,D,3576,square shirtsleeve
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490670971723,67,6,director,L,21459,facing right with pointy knees and no legs forming a tail
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490670987293,68,6,director,C,1709,arms raised
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490670999233,69,6,director,A,1929,square on back
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490671016084,70,6,director,K,7694,kneeling with legs forming the vertical tail
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490671032005,71,6,director,H,3567,no arms visible
+5275-64e22092-8efd-4a5f-abfb-addf2107512c,1490671044042,72,6,director,G,2767,dancing with larger legs

@@ -1,0 +1,101 @@
+gameid,time,roundNum,occurrenceNum,sender,intendedName,timeElapsed,contents
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490663752744,1,1,director,D,13112,a man sitting with his arms out to the left
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490663799336,2,1,director,E,20990,A shape that looks like a bunny sitting down. The ears are easy to spot
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490663819000,2,1,matcher,E,5295,is it facing right or left
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490663824575,2,1,director,E,662,right
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490663838344,3,1,matcher,B,3680,whew
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490663859577,3,1,director,B,22759,Looks like a man on his knees, arms out to his sides. He has a diamond for a head
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490663878168,3,1,matcher,B,7567,facing right like squating?
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490663920842,3,1,director,B,27742,Yeah, facing right, but its not a side profile. You can see the clear front~~~ There is a small gap of white in the right arm
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490663970913,3,1,matcher,B,13903,im not sure about this one .~~~~~~
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490664029875,4,1,director,G,36523,Looks like a person doing a zombie walk. The are facing right, and leaning back~~~ Looks like the have a cape or something trailing behind them
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490664124676,5,1,director,A,16451,A man on one foot, the other is raised and he is leaning back a slight bit.
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490664186940,6,1,director,K,14661,A woman, facing right and kneeling. You can see her right arm sticking out
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490664200549,6,1,director,K,12763,Has a small point on the back, like her feet are sticking up
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490664224590,7,1,director,C,7381,A man leaning back with his arms out to the sides
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490664254470,8,1,director,H,6982,A person sitting, they have no arms or legsa
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490664297083,9,1,director,L,12149,A person in the process of kneeling down. The have thier arm out to the right
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490664338414,10,1,director,F,8990,A man sitting facing the left. Looks kinda sad
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490664364487,11,1,director,J,10021,A person arms to the right. The picture is cut off
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490664408624,12,1,director,I,3874,Leaning left, on one foot
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490664423831,13,2,director,E,4144,Bunny looking right
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490664450522,14,2,director,G,9420,Zombie walking right. Cape behind him
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490664476969,15,2,director,J,9207,Person with arm sitcking out right. Picture is cut off
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490664496251,16,2,director,C,5354,flat, arms out to each side
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490664511386,17,2,director,H,2066,no arms or legs
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490664526986,18,2,director,K,4728,kneeling looking right
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490664535977,18,2,director,K,3587,feet pointing up in back
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490664551458,19,2,director,L,4059,half kneeling looking right
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490664556313,19,2,director,L,2692,arm out right
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490664571177,20,2,director,I,6570,leaning left on one foot
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490664602845,21,2,director,D,4229,sitting arms out left. No legs
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490664639191,22,2,matcher,F,2943,he looked standing
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490664651818,22,2,director,F,5987,man sitting, no arms looking left
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490664680581,22,2,matcher,F,5391,short or tall
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490664688212,22,2,director,F,713,short
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490664705245,23,2,director,B,6323,kneeling, arms out to both sides
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490664746276,24,2,director,A,13726,leaning back one one foot. Looking left
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490664765236,24,2,director,A,4732,tall one
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490664799036,25,3,director,A,14895,one foot, looking left
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490664801196,25,3,director,A,987,tall
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490664810981,25,3,director,A,1530,leaning back
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490664832617,26,3,director,I,12210,leaning forward to the the left. One foot~~~ Long, not tall
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490664851999,27,3,director,H,2338,no arms or legs
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490664853553,27,3,director,H,958,sitting
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490664866798,27,3,matcher,H,5903,facing right?
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490664870478,27,3,director,H,500,right
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490664873756,27,3,matcher,H,6224,tall
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490664875948,27,3,matcher,H,480,?
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490664879342,27,3,director,H,658,tall
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490664898774,28,3,director,C,2415,flat both arms out
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490664925919,29,3,director,K,8964,kneeling looking left. Arm out, foot sticing up
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490664929284,29,3,director,K,2077,sticking up
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490664957672,30,3,director,F,5493,Sitting looking left. No arms
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490664959830,30,3,director,F,1282,Has legs
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490664995024,31,3,director,J,11682,arm sticking out right. Figure is cut off
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490665018956,32,3,director,D,7490,kneeling looking left. Arm sticking out
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490665053876,32,3,matcher,D,4720,facing left?
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490665058479,32,3,director,D,372,yes
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490665100882,33,3,director,E,2981,bunny facing right
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490665120855,34,3,director,L,8052,kneeling, looking right. Arm sticking out
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490665166040,35,3,director,G,7407,Zombie walking right. Cape dragging
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490665201563,36,3,director,B,11323,kneeling looking right. Arms out to each side
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490665231707,37,4,director,K,15103,like the one you just picked, but feet sticking up in the back
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490665251059,38,4,director,E,3143,bunny looking right
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490665267432,39,4,director,F,5141,man sitting, looking left. No arms
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490665297090,40,4,director,B,10742,kneeling, both arms out. Feet in the back~~~ Lookign right
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490665316841,41,4,director,L,4197,kneeling looking righ
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490665342993,42,4,director,I,4744,one leg, leaning left. Long
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490665357393,43,4,director,G,2527,zombie walking right
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490665392242,44,4,director,D,8125,facing left. Sitting arms out left
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490665417649,45,4,director,J,7617,arm sticking out right. Figure cut off
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490665453385,46,4,director,C,6520,flat arms out to the sides
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490665475859,47,4,director,A,10158,leaning back to the right. foot up
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490665494978,48,4,director,H,2978,sitting no arms or legs
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490665508975,49,5,director,F,4466,sitting, with legs. No arms
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490665530389,50,5,director,K,9456,kneeling facing right. Feet pointin up in the back
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490665552611,51,5,director,A,10347,leaning back one foot up. Facing right
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490665570940,52,5,director,E,4470,bunny looking right
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490665587333,53,5,director,H,1932,no arms or legs
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490665600179,54,5,director,C,2863,flat arms wide
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490665621181,55,5,director,D,10010,looking left, kneeling
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490665646333,56,5,director,J,7627,arm out to the right, figure cut off
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490665669487,57,5,director,B,4139,kneeling, both arms out
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490665686640,58,5,director,L,2930,kneeling looking right
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490665700583,58,5,matcher,L,3871,feet up?
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490665705129,58,5,director,L,256,no
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490665723965,59,5,director,G,8204,zombie walking right. Cape trailing behind
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490665740607,60,5,director,I,6521,leaning left, one foot up. Long
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490665752424,61,6,director,I,1095,same thing
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490665763604,62,6,director,C,2958,flat arms out
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490665777869,63,6,director,E,5701,rabit looking right
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490665797014,64,6,director,A,6557,leaning back on one foot, looking left
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490665813670,65,6,director,F,7412,sitting, no arms looking left
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490665831949,66,6,director,D,6990,looking left, kneeling. The legs are out of frame
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490665860317,67,6,director,J,6861,arm out right. Figure is cut off
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490665879231,68,6,director,G,2471,zombie walking right
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490665895763,69,6,director,L,6995,kneeling looking right. No feet sticking up
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490665914864,70,6,director,K,6729,kneeling right, feet sticking up
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490665929815,71,6,director,H,1848,no arms or legs
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490665955280,72,6,director,B,14915,Thanks for playing along. Looking right, both arms sticking out~~~ Feet in back
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490665974812,72,6,matcher,B,12286,been fun! thank you

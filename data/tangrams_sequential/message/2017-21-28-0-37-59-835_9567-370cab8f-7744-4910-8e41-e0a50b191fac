@@ -1,0 +1,91 @@
+gameid,time,roundNum,occurrenceNum,sender,intendedName,timeElapsed,contents
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490661504031,1,1,director,F,13973,looks like a man sitting down
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490661523871,1,1,matcher,F,10012,slouching or sitting straight?
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490661536182,1,1,director,F,5214,slouching
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490661590614,2,1,director,A,40684,looks like a man w one foot on the ground,  one off and head going backwards 
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490661717488,3,1,director,B,61333,looks like squatting down with square head tilted back. triangle behind the head
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490661788451,4,1,director,G,50799,slouching head forward, triangle on bottom right
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490661894416,5,1,director,J,26559,figure is almost square with head in diamond shape on top
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490661937280,6,1,director,C,11140,looks like an angel with arms up lol
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490661981376,7,1,director,H,15016,person sitting with slight bend in lower back, arms not extended
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490662038199,8,1,director,D,15296,person sitting straight up, arms extended in front
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490662076849,9,1,director,I,16759,looks like a chicken getting ready to peck the ground
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490662158090,10,1,director,L,29409,looks like squatting down with arms in point in front
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490662235495,11,1,director,E,38551,doesn't look like a person at all, looks like a square on top of a large triangle with two small triangle sticking our of the square
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490662337809,12,1,director,K,53655,looks like sitting with a triangle coming out of its back and a tiny triangle in the front
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490662393816,13,2,director,I,10606,chicken pecking the ground
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490662416282,14,2,director,C,10444,angel w arms up
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490662453745,15,2,director,L,24684,squatting w triangle arm in front
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490662517215,16,2,director,K,42449,kneeling w large triangle to the right and tiny triangle to the left
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490662621985,17,2,director,G,52703,looks like an upside down triangle holding up a person w head falling to the front
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490662711895,18,2,director,J,32087,person standing, almost square diamond shaped head
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490662777473,19,2,director,A,19228,one foot on the ground, on off the ground, head falling to the back
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490662843409,20,2,director,F,13639,sitting against wall, slouched 
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490662901736,21,2,director,B,17655,sitting against wall, head tilted back with triangle behind head
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490662917351,21,2,director,B,8319,I didn't realize how long this would take.~~~~~~
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490662932455,22,2,director,H,7582,sitting against the wall straight
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490662959071,22,2,matcher,H,22023,you're doing a nice job. It's a slow process~~~
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490662974625,22,2,director,H,5219,alrighty just checking
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490663039944,23,2,director,E,29795,looks like a square on top of a triangle with 2 small triangle coming out of square
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490663078363,24,2,director,D,20342,standing straight up looks like receiving award, diploma 
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490663125650,25,3,director,E,20847,triangle with square on top with 2 small triangles coming out of square
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490663172652,26,3,director,G,22150,sitting down with triangle propping person up, head tilted forward
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490663222419,27,3,director,D,8895,receiving diploma 
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490663240265,28,3,director,F,6400,against wall, slouched 
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490663280899,29,3,director,H,19207,almost like diploma, just slight bend of the legs and no arms
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490663320633,30,3,director,K,23607,looks like a servant with a tray out, small triangle on back
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490663331018,30,3,director,K,2007,kneeling
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490663370742,31,3,matcher,A,1568,dang
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490663399530,31,3,director,A,15053,one foot on ground, one foot off, head tilted back, lol its okay
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490663464171,32,3,director,J,20358,standing straight, with one arm out
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490663504603,32,3,matcher,J,6698,not the graduate?
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490663508907,32,3,director,J,999,no
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490663524244,33,3,director,C,3580,that was kneeling lol
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490663530025,33,3,director,C,4182,angle with arms up
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490663538580,33,3,director,C,4580,angel*
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490663593205,34,3,director,L,24216,bending at knee with arms extended
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490663619403,34,3,matcher,L,20826,they're killing us on time here. I'm gonna answer faster, okay?
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490663642331,35,3,director,B,17756,okay,, maybe you should just guess them.~~~~~~ idk
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490663678622,35,3,director,B,22031,triangle propping head up, sitting on floor
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490663687237,35,3,director,B,7758,just lemme know if you wanna start guessing
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490663720101,36,3,director,I,4662,chicken 
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490663724922,36,3,matcher,I,24289,Give me a hint but I'm not worrying about accuracy
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490663737141,37,4,director,D,1301,grad
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490663753436,38,4,director,K,2598,kneeling
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490663771340,39,4,director,A,6926,one foot on ground on off head back
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490663794262,40,4,director,I,1430,chicken
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490663813372,41,4,director,L,8103,bending at knee
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490663826556,42,4,director,C,1367,angel
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490663838540,43,4,director,F,4191,slouching while sitting
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490663863852,44,4,director,H,8510,like grad but with slight bend in back
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490663894060,45,4,director,G,13374,triangle holding up person, head tipped forward
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490663922352,46,4,director,E,14075,triangle with square on top with 2 small triangles 
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490663945398,47,4,director,J,9158,standing straight with one arm out. not grad
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490663991510,48,4,director,B,13959,sitting with triangle behind head
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490664011933,49,5,director,K,2286,kneeling
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490664044464,50,5,director,B,14360,sitting,triangle behind head
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490664059649,51,5,director,L,4380,squatting
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490664091901,52,5,director,H,6959,like grad, slight bend in back
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490664130589,53,5,director,J,7343,standing w one arm out
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490664149575,54,5,director,G,4851,triangle holding up person
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490664161943,55,5,director,I,1804,chicken
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490664181453,56,5,director,A,7646,one foot on ground one off ground head back
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490664207997,57,5,director,E,14414,triangle holding square, 2 triangles out of square
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490664224887,58,5,director,F,3167,slouching
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490664225826,58,5,matcher,F,6584,youre doing great
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490664235351,58,5,director,F,3661,I'm trying lol
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490664246023,59,5,director,D,1295,grad
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490664257808,60,5,director,C,1524,angel
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490664269118,61,6,director,K,2080,kneeling
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490664286270,62,6,director,E,7911,triangle, square, 2 triangles
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490664317584,63,6,director,J,3232,standing w arm out
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490664328910,64,6,director,F,3206,slouching 
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490664349751,65,6,director,B,10487,triangle behind head, sitting
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490664366750,66,6,director,D,1943,grad
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490664390519,67,6,director,A,13078,one foot on the ground one off
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490664410455,68,6,director,C,2671,angel
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490664423044,69,6,director,I,3831,chicken
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490664435054,70,6,director,L,3919,squatting 
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490664459815,71,6,director,H,8727,standing w slight bend
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490664503808,72,6,matcher,G,19812,nice work
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,1490664507999,72,6,director,G,25191,triangle holding up person head forward. woo hoo we made it

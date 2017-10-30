@@ -1,0 +1,89 @@
+gameid,time,roundNum,occurrenceNum,sender,intendedName,timeElapsed,contents
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490379206140,1,1,matcher,D,1070,hello
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490379212785,1,1,director,D,7403,A diamond is at the top
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490379256472,2,1,director,E,15660,3 shapes at the top, triangle 2 and one rectangle
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490379280692,3,1,director,F,8080,sitting down almost like taking a nap
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490379299304,4,1,director,I,3624,balancing on one feet
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490379317639,5,1,director,L,5347,standing with bent knee
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490379354915,6,1,director,G,7003,two hand like strungle in front
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490379388212,7,1,director,A,5736,face looks like dinosour
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490379420184,8,1,director,H,8439,sitting down no legs can be seen
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490379449215,9,1,director,J,11379,diamond at top but body shape is not like human
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490379480878,10,1,director,B,13531,one rectangle and triangle at top
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490379501396,11,1,director,C,8768,two hands in the air may be praying
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490379527255,12,1,director,K,9137,bent on knee and pointed hand 
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490379530290,12,1,director,K,1156,in front
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490379556069,13,2,director,H,9194,bent on knee but can't see legs
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490379574343,14,2,director,E,7088,3 shapes a the top 
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490379598115,15,2,director,B,11255,one rectangle and one triangle at the top
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490379619388,16,2,director,L,6880,bent knee with pointing hands
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490379651033,17,2,director,D,11494,bent knee, straight back and hands out , pointy
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490379691506,18,2,director,K,22412,two diamond, one head , one body , bent on knee and hand out 
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490379717329,19,2,director,A,6680,dinosour face
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490379735427,20,2,director,C,4935,hands in the air like praying
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490379757143,21,2,director,J,12074,diamond head but does not look like human body
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490379783792,22,2,director,I,7812,standing on one leg like flying
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490379825026,23,2,director,G,21690,sitting down on knee two hands out, hands are triangle and trapezoid
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490379851369,24,2,director,F,6685,napping man
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490379872561,25,3,director,J,5158,does not look like human body
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490379907053,26,3,director,D,19432,bent at the knee, legs not visible, hands out pointing 
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490379915409,26,3,director,D,4187,legs not visible
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490379941285,27,3,director,E,13975,three shapes on top, 2 triangle and one rectangle
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490379966221,28,3,director,F,11811,man sitting down , looks like napping 
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490379988995,29,3,director,G,10400,trapezoid hand 
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490380033580,30,3,director,B,27146,bending down on knee , three shapes at the top, dimond right at the top
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490380063688,31,3,director,I,6236,standing on one feet like flying
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490380099587,32,3,director,L,21999,making a v shape with legs , triangle hand
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490380123095,33,3,director,C,8035,two hands in the air like pryaing 
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490380127689,33,3,director,C,2519,praying
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490380160171,34,3,director,K,17576,bend at the knee , two diamond, one head and one part of body
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490380191549,35,3,director,H,13779,sitting down , no hands, only diamond as head
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490380219671,36,3,director,A,13107,dinosour face, diamond on the back
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490380235964,37,4,director,H,8345,sitting down, no hands and diamond head
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490380265598,38,4,director,B,14807,three shapes at the top, dimond in the middle 
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490380310573,39,4,director,K,31645,two diamonds, one making head and one part of body, , can see feet 
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490380313586,39,4,director,K,2248,can see feet
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490380339561,40,4,director,A,4787,dinosour face 
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490380353408,41,4,director,I,2926,flying man
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490380376615,42,4,director,G,11850,trapezoid hand, other is triangle
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490380385654,42,4,director,G,2740,not praying
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490380398625,42,4,director,G,3107,sititng down
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490380437672,43,4,director,D,7367,sitting down, legs not visible 
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490380461568,44,4,director,J,12386,does not look like human body 
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490380467232,44,4,director,J,2414,not the dinosour
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490380487229,45,4,director,F,4890,sitting down, like napping
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490380499065,46,4,director,C,1786,praying man
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490380525544,47,4,director,E,14203,3 shapes at the top, 2 triangle, one rectangle
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490380565014,48,4,director,L,22060,bent knee , hands out, no feet seen , check feet please
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490380619390,49,5,director,L,17142,the last one you clicked that one had feet
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490380624170,49,5,director,L,3286,no worries
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490380634710,49,5,director,L,10149,this one choose same again, no feet 
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490380640937,49,5,director,L,1775,bent knee
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490380643166,49,5,matcher,L,11663,oh just type in the arrow pointing direction if that helps
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490380663596,49,5,director,L,4355,great will do 
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490380680995,49,5,director,L,14430,bent knee , hand out, no feet, hand towards right
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490380696385,50,5,director,A,4307,dinosour face
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490380724194,51,5,director,J,8278,one side of body is big rectangle
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490380765312,52,5,director,G,19965,trapezoid hand, one is triangle, sitting down 
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490380792907,53,5,director,H,6154,no hands guy
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490380805242,54,5,director,I,1614,flying man
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490380826815,55,5,director,B,9834,that one I call praying man, sorry 
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490380838318,55,5,director,B,9975,Ok this one 3 shapes at the top, diamond in the middle
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490380858494,56,5,director,F,4266,napping man, sitting down 
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490380891815,57,5,director,E,21399,3 shapes at the top, two triangles, one rectangle , no hands
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490380915147,58,5,director,C,9734,two hands in the air, praying man, with no legs
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490380936675,59,5,director,D,9224,no legs , hands pointing left
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490380981340,60,5,director,K,20441,two diamonds, one head, one part of body, feet can be seen , hands to right
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490381011048,61,6,director,D,10220,no legs, hands pointing left
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490381039324,62,6,director,C,3401,praying man, no legs
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490381060610,63,6,director,A,3290,dinosour face
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490381105737,64,6,director,G,24604,trapezoid hand , triangle hand, both to right , bending down 
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490381144214,65,6,director,B,17898,hand is only a triangle to the right side 
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490381191603,66,6,director,E,12249,3 shapes at the top, triangle in the middle
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490381202047,66,6,director,E,3805,no hands
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490381222927,67,6,director,F,2553,napping man
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490381242156,68,6,director,H,3120,bent at knee no  hands
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490381283416,69,6,director,K,17070,bent at knee, feet can be seen, hand to the right
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490381309453,70,6,director,L,8334,similar one with no feet this time
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490381327101,71,6,director,J,5432,rectangle shape body 
+1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1490381349226,72,6,director,I,7078,standing on one leg, flying

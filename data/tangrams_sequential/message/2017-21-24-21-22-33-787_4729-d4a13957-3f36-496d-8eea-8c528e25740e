@@ -1,0 +1,90 @@
+gameid,time,roundNum,occurrenceNum,sender,intendedName,timeElapsed,contents
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490390587667,1,1,director,K,20111,looks like a kneeling person facing to the right, diamond at top center, triangle pointing up in bottom left
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490390628490,2,1,director,F,13943,Looks like a person sitting on the ground with legs out in front, head looking down
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490390637446,2,1,director,F,1423,facing to the left
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490390688279,3,1,director,B,23424,Looks like a person praying, facing to the right, feet in bottom left, hands raised near head
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490390725034,4,1,director,I,6271,Looks like an ice skater with one leg in air
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490390770496,5,1,director,G,21216,trapezoid in bottom left, small triangle in bottom right
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490390795479,5,1,director,G,4240,square in top middle
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490390818935,6,1,director,J,7136,diamond top middle, mostly rectangle for body
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490390833757,7,1,director,E,2695,two triangles for head
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490390866986,8,1,director,H,30016,diamond top middle, larger diamond shape for body
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490390875917,8,1,director,H,5127,triangle pointing right in bottom right
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490390903575,9,1,director,L,10446,kneeling person, two triangles pointing right
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490390929453,10,1,director,C,7536,person with two arms raised wide
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490390947300,11,1,director,D,6759,person standing facing left
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490390971165,12,1,director,A,4312,square top right corner
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490390999930,13,2,director,B,6160,person kneeling facing right with hands raised near head
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391029988,14,2,director,I,7536,ice skater
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391039674,15,2,director,C,2127,arms raised wide
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391066129,16,2,director,K,16623,kneeling right, triangle pointing up for feet
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391074609,16,2,director,K,1567,diamond top middle
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391101406,17,2,director,G,9888,two triangles right side, trapezoid bottom left
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391127373,18,2,director,F,9895,man sitting facing left with legs out
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391145233,19,2,director,H,6375,diamond top middle, diamond shaped large body
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391151034,19,2,director,H,4423,triangle bottom right
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391197933,20,2,director,L,36304,kneeling facing right, no feet pointing up
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391224228,21,2,director,A,2039,square top right
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391245732,22,2,director,J,5943,diamond top middle, mostly rectangle body
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391263604,23,2,director,D,4648,facing left, arm out
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391269489,23,2,director,D,847,standing
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391284569,24,2,director,E,3656,two triangles at top
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391303249,25,3,director,G,8872,two right side triangles, trapzeoid bottom left
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391319287,26,3,director,D,2501,man facing left, arm out
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391332682,27,3,director,J,2639,mostly rectangle body
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391342500,28,3,director,I,751,ice skater
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391359454,29,3,director,K,9456,kneeling right, triangle pointing up at back
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391380442,30,3,director,L,9087,kneeling right, no triangle feet
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391400964,31,3,director,A,1503,square top right
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391423604,32,3,director,H,12176,diamond head, triangle bottom right, large body
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391448164,33,3,director,F,4176,man sitting on ground
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391456999,34,3,director,C,1359,arms raised wide
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391473271,35,3,director,B,7448,kneeling, triangle near head
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391488478,36,3,director,E,3344,two triangles at top
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391497864,37,4,director,C,1616,arms raised wide
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391505844,38,4,director,A,1423,square top right
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391516673,39,4,director,I,759,ice skater
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391529476,40,4,director,L,4487,kneeling, no feet
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391551246,41,4,director,J,1912,mostly rectangle body
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391563095,42,4,director,D,3103,standing facing left, arm out
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391580123,43,4,director,K,8599,kneeling, triangle at back for feet
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391599735,43,4,matcher,K,6151,triangle straight up ior back
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391608765,43,4,matcher,K,493,or
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391618853,43,4,director,K,8191,partial triangle, close to back
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391629195,44,4,director,E,7510,two triangle head
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391640701,45,4,director,B,4144,kneeling, triangle close to head
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391657368,46,4,director,G,6232,two triangles right, trapzeoid bottom left
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391682788,47,4,director,H,6937,diamond center mass
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391694692,47,4,director,H,10464,diamond head, triangle pointing bottom right
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391706462,48,4,director,F,1535,sitting on ground
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391717403,49,5,director,K,3831,kneeling, jutting up
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391726712,49,5,director,K,1639,triangle at back
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391739655,50,5,director,L,1735,kneeling, no feet
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391750465,51,5,director,A,1487,square top right
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391771313,52,5,director,D,1760,standing facing left
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391780753,53,5,director,E,2568,triangles top
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391794254,54,5,director,H,4566,diamond head, diamond blob body
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391807602,55,5,director,I,775,ice skater
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391818260,56,5,director,B,3016,kneeling, small triangle feet
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391822209,56,5,director,B,1424,triangle near head
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391833624,57,5,director,C,1728,arms raised wide
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391843137,58,5,director,G,2159,two triangles right
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391846312,58,5,director,G,2744,trapezoid bottom left
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391859088,59,5,director,J,2544,mostly rectangle body
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391868363,60,5,director,F,2488,sitting on ground
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391869841,60,5,director,F,783,legs out
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391878094,61,6,director,L,2231,kneeling, no feet
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391888114,62,6,director,K,3127,kneeling, feet jutting up
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391889477,62,6,director,K,1088,near back
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391899790,63,6,director,A,1471,square top right
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391910011,64,6,director,C,991,arms wide
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391919403,65,6,director,H,1608,diamond blob
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391929265,66,6,director,E,2471,triangles top
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391936827,67,6,director,I,776,ice skater
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391945195,68,6,director,J,1951,rectangle body
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391953540,69,6,director,F,1879,sitting on ground
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391964900,70,6,director,B,3512,kneeling, traingle near head
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391974891,71,6,director,D,864,standing
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391981307,71,6,director,D,1384,facing left
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391982657,71,6,director,D,607,arm out
+4729-d4a13957-3f36-496d-8eea-8c528e25740e,1490391990443,72,6,director,G,1976,two triangles right

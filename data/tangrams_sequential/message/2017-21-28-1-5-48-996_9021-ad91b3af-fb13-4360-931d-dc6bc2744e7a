@@ -1,0 +1,82 @@
+gameid,time,roundNum,occurrenceNum,sender,intendedName,timeElapsed,contents
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490663163119,1,1,matcher,C,672,Hi
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490663166193,1,1,director,C,593,hi
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490663193394,1,1,director,C,24484,the image you need to identify looks like it is flying - holding it's hands up
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490663211427,1,1,matcher,C,2482,a person?
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490663221590,1,1,director,C,4352,yes a person
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490663260014,2,1,director,A,30126,this one is holding one foot up in front of it and looks like it is holding a flag
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490663297346,3,1,director,I,22342,this one looks like it is leaning forward and holding one foot behind it.
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490663357811,4,1,director,G,34205,this one has a square near the top and two triangles that looks like hands
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490663403534,5,1,director,L,26358,this one has a square head and is doing a squat with triangular hands held in front
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490663498818,6,1,director,B,69963,this one has a square at the top, a triangle on the right and opposite of the triangle it has a point; the whole thing looks like it's kneeling
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490663577606,7,1,director,K,36707,this one is kneeling with a point on the right, it's knees are pointing to the right and what looks like feet on the left
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490663644690,8,1,director,J,39812,diamond head on top, rectangular shape on left points just below the head and at the feet both on the right
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490663735810,9,1,director,F,32734,leaning with its back against a wall (wall to the right) feet to the left side of frame
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490663822841,10,1,director,H,37575,diamond head at top, no arms, looks to be kneeling down - has the least amount of shape of any of the figures
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490663902161,11,1,director,D,53303,diamond head at top, standing sideways, arms out to the left like they are holding a bowl or something, kind of looks like it's wearing a long robe
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490663977496,12,1,director,E,50046,figure is sitting with its back against a wall and it's face it pointed to the right; looks like it's wearing a headdress (two pointy things coming out of its head)
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490664044893,13,2,director,H,34997,diamond head, no arms, looks like it's kneeling
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490664086017,14,2,director,C,14338,looks like it's flying - has its arms stretched out
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490664117524,15,2,director,F,19703,leaning against a wall/wall on right of frame, feet stretched out to left side
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490664175102,16,2,director,I,31280,standing on one foot with other stretched out behind, arms stretched out to left side of frame
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490664243739,17,2,director,K,49389,side view, kneeling with arms stretched to right side of frame, feet on left side of frame
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490664289523,18,2,director,E,15478,sitting against wall, head bowed, wearing headdress
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490664331664,19,2,director,A,25174,side view, facing left side of frame, one foot up, holding a flag or something square
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490664462131,20,2,director,G,98811,doesn't look like a person - tilted square at top with point connected to long piece and a triangle on other side; below has a triangle at the bottom right
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490664533895,21,2,director,L,39691,diamond head, standing sideways and looks like person doing a squat with arms pointing to the right of frame
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490664595429,22,2,director,J,36038,diamond head, left side of body is a rectangle, right side has two points top and bottom
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490664720858,23,2,director,B,76371,diamond at top, full triangle connected on right, point on left, additional triangle bottom left (like a foot)
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490664765486,24,2,director,D,15660,standing sideways facing left, arms out holding a bowl, wearing a robe
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490664837129,25,3,director,F,52332,u see figure from the side; it is facing left and is leaning against a wall (wall on right side of frame)
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490664892321,26,3,director,L,21267,side view, facing right side of frame, crouching down with arms pointing to right
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490664946664,27,3,director,J,36424,diamond head, body is rectangular on left side with points top/bottom on right
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490664983495,28,3,matcher,G,4041,You a real person?
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490664986781,28,3,director,G,1317,yup
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665008516,28,3,matcher,G,18003,If you're getting tired of descriing you can use shorter descriptions i'm not hurting for the bonus
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665042915,28,3,director,G,27515,good point - me neither and some of these are stupid to describe
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665052115,28,3,director,G,6175,diamond head, two points on right
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665072777,29,3,director,B,4822,diamond head, triangle on right
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665095402,30,3,director,H,8680,diamond head, no arms, kneeling
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665113841,31,3,director,C,6815,looks like it's flying - arms out
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665136008,32,3,director,A,10150,facing left, one foot up, holding flag
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665157159,33,3,director,E,7155,leaning against wall, wearing headdress
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665176225,34,3,director,D,6799,facing left, wearing robe, holding bowl
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665208255,35,3,director,I,14666,facing left, arms out, one foot back
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665227133,36,3,director,K,6072,facing left, kneeling left, arms out
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665262076,37,4,director,E,10685,sitting with back against wall, wearing headdress
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665278096,38,4,director,A,6399,facing left, one foot up, holding flag
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665292444,39,4,director,C,3000,flying with arms out
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665316814,40,4,director,B,13694,diamond on top, triangle on right side, point on left
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665345922,41,4,director,G,12430,tilted square at top, triangles top and bottom on right
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665380713,42,4,director,L,12478,standing sideways facing right of frame, arms out, crouching
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665411376,43,4,director,D,9112,facing left, arms out holding bowl, wearing robes
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665440033,44,4,director,F,15063,sitting with back against wall, facing to left of frame, feet out
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665466945,45,4,director,K,10023,kneeling and facing right side of frame with arms out
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665490647,46,4,director,I,9247,facing left side of frame, arms out, one foot back
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665521831,47,4,director,J,14919,body is rectangular on left side and two points on right, top and bottom
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665541039,48,4,director,H,5310,no arms, kneeling
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665564846,49,5,director,G,12453,tilted square on top, two triangles right side, top/bottom
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665592720,50,5,director,K,9430,side view, facing right, arms out, kneeling
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665622652,51,5,director,J,12325,left side of body is rectangular, points on right top/bottom
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665642845,52,5,director,I,8534,side view, facing left, arms out, foot back
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665668940,53,5,director,A,9344,side view, facing left, one foot up, holding flag
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665681194,54,5,director,H,2840,no arms, kneeling
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665698697,55,5,director,D,7917,side view, facing left, holding bowl, wearing robe
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665726646,56,5,director,B,15998,diamond head connected to triangle (right side0
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665755765,57,5,director,E,13351,side view, facing right, leaning against wall wearing headdress
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665768748,58,5,director,C,2654,flying, arms out
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665783018,59,5,director,F,6734,side view, facing left, against wall
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665808049,60,5,director,L,7332,side view, facing right, arms out, crouching
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665834656,61,6,director,I,9152,side view, facing left, arms out, one foot back
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665853372,62,6,director,J,9016,rectangular body on left side, points on right
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665876129,63,6,director,H,8151,no arms, kneeling
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665912282,64,6,director,F,23310,side view, against wall facing left
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665941895,65,6,director,E,12076,side view, sitting against wall, facing right, headdress
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665965816,66,6,director,K,14102,side view, kneeling, arms out, facing right
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490666004341,67,6,director,B,19320,diamond head connected to triangle on right, looks like it's kneeling
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490666032302,68,6,director,A,7382,side view, facing left, one foot up, holding flat
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490666033951,68,6,director,A,463,flag
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490666050860,69,6,director,D,6670,side view, facing left, holding bowl, robe
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490666068557,70,6,director,L,9662,side view, facing right, crouching, arms out
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490666123791,71,6,director,G,25542,two triangles on right side of frame, tilted square to left
+9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490666141547,72,6,director,C,3502,flying, arms out

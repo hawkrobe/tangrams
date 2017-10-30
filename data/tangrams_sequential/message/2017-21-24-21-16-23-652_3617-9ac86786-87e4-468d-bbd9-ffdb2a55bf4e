@@ -1,0 +1,138 @@
+gameid,time,roundNum,occurrenceNum,sender,intendedName,timeElapsed,contents
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390208203,1,1,director,I,14599,looks like a person balancing on one leg and sticking the other back
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390234724,1,1,matcher,I,4624,is he leaning forwards?
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390234795,1,1,director,I,6687,like an ice skater spinning
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390237784,1,1,director,I,453,yes
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390252619,2,1,director,G,6707,looks like person punching something on ground
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390255387,2,1,director,G,1897,looking down
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390296578,3,1,director,H,8163,looks like person holding something in their lap or sitting
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390305003,3,1,director,H,2244,nothing on headdd
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390314110,4,1,matcher,L,1291,sorry
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390321172,4,1,director,L,3176,no prob
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390322755,4,1,director,L,1093,praying
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390332148,4,1,director,L,3339,theres 2 that look similar
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390338927,4,1,director,L,5588,the one without feet pointing up
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390344937,4,1,director,L,4356,(feet pointed back)
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390364084,5,1,director,A,5274,person looking down and marching
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390369500,5,1,director,A,4709,with square on back
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390393952,6,1,director,K,13267,on knees
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390397777,6,1,director,K,2061,feet pointed up
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390402654,6,1,director,K,1599,praying?
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390429894,7,1,director,J,9636,diamond head
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390440940,7,1,director,J,2665,top wider than bottom
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390459562,8,1,director,F,7409,sitting looking down with legs out
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390462573,8,1,director,F,2368,space under knees
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390477420,9,1,director,B,1091,praying
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390481600,9,1,director,B,3796,you picked it earlier
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390484352,9,1,director,B,1937,the first time
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390506882,10,1,director,C,1779,arms in air
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390509385,10,1,director,C,1742,like confused
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390526161,11,1,director,D,5942,dimond head, arm striaght out
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390529153,11,1,director,D,2325,sleeve dropping
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390533650,11,1,director,D,2358,drooping
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390551967,12,1,director,E,9639,sitting with traingles on head looking down
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390569121,13,2,director,J,4861,diamond head, wide top thin bottom
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390592007,14,2,director,B,3638,praying, u picked it earlier
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390596906,14,2,director,B,3455,feet and hands are triangles
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390599646,14,2,director,B,877,hood on
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390617154,14,2,director,B,2532,head tilted down
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390628132,15,2,director,D,1606,diamond head
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390629340,15,2,director,D,778,arm out
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390630383,15,2,director,D,782,sleeve
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390643742,16,2,director,I,1738,first one
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390646472,16,2,director,I,1615,leaning forward
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390647796,16,2,director,I,976,one leg
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390663628,17,2,director,F,4543,sitting head down pace under knees
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390667838,17,2,director,F,744,space
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390682534,18,2,director,L,5557,knees bent, arms out diamond head
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390700904,19,2,director,H,6083,diamond head
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390706862,19,2,director,H,2924,winder bottom than top
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390726434,20,2,director,C,1269,confused
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390728961,20,2,director,C,1205,arms in air
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390738170,21,2,director,K,1038,kneeling
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390741314,21,2,director,K,1478,hood on left
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390747166,21,2,director,K,4637,arms out on right
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390751153,21,2,director,K,1150,idamond head
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390760510,22,2,director,E,2640,tirangles on head
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390777536,23,2,director,G,16564,strange looking
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390780182,23,2,director,G,1692,head on left
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390784982,23,2,director,G,3416,traingle hood maybe on right
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390792456,23,2,director,G,3694,triangle on bottome right
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390801385,24,2,director,A,1552,man marching
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390806742,24,2,director,A,2791,square on back
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390812536,25,3,director,C,915,confused
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390814436,25,3,director,C,1411,arms up
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390825510,26,3,director,H,5436,diamond head wide bottom thinner top
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390836675,27,3,director,D,7344,arm out
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390837909,27,3,director,D,885,sleeve
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390860284,28,3,director,E,4253,triangles on head
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390871538,29,3,director,I,2183,on one leg
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390892759,30,3,director,L,4218,hands out diamond head
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390895117,30,3,director,L,1138,bent knees
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390909048,31,3,director,F,873,sitting
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390912078,31,3,director,F,2588,space under knees
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390928751,32,3,director,G,3168,punching ground
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390981244,33,3,director,J,1249,diamond head
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490390986601,33,3,director,J,5041,wide top narrow bottom
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391005186,34,3,director,A,1055,marching
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391017172,35,3,director,K,10214,arms out on right
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391021673,35,3,director,K,3080,feet up on left
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391024375,35,3,director,K,1011,on knees
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391037927,36,3,director,B,2684,on knees but praying
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391045953,36,3,director,B,3529,traignel hood
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391058555,37,4,director,L,1275,bent knees
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391072180,38,4,director,H,11366,diamond head wide bottom thin top
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391085756,39,4,director,G,2017,punchin ground
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391095439,40,4,director,K,1238,on knees
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391099201,40,4,director,K,1121,feet up
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391102407,40,4,director,K,1072,arms out
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391110478,41,4,director,B,979,praying
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391111971,41,4,director,B,1000,on knees
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391128276,42,4,director,D,1047,arm out
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391129604,42,4,director,D,982,sleeve
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391147565,43,4,director,C,947,confused
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391159411,44,4,director,J,1371,diamond head
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391160596,44,4,director,J,922,wide top
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391162913,44,4,director,J,1960,narrow bottom
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391175056,45,4,director,I,874,one leg
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391185917,46,4,director,E,3078,triangles on head
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391193701,47,4,director,A,1188,marching
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391204992,48,4,director,F,11249,'sitting space unn=der knees
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391214445,49,5,director,K,1716,on knees
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391217444,49,5,director,K,909,feet up
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391220628,49,5,director,K,1951,arm out right
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391239554,50,5,director,L,1518,knees bent
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391249039,51,5,director,H,1176,diamond head
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391251219,51,5,director,H,1850,narrow top
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391253266,51,5,director,H,1414,wide bottom
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391261049,52,5,director,G,1685,punching ground
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391269057,53,5,director,A,984,marching
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391277608,54,5,director,B,988,praying
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391280289,54,5,director,B,1474,traingle hood
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391282244,54,5,director,B,1050,on knees
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391285130,54,5,director,B,1589,traingle hands
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391301647,55,5,director,F,3028,sitting space under knee
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391309291,56,5,director,E,1394,traignesl head
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391316244,57,5,director,D,806,arm out'
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391317405,57,5,director,D,869,sleeve
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391325382,58,5,director,C,867,confused
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391333635,59,5,director,J,1543,diaomnd head
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391335157,59,5,director,J,1077,wide top
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391343853,60,5,director,I,729,one leg
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391351866,61,6,director,G,986,punching
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391360890,62,6,director,K,2414,on knees
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391376762,63,6,director,A,852,marching
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391387455,64,6,director,L,10670,'bent knees
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391401554,65,6,director,I,615,one leg
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391410560,66,6,director,F,2273,space under knee
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391419085,67,6,director,B,778,praying
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391432751,68,6,director,C,803,confused
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391445204,69,6,director,H,1221,wide bottom
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391446828,69,6,director,H,1108,diamond head
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391460294,70,6,director,J,1098,wide top
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391462035,70,6,director,J,1141,diamond head
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391469300,71,6,director,E,1349,tirangle head
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391484804,71,6,director,E,2822,triangle had
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391485797,71,6,director,E,433,head
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391493131,72,6,director,D,902,arm out
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1490391494317,72,6,director,D,792,sleeve

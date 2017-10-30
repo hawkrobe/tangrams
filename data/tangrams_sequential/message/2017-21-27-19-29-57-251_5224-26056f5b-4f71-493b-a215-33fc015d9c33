@@ -1,0 +1,23 @@
+gameid,time,roundNum,occurrenceNum,sender,intendedName,timeElapsed,contents
+5224-26056f5b-4f71-493b-a215-33fc015d9c33,1490643007524,1,1,matcher,D,485,hi
+5224-26056f5b-4f71-493b-a215-33fc015d9c33,1490643017492,1,1,director,D,5401,hello
+5224-26056f5b-4f71-493b-a215-33fc015d9c33,1490643029478,1,1,director,D,11464,looks like a person holding a basket facing left
+5224-26056f5b-4f71-493b-a215-33fc015d9c33,1490643081831,2,1,director,L,15638,slightly bending knees facing right
+5224-26056f5b-4f71-493b-a215-33fc015d9c33,1490643109464,3,1,director,C,5700,person flying facing left
+5224-26056f5b-4f71-493b-a215-33fc015d9c33,1490643182346,4,1,director,E,35848,really odd one. Kind of a large rabbit sitting against the left edge~~~
+5224-26056f5b-4f71-493b-a215-33fc015d9c33,1490643228651,5,1,director,K,22060,kneeling to the floor holding something facing right
+5224-26056f5b-4f71-493b-a215-33fc015d9c33,1490643237072,5,1,director,K,4179,*on the floor
+5224-26056f5b-4f71-493b-a215-33fc015d9c33,1490643271213,6,1,director,I,5962,tai chi facing left
+5224-26056f5b-4f71-493b-a215-33fc015d9c33,1490643336727,7,1,director,G,9445,down on one knee pleading facing right
+5224-26056f5b-4f71-493b-a215-33fc015d9c33,1490643469983,8,1,director,F,16294,sitting, knees bent facing left
+5224-26056f5b-4f71-493b-a215-33fc015d9c33,1490643543587,9,1,director,B,10932,kneeling facing right, head tilted down
+5224-26056f5b-4f71-493b-a215-33fc015d9c33,1490643585659,10,1,director,A,12307,looks to be doing a sort of dance. One foot up, facing left~~~ 
+5224-26056f5b-4f71-493b-a215-33fc015d9c33,1490643651829,11,1,director,J,17194,blocky squat pose facing right
+5224-26056f5b-4f71-493b-a215-33fc015d9c33,1490643718185,12,1,director,H,13984,sitting, legs tucked or crossed, facing right
+5224-26056f5b-4f71-493b-a215-33fc015d9c33,1490643809710,13,2,director,G,4600,pleading to the right
+5224-26056f5b-4f71-493b-a215-33fc015d9c33,1490643857039,14,2,director,F,6715,sitting, knees bent, facing left
+5224-26056f5b-4f71-493b-a215-33fc015d9c33,1490643938207,15,2,director,B,7612,kneeling to the right, head tilted down
+5224-26056f5b-4f71-493b-a215-33fc015d9c33,1490643999512,16,2,director,L,19574,knees bent, slightly squatting, facing right
+5224-26056f5b-4f71-493b-a215-33fc015d9c33,1490644030227,17,2,director,H,8123,seated, legs tucked, facing right
+5224-26056f5b-4f71-493b-a215-33fc015d9c33,1490644083604,18,2,director,K,32739,kneeling on floor facing right, head upright
+5224-26056f5b-4f71-493b-a215-33fc015d9c33,1490644137973,19,2,director,J,5139,squatting compacted, facing right

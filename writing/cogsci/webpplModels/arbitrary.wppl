@@ -1,0 +1,112 @@
+///fold:
+var getTrajectories = function(data) {
+  var keys = _.keys(data[0]);
+  return reduce(function(key, memo) {
+    var timeBasedKeys = map(function(i) {return key + "." + i}, _.range(data.length));
+    var vals = _.map(data, key);
+    return extend(_.zipObject(timeBasedKeys, vals), memo)
+  }, [], keys)
+};
+///
+
+// possible states of the world
+var states = ['t1', 't2'];
+var statePrior =  Categorical({vs: states, ps: [1/2, 1/2]});
+
+// possible utterances
+var utterances = ['label1', 'label2'];
+var utterancePrior = Categorical({vs: utterances, ps: [1/2, 1/2]});
+
+// takes a sample from a (discretized) dirichlet distribution for each word,
+// representing the extent to which that word describes each object
+var lexiconPrior = Infer({method: 'enumerate'}, function(){
+  var meanings = map(function(utt) {
+    var t1Prob = uniformDraw([0.01, .5, 0.99]);
+    var t2Prob = uniformDraw([0.01, .5, 0.99]);
+    return {'t1' : t1Prob, 't2' : t2Prob};
+  }, utterances);
+  return _.zipObject(utterances, meanings);
+});
+
+// length-based cost (although they're all the same length here)
+var uttCost = function(utt) {
+  return utt.split(' ').length;
+};
+
+// literal listener (using real-valued lexicon)
+var L0 = cache(function(utt, lexicon) {
+  return Infer({method:"enumerate"}, function(){
+    var state = sample(statePrior);
+    factor(Math.log(lexicon[utt][state]));
+    return state;
+  });
+});
+
+// pragmatic speaker 
+var S1 = cache(function(state, lexicon) {
+  return Infer({method:"enumerate"}, function(){
+    var utt = sample(utterancePrior);
+    factor(params.alpha * (L0(utt, lexicon).score(state))
+           - params.beta * uttCost(utt));
+    return utt;
+  });
+});
+
+// conventional listener
+var L1 = cache(function(utt, lexicon) {
+  return Infer({method:"enumerate"}, function(){
+    var state = sample(statePrior);
+    observe(S1(state, lexicon), utt);
+    return state;
+  });
+});
+
+// compute lexicon posterior, taking into account some previous observations
+// speakers do this by assuming data came from knowledgable listener, and vice versa
+var lexiconPosterior = cache(function(originAgent, data) {
+  return Infer({method: 'enumerate'}, function() {
+    var lexicon = sample(lexiconPrior);
+    mapData({data: data}, function(datum){
+      if(originAgent === 'L') 
+        observe(S1(datum.response, lexicon), datum.utt);
+      else if(originAgent === 'S') 
+        observe(L1(datum.utt, lexicon), datum.response);
+    });
+    return lexicon;
+  });
+});
+
+// conventional listener (L1, marginalizing over lexicons)
+var L = cache(function(utt, data) {
+  return Infer({method:"enumerate"}, function(){
+    var lexicon = sample(lexiconPosterior('L', data));
+    var state = sample(L1(utt, lexicon));
+    return state;
+  });
+});
+
+// conventional speaker (S1, reasoning about expected L1 behavior across lexicons)
+var S = cache(function(state, data) {
+  return Infer({method:"enumerate"}, function(){
+    var utt = sample(utterancePrior);
+    var listener = Infer({method: 'enumerate'}, function() {
+      var lexicon = sample(lexiconPosterior('S', data));
+      return sample(L1(utt, lexicon))
+    });
+    factor(params.alpha * listener.score(state)
+           - params.beta * uttCost(utt));
+    return utt;
+  });
+});
+
+var model = function() {
+  var step = function(data) {
+    if(data.length > params.numSteps) return getTrajectories(data);
+    var state = sample(statePrior);
+    var utt = sample(S(state, data));
+    var response = sample(L(utt, data));
+    var newDatum = {utt, response, intended: state, acc: state == response};
+    return step(data.concat(newDatum));
+  };
+  step([]);
+};

@@ -1,0 +1,118 @@
+gameid,time,roundNum,occurrenceNum,sender,intendedName,timeElapsed,contents
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490390586058,1,1,matcher,L,1281,Hello
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490390586313,1,1,director,L,1284,hi
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490390586317,1,1,director,L,2112,hi
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490390606106,1,1,matcher,L,3012,Ready when you are.
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490390626070,1,1,director,L,5255,i am ready 
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490390649476,1,1,matcher,L,5326,which one should I pick
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490390666491,1,1,director,L,2668,second one
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490390700221,1,1,matcher,L,27788,according to the directions the placement is different for you and I. You have to describe what the object looks like~~~
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490390743118,1,1,director,L,3276,sitting
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490390781643,2,1,director,B,5682,it was like chimney
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490390827404,3,1,director,K,18072,Diamond shape on top, tail at back
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490390877016,4,1,director,H,23999,Diamond on top and shirt without hand
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490390905181,5,1,matcher,D,2487,That's better.
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490390910157,5,1,director,D,1685,yes yes
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490390926207,5,1,director,D,13699,Diamond on top and only left hand
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490390940705,6,1,director,F,555,Good
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490390945318,6,1,matcher,F,1415,Thanks
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490390973509,6,1,director,F,26798,Diamond on top, sitting and look like doing crunches
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490390981596,6,1,director,F,5653,Stomach crunch
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490390993584,7,1,director,C,1556,Very good
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490390997899,7,1,matcher,C,1562,Thank you
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391019196,7,1,director,C,17603,Diamond with two hands look like dancing, raising hand upwards
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391037269,8,1,matcher,E,3642,You're good at this.
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391045437,8,1,director,E,1753,Thank u
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391092415,8,1,director,E,39467,Rabbit head, diamond with two triangles on top
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391102419,9,1,director,J,857,Super
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391109444,9,1,matcher,J,1149,Thanks.
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391116623,9,1,director,J,7796,Diamond on table
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391143500,9,1,matcher,J,9507,Is it the same figure you called a chimney earlier?
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391154961,9,1,director,J,1181,No no
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391179509,9,1,director,J,9971,Just select man, we need to play 72 rounds total
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391181197,9,1,director,J,1376,come on
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391220010,10,1,director,A,15035,One leg rising towards left side, looks like alien
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391246069,11,1,director,G,6811,Looks like dog
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391276060,12,1,director,I,9233,Diamond head and raise leg back
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391314555,13,2,director,B,6262,You select previous dog
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391342475,14,2,director,I,11670,diamond on top , and raise leg backwards
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391372263,15,2,director,K,18095,Diamond on top and look like reading a book, book is on right side
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391386593,16,2,director,D,1357,Just miss
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391396841,16,2,matcher,D,5169,They were very similar.
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391398423,16,2,director,D,4363,Now reading on left side
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391413799,17,2,director,C,4104,raise two hands on top
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391425146,18,2,director,E,2084,rabbit head
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391436081,19,2,director,J,2121,diamond on table
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391451231,20,2,matcher,H,7039,Now we're picking up steam.
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391454334,20,2,director,H,8633,diamond head with no hands
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391469609,21,2,director,A,46,alien
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391485901,22,2,director,F,1884,crunches
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391521474,23,2,director,L,27981,Book on right side, you select that answer wrongly, now it is the right one
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391533788,24,2,director,G,602,Good
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391540373,24,2,director,G,2478,Dog
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391557432,25,3,director,A,742,alien
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391570969,26,3,director,D,3030,book on left side
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391585884,27,3,director,C,2672,hand rise both
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391610321,28,3,director,I,3449,leg rise right side
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391629433,29,3,director,K,6709,book on right side with tail
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391644446,30,3,director,J,508,good
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391649512,30,3,matcher,J,2696,good direction
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391650597,30,3,director,J,2766,diamond on table
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391663794,31,3,director,L,4962,book on right side without tail
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391679033,32,3,director,H,1801,without hands
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391688392,33,3,director,E,967,rabbit
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391696469,34,3,director,G,318,dog
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391718617,35,3,director,B,4578,Previous selected dog
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391741113,36,3,director,F,11883,Previous symbol is now called as dog 2 ok
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391745269,36,3,director,F,1364,crunches
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391748448,36,3,director,F,2048,now crunches
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391757058,37,4,director,F,2081,same crunches
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391768691,38,4,director,L,2915,reading without tail
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391793388,39,4,director,I,11819,leg raise on backright side
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391806751,40,4,director,C,4115,hand raise both
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391817133,41,4,director,J,2183,diamond on table
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391833024,42,4,director,K,7553,reading book on right with tail
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391845832,43,4,director,E,844,rabbit
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391857484,44,4,director,H,1863,without hands
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391866246,45,4,director,A,59,alien
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391879488,46,4,director,D,4148,book onleft
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391887661,47,4,director,B,824,dog 2
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391905529,48,4,director,G,1216,dog 1
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391909163,48,4,matcher,G,4691,freaking dogs.
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391918617,49,5,director,B,2067,mis match
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391923444,49,5,director,B,1091,dog 2
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391934929,50,5,director,J,835,super
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391938379,50,5,director,J,2374,diamond on table
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391946915,51,5,director,E,752,rabbit
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391955670,52,5,director,G,967,dog 1
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391966524,53,5,director,A,548,good
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391968810,53,5,director,A,687,alien
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391983946,54,5,director,L,6774,book on right without tail
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490391995716,55,5,director,F,1414,crunches
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490392005006,56,5,director,C,2885,hands both
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490392015211,57,5,director,D,1733,book left
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490392029536,58,5,director,K,6209,book right with tail
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490392048269,59,5,director,I,4895,leg raise on back
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490392057527,60,5,director,H,1110,no hands
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490392065565,61,6,director,E,887,rabbit
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490392076033,62,6,director,C,1006,both hands
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490392084842,63,6,director,K,742,tail
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490392095128,64,6,director,A,735,alien
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490392104009,65,6,director,J,730,table
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490392113098,66,6,director,D,1630,left book
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490392123357,67,6,director,G,816,dog 1
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490392132594,68,6,matcher,F,1725,finally
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490392134246,68,6,director,F,2124,crunches
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490392145251,69,6,director,H,3231,no hands
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490392155548,70,6,director,L,1751,without tail
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490392166828,71,6,director,B,892,dog 2
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490392180379,72,6,director,I,2017,Last one
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490392181686,72,6,matcher,I,4260,Good work
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490392185479,72,6,director,I,1600,Very good
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490392190817,72,6,director,I,4234,Where are u from?
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490392197274,72,6,matcher,I,3302,Illinois in the US
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490392207474,72,6,director,I,5027,Superb, i am from washington
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490392215565,72,6,matcher,I,4081,state or district?
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490392225075,72,6,director,I,2428,Redmond
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490392232277,72,6,director,I,2487,back leg raise
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1490392236086,72,6,director,I,2215,come on end

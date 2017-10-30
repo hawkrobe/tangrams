@@ -1,0 +1,115 @@
+gameid,time,roundNum,occurrenceNum,sender,intendedName,timeElapsed,contents
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490661693879,1,1,matcher,E,2278,Greetings.
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490661702521,1,1,director,E,8006,bunny ears
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490661719521,1,1,matcher,E,7870,Sitting facing the right?
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490661734622,1,1,director,E,3662,yes
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490661757297,2,1,director,C,10272,man raising his arms in a Y shape
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490661764799,2,1,director,C,6261,leaning to the left
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490661772072,2,1,matcher,C,4678,Sorta looks like a ghost?
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490661872865,3,1,director,A,18734,man standing on one foot while tilting head back
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490661936392,3,1,director,A,8734,and raising both hands in loose sleeves
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490661985055,3,1,matcher,A,5628,Facing what direction?
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490661994525,3,1,director,A,3696,facing left
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490662024486,3,1,matcher,A,17860,Does it looks he have a short foot on the left?
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490662031410,3,1,matcher,A,1884,Erm.~~~ Right~~~
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490662061246,3,1,director,A,2975,yes
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490662111728,4,1,director,B,20445,man kneeling down while spreading both arms out to left and right
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490662188540,5,1,director,L,34279,man standing with knees half bent, like he is about to kneel down
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490662202308,5,1,matcher,L,4597,One arm facing right?
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490662204618,5,1,director,L,4615,facing right
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490662206545,5,1,director,L,688,yes
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490662252315,6,1,director,I,21623,man standing on one leg with the other short leg pointed back
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490662279988,6,1,matcher,I,10756,Arms facing left? Sorta looks like he might be kicking?
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490662384703,7,1,director,G,22615,weird .~~~~~~ like a woman in dress doing weird yoga pose, one elbow lifted
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490662451042,7,1,matcher,G,1206,Uuuuhh
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490662474924,7,1,matcher,G,5762,Which direction is the elbow?
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490662509319,7,1,director,G,1543,to right
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490662543440,7,1,director,G,20295,she looks like she is sorta kneeling on the ground
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490662657027,8,1,director,K,12014,kneeling down fully facing right, holding plate in front of him
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490662737676,9,1,director,J,1087,ok?
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490662769045,9,1,matcher,J,1758,What?
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490662788454,9,1,matcher,J,8103,I didn't get a description for this one.
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490662832320,9,1,director,J,15432,only one with completely straight line on left side.
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490662880456,10,1,director,D,8694,standing holding plate, facing left
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490662923264,11,1,director,F,11248,sitting down, facing left
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490663003027,12,1,director,H,16019,legless man sitting on ground 
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490663010507,12,1,director,H,2664,almost facing us
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490663042086,13,2,director,K,13471,kneeling down facing right, holding plate
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490663065244,14,2,director,L,2648,knees half bent
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490663115162,15,2,director,F,25077,sitting on ground, legs bent
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490663122269,15,2,director,F,1535,or lying
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490663147765,15,2,matcher,F,3230,Facing which way?
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490663194119,15,2,director,F,671,left
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490663224205,15,2,matcher,F,24278,With arms above their head?
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490663233633,15,2,director,F,2239,no arms
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490663268291,16,2,director,I,22405,standing on one leg with other leg pointing to right
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490663304411,17,2,director,J,6335,straight line on the left side
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490663364209,18,2,director,D,13660,standing holding pate
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490663384256,18,2,director,D,17792,facing left
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490663413213,19,2,director,B,10600,kneeling with arms spread to left and right
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490663536993,20,2,director,A,22168,standing on 1 leg, both arms raised, head tilted back
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490663568643,21,2,director,C,7440,ghost with arms in Y shape
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490663579202,22,2,director,E,2383,bunny ears
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490663618019,23,2,director,G,8911,weird woman in dress elbow raised
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490663674140,24,2,director,H,17848,legless man sitting on ground facing us
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490663721542,25,3,director,H,7142,legless man sits facing us
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490663747081,26,3,director,J,7499,straight line on left
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490663796376,27,3,director,L,3225,knees half bent
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490663819297,28,3,director,C,5008,ghost with Y arms
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490663853714,29,3,director,A,9210,standing on 1 leg, both arms raisd
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490663876553,30,3,director,E,4480,bunny ears
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490663916965,31,3,director,F,7104,lying on ground with knees bent
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490663953339,32,3,director,B,8625,kneeling with arms spread to L and R
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490664018341,33,3,director,G,9614,weird woman, elbow raised
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490664049646,34,3,director,D,9961,standing facing left holding plate
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490664121352,35,3,director,I,8678,stand on 1 leg, other leg points to R
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490664154408,36,3,director,K,8527,kneeling down facing right
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490664177997,36,3,director,K,21483,holding plate
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490664209325,37,4,director,E,1806,bunny ears
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490664237587,38,4,director,B,6833,kneeling down arms spread to L and R
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490664275419,39,4,director,A,7943,stand on 1 leg, arms raised
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490664280299,39,4,director,A,3775,head tilted to R
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490664309068,40,4,director,J,5974,straight line on left
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490664352973,41,4,director,G,9174,woman in dress elbow raised
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490664382614,42,4,director,C,1679,Y ghost
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490664407870,43,4,director,L,7433,knees half bent
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490664410719,43,4,director,L,2191,about to kneel
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490664439520,44,4,director,D,5799,standing facing left
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490664442579,44,4,director,D,2372,holding plate
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490664500849,45,4,director,I,14729,standing on 1 leg, other leg pointed to R
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490664532424,46,4,director,H,4537,legless man sits facing us
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490664554185,47,4,director,F,5854,sitting on ground knees bent
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490664579948,48,4,director,K,2856,kneeling fully
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490664596410,49,5,director,C,15489,Y ghost
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490664613154,50,5,director,H,1680,legless
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490664619899,50,5,director,H,5217,sit face us
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490664633471,51,5,director,E,2444,bunny ears
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490664654044,52,5,director,B,6703,kneeling arms spread L and R
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490664682136,53,5,director,A,11123,stand on 1 leg, both arms raised
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490664716087,54,5,director,L,2824,knees half bent
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490664740478,55,5,director,G,3457,woman elbow raised
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490664764254,56,5,director,I,7632,stand 1 leg, other leg point to R
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490664782694,57,5,director,D,5015,stand face L
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490664806199,57,5,director,D,2352,holding plate
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490664828871,58,5,director,F,4264,sit knees bent
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490664851304,59,5,director,J,2247,straight line
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490664853408,59,5,director,J,920,on L
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490664867816,60,5,director,K,3575,kneel face R
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490664871376,60,5,director,K,1942,holding plate
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490664901578,61,6,director,B,5697,kneel arms spread to L and R
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490664927250,62,6,director,C,775,ghost
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490664929755,62,6,director,C,1656,Y
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490664949042,63,6,director,J,7319,straight Line
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490664951683,63,6,director,J,1096,on L
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490664974620,64,6,director,A,5593,stand 1 leg, both arms raised
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490665003791,65,6,director,G,3248,woman elbow raised
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490665027997,66,6,director,H,1215,legless
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490665030940,66,6,director,H,2416,sit facing us
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490665047229,67,6,director,F,4568,sit knees bent
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490665077189,68,6,director,I,9120,stand 1 leg, other leg point to R
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490665101726,69,6,director,E,2447,bunny ears
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490665134249,70,6,director,K,3199,kneel facing R
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490665138086,70,6,director,K,1849,holding plate
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490665155390,71,6,director,D,3823,stand facing L
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490665158398,71,6,director,D,2263,holding plate
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,1490665180767,72,6,director,L,2183,about to kneel

@@ -1,0 +1,38 @@
+gameid,time,roundNum,occurrenceNum,sender,intendedName,timeElapsed,contents
+5511-2cfe3af9-5f02-4d1e-b3f0-5282baca8ba3,1490645729846,1,1,director,L,13130,the target has right arm out, no other arm visible
+5511-2cfe3af9-5f02-4d1e-b3f0-5282baca8ba3,1490645740517,1,1,director,L,4282,looks like he's dancing
+5511-2cfe3af9-5f02-4d1e-b3f0-5282baca8ba3,1490645775922,2,1,director,G,17743,target looks like he's lying down and his head is tumbling off 
+5511-2cfe3af9-5f02-4d1e-b3f0-5282baca8ba3,1490645820989,3,1,director,A,15080,target has head on opposite slope from his raised right leg
+5511-2cfe3af9-5f02-4d1e-b3f0-5282baca8ba3,1490645827921,3,1,director,A,6002,one leg on ground, one leg up
+5511-2cfe3af9-5f02-4d1e-b3f0-5282baca8ba3,1490645852852,4,1,director,F,8433,target sitting down like leaning against a tree
+5511-2cfe3af9-5f02-4d1e-b3f0-5282baca8ba3,1490645889081,5,1,director,I,11993,target looks like he's ice skating with both arms out and one leg pointing opposite
+5511-2cfe3af9-5f02-4d1e-b3f0-5282baca8ba3,1490645927231,5,1,director,I,7976,arms are parallel and equal length
+5511-2cfe3af9-5f02-4d1e-b3f0-5282baca8ba3,1490645929417,5,1,director,I,1570,leaning forward
+5511-2cfe3af9-5f02-4d1e-b3f0-5282baca8ba3,1490645957307,6,1,director,D,15209,target looks like teacher or graduate with mortarboard with arm out 
+5511-2cfe3af9-5f02-4d1e-b3f0-5282baca8ba3,1490645996246,7,1,director,K,15665,target is standing upright on a flat surface, but body is assymetrical
+5511-2cfe3af9-5f02-4d1e-b3f0-5282baca8ba3,1490646003849,7,1,director,K,4572,upright diamond as head
+5511-2cfe3af9-5f02-4d1e-b3f0-5282baca8ba3,1490646048826,8,1,director,J,24718,target looks like an upright diamond placed on a cliff. straight left side, tapered on right side
+5511-2cfe3af9-5f02-4d1e-b3f0-5282baca8ba3,1490646102747,9,1,director,E,32384,target looks like an avalanche in progress, mountainous base with two triangles and diamond on top
+5511-2cfe3af9-5f02-4d1e-b3f0-5282baca8ba3,1490646139913,10,1,director,H,28712,target has no arms or separate legs, looks partially seated or bent at the hips, upright diamond head
+5511-2cfe3af9-5f02-4d1e-b3f0-5282baca8ba3,1490646180191,10,1,director,H,10945,one solid body with no sharp angles besides head
+5511-2cfe3af9-5f02-4d1e-b3f0-5282baca8ba3,1490646253510,11,1,director,B,31515,target has upright diamond connected to triangle below to the right. main body shape is like an anvil
+5511-2cfe3af9-5f02-4d1e-b3f0-5282baca8ba3,1490646269456,12,1,director,C,7555,both arms out, leaning to side
+5511-2cfe3af9-5f02-4d1e-b3f0-5282baca8ba3,1490646273342,12,1,director,C,3553,no legs just upper body
+5511-2cfe3af9-5f02-4d1e-b3f0-5282baca8ba3,1490646292228,13,2,director,F,9565,sitting under tree with leg out, reading position
+5511-2cfe3af9-5f02-4d1e-b3f0-5282baca8ba3,1490646316198,14,2,director,G,11097,shape looks like heeled shoe on bottom
+5511-2cfe3af9-5f02-4d1e-b3f0-5282baca8ba3,1490646330598,15,2,director,I,4466,(are you even reading the prompts?)
+5511-2cfe3af9-5f02-4d1e-b3f0-5282baca8ba3,1490646335283,15,2,director,I,1644,ice skater
+5511-2cfe3af9-5f02-4d1e-b3f0-5282baca8ba3,1490646343853,15,2,matcher,I,2008,hey of course i am
+5511-2cfe3af9-5f02-4d1e-b3f0-5282baca8ba3,1490646368264,16,2,director,A,16848,one leg up forward, other leg on ground, head falling back
+5511-2cfe3af9-5f02-4d1e-b3f0-5282baca8ba3,1490646396870,17,2,director,J,18307,diamond on cliff face. steep descent left, cliff edge right
+5511-2cfe3af9-5f02-4d1e-b3f0-5282baca8ba3,1490646414434,18,2,director,C,5802,upper body leaning, arms up
+5511-2cfe3af9-5f02-4d1e-b3f0-5282baca8ba3,1490646439713,18,2,director,C,5939,both arms out different directions
+5511-2cfe3af9-5f02-4d1e-b3f0-5282baca8ba3,1490646465670,19,2,director,L,12546,bending at knees, arms are one triangle pointing right
+5511-2cfe3af9-5f02-4d1e-b3f0-5282baca8ba3,1490646473103,19,2,director,L,1345,straight back
+5511-2cfe3af9-5f02-4d1e-b3f0-5282baca8ba3,1490646526785,20,2,director,K,11874,two diamonds on top of each other for head
+5511-2cfe3af9-5f02-4d1e-b3f0-5282baca8ba3,1490646571421,21,2,director,E,6753,shapes falling down the right side of a mountain
+5511-2cfe3af9-5f02-4d1e-b3f0-5282baca8ba3,1490646596522,22,2,director,D,9313,scholar in robes with arm raised right
+5511-2cfe3af9-5f02-4d1e-b3f0-5282baca8ba3,1490646613320,23,2,director,H,8967,bent at hips, upright diamond head
+5511-2cfe3af9-5f02-4d1e-b3f0-5282baca8ba3,1490646637993,24,2,director,B,10257,diamond and triangle balanced on anvil surface
+5511-2cfe3af9-5f02-4d1e-b3f0-5282baca8ba3,1490646642321,24,2,matcher,B,7035,this is actually taking way too long
+5511-2cfe3af9-5f02-4d1e-b3f0-5282baca8ba3,1490646643391,24,2,matcher,B,733,cya m8

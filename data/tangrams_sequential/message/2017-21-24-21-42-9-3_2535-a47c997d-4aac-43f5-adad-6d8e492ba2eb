@@ -1,0 +1,149 @@
+gameid,time,roundNum,occurrenceNum,sender,intendedName,timeElapsed,contents
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490391736444,1,1,matcher,G,1797,which is it?
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490391745107,1,1,matcher,G,4165,describe the shape for me
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490391764969,1,1,director,G,15203,It looks like a mountain with a square falling down on the left
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490391766684,1,1,matcher,G,9581,you can describe it as a human figure doing something if it's easier
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490391802375,2,1,matcher,A,4367,gotta hurry lol
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490391804509,2,1,director,A,18059,a dinosaur with a square falling off his back on the right side
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490391819992,3,1,director,H,4105,a baby craddle
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490391824988,3,1,matcher,H,1538,cradle?
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490391825853,3,1,director,H,2503,*craddled
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490391830542,3,1,matcher,H,2613,whats a craddled
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490391836184,3,1,matcher,H,4535,oh cradled?
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490391844139,3,1,director,H,5871,catapillar in a cocoon
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490391859324,4,1,director,F,8821,a man laying/sitting
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490391884384,5,1,director,L,8755,it looks very similar to another
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490391896410,5,1,matcher,L,370,??
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490391907364,5,1,director,L,17034,square looks like a diamond and the man is kneeling
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490391936677,6,1,director,D,7935,man standing straight with hands out
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490391942370,6,1,director,D,3724,as to offer food?
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490391953060,7,1,director,I,5149,leg bent backwards
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490391963905,8,1,director,E,1151,sitting
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490391986641,9,1,director,J,8370,it looks like a baby in big dress
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490391994703,9,1,director,J,2153,hands up
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392014893,10,1,director,C,980,flying
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392027061,11,1,director,K,3831,kneeling with hands out
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392037308,11,1,director,K,1225,forward
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392049161,12,1,director,B,4459,kneeling with hands out to side
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392072938,12,1,director,B,2078,on knees
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392078974,12,1,matcher,B,3236,facing left or right
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392080319,12,1,director,B,2796,hands out to side
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392087362,12,1,director,B,565,right
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392089310,12,1,director,B,975,my right
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392102013,13,2,director,G,7166,karate move?
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392109903,13,2,director,G,3773,head cocked to left
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392128221,14,2,director,H,3244,baby swaddled
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392131376,14,2,director,H,2149,in a blanket
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392137754,14,2,matcher,H,1392,no arms?
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392138301,14,2,director,H,2610,or a cocoon
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392140469,14,2,director,H,1208,no arms
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392147475,15,2,director,C,1241,flying
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392165009,16,2,director,J,2382,baby penguin
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392174134,16,2,director,J,3050,short legs?
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392182131,16,2,matcher,J,1469,standing?
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392184084,16,2,director,J,336,yes
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392188357,16,2,director,J,1603,ma7ybe?
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392193848,16,2,matcher,J,1942,on one leg?
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392199820,16,2,director,J,7534,hands up 
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392206875,16,2,director,J,6666,both legs, it is unclear
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392208858,16,2,matcher,J,2453,facing forward?
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392211898,16,2,director,J,914,yes
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392219878,17,2,director,D,2124,man offering
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392222999,17,2,director,D,1157,standing
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392238170,18,2,director,K,5358,person kneeling to my right
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392252543,18,2,matcher,K,1417,arms out?
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392259419,18,2,director,K,5596,arms out to their forward
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392270605,18,2,matcher,K,695,hat?
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392274342,18,2,director,K,450,no
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392291825,19,2,director,I,5840,flying with one leg down
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392297555,19,2,director,I,1357,yoga pose
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392308370,20,2,director,F,3725,man laying/sitting
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392316388,20,2,matcher,F,1969,no arms?
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392319794,20,2,director,F,1207,no arms
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392322354,20,2,matcher,F,717,hat?
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392325481,20,2,director,F,1451,no
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392347653,21,2,director,B,15807,person on knees turned towards my right with arms out to their sides
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392377937,22,2,director,A,5182,frankenstien
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392380650,22,2,director,A,2331,monster
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392386260,22,2,director,A,5234,dinosaur
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392407420,23,2,director,E,2344,person with hat
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392410762,23,2,director,E,2440,sitting down
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392416424,23,2,director,E,4757,head facing my right
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392421687,23,2,matcher,E,7857,two horn like things?
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392424309,23,2,director,E,306,yes
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392437430,24,2,director,L,6432,person bending towards my right
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392441840,24,2,director,L,3869,arms out forward
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392457190,24,2,matcher,L,8090,your right and mine i think are diff
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392465361,24,2,matcher,L,1855,they switch
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392468982,24,2,matcher,L,965,sometimes
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392482643,24,2,director,L,6289,arms out to right side of photo
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392498533,24,2,matcher,L,2099,kneeling?
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392500936,24,2,director,L,399,yes
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392518105,25,3,director,L,8748,person kneeling to right side
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392538064,26,3,director,J,3447,standing forward
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392542105,26,3,director,J,3518,arms out to side
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392554339,26,3,matcher,J,2990,one arms or 2
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392563775,26,3,director,J,513,two
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392582344,27,3,director,I,5075,flying with leg down
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392595871,27,3,director,I,1844,one leg down
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392607462,28,3,director,C,765,flying
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392624702,29,3,director,D,5507,offering food while standing
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392639679,29,3,matcher,D,5754,legs straight?
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392642463,29,3,director,D,447,yes
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392654735,30,3,director,A,3717,one leg up
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392659654,30,3,director,A,3672,head towards side
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392665207,30,3,matcher,A,2551,karate?
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392673204,30,3,director,A,1172,no
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392675685,30,3,matcher,A,4007,or dinosaur
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392677820,30,3,director,A,712,yes
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392695339,31,3,director,E,8849,sitting head toward the right side
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392697976,31,3,director,E,819,hat
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392701666,31,3,director,E,2192,triangle hat
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392714736,32,3,director,H,1137,cocoon
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392729853,33,3,director,B,1578,arms out
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392732688,33,3,director,B,1535,on knees
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392737035,33,3,director,B,2824,arms out to side
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392745470,34,3,director,F,2736,sitting/laying
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392754782,35,3,director,G,983,karate
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392769421,36,3,director,K,5039,offering while kneeling
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392779801,37,4,director,G,978,karate
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392795682,38,4,director,I,7075,flying with one leg down
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392807287,39,4,director,H,1288,cocoon
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392818991,40,4,director,L,4969,offering food while kneeling
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392828222,40,4,matcher,L,5473,kneeling partially or all the way
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392837691,40,4,director,L,1023,partly
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392847857,41,4,director,D,3306,offering while standing
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392861287,42,4,director,F,2256,sitting/laying
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392886885,43,4,director,K,17166,kneeling while offering with one leg bent up and backwards
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392906171,44,4,director,A,1538,dino
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392913825,45,4,director,C,756,flying
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392924726,46,4,director,B,1741,on knees
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392927623,46,4,director,B,2493,hands out to side
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392937420,47,4,director,E,2444,sitting with a hat
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392951406,48,4,director,J,1818,penguin
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392968060,49,5,director,A,738,dino
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392982187,50,5,director,D,4075,offering while standing
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490392993808,51,5,director,F,2853,sitting/laying
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490393006750,52,5,director,I,5805,flying with one leg down
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490393017562,53,5,director,E,2156,sitting with hat
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490393034565,54,5,director,K,10021,kneeling while offering with leg bent back and up
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490393057626,55,5,director,B,8867,on knees facing forward hands out to side
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490393077294,56,5,director,L,3343,bending with offering
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490393085783,57,5,director,C,720,flying
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490393092767,58,5,director,J,1150,penguin
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490393112267,59,5,director,H,1892,cocoon
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490393120223,60,5,director,G,869,karate
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490393144222,61,6,director,D,3305,offering while standing
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490393148673,61,6,director,D,3348,we are doing well!
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490393154650,62,6,matcher,K,1368,we are!
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490393163169,62,6,director,K,9044,offering while kneeling with leg back and up
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490393175969,63,6,director,J,975,penguin
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490393191785,64,6,director,E,2123,sitting with hat
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490393211830,65,6,director,H,1756,cocoon
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490393219747,66,6,director,C,689,flying
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490393228315,67,6,director,F,2311,sitting/laying
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490393244585,68,6,director,A,1523,dinosaur
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490393262439,69,6,director,L,9423,kneeling while offering both legs downward
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490393273109,70,6,director,G,790,karate
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490393292477,71,6,director,B,8926,on knees, facing forward, both arms out to sides
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,1490393307752,72,6,director,I,3260,flying with one leg down

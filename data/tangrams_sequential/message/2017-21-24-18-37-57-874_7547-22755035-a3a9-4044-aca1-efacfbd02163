@@ -1,0 +1,79 @@
+gameid,time,roundNum,occurrenceNum,sender,intendedName,timeElapsed,contents
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490380683531,1,1,director,L,958,Hello
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490380689163,1,1,matcher,L,2397,hi
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490380712253,1,1,director,L,19553,Image looks like a person holding a bowl kneeling slightly
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490380762945,2,1,director,H,25749,Image looks like a house with a diamond on the roof. The house has a shadow
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490380819478,3,1,director,J,27806,Diamond sitting on top of a pillar. Right in the center
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490380851940,4,1,director,F,14088,Person sitting on the ground, facing left, with their legs out
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490380877721,5,1,director,I,13831,Looks like someone ice skating, with 1 leg in the air. Facing left
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490380914069,6,1,director,D,16566,Person holding a bowl and standing, facing left
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490380950729,7,1,director,E,16484,Image looks like someone wearing a bow on their head, sitting down, facing right
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490380977361,8,1,director,C,11739,Image looks like someone with their arms raised, facing left
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490381035346,9,1,director,G,28939,This one looks like someone in a yoga pose. 
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490381091952,10,1,director,A,16987,This one looks like someone standing, facing left, kicking a can or rock
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490381122546,11,1,director,K,9642,someone holding a bowl and kneeling, facing right
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490381167969,12,1,director,B,24545,This image looks like a diamond on a pillar, with a triangle on the right keeping the diamond from falling off
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490381189559,13,2,director,D,5579,person holding bowl facing left
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490381218405,14,2,director,E,8487,Person wearing a bow sitting down
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490381238813,15,2,director,H,7452,House with a diamond on it
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490381274749,16,2,director,G,15167,This is the yoga pose one that we got wrong the first time
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490381312795,17,2,director,K,6421,person kneeling with bowl facing right
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490381358333,18,2,director,L,16034,Person kneeling slightly with bowl facing right
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490381374440,19,2,director,A,5264,Person kicking rock/cn
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490381393469,20,2,director,F,7659,person sitting down with legs out facing left
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490381409528,21,2,director,C,3349,person with arms up
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490381429365,22,2,director,I,6394,Ice skater
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490381469501,23,2,director,B,16522,Diamond/square on a pillar with a triangle on the right holding it up
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490381504419,24,2,director,J,7942,Same image you chose last round
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490381520191,25,3,director,C,2481,arms in the air
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490381547024,26,3,director,L,17077,slightly kneeling with bowl 
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490381619970,27,3,director,B,45491,we keep getting this one wrong but it looks like a box/triangle on a pillar/platform. The box is falling to the right but a triangle to the right of it is keeping it in place
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490381645019,28,3,director,E,3587,person wearing bow
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490381685588,29,3,director,G,28291,This is the "yoga pose" one. It looks like a box/diamond on a pillar falling to the left
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490381719406,30,3,director,H,3278,diamond on house
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490381741681,31,3,director,A,4396,person kicking can/rock
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490381772477,32,3,director,J,20685,Diamond sitting on top of a pillar right in the center
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490381789251,33,3,director,I,1466,ice skater
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490381843969,34,3,director,D,9987,Person holding bowl and standing facing left
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490381863786,35,3,director,F,6690,person sitting down with legs out facing left
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490381878649,36,3,director,K,4367,kneeling holding bowl
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490381970746,37,4,director,G,24579,square on a pillar, with two triangles on the right
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490381998169,38,4,director,D,4434,holding bowl and standing
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490382015034,39,4,director,L,6659,slightly kneeling holding bowl
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490382027419,40,4,director,C,1370,arms up
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490382058832,41,4,director,B,10646,box on a pillar with a triangle on the right holding it up
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490382082119,42,4,director,K,2935,kneeling holding bowl
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490382091444,43,4,director,I,1928,ice skater
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490382106746,44,4,director,H,2498,diamond on house
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490382123187,45,4,director,E,3891,person wearing bow
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490382143213,46,4,director,J,11460,Diamond in center of a pillar
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490382162792,47,4,director,F,4928,person sitting with legs out
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490382177790,48,4,director,A,2222,kicking can
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490382197660,49,5,director,G,9175,The only image we keep getting wrong 
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490382199409,49,5,director,G,458,lol
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490382213034,50,5,director,L,2430,nice we got it
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490382218170,50,5,director,L,2794,kneeling slightly
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490382221846,50,5,director,L,1594,holding bowl
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490382236239,51,5,director,J,6998,Diamond in center of a pillar
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490382255162,52,5,director,D,6557,Holding bowl, standing, facing left
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490382275347,53,5,director,B,8384,box on pillar being held up by triangle 
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490382291251,54,5,director,I,2175,ice skater
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490382303984,55,5,director,C,1933,arms up
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490382318287,56,5,director,H,2103,diamond on house
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490382336862,57,5,director,F,8453,person sitting with legs out, facing left
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490382348663,58,5,director,E,1535,wearing bow
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490382358485,59,5,director,A,2237,kicking can
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490382377854,60,5,director,K,7351,kneeling with bowl, facing right
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490382409119,61,6,director,L,17089,slightly kneeling holding bowl
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490382415104,61,6,director,L,3084,facing right
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490382434552,62,6,director,H,2513,diamond on house
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490382449712,63,6,director,C,2608,arms up
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490382464671,64,6,director,F,3147,sitting with legs out
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490382480506,65,6,director,G,4799,the one we keep getting wrong
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490382500509,66,6,director,A,5061,kicking can
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490382511870,67,6,director,E,924,bow
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490382531394,68,6,director,D,7263,holding bowl facing left, standing
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490382542752,69,6,director,I,1667,ice skater
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490382574063,70,6,director,K,6393,kneeling, holding bowl, facing right
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490382603788,71,6,director,B,7405,box being held up by triangle on the right
+7547-22755035-a3a9-4044-aca1-efacfbd02163,1490382620191,72,6,director,J,5066,Diamond in center of pillar

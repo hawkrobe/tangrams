@@ -1,0 +1,99 @@
+gameid,time,roundNum,occurrenceNum,sender,intendedName,timeElapsed,contents
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490645439599,1,1,matcher,L,11106,Hello
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490645477282,1,1,director,L,45658,Knees bent arm out. Begging~~~
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490645481947,1,1,director,L,2484,Hello.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490645543049,2,1,director,J,26982,Left side of image has squared corners.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490645580792,2,1,matcher,J,11475,is the left side the shape of a rectangle?
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490645602930,2,1,director,J,15334,Left side has two right angles. Yes~~~
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490645654697,3,1,director,G,34758,"head" pointing left. Body making sweeping motion~~~
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490645674670,3,1,director,G,7508,Arms to the right.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490645697883,4,1,matcher,I,3475,your good at this
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490645707104,4,1,director,I,5144,You too.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490645751674,4,1,director,I,38902,Arms pointing left head left. Standing on one leg~~~ Other leg back~~~
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490645773425,4,1,matcher,I,7823,ice skater?
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490645794758,4,1,director,I,21944,Arms look like two triangles on the left side. Yeah~~~
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490645846043,5,1,director,D,32327,Standing facing left arms out robed. both feet together~~~
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490645913193,6,1,director,K,37490,Kneeling. Feet up~~~ Facing right arms in praying position~~~
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490645955936,7,1,director,F,19415,Sitting, reclining, facing left.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490645956735,7,1,matcher,F,25021,good describing I would not be good at your job.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490646027483,8,1,director,B,43966,Arms to both sides, kneeling. Facing right~~~
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490646060285,8,1,director,B,8977,Foot a triangle in lower left.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490646078705,8,1,matcher,B,11063,can you see the arm triangle right too?
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490646093483,8,1,director,B,10350,Yes it is almost separateed.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490646157827,9,1,director,H,20944,Body one solid shape. No arms visible~~~
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490646178950,9,1,director,H,5773,Kind of sitting.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490646182166,9,1,matcher,H,11666,no feet but looks like knees?
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490646191053,9,1,director,H,3924,Yes.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490646245375,10,1,director,A,40680,Standing on one leg. Walking to the left with arm bent oddly on the left side~~~ Head back~~~
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490646271665,11,1,director,E,4654,Rabbit.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490646321748,12,1,director,C,23544,Arms waving in the air. Leaning Left~~~ Head left~~~
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490646333200,12,1,director,C,3762,No legs.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490646350583,12,1,matcher,C,14027,looks kind of like falling backwards?
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490646359985,12,1,director,C,21086,Body diagonal. Yeah~~~
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490646395453,13,2,director,K,23415,Kneeling Praying. Legs flat~~~
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490646409264,13,2,director,K,6016,Foot behind on left.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490646418685,13,2,director,K,3656,Facing right.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490646475451,14,2,director,B,25153,Separated right arm again.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490646514946,14,2,director,B,19896,Triangle on right side almost separate.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490646536652,15,2,matcher,A,4848,got it thanks 
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490646553891,15,2,director,A,17889,Walking left again head back. Arms bent oddly~~~
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490646591478,16,2,director,E,3216,Rabbit
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490646638809,17,2,director,D,29268,Facing Left Standing straight legs together.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490646685239,18,2,director,J,12083,Left side of body is rectangle.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490646704137,19,2,director,C,4745,Falling backwards.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490646718054,20,2,director,I,5255,Ice skater.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490646739442,21,2,director,F,11259,Sitting, reclining facing left.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490646781493,22,2,director,L,23703,Knees bent, arms facing right.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490646823273,23,2,director,G,25382,Sweeping motion. Head to left, arm on right~~~
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490646849641,24,2,director,H,13904,Body one solid shape no arm triangles.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490646861522,24,2,director,H,4259,Sitting.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490646887827,25,3,director,L,11518,Knees bent facing right arms out.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490646906324,26,3,director,G,3040,Sweeping.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490646928152,27,3,director,D,11342,Legs together standing facing left.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490646949341,28,3,director,F,7061,Reclining.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490646970763,29,3,director,K,8879,Kneeling, praying.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490646987781,30,3,director,C,4501,Falling backwards.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490647000759,31,3,director,E,1853,Rabbit.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490647015628,32,3,director,A,5002,Walking left.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490647033126,33,3,director,I,4404,Ice skater.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490647034185,33,3,matcher,I,35535,Good job I am just staying quiet to let you type.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490647052635,34,3,director,H,10898,Body one solid shape sitting.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490647079971,35,3,director,J,17437,Left side of body rectangle. Rectangle from now on~~~
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490647107121,36,3,matcher,B,2214,got it thanks
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490647121561,36,3,director,B,11500,Right arm separate triangle.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490647134031,37,4,director,F,2628,Reclining.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490647149857,38,4,director,K,5542,Kneeling, praying.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490647163963,39,4,director,J,3264,Rectangle.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490647174745,40,4,director,E,2840,Rabbit.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490647185420,41,4,director,G,3509,Sweeping.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490647195989,42,4,director,C,3125,Falling.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490647210886,43,4,director,D,6949,Standing facing left.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490647227608,44,4,director,I,4779,Skating.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490647242614,45,4,director,L,5742,Knees bent.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490647261733,46,4,director,H,7970,Sitting body one shape.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490647278680,47,4,director,A,4287,Walking left.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490647304422,48,4,director,B,14685,Arm separated triangle. 
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490647319781,49,5,director,G,3556,sweeping.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490647333798,50,5,director,D,6649,standing facing left.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490647346648,51,5,director,E,2526,Rabbit.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490647358690,52,5,director,A,3306,Walking left.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490647368307,53,5,director,C,1882,Falling.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490647384284,54,5,director,H,8337,Sitting body one shape.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490647394839,55,5,director,J,2064,rectangle
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490647418320,56,5,director,K,8568,kneeling praying.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490647438341,57,5,director,L,3332,knees bent.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490647452174,58,5,director,F,3509,reclining.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490647468068,59,5,director,B,6408,separted triangle.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490647480186,60,5,director,I,2952,skater
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490647497942,61,6,director,D,8673,standing facing left.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490647510738,62,6,director,G,3347,sweeping
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490647531358,63,6,director,B,12816,separate trianlge
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490647541786,64,6,director,I,2868,skater
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490647553617,65,6,director,K,4084,praying
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490647569888,66,6,director,H,5742,sitting body one shape.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490647580322,67,6,director,E,1926,rabbit.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490647594239,68,6,director,L,4963,knees bent
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490647609254,69,6,director,A,3912,walking left.
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490647620936,70,6,director,J,3398,rectangle
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490647629259,71,6,director,C,1453,falling
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490647639576,72,6,director,F,3165,reclining

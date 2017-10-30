@@ -1,0 +1,78 @@
+gameid,time,roundNum,occurrenceNum,sender,intendedName,timeElapsed,contents
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490657182167,1,1,matcher,L,420,hi
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490657184688,1,1,director,L,894,Hello
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490657192672,1,1,matcher,L,3403,let's make some money eh?
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490657197020,1,1,director,L,796,ok
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490657220168,1,1,director,L,12442,the image kind of look like they are praying
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490657241772,1,1,matcher,L,6648,that could be 3 of them, which way they face?
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490657257142,1,1,director,L,8811,They face to the right. 
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490657274776,1,1,matcher,L,3225,tail in the back or no tail?
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490657280982,1,1,director,L,1507,No tail
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490657319233,2,1,director,G,27180,ThThe tail is really far out on this image
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490657336081,3,1,matcher,K,3753,nice work, that was much quicker
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490657344553,3,1,director,K,5643,Yes :)
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490657353513,3,1,director,K,7182,This time it's the one with the tail
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490657392467,4,1,director,H,17655,This figure looks like it's wearing a cape
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490657421442,4,1,matcher,H,7711,does it look like it's facing out to me
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490657423040,4,1,director,H,10298,It's looks like a black ghost
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490657424309,4,1,director,H,516,yes
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490657447229,5,1,director,D,11234,This is one is facing you and is pointing to the left
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490657460271,5,1,matcher,D,5301,looks like it's holding a top hat to the left
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490657472789,5,1,director,D,2594,Yes that one
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490657499801,6,1,director,I,15647,This one is facing you and it looks like it's standing on one leg
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490657509820,6,1,matcher,I,1647,side kick?
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490657509991,6,1,director,I,5538,and it has its arms out
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490657512842,6,1,director,I,477,yes
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490657524236,7,1,matcher,E,4630,yeah, just call that one sidekick
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490657561440,7,1,director,E,29849,This is one looks like it is sitting down, and their head is looking down.
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490657570128,7,1,matcher,E,1811,rabbit ears?
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490657573994,7,1,director,E,579,Yes
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490657583600,8,1,matcher,F,2846,there's your name for that too
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490657622519,8,1,director,F,31118,There's a guy who is sitting down with his legs angle up in front of him
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490657627809,8,1,director,F,4677,He has a block head
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490657679670,9,1,director,B,37624,The figure is sitting down with their head up and triangle arms pointing out. They have a triangle hat~~~
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490657721300,9,1,director,B,9961,They're kind of looking up with a square head
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490657728019,9,1,director,B,5957,and their feet in front of them.
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490657746596,9,1,matcher,B,7663,looks like a girl in a pony tail in a kimono facing left
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490657751184,9,1,director,B,548,yes
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490657789343,10,1,director,J,29277,This one is facing you. They are pointing right~~~ But there bottom is flat on the ground~~~
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490657819559,11,1,matcher,A,8520,not sure what happened there.~~~~~~I clicked on one, and another lit up
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490657832145,11,1,director,A,5320,We'll get this one :)
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490657842214,11,1,director,A,7282,This one is doing a weird dance.
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490657889667,12,1,director,C,27915,This one looks like it's flying. It looks like it's coming off the page a bit~~~ It's drawn at an angle
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490657923025,13,2,director,D,21339,This one is pointing to the left and it's bottom is flat on the ground
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490657939807,14,2,matcher,H,3026,same thing just happened
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490657948991,14,2,matcher,H,5325,like my selection box has a mind of its own
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490657957665,14,2,director,H,20857,It's okay. It's the one with the cape again~~~
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490657970317,14,2,director,H,2458,It's facing you
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490657988566,14,2,matcher,H,11184,it's jagged on the right, correct, flat under the head
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490658046286,14,2,director,H,15287,It has no arms and looks like it's floating.
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490658070394,15,2,director,J,6891,It's the last one you chose
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490658076857,15,2,matcher,J,1080,oops
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490658086754,15,2,director,J,6259,flat on the side and jagged on the right
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490658119679,16,2,director,K,21152,This one has a tail pointing up and arms pointing right. It looks like it's facing you~~~
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490658183308,17,2,director,B,33477,This is is praying with it's arms out and is sitting down with it's head titled up. Has a triangle headwrap
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490658242610,18,2,director,F,36205,This guy is sitting down with his legs out and is looking up and facing the left.
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490658267646,19,2,director,C,13616,This one is flying and is drawn at an angle.
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490658302009,20,2,director,L,21204,This one is facing you and it' bending with it's arms facing the right.
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490658339296,21,2,director,I,16996,This one is doing a sidekick
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490658385544,22,2,director,A,37176,This one has a head that is about to fall off and looks like he is standing on one leg. His hands are pointing down
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490658405220,23,2,director,E,7224,This one has the bunny ears
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490658443046,24,2,director,G,23978,This one has the tail way out in front of them. The arm is pointing down 
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490658474314,25,3,director,A,15314,Head is about to fall off and is standing on one leg with their hand pointing down
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490658519371,26,3,director,H,31896,This one is facing you. It has no hands
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490658560358,27,3,director,L,27952,This one is pointing to the right. It does not have a tail~~~
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490658592137,28,3,director,J,10395,This one is flat on one side and rigid on the other.
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490658628190,29,3,director,B,20322,This one is praying with their arms to the left and a triangle headpiece
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490658657780,30,3,director,E,8394,This one has the bunny ears
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490658679739,31,3,director,K,12375,This one is pointing to the right and has a tail
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490658710255,32,3,director,F,15517,This one is on the ground facing the left and is looking up
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490658727758,33,3,director,C,6233,This one is drawn at an angle
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490658782724,34,3,director,D,27916,This one looks like it's holding a top hat
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490658817120,35,3,director,G,10842,One of the leg is all the way out and is bigger than the other
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490658833798,36,3,director,I,4447,The one doing the sidekick
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490658846871,37,4,matcher,E,2671,good rhythm now
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490658848640,37,4,director,E,5301,Rabbit ears
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490658871411,38,4,director,H,2765,The one facing you
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490658886798,39,4,director,B,4853,triangle headwrap
+0758-81c00c29-cdda-4c4d-b929-9b9f0f421fbb,1490658917572,40,4,director,F,22155,sitting down with legs out, looking up, facing the left

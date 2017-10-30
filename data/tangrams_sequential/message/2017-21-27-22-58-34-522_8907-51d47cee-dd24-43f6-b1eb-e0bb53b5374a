@@ -1,0 +1,151 @@
+gameid,time,roundNum,occurrenceNum,sender,intendedName,timeElapsed,contents
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490655522339,1,1,matcher,F,267,hi
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490655523872,1,1,director,F,29309,Hi there!!!!  Are you ready for this?
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490655526255,1,1,matcher,F,346,yes
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490655561968,1,1,director,F,26132,sitting position leaning against the side of box
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490655574631,1,1,matcher,F,6401,facing to the left?
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490655581014,1,1,director,F,1570,correct
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490655589700,2,1,director,J,1634,awesome
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490655616525,2,1,director,J,3560,sorry thinking
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490655637049,2,1,director,J,13840,left side parallel to the left side of the box
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490655655231,2,1,director,J,11925,head is in the top middle 
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490655675964,2,1,matcher,J,14957,flat on left side and two triangles poking out of right side?
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490655683829,2,1,director,J,583,yes
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490655705451,3,1,director,B,5731,looks like as he had a tie
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490655717847,3,1,director,B,7766,2 arms are 2 triangles poking out
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490655748266,3,1,director,B,3972,focus on the tie
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490655767784,3,1,director,B,8826,he is holding both of his arms up, 
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490655772729,3,1,director,B,2707,kneeling 
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490655781661,3,1,director,B,7318,one foot to the left
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490655816979,3,1,matcher,B,7372,does it kind of look like a mouse?
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490655840686,3,1,director,B,452,yes
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490655857332,4,1,director,A,5787,standing on one foot
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490655864013,4,1,director,A,4719,other foot up in the air
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490655879734,4,1,director,A,1857,wait 
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490655904366,4,1,director,A,6861,its not the yoga position one
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490655918690,4,1,director,A,12975,but the one that looks like as if he was almost walking
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490655927246,4,1,matcher,A,10851,head facing to the right?
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490655945705,4,1,director,A,2471,yes
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490655963897,5,1,director,C,4329,flying angel
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490655970202,5,1,director,C,3299,or swiming 
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490655992134,5,1,matcher,C,4410,kinda cactusy?
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490656002677,5,1,director,C,653,yeah
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490656023345,6,1,director,L,9293,praying 
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490656041424,6,1,director,L,13312,in the center head in the top part of the picture
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490656055077,6,1,director,L,11731,looks like almost as if he was holding a book
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490656067939,6,1,director,L,5320,figure is in the center
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490656077594,6,1,matcher,L,11687,facing to the right?
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490656081771,6,1,director,L,444,yes
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490656103989,6,1,matcher,L,12279,kneeling completely not just weirdly squatting?
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490656116105,6,1,director,L,755,nope
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490656134095,6,1,director,L,17506,it is the weirdly squatting one
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490656185941,7,1,director,G,1345,hold on
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490656188484,7,1,director,G,1688,hard one
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490656250061,7,1,director,G,39042,the 2 little triangles that looks like his arms are both on the right side
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490656259667,7,1,director,G,7615,the head is kind a leaning to the left 
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490656301658,8,1,director,H,3646,are you there?
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490656305829,8,1,matcher,H,455,yup
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490656330739,8,1,director,H,17418,this one is in the middle
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490656351584,8,1,director,H,9593,head in the top center 
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490656358328,8,1,director,H,3998,body in the center 
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490656376161,8,1,director,H,16031,and looks like as if it was sitting on his legs 
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490656385465,8,1,director,H,8804,facing right 
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490656398166,8,1,director,H,12053,legs that he is sitting on are also pointing to the right 
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490656403033,8,1,director,H,4313,very simple image
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490656410380,8,1,director,H,4372,arms are not showing 
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490656459258,9,1,director,D,14009,this one looks like a priest carrying a plate
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490656464743,9,1,director,D,4924,standing 
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490656472364,9,1,director,D,4646,facing to the left
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490656481052,10,1,director,K,3785,facing to the left
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490656489985,10,1,director,K,3226,facing to the right 
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490656500227,10,1,director,K,2925,RIGHT
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490656512716,10,1,director,K,6000,looks like a female 
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490656528752,10,1,director,K,13239,holding something, kneeling, 
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490656542003,10,1,director,K,10765,feet facing to the left
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490656578169,11,1,director,I,15114,yoga position
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490656584900,11,1,director,I,6104,standing on one foot
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490656595484,12,1,director,E,2228,bunny head
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490656614337,13,2,director,E,6941,same again.~~~~~~ bunny head
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490656636154,14,2,director,A,9010,its the guy walking again 
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490656674672,15,2,director,H,31364,its the weirdly squirting one 
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490656695424,16,2,matcher,J,6846,oh the weird box dude oops
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490656705269,16,2,director,J,582,yes
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490656706350,16,2,director,J,523,lol
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490656720341,16,2,director,J,13004,this one is the flat (left) sided dude
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490656740835,17,2,director,L,10910,this one is the one reading the book
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490656748060,17,2,director,L,4702,but kind a sitting
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490656794946,17,2,matcher,L,5037,was that the mouse one>
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490656801350,17,2,director,L,880,no
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490656832275,17,2,director,L,17626,triangle arm / book facing to the right 
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490656843462,17,2,director,L,10637,legs kind a going to the left 
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490656861184,17,2,director,L,16425,looks like as if she is sitting on banch in a park
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490656863307,17,2,matcher,L,7939,invisible chair one?
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490656864259,17,2,director,L,2428,and reading 
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490656874750,18,2,director,C,4133,angel / swimmer
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490656883274,19,2,director,I,715,yoga
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490656916845,20,2,director,K,23933,lady kneeling holding a plate / facing to the right
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490656974084,21,2,director,G,23426,2 triangle arms on the right 
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490656989038,21,2,director,G,14167,and big balky part at the button 
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490656996682,21,2,director,G,6887,head leaning to the left
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657013664,22,2,matcher,F,5564,lets call that backwards C haha
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657021435,22,2,director,F,6921,guy leaning against the right 
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657031622,22,2,director,F,9598,but facing to the left
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657043611,23,2,director,D,11572,standing priest
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657048757,23,2,director,D,2962,facing left
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657056631,24,2,director,B,758,mouse
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657067472,25,3,director,A,2466,walking dude
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657081976,26,3,director,H,4815,center dude
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657102003,26,3,matcher,H,5548,limbless block?
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657133139,26,3,director,H,461,yes
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657141244,26,3,director,H,6526,sorry panda was going off
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657151537,27,3,matcher,G,4618,no worries, know how that goes
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657156536,27,3,director,G,572,lol
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657181977,27,3,director,G,21440,this one is the 2 triangles on the right ( bulky at the button)
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657201725,28,3,director,I,948,yoga
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657249116,29,3,director,F,4701,sitting on the floor dude
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657261120,29,3,director,F,10212,back leaning against the right 
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657263563,29,3,director,F,620,side
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657279227,30,3,director,D,6636,priest holding bible
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657293234,31,3,director,K,4802,lady holding plate
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657302456,32,3,director,C,1385,angel
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657315079,33,3,director,E,1374,bunny
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657327353,34,3,director,L,3849,sitting in the air
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657335833,35,3,director,B,990,mouse
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657348994,36,3,director,J,4813,flat side dude
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657360147,37,4,director,B,1069,mouse
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657370696,38,4,director,H,2477,armless
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657385654,39,4,director,F,6930,sitting on the floor dude
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657394908,40,4,director,C,1816,angel
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657405393,41,4,director,A,2785,walking due
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657407617,41,4,director,A,1133,dude
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657418810,42,4,director,K,5741,lady kneeling with plate
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657430441,43,4,director,J,2284,flat side
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657438509,44,4,director,I,980,yoga
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657460175,45,4,director,G,13932,big bulky part on the button 2 triangles on the right
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657472399,46,4,director,E,3057,bunny
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657483520,47,4,director,L,2691,sitting in the air
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657494324,48,4,director,D,1331,priest
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657502228,49,5,director,I,710,yoga
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657510613,50,5,director,C,1042,angel
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657522962,51,5,director,K,4347,lady with plate
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657531938,52,5,director,H,1532,armless
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657555251,53,5,director,F,15750,leaning against left side / on the floor
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657566288,54,5,director,E,1206,bunny
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657579145,55,5,director,G,4289,bulky at the buttom
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657589230,56,5,director,D,2203,priest
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657609817,57,5,director,L,12983,sitting in the air ( I will just call her "AIR)
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657629855,58,5,director,J,10021,FLAT SIDED ( wILL CALL HER FLAT)
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657642437,59,5,director,A,1735,walking
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657652372,60,5,director,B,1138,mouse
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657660064,61,6,director,I,787,yoga
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657668376,62,6,director,C,921,angel
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657676027,63,6,director,L,559,air
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657689286,64,6,director,H,1443,armless
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657701368,65,6,director,G,2284,bulky
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657712094,66,6,director,A,2079,walking
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657719838,67,6,director,J,1000,flat
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657728532,68,6,director,B,829,mouse
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657738866,69,6,director,K,3394,lady with plate
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657763739,70,6,director,F,14737,leaning against right side, sitting on the floor
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657774267,71,6,director,D,1367,priest
+8907-51d47cee-dd24-43f6-b1eb-e0bb53b5374a,1490657782730,72,6,director,E,1658,bunny

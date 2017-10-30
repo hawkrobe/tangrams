@@ -1,0 +1,29 @@
+gameid,time,roundNum,occurrenceNum,sender,intendedName,timeElapsed,contents
+4231-e9cbd4cc-9e05-41fe-8720-41faf772f845,1490652275899,1,1,matcher,B,749,Hi!
+4231-e9cbd4cc-9e05-41fe-8720-41faf772f845,1490652283445,1,1,director,B,814,hi
+4231-e9cbd4cc-9e05-41fe-8720-41faf772f845,1490652288643,1,1,matcher,B,998,Let's go
+4231-e9cbd4cc-9e05-41fe-8720-41faf772f845,1490652291964,1,1,director,B,671,ok
+4231-e9cbd4cc-9e05-41fe-8720-41faf772f845,1490652332573,1,1,director,B,31256,there is a triangle right under the square
+4231-e9cbd4cc-9e05-41fe-8720-41faf772f845,1490652358654,1,1,matcher,B,6622,okay I have several that look kind of like that.~~~~~~
+4231-e9cbd4cc-9e05-41fe-8720-41faf772f845,1490652388951,1,1,director,B,22863,the triangle sticks out and is only attached to the rest at one corner
+4231-e9cbd4cc-9e05-41fe-8720-41faf772f845,1490652421680,1,1,matcher,B,1874,okay think i have it
+4231-e9cbd4cc-9e05-41fe-8720-41faf772f845,1490652440526,2,1,matcher,G,1059,this one?
+4231-e9cbd4cc-9e05-41fe-8720-41faf772f845,1490652452435,2,1,director,G,4221,now we're on round 2
+4231-e9cbd4cc-9e05-41fe-8720-41faf772f845,1490652489851,2,1,director,G,32753,another one with a triangle only connected at one corner, but it's down at the bottom
+4231-e9cbd4cc-9e05-41fe-8720-41faf772f845,1490652515680,2,1,matcher,G,7540,is it the very bottom of the shape or just at the bottom?
+4231-e9cbd4cc-9e05-41fe-8720-41faf772f845,1490652528484,2,1,matcher,G,5788,ie. is the whole shape resting on the triangle?
+4231-e9cbd4cc-9e05-41fe-8720-41faf772f845,1490652532741,2,1,director,G,527,no
+4231-e9cbd4cc-9e05-41fe-8720-41faf772f845,1490652552471,2,1,director,G,13555,there is a large part, and the triangle sticks out and is separate
+4231-e9cbd4cc-9e05-41fe-8720-41faf772f845,1490652582365,3,1,matcher,K,1161,new one
+4231-e9cbd4cc-9e05-41fe-8720-41faf772f845,1490652609802,3,1,director,K,14222,this one looks really similar to another one so it's difficult
+4231-e9cbd4cc-9e05-41fe-8720-41faf772f845,1490652629342,3,1,director,K,13575,a square is on top, and then under it is most of another square
+4231-e9cbd4cc-9e05-41fe-8720-41faf772f845,1490652648962,3,1,director,K,17329,there is a point that's turned upward close to the bottom
+4231-e9cbd4cc-9e05-41fe-8720-41faf772f845,1490652685588,3,1,matcher,K,9596,okay, and whats the difference between this one and the one it's similar to?
+4231-e9cbd4cc-9e05-41fe-8720-41faf772f845,1490652707322,3,1,director,K,17239,the other one doesn't have a part pointing upward
+4231-e9cbd4cc-9e05-41fe-8720-41faf772f845,1490652717993,3,1,director,K,8297,it just slants down to the bottom
+4231-e9cbd4cc-9e05-41fe-8720-41faf772f845,1490652740403,3,1,director,K,15471,the right one has a point that goes up from the bottom
+4231-e9cbd4cc-9e05-41fe-8720-41faf772f845,1490652752417,4,1,matcher,J,3578,nice we got it! great job
+4231-e9cbd4cc-9e05-41fe-8720-41faf772f845,1490652767439,4,1,director,J,8998,most of it is one large piece
+4231-e9cbd4cc-9e05-41fe-8720-41faf772f845,1490652781555,4,1,director,J,13192,it's like a square corner on one side and a point on the other side
+4231-e9cbd4cc-9e05-41fe-8720-41faf772f845,1490652796770,4,1,director,J,7359,a point at the top and the bottom
+4231-e9cbd4cc-9e05-41fe-8720-41faf772f845,1490652810409,4,1,director,J,10896,and a square at the top

@@ -1,0 +1,4 @@
+gameid,time,roundNum,occurrenceNum,intendedObj,clickedObj,objBox,correct
+5082-eb889fd5-e8f7-4353-89d6-a55111de1683,1490654885068,1,1,E,E,7,1
+5082-eb889fd5-e8f7-4353-89d6-a55111de1683,1490654947952,2,1,L,K,9,0
+5082-eb889fd5-e8f7-4353-89d6-a55111de1683,1490655012880,3,1,C,C,4,1

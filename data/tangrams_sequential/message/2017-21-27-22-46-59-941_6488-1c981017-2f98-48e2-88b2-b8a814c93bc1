@@ -1,0 +1,112 @@
+gameid,time,roundNum,occurrenceNum,sender,intendedName,timeElapsed,contents
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490654833220,1,1,matcher,D,2550,Hello
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490654861467,1,1,director,D,1197,hello!
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490654884882,1,1,matcher,D,15702,Alright haha here we go. Go ahead
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490654895628,1,1,director,D,27833,the object looks like it is holding a book, or a priest at a pulpit.
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490654920121,1,1,matcher,D,9329,which way does it look like it's facing
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490654925729,1,1,director,D,1061,left
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490654931050,1,1,matcher,D,3208,pretty sure i got it
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490654974398,1,1,matcher,D,34602,little triangle for the feet, skinny neck. rectangle body?
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490654981120,1,1,director,D,389,yes
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490655016318,2,1,director,F,16230,facing left this object looks like it is sitting down with knees bent
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490655032244,2,1,matcher,F,4047,sitting on its behind?
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490655037276,2,1,director,F,1505,yes
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490655039796,2,1,matcher,F,2856,head down a little bit?
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490655042481,2,1,director,F,521,yup
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490655098043,3,1,director,A,45058,also facing left, this object has one leg up in the air and also looks like it has its arms turned upward towards the sky and bent down a bit
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490655125804,3,1,matcher,A,5968,is it heavily leaning left?
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490655142022,3,1,director,A,11179,no head is to the right of the body
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490655189993,4,1,director,K,34174,facing right this object looks like it is kneeling down
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490655204737,4,1,matcher,K,7716,does it have a triangle coming out its back?
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490655205827,4,1,director,K,9723,the bottom of it is larger than the other object that looks similar
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490655208216,4,1,director,K,576,yes
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490655226875,5,1,director,E,6393,facing right this one looks like a bunny rabbit
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490655265324,6,1,director,H,23030,this one looks like it could be facing forward
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490655278470,6,1,director,H,8777,head is attached more than the other objects are
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490655320938,7,1,director,L,26146,facing right this looks like the object that was kneeling down except it isn't all the way to the floor
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490655335721,8,1,matcher,J,15252,Your doing great
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490655341288,8,1,director,J,1597,thanks :D
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490655362804,8,1,director,J,20236,this object looks like it is also facing forward, has a triangle at the top right and bottom right poking out
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490655370763,8,1,director,J,7730,and is completely straight on the left side of the body
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490655410707,9,1,director,C,15221,this object looks like it is flying, or like a ghost. doesnt look like it has legs
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490655470481,10,1,director,B,40320,this object looks almost like a rat, doesn't look as human as the rest. Large trianglular shape poking out on the left side~~~
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490655490429,10,1,director,B,18203,it also has a clear triangle on the right that is almost broken off
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490655519808,10,1,matcher,B,31755,does it look like a girl with ponytail sitting looking up facing left?
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490655533456,10,1,director,B,305,yea
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490655584288,11,1,director,G,31793,object is facing left, it also doesn't look human. even more so than the last~~~ Head area is to the left with two triangles behind its body/head
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490655623990,11,1,matcher,G,1173,hmm
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490655652910,12,1,director,I,8530,facing left this object looks like it is flying with one leg in the air
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490655674792,13,2,director,C,6728,this one looks like the ghost with no legs
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490655695718,14,2,director,F,10978,facing left this is the object sitting down with knees bent
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490655739765,15,2,director,A,22402,facing left, one leg in the air, with hands up towards the sky and bent and head to the right of the body
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490655771606,16,2,director,D,6484,this is the one that looks like the priest that is facing left
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490655792968,17,2,director,I,9222,facing left this one looks like it is flying with one leg in the air
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490655812527,18,2,director,G,7368,this is the weird one that doesn'
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490655815993,18,2,director,G,2358,t look human
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490655822807,18,2,director,G,5135,two triangles to the right of its head
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490655841723,19,2,director,E,4032,bunny rabbit!
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490655850861,20,2,matcher,L,1462,ok good
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490655865525,20,2,director,L,13175,facing right the object looks like it is almost kneeling down
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490655877628,20,2,matcher,L,4654,no triangle coming from back?
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490655879797,20,2,director,L,389,no
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490655904915,21,2,director,J,16118,facing forward, left of body is completely straight
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490655918789,22,2,matcher,K,768,oops
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490655928916,22,2,director,K,9814,facing right this object looks like it is kneeling, with triangle in its back
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490655960396,23,2,director,H,15062,looks like it is facing forward, head is attached more than the others, triangle on bottom right side
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490655986012,24,2,director,B,12769,the girl with the pony tail, or the rat
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490656007845,25,3,director,H,11125,again facing forward, head attached more than the rest, triangle bottom right
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490656019895,26,3,director,E,1644,bunny rabbit
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490656044882,27,3,director,J,16096,facing forward, left of body is completely straight, two triangles on the right side of body
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490656074210,28,3,director,G,14523,the weird looking object, head to the left, two triangles to the right of the head/body
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490656097811,29,3,director,I,6797,facing left, looks like it is flying, leg in the air
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490656113715,30,3,director,C,1824,ghost with no legs
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490656127395,31,3,director,B,4646,girl with pony tail
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490656154882,32,3,director,A,17273,facing left, one leg in the air with arms towards the sky and bent down
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490656185367,32,3,director,A,11880,head is on the right side of body
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490656197401,33,3,director,D,2144,priest facing left
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490656214414,34,3,director,L,7374,facing right, almost bent down, no triangle on left side of body
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490656240754,35,3,matcher,F,1207,my bad
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490656244746,35,3,director,F,1889,no worries
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490656253084,35,3,director,F,7363,facing left, sitting down, knees bent
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490656274067,36,3,director,K,9878,facing right, kneeling down with triangle in its back
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490656292804,37,4,director,F,5399,facing left, sitting down, knees bent
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490656311898,38,4,director,J,9726,facing forward, left side of body is straight, two triangles on right side
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490656329699,39,4,director,D,2496,priest facing left
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490656347175,40,4,director,I,8682,facing left, looks like it is flying, one leg in air
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490656368015,41,4,director,G,12307,weird object, head on left side, two triangles on the right
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490656394195,42,4,director,L,10664,facing right, almost kneeling, no triangle in its back
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490656420784,43,4,director,C,4854,ghost with no legs
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490656444252,44,4,director,A,15934,facing left, one leg in the air, arms raised towards the sky and bent
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490656452410,44,4,director,A,3414,head is on the right side
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490656461048,45,4,director,E,1976,bunny rabbit
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490656471169,46,4,director,B,2848,girl with pony tail
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490656487115,47,4,director,H,9297,facing forward, head attached more than the others, triangle on bottom right
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490656509235,48,4,director,K,7558,facing right, kneeling down, triangle in back
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490656529569,49,5,director,H,9496,facing forward, head attached more than the rest, triangle on bottom right
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490656550824,50,5,director,G,10972,weird object head on left side, two triangles on right side
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490656563005,51,5,director,D,2515,priest facing left
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490656578372,52,5,director,I,5682,facing left, leg in air, looks like it is flying
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490656592386,53,5,director,F,6128,facing left, sitting down, knees bent
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490656612478,54,5,director,J,9709,facing forward, left side of body is straight
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490656617846,54,5,director,J,4445,two triangles on right side of body
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490656627933,55,5,director,C,2442,ghost
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490656648958,56,5,director,L,11239,facing right, almost kneeling, no triangle in its back
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490656663331,57,5,director,B,3577,girl with pony tail
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490656681143,58,5,director,E,1738,bunny rabbit
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490656698725,59,5,director,K,8686,facing right, kneeling down, triangle in its back
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490656722379,60,5,director,A,11510,facing left, leg in air, arms raised up and bent, head is on right side
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490656742445,61,6,director,L,7783,facing right, almost kneeling, no triangle in its back
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490656758280,62,6,director,A,6615,facing left, one leg in the air, arms raised up and bent
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490656769535,62,6,director,A,5207,head to the right of body
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490656785518,63,6,director,H,9931,facing forward, head attached more than the rest, triangle on bottom right
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490656795874,64,6,director,E,1335,bunny rabbit
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490656814180,65,6,director,K,8557,facing right, kneeling all the way, triangle in back
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490656823046,66,6,director,D,1128,priest
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490656841859,67,6,director,G,11860,weird objectm head to the right, two triangles to the right of the body
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490656871673,68,6,director,J,13311,facing forward, left side of body is straight, right side has two triangles
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490656889777,69,6,matcher,F,6247,nearly there :)
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490656890893,69,6,director,F,7423,facing left, sitting down, knees bent
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490656892822,69,6,director,F,1063,yea :D
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490656906345,70,6,director,B,2217,girl with pony tail
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490656920322,71,6,director,I,6015,facing left, leg in air, looks like it is flying
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,1490656930348,72,6,director,C,1046,ghost

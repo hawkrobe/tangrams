@@ -1,0 +1,90 @@
+gameid,time,roundNum,occurrenceNum,sender,intendedName,timeElapsed,contents
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490655955522,1,1,director,C,8327,Looks like a man with his arms out wide
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490655976158,2,1,director,H,8692,No arms, one little foot stub to the right
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490656017036,3,1,director,J,12041,Body is mostly a box, but with a chunk taken out of the right side
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490656079818,4,1,director,L,13719,body looks like an S with sharp corners
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490656122867,5,1,director,D,24945,Body is facing left, with an arm sticking out
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490656133421,5,1,director,D,7400,Arm is like a square with a spike sticking out
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490656152630,5,1,matcher,D,5380,sitting or standing?
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490656158229,5,1,director,D,2927,I'd say standing
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490656198777,6,1,director,B,38572,Top of the the body is a square, with a triangle dangling off the right hand side
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490656221920,6,1,director,B,20216,Below the square to the left is a spike that makes it look almost like a mouse, if the square was an ear
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490656296442,7,1,director,G,10032,It's the same as the last one, but looks more abstract
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490656310851,7,1,director,G,7872,The bottom right has a dangling triangle
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490656352029,8,1,director,A,24927,Looks like theres a square on the top right of the figure, and it has one foot on the ground facing left, one in the air also facing left
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490656400453,9,1,director,F,7718,Sad man laying down facing left
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490656402078,9,1,director,F,1144,Legs bent
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490656419900,10,1,director,E,7560,Sad bunny thing looking right
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490656450340,11,1,director,K,12905,There's a box on top of a box. The body is really jagged
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490656463381,11,1,director,K,11302,But there's two boxes the same size stacked on their corners
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490656523006,12,1,director,I,20897,The only one that has a shape standing on 1 leg, but not the one that we did earleir
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490656525685,12,1,director,I,1359,earlier*
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490656554296,13,2,director,J,10073,The perfect box with a chunk taken out
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490656586410,13,2,matcher,J,11445,is it facing/pointing right?
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490656589281,13,2,director,J,455,Yes
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490656603017,14,2,director,A,7127,The dancing one with only one foot on the ground
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490656618089,14,2,director,A,2208,Other foot in the air
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490656638114,15,2,director,C,6920,Man with arms held out wide to each side
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490656656589,16,2,director,L,4411,Pointed S shaped dude
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490656678311,17,2,director,B,6809,The mouse looking left with the square ear
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490656709539,18,2,director,H,9104,The one with no arms facing right
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490656721516,18,2,director,H,6607,Weird leg pointing right
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490656739893,19,2,director,D,5810,Facing left with a pointed arm
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490656746852,19,2,director,D,5888,Box arm that looks like a hanging sleeve
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490656768086,20,2,director,E,3760,Sad bunny looking right
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490656784350,21,2,director,G,6431,Weird abstract mouse looking left
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490656797382,22,2,director,K,4112,Box stacked on a box
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490656800182,22,2,director,K,2231,Ragged body
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490656827212,23,2,director,I,9499,One leg on the ground, kicking to the right
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490656839161,23,2,director,I,6207,left is a box on a triangle on a triangle
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490656850849,24,2,director,F,2215,Sad man looking left
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490656866784,25,3,director,I,5776,The kicking left that we did two choice ago
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490656870120,25,3,director,I,1676,kicking right*
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490656888757,26,3,director,B,5081,Mouse with square ear
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490656900125,27,3,director,G,1624,abstract mouse
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490656912486,28,3,director,H,2808,No arms, facing right
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490656926165,29,3,director,K,4122,squares stacked
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490656927587,29,3,director,K,1143,ragged body
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490656938068,30,3,director,F,1597,sad man 
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490656951757,31,3,director,A,4232,one leg down, one leg up on the left
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490656971310,32,3,director,D,5136,Facing left, arm with a square sleeve
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490656986074,33,3,director,C,2046,Arms wide out
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490657002329,34,3,director,L,2208,S shaped body
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490657022226,35,3,director,J,5857,Box body facing right missing a chunk
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490657043955,36,3,director,E,4879,Sad bunny facing right
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490657060915,37,4,director,F,3960,Sad man looking left
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490657077587,38,4,director,B,2175,Mouse looking left
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490657087371,39,4,director,G,1840,Abstract mouse
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490657101323,40,4,director,D,1930,Box sleeve man
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490657112781,41,4,director,L,1495,S body shape
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490657126991,42,4,director,I,6897,One leg down, other one kicked up to the right
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490657140804,43,4,director,H,2071,No arms man
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490657153861,44,4,director,A,3327,One leg down, one to the left
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490657167509,45,4,director,E,2016,Sad bunny
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490657177099,46,4,director,J,2663,Square body missing chunk
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490657187958,47,4,director,C,1728,Arms wide out
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490657199946,48,4,director,K,4888,square on top of square
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490657213561,49,5,director,E,1606,Sad bunny
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490657229587,50,5,director,J,2327,chunk missing square
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490657243396,51,5,director,F,2615,Sad man
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490657251891,52,5,director,L,911,S shape
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490657263764,53,5,director,C,3289,Wide out arms
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490657272852,54,5,director,G,2431,Abstract bunny
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490657281219,55,5,director,H,845,no arms
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490657295731,56,5,director,K,2417,squares stacked
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490657308115,57,5,director,I,2295,leg kicked out to right
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490657318596,58,5,director,B,553,Mouse
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490657329980,59,5,director,D,1494,Square sleeve
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490657342647,60,5,director,A,2906,Leg kicked out to left
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490657352845,61,6,director,G,1616,abstract bunny
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490657363470,62,6,director,E,1058,sad bunny
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490657374630,63,6,director,C,1304,arms wide out
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490657383446,64,6,director,J,1503,chunked out box
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490657392767,65,6,director,K,1967,boxes stacked
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490657403551,66,6,director,A,2192,leg out to the left
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490657418504,67,6,director,H,670,no arms
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490657428854,68,6,director,D,1069,box sleeve
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490657445234,69,6,director,I,3401,leg kicked out right
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490657454049,70,6,director,L,1397,S shaped body
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490657464177,71,6,director,F,333,sad man
+9214-a3ed3b49-fe0c-4c41-b40f-d1d6e7fd0b5d,1490657471106,72,6,director,B,550,mouse

@@ -1,0 +1,99 @@
+gameid,time,roundNum,occurrenceNum,sender,intendedName,timeElapsed,contents
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490649445970,1,1,director,J,503,hi
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490649449563,1,1,matcher,J,859,hi!
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490649472670,1,1,director,J,24553,it looks like a partial box with a diamond head
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490649486071,1,1,director,J,12637,the right part of the box is missing
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490649543866,2,1,director,L,25479,this one looks like a man with his knees bent to the right and holding his hands out to the right
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490649582483,2,1,matcher,L,12276,does he have a mini triangle protruding from his back?
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490649588470,2,1,director,L,1213,no
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490649606548,2,1,matcher,L,5663,are his hands together or apart?
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490649610657,2,1,director,L,1389,together
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490649644385,3,1,director,D,19679,this one the man is facing to the left and holding a book
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490649657047,3,1,director,D,10115,it looks like a priest in a robe 
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490649694463,4,1,director,I,23319,the man is holding his arms out to the left and he is balancing on 1 leg
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490649712899,4,1,director,I,12526,his other leg is going right
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490649752116,5,1,director,B,21832,this one there is the diamond head and then a triangle hanging off of it
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490649761984,5,1,director,B,7683,could look like someone sitting on their knees?
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490649786319,5,1,matcher,B,14399,triangle coming out of the back as well?
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490649790275,5,1,director,B,728,yes
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490649816433,6,1,director,H,14825,this one is sort of bean shaped with a diamond head
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490649819556,6,1,director,H,2027,no arms
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490649852585,7,1,director,K,19429,big triangle coming out of the right side and a small one out of the left
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490649866278,7,1,director,K,7107,could look like someone on their knees
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490649899157,8,1,director,F,13783,this one is like a person sitting down with his legs out facing left
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490649933024,9,1,director,C,20213,this one has both arms out to the sides, like his arms are up praying
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490649959700,9,1,matcher,C,6640,also looks like he is sitting on his knees?
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490649981630,9,1,director,C,10859,looks likr there are no legs
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490649998510,9,1,director,C,10191,he has an arm to the right and one to the left
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490650017718,10,1,director,E,7213,this one looks like a bunny 
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490650043170,10,1,director,E,6723,2 triangles are coming out of the head
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490650070623,11,1,director,A,10978,this one looks like he is about to take a big step
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490650083786,11,1,matcher,A,5272,arms facing to left?
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490650091100,11,1,director,A,14014,and his head is tilted toward the far right corner
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490650106095,11,1,director,A,506,yes
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490650149638,12,1,director,G,25417,this one the head is tilted toward the top left corner, the arms facing right
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490650178886,12,1,director,G,23189,and the body goes toward the bottom left corner with a small triangle in bottom right corner
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490650229949,13,2,director,B,32058,this one looks like someone on their knees again and the triangle hanging off the head
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490650254770,14,2,director,H,5973,this one has the bean body
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490650264907,15,2,director,E,2093,bunny
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490650287802,16,2,director,A,11265,walking with right tilting head
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490650317105,17,2,director,J,8950,box with right bottom portion missing
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490650335920,18,2,director,F,6572,person sitting and facing to the left
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490650356230,19,2,director,D,8200,priest holding out a bible
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490650373012,20,2,director,C,6511,person with their arms up in the air
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490650396135,21,2,director,L,12628,person pending knees and holding both arms out together to the right
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490650434378,22,2,director,K,20708,person sitting on knees with big triangle on right and small one out of the back
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490650490787,23,2,director,I,25765,person facing left with arms out and balancing on 1 leg
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490650500867,23,2,director,I,5481,other leg out to the right
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490650544291,24,2,director,G,28043,person with body bend toward bottom left, arms are held up toward top right
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490650562304,24,2,director,G,7965,small triangle hanging in bottom right
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490650571360,25,3,director,E,870,bunny
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490650591520,26,3,director,A,8748,person taking a step to the left
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490650610921,27,3,director,H,1209,bean
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490650626833,28,3,director,B,6927,triangle hanging off of head
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490650657053,29,3,director,G,7565,small triangle hanging in bottom right corner
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490650669085,30,3,director,D,1626,priest
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490650681710,31,3,director,J,2206,box
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490650704610,32,3,director,K,11904,big triangle to the right and small one to the left
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490650730490,33,3,director,L,10607,bending knees and holding arms out to right
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490650747086,34,3,director,C,3372,arms up in the air
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490650760913,35,3,director,F,4934,sitting down and facing left
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490650775866,36,3,director,I,5197,balancing on one leg
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490650786042,37,4,director,E,1032,bunny
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490650804194,38,4,director,F,2797,sitting down
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490650817744,39,4,director,B,4597,triangle off of head
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490650832990,40,4,director,G,5476,small triangle bottom right
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490650850730,41,4,director,K,7427,big triangle right and small triangle left
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490650864151,42,4,director,C,1615,arms up
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490650874548,43,4,director,A,1677,walking
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490650886710,44,4,director,H,1574,bean
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490650895612,45,4,director,D,1381,priest
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490650908970,46,4,director,L,3735,bent knees
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490650920756,47,4,director,I,3108,balancing on 1 leg
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490650928928,48,4,director,J,852,box
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490650943939,49,5,director,K,6374,big triangle right and small left
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490650954650,50,5,director,F,1823,sitting down
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490650963136,51,5,director,H,751,bean
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490650973866,52,5,director,L,1821,bent knees
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490650982870,53,5,director,J,605,box
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490650997910,54,5,director,G,4956,small triangle bottom right
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490651007874,55,5,director,C,1487,arms in air
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490651016167,56,5,director,D,1129,priest
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490651028936,57,5,director,B,2735,triangle off head
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490651037829,58,5,director,A,1181,walking
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490651047342,59,5,director,I,1407,balancing
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490651054980,60,5,director,E,766,bunny
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490651063454,61,6,director,D,995,priest
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490651072579,62,6,director,L,1869,bent knees
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490651082250,63,6,director,B,2342,triangle off head
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490651090836,64,6,director,J,891,box
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490651099050,65,6,director,A,1284,walking
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490651111979,66,6,director,G,4942,small triangle bottom right
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490651120973,67,6,director,H,1031,bean
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490651132393,68,6,director,I,1556,balancing
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490651146171,69,6,director,K,4523,big triangle right small left
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490651157347,70,6,director,C,1711,arms in air
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490651167387,71,6,director,F,3080,thanks :)
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490651169023,71,6,director,F,940,sitting
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490651175351,71,6,matcher,F,5190,you were great!
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1490651182935,72,6,director,E,1028,bunny

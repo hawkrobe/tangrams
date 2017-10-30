@@ -1,0 +1,86 @@
+gameid,time,roundNum,occurrenceNum,sender,intendedName,timeElapsed,contents
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490383139268,1,1,matcher,D,1015,hello
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490383143602,1,1,director,D,1597,hi
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490383152573,1,1,director,D,8464,standing, hands left
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490383186417,2,1,director,G,6447,sprawled all over
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490383193219,2,1,director,G,3158,arms up and down
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490383225429,3,1,director,H,4412,standing 
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490383227218,3,1,director,H,892,no arms
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490383244820,4,1,director,B,4228,kneeling arms left right
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490383263467,5,1,director,J,4222,standing arm right
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490383280364,6,1,director,L,4240,kneel arms right
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490383299069,7,1,director,A,1321,chicken?
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490383311405,7,1,director,A,4581,leg raised to left
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490383345815,8,1,director,E,19143,lying down to left shapes on top left
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490383374011,9,1,director,I,21158,blancing
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490383391707,10,1,director,F,15134,sitting back right
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490383405943,11,1,director,K,2559,kneel arms right
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490383428317,12,1,director,C,3018,lean left arms wide
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490383454716,13,2,director,J,1206,no arms
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490383467539,14,2,director,G,3817,sprawled arms up down
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490383486509,15,2,director,K,3190,kneel arm right
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490383512862,16,2,director,L,2487,bend arm right
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490383524390,16,2,director,L,2643,bending
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490383546015,17,2,director,B,18989,kneel arms wide
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490383572049,18,2,director,E,5174,sitting back left
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490383588005,19,2,director,H,3462,knee right no arms
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490383613754,20,2,director,C,3615,lean left arms wide
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490383633987,21,2,director,A,4701,leg lifted left
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490383658940,22,2,director,F,3200,back against right
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490383661996,22,2,director,F,1662,sitting down
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490383678821,23,2,director,D,5648,hands to left standing
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490383696957,24,2,director,I,4975,balancing arms left
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490383711153,25,3,director,D,4600,standing hands left
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490383730714,26,3,director,F,2376,siting back right
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490383750903,27,3,director,J,7799,wtanding arm kind of right
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490383752927,27,3,director,J,1382,standing
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490383769480,28,3,director,A,2703,leg left
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490383789107,29,3,director,B,2439,kneel arms wide
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490383806036,30,3,director,G,4168,arms up and down to right
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490383835227,31,3,director,E,4847,back left sitting
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490383851343,32,3,director,L,3790,bending arms right
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490383881327,33,3,director,K,8360,arm right, leg lifted left?
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490383902440,34,3,director,C,4781,arms wide lean left
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490383922751,35,3,director,I,3695,lean left leg right
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490383925749,35,3,director,I,1039,balance
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490383935336,36,3,director,H,960,no arms
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490383948762,37,4,director,A,1614,leg left
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490383960855,38,4,director,D,2856,arms left
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490383983281,39,4,director,B,9592,kneel arms to both sides
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490384000938,40,4,director,K,4375,arm right leg left
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490384017858,41,4,director,E,1515,back left
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490384029440,42,4,director,C,2743,lean left arms wide
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490384049965,43,4,director,J,4617,arm right straight left
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490384071517,43,4,director,J,1560,arm right
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490384084420,44,4,director,L,4152,bend arm right
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490384101190,44,4,director,L,1396,bending
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490384119631,45,4,director,F,2109,back right
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490384132543,46,4,director,I,1775,balance
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490384144736,47,4,director,H,10567,no arms
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490384161248,48,4,director,G,4228,arms up down 
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490384186651,49,5,director,F,2728,back right
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490384200707,50,5,director,A,1237,leg left
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490384216514,51,5,director,E,1381,back left
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490384229217,52,5,director,L,3168,arm right bend
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490384244732,53,5,director,C,3096,arms wide
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490384257669,54,5,director,K,4031,kneel right
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490384273399,55,5,director,I,1055,balance
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490384285105,56,5,director,H,871,no arms
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490384310432,57,5,director,J,2465,arm right
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490384331207,58,5,director,G,5903,arms up and down to right
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490384346608,59,5,director,D,1948,arms left
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490384357168,60,5,director,B,1475,kneeling
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490384360896,60,5,director,B,3232,arms RL
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490384376801,61,6,director,B,4167,kneel arms RL
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490384392339,62,6,director,C,2103,arms wide RL
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490384404930,63,6,director,H,1207,no arms
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490384413794,64,6,director,L,1033,bending
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490384415956,64,6,director,L,1365,arm R
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490384431094,65,6,director,K,2604,kneel arm right
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490384442781,66,6,director,A,1912,leg L
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490384457621,67,6,director,F,1439,back R
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490384470471,68,6,director,J,1256,arm R
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490384484750,69,6,director,G,4992,arms R up and down
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490384501375,70,6,director,D,3726,arms left
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490384511368,71,6,director,I,1870,balance
+4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1490384523079,72,6,director,E,1647,back L

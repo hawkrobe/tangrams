@@ -1,6 +1,10 @@
 ---
 title: "tangramsReference"
-output: html_document
+output: 
+  html_document:
+    toc: true
+    toc_depth: 2
+
 ---
 
 # Import data
@@ -16,65 +20,281 @@ library(stringr)
 library(knitr)
 library(NLP)
 library(readr)
-setwd("~/Repos/reference_games/analysis")
+library(langcog)
+library(xtable)
+library(ggthemes)
+library(entropy)
 ```
 
 We've already done most of the work using nltk in the ipython notebook, so here we just read in the csv files we created there, do a bit of post-processing, and make plots.
 
-# Import & get big-picture 
+# Exp. 1: unconstrained
+
+## Import and pre-process data
 
 ```{r}
-tangramMsgs = read_csv("../../analysis/tangrams/handTagged.csv") %>%
-  rename(msgTime = time, 
-         role = sender)
+tangramMsgs = read_csv("../data/tangrams_unconstrained/message/rawUnconstrainedMessages.csv") %>%
+  rename(msgTime = time, role = sender)
 
-tangramSubjInfo = read.csv("../../data/tangrams_unconstrained/turk/tangrams-subject_information.csv") %>%
+tangramSubjInfo = read.csv("../data/tangrams_unconstrained/turk/tangrams-subject_information.csv") %>%
   rename(gameid = gameID) %>%
   select(-workerid, -DirectorBoards, -initialMatcherBoards)
 
 rawTangramCombined <- tangramMsgs %>% left_join(tangramSubjInfo, by = c('gameid', 'role'))
+```
 
+Set exclusion criteria
+
+```{r}
 nonNativeSpeakerIDs <- unique((tangramSubjInfo %>% filter(nativeEnglish != "yes"))$gameid)
 incompleteIDs <- unique((rawTangramCombined %>% group_by(gameid) %>% 
                            filter(length(unique(roundNum)) != 6))$gameid)
+badGames <- union(c('0574-6', incompleteIDs), nonNativeSpeakerIDs)
+print(paste0('excluding ', length(badGames), ' of ', length(unique(rawTangramCombined$gameid)), ' games that were either incomplete or had non-native english speakers'))
+```
 
-# Exclusion criteria
-badGames <- union(incompleteIDs, union(nonNativeSpeakerIDs, confusedIDs))
+Count numbers of words, examine size of dataset
 
-tangramCombined <- tangramMsgs %>%
-  left_join(tangramSubjInfo, by = c("gameid", "role")) %>%
+```{r}
+tangramCombined <- rawTangramCombined %>%
   filter(!(gameid %in% badGames)) %>%
-  mutate(numRawWords = word_count(contents, digit.remove = F)) %>%
+  mutate(numRawWords = str_count(contents, "\\S+")) %>%
   filter(!is.na(numRawWords)) # filter out pure punctuation messages
   #filter(numRawWords < mean(numRawWords) + 3*sd(numRawWords)) # Get rid of outliers
 
+write_csv(tangramCombined, '../data/tangramsUnconstrained.csv')
+
 numGames <- length(unique(tangramCombined$gameid))
+numUtterances <- length(tangramCombined$contents)
+print(paste0(numUtterances, ' utterances in ', numGames, ' games'))
 ```
 
-# Replication: words over time
+## What are the unigrams/bigrams that drop the most in frequency?
 
 ```{r}
-# TODO: bootstrap CIs
-pdf("tangramsFigs/wordOverTime.pdf")
-ggplot(tangramCombined %>% 
-         filter(role == "director") %>%
-         group_by(gameid, roundNum) %>% 
-         summarize(individualM = sum(numRawWords)/12) %>% 
-         group_by(roundNum) %>% 
-         summarize(m = mean(individualM), 
-                   se = sd(individualM)/sqrt(length(individualM))), 
-       aes(x = roundNum, y = m)) +
-  geom_line() +
-  geom_errorbar(aes(ymax = m + se, ymin = m - se), width = .1) +
-  ylab("mean number words (by director) per figure") +
-  xlab("trials") +
-  ylim(0,20) +
-  xlim(0, 7) +
-  theme_bw() 
-dev.off()
+unigrams <- read_csv("wordCounts.csv", col_names = T) %>%
+  group_by(word, POS, roundNum) %>%
+  summarize(count = sum(count)) %>%
+  rowwise() %>%
+  mutate(roundNum = paste0("round", roundNum, collapse = "")) %>%
+  spread(roundNum, count) %>%
+  filter(round1 > 10) %>%
+  mutate(diffSize = round1 - round6,
+         diffPct = (round1 - round6)/round1) %>%
+  arrange(desc(diffSize)) %>%
+  select(word) %>%
+  filter(word != ',') %>%
+  filter(word != '#') %>%
+  head(n = 10)
+
+bigrams <- read_csv("bigramCounts.csv", col_names = T) %>%
+  group_by(word, roundNum) %>%
+  summarize(count = sum(count)) %>%
+  rowwise() %>%
+  mutate(roundNum = paste0("round", roundNum, collapse = "")) %>%
+  spread(roundNum, count) %>%
+  filter(round1 > 10) %>%
+  mutate(diffSize = round1 - round6,
+         diffPct = (round1 - round6)/round1) %>%
+  arrange(desc(diffSize)) %>%
+  select(word) %>%
+  rename(bigrams = word) %>%
+  head(n = 10)
+
+topWords <- t(cbind(unigrams, bigrams))
+colnames(topWords) <- paste0(paste('#', seq(10), sep = ''))
+rownames(topWords) <- c('unigrams', 'bigrams')
+topWords.toPrint = xtable(topWords, label = 'tab:words',
+                          caption = 'Top 10 unigrams and bigrams with the highest reduction')
+align(topWords.toPrint) <- paste0(c("|r||", rep('l|', 10)), collapse = "")
+print(topWords.toPrint, floating.environment = "table*", comment=F, table.placement = 't')
 ```
 
-# Replication: amount of turn-taking
+## How do various properties reduce over time?
+
+Reduction phenomena. From left: (1) mean message length in words per tangram, (2) mean number of listener messages, (3) proportion of utterances containing adjectival clauses, (4) proportion of utterances containing subordinate clauses. Error bars are bootstrapped 95\\% CIs.
+
+```{r, cache = T}
+posTags <- read_csv('posTagged.csv')
+
+lengthReduction = tangramCombined %>%
+   filter(role == "director") %>%
+   group_by(gameid, roundNum) %>%
+   summarize(individualM = sum(numRawWords)/12) %>%
+   group_by(roundNum) %>%
+   multi_boot_standard("individualM") %>%
+   mutate(measure = '# words per tangram')
+
+clauseReduction = posTags %>%
+  group_by(roundNum) %>%
+  mutate(clauses=as.logical(clauses)) %>%
+  multi_boot_standard('clauses') %>%
+  mutate(measure = '% subordinate clauses')
+
+aclReduction = posTags %>%
+  group_by(roundNum) %>%
+  mutate(acl=as.logical(acl)) %>%
+  multi_boot_standard('acl') %>%
+  mutate(measure = '% adjectival clauses')
+
+listenerMsgs <- tangramCombined %>%
+  group_by(gameid, roundNum, role) %>%
+  summarize(individualM = n()) %>%
+  ungroup() %>%
+  complete(role, roundNum, gameid, fill = list(individualM = 0)) %>%
+  spread(role, individualM)
+
+listenerReduction <- listenerMsgs %>%
+   group_by(roundNum) %>%
+   multi_boot_standard("matcher") %>%
+   mutate(measure = '# listener messages')  
+
+listenerReduction %>%
+  rbind(lengthReduction) %>%
+  rbind(clauseReduction) %>%
+  rbind(aclReduction) %>%
+  mutate(measure = factor(measure, levels = c(
+    "# words per tangram", "# listener messages",
+    "% adjectival clauses","% subordinate clauses"))) %>%
+  ggplot(aes(x = roundNum, y = mean)) +
+    geom_line() +
+    xlab('round #') +
+    ylab('metric') +
+    geom_errorbar(aes(ymax = summary_ci_upper, ymin = summary_ci_lower), width = .1) +
+    facet_wrap(~ measure, nrow = 1, ncol = 4, scales = 'free') +
+    ylim(c(0, NA)) +
+    theme_few(9) +
+    theme(aspect.ratio = .75)
+```
+
+```{r}
+listenerMsg_lm = summary(lmer(matcher ~ roundNum + (1 | gameid), data = listenerMsgs))
+print(listenerMsg_lm)
+```
+Reduction rates for different parts of speech. Error bars are bootstrapped 95\\% CIs.
+
+```{r}
+posReduction = read_csv('posTagged.csv') %>%
+  # Count occurences of each POS on each round within games
+  group_by(roundNum, gameid) %>%
+  summarize(numWords = sum(numWords),
+            nouns = sum(nouns),
+            #numbers = sum(numbers),
+            verbs = sum(verbs),
+            dets= sum(determiners),
+            pronouns = sum(pronouns),
+            preps = sum(prepositions),
+            adjectives = sum(adjectives),
+            adverbs = sum(adverbs)) %>%
+  gather(POS, count, nouns:adverbs) %>%
+  select(gameid, roundNum, POS, count) %>%
+  # Need to put in ids to spread
+  rowwise() %>%
+  mutate(id = row_number()) %>%
+  mutate(roundNum = paste0('round', roundNum, collapse = '')) %>%
+  spread(roundNum, count) %>%
+  # Compute % reduction from first to last round
+  mutate(diffPct = (round1 - round6)/round1) %>%
+  group_by(POS) %>%
+  # Filter out handful of people who skipped first round w/ negative %...
+  filter(diffPct >= 0) %>%
+  filter(POS != "OTHER") %>%
+  # Take mean & se over participants
+  multi_boot_standard('diffPct') %>%
+  mutate(cat = ifelse(POS %in% c('dets', 'pronouns', 'preps'), 'closed', 'open')) %>%
+  # rearrange
+  transform(POS=reorder(POS, -mean) )
+
+detReductionRate <- (posReduction %>% filter(POS == 'dets'))$mean * 100
+nounReductionRate <- (posReduction %>% filter(POS == 'nouns'))$mean * 100
+
+ggplot(posReduction, aes(x = POS, y = mean, fill = cat)) +
+  geom_bar(stat = 'identity') +
+  geom_errorbar(aes(ymax = summary_ci_upper, ymin = summary_ci_lower), width = .1)+
+  theme_bw(9) +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
+  ylab("% reduction") +
+  xlab("Part of Speech category")
+```
+
+## Arbitrariness and stability
+
+Calculate entropy under permutation tests
+
+```{r}
+getCounts <- function(contents) {
+  corpus <- Corpus(VectorSource(paste(contents, collapse = " ")))
+  return(colSums(as.matrix(DocumentTermMatrix(corpus))))
+}
+
+permutationTest <- function(df) {
+  permuted = df %>%
+    group_by(roundNum) %>%
+    mutate(permutation = sample(contents)) %>%
+    group_by(gameid) %>%
+    summarize(ent = entropy(getCounts(permutation))) %>%
+    ungroup()
+  return(mean(permuted$ent))
+}
+
+permutations <- replicate(1000, {
+  permutationTest(tangramCombined)
+})
+
+# Note that we explicitly do *not* normalize entropies, as this
+# removes the contribution of a bigger vocabulary (as we would expect)
+trueEntropy <- mean((tangramCombined %>%
+  group_by(gameid) %>%
+  summarize(ent = entropy(getCounts(contents))) %>%
+  ungroup())$ent)
+
+ggplot() +
+  geom_histogram(aes(x = permutations), binwidth = .005) +
+  geom_vline(xintercept = trueEntropy, color = 'red') +
+  theme_few(9) +
+  xlab('entropy')
+```
+
+## Did pairs who talked more become more efficient?
+
+```{r}
+turnTaking <- listenerMsgs %>%
+  filter(roundNum %in% c(1)) %>%
+  group_by(gameid) %>%
+  summarize(numListenerMsgs = mean(matcher)) %>%
+  filter(numListenerMsgs < mean(numListenerMsgs) + 3*sd(numListenerMsgs)) %>%
+  select(gameid, numListenerMsgs)
+
+efficiency <- tangramCombined %>%
+   filter(role == "director") %>%
+   group_by(gameid, roundNum) %>%
+   summarize(individualM = sum(numRawWords)/12) %>%
+  rowwise() %>%
+  mutate(id = row_number()) %>%
+  mutate(roundNum = paste0('round', roundNum, collapse = '')) %>%
+  spread(roundNum, individualM) %>%
+  mutate(diffPct = (round1 - round6)/round1) %>%
+  filter(diffPct >= 0) %>% # Filter out handful of people who skipped first round...
+  select(gameid, diffPct)
+
+turnTakingEfficiencyPlot <- ggplot(turnTaking %>% left_join(efficiency), aes(x = numListenerMsgs, y = diffPct)) +
+  geom_point() +
+  geom_smooth(method = 'lm') +
+  theme_bw(9) +
+  ylab("% reduction") +
+  xlab("# listener messages on 1st round")
+
+turnTakingEfficiency_lm <- summary(lm(diffPct ~ numListenerMsgs, data = efficiency %>% left_join(turnTaking)))
+turnTakingdf <- turnTakingEfficiency_lm$df[1]
+turnTakingCoefs <- turnTakingEfficiency_lm$coefficients[2,]
+turnTakingResult <- paste0("t(", turnTakingdf, ") = ", round(turnTakingCoefs[3],2), ", p = ", round(turnTakingCoefs[4],2))
+turnTakingEfficiencyPlot
+```
+
+
+### Supplemental: Director vs. matcher proportions
+
+At beginning, directors send about 60% of total messages (close to equal!) At end, they send 80% -- listeners stop talking as much. This is just another way of looking at the total number of listener messages dropping.
 
 ```{r}
 tangramCombined %>% 
@@ -97,144 +317,178 @@ ggplot(aes(x = roundNum, y = m)) +
   theme_bw() 
 ```
 
-## Did pairs who talked more become more efficient?
+### Supplemental: accuracy over time
+
+Bring boards into it?
 
 ```{r}
-turnTaking <- tangramCombined %>% 
-  group_by(gameid, roundNum, role) %>% 
-  summarize(individualM = n()) %>% 
-  ungroup() %>%
-  complete(role, roundNum, gameid, fill = list(individualM = 0)) %>% 
-  spread(role, individualM) %>% 
-  filter(roundNum %in% c(1)) %>%
-  group_by(gameid) %>%
-  summarize(numListenerMsgs = mean(matcher)) %>%
-  filter(numListenerMsgs < mean(numListenerMsgs) + 3*sd(numListenerMsgs)) %>%
-  select(gameid, numListenerMsgs)
-
-efficiency <- tangramCombined %>% 
-   filter(role == "director") %>%
-   group_by(gameid, roundNum) %>% 
-   summarize(individualM = sum(numRawWords)/12) %>%
-  rowwise() %>% 
-  mutate(id = row_number()) %>% 
-  mutate(roundNum = paste0('round', roundNum, collapse = '')) %>%
-  spread(roundNum, individualM) %>%
-  mutate(diffPct = (round1 - round6)/round1) %>%
-  filter(diffPct >= 0) %>% # Filter out handful of people who skipped first round...
-  select(gameid, diffPct)
-
-ggplot(turnTaking %>% left_join(efficiency), aes(x = numListenerMsgs, y = diffPct)) +
-  geom_point() +
-  geom_smooth(method = 'lm') +
-  theme_bw() +
-  ylab("% reduction") +
-  xlab("# listener messages on 1st round")
-
-summary(lm(diffPct ~ numListenerMsgs, data = efficiency %>% left_join(turnTaking)))
+tangramBoards = read.csv("../data/tangrams_unconstrained/finalBoard/tangramsFinalBoards.csv") %>%
+  gather(tangram, location, subA:trueL) %>% 
+  separate(tangram, into = c("type", "tangramName"), -2) %>% 
+  spread(key = type, value = location)  %>%
+  rename(matcherLoc = sub, trueLoc = true) %>%
+  mutate(match = matcherLoc == trueLoc)
+write.csv(tangramBoards, "reformattedBoards.csv", row.names = F)
 ```
 
-# Additional Result 1: Parts of speech 
-
-What are most common POS?
+subject-level performance over time?
 
 ```{r}
-d = read.csv('posTagged.csv', header =T) %>%
+tangramBoards %>% 
+  group_by(gameid, roundNum) %>% 
+  summarize(matchProp = sum(match)/12) %>%
+  ggplot(aes(x = roundNum, y = matchProp, color = gameid)) +
+    geom_line()
+```
+
+average performance over time (participants get better)
+
+```{r}
+tangramBoards %>% 
+  group_by(gameid, roundNum) %>% 
+  summarize(matchProp = sum(match)/(12)) %>%
+  filter(matchProp > .2) %>%
   group_by(roundNum) %>%
-  summarize(numWords = sum(numWords),
-            nouns = sum(nouns)/sum(numWords),
-            numbers = sum(numbers)/sum(numWords),
-            verbs = sum(verbs)/sum(numWords),
-            dets= sum(determiners)/sum(numWords),
-            pronouns = sum(pronouns)/sum(numWords),
-            preps = sum(prepositions)/sum(numWords),
-            adjectives = sum(adjectives)/sum(numWords),
-            adverbs = sum(adverbs)/sum(numWords)) %>%
-  mutate(OTHER = (1 - nouns - verbs - dets - pronouns -
-                      preps - adjectives - adverbs - numbers)) %>%
-  gather(POS, prop, nouns:OTHER) %>%
-  select(roundNum, POS, prop) 
+  summarize(m = mean(matchProp), se = sd(matchProp)/sqrt(length(matchProp))) %>%
+  ggplot(aes(x = roundNum, y = m)) +
+    geom_line() +
+    geom_errorbar(aes(ymax = m + se, ymin = m - se), width = 0 )
+```
+
+# Experiment 2: Sequential
+
+## Imports & preprocessing
+
+```{r}
+tangramMsgs = read_csv("../data/tangrams_sequential/message/sequential_message.csv") %>%
+  rename(msgTime = time, role = sender)
+
+tangramClicks = read_csv("../data/tangrams_sequential/clickedObj/sequential_clicks.csv")# %>% mutate(roundNum = as.numeric(roundNum))
+tangramSubjInfo = read.csv("../data/tangrams_sequential/tangrams_sequential-subject_information.csv") 
+
+rawTangramCombined <- tangramMsgs %>% left_join(tangramSubjInfo, by = c('gameid', 'role')) %>% left_join(tangramClicks, by = c('gameid', 'roundNum', 'occurrenceNum'))
+```
+
+Set exclusion criteria
+
+```{r}
+nonNativeSpeakerIDs <- unique((tangramSubjInfo %>% filter(nativeEnglish != "yes"))$gameid)
+incompleteIDs <- unique((rawTangramCombined %>% group_by(gameid) %>% 
+                           filter(length(unique(roundNum)) != 72))$gameid)
+badGames <- union(incompleteIDs, nonNativeSpeakerIDs)
+print(paste0('excluding ', length(badGames), ' of ', length(unique(rawTangramCombined$gameid)), ' games that were either incomplete or had non-native english speakers'))
+```
+
+Count numbers of words, examine size of dataset
+
+```{r}
+tangramCombined <- rawTangramCombined %>%
+  filter(!(gameid %in% badGames)) %>%
+  mutate(numRawWords = str_count(contents, "\\S+")) %>%
+  filter(!is.na(numRawWords)) # filter out pure punctuation messages
+  #filter(numRawWords < mean(numRawWords) + 3*sd(numRawWords)) # Get rid of outliers
+
+write_csv(tangramCombined, '../data/tangramsSequential.csv')
+
+numGames <- length(unique(tangramCombined$gameid))
+numUtterances <- length(tangramCombined$contents)
+print(paste0(numUtterances, ' utterances in ', numGames, ' games'))
+```
+
+Check unique turkers...
+
+```{r}
+
+```
+
+# Accuracy
+
+Accuracy tends to go up on average (collapsed across everyone!)
+
+```{r}
+tangramSingleUtt = tangramCombined %>%
+  group_by(gameid,roundNum) %>%
+  mutate(contents = paste0(contents, collapse = '.')) %>%
+  filter(row_number() == 1)
+
+tangramSingleUtt %>%
+  group_by(roundNum) %>%
+  summarize(propCorrect = sum(correct)/length(correct)) %>%
+  ggplot(aes(x = roundNum, y = propCorrect, group = 1)) +
+    geom_point() +
+    geom_smooth()
+```
+
+Break out by occurence of each tangram (some start out harder than others; everyone gets the rabbit right but that weird angel one (B) is terrible)
+
+```{r}
+tangramSingleUtt %>%
+  group_by(occurrenceNum, intendedObj) %>%
+  summarize(propCorrect = sum(correct)/length(correct)) %>%
+  ggplot(aes(x = occurrenceNum, y = propCorrect, group = intendedObj)) +#, group = gameid)) +#, group = gameid)) +
+    geom_line(alpha = .2) +
+    geom_text(aes(label = intendedObj))
+```
+
+Look at confusion matrix of errors
+
+TODO: figure out how to rearrange by cluster
+
+```{r}
+confusionMatrix <- tangramSingleUtt %>%
+  group_by(intendedObj, clickedObj) %>%
+  tally() %>%
+  spread(intendedObj, n)
+
+row.order <- hclust(dist(confusionMatrix))$order
+
+tangramSingleUtt %>%
+  group_by(intendedObj, clickedObj) %>%
+  tally() %>%
+  ggplot(aes(x = intendedObj, y = clickedObj, fill = log(n))) +
+    geom_bin2d() +
+    theme(aspect.ratio = 1)
+```
+
+Reduction per tangram
+
+```{r}
+library(directlabels)
+
+lengthReduction <- tangramCombined %>%
+   filter(role == "director") %>%
+   group_by(gameid, occurrenceNum, intendedName) %>%
+   summarize(individualM = sum(numRawWords)) %>%
+   group_by(occurrenceNum, intendedName) %>%
+  summarize(m = mean(individualM)) %>%
+   #multi_boot_standard("individualM") %>%
+   mutate(measure = '# words per tangram')
+
+ggplot(lengthReduction, aes(x = occurrenceNum, y = m,group = intendedName)) +
+  geom_line() +
+  theme_few() +
+  geom_dl(aes(label = intendedName), method = list(dl.trans(x = x - .25), "first.points")) +
+  xlab("repetition #") +
+  ylab("mean # words")
   
-head(d)
-
-ggplot(d, aes(x = roundNum, y = prop, fill = POS)) +
-  geom_bar(stat = "identity") +
-  scale_fill_brewer(palette = "Set1") +
-  theme_bw()
 ```
 
-Compare reduction rates for closed vs. open class words:
+Questions: 
+
+-- is just this a result of motivation, i.e. people get sloppy and just want to finish as game goes on? (probably not; accuracy goes up and no comparable reduction in other ref games of similar length w/o repetition, e.g. chairs, colors)
+
+-- is this just a result of meta-discourse? Maybe people are just chatting each other up a lot at the beginning (e.g. 'hi, how are you? what's your name?') and stop doing that over time? (probably not, but we should do this restricted to just noun phrases...)
 
 ```{r}
-posReduction = read.csv('posTagged.csv', header =T) %>%
-  group_by(roundNum, gameid) %>%
-  summarize(numWords = sum(numWords),
-            nouns = sum(nouns),
-            numbers = sum(numbers),
-            verbs = sum(verbs),
-            dets= sum(determiners),
-            pronouns = sum(pronouns),
-            preps = sum(prepositions),
-            adjectives = sum(adjectives),
-            adverbs = sum(adverbs)) %>%
-  mutate(OTHER = (numWords - nouns - verbs - dets - pronouns -
-                      preps - adjectives - adverbs - numbers)) %>%
-  gather(POS, count, nouns:OTHER) %>%
-  select(gameid, roundNum, POS, count) %>%
-  rowwise() %>% 
-  mutate(id = row_number()) %>% 
-  mutate(roundNum = paste0('round', roundNum, collapse = '')) %>%
-  spread(roundNum, count) %>%
-  mutate(diffSize = round1 - round6,
-         diffPct = (round1 - round6)/round1) %>%
-  group_by(POS) %>%
-  filter(diffPct >= 0) %>% # Filter out handful of people who skipped first round...
-  summarize(diffPctM = mean(diffPct),
-            diffPctSE = sd(diffPct)/sqrt(length(diffPct))) %>%
-  filter(POS != "OTHER") %>%
-  mutate(cat = ifelse(POS %in% c('dets', 'pronouns', 'preps', 'adverbs'), 'closed', 'open')) %>%
-  transform(POS=reorder(POS, -diffPctM) )
-
-ggplot(posReduction, aes(x = POS, y = diffPctM, fill = cat)) +
-  geom_bar(stat = 'identity') +
-  geom_errorbar(aes(ymax = diffPctM + diffPctSE, ymin = diffPctM - diffPctSE), width = .1)+
-  theme_bw() +
-  ylab("% reduction") +
-  xlab("Part of Speech category")
+summary(lmer(numRawWords ~ poly(occurrenceNum,2) + 
+               (1 + occurrenceNum | gameid) + 
+               (1 + occurrenceNum | intendedObj), 
+             data = tangramCombined %>% 
+               group_by(gameid, roundNum, occurrenceNum, intendedObj) %>% 
+               summarize(numRawWords = sum(numRawWords))))
 ```
 
-TODO: figure out why there's an uptick on the last couple rounds for some of the tangrams...
-TODO: Fix the ones where they mention all of em in one row
-
-```{r}
-d = tangramCombined  %>% 
-  inner_join(read.csv('posTagged.csv', header =T)) %>%
-  filter(sender == "director") %>%
-  group_by(roundNum, tangramRef) %>%
-  summarize(numWords = sum(numWords),
-            nouns = sum(nouns),
-            numbers = sum(numbers),
-            verbs = sum(verbs),
-            dets= sum(determiners),
-            pronouns = sum(pronouns),
-            preps = sum(prepositions),
-            adjectives = sum(adjectives),
-            adverbs = sum(adverbs)) %>%
-  mutate(other = (numWords - nouns - verbs - dets - pronouns -numbers-
-                      preps - adjectives - adverbs)) %>%
-  gather(POS, total, nouns:other) %>%
-  select(roundNum, tangramRef, POS, total) 
-
-head(d)
-ggplot(d, aes(x = roundNum, y = total, fill = POS)) +
-  geom_bar(stat = "identity") +
-  scale_fill_brewer(palette = "Set1") +
-  # facet_wrap(~ tangramRef) +
-  theme_bw()
-
-```
-
-# Additional Result 2: PMI
+# PMI
 
 Scatter plot:
 
@@ -314,9 +568,7 @@ nonparametric_d %>%
   #guides(color=FALSE)
 ```
 
-# Additional Result 3: Arbitrariness
-
-## Part A: wordclouds
+Supplemental: look at wordclouds!
 
 ```{r}
 library(wordcloud)   
@@ -359,15 +611,12 @@ for(i in 1:numDocs) {
 }
 ```
 
-## Part B: across-pair entropy and within-pair entropy
+## Supplemental: across-pair entropy and within-pair entropy
 
 ```{r}
 library(entropy)
 
 withinPair <- oldGrams %>% 
-  filter(tangramRef != 0) %>%
-  filter(tangramRef != "None") %>%
-  filter(tangramRef != "*") %>%
   group_by(gameid, tangramRef) %>%
   summarize(ent = entropy(colSums(as.matrix(DocumentTermMatrix(Corpus(VectorSource(paste(cleanMsg, collapse = " ")))))))) %>%
   group_by(tangramRef) %>%
@@ -418,93 +667,4 @@ ggplot(acrossPair,
        aes(x = half, y = entropy, 
            color = tangram, linetype = type, group = interaction(tangram, type))) +
   geom_line()
-```
-
-### Supplemental: accuracy over time
-
-Bring boards into it?
-
-```{r}
-tangramBoards = read.csv("../data/tangrams/finalBoard/tangramsFinalBoards.csv") %>%
-  gather(tangram, location, subA:trueL) %>% 
-  separate(tangram, into = c("type", "tangramName"), -2) %>% 
-  spread(key = type, value = location)  %>%
-  rename(matcherLoc = sub, trueLoc = true) %>%
-  mutate(match = matcherLoc == trueLoc)
-write.csv(tangramBoards, "reformattedBoards.csv", row.names = F)
-```
-
-subject-level performance over time?
-
-```{r}
-tangramBoards %>% 
-  group_by(gameid, roundNum) %>% 
-  summarize(matchProp = sum(match)/12) %>%
-  ggplot(aes(x = roundNum, y = matchProp, color = gameid)) +
-    geom_line()
-```
-
-histogram of overall accuracy
-
-```{r}
-tangramBoards %>% 
-  group_by(gameid) %>% 
-  summarize(matchProp = sum(match)/(6 * 12)) %>%
-  ggplot(aes(x = matchProp)) +
-    geom_histogram()
-```
-
-histogram of accuracy for each round
-
-```{r}
-tangramBoards %>% 
-  group_by(gameid, roundNum) %>% 
-  summarize(matchProp = sum(match)/(12)) %>%
-  ggplot(aes(x = matchProp)) +
-    geom_histogram() +
-  facet_wrap(~ roundNum)
-```
-
-average performance over time (participants get better)
-
-```{r}
-tangramBoards %>% 
-  group_by(gameid, roundNum) %>% 
-  summarize(matchProp = sum(match)/(12)) %>%
-  filter(matchProp > .25) %>%
-  group_by(roundNum) %>%
-  summarize(m = mean(matchProp), se = sd(matchProp)/sqrt(length(matchProp))) %>%
-  ggplot(aes(x = roundNum, y = m)) +
-    geom_line() +
-    geom_errorbar(aes(ymax = m + se, ymin = m - se) )
-```
-
-### Which words most likely to be dropped?
-
-```{r}
-unigrams <- read_csv("wordCounts.csv", col_names = T) %>%
-  group_by(word, POS, roundNum) %>% 
-  summarize(count = sum(count)) %>% 
-  rowwise() %>%
-  mutate(roundNum = paste0("round", roundNum, collapse = "")) %>%
-  spread(roundNum, count) %>%
-  filter(round1 > 10) %>%
-  mutate(diffSize = round1 - round6,
-         diffPct = (round1 - round6)/round1) %>% 
-  arrange(desc(diffSize))
-```
-### Which bigrams most likely to be dropped?
-
-```{r}
-bigrams <- read_csv("bigramCounts.csv", col_names = T) %>%
-  group_by(word, roundNum) %>% 
-  summarize(count = sum(count)) %>% 
-  rowwise() %>%
-  mutate(roundNum = paste0("round", roundNum, collapse = "")) %>%
-  spread(roundNum, count) %>%
-  filter(round1 > 10) %>%
-  mutate(diffSize = round1 - round6,
-         diffPct = (round1 - round6)/round1) %>% 
-  arrange(desc(diffSize)) %>% 
-  select(word, diffSize)
 ```

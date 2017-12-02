@@ -355,7 +355,7 @@ tangramBoards %>%
     geom_errorbar(aes(ymax = m + se, ymin = m - se), width = 0 )
 ```
 
-# Experiment 2: Sequential
+# Exp. 2: Sequential
 
 ## Imports & preprocessing
 
@@ -379,11 +379,28 @@ badGames <- union(incompleteIDs, nonNativeSpeakerIDs)
 print(paste0('excluding ', length(badGames), ' of ', length(unique(rawTangramCombined$gameid)), ' games that were either incomplete or had non-native english speakers'))
 ```
 
+Check and remove all games of duplicate turkers (note that I accidentally excluded some of the partial games before compiling rawMessages, so there are gameids in subjInfo that never appear in rawMessages...)
+
+`9477-662e7f6d-0f2a-4041-a4e7-6d33eba91fb0`	is probably okay: they only did one round in their previous game before getting kicked... also `6402-3db6c45b-0b53-4906-b5cf-17517d013671` is probably okay: this is their first game.
+
+```{r}
+duplicate_turkers = (tangramSubjInfo %>% group_by(workerid_uniq) %>% tally() %>% filter(n > 1))$workerid_uniq
+# subjInfoids = unique((tangramSubjInfo %>% filter(workerid_uniq %in% duplicates))$gameid)
+# realids = unique((rawTangramCombined %>% filter(workerid_uniq %in% duplicates))$gameid)
+duplicate_gameids = (rawTangramCombined %>% 
+  filter(workerid_uniq %in% duplicate_turkers)%>% 
+  group_by(workerid_uniq, gameid) %>% 
+  summarize(time = first(msgTime), numRounds = last(roundNum)) %>%
+  arrange(workerid_uniq, time))$gameid
+duplicate_gameids
+```
+
 Count numbers of words, examine size of dataset
 
 ```{r}
 tangramCombined <- rawTangramCombined %>%
   filter(!(gameid %in% badGames)) %>%
+  filter(!(gameid %in% duplicate_gameids)) %>%
   mutate(numRawWords = str_count(contents, "\\S+")) %>%
   filter(!is.na(numRawWords)) # filter out pure punctuation messages
   #filter(numRawWords < mean(numRawWords) + 3*sd(numRawWords)) # Get rid of outliers
@@ -395,11 +412,6 @@ numUtterances <- length(tangramCombined$contents)
 print(paste0(numUtterances, ' utterances in ', numGames, ' games'))
 ```
 
-Check unique turkers...
-
-```{r}
-
-```
 
 # Accuracy
 
@@ -416,7 +428,9 @@ tangramSingleUtt %>%
   summarize(propCorrect = sum(correct)/length(correct)) %>%
   ggplot(aes(x = roundNum, y = propCorrect, group = 1)) +
     geom_point() +
-    geom_smooth()
+    geom_vline(xintercept = (seq(12, 12*6, 12))) +
+    geom_smooth() +
+    theme_few() 
 ```
 
 Break out by occurence of each tangram (some start out harder than others; everyone gets the rabbit right but that weird angel one (B) is terrible)
@@ -427,24 +441,33 @@ tangramSingleUtt %>%
   summarize(propCorrect = sum(correct)/length(correct)) %>%
   ggplot(aes(x = occurrenceNum, y = propCorrect, group = intendedObj)) +#, group = gameid)) +#, group = gameid)) +
     geom_line(alpha = .2) +
-    geom_text(aes(label = intendedObj))
+    geom_text(aes(label = intendedObj)) +
+    theme_few() 
+
 ```
 
 Look at confusion matrix of errors
 
-TODO: figure out how to rearrange by cluster
+TODO: figure out how to rearrange by cluster?
 
 ```{r}
 confusionMatrix <- tangramSingleUtt %>%
   group_by(intendedObj, clickedObj) %>%
   tally() %>%
+  ungroup() %>%
+  complete(intendedObj, clickedObj, fill = list(n = 1)) %>%
   spread(intendedObj, n)
+as.matrix(confusionMatrix %>%select(-clickedObj) )
 
-row.order <- hclust(dist(confusionMatrix))$order
-
+# dist(confusionMatrix)
+# clickedOrder <- hclust(as.matrix(confusionMatrix %>% select(-clickedObj)))$order 
+# 
+# cbind(confusionMatrix, clickedOrder) %>% gather(intendedObj, count, A:L) %>% arrange(clickedOrder, intendedObj) %>% mutate(clickedObj = factor(clickedObj, unique(clickedObj)), intendedObj = factor(intendedObj, unique(clickedObj))) %>%
 tangramSingleUtt %>%
   group_by(intendedObj, clickedObj) %>%
   tally() %>%
+  ungroup() %>%
+  complete(intendedObj, clickedObj, fill = list(n = 1)) %>%
   ggplot(aes(x = intendedObj, y = clickedObj, fill = log(n))) +
     geom_bin2d() +
     theme(aspect.ratio = 1)
@@ -460,7 +483,7 @@ lengthReduction <- tangramCombined %>%
    group_by(gameid, occurrenceNum, intendedName) %>%
    summarize(individualM = sum(numRawWords)) %>%
    group_by(occurrenceNum, intendedName) %>%
-  summarize(m = mean(individualM)) %>%
+   summarize(m = mean(individualM)) %>%
    #multi_boot_standard("individualM") %>%
    mutate(measure = '# words per tangram')
 
@@ -490,10 +513,20 @@ summary(lmer(numRawWords ~ poly(occurrenceNum,2) +
 
 # PMI
 
-Scatter plot:
+Scatter plot (all datapoints)
 
 ```{r}
-distinctiveness_d <- read.csv("matchAndPMI.csv", header = TRUE) %>%
+distinctiveness_d <- read.csv("sequential_matchAndPMI.csv", header = TRUE) %>%
+  mutate(POS = as.character(POS)) %>%
+  mutate(POS = ifelse(POS %in% c('NN', 'NNS', 'NNP', 'NNPS'), "noun", POS)) %>%
+  mutate(POS = ifelse(POS %in% c('MD', 'VB', 'VBZ', 'VBP', 'VBD', 'VBN', 'VBG'), "verb", POS)) %>%
+  mutate(POS = ifelse(POS %in% c('DT', 'WDT'), 'det', POS)) %>%
+  mutate(POS = ifelse(POS %in% c('PRP', 'PRP$', 'WP', 'WP$'), 'pronoun', POS)) %>%
+  mutate(POS = ifelse(POS %in% c('CC'), 'conjunction', POS)) %>%
+  mutate(POS = ifelse(POS %in% c('JJ', 'JJR', 'JJS'), 'adjective', POS)) %>%
+  mutate(POS = ifelse(POS == 'IN', 'preposition', POS)) %>%
+  mutate(POS = ifelse(POS %in% c('noun', 'verb', 'det', 'pronoun', 'conjunction', 'adjective', 'preposition'), 
+                      POS, 'other')) %>%
   filter(pmi > 0) %>%
   rename(num_occurrences = total) %>%
   filter(num_occurrences > 1) %>%
@@ -502,12 +535,47 @@ distinctiveness_d <- read.csv("matchAndPMI.csv", header = TRUE) %>%
   mutate(a_match = word == "a")
 cbbPalette <- c("#000000", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
 
-summary(lm(match ~ pmi, data = distinctiveness_d))
+# Split out into binary values:
+binary.d <- distinctiveness_d %>% 
+  mutate(numOnes = match * num_occurrences,
+         numZeros = num_occurrences - numOnes) %>%
+  do(rbind(data.frame(.[rep(1:nrow(.), .$numOnes),]) %>% mutate(singleMatch = 1),
+           data.frame(.[rep(1:nrow(.), .$numZeros),]) %>% mutate(singleMatch = 0))) 
+
+summary(glm(singleMatch ~ pmi, data=binary.d, family = 'binomial'))
 
 ggplot(distinctiveness_d, aes(x = pmi, y = match)) +
   geom_point(aes(size = num_occurrences)) +
-  geom_smooth(method = 'lm') +
-  theme_bw() +
+  geom_smooth(data = binary.d, aes(x = pmi, y = singleMatch),
+    method = "glm", method.args = list(family = "binomial"), 
+    se = FALSE) +
+  theme_few()
+```  
+
+### Restrict to words with more occurences & common POS
+
+```{r}
+restricted_distinctiveness_d <- distinctiveness_d %>% 
+   filter(POS %in% c('noun', 'preposition', 'det', 'adjective'))%>%
+   filter(num_occurrences > 1)
+                
+restricted_binary.d <- restricted_distinctiveness_d %>% 
+  mutate(numOnes = match * num_occurrences,
+         numZeros = num_occurrences - numOnes) %>%
+  do(rbind(data.frame(.[rep(1:nrow(.), .$numOnes),]) %>% mutate(singleMatch = 1),
+           data.frame(.[rep(1:nrow(.), .$numZeros),]) %>% mutate(singleMatch = 0))) 
+
+summary(glm(singleMatch ~ pmi, data=restricted_binary.d, family = 'binomial'))
+
+ggplot(restricted_distinctiveness_d, aes(x = pmi, y = match)) +
+  geom_point(aes(size = num_occurrences)) +
+  geom_point(aes(x = pmi, y = match), color = 'red', data = subset(distinctiveness_d, bunny == TRUE)) +
+  geom_point(aes(x = pmi, y = match), stroke = 3, color = 'yellow', data = subset(distinctiveness_d, a_match == TRUE)) +
+  #geom_smooth(method = 'loess', span = .8) +
+  geom_smooth(data = restricted_binary.d, aes(x = pmi, y = singleMatch),
+    method = "glm", method.args = list(family = "binomial"), 
+    se = FALSE) +
+  theme_few() +
   scale_colour_manual(values=cbbPalette)+
   guides(color=FALSE)
 ```
@@ -515,7 +583,7 @@ ggplot(distinctiveness_d, aes(x = pmi, y = match)) +
 Look at pmi across POS...
 
 ```{r}
-pos_d <- read.csv("matchAndPMI.csv", header = TRUE) %>%
+pos_d <- read.csv("sequential_matchAndPMI.csv", header = TRUE) %>%
   filter(pmi > 0) %>%
   mutate(POS = as.character(POS)) %>%
   mutate(POS = ifelse(POS %in% c('NN', 'NNS', 'NNP', 'NNPS'), "noun", POS)) %>%
@@ -525,6 +593,7 @@ pos_d <- read.csv("matchAndPMI.csv", header = TRUE) %>%
   mutate(POS = ifelse(POS %in% c('CC'), 'conjunction', POS)) %>%
   mutate(POS = ifelse(POS %in% c('JJ', 'JJR', 'JJS'), 'adjective', POS)) %>%
   mutate(POS = ifelse(POS == 'IN', 'preposition', POS)) %>%
+  mutate(POS = ifelse(POS %in% c('noun', 'verb', 'det', 'pronoun', 'conjunction', 'adjective', 'preposition'), POS, 'other')) %>%
   group_by(POS) %>%
   summarize(se = sd(pmi)/sqrt(length(pmi)),
             mean_pmi = mean(pmi),
@@ -537,10 +606,9 @@ ggplot(pos_d, aes(x = reorder(POS,mean_pmi,
                      function(x)-x), y = mean_pmi)) +
   geom_bar(stat='identity') +
   geom_errorbar(aes(ymax = mean_pmi + se, ymin = mean_pmi - se)) +
-  theme_bw() +
+  theme_few() +
   xlab("part of speech") +
   ylab("pointwise mutual information")
-
 ```
 
 

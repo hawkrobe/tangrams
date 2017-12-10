@@ -1,0 +1,296 @@
+\documentclass[11pt, floatsintext, man]{apa6}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\usepackage[outdir=./]{epstopdf}
+\usepackage{etoolbox}
+\patchcmd{\maketitle}{\newpage}{}{}{}
+
+%\DeclareGraphicsExtensions{.eps}
+
+\usepackage{mathtools}
+\usepackage{enumerate}
+\usepackage{apacite}
+\usepackage{listings}
+\usepackage{multirow}
+\usepackage{todonotes}
+\usepackage{svg}
+\usepackage{booktabs}
+
+\newcommand{\den}[2][]{
+\(
+\left\llbracket\;\text{#2}\;\right\rrbracket^{#1}
+\)
+}
+
+
+\newcommand{\KL}[2]{\ensuremath{D_{KL}({#1}\, \| \, {#2})}}
+\newcommand{\E}[2]{\ensuremath{\mathbb{E}_{#1}\left [#2 \right]}}
+
+\newenvironment{figurehere}
+	{\def\@captype{figure}}
+	{}
+
+\setcounter{tocdepth}{1}
+\usepackage{lipsum}
+%\pagenumbering{gobble}
+%\usepackage{apacite}
+
+\linespread{1}
+\usepackage{textcomp}
+\usepackage{lingmacros}
+\usepackage{setspace}\doublespacing 
+
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\graphicspath{{./figures/}}
+ 
+\makeatother
+
+\title{Conventions and hierarchical learning in repeated communication games}
+\shorttitle{CADA}
+\author{Robert Hawkins}
+\affiliation{Stanford University} 
+
+\abstract{}
+
+\keywords{conventions, pragmatics, semantics, adaptation, learning hierarchical Bayesian models}
+
+%\authornote{This report is based in part on work presented at the 37th Conference of the Cognitive Science Society. The first author is supported by a NSF Graduate Research Fellowship and a Stanford Graduate Fellowship. Correspondence concerning this article should be addressed to Robert X.D. Hawkins, e-mail: rxdh@stanford.edu}
+
+\begin{document}
+
+\maketitle
+%\tableofcontents
+
+\section{Introduction: Core competencies for adaptation in communication}
+
+We do not have to learn language from scratch with every new person we meet. A native of Chicago can try out a coffee shop in San Francisco without needing to laboriously work out with the barista a brand-new way of ordering an `espresso,' and a 21st century reader can largely make sense of a 19th century novel without any personal contact with its author. This degree of stability across geography and time makes language indispensable for coordination in a social species: everyone who belongs to a language community assumes that others will share at least some common beliefs, or \emph{global conventions}, about what words mean \cite{Lewis69_Convention}. In a sense, the ability to competently generalize to novel communicative partners in novel contexts is what it means to be fluent in a language.
+
+At the same time, no two speakers of a language share the same lexicon, and to make matters worse, speakers seem to constantly come up with new expressions and senses on the fly \cite{Davidson86_DerangementOfEpitaphs, Clark98_CommunalLexicons}. This lexical diversity quickly becomes apparent at another family's dinner table, or when moving to a new work environment. Large stretches of conversation become borderline unintelligible. Who is this mysterious ``Tom'' everyone is laughing about? What do these arcane acronyms mean? Yet they do not remain mysterious for long. Across many interactions with a particular partner or group or partners, we build up intricate, idiosyncratic models: not just about how \emph{we} collectively use language, but how \emph{this person} is expected to use language. We learn the contours of their speech and form \emph{local conventions} from our shared history. Complex stories or ideas that took long discursive conversations to initially cover can be referred back to using a brief turn of phrase. Most strikingly, this adaptation can take place to different degrees over any time-scale: from years of close scientific collaboration to a few minutes in a doctor's office.
+
+A core puzzle for cognitive science, then, is reconciling our remarkable flexibility in adapting to novel communication partners with the overarching stability of our linguistic representations. What do we do when our global conventions aren't sufficient --- when we have to talk about something we've never had to talk about before with a partner we've never met? How do we adapt and coordinate so quickly? And how do we determine which learned meanings we can expect to stably generalize to new contexts or partners, and which only hold in the narrow scope of one partner?
+
+A computational theory of learning dynamics in communication must therefore explain both how we use our mature global conventions to scaffold local convention formation, and also how we learned global conventions came from in the first place. This puzzle can be decomposed into three core cognitive competencies that any computational solution must adequately capture: 
+\begin{enumerate}
+\item \textbf{Probabilistic representation of meaning:} When we encounter a new communication partner, we call upon some representation about what we think different signals mean to them. This representation of meaning must be sensitive to the overall statistics of the population: more people are familiar with the use of \emph{dog} to refer to the beloved pet than \emph{sclerotic aorta} to refer to the potentially dangerous health condition. It must also be sensitive to the immediate context of the interaction: a cardiologist should have different expectations about a novel colleague than a novel patient.
+\item \textbf{Rapid meaning learning across repeated interactions:} Within a few turns of conversation, we can considerably strengthen our expectations based on the data we've observed, and adjust our own usage accordingly. This learning mechanism must allow for signal \emph{reduction} -- simpler, more efficient ways of referring to the same thing over time -- and \emph{path-dependence}: early reinforcement of certain meanings increases their later usage, however arbitrary or uncertain they began. 
+\item \textbf{Generalization to new contexts and speakers: } When the context changes, we ought to 
+
+\end{enumerate}
+
+\section{Modeling convention formation with hierarchical Bayesian learning}
+
+In this paper, we review the empirical evidence for each of these competencies and propose a modeling framework that satisfies One proposal is that convention formation is a hierarchical learning problem. Just as our concept of a dog, built up over many individual experiences across a lifetime, provides stable expectations about the properties of a new instance -- four legs, wagging tail, barking noises -- our knowledge of language provides stable communicative expectations. Yet just as years of living with your beloved Fido reveals properties which deviate from your general dog concept -- patches of hair missing from his legs, an odd squeaking noise he makes when excited -- the language we use to talk with a family member or close collaborator may deviate considerably from the usage predicted by global conventions.
+
+Our global conventions are learned and generalized over many extended interactions with many different people early in life, and this shared semantic prototype is the backbone supporting rapid learning for new partners and situations. Unlike the fixed, biological category of a dog, though, language is a moving target. The only data we use to ground our learning is produced by other agents who are in the same position as we are, and our only goal is to coordinate on the same meanings.
+
+This hypothesis is grounded in a half-century of empirical work on partner-specific adaptation. While the data real-world partners learn from surely consists of much more than past messages, simple communication games have been a productive place to start. this appears to be a minimal configuration for producing adaptation.  Partner-specific adaptation has been investigated in the lab largely using a communication game paradigm. Pairs of participants are shown arrays of objects, presented in randomized order. One player -- the speaker -- must produce a message allowing their partner to select a given target from the context. While this paradigm has been immensely productive for understanding the production of informative referring expressions in immediate context (cite van Dempel, dutch guys, etc), a range of even richer phenomena begin to emerge when the communication task is repeated over time. 
+
+We begin by reviewing core experimental results, restricting ourselves to a relatively narrow class of repeated reference games. This review is  organized around a meta-analytic parameterization of the paradigm (see Table 1), highlighting several properties of the task that appear to affect the rate at which conventions form. We then briefly contrast our hierarchical model with several different theories of adaptation and convention formation. 
+
+\section{Core empirical phenomena}
+
+\subsection{Descriptions reduce in length over repeated reference}
+
+While simple, closed-world communication games have featured prominently in thought experiments about language and meaning since Wittgenstein's Philosophical Investigations, Krauss \& Weinheimer (1964) were the first to report empirical data from real participants performing such a task in the lab. Rather than talking about slabs and bricks, as Wittgenstein's builders did, these participants were presented with an array of abstract line drawings. %This design was somewhat convoluted compared to later studies refining the paradigm but it's worth considering in detail, as it's the prototype from which all later studies derived.
+
+On each round, both players were given an identical set of 6 cards marked randomly with 1-6 and A-F, respectively, containing the same 6 drawings in different orders (see Fig. 1a for an example card). The pair's goal was to figure out the correspondences between their 6 cards by talking about the locations of the images. In each set, three images were `redundant,' appearing in the same location on every card---discussing these was not very useful for the task---while the other three were `diagnostic' and necessarily had to be referred to. This design therefore had the peculiar property that different drawings appear with different frequencies: some objects were referred to nearly 100 times (e.g. if diagnostic for every set of cards across all 16 rounds) and others only a handful of times. 
+
+Their core result was that, taken in aggregate, frequently mentioned targets tend to be labeled using shorter phrases than infrequently mentioned targets, thus reproducing Zipf's law within the microcosm of a single conversation. To explain the process by which such a distribution emerges, they reasoned that labels may change with repeated use over the course of interaction. Indeed, the first time participants referred to a figure, they used a lengthy, detailed description (``the upside-down martini glass in a wire stand'') but with a small number of repetitions -- between 3 to 6 times, depending on the pair -- the description was reduced down to the limit of a single word (``martini''). 
+
+\begin{figure}
+\centering
+\includegraphics[scale=.25]{krauss-weinheimer-stims.png}
+\includegraphics[scale=.25]{clark-tangram-stims.png}
+\caption{}
+\end{figure}
+
+This utterance length reduction effect has been replicated many times under many conditions (see Table X)\todo[inline]{Include list of studies?}, most significantly by Clark \& Wilkes-Gibbs (1986). This streamlined version honed in on the process of social reasoning that allowed partners to successfully use short labels by the end. In their version of the task, participants were given boards containing the same 12 abstract tangrams (see Fig. 1b for a subset) but in scrambled orders. One participant -- the ``director'' -- was assigned to move sequentially through the grid, describing each one so that the other player -- the ``matcher'' -- can rearrange their tangrams to match. Critically, once the pair reached consensus and received feedback about mismatches, their tangrams are re-scrambled and they repeat the task for a total of 6 rounds. Thus, each of the 12 objects were referred to exactly 6 times. 
+
+%The strong result of reduction over time was robust to a couple differences from Krauss \& Weinheimer (1964), though perhaps due to the increased complexity of the figures, descriptions tended to be longer overall. First, the immediate context is larger (12 vs. 6 figures) and held constant throughout the whole experiment instead of varying from set to set. Second, the roles are asymmetric, with the director taking the burden of producing descriptions. Furthermore, they examined an additional measure: the number of conversational turns taken on each tangram. This measure decreased significantly as well, going from about four turns down to only one. 
+
+One of the most obvious criticisms of a strong interpretation of reduction as evidence of convention formation is that it is just a product of individual learning or conceptual refinement on the part of the speaker and really has nothing to do with the communication task or partner at all. There are two main responses to this criticism: (1) the director's initial description strongly depends on the intended audience and (2) reduction is idiosyncratic and partner-specific -- if the experimenter intervenes and swaps out partners, directors revert to longer messages until new conventions are again established. 
+
+\subsection{Initial descriptions rely on social expectations}
+
+While a full review of ``audience design'' in generating referring expressions is outside the scope of this paper, a handful of results are directly relevant for understanding the lexical priors that participants bring to bear in repeated games. In one demonstration, Fussell \& Krauss (1989) asked forty students produce referring expressions for the same class of abstract line drawings used in their repeated reference games. Instead of proceeding to play the game in person, however, these messages were intended for later identification (see also Krauss et al, 1968; Danks, 1970; Innes, 1976 for earlier variations on this design). Half the participants were told that these messages were intended for themselves in the future (the `non-social' or `familiar listener' condition) while the other half were told that another participant would see them (the `social' or `unfamiliar listener' condition). 
+
+Because these figures were equally unfamiliar to both groups, a non-social individual learning account of reduction would predict that both groups should produce equally long descriptions. Instead, utterances intended for others were more than twice as long as utterances for oneself (12.7 vs. 5.0 words). Furthermore, when participants were brought back into the lab 3-6 weeks later to perform a 30-way identification task given these previously collected descriptions, they performed best given their own (86\% accuracy) but when presented with others participants' descriptions, they did significantly better when those descriptions were explicitly designed for an unfamiliar listener (60\% vs. 49\%). 
+
+Note that one-shot messages intended for oneself are essentially the same length as the highly conventionalized messages players produce for their partner at the end of a repeated reference game. In terms of our hierarchical learning model, this is consistent with the claim that people have lower uncertainty about their own lexicon than the anticipated lexicon of an anonymous other, drawn from their global prior
+\footnote{In principle, we expect that these are points on a continuum, with stronger prior expectations for close friends or family with whom we have a long history of interaction and potentially weaker expectations for children, non-native speakers, or out-group members. This first prediction was tested by Fussell \& Krauss (\cite{FussellKrauss89_FriendsAndStrangers}) who brought self-identified pairs of friends into the lab and had them individually produce descriptions such that `their friend' could identify it. They failed to find a significant difference in description length from the descriptions produced for strangers in \cite{FussellKrauss89_IntendedAudienceCommonGround}, but this negative result is somewhat hard to interpret for two main reasons acknowledged by the authors. First, their interpretation of `friendship' was not well-controlled and many pairs were only casual acquaintances drawn from the same college population as the imagined `another student' those in the stranger condition were instructed to produce descriptions for. Second, even with deep knowledge of an intimate partner's lexicon, it is not clear how relevant this knowledge would describing for a set of abstract line figures: it was specifically designed to be novel and somewhat unnatural.
+}. 
+Still, this global prior is a good enough approximation that they can achieve significantly above-chance recognition performance by taking it into account. It is also notable that similar effects on message length were found by Innes (1976) using abstract designs, inkblots, and poems, but not found in Krauss et al (1968) where the same procedure was conducted with color chips. Strong lexical priors (i.e. global conventions) exist for common colors but not for vaguer, novel stimuli with which speakers have never had experience communicating. 
+
+There is also evidence that initial priors are well-calibrated to cultural knowledge in the target population. For example, in a repeated reference game using faces of public figures like Woody Allen and Ronald Reagan, speakers gave lengthier initial descriptions for figures who were expected to be less identifiable or well-known, as estimated from independently elicited priors (Fussell \& Krauss, 1992). This relationship held when restricted to messages containing correct names, meaning that speakers who themselves knew the identity of the figure were nonetheless more likely to add additional information to their initial description when they expected a typical partner not to know. A speaker's lengthy initial description of an ambiguous stimuli, then, can be attributed to accommodating their probabilistic representations of others' lexica in context: that is, to social reasoning, not mere unfamiliarity with the object.
+
+
+\subsection{Reduction and adaptation is partner-specific}
+
+While social reasoning is already apparent here is abundant evidence that the conventions formed over the course of interaction are partner-specific: in other words, the speaker is learning a specific model of their partner's language, not just privately forming an association between words and objects. 
+
+Weber \& Camerer (2003) showed that? 
+
+\begin{itemize}
+\item Brennen \& Clark, 1996 (Compare ahistorical i.e. pure informativity vs. various historical models: recency, frequency, provisionality, partner-specificity)
+\item Exp. 1: 50\% of players kept overinformative label (`pennyloafer') after switching to less `close' context when there's only one shoe
+\item Wilkes-Gibbs \& Clark, 1992
+\item Switched out partner after 6 rounds; resets w/ naive partner (vs. what you'd expect if it was just practice)
+\item Metzing and Brennan (2003)
+\item Duff \& Brown-Schmidt stuff
+\end{itemize}
+
+
+\subsection{Adaptation is path-dependent}
+
+\begin{itemize}
+
+\item talk about arbitrariness and stability (i.e. initially there are alternatives in priors)
+\item Talk about (Carroll, 1980) who elaborates on naming vs. describing, analyzes hedges (e.g. begin by expressing more uncertainty).
+\item talk about provisionality experiment in Brennen \& Clark (1996): more variability across pairs than within pairs; 
+\end{itemize}
+
+
+\subsection{Reduction depends on quality of feedback}
+
+Feedback also plays a critical role in our model of convention formation as hierarchical learning: this is the data that both partners must condition on to update their beliefs. In the absence of additional cues to the meaning that their partner is using to interpret their messages, a speaker or drawer can only continue to rely on their prior, or indeed elaborate upon it.
+
+A common feature of the reference games reviewed so far is the capacity for \emph{real-time feedback}: either player may say anything at any point in time, thus allowing for interruptions, back-channel responses (uh-huh, hmmm, huh?), clarification questions, and so on. To what extent is this design choice necessary for convention formation? Krauss \& Weinheimer (1966) were the earliest to address this question by manipulating the kind of feedback received by the speaker in an iterated reference game. 
+
+In one condition, participants were able to talk freely and bidirectional as before; in another condition, the channel was unidirectional: the speaker was unable to hear the listener's responses. This real-time feedback manipulation was crossed with a behavioral feedback manipulation where the experimenters intercepted the listener's responses: one group of speakers was told that their partner made the correct response 100\% of the trials (regardless of their real responses), while another was told on half of the trials that their partner made the incorrect response. 
+
+Intuitively, we might expect that if the speaker is unsure how their longer descriptions are being interpreted -- unsure whether or not they can get away with shorter, more ambiguous expressions -- they may not have enough evidence about meanings to justify shorter utterances. Indeed, Krauss \& Weinheimer (1966) found that entirely blocking the feedback channel significantly limited the reduction effect, with speakers converging to utterances that are about twice as long -- twice as inefficient -- in the limit. When speakers were told their partner was performing poorly, their ability to form conventions was further limited, though to a lesser extent. In the extreme case of trying to communicate to a listener who can't respond and appears to not understand, speaker utterance length actually increased with repetition after an early dip. 
+
+More graded disruptions of feedback seem to force the speaker to use more words overall but not to significantly change the rate of reduction (though rigorous comparisons between rates have not been conducted). For example, Krauss \& Bricker (1967) tested a transmission delay to temporally shift feedback and an access delay to block the onset of listener feedback until the speaker is finished. Later, Krauss et al (1977) replicated the adverse effect of delay but showed that undelayed visual access to one's partner cancelled out the effect and returned the number of words used to baseline. 
+
+Corresponding effects have been found in repeated graphical communication games (see Section XX) where participants use a white board instead of an audio channel (e.g. Garrod et al, 2007). In the complete absence of feedback (i.e. when the viewer doesn't get to see or make their selections until after the drawer has already completed the whole experiment), drawings also fail to reduce and in some cases grow more complex over time. Successively richer feedback mechanisms, however, do seem to increase the rate of reduction: allowing the viewer to go through one or more rounds of `marking up' the drawing after it is completed (similar to repair or turn-taking in linguistic channels), swapping roles each round, or giving concurrent feedback by drawing side-by-side instead of waiting until completion (similar to verbal backchannels). Graphical experiments also allow for more fine-grained comparison of concurrent feedback: in a non-repeated design provided evidence that coordination is impeded if participants are forced to draw in different boundaries of the screen, or if these boundaries are transposed across screens, preventing arrows or reference to elements of a partner's drawing. 
+
+The ability to actively \emph{give} feedback is also critical for the listener to learn effectively \cite{SchoberClark89_Overhearers}. \todo[inline]{Tangrams w/ overhearer; Compare to equivalent finding w/ graphical conventions in Garrod et al (2007), expt. 3. Think about how to accommodate the effect of listener feedback in model? }
+
+
+\section{Convention-formation across modalities}
+
+\begin{quote}
+the oral modality assumed the segmented and combi- natorial code not because of its strengths but to com- pensate for its weaknesses. The oral modality is not well suited to conveying messages mimetically [i.e., iconically], even though that function is also important to human languages. This function is, however, very well served by the manual modality'' (Goldin-Meadow and McNeill, p. 155).
+\end{quote}
+
+While most studies of adaptation and convention formation have focused on spoken or written language, there has been a recent surge of interest in exploring similar temporal dynamics in other communication modalities. This line of research is relevant for our proposal in several ways. First, it is a core claim of the hierarchical learning hypothesis that the mechanisms underlying adaptation and convention formation are domain-general. In other words, there's nothing special about spoken or written language; any ad hoc system that we use to communicate and coordinate with other minds should display similar learning dynamics because they are all subject to the same functional pressures. 
+
+Second, because the hierarchical learning hypothesis claims a critical role for the global priors we build up across many interactions with many individuals, we predict that different communication modalities should nevertheless display certain systematic differences in their dynamics. For example, consider a reference game where the targets are complex, abstract geometric shapes. In the verbal modality, these shapes are highly innominate -- we don't have much experience naming or describing them with words, thus our global prior is rather weak and we expect local adaptation to play a much bigger role. In the graphical modality, where you must communicate by drawing on a sketchpad, on the other hand, you have a much stronger prior because every observer's perceptual system can be assumed to share the ability to assess visual similarity (though note that explaining these similarity judgements presents its own challenges). Other stimuli have precisely the opposite property: to distinguish between natural images of dogs, for instance, we may have very strong priors in the linguistic modality (e.g. `husky', `poodle', `pug', etc) but drawing the necessary fine distinctions in the graphical modality may be initially very costly, encouraging the formation of local conventions. 
+
+Practically speaking, then, considering iterated reference games across different modalities is necessary to (1) test which adaptation effects, if any, are robust \& attributable to general mechanisms and (2) explain variance across settings where global priors and local adaptation trade off in different ways. If we stuck solely to the verbal modality, we would be limited to a fairly narrow range of stimuli (e.g. abstract shapes/tangrams) where behavior in the lab isn't totally dominated by strong prior conventions people bring into the interaction. Here, we briefly review key results in the two non-linguistic modalities where there is now a critical mass of interest: drawing and gesture. While most of the studies were conducted under the auspices of experimental semiotics, placing the focus on how novel communication systems emerge and develop certain properties in the first place, we mine them for evidence of flexibility and adaptation inside the mind. 
+
+\subsection{Graphical convention-formation}
+
+The clearest analogs to repeated linguistic reference games in the style of Krauss \& Weinheimer (1964) are the interactive Pictionary games first introduced experimentally by Healey et al (2007) and Garrod et al (2007)
+\footnote{Healey et al (2001) introduced an earlier version of the music drawing game, but for the purposes of this review, no piece appeared as the target more than once and the only dynamics reported were moderate levels of coordination on similar drawing types as coded by judges (i.e. player 1 is more likely to use Figurative drawings than Abstract drawings when player 2 also uses Figurative drawings). Similarly, Healey et al (2002) gives a brief overview of several repeated designs, but these data apparently only appear with full details in later publications.
+}, 
+where participants were given a whiteboard to draw on instead of an auditory channel to talk through. For example, Garrod et al (2007) used a set of 12 concept words as targets (``Robert de Niro'', ``poverty''), which the drawer was assigned in a randomized order. The viewer was also given a list of these words, which also included four distractors for a total context size of 16, and the drawer was instructed to produce some graphical message for each concept so that the viewer could re-rank their list in the same order. After drawing all twelve words, the lists were shuffled and the pair referred to each several more times. Similar to the reduction of tangram descriptions over the course of multiple rounds, Garrod et al (2007) found that drawings became gradually simpler as the game progresses, provided that the right feedback mechanisms are in place (see Section X). 
+
+\begin{itemize}
+\item Theisen et al, 2010 (Adaptation of Garrod et al 2007 focusing on systematicity)
+\end{itemize}
+
+\subsection{Other modalities}
+
+A final modality-based method to examine learning is to attempt to destroy or scramble any meaningful priors that people might carry into the social interaction. For example, Galantucci (2005) introduced a novel `seismograph' interface for communication -- a stylus that could be moved side-to-side or lifted up or down to make contact with the sketch pad while the vertical dimension drifted downward at a constant rate. The resulting messages consequently look nothing like the usual kinds of symbols people create: the relationship between motor actions and perceptual output is broken such that executing a familiar movement for a symbol or numeral instead produces an odd, wavy scribble. 
+
+This same interface was adapted for a more straightforward reference game where the referents were animal silhouttes (Roberts and Galantucci, 2012) or colors and line segments (Roberts et al, 2015). 
+
+Other novel modalities used in iterated reference games include a `whistle' language where movements along a vertical touch bar slider correspond to changes in pitch (Verhoef et al, 2015); a visual analog where movements along the slider were presented visually (Verhoef et al, 2016); and 
+
+\section{Discussion}
+
+\subsection{Adaptation on the basis of latent group structure}
+
+In addition to updating our model of a particular partner based on the immediate past, i.e. utterances made in previous rounds of the game, a hierarchical bayesian learning model predicts that sparse observations of a partner's language use may license much broader inferences about their lexicon via diagnostic information about their social group or background. If someone's favorite song is an obscure B-side from the pioneering 1970s punk label Dangerhouse, you can make fairly strong inferences about what else they like to listen to and how similar they might be to you (Velez et al, 2016; Gershman et al, 2017); similarly, if someone casually refers to an obscure New York landmark you also recognize, you can safely update your beliefs about their lexicon to include a number of other conventions shared among New Yorkers. 
+
+This kind of rapid partner-specific adaptation was explored in a study by Isaacs \& Clark (1987) where novices and experts were paired for a repeated reference game using postcards of New York landmarks. Both directors and matchers could be either novices or experts, creating a 2x2 design. While a strong main effect of reduction was found across all pairings of experts and novices, they differed strikingly in their use of proper nouns (i.e. conventions shared by experts). For instance, over the course of the experiment, experts consistently used proper nouns (e.g. the Rockefeller Center) when talking to other experts, while novice directors gradually adapted to expert matchers, doubling their use of proper names over the course of the experiment.
+
+Most striking, however, was the observation that directors had already adapted in the first few trials of the first round: by the fourth round expert directors were already using a proper noun three times more often when talking to other directors than in talking to novices. In fact, independent raters were presented with transcripts from the first two postcards and correctly judged the expertise of the two partners 84\% of the time. This is a straightforward prediction of a hierarchical Bayesian model: given a latent group representation of New Yorkers, a director can make a strong prediction that if their partner belongs to this group, ``Rockefeller Center'' will belong to their lexicon with high probability. Hence, any interpretation failure is strong evidence that their partner is not in the group and is thus equally unlikely to recognize ``Citicorp Building'' or ``Brooklyn Bridge''. In this way, convention formation and social group inference are intimately intertwined. 
+
+Our lexical prior for a potential communication partner, of course, can be shaped by contextual and perceptual factors as well. When taking your bicycle into the shop for repairs, it's not uncommon to be assailed by other patrons throwing around jargon like you're one of them. 
+
+\subsection{Coordination at other levels}
+
+While we have thus far limited our discussed specifically to the reduction and simplification of messages as participants coordinate on meanings given a shared set of referents, this is only one of many levels at which conventions can form. In more complex circumstances, there is often initial uncertainty not just about which of a small set of targets a particular message refers to, but how to represent the relevant targets of reference in the first place. For instance, when using sketches to communicate about the identity of complex pieces of music (Healey et al, 2007), a particular set of strokes could correspond to any number of properties (pitch, tempo, melody, rhythm, intensity) at any temporal granularity. This requires another layer of coordination that must be jointly learned along with the mappings themselves. 
+
+To see how our hierarchical learning account can be extended to these cases, we consider the classic study by Garrod \& Anderson (1987) where participants were paired for a maze navigation task. 
+
+\todo[inline]{Garrod \& Anderson, 1987 Mazes}
+\todo[inline]{Schober, 1993?
+``When interlocutors face each other, terms like on the left are ambiguous depending on whether the speaker takes what we can call an egocentric or an allocentric reference frame. Schober found that if, for instance, A said on the left meaning on A's left (i.e., an egocentric reference frame), then B would subsequently describe similar locations as on the right (also taking an egocentric frame of reference)''}
+\todo[inline]{Dale et al, 2011: Don't analyze linguistic data but show that eyes/hands become coordinated over course of tangrams task}
+
+Nonetheless, Galantucci found that most partners were able to jointly learn a shared communication system to solve repeated spatial coordination tasks in a relatively short span of time. In the simplest version of this task, each player was placed in one of four rooms on a map, with the identity of a room marked only by large symbols. They were rewarded for finding one another in one room-change or less, and therefore needed to use their communication channel to convey information about their position and where to go. Note that this game contains the same basic structure as a basic tangram-style reference game where there are four `targets' (rooms marked by shapes) that must repeatedly be referred to: it is just embedded inside a considerably more complex set of strategic and spatial challenges. The average time to converge on an effective system was a little over an hour. 
+
+From the perspective of learning, this is an incredible feat: because participants were basically told nothing before beginning play, they had to infer the spatial structure of the map, the categorical structure of strokes used by their partner (e.g. when are two distinct percepts the same `sign'), the meaning of each stroke (e.g. which stroke corresponds to which room? Is it a request like `let's go here' or a statement like `I am here'?), and so on, all from fairly sparse and noisy feedback. Unfortunately, any universal conclusion about how participants managed this feat was difficult to draw: only ten pairs played the game, and essentially every pair found a different solution. Still, these solutions bear the same qualitative signatures of the convention formation process found in all iterated communication games: when prior conventions are not sufficient for the task at hand, partners rapidly learn arbitrary and path-dependent but stable solutions from observing one another's behavior in early rounds. 
+
+\todo[inline]{brief call-out to, like, Selten \& Warglien, 2007 where dyads used ``string of permissable letters'' like ``RM''? Not quite reference game b/c both players typed messages that had to match? Main focus was on compositional grammar? }
+
+\subsection{The relationship between local and global conventions}
+
+\begin{itemize}
+\item Caldwell \& Smith, 2012
+\item Replicated Garrod et al (2007) with microsocieties; argued that repeated reference within isn't necessary for conventionalization \& simplification
+\item Garrod \& Doherty, 1994
+\item Compare dyad vs. community on mazes games
+\item Centola \& Baroncelli, 2015
+\item Network architectures for population-level emergence
+\item Fay et al, 2010 
+\item Community-based version of pictionary
+\item Garrod et al (2010)
+\item Directly compare vertical and horizontal transmission
+\end{itemize}
+
+It is clear how global conventions shape the formation of local conventions. They form the prior distribution from which we assume a novel partner's lexicon is drawn. The natural language games we've reviewed in the tradition of Krauss \& Weinheimer (1964) and Clark \& Wilkes-Gibbs (1986) implicitly rely on the fact that participants share the same native tongue to get communication off the ground. Lengthy initial descriptions are only useful because both participants share strong beliefs about the meanings of words in general, even if those global conventions aren't sufficient for efficiently naming these particular novel stimuli in this context. 
+
+But where do global conventions come from in the first place? Some are certainly based on assumptions about shared perceptual systems. Iconic meanings derive directly from perceptual experience and thus hold across language communities -- onomatopoeia, for example, or the sound-symbol association of kiki with sharp objects and boba with smooth objects. Yet for the arbitrary form-meaning mappings that make up the bulk of our linguistic lexicon, it is difficult to imagine any mechanism for their emergence that doesn't first pass through local conventions. How do interactions with a single partner shape one's prior for interactions with other partners, and how do these priors converge across social networks? 
+
+By allowing participants to interact with multiple partners, several studies have used iterated reference games to probe this pathway. 
+
+Healey et al (2007) split participants into several `communities' -- each participant first played 12 rounds of a reference game with members of their own community. In this game, they concurrently drew sketches on the same sketchpad to determine whether pieces of music they heard were the same or different, and no target pieces were repeated. Thus, across this phase of the experiment, they are increasingly likely to be paired with others who have an indirect connection in the network: who have also met their previous partners or partner's partners. After several rounds of this procedure, they enter a `test' phase of the experiment, where they are either paired with a novel member of their own community or a member of a different community (without being explicitly told which it is). In either case, their partner is novel, but only in the in-group condition does a hierarchical learning account predict that should they should share similar priors, or global conventions for communicating. Indeed, they found that participants required more ink to succeed with an out-group member, and that drawings were more likely to shift to a ''Figurative'' style and thus be more interpretable without shared task-specific conventions (as opposed to the ``Abstract'' drawings more common within an in-group). 
+
+\subsection{Hierarchical learning in development}
+
+The mechanisms for coordinating on local conventions or pacts within an interaction are the same that support general language-learning
+... language is a hierarchical model where there's one strong prior at the top level and many layers beneath depending on it but adapting to contexts?
+
+Enriches pure cross-situational models w/ hierarchical model (see Eve Clark textbook)
+
+\begin{itemize}
+\item Glucksberg, Krauss, \& Weisberg, 1966
+\item Devo version of experiment; kids don't converge on name
+\item (see Krauss \& Glucksberg, 1969 for error analysis but they don't report words)
+\end{itemize}
+
+\subsection{Other theories and models of convention formation in repeated reference games.}
+
+A number of distinct theoretical accounts have been offered to make sense of pieces of this large body of results. These accounts roughly divide into two camps: the `minimalists' and the `maximalists.' The minimalists seek to identify the simplest set of mechanisms that, when implemented in a communicative agent, will give rise to some conventional phenomena. Often these mechanisms involve low-level priming or simple `if-then' heuristics and strongly reject the need for any representation of `other-modeling.' The maximalists, on the other hand, argue that partner-specific adaptation -- when studied in its full real-world complexity -- can only be explained by viewing dialogue as a structured, collaborative interaction between agents using more sophisticated social reasoning mechanisms. 
+
+\begin{itemize}
+\item Barr, 2004
+\item Steels, 2005; 2015, Vogt, 2005
+\item Centola \& Baroncelli, 2015
+\item Shoham \& Tennenholtz, 1997 (Keep a memory of actions people have taken over the last m rounds and adopt the one that led to the highest payoff (intended to account for global interactions))
+Agents themselves not probabilistic, so a particulate pair 
+\item Garrod \& Pickering, 2004 (interactive alginment) 
+\item Clark \& wilkes-gibbs (1986 etc) collaborative model
+\end{itemize}
+
+% There are many other intermediate mechanisms for feedback that remain unexplored: restricting concurrent feedback but allowing the director to see which item was picked; allowing the matcher to interrupt the continuous message at any point with their guess; allowing the director to continuously track the matcher's current guess over the course of creating their message.
+
+\section{Conclusion}
+
+Language is not some monolithic body of knowledge that we acquire at an early age and deploy mechanically for the rest of our lives. Nor is its evolution a slow, inter-generational drift. It is a means for communication -- a shared interface between minds -- and must therefore adapt over the rapid timescales required by communication. In other words, we are constantly learning language. Not just one language, but an enormous family of related languages, across every repeated interaction with every partner. 
+
+
+\section{\bf Acknowledgments}
+\small
+\noindent RXDH was supported by the Stanford Graduate Fellowship and the National Science Foundation Graduate Research Fellowship under Grant No. DGE-114747.
+
+\bibliography{qa}
+\bibliographystyle{apacite}
+
+
+\end{document}  

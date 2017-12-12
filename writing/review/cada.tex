@@ -31,7 +31,7 @@
 	{\def\@captype{figure}}
 	{}
 
-\setcounter{tocdepth}{1}
+\setcounter{tocdepth}{2}
 \usepackage{lipsum}
 %\pagenumbering{gobble}
 %\usepackage{apacite}
@@ -78,13 +78,31 @@ Any computational theory of flexibility and adaptation in communication must the
 
 \end{enumerate}
 
-\section{Modeling convention formation as hierarchical Bayesian learning}
+\subsection{Modeling convention formation as hierarchical Bayesian learning}
 
-In this paper, we review the empirical evidence for each of these competencies and argue that hierarchical Bayesian models provide the appropriate computational and conceptual framework to understand how these competencies are coordinated for effective communication. Just as our concept of a dog, built up over many individual experiences across a lifetime, provides stable expectations about the properties of a new instance -- four legs, wagging tail, barking noises -- our knowledge of language provides stable communicative expectations. Yet just as years of living with your beloved Fido reveals properties which deviate from your general dog concept -- patches of hair missing from his legs, an odd squeaking noise he makes when excited -- the language we use to talk with a family member or close collaborator may deviate considerably from the usage predicted by global conventions.
+In this paper, we introduce a hierarchical Bayesian model (HBM) of convention formation \cite{GelmanEtAl14_BDA,TenenbaumKempGriffithsGoodman11_Grow_a_Mind_Science},  conceptually extending the model proposed by \citeA{HawkinsFrankGoodman17_ConventionFormation}. Hierarchical models have been key to explaining how the human mind solves difficult inductive problems in domain like causal learning \cite{KempGoodmanTenenbaum10_LearningToLearn,GoodmanUllmanTenenbaum11_TheoryOfCausality} and concept learning \cite{KempPerforsTenenbaum07_HBM} where abstract properties must be jointly inferred with idiosyncratic particulars of instances. Unlike the fixed, biological concept of a dog, though, language is a moving target. The only data we use to ground our learning is produced by other agents who are in the same position as we are, and our only goal is to coordinate on the same meanings in context. This is the sense in which the meanings we learn are conventional. This \emph{social grounding} is precisely what gives rise to the fascinating idiosyncracies of local convention formation that we survey in the remainder of the paper. 
 
-Our global conventions are learned and generalized over many extended interactions with many different people early in life, and this shared semantic prototype is the backbone supporting rapid learning for new partners and situations. Unlike the fixed, biological category of a dog, though, language is a moving target. The only data we use to ground our learning is produced by other agents who are in the same position as we are, and our only goal is to coordinate on the same meanings.
+We begin by defining a lexicon as a function $$\mathcal{L}_i: (w, o) \rightarrow [0,1]$$ assigning any word-object pair a real-valued meaning in the unit interval \cite{GrafEtAl16_BasicLevel}.
+Just as our concept of a dog, built up over many individual experiences across a lifetime, provides stable expectations about the properties of a new instance -- four legs, wagging tail, barking noises -- our accumulated lexical knowledge provides stable communicative expectations. This knowledge is represented by a `overhypothesis' or shared lexical representation $\Theta_0$, which parameterizes the prior expectations about any individual partner's lexicon: $P(\mathcal{L}_i | \Theta_0)$. For the conceptual purposes of this paper, it is not important exactly what form this distribution takes, or what initial prior $P(\Theta_0)$ could in principle guide early language learning
+\footnote{
+For simplicity, we could assume $\Theta_0$ is an $\mathcal{W} \times \mathcal{O} \times 2$ tensor containing values $(\alpha_{(w,o)}, \beta_{(w,o)})$ for every entry $(w,o)$ in the lexicon $\mathcal{L}_i$. This would factor the lexical prior $P(\mathcal{L}_i | \Theta_0)$ into independent Beta distributions over intervals $[0,1]$. It would then be straightforward to place an uninformative prior $P(\Theta_0)$ over that tensor which does not overwhelm the likelihood \cite<see>[p. 110, for a reasonable choice]{GelmanEtAl14_BDA}. More generally, we could allow for arbitrarily complex dependencies between entries of the lexicon by using a Bayesian neural network with weight tensor $\Theta_0$.% that takes word-object pairs $(w,o)$ as input. 
+}. It only matters that this knowledge is hierarchical: we expect all members of our language community to share some commonality in what they mean by things. 
 
-This hypothesis is grounded in a half-century of empirical work on partner-specific adaptation. While the data real-world partners learn from surely consists of much more than past messages, simple communication games have been a productive place to start. this appears to be a minimal configuration for producing adaptation.  Partner-specific adaptation has been investigated in the lab largely using a communication game paradigm. Pairs of participants are shown arrays of objects, presented in randomized order. One player -- the speaker -- must produce a message allowing their partner to select a given target from the context. While this paradigm has been immensely productive for understanding the production of informative referring expressions in immediate context (cite van Dempel, dutch guys, etc), a range of even richer phenomena begin to emerge when the communication task is repeated over time. 
+Now that we have defined a hierarchical likelihood on lexical beliefs, we must say how we \emph{learn} partner-specific models. Just as years of living with your beloved Fido reveals properties which deviate from your general dog concept -- patches of hair missing from his legs, an odd squeaking noise he makes when excited -- the language we use to talk with a family member or close collaborator may deviate considerably from the usage predicted by global conventions. In other words, our beliefs about a particular partner's lexicon $\mathcal{L}_i$ are formed by integrating our abstract lexical knowledge $\Theta_0$ with particular  observations $D_i$ of that particular individual:
+$$%\begin{array}{rcl}
+P(\mathcal{L}_i | D_i)  \propto \int_{\Theta_0}P(\mathcal{L}_i | \Theta_0, D_i) P(\Theta_0 | D_i) 
+%                     & = & \mathbb{E}_{\Theta_0}[P(\mathcal{L}_i | \Theta_0, D_i)] 
+%\end{array}
+$$
+While this holds when we only have observations from a single speaker, note that our posterior beliefs about $\Theta_0$ are in fact informed by observations from \emph{all} speakers: $D = \bigcup_{i=1}^k D_i$. For the adult language users who have observed innumerable uses of language over their lifetimes, the contribution of a new data point to the overhypothesis $P(\Theta_0 | D)$ should be negligible; the contribution to a partner-specific model, however, can be quite strong, as we show. 
+
+Finally, to fully specify our hierarchical convention formation model, we must link our beliefs about a partner's lexica to their actual behavior with a likelihood function $P(D_i | \mathcal{L}_i, \Theta_0)$. This, of course, is supplied by the Rational Speech Act framework \cite{FrankGoodman2012,GoodmanFrank2016}: we assume speakers produce utterances that are parsimonious yet informative in context with respect to their lexicon, and listeners interpret utterances by inverting a speaker model. Because we expect our partner to use language rationally given some lexicon, the utterance they choose to refer to some object will be probable under some lexica and highly improbable under others. In this way, a particular agent's language use is a cue to their particular lexicon. We omit mathematical details here due to the conceptual nature of the article, but a full account of the non-hierarchical version of this model can be found in \cite{HawkinsEtAl17}.
+
+In summary, our hierarchical model formalizes the intuition that global conventions are learned and generalized over many extended interactions with many different people early in life, and that this shared semantic prototype is the backbone supporting rapid learning for new partners and situations. 
+
+\subsection{Convention formation in the lab}
+
+While the data real-world partners learn from surely consists of much more than past messages, simple communication games have been a productive place to start. this appears to be a minimal configuration for producing adaptation.  Partner-specific adaptation has been investigated in the lab largely using a communication game paradigm. Pairs of participants are shown arrays of objects, presented in randomized order. One player -- the speaker -- must produce a message allowing their partner to select a given target from the context. While this paradigm has been immensely productive for understanding the production of informative referring expressions in immediate context (cite van Dempel, dutch guys, etc), a range of even richer phenomena begin to emerge when the communication task is repeated over time. 
 
 We begin by reviewing core experimental results, restricting ourselves to a relatively narrow class of repeated reference games. This review is  organized around a meta-analytic parameterization of the paradigm (see Table 1), highlighting several properties of the task that appear to affect the rate at which conventions form. We then briefly contrast our hierarchical model with several different theories of adaptation and convention formation. 
 
@@ -266,6 +284,8 @@ Enriches pure cross-situational models w/ hierarchical model (see Eve Clark text
 
 \subsection{The role of common ground}
 
+\todo[inline]{Note shift from thinking about \emph{own} lexicon to reasoning about \emph{partner's} lexicon}
+
 \subsection{Other theories and models of convention formation in repeated reference games.}
 
 A number of distinct theoretical accounts have been offered to make sense of pieces of this large body of results. These accounts roughly divide into two camps: the `minimalists' and the `maximalists.' The minimalists seek to identify the simplest set of mechanisms that, when implemented in a communicative agent, will give rise to some conventional phenomena. Often these mechanisms involve low-level priming or simple `if-then' heuristics and strongly reject the need for any representation of `other-modeling.' The maximalists, on the other hand, argue that partner-specific adaptation -- when studied in its full real-world complexity -- can only be explained by viewing dialogue as a structured, collaborative interaction between agents using more sophisticated social reasoning mechanisms. 
@@ -291,7 +311,7 @@ Language is not some monolithic body of knowledge that we acquire at an early ag
 \small
 \noindent RXDH was supported by the Stanford Graduate Fellowship and the National Science Foundation Graduate Research Fellowship under Grant No. DGE-114747.
 
-\bibliography{qa}
+\bibliography{cada}
 \bibliographystyle{apacite}
 
 

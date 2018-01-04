@@ -191,7 +191,7 @@ Why produce longer utterances for others? A key empirical observation is that si
 It could therefore be worth spending a few additional words to provide clarifying information, saying ``the upside-down martini glass in a wire stand'' instead of just ``the martini'' \citeA{HawkinsFrankGoodman17_ConventionFormation}.  %even if the latter would be sufficient to remind yourself of your own experience.
 %\citeA{HawkinsFrankGoodman17_ConventionFormation} showed in simulations that a compositional variant of the Bayesian speaker model discussed earlier makes this prediction: longer messages are preferred under increased uncertainty over the lexicon. 
 
-\todo[inline]{Discuss Hupet et al, 1991 results that initial descriptions depend on `codability' and `discriminability' of stimuli in context, e.g. that there is substantial arbitrariness for some and not others\dots}
+\todo[inline]{Discuss Hupet et al, 1991 results that initial descriptions depend on `codability' and `discriminability' of stimuli in context, e.g. that there is substantial arbitrariness for some and not others\dots Also LachmanEtAl74\_Codability about intersubject agreement on names?}
 
 This explanation is also consistent with broader linguistic phenomena outside the realm of repeated reference games. For example, \citeA{PottsLevy15_Or} showed that lexical uncertainty is critical for capturing constructions like \emph{oenophile or wine lover}, where a disjunction of synonymous terms is taken to convey a definition -- information about the lexicon -- rather than a disjoint set. While the reasons that speakers produce such constructions are surely more complex, we suggests the further conjecture that speakers are more likely to produce this definitional \emph{or} when the component word is rarer or more obscure: when there is additional uncertainty over its likely meaning in the listener's lexicon. 
 
@@ -239,6 +239,8 @@ What are empirical cues to this reduction in uncertainty? The first is the use o
 
 Another characteristic of uncertainty reduction lies in \emph{what} gets reduced. Is the speaker adopting a fragment shorthand by randomly dropping function words, or are they simplifying or narrowing their descriptions to names by omitting redundant details? Closed-class parts of speech like determiners and prepositions \emph{are} much more likely to be dropped than open-class parts of speech like adjectives and nouns. But when we examine broader grammatical units using recent NLP techniques, we find that entire modifying clauses are increasingly likely to be dropped \cite{HawkinsFrankGoodman17_ConventionFormation}. This accords with early hand-tagged analyses by \citeA{Carroll80_NamingHedges}, which found that in three-quarters of transcripts from \citeA{KraussWeinheimer64_ReferencePhrases} the short names that participants converged upon were prominent in some syntactic construction at the beginning, often as a head noun that was initially modified or qualified by other information. 
 
+\todo[inline]{Mention shift from indefinite to definite? Clark \& Wilkes-Gibbs (1986)}
+
 These more fine-grained analyses suggest that reduction is grounded in the prior lexical content of the interaction and the speaker's increasing confidence in how the listener will interpret an initially ambiguous label. Like the evidence we reviewed about lexical priors, however, this evidence remains indirect and raises the need for more careful, direct measurement of lexical uncertainty over interaction. 
 
 \subsection{Quality of feedback}
@@ -247,7 +249,7 @@ If adaptation is learning, then the extent to which partners adapt should depend
 
 % In one condition, participants were able to talk freely and bidirectionally as in \citeA{KraussWeinheimer64_ReferencePhrases}; in another condition, the channel was unidirectional: the speaker was unable to hear the listener's responses. This real-time feedback manipulation was crossed with a behavioral feedback manipulation where the experimenters intercepted the listener's responses: one group of speakers was told that their partner made the correct response 100\% of the trials (regardless of their real responses), while another was told on half of the trials that their partner made the incorrect response. 
 
-Intuitively, we might expect that if the speaker is unsure how their longer descriptions are being interpreted -- unsure whether or not they can get away with shorter, more ambiguous expressions -- they may not have enough evidence about meanings to justify shorter utterances. Indeed, \citeA{KraussWeinheimer66_Tangrams} found that even when told that their partner was getting 100\% correct, entirely blocking the verbal feedback channel significantly limited the reduction effect. Speakers converged to utterances that were about twice as long -- twice as inefficient -- in the limit. Telling speakers that their partner was performing poorly also inhibited reduction as a main effect, though to a lesser extent. In the extreme case of trying to communicate to a listener who can't respond and appears to not understand, speaker utterance length actually increased with repetition after an early dip. \citeA{HupetChantraine92_CollaborationOrRepitition} later found that in the \emph{complete} absence of feedback --- when the speaker is instructed to repeatedly refer to a set of objects for a listener who is not present and will do their half of the task offline --- there is also no reduction in message length.
+Intuitively, we might expect that if the speaker is unsure how their longer descriptions are being interpreted -- unsure whether or not they can get away with shorter, more ambiguous expressions -- they may not have enough evidence about meanings to justify shorter utterances. Indeed, \citeA{KraussWeinheimer66_Tangrams} found that even when told that their partner was getting 100\% correct, entirely blocking the verbal feedback channel significantly limited the reduction effect. Speakers converged to utterances that were about twice as long -- twice as inefficient -- in the limit. Telling speakers that their partner was performing poorly also inhibited reduction as a main effect, though to a lesser extent. In the extreme case of trying to communicate to a listener who can't respond and appears to not understand, speaker utterance length actually increased with repetition after an early dip. \citeA{HupetChantraine92_CollaborationOrRepitition} later found that in the \emph{complete} absence of feedback --- when the speaker is instructed to repeatedly refer to a set of objects for a listener who is not present and will do their half of the task offline --- there is also no reduction in message length. On the listener's part, too, the ability to actively \emph{give} feedback appears critical for learning. \citeA{SchoberClark89_Overhearers} showed that listeners who overheard the entire game were significantly less accurate than listeners who could directly interact with the speaker, even though they heard the exact same utterances.
 
 More graded disruptions of feedback seem to force the speaker to use more words overall but not to significantly change the rate of reduction (though rigorous comparisons between rates have not been conducted). For example, \citeA{KraussBricker67_Delay} tested a transmission delay to temporally shift feedback and an access delay to block the onset of listener feedback until the speaker is finished. Later, \citeA{KraussEtAl77_AudioVisualBackChannel} replicated the adverse effect of delay but showed that undelayed visual access to one's partner cancelled out the effect and returned the number of words used to baseline. 
 
@@ -267,17 +269,17 @@ Most striking, however, was the observation that directors had already adapted i
 
 \section{Generalization}
 
-If the local conventions -- or lexical pacts -- formed over the course of an interaction reflect lexical learning, then what are the boundaries of that learning? How do meanings learned in one context transfer to new contexts? When can a peculiar meaning be explained away as the idiosyncrasy of a particular partner, and when does it become a generic lexical expectation or global convention? In this section, we discuss four empirical properties of generalization that computational models of convention formation must account for. Over short time scales, lexical pacts are \emph{partner-specific} but sticky across \emph{contexts} and sufficiently similar \emph{objects}. Over longer time scales, however, as agents repeatedly interact with multiple partners in larger social networks, local pacts generalize to global conventions expected to be shared across the entire \emph{community}.
+If the local conventions -- or lexical pacts -- formed over the course of an interaction reflect lexical learning, then what are the boundaries of that learning? How do meanings learned in one context transfer to new contexts? When can a peculiar meaning be explained away as the idiosyncrasy of a particular partner, and when does it become a generic lexical expectation or global convention? In this section, we discuss four empirical properties of generalization that computational models of convention formation must account for. Over short time scales, lexical pacts are \emph{partner-specific} but sticky across \emph{contexts} and sufficiently similar \emph{objects}. Over longer time scales, however, as agents repeatedly interact with multiple partners in larger social networks, pairwise conventions generalize to global conventions expected to be shared across the entire \emph{community}.
 
-\subsection{Generalization from one partner to another}
+\subsection{Partner-specificity}
 
-The mechanisms for coordinating on local conventions or pacts within an interaction are the same that support general language-learning. 
+One of the most salient and well-studied properties of local conventions is precisely that they \emph{don't} generalize immediately to novel partners. In other words, the speaker is learning a specific model of their partner on the basis of shared history, not just privately forming an association between words and objects. This was first demonstrated in a repeated reference game by \citeA{WilkesGibbsClark92_CoordinatingBeliefs}. After participants converged on efficient conventions across several rounds of interaction, a novel partner was swapped in. If the speaker's lexical representation did not distinguish between partners, then we should expect no difference before and after the intervention. Instead, speakers immediately reverted to longer messages---a 275\% increase---bringing them closer the length of the initial messages used with the original partner. 
 
-One of the most obvious criticisms of a strong interpretation of reduction as evidence of convention formation is that it is just a product of individual learning or conceptual refinement on the part of the speaker and really has nothing to do with the communication task or partner at all. There are two main responses to this criticism: (1) the director's initial description strongly depends on the intended audience and (2) reduction is idiosyncratic and partner-specific -- if the experimenter intervenes and swaps out partners, directors revert to longer messages until new conventions are again established. 
+Other interventions explored intermediate cases, where the swapped-in listener was not \emph{entirely} novel. For example, when they were a ``silent participant'' for the first phase, sitting at the same table as the speaker and able to make eye contact, there was only a 67\% increase in message length. When they were an \emph{omniscient bystander}, observing the audio and visuals of the entire exchange from a separate room, length increased slightly more (100\%). Finally, when they were a \emph{simple bystander}, seated some distance behind the director such that they could not be monitored or see the tangrams being referred to, length increased as much as with a fully novel partner. 
 
-While social reasoning is already apparent there is abundant evidence that the conventions formed over the course of interaction are partner-specific: in other words, the speaker is learning a specific model of their partner's language, not just privately forming an association between words and objects. 
+These graded generalizations reflects degrees of \emph{partial information} about the swapped-in listener's beliefs, posing a challenge even for computational models that allow partner-specific learning. It is simple for a hierarchical learning account to explain why speakers had no particular expectations about the \emph{simple bystander}, who could not see the tangrams that were being referred to and therefore was not provided with the relevant data to learn meanings. But for third parties who \emph{did} have full access to the interaction, whatever additional information the speaker is using cannot be limited to the assumption that the swapped-in listener can consult the same data, otherwise the \emph{omniscient bystander} should be treated the same as the \emph{silent participant}. One explanation, which could plausibly be incorporated into a learning model, is that although the silent participant cannot verbally respond, they do nonetheless provide a minimal feedback channel through their physical presence, e.g. eye contact or body language. Because they are co-present at the table, they belong to the intended audience for the speaker's messages, and can be monitored for cues to understanding; this evidence in turn may license stronger generalization. 
 
-The ability to actively \emph{give} feedback is also critical for the listener to learn effectively \cite{SchoberClark89_Overhearers}. \todo[inline]{Tangrams w/ overhearer; Compare to equivalent finding w/ graphical conventions in Garrod et al (2007), expt. 3. Think about how to accommodate the effect of listener feedback in model? }
+
 
 Outside of repeated reference games, there is also evidence that listeners adapt their interpretation of \emph{quantifiers} like \emph{some} and \emph{many} after repeated exposure \cite{Yildirim16_TalkerSpecificityQuantifiers}.
 
@@ -287,8 +289,6 @@ Yoon \& Brown-Schmidt
 \begin{itemize}
 \item Brennen \& Clark, 1996 (Compare ahistorical i.e. pure informativity vs. various historical models: recency, frequency, provisionality, partner-specificity)
 \item Exp. 1: 50\% of players kept overinformative label (`pennyloafer') after switching to less `close' context when there's only one shoe
-\item Wilkes-Gibbs \& Clark, 1992
-\item Switched out partner after 6 rounds; resets w/ naive partner (vs. what you'd expect if it was just practice)
 \item Metzing and Brennan (2003)
 \item Duff \& Brown-Schmidt stuff
 \end{itemize}
@@ -316,6 +316,8 @@ The stickiness of conventions has been challenged recently by \citeA{MisyakEtAl1
 \cite{MaltSloman04_ConversationConvention}
 
 \subsection{Generalization from individual to community}
+
+The mechanisms for coordinating on local conventions or pacts within an interaction are the same that support general language-learning. 
 
 \begin{itemize}
 \item Caldwell \& Smith, 2012
@@ -376,6 +378,7 @@ While we have thus far limited our discussed specifically to the reduction and s
 
 To see how our hierarchical learning account can be extended to these cases, we consider the classic study by Garrod \& Anderson (1987) where participants were paired for a maze navigation task. 
 
+\todo[inline]{Lexical pacts vs \emph{conceptual} pacts; could uncertainty in tangrams be at perceptual level rather than meaning level, i.e. how to construe or categorize an ambiguous object may be uncertainty but the meaning of a word and that underlying category is fixed?}
 \todo[inline]{Garrod \& Anderson, 1987 Mazes}
 \todo[inline]{Schober, 1993?
 ``When interlocutors face each other, terms like on the left are ambiguous depending on whether the speaker takes what we can call an egocentric or an allocentric reference frame. Schober found that if, for instance, A said on the left meaning on A's left (i.e., an egocentric reference frame), then B would subsequently describe similar locations as on the right (also taking an egocentric frame of reference)''}
@@ -387,9 +390,13 @@ From the perspective of learning, this is an incredible feat: because participan
 
 \todo[inline]{brief call-out to, like, Selten \& Warglien, 2007 where dyads used ``string of permissable letters'' like ``RM''? Not quite reference game b/c both players typed messages that had to match? Main focus was on compositional grammar? }
 
-\subsection{Mechanisms for learning}
+\subsection{Underlying mechanisms}
 
-\cite{DuffBrownSchmidt12_Hippocampus}
+Partner-specific representations, N400? \cite{TesinkEtAl09_MeaningfMRI,VanBerkum08_NeuralSpeakerMessage}
+
+Declarative memory (hippocampus?) \cite{DuffBrownSchmidt12_Hippocampus}
+
+Time-course questions? \cite{HortonGerrig16_MemoryBasedReview}
 
 %\subsection{Other theories and models of convention formation in repeated reference games.}
 %

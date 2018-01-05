@@ -253,6 +253,8 @@ Intuitively, we might expect that if the speaker is unsure how their longer desc
 
 More graded disruptions of feedback seem to force the speaker to use more words overall but not to significantly change the rate of reduction (though rigorous comparisons between rates have not been conducted). For example, \citeA{KraussBricker67_Delay} tested a transmission delay to temporally shift feedback and an access delay to block the onset of listener feedback until the speaker is finished. Later, \citeA{KraussEtAl77_AudioVisualBackChannel} replicated the adverse effect of delay but showed that undelayed visual access to one's partner cancelled out the effect and returned the number of words used to baseline. 
 
+\todo[inline]{Mention that negative feedback can be useful too -- cf Horton \& Gerrig, 2002 arguing that speakers `learn that audience design is necessary' and intentionally try to counteract the tendency to shorten by lengthening more for the second partner.}
+
 Some access to minimal feedback from one's partner therefore appears to be a necessary condition for convention formation. Without it, there is no reliable cue to the partner's lexicon; no lexical learning can take place, and consequently no social coordination. Yet this condition alone doesn't explain the \emph{speed} with which partners adapt, approaching `one-shot' learning. Three additional factors seem relevant. 
 
 First, like other scenarios of rapid learning from sparse data, abstract prior knowledge is crucial \cite{TenenbaumKempGriffithsGoodman11_Grow_a_Mind_Science,LakeEtAl16_BuildingMachines}: agents do not start from scratch, they must only fine-tune their pre-existing global conventions to fit their immediate partner and context. Second, agents have pragmatics on their side. In the RSA model linking lexical knowledge to behavior, listeners assume their partner is attempting to be \emph{informative} and pragmatic speakers, in turn, \emph{expect} listeners to do so. These assumptions dramatically strengthen feedback. Because listeners reason about alternatives -- that the speaker \emph{would} have used another word or description if it described the target better in context -- both agents actually learn about the meanings of words that were not uttered\footnote{
@@ -269,51 +271,46 @@ Most striking, however, was the observation that directors had already adapted i
 
 \section{Generalization}
 
-If the local conventions -- or lexical pacts -- formed over the course of an interaction reflect lexical learning, then what are the boundaries of that learning? How do meanings learned in one context transfer to new contexts? When can a peculiar meaning be explained away as the idiosyncrasy of a particular partner, and when does it become a generic lexical expectation or global convention? In this section, we discuss four empirical properties of generalization that computational models of convention formation must account for. Over short time scales, lexical pacts are \emph{partner-specific} but sticky across \emph{contexts} and sufficiently similar \emph{objects}. Over longer time scales, however, as agents repeatedly interact with multiple partners in larger social networks, pairwise conventions generalize to global conventions expected to be shared across the entire \emph{community}.
+If the local conventions -- or lexical pacts -- formed over the course of an interaction reflect lexical learning, then what are the boundaries of that learning? How do meanings learned in one context transfer to new contexts? When can a peculiar meaning be explained away as the idiosyncrasy of a particular partner, and when does it become a generic lexical expectation or global convention? In this section, we discuss three empirical properties of generalization that computational models of convention formation must account for. Over short time scales, lexical pacts are \emph{partner-specific} but stable across \emph{contexts}. Over longer time scales, however, as agents repeatedly interact with multiple partners in larger social networks, pairwise conventions generalize to global conventions expected to be shared across the entire \emph{community}.
 
 \subsection{Partner-specificity}
 
-One of the most salient and well-studied properties of local conventions is precisely that they \emph{don't} generalize immediately to novel partners. In other words, the speaker is learning a specific model of their partner on the basis of shared history, not just privately forming an association between words and objects. This was first demonstrated in a repeated reference game by \citeA{WilkesGibbsClark92_CoordinatingBeliefs}. After participants converged on efficient conventions across several rounds of interaction, a novel partner was swapped in. If the speaker's lexical representation did not distinguish between partners, then we should expect no difference before and after the intervention. Instead, speakers immediately reverted to longer messages---a 275\% increase---bringing them closer the length of the initial messages used with the original partner. 
+One of the most salient and well-studied properties of local conventions is precisely that they \emph{don't} generalize immediately to novel partners. In other words, the speaker is learning a specific model of their partner on the basis of shared history, not just privately forming an association between words and objects. This can be demonstrated in a repeated reference game by  swapping in a novel parter after several rounds of interaction (\citeNP{WilkesGibbsClark92_CoordinatingBeliefs}; see also \citeNP{BrennanClark96_ConceptualPactsConversation}, \citeNP{WeberCamerer03_CulturalConflict} for variations on this design). If the speaker's lexical representation did not distinguish between partners with different histories, then we should expect no difference before and after this intervention. Instead, \citeA{WilkesGibbsClark92_CoordinatingBeliefs} found that speakers immediately reverted to longer messages---a 275\% increase---bringing them nearly back to the length of the initial messages used with the original partner. 
 
-Other interventions explored intermediate cases, where the swapped-in listener was not \emph{entirely} novel. For example, when they were a ``silent participant'' for the first phase, sitting at the same table as the speaker and able to make eye contact, there was only a 67\% increase in message length. When they were an \emph{omniscient bystander}, observing the audio and visuals of the entire exchange from a separate room, length increased slightly more (100\%). Finally, when they were a \emph{simple bystander}, seated some distance behind the director such that they could not be monitored or see the tangrams being referred to, length increased as much as with a fully novel partner. 
+Other interventions explore intermediate cases, where the swapped-in listener was not \emph{entirely} novel. For example, when \citeA{WilkesGibbsClark92_CoordinatingBeliefs} introduced them as a ``silent participant'' during the first phase, sitting at the same table as the speaker and able to make eye contact, there was only a 67\% increase in message length. When they were an \emph{omniscient bystander}, observing the audio and visuals of the entire exchange from a separate room, length increased slightly more (100\%). Finally, when they were a \emph{simple bystander}, seated some distance behind the director such that they could not be monitored or see the tangrams being referred to, length increased as much as with a fully novel partner. 
 
-These graded generalizations reflects degrees of \emph{partial information} about the swapped-in listener's beliefs, posing a challenge even for computational models that allow partner-specific learning. It is simple for a hierarchical learning account to explain why speakers had no particular expectations about the \emph{simple bystander}, who could not see the tangrams that were being referred to and therefore was not provided with the relevant data to learn meanings. But for third parties who \emph{did} have full access to the interaction, whatever additional information the speaker is using cannot be limited to the assumption that the swapped-in listener can consult the same data, otherwise the \emph{omniscient bystander} should be treated the same as the \emph{silent participant}. One explanation, which could plausibly be incorporated into a learning model, is that although the silent participant cannot verbally respond, they do nonetheless provide a minimal feedback channel through their physical presence, e.g. eye contact or body language. Because they are co-present at the table, they belong to the intended audience for the speaker's messages, and can be monitored for cues to understanding; this evidence in turn may license stronger generalization. 
+These graded effects reflect degrees of \emph{partial information} about the swapped-in listener's beliefs, posing a challenge even for computational models that allow partner-specific learning. It is simple for a hierarchical learning account to explain why speakers had no particular expectations about the \emph{simple bystander}, who could not see the tangrams that were being referred to and therefore was not provided with the relevant data to learn meanings. But for third parties who \emph{did} have full access to the interaction, whatever additional information the speaker is using cannot be limited to the assumption that the swapped-in listener can consult the same data, otherwise the \emph{omniscient bystander} should be treated the same as the \emph{silent participant}. 
 
+One explanation, which could plausibly be incorporated into a learning model, is that although the silent participant cannot verbally respond, they do nonetheless provide a minimal feedback channel through their physical presence, e.g. eye contact or body language. Because they are co-present at the table, they belong to the intended audience for the speaker's messages, and can be monitored for cues to understanding; this evidence in turn may not indicate partner generalization per se, but joint learning about the two listeners. 
 
+A related question concerns how partner identity is cued or inferred: even for a model that learns partner-specific lexical representations, the identity of a particular partner may be noisy or uncertain. In a challenging task used by \citeA{HortonGerrig02_AudienceDesign}, a speaker played several rounds of a repeated reference game with two listeners at once. Critically, each listener only had access to a \emph{subset} of the total grid of targets in front of the speaker, which the speaker could only learn through interaction. Having converged on local conventions for one set of objects with listener A and for another set of objects with listener B, the speaker was then put in a test phase where they had to communicate \emph{all} objects with each listener separately. Again, if their representation didn't take into account partner-specific histories of interaction, they should treat all objects as equally shared for both partners. As a main effect, \citeA{HortonGerrig02_AudienceDesign} found a small boost in message length for the subset of objects that \emph{weren't} originally part of the present listener's array, indicating that the speaker flexibly shifted their messages to accommodate the differing history with each listener. There was also evidence from intra-utterance analyses that partner-specific representations were used to form the very first messages and the effects weren't simply driven by low-level feedback (e.g. if the speaker began by producing the reduced label used with the previous partner, and only added additional information after the listener indicated trouble understanding). 
 
-Outside of repeated reference games, there is also evidence that listeners adapt their interpretation of \emph{quantifiers} like \emph{some} and \emph{many} after repeated exposure \cite{Yildirim16_TalkerSpecificityQuantifiers}.
+This result by itself is a small but compelling addition to the cumulative evidence of partner-specificity, but also presents two additional challenges for computational models related to the noisiness of partner-specific learning. First, the partner-specific effect was driven by the increase in message length at the \emph{second} test session (with partner B), even though they got the same initial simultaneous exposure to both partners. Second, in a follow-up study, {HortonGerrig05_MemoryAudienceDesign} found that clustering the stimuli to facilitate better learning of which objects were known by which speakers during the first phase significantly strengthened the partner-specific effect. These observations indicate that under challenging learning conditions, partner-specificity is a noisy affair: the underlying representations may be separate, but updating the model corresponding to the right identity with the right information is not trivial.  
 
-Weber \& Camerer (2003) showed that? 
+%A critical claim of our hierarchical model is that partner-specificity is an inherent property of the \emph{representations} used by the speaker, yet it is unclear from summary measures like average message length whether flexible adaptation to new partners is driven by partner-specific lexical expectations or simpler reactions to real-time feedback from the novel listener. For instance, . This latter mechanism is certainly at play \cite[see]{SchoberBrennan03_RoleOfThePartner}, but there does exist some evidence that partner-specific representations are used by the speaker even before receiving any feedback. 
+
+Finally, while most repeated reference games have focused on speaker adaptation, there is evidence that partner-specific information is represented by the listener, too: \citeA{MetzingBrennan03_PartnerSpecificPacts} \dots
+
+Outside of repeated reference games, there is also more fine-grained evidence that listeners adapt their interpretation of \emph{quantifiers} like \emph{some} and \emph{many} after repeated exposure \cite{Yildirim16_TalkerSpecificityQuantifiers}.
 
 Yoon \& Brown-Schmidt
 \begin{itemize}
-\item Brennen \& Clark, 1996 (Compare ahistorical i.e. pure informativity vs. various historical models: recency, frequency, provisionality, partner-specificity)
-\item Exp. 1: 50\% of players kept overinformative label (`pennyloafer') after switching to less `close' context when there's only one shoe
-\item Metzing and Brennan (2003)
 \item Duff \& Brown-Schmidt stuff
-\end{itemize}
-
-Enriches pure cross-situational models w/ hierarchical model (see Eve Clark textbook)
-
-\begin{itemize}
-\item Glucksberg, Krauss, \& Weisberg, 1966
-\item Devo version of experiment; kids don't converge on name
-\item (see Krauss \& Glucksberg, 1969 for error analysis but they don't report words)
 \end{itemize}
 
 \subsection{Generalization from one context to another}
 
 Remarkable stability: more variability across pairs than within pairs. 
 
-\todo[inline]{Discuss Brennen \& Clark, 1996; pennyloafer; stickiness}
+\todo[inline]{Discuss Brennen \& Clark, 1996; pennyloafer; stickiness. Compare ahistorical i.e. pure informativity vs. various historical models: recency, frequency, provisionality, partner-specificity. Exp. 1: 50\% of players kept overinformative label (`pennyloafer') after switching to less `close' context when there's only one shoe}
 
 The stickiness of conventions has been challenged recently by \citeA{MisyakEtAl16_InstantaneousConventions} using a repeated reference game using simple tokens to communicate instead of words.
 
-\subsection{Generalization from object to categories}
-
-\cite{MarkmanMakin98_ReferentialCommunicationCategory}
-
-\cite{MaltSloman04_ConversationConvention}
+%\subsection{Generalization from object to categories}
+%
+%\cite{MarkmanMakin98_ReferentialCommunicationCategory}
+%
+%\cite{MaltSloman04_ConversationConvention}
 
 \subsection{Generalization from individual to community}
 
@@ -340,6 +337,14 @@ But where do global conventions come from in the first place? Some are certainly
 By allowing participants to interact with multiple partners, several studies have used iterated reference games to probe this pathway. 
 
 Healey et al (2007) split participants into several `communities' -- each participant first played 12 rounds of a reference game with members of their own community. In this game, they concurrently drew sketches on the same sketchpad to determine whether pieces of music they heard were the same or different, and no target pieces were repeated. Thus, across this phase of the experiment, they are increasingly likely to be paired with others who have an indirect connection in the network: who have also met their previous partners or partner's partners. After several rounds of this procedure, they enter a `test' phase of the experiment, where they are either paired with a novel member of their own community or a member of a different community (without being explicitly told which it is). In either case, their partner is novel, but only in the in-group condition does a hierarchical learning account predict that should they should share similar priors, or global conventions for communicating. Indeed, they found that participants required more ink to succeed with an out-group member, and that drawings were more likely to shift to a ''Figurative'' style and thus be more interpretable without shared task-specific conventions (as opposed to the ``Abstract'' drawings more common within an in-group). 
+
+Enriches pure cross-situational models w/ hierarchical model (see Eve Clark textbook)
+
+\begin{itemize}
+\item Glucksberg, Krauss, \& Weisberg, 1966
+\item Devo version of experiment; kids don't converge on name
+\item (see Krauss \& Glucksberg, 1969 for error analysis but they don't report words)
+\end{itemize}
 
 \section{Discussion}
 

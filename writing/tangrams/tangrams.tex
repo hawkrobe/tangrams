@@ -174,14 +174,13 @@ replication of the tangrams task, which has traditionally been limited
 to relatively small sample sizes in the lab. We demonstrate signatures
 of arbitrariness, stability, and reduction which have been difficult to
 study at a fine-grained level due to the sparseness of existing data.
-Next, we formulate our theory in a computational model of communication
-in repeated reference games, based on recent successes capturing
-language understanding as social inference (Goodman \& Frank, 2016;
-Goodman \& Stuhlmüller, 2013) and show that this model qualitatively
-produces all three empirical signatures.
+%Next, we formulate our theory in a computational model of communication
+%in repeated reference games, based on recent successes capturing
+%language understanding as social inference (Goodman \& Frank, 2016;
+%Goodman \& Stuhlmüller, 2013) and show that this model qualitatively
+%produces all three empirical signatures.
 
-\section{Replication of tangrams
-task}\label{replication-of-tangrams-task}
+\section{Exp.~1: Direct replication}\label{replication-of-tangrams-task}
 
 To collect a corpus of reference game dialogue that supports more
 detailed analyses of convention-formation, we ported the tangrams task
@@ -197,7 +196,7 @@ into dyads to play a real-time communication game using the framework in
 Hawkins (2015). We excluded games that terminated before the completion
 of 6 rounds and where participants reported a native language different
 from English, leaving a corpus of X complete games with a total of
-Xutterances.
+X utterances.
 
 \subsubsection{Stimuli}\label{stimuli}
 
@@ -337,177 +336,192 @@ listener messages decreases significantly over the game (\(t = -13.23\),
 see Fig. \ref{fig:replication}), and there is a weak but significant
 effect of initial listener messages on overall reduction (X).
 
-\section{Model}\label{model}
+\section{Exp.~2: Sequential reference}\label{task2}
 
-Here, we present a probabilistic model of language production under
-uncertainty, which captures several of the signature properties of
-conventions shown above. This model belongs to the family of Rational
-Speech Act (RSA) models, which have been successful in explaining a wide
-range of linguistic phenomena -- including scalar implicature,
-adjectival vagueness, overinformativeness, indirect questions, and
-non-literal language use -- as arising from a process of recursive
-social reasoning. Most previous applications of RSA have focused on the
-listener's problem of language comprehension, but the puzzle of
-conventionalization is primarily a question of speaker production. An
-\(n\)th order pragmatic speaker trying to convey a particular state of
-affairs \(s \in \mathcal{S}\) assuming lexicon \(\mathcal{L}\) is
-assumed to select an utterance \(u \in \mathcal{U}\) by trading off its
-expected informativity (with respect to a rational listener agent)
-against its cost, usually based on length (Goodman \& Frank, 2016):
-\[S_n(u | s, \mathcal{L}) \propto \exp{\left(\alpha \log L_n(s | u, \mathcal{L}) - \textrm{cost}(u)\right)}\]
-where \(\alpha\) is an optimality parameter controlling the extent to
-which the speaker maximizes over the expected listener distribution. The
-listener, in turn, reasons about what utterances would be most likely to
-be produced by a speaker intending to convey \(u\):
-\[L_n(s | u, \mathcal{L}) \propto P(s) S_{n-1}(u | s, \mathcal{L})\]
-\indent This recursion bottoms out in a \emph{literal listener} who
-directly looks up the meaning of the utterance in the lexicon:
-\[L_0(s | u, \mathcal{L}) \propto \mathcal{L}(u, s)\cdot P(s)\]
-\indent As in several other recent applications of RSA (Graf, Degen,
-Hawkins, \& Goodman, 2016), we use a graded semantics, where utterances
-are better or worse descriptions of particular referents. For instance,
-the utterance ``dancer'' may initially be expected to apply to a
-photorealistic image of a ballerina
-(\(\mathcal{L}(\textrm{'dancer'}, \textit{ballerina}) = 0.99\)) more
-than an abstract image of one
-(\(\mathcal{L}(\textrm{'dancer'}, \textit{abstract ballerina}) =0.6\)),
-but apply to both better than a non-category member like an image of a
-dog (\(\mathcal{L}(\textrm{'dancer'}, \textit{dog}) = 0.05\)).
+While the open-ended matching design we replicated in Exp.~1 is highly naturalistic, it also provides messy data. Utterances included not only descriptions of the tangrams but also information about the desired location (e.g. 'number 10 is the \dots'). Additionally, because participants often revisited tangrams and jumped around the board, it was difficult to isolate exactly which utterances referred to which tangrams without extensive hand-annotation. In order to conduct analyses at the tangram-by-tangram level, we designed a straightforwardly sequential variation on the task where speakers are privately cued to refer to targets one-by-one and feedback is given on each round. 
 
-Our approach to convention-formation begins with the additional
-assumption of \emph{lexical uncertainty} (Bergen, Levy, \& Goodman,
-2016; Smith, Goodman, \& Frank, 2013). In other words, we assume that
-instead of having perfect knowledge of \(\mathcal{L}\), the speaker has
-uncertainty over the exact meanings of lexical items in the current
-context (i.e.~it is initially unclear which of the ambiguous tangram
-shapes ``the dancer'' might refer to). They begin with some prior
-\(P(\mathcal{L})\) over meanings, which may be initially biased toward
-certain meanings, and update these beliefs through repeated interactions
-with a knowledgeable partner:
-\[P(\mathcal{L} | d) \propto P(\mathcal{L})\prod_i L_{n-1}(s_i|u_i, \mathcal{L})\]
-where \(d = \{s_i, u_i\}\) is a set of observations of \(s_i\) and
-\(u_i\) coming from previous exchanges\footnote{There is a broader
-  debate over the timescales at which lexicons and lexicon learning
-  mechanisms operate; here, we assume a discourse-level structure to the
-  lexicon, where there is uncertainty over how words are used \emph{in
-  the given conversation}. See Frank, Goodman, \& Tenenbaum (2009) for a
-  related approach at the scale of cross-situational word learning.}.
-The speaker then marginalizes over this posterior distribution when
-reasoning about the listener, giving rise to the form of the pragmatic
-listener model we use throughout our model results (only going up to
-\(n = 2\) in our recursion for simplicity):
-\[S(u | s, d) \propto \exp( \alpha\log\left(\sum_{\mathcal{L}} P(\mathcal{L} | d) L_1(s | u, \mathcal{L})\right) - \textrm{cost}(u) )\]
-\indent A listener with lexical uncertainty can be defined similarity,
-simply swapping out \(L_{n-1}\) in the lexicon posterior update with a
-knowledgeable speaker \(S_{n}\):
-\[L(s | u, d) \propto \sum_\mathcal{L}P(\mathcal{L}|d)L_1(s|u,\mathcal{L})\]
-\indent This model is implemented in the probabilistic programming
-language WebPPL (Goodman \& Stuhlmüller, electronic).\footnote{All
-  results can be reproduced running our code in the browser at
-  \url{http://forestdb.org/models/conventions.html}} Following Smith et
-al. (2013), we begin by showing how a random initial choice is taken to
-be evidence for a particular lexicon and becomes the base for successful
-communication even though neither party knows its meaning at the outset.
+\subsection{Methods}\label{methods}
 
-\subsection{Results}\label{results-1}
+\subsubsection{Participants}\label{participants}
 
-\subsubsection{Arbitrariness and
-stability}\label{arbitrariness-and-stability-1}
+XYZ participants were recruited from Amazon's Mechanical Turk and paired
+into dyads to play a real-time communication game using the framework in
+Hawkins (2015). We excluded games that terminated before the completion
+of K rounds and where participants reported a native language different
+from English, leaving a corpus of X complete games with a total of
+X utterances.
 
-Consider an environment with two abstract shapes (\(\{s_1, s_2\}\)),
-where the speaker must choose between two utterances (\(\{u_1, u_2\}\))
-incurring equal cost. Their prior \(P(\mathcal{L})\) over the meaning of
-each utterance is given by a (discretized) Dirichlet distribution, so on
-the first round both utterances are equally likely to apply to either
-shape. If the speaker was trying to get their partner to pick \(s_1\),
-then, since each utterance is equally (un)informative, they would
-randomly sample one (say, \(u_1\)), and observe the listener's selection
-of a shape (say, \(s_1\)). On the next round, the speaker uses the
-observed pair \(\{u_1, s_1\}\) to update their beliefs about the
-lexicon, uses these beliefs to generate a new utterance, and so on. To
-examine expected dynamics over multiple rounds, we enumerate over all
-possible trajectories our simulated speaker and listener models could
-produce.
-
-We observe several important qualitative effects in our simulations.
-First, the fact that a knowledgeable listener responds to utterance
-\(u\) with \(s\) provides evidence for lexicons in which \(u\) is a good
-fit for \(s\), hence the likelihood of the speaker using \(u\) to refer
-to \(s\) increases on subsequent rounds (see
-Fig.\ref{fig:modelConvergence}). In other words, the initial symmetry
-between the meanings can be broken by initial random choices, leading to
-completely \emph{arbitrary but stable mappings} in future rounds.
-Second, because the listener is also learning the lexicon from these
-observations under the same set of assumptions, they converge on a
-shared set of meanings; hence, expected \emph{accuracy} rises on future
-rounds (see Fig. \ref{fig:modelAcc}). Third, because one's partner is
-assumed to be pragmatic, agents can also learn about \emph{unheard}
-utterances: observing \(\{u_1, s_1\}\) also provides evidence for
-lexicons in which \(u_2\) is a good fit for \(s_2\) by standard Gricean
-reasoning. Finally, \emph{failed references} lead to conventions just as
-effectively as successful references: if the speaker intends \(s_1\) and
-says \(u_1\), but then the listener incorrectly picks \(s_2\), the
-speaker will take this as evidence that \(u_1\) actually means \(s_2\)
-and use it that way on subsequent rounds.
-
-\subsubsection{Reduction in utterance
-length}\label{reduction-in-utterance-length}
-
-Finally, we show how our model explains reduction of utterance length
-over multiple interactions. For utterances to be reduced, of course,
-they must vary in length. Motivated by our empirical observation that
-meaningful clauses are the primary unit of reduction, we extend our
-grammar to include \emph{conjunctions}. This is one of the simplest ways
-to constructing longer utterances compositionally from lexical
-primitives, using the product rule:
-
-\[\mathcal{L}(u_i \textrm{ and } u_j, o) = \mathcal{L}(u_i, o) \times \mathcal{L}(u_j, o)\]
-
-Analogous to our tangram stimuli, which have many ambiguous features and
-figurative perspectives that may be evoked in speaker descriptions, we
-consider a simplified scenario where speakers can refer to two different
-features of the two objects \(\{o_1, o_2\}\). The speaker has four
-primitive words at their disposal -- two words for shape
-(\(\{u_{s1}, u_{s2}\}\)) and two for color \(\{u_{c1}, u_{c2}\}\) -- and
-has uncertainty over the initial meanings of all four.
-
-While we established in the previous section that conventions can emerge
-over a reference game in the complete absence of initial preferences,
-players often bring such preferences to the table. A player who hears
-`ice skater' on the first round of our tangrams task is more likely to
-select some objects more than others, even though they still have some
-uncertainty over its meaning in the context. To show that our model can
-accommodate this fact, we allow the speaker's initial prior meanings to
-be slightly biased. \(u_{s1}\) and \(u_{c1}\) are more likely to mean
-\(o_1\); \(u_{s2}\) and \(u_{c2}\) are more likely to mean \(o_2\).
-
-We ran 1000 forward samples of 6 rounds of speaker-listener interaction,
-and averaged over the utterance length at each round.\footnote{In our
-  simulations, we used \(\alpha = 13\) and found the basic reduction
-  effect over a range of different biases, with different intercepts and
-  slopes} Our results are shown in Figure \ref{fig:modelReduction}: the
-expected utterance length decreases systematically over each round. To
-illustrate in more detail how this dynamic is driven by an initial
-rational preference for redundancy relaxing as reference becomes more
-reliable, we walk step-by-step through a single trajectory.
-
-Consider a speaker who wants to refer to object \(o_1\). They believe
-their knowledgeable partner is slightly more likely to interpret their
-language using a lexicon in which \(u_{s1}\) and \(u_{c1}\) apply to
-this object, due to their initial bias. However, there is still a
-reasonable chance that one or the other alone actually refers strongly
-to \(o_2\) in the true lexicon. Thus, it is useful to produce the
-conjunction ``\(u_{s1}\) and \(u_{c1}\)'' to hedge against this
-possibility, despite its higher cost. Upon observing the listener's
-response (say, \(o_1\)), the evidence is indeterminate about the
-separate meanings of \(u_{s1}\) and \(u_{c1}\) but both become
-increasingly likely to refer to \(o_1\). In the trade-off between
-informativity and cost, the shorter utterances remain probable options.
-Once the speaker chooses one of them, the symmetry collapses and that
-utterance remains most probable in future rounds. In this way,
-meaningful sub-phrases are omitted over time as the speaker becomes more
-confident about the true lexicon.
-
+%\section{Model}\label{model}
+%
+%Here, we present a probabilistic model of language production under
+%uncertainty, which captures several of the signature properties of
+%conventions shown above. This model belongs to the family of Rational
+%Speech Act (RSA) models, which have been successful in explaining a wide
+%range of linguistic phenomena -- including scalar implicature,
+%adjectival vagueness, overinformativeness, indirect questions, and
+%non-literal language use -- as arising from a process of recursive
+%social reasoning. Most previous applications of RSA have focused on the
+%listener's problem of language comprehension, but the puzzle of
+%conventionalization is primarily a question of speaker production. An
+%\(n\)th order pragmatic speaker trying to convey a particular state of
+%affairs \(s \in \mathcal{S}\) assuming lexicon \(\mathcal{L}\) is
+%assumed to select an utterance \(u \in \mathcal{U}\) by trading off its
+%expected informativity (with respect to a rational listener agent)
+%against its cost, usually based on length (Goodman \& Frank, 2016):
+%\[S_n(u | s, \mathcal{L}) \propto \exp{\left(\alpha \log L_n(s | u, \mathcal{L}) - \textrm{cost}(u)\right)}\]
+%where \(\alpha\) is an optimality parameter controlling the extent to
+%which the speaker maximizes over the expected listener distribution. The
+%listener, in turn, reasons about what utterances would be most likely to
+%be produced by a speaker intending to convey \(u\):
+%\[L_n(s | u, \mathcal{L}) \propto P(s) S_{n-1}(u | s, \mathcal{L})\]
+%\indent This recursion bottoms out in a \emph{literal listener} who
+%directly looks up the meaning of the utterance in the lexicon:
+%\[L_0(s | u, \mathcal{L}) \propto \mathcal{L}(u, s)\cdot P(s)\]
+%\indent As in several other recent applications of RSA (Graf, Degen,
+%Hawkins, \& Goodman, 2016), we use a graded semantics, where utterances
+%are better or worse descriptions of particular referents. For instance,
+%the utterance ``dancer'' may initially be expected to apply to a
+%photorealistic image of a ballerina
+%(\(\mathcal{L}(\textrm{'dancer'}, \textit{ballerina}) = 0.99\)) more
+%than an abstract image of one
+%(\(\mathcal{L}(\textrm{'dancer'}, \textit{abstract ballerina}) =0.6\)),
+%but apply to both better than a non-category member like an image of a
+%dog (\(\mathcal{L}(\textrm{'dancer'}, \textit{dog}) = 0.05\)).
+%
+%Our approach to convention-formation begins with the additional
+%assumption of \emph{lexical uncertainty} (Bergen, Levy, \& Goodman,
+%2016; Smith, Goodman, \& Frank, 2013). In other words, we assume that
+%instead of having perfect knowledge of \(\mathcal{L}\), the speaker has
+%uncertainty over the exact meanings of lexical items in the current
+%context (i.e.~it is initially unclear which of the ambiguous tangram
+%shapes ``the dancer'' might refer to). They begin with some prior
+%\(P(\mathcal{L})\) over meanings, which may be initially biased toward
+%certain meanings, and update these beliefs through repeated interactions
+%with a knowledgeable partner:
+%\[P(\mathcal{L} | d) \propto P(\mathcal{L})\prod_i L_{n-1}(s_i|u_i, \mathcal{L})\]
+%where \(d = \{s_i, u_i\}\) is a set of observations of \(s_i\) and
+%\(u_i\) coming from previous exchanges\footnote{There is a broader
+%  debate over the timescales at which lexicons and lexicon learning
+%  mechanisms operate; here, we assume a discourse-level structure to the
+%  lexicon, where there is uncertainty over how words are used \emph{in
+%  the given conversation}. See Frank, Goodman, \& Tenenbaum (2009) for a
+%  related approach at the scale of cross-situational word learning.}.
+%The speaker then marginalizes over this posterior distribution when
+%reasoning about the listener, giving rise to the form of the pragmatic
+%listener model we use throughout our model results (only going up to
+%\(n = 2\) in our recursion for simplicity):
+%\[S(u | s, d) \propto \exp( \alpha\log\left(\sum_{\mathcal{L}} P(\mathcal{L} | d) L_1(s | u, \mathcal{L})\right) - \textrm{cost}(u) )\]
+%\indent A listener with lexical uncertainty can be defined similarity,
+%simply swapping out \(L_{n-1}\) in the lexicon posterior update with a
+%knowledgeable speaker \(S_{n}\):
+%\[L(s | u, d) \propto \sum_\mathcal{L}P(\mathcal{L}|d)L_1(s|u,\mathcal{L})\]
+%\indent This model is implemented in the probabilistic programming
+%language WebPPL (Goodman \& Stuhlmüller, electronic).\footnote{All
+%  results can be reproduced running our code in the browser at
+%  \url{http://forestdb.org/models/conventions.html}} Following Smith et
+%al. (2013), we begin by showing how a random initial choice is taken to
+%be evidence for a particular lexicon and becomes the base for successful
+%communication even though neither party knows its meaning at the outset.
+%
+%\subsection{Results}\label{results-1}
+%
+%\subsubsection{Arbitrariness and
+%stability}\label{arbitrariness-and-stability-1}
+%
+%Consider an environment with two abstract shapes (\(\{s_1, s_2\}\)),
+%where the speaker must choose between two utterances (\(\{u_1, u_2\}\))
+%incurring equal cost. Their prior \(P(\mathcal{L})\) over the meaning of
+%each utterance is given by a (discretized) Dirichlet distribution, so on
+%the first round both utterances are equally likely to apply to either
+%shape. If the speaker was trying to get their partner to pick \(s_1\),
+%then, since each utterance is equally (un)informative, they would
+%randomly sample one (say, \(u_1\)), and observe the listener's selection
+%of a shape (say, \(s_1\)). On the next round, the speaker uses the
+%observed pair \(\{u_1, s_1\}\) to update their beliefs about the
+%lexicon, uses these beliefs to generate a new utterance, and so on. To
+%examine expected dynamics over multiple rounds, we enumerate over all
+%possible trajectories our simulated speaker and listener models could
+%produce.
+%
+%We observe several important qualitative effects in our simulations.
+%First, the fact that a knowledgeable listener responds to utterance
+%\(u\) with \(s\) provides evidence for lexicons in which \(u\) is a good
+%fit for \(s\), hence the likelihood of the speaker using \(u\) to refer
+%to \(s\) increases on subsequent rounds (see
+%Fig.\ref{fig:modelConvergence}). In other words, the initial symmetry
+%between the meanings can be broken by initial random choices, leading to
+%completely \emph{arbitrary but stable mappings} in future rounds.
+%Second, because the listener is also learning the lexicon from these
+%observations under the same set of assumptions, they converge on a
+%shared set of meanings; hence, expected \emph{accuracy} rises on future
+%rounds (see Fig. \ref{fig:modelAcc}). Third, because one's partner is
+%assumed to be pragmatic, agents can also learn about \emph{unheard}
+%utterances: observing \(\{u_1, s_1\}\) also provides evidence for
+%lexicons in which \(u_2\) is a good fit for \(s_2\) by standard Gricean
+%reasoning. Finally, \emph{failed references} lead to conventions just as
+%effectively as successful references: if the speaker intends \(s_1\) and
+%says \(u_1\), but then the listener incorrectly picks \(s_2\), the
+%speaker will take this as evidence that \(u_1\) actually means \(s_2\)
+%and use it that way on subsequent rounds.
+%
+%\subsubsection{Reduction in utterance
+%length}\label{reduction-in-utterance-length}
+%
+%Finally, we show how our model explains reduction of utterance length
+%over multiple interactions. For utterances to be reduced, of course,
+%they must vary in length. Motivated by our empirical observation that
+%meaningful clauses are the primary unit of reduction, we extend our
+%grammar to include \emph{conjunctions}. This is one of the simplest ways
+%to constructing longer utterances compositionally from lexical
+%primitives, using the product rule:
+%
+%\[\mathcal{L}(u_i \textrm{ and } u_j, o) = \mathcal{L}(u_i, o) \times \mathcal{L}(u_j, o)\]
+%
+%Analogous to our tangram stimuli, which have many ambiguous features and
+%figurative perspectives that may be evoked in speaker descriptions, we
+%consider a simplified scenario where speakers can refer to two different
+%features of the two objects \(\{o_1, o_2\}\). The speaker has four
+%primitive words at their disposal -- two words for shape
+%(\(\{u_{s1}, u_{s2}\}\)) and two for color \(\{u_{c1}, u_{c2}\}\) -- and
+%has uncertainty over the initial meanings of all four.
+%
+%While we established in the previous section that conventions can emerge
+%over a reference game in the complete absence of initial preferences,
+%players often bring such preferences to the table. A player who hears
+%`ice skater' on the first round of our tangrams task is more likely to
+%select some objects more than others, even though they still have some
+%uncertainty over its meaning in the context. To show that our model can
+%accommodate this fact, we allow the speaker's initial prior meanings to
+%be slightly biased. \(u_{s1}\) and \(u_{c1}\) are more likely to mean
+%\(o_1\); \(u_{s2}\) and \(u_{c2}\) are more likely to mean \(o_2\).
+%
+%We ran 1000 forward samples of 6 rounds of speaker-listener interaction,
+%and averaged over the utterance length at each round.\footnote{In our
+%  simulations, we used \(\alpha = 13\) and found the basic reduction
+%  effect over a range of different biases, with different intercepts and
+%  slopes} Our results are shown in Figure \ref{fig:modelReduction}: the
+%expected utterance length decreases systematically over each round. To
+%illustrate in more detail how this dynamic is driven by an initial
+%rational preference for redundancy relaxing as reference becomes more
+%reliable, we walk step-by-step through a single trajectory.
+%
+%Consider a speaker who wants to refer to object \(o_1\). They believe
+%their knowledgeable partner is slightly more likely to interpret their
+%language using a lexicon in which \(u_{s1}\) and \(u_{c1}\) apply to
+%this object, due to their initial bias. However, there is still a
+%reasonable chance that one or the other alone actually refers strongly
+%to \(o_2\) in the true lexicon. Thus, it is useful to produce the
+%conjunction ``\(u_{s1}\) and \(u_{c1}\)'' to hedge against this
+%possibility, despite its higher cost. Upon observing the listener's
+%response (say, \(o_1\)), the evidence is indeterminate about the
+%separate meanings of \(u_{s1}\) and \(u_{c1}\) but both become
+%increasingly likely to refer to \(o_1\). In the trade-off between
+%informativity and cost, the shorter utterances remain probable options.
+%Once the speaker chooses one of them, the symmetry collapses and that
+%utterance remains most probable in future rounds. In this way,
+%meaningful sub-phrases are omitted over time as the speaker becomes more
+%confident about the true lexicon.
+%
 \section{General Discussion}\label{general-discussion}
 
 In this paper, we revisited the classic phenomenon of

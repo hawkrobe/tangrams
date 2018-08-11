@@ -360,7 +360,7 @@ tangramBoards %>%
 ## Imports & preprocessing
 
 ```{r}
-tangramMsgs = read_csv("../data/tangrams_sequential/message/sequential_message.csv") %>%
+tangramMsgs = read_csv("../data/tangrams_sequential/message/sequential_message_raw.csv") %>%
   rename(msgTime = time, role = sender)
 
 tangramClicks = read_csv("../data/tangrams_sequential/clickedObj/sequential_clicks.csv")# %>% mutate(roundNum = as.numeric(roundNum))
@@ -393,6 +393,16 @@ duplicate_gameids = (rawTangramCombined %>%
   summarize(time = first(msgTime), numRounds = last(roundNum)) %>%
   arrange(workerid_uniq, time))$gameid
 duplicate_gameids
+```
+
+Create filtered version of messages data (for potential hand-cleaning)
+
+```{r}
+messagesFiltered <- tangramMsgs %>%
+  filter(!(gameid %in% badGames)) %>%
+  filter(!(gameid %in% duplicate_gameids)) 
+
+write_csv(messagesFiltered, '../data/tangrams_sequential/message/sequential_message_filtered.csv')
 ```
 
 Count numbers of words, examine size of dataset
@@ -556,7 +566,7 @@ ggplot(distinctiveness_d, aes(x = pmi, y = match)) +
 
 ```{r}
 restricted_distinctiveness_d <- distinctiveness_d %>% 
-   filter(POS %in% c('noun', 'preposition', 'det', 'adjective'))%>%
+   filter(POS %in% c('noun', 'preposition', 'det', 'adjective', 'verb'))%>%
    filter(num_occurrences > 1)
                 
 restricted_binary.d <- restricted_distinctiveness_d %>% 
@@ -602,7 +612,7 @@ pos_d <- read.csv("sequential_matchAndPMI.csv", header = TRUE) %>%
   filter(num > 200)
 cbbPalette <- c("#000000", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
 
-ggplot(pos_d, aes(x = reorder(POS,mean_pmi,
+ggplot(pos_d %>% filter(POS != 'other'), aes(x = reorder(POS,mean_pmi,
                      function(x)-x), y = mean_pmi)) +
   geom_bar(stat='identity') +
   geom_errorbar(aes(ymax = mean_pmi + se, ymin = mean_pmi - se)) +
@@ -616,7 +626,7 @@ Alternatively, can do a nonparametric analysis: draw a random word from each tan
 
 ```{r}
 # TODO: get red to show up in legend
-nonparametric_d = read.csv("tangrams/PMIbootstrap.csv", header = TRUE) %>%
+nonparametric_d = read.csv("PMIbootstrap.csv", header = TRUE) %>%
   mutate(PMI = factor(highest, levels = c('null', 'highest'), labels = c('random', 'top')))
 
 highestValAvg = nonparametric_d %>% filter(highest == 'highest') %>% summarize(avg = mean(match))
@@ -632,32 +642,150 @@ nonparametric_d %>%
              color = 'red', linetype = "dashed", size = 2) +
   xlab("probability of match b/w Rounds 1 & 6") +
   scale_fill_manual(values = c("random" = "black", "top"= "red")) +
-  theme_bw() 
-  #guides(color=FALSE)
+  theme_few()  +
+  guides(fill=FALSE)
 ```
 
-Supplemental: look at wordclouds!
+## Arbitrariness and stability
+
+Calculate entropy under permutation tests (TODO: want to do a version of this restricted to extracted NPs, or, more simply, with stop words taken out. When we use distribution over *all* words, it could be driven by differences in frequency of function word use or something!)
+
+```{r}
+getCounts <- function(contents) {
+  corpus <- Corpus(VectorSource(paste(contents, collapse = " ")))
+  return(colSums(as.matrix(DocumentTermMatrix(corpus))))
+}
+
+tangramCombined %>%
+    group_by(occurrenceNum, intendedObj) %>%
+    mutate(permutation = sample(contents)) %>%
+    group_by(gameid, intendedObj) %>%
+    summarize(ent = entropy(getCounts(permutation))) %>%
+    group_by(intendedObj) %>%
+    summarize(meanEnt = mean(ent))
+
+permutationTest <- function(df) {
+  permuted = df %>%
+    group_by(occurrenceNum, intendedObj) %>%
+    mutate(permutation = sample(contents)) %>%
+    group_by(gameid, intendedObj) %>%
+    summarize(ent = entropy(getCounts(permutation))) %>%
+    group_by(intendedObj) %>%
+    summarize(meanEnt = mean(ent))
+  return(permuted$meanEnt)
+}
+
+numPermutations = 1000
+permutations <- replicate(numPermutations, {
+  permutationTest(tangramCombined)
+})
+
+# Note that we explicitly do *not* normalize entropies, as this
+# removes the contribution of a bigger vocabulary (as we would expect)
+trueEntropy <- (tangramCombined %>%
+  group_by(gameid, intendedObj) %>%
+  summarize(trueEntropy = entropy(getCounts(contents))) %>%
+  group_by(intendedObj) %>%
+  summarize(meanEnt = mean(trueEntropy))
+)
+
+allEntropies <- cbind(trueEntropy, permutations) %>% 
+  gather(permutationNum, ent, `1`:`1000`) %>%
+  mutate(permutation = ifelse(permutationNum != 'trueEntropy', TRUE, FALSE))# %>%
+  # group_by(permutation, intendedObj) %>%
+  # mutate(meanEnt = mean(ent)) 
+
+allEntropies %>%
+  ggplot(aes(x = ent)) +
+    geom_histogram(binwidth = .01) +
+    geom_vline(aes(xintercept = meanEnt), color = 'red') +
+    theme_few(9) +
+    facet_wrap( ~ intendedObj, scale = "free_y") +
+    xlab('entropy') +
+    theme(aspect.ratio = .5) 
+```
+
+```{r}
+summary(lmer(ent ~ permutation + (1 + permutation | gameid) + (1 +permutation | intendedObj), data = allEntropies))
+```
+
+```{r}
+posTags <- read_csv('sequential_posTagged.csv')
+
+clauseReduction = posTags %>%
+  group_by(occurrenceNum, intendedObj) %>%
+  #mutate(num_sbar=as.logical(num_sbar)) %>%
+  summarize(m = mean(num_sbar > 0)) %>%
+  #multi_boot_standard('num_sbar') %>%
+  mutate(measure = '% messages \nw/ subordinate clauses')
+
+ppReduction = posTags %>%
+  group_by(occurrenceNum, intendedObj) %>%
+  #mutate(num_pp=as.logical(num_pp)) %>%
+  summarize(m = mean(num_pp > 0)) %>%
+  #multi_boot_standard('acl') %>%
+  mutate(measure = '% messages \nw/ adjectival clauses')
+
+ccReduction = posTags %>%
+  group_by(occurrenceNum, intendedObj) %>%
+  #mutate(num_pp=as.logical(num_pp)) %>%
+  summarize(m = mean(num_cc > 0)) %>%
+  #multi_boot_standard('acl') %>%
+  mutate(measure = '% messages \nw/ conjunctions')
+
+listenerMsgs <- tangramCombined %>%
+  group_by(gameid, occurrenceNum, intendedObj, role) %>%
+  summarize(individualM = n()) %>%
+  ungroup() %>%
+  complete(role, occurrenceNum, intendedObj, gameid, fill = list(individualM = 0)) %>%
+  spread(role, individualM)
+
+listenerReduction <- listenerMsgs %>%
+   group_by(occurrenceNum, intendedObj) %>%
+  summarize(m = mean(matcher)) %>%
+   #multi_boot_standard("matcher") %>%
+   mutate(measure = '# listener messages')  
+
+listenerReduction %>%
+  rbind(lengthReduction %>% rename(intendedObj = intendedName)) %>%
+  rbind(clauseReduction) %>%
+  rbind(ppReduction) %>%
+  rbind(ccReduction) %>%
+  mutate(measure = factor(measure, levels = c(
+    '# words per tangram', "# listener messages",
+    '% messages \nw/ adjectival clauses',"% messages \nw/ subordinate clauses", '% messages \nw/ conjunctions'))) %>%
+  ggplot(aes(x = occurrenceNum, y = m, group = intendedObj)) +
+    geom_line() +
+    xlab('round #') +
+    ylab('metric') +
+    geom_dl(aes(label = intendedObj), method = list(cex = .5, dl.trans(x = x - .25), "first.points")) +
+    #geom_errorbar(aes(ymax = summary_ci_upper, ymin = summary_ci_lower), width = .1) +
+    facet_wrap(~ measure,  scales = 'free') +
+    xlim(-.01,6) +
+    ylim(c(0, NA)) +
+    theme_few(9) +
+    theme(aspect.ratio = .75)
+```
+
+## Supplemental: look at wordclouds!
 
 ```{r}
 library(wordcloud)   
 
-oldGrams = read.csv("handTagged.csv", quote = '"') %>%
-  mutate(numRawWords = 1 + str_count(contents, fixed(" "))) %>%
-  mutate(strippedContents = str_replace_all(contents, "[^[:alnum:][:space:]']",' ')) %>%
-  do(mutate(., cleanMsg = rm_stopwords(.$strippedContents, tm::stopwords("english"), 
-                                       separate = F))) %>%
-  mutate(numCleanWords = 1 + str_count(cleanMsg, fixed(" "))) %>%
-  filter(numRawWords < mean(numRawWords) + 3*sd(numRawWords)) # Get rid of outliers
+# oldGrams = read.csv("handTagged.csv", quote = '"') %>%
+  # mutate(numRawWords = 1 + str_count(contents, fixed(" "))) %>%
+  # mutate(strippedContents = str_replace_all(contents, "[^[:alnum:][:space:]']",' ')) %>%
+  # do(mutate(., cleanMsg = rm_stopwords(.$strippedContents, tm::stopwords("english"), 
+  #                                      separate = F))) %>%
+  # mutate(numCleanWords = 1 + str_count(cleanMsg, fixed(" "))) %>%
+  # filter(numRawWords < mean(numRawWords) + 3*sd(numRawWords)) # Get rid of outliers
 
-textPerGram = oldGrams %>%
-  group_by(gameid, tangramRef) %>%
-  filter(tangramRef != 0) %>%
-  filter(tangramRef != 'None') %>%
-  filter(roundNum == 6) %>%
-  summarize(a = paste(cleanMsg, collapse = " ")) %>%
-  group_by(tangramRef) %>%
-  summarize(text = paste(a, collapse = " ")) %>%
-  rename(docs = tangramRef) %>%
+textPerGram = tangramCombined %>%
+  filter(occurrenceNum == 6) %>%
+  group_by(intendedObj) %>%
+  # summarize(a = paste(contents, collapse = " ")) %>%
+  summarize(text = paste(contents, collapse = " ")) %>%
+  rename(docs = intendedObj) %>%
   mutate(docs = paste("doc ", docs))
 
 corpus = Corpus(VectorSource(textPerGram$text))

@@ -18,6 +18,9 @@ analysis/shapeReferenceOutlines/jpgs/*
 cogsci.pdf
 cogsci.tex
 *.aux
+*.fff
+*.toc
+*.ttt
 *.log
 *.bbl
 *.blg

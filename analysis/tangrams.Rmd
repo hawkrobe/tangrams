@@ -20,7 +20,7 @@ library(stringr)
 library(knitr)
 library(NLP)
 library(readr)
-library(langcog)
+library(tidyboot)
 library(xtable)
 library(ggthemes)
 library(entropy)
@@ -366,7 +366,9 @@ tangramMsgs = read_csv("../data/tangrams_sequential/message/sequential_message_r
 tangramClicks = read_csv("../data/tangrams_sequential/clickedObj/sequential_clicks.csv")# %>% mutate(roundNum = as.numeric(roundNum))
 tangramSubjInfo = read.csv("../data/tangrams_sequential/tangrams_sequential-subject_information.csv") 
 
-rawTangramCombined <- tangramMsgs %>% left_join(tangramSubjInfo, by = c('gameid', 'role')) %>% left_join(tangramClicks, by = c('gameid', 'roundNum', 'occurrenceNum'))
+rawTangramCombined <- tangramMsgs %>% 
+  left_join(tangramSubjInfo, by = c('gameid', 'role')) %>% 
+  left_join(tangramClicks, by = c('gameid', 'roundNum', 'occurrenceNum'))
 ```
 
 Set exclusion criteria
@@ -387,12 +389,13 @@ Check and remove all games of duplicate turkers (note that I accidentally exclud
 duplicate_turkers = (tangramSubjInfo %>% group_by(workerid_uniq) %>% tally() %>% filter(n > 1))$workerid_uniq
 # subjInfoids = unique((tangramSubjInfo %>% filter(workerid_uniq %in% duplicates))$gameid)
 # realids = unique((rawTangramCombined %>% filter(workerid_uniq %in% duplicates))$gameid)
-duplicate_gameids = (rawTangramCombined %>% 
+rawTangramCombined %>% 
   filter(workerid_uniq %in% duplicate_turkers)%>% 
   group_by(workerid_uniq, gameid) %>% 
   summarize(time = first(msgTime), numRounds = last(roundNum)) %>%
-  arrange(workerid_uniq, time))$gameid
-duplicate_gameids
+  ungroup() %>%
+  arrange(workerid_uniq, time)
+duplicate_gameids <- c('0210-5d5ad8b6-7c94-4e2a-a3cb-760d2f613953', '9087-3c0f9d65-0427-406f-9251-94da5d2dee54', '7261-07035df8-84ee-4381-b72c-a04234c8f5ed')
 ```
 
 Create filtered version of messages data (for potential hand-cleaning)
@@ -425,7 +428,7 @@ print(paste0(numUtterances, ' utterances in ', numGames, ' games'))
 
 # Accuracy
 
-Accuracy tends to go up on average (collapsed across everyone!)
+Accuracy is pretty high even at beginning but tends to go up on average (collapsed across everyone!)
 
 ```{r}
 tangramSingleUtt = tangramCombined %>%
@@ -438,22 +441,28 @@ tangramSingleUtt %>%
   summarize(propCorrect = sum(correct)/length(correct)) %>%
   ggplot(aes(x = roundNum, y = propCorrect, group = 1)) +
     geom_point() +
-    geom_vline(xintercept = (seq(12, 12*6, 12))) +
+    geom_vline(xintercept = (seq(0, 12*6, 12))) +
     geom_smooth() +
-    theme_few() 
+    theme_few() +
+    ylim(0,1)
 ```
 
 Break out by occurence of each tangram (some start out harder than others; everyone gets the rabbit right but that weird angel one (B) is terrible)
 
 ```{r}
-tangramSingleUtt %>%
+library(ggrepel)
+single_utt.toplot <- tangramSingleUtt %>%
   group_by(occurrenceNum, intendedObj) %>%
   summarize(propCorrect = sum(correct)/length(correct)) %>%
-  ggplot(aes(x = occurrenceNum, y = propCorrect, group = intendedObj)) +#, group = gameid)) +#, group = gameid)) +
-    geom_line(alpha = .2) +
-    geom_text(aes(label = intendedObj)) +
-    theme_few() 
+  mutate(intendedObjLabel = ifelse(intendedObj %in% c('C', 'B', 'G', 'E'), intendedObj, ''))
 
+ggplot(single_utt.toplot, aes(x = occurrenceNum, y = propCorrect, group = intendedObj, label = intendedObjLabel)) +
+    geom_line(aes(color = (intendedObjLabel == "")), alpha = 1,  size = 1.5) +
+    geom_text_repel(data = subset(single_utt.toplot, occurrenceNum == min(occurrenceNum)),
+                    hjust = 'left', vjust = 'middle') +
+    theme_few() +
+    ylim(0,1) +
+    guides(color=FALSE)
 ```
 
 Look at confusion matrix of errors
@@ -500,10 +509,12 @@ lengthReduction <- tangramCombined %>%
 ggplot(lengthReduction, aes(x = occurrenceNum, y = m,group = intendedName)) +
   geom_line() +
   theme_few() +
-  geom_dl(aes(label = intendedName), method = list(dl.trans(x = x - .25), "first.points")) +
+  geom_dl(aes(label = intendedName), method = list(dl.trans(x = x - .1), "first.points")) +
   xlab("repetition #") +
-  ylab("mean # words")
+  ylab("mean # words") +
+  theme(aspect.ratio = 1)
   
+ggsave('../writing/tangrams/figs/num_words_sequential.pdf')
 ```
 
 Questions: 

@@ -1,7 +1,5 @@
 # Workflow for reproducing analysis:
 
-1) Run tagTangrams.R to annotate messages with the tangrams they refer to
+1) We first run a preprocessing pipeline in python (sequential/preprocessing.ipynb) to extract language features and generate csvs.
 
-2) Run all the code blocks in preprocessing.ipynb to generate several csvs (it's a lot easier to use nltk than R libraries)
-
-3) Run the code in tangramResults.Rmd to make plots and do several additional analyses that don't depend on nlp
+2) We then use the R notebook (tangrams.Rmd) to make plots and conduct several additional analyses that don't depend on nlp

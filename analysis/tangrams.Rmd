@@ -28,29 +28,27 @@ library(entropy)
 
 We've already done most of the work using nltk in the ipython notebook, so here we just read in the csv files we created there, do a bit of post-processing, and make plots.
 
-# Exp. 1: unconstrained
-
-## Import and pre-process data
+# Import and pre-process data
 
 ```{r}
-tangramMsgs = read_csv("../data/tangrams_unconstrained/message/rawUnconstrainedMessages.csv") %>%
+unconstrainedMsgs = read_csv("../data/tangrams_unconstrained/message/rawUnconstrainedMessages.csv") %>%
   rename(msgTime = time, role = sender)
 
-tangramSubjInfo = read.csv("../data/tangrams_unconstrained/turk/tangrams-subject_information.csv") %>%
+unconstrainedSubjInfo = read.csv("../data/tangrams_unconstrained/turk/tangrams-subject_information.csv") %>%
   rename(gameid = gameID) %>%
   select(-workerid, -DirectorBoards, -initialMatcherBoards)
 
-rawTangramCombined <- tangramMsgs %>% left_join(tangramSubjInfo, by = c('gameid', 'role'))
+unconstrainedData.raw <- unconstrainedMsgs %>% left_join(unconstrainedSubjInfo, by = c('gameid', 'role'))
 ```
 
 Set exclusion criteria
 
 ```{r}
-nonNativeSpeakerIDs <- unique((tangramSubjInfo %>% filter(nativeEnglish != "yes"))$gameid)
-incompleteIDs <- unique((rawTangramCombined %>% group_by(gameid) %>% 
+nonNativeSpeakerIDs <- unique((unconstrainedTangramSubjInfo %>% filter(nativeEnglish != "yes"))$gameid)
+incompleteIDs <- unique((unconstrainedData.raw %>% group_by(gameid) %>% 
                            filter(length(unique(roundNum)) != 6))$gameid)
 badGames <- union(c('0574-6', incompleteIDs), nonNativeSpeakerIDs)
-print(paste0('excluding ', length(badGames), ' of ', length(unique(rawTangramCombined$gameid)), ' games that were either incomplete or had non-native english speakers'))
+print(paste0('excluding ', length(badGames), ' of ', length(unique(unconstrainedData.raw$gameid)), ' games that were either incomplete or had non-native english speakers'))
 ```
 
 Count numbers of words, examine size of dataset
@@ -396,6 +394,11 @@ rawTangramCombined %>%
   ungroup() %>%
   arrange(workerid_uniq, time)
 duplicate_gameids <- c('0210-5d5ad8b6-7c94-4e2a-a3cb-760d2f613953', '9087-3c0f9d65-0427-406f-9251-94da5d2dee54', '7261-07035df8-84ee-4381-b72c-a04234c8f5ed')
+garbage_gameids <- c('7840-4bd35c77-f10c-4055-a122-f591efae2826') # This one somehow got through wihtout director saying anything
+sketchy_gameids <- c('9116-d8b8c5c1-f549-48bf-a362-ed159302a106', # This was super distracted and kept complaining and talking about how they'd skip through rounds...
+                     '7229-0a7402b0-329e-4b26-bc3a-ae26a388a6cc' # This one was having a lot of fun with wordplay and stuff...
+                     )
+
 ```
 
 Create filtered version of messages data (for potential hand-cleaning)

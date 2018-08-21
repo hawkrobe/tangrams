@@ -10,11 +10,9 @@ output:
 # Import data
 
 ```{r}
-library(ggplot2)
+library(tidyverse)
 library(lme4)
 library(lmerTest)
-library(tidyr)
-library(dplyr)
 library(tm)
 library(stringr)
 library(knitr)
@@ -26,94 +24,73 @@ library(ggthemes)
 library(entropy)
 ```
 
+# Dynamics of structure/syntax
+
+Which bigrams decrease the most?
+
+```{r}
+read_csv('../analysis/sequential/bigramCounts.csv')
+```
+
+# Dynamics of semantics
+
 We've already done most of the work using nltk in the ipython notebook, so here we just read in the csv files we created there, do a bit of post-processing, and make plots.
 
-# Import and pre-process data
+## What are the unigrams/bigrams/trigrams that drop the most in frequency?
 
 ```{r}
-unconstrainedMsgs = read_csv("../data/tangrams_unconstrained/message/rawUnconstrainedMessages.csv") %>%
-  rename(msgTime = time, role = sender)
-
-unconstrainedSubjInfo = read.csv("../data/tangrams_unconstrained/turk/tangrams-subject_information.csv") %>%
-  rename(gameid = gameID) %>%
-  select(-workerid, -DirectorBoards, -initialMatcherBoards)
-
-unconstrainedData.raw <- unconstrainedMsgs %>% left_join(unconstrainedSubjInfo, by = c('gameid', 'role'))
+# Function takes a countType ['unigrams', 'bigrams', 'trigrams'] and returns a table of most reduced n-gram
+getMostReduced = function(countType) {
+  filename <- paste0("sequential/", countType, "Counts.csv")
+  print(filename)
+  return(read_csv(filename, col_names = T) %>%
+    group_by(word, repetitionNum) %>%
+    summarize(count = sum(count)) %>%
+    rowwise() %>%
+    mutate(repetitionNum = paste0("rep", repetitionNum, collapse = "")) %>%
+    spread(repetitionNum, count) %>%
+    mutate(diffSize = rep1 - rep6,
+           diffPct = (rep1 - rep6)/rep1) %>%
+    arrange(desc(diffSize))) 
+}
 ```
 
-Set exclusion criteria
-
 ```{r}
-nonNativeSpeakerIDs <- unique((unconstrainedTangramSubjInfo %>% filter(nativeEnglish != "yes"))$gameid)
-incompleteIDs <- unique((unconstrainedData.raw %>% group_by(gameid) %>% 
-                           filter(length(unique(roundNum)) != 6))$gameid)
-badGames <- union(c('0574-6', incompleteIDs), nonNativeSpeakerIDs)
-print(paste0('excluding ', length(badGames), ' of ', length(unique(unconstrainedData.raw$gameid)), ' games that were either incomplete or had non-native english speakers'))
+getMostReduced('unigrams')
 ```
 
-Count numbers of words, examine size of dataset
-
 ```{r}
-tangramCombined <- rawTangramCombined %>%
-  filter(!(gameid %in% badGames)) %>%
-  mutate(numRawWords = str_count(contents, "\\S+")) %>%
-  filter(!is.na(numRawWords)) # filter out pure punctuation messages
-  #filter(numRawWords < mean(numRawWords) + 3*sd(numRawWords)) # Get rid of outliers
+getMostReduced('bigrams')
 
-write_csv(tangramCombined, '../data/tangramsUnconstrained.csv')
-
-numGames <- length(unique(tangramCombined$gameid))
-numUtterances <- length(tangramCombined$contents)
-print(paste0(numUtterances, ' utterances in ', numGames, ' games'))
 ```
 
-## What are the unigrams/bigrams that drop the most in frequency?
+```{r}
+getMostReduced('trigrams')
+```
+
+Make little table to put in supplemental?
 
 ```{r}
-unigrams <- read_csv("wordCounts.csv", col_names = T) %>%
-  group_by(word, POS, roundNum) %>%
-  summarize(count = sum(count)) %>%
-  rowwise() %>%
-  mutate(roundNum = paste0("round", roundNum, collapse = "")) %>%
-  spread(roundNum, count) %>%
-  filter(round1 > 10) %>%
-  mutate(diffSize = round1 - round6,
-         diffPct = (round1 - round6)/round1) %>%
-  arrange(desc(diffSize)) %>%
-  select(word) %>%
-  filter(word != ',') %>%
-  filter(word != '#') %>%
-  head(n = 10)
+topWords <- t(cbind(getMostReduced('unigrams') %>% select(word) %>% head(10), 
+                    getMostReduced('bigrams') %>% select(word) %>% head(10),
+                    getMostReduced('trigrams') %>% select(word) %>% head(10)))
 
-bigrams <- read_csv("bigramCounts.csv", col_names = T) %>%
-  group_by(word, roundNum) %>%
-  summarize(count = sum(count)) %>%
-  rowwise() %>%
-  mutate(roundNum = paste0("round", roundNum, collapse = "")) %>%
-  spread(roundNum, count) %>%
-  filter(round1 > 10) %>%
-  mutate(diffSize = round1 - round6,
-         diffPct = (round1 - round6)/round1) %>%
-  arrange(desc(diffSize)) %>%
-  select(word) %>%
-  rename(bigrams = word) %>%
-  head(n = 10)
-
-topWords <- t(cbind(unigrams, bigrams))
 colnames(topWords) <- paste0(paste('#', seq(10), sep = ''))
-rownames(topWords) <- c('unigrams', 'bigrams')
+rownames(topWords) <- c('unigrams', 'bigrams', 'trigrams')
 topWords.toPrint = xtable(topWords, label = 'tab:words',
                           caption = 'Top 10 unigrams and bigrams with the highest reduction')
 align(topWords.toPrint) <- paste0(c("|r||", rep('l|', 10)), collapse = "")
 print(topWords.toPrint, floating.environment = "table*", comment=F, table.placement = 't')
 ```
 
+Seems to be markers of figurative descriptions, determiners, and modifying phrases like 'on the left'?
+
 ## How do various properties reduce over time?
 
 Reduction phenomena. From left: (1) mean message length in words per tangram, (2) mean number of listener messages, (3) proportion of utterances containing adjectival clauses, (4) proportion of utterances containing subordinate clauses. Error bars are bootstrapped 95\\% CIs.
 
 ```{r, cache = T}
-posTags <- read_csv('posTagged.csv')
+posTags <- read_csv('sequential/sequential_posTagged.csv')
 
 lengthReduction = tangramCombined %>%
    filter(role == "director") %>%
@@ -315,187 +292,7 @@ ggplot(aes(x = roundNum, y = m)) +
   theme_bw() 
 ```
 
-### Supplemental: accuracy over time
-
-Bring boards into it?
-
-```{r}
-tangramBoards = read.csv("../data/tangrams_unconstrained/finalBoard/tangramsFinalBoards.csv") %>%
-  gather(tangram, location, subA:trueL) %>% 
-  separate(tangram, into = c("type", "tangramName"), -2) %>% 
-  spread(key = type, value = location)  %>%
-  rename(matcherLoc = sub, trueLoc = true) %>%
-  mutate(match = matcherLoc == trueLoc)
-write.csv(tangramBoards, "reformattedBoards.csv", row.names = F)
-```
-
-subject-level performance over time?
-
-```{r}
-tangramBoards %>% 
-  group_by(gameid, roundNum) %>% 
-  summarize(matchProp = sum(match)/12) %>%
-  ggplot(aes(x = roundNum, y = matchProp, color = gameid)) +
-    geom_line()
-```
-
-average performance over time (participants get better)
-
-```{r}
-tangramBoards %>% 
-  group_by(gameid, roundNum) %>% 
-  summarize(matchProp = sum(match)/(12)) %>%
-  filter(matchProp > .2) %>%
-  group_by(roundNum) %>%
-  summarize(m = mean(matchProp), se = sd(matchProp)/sqrt(length(matchProp))) %>%
-  ggplot(aes(x = roundNum, y = m)) +
-    geom_line() +
-    geom_errorbar(aes(ymax = m + se, ymin = m - se), width = 0 )
-```
-
-# Exp. 2: Sequential
-
-## Imports & preprocessing
-
-```{r}
-tangramMsgs = read_csv("../data/tangrams_sequential/message/sequential_message_raw.csv") %>%
-  rename(msgTime = time, role = sender)
-
-tangramClicks = read_csv("../data/tangrams_sequential/clickedObj/sequential_clicks.csv")# %>% mutate(roundNum = as.numeric(roundNum))
-tangramSubjInfo = read.csv("../data/tangrams_sequential/tangrams_sequential-subject_information.csv") 
-
-rawTangramCombined <- tangramMsgs %>% 
-  left_join(tangramSubjInfo, by = c('gameid', 'role')) %>% 
-  left_join(tangramClicks, by = c('gameid', 'roundNum', 'occurrenceNum'))
-```
-
-Set exclusion criteria
-
-```{r}
-nonNativeSpeakerIDs <- unique((tangramSubjInfo %>% filter(nativeEnglish != "yes"))$gameid)
-incompleteIDs <- unique((rawTangramCombined %>% group_by(gameid) %>% 
-                           filter(length(unique(roundNum)) != 72))$gameid)
-badGames <- union(incompleteIDs, nonNativeSpeakerIDs)
-print(paste0('excluding ', length(badGames), ' of ', length(unique(rawTangramCombined$gameid)), ' games that were either incomplete or had non-native english speakers'))
-```
-
-Check and remove all games of duplicate turkers (note that I accidentally excluded some of the partial games before compiling rawMessages, so there are gameids in subjInfo that never appear in rawMessages...)
-
-`9477-662e7f6d-0f2a-4041-a4e7-6d33eba91fb0`	is probably okay: they only did one round in their previous game before getting kicked... also `6402-3db6c45b-0b53-4906-b5cf-17517d013671` is probably okay: this is their first game.
-
-```{r}
-duplicate_turkers = (tangramSubjInfo %>% group_by(workerid_uniq) %>% tally() %>% filter(n > 1))$workerid_uniq
-# subjInfoids = unique((tangramSubjInfo %>% filter(workerid_uniq %in% duplicates))$gameid)
-# realids = unique((rawTangramCombined %>% filter(workerid_uniq %in% duplicates))$gameid)
-rawTangramCombined %>% 
-  filter(workerid_uniq %in% duplicate_turkers)%>% 
-  group_by(workerid_uniq, gameid) %>% 
-  summarize(time = first(msgTime), numRounds = last(roundNum)) %>%
-  ungroup() %>%
-  arrange(workerid_uniq, time)
-duplicate_gameids <- c('0210-5d5ad8b6-7c94-4e2a-a3cb-760d2f613953', '9087-3c0f9d65-0427-406f-9251-94da5d2dee54', '7261-07035df8-84ee-4381-b72c-a04234c8f5ed')
-garbage_gameids <- c('7840-4bd35c77-f10c-4055-a122-f591efae2826') # This one somehow got through wihtout director saying anything
-sketchy_gameids <- c('9116-d8b8c5c1-f549-48bf-a362-ed159302a106', # This was super distracted and kept complaining and talking about how they'd skip through rounds...
-                     '7229-0a7402b0-329e-4b26-bc3a-ae26a388a6cc' # This one was having a lot of fun with wordplay and stuff...
-                     )
-
-```
-
-Create filtered version of messages data (for potential hand-cleaning)
-
-```{r}
-messagesFiltered <- tangramMsgs %>%
-  filter(!(gameid %in% badGames)) %>%
-  filter(!(gameid %in% duplicate_gameids)) 
-
-write_csv(messagesFiltered, '../data/tangrams_sequential/message/sequential_message_filtered.csv')
-```
-
-Count numbers of words, examine size of dataset
-
-```{r}
-tangramCombined <- rawTangramCombined %>%
-  filter(!(gameid %in% badGames)) %>%
-  filter(!(gameid %in% duplicate_gameids)) %>%
-  mutate(numRawWords = str_count(contents, "\\S+")) %>%
-  filter(!is.na(numRawWords)) # filter out pure punctuation messages
-  #filter(numRawWords < mean(numRawWords) + 3*sd(numRawWords)) # Get rid of outliers
-
-write_csv(tangramCombined, '../data/tangramsSequential.csv')
-
-numGames <- length(unique(tangramCombined$gameid))
-numUtterances <- length(tangramCombined$contents)
-print(paste0(numUtterances, ' utterances in ', numGames, ' games'))
-```
-
-
-# Accuracy
-
-Accuracy is pretty high even at beginning but tends to go up on average (collapsed across everyone!)
-
-```{r}
-tangramSingleUtt = tangramCombined %>%
-  group_by(gameid,roundNum) %>%
-  mutate(contents = paste0(contents, collapse = '.')) %>%
-  filter(row_number() == 1)
-
-tangramSingleUtt %>%
-  group_by(roundNum) %>%
-  summarize(propCorrect = sum(correct)/length(correct)) %>%
-  ggplot(aes(x = roundNum, y = propCorrect, group = 1)) +
-    geom_point() +
-    geom_vline(xintercept = (seq(0, 12*6, 12))) +
-    geom_smooth() +
-    theme_few() +
-    ylim(0,1)
-```
-
-Break out by occurence of each tangram (some start out harder than others; everyone gets the rabbit right but that weird angel one (B) is terrible)
-
-```{r}
-library(ggrepel)
-single_utt.toplot <- tangramSingleUtt %>%
-  group_by(occurrenceNum, intendedObj) %>%
-  summarize(propCorrect = sum(correct)/length(correct)) %>%
-  mutate(intendedObjLabel = ifelse(intendedObj %in% c('C', 'B', 'G', 'E'), intendedObj, ''))
-
-ggplot(single_utt.toplot, aes(x = occurrenceNum, y = propCorrect, group = intendedObj, label = intendedObjLabel)) +
-    geom_line(aes(color = (intendedObjLabel == "")), alpha = 1,  size = 1.5) +
-    geom_text_repel(data = subset(single_utt.toplot, occurrenceNum == min(occurrenceNum)),
-                    hjust = 'left', vjust = 'middle') +
-    theme_few() +
-    ylim(0,1) +
-    guides(color=FALSE)
-```
-
-Look at confusion matrix of errors
-
-TODO: figure out how to rearrange by cluster?
-
-```{r}
-confusionMatrix <- tangramSingleUtt %>%
-  group_by(intendedObj, clickedObj) %>%
-  tally() %>%
-  ungroup() %>%
-  complete(intendedObj, clickedObj, fill = list(n = 1)) %>%
-  spread(intendedObj, n)
-as.matrix(confusionMatrix %>%select(-clickedObj) )
-
-# dist(confusionMatrix)
-# clickedOrder <- hclust(as.matrix(confusionMatrix %>% select(-clickedObj)))$order 
-# 
-# cbind(confusionMatrix, clickedOrder) %>% gather(intendedObj, count, A:L) %>% arrange(clickedOrder, intendedObj) %>% mutate(clickedObj = factor(clickedObj, unique(clickedObj)), intendedObj = factor(intendedObj, unique(clickedObj))) %>%
-tangramSingleUtt %>%
-  group_by(intendedObj, clickedObj) %>%
-  tally() %>%
-  ungroup() %>%
-  complete(intendedObj, clickedObj, fill = list(n = 1)) %>%
-  ggplot(aes(x = intendedObj, y = clickedObj, fill = log(n))) +
-    geom_bin2d() +
-    theme(aspect.ratio = 1)
-```
-
-Reduction per tangram
+# Reduction per tangram
 
 ```{r}
 library(directlabels)

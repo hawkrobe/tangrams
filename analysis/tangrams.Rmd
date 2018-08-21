@@ -26,17 +26,9 @@ library(entropy)
 
 # Dynamics of structure/syntax
 
-Which bigrams decrease the most?
-
-```{r}
-read_csv('../analysis/sequential/bigramCounts.csv')
-```
-
-# Dynamics of semantics
-
 We've already done most of the work using nltk in the ipython notebook, so here we just read in the csv files we created there, do a bit of post-processing, and make plots.
 
-## What are the unigrams/bigrams/trigrams that drop the most in frequency?
+## What are the unigrams/bigrams/trigrams that drop the most in frequency across whole data set?
 
 ```{r}
 # Function takes a countType ['unigrams', 'bigrams', 'trigrams'] and returns a table of most reduced n-gram
@@ -89,68 +81,127 @@ Seems to be markers of figurative descriptions, determiners, and modifying phras
 
 Reduction phenomena. From left: (1) mean message length in words per tangram, (2) mean number of listener messages, (3) proportion of utterances containing adjectival clauses, (4) proportion of utterances containing subordinate clauses. Error bars are bootstrapped 95\\% CIs.
 
-```{r, cache = T}
-posTags <- read_csv('sequential/sequential_posTagged.csv')
+### Reduction in utterance length
 
-lengthReduction = tangramCombined %>%
-   filter(role == "director") %>%
-   group_by(gameid, roundNum) %>%
+```{r, cache = T, warning=F}
+tagged_df <- read_csv('sequential/posTagged.csv') %>%
+  filter(role == 'director') %>%
+  select(-role, -doc, -posCounts, -pos) %>%
+  left_join(read_csv('sequential/constituency_tags.csv') %>%
+      replace_na(list(SBAR = FALSE, PP = FALSE, CC = FALSE)) %>%
+      mutate(SBAR = ifelse(SBAR == 'True', TRUE, FALSE),
+           PP = ifelse(PP == 'True', TRUE, FALSE), 
+           CC = ifelse(CC == 'True', TRUE, FALSE)) %>%
+      select(-X1))
+```
+
+```{r}
+tagged_df %>%
+   group_by(gameid, repetitionNum, taskVersion) %>%
    summarize(individualM = sum(numRawWords)/12) %>%
-   group_by(roundNum) %>%
-   multi_boot_standard("individualM") %>%
+   group_by(repetitionNum, taskVersion) %>%
+   tidyboot_mean(individualM, na.rm = T) %>%
+   mutate(measure = '# words per tangram') %>%
+   ggplot(aes(x = repetitionNum, y = empirical_stat, color = taskVersion)) +
+    geom_line() +
+    xlab('repetition #') +
+    ylab('log # words') +
+    geom_ribbon(aes(ymax = ci_upper, ymin = ci_lower), alpha = .2) +
+    #facet_wrap(~ taskVersion, nrow = 1, ncol = 2) +
+    ylim(c(0, NA)) +
+    theme_few(12) +
+    theme(aspect.ratio = .75)
+```
+
+Broken out by tangrams for cued condition
+
+```{r}
+library(directlabels)
+
+lengthReduction <- tagged_df %>%
+   filter(taskVersion == "cued") %>%
+   group_by(gameid, repetitionNum, intendedName) %>%
+   summarize(individualM = sum(numRawWords)) %>%
+   group_by(repetitionNum, intendedName) %>%
+   tidyboot_mean(individualM) %>%
    mutate(measure = '# words per tangram')
 
-clauseReduction = posTags %>%
-  group_by(roundNum) %>%
-  mutate(clauses=as.logical(clauses)) %>%
-  multi_boot_standard('clauses') %>%
-  mutate(measure = '% subordinate clauses')
+ggplot(lengthReduction, aes(x = repetitionNum, y = empirical_stat ,group = intendedName)) +
+  geom_line() +
+  theme_few() +
+  geom_dl(aes(label = intendedName), method = list(dl.trans(x = x - .1), "first.points")) +
+  xlab("repetition #") +
+  ylab("mean # words") +
+  theme(aspect.ratio = 1)
+  
+ggsave('../writing/tangrams/figs/num_words_sequential.pdf')
+```
 
-aclReduction = posTags %>%
-  group_by(roundNum) %>%
-  mutate(acl=as.logical(acl)) %>%
-  multi_boot_standard('acl') %>%
-  mutate(measure = '% adjectival clauses')
+Statistics:
 
-listenerMsgs <- tangramCombined %>%
-  group_by(gameid, roundNum, role) %>%
-  summarize(individualM = n()) %>%
-  ungroup() %>%
-  complete(role, roundNum, gameid, fill = list(individualM = 0)) %>%
-  spread(role, individualM)
+```{r}
+summary(lmer(numRawWords ~ poly(repetitionNum,2) + 
+               (1 + repetitionNum | gameid) + 
+               (1 + repetitionNum | intendedName), 
+             data = tagged_df %>% 
+               filter(taskVersion == 'cued') %>%
+               group_by(gameid, trialNum, repetitionNum, intendedName) %>% 
+               summarize(numRawWords = sum(numRawWords))))
+```
 
-listenerReduction <- listenerMsgs %>%
-   group_by(roundNum) %>%
-   multi_boot_standard("matcher") %>%
-   mutate(measure = '# listener messages')  
+TODO: examine reduction in # words in noun phrases, i.e. to argue that it's not just small-talk going down or something
 
-listenerReduction %>%
-  rbind(lengthReduction) %>%
-  rbind(clauseReduction) %>%
-  rbind(aclReduction) %>%
-  mutate(measure = factor(measure, levels = c(
-    "# words per tangram", "# listener messages",
-    "% adjectival clauses","% subordinate clauses"))) %>%
-  ggplot(aes(x = roundNum, y = mean)) +
+### Reduction in syntactic features 
+
+TODO: include % including NPs? (shouldn't go down as much)
+
+```{r}
+tagged_df %>%
+  select(gameid, repetitionNum, taskVersion, SBAR, CC, PP) %>%
+  gather(measure, occurrence, SBAR:PP) %>%
+  group_by(taskVersion, repetitionNum, gameid, measure) %>%
+  summarize(m = mean(occurrence)) %>%
+  group_by(taskVersion, repetitionNum, measure) %>%
+  tidyboot_mean(m) %>%
+  ggplot(aes(x = repetitionNum, y = empirical_stat)) +
     geom_line() +
     xlab('round #') +
-    ylab('metric') +
-    geom_errorbar(aes(ymax = summary_ci_upper, ymin = summary_ci_lower), width = .1) +
-    facet_wrap(~ measure, nrow = 1, ncol = 4, scales = 'free') +
+    ylab('% of messages containing syntactic feature') +
+    geom_errorbar(aes(ymax = ci_upper, ymin = ci_lower), width = .1) +
+    facet_grid(taskVersion ~ measure) +
     ylim(c(0, NA)) +
     theme_few(9) +
     theme(aspect.ratio = .75)
 ```
 
-```{r}
-listenerMsg_lm = summary(lmer(matcher ~ roundNum + (1 | gameid), data = listenerMsgs))
-print(listenerMsg_lm)
-```
-Reduction rates for different parts of speech. Error bars are bootstrapped 95\\% CIs.
+Same thing broken out by tangram
 
 ```{r}
-posReduction = read_csv('posTagged.csv') %>%
-  # Count occurences of each POS on each round within games
+tagged_df %>%
+  filter(taskVersion == 'cued') %>%
+  select(gameid, intendedName, repetitionNum, SBAR, CC, PP) %>%
+  gather(measure, occurrence, SBAR:PP) %>%
+  group_by(repetitionNum, intendedName, gameid, measure) %>%
+  summarize(m = mean(occurrence)) %>%
+  group_by(intendedName, repetitionNum, measure) %>%
+  tidyboot_mean(m) %>%
+  ggplot(aes(x = repetitionNum, y = empirical_stat, group = intendedName)) +
+    geom_line() +
+    xlab('round #') +
+    ylab('% of messages containing syntactic feature') +
+    #geom_errorbar(aes(ymax = ci_upper, ymin = ci_lower), width = .1) +
+    facet_wrap(~ measure, nrow = 1, ncol = 3) +
+    ylim(c(0, NA)) +
+    theme_few(9) +
+    theme(aspect.ratio = .75)
+```
+
+### Reduction in different parts of speech
+
+TODO: fix this code block to use right names...
+
+```{r}
+df_tagged %>%
   group_by(roundNum, gameid) %>%
   summarize(numWords = sum(numWords),
             nouns = sum(nouns),
@@ -191,6 +242,29 @@ ggplot(posReduction, aes(x = POS, y = mean, fill = cat)) +
   ylab("% reduction") +
   xlab("Part of Speech category")
 ```
+
+### Reduction in listener exchanges
+
+TODO: need to use combined tangrams data from R, not one with python nlp features
+
+```{r}
+listenerMsgs <- tangramCombined %>%
+  group_by(gameid, repetitionNum, role) %>%
+  summarize(individualM = n()) %>%
+  ungroup() %>%
+  complete(role, repetitionNum, gameid, fill = list(individualM = 0)) %>%
+  spread(role, individualM)
+
+listenerReduction <- listenerMsgs %>%
+   group_by(repetitionNum) %>%
+   multi_boot_standard("matcher") %>%
+   mutate(measure = '# listener messages')  
+
+listenerMsg_lm = summary(lmer(matcher ~ roundNum + (1 | gameid), data = listenerMsgs))
+print(listenerMsg_lm)
+```
+
+# Dynamics of semantics
 
 ## Arbitrariness and stability
 
@@ -290,46 +364,6 @@ ggplot(aes(x = roundNum, y = m)) +
   ylim(.5,1) +
   xlim(0, 7) +
   theme_bw() 
-```
-
-# Reduction per tangram
-
-```{r}
-library(directlabels)
-
-lengthReduction <- tangramCombined %>%
-   filter(role == "director") %>%
-   group_by(gameid, occurrenceNum, intendedName) %>%
-   summarize(individualM = sum(numRawWords)) %>%
-   group_by(occurrenceNum, intendedName) %>%
-   summarize(m = mean(individualM)) %>%
-   #multi_boot_standard("individualM") %>%
-   mutate(measure = '# words per tangram')
-
-ggplot(lengthReduction, aes(x = occurrenceNum, y = m,group = intendedName)) +
-  geom_line() +
-  theme_few() +
-  geom_dl(aes(label = intendedName), method = list(dl.trans(x = x - .1), "first.points")) +
-  xlab("repetition #") +
-  ylab("mean # words") +
-  theme(aspect.ratio = 1)
-  
-ggsave('../writing/tangrams/figs/num_words_sequential.pdf')
-```
-
-Questions: 
-
--- is just this a result of motivation, i.e. people get sloppy and just want to finish as game goes on? (probably not; accuracy goes up and no comparable reduction in other ref games of similar length w/o repetition, e.g. chairs, colors)
-
--- is this just a result of meta-discourse? Maybe people are just chatting each other up a lot at the beginning (e.g. 'hi, how are you? what's your name?') and stop doing that over time? (probably not, but we should do this restricted to just noun phrases...)
-
-```{r}
-summary(lmer(numRawWords ~ poly(occurrenceNum,2) + 
-               (1 + occurrenceNum | gameid) + 
-               (1 + occurrenceNum | intendedObj), 
-             data = tangramCombined %>% 
-               group_by(gameid, roundNum, occurrenceNum, intendedObj) %>% 
-               summarize(numRawWords = sum(numRawWords))))
 ```
 
 # PMI
@@ -522,27 +556,6 @@ summary(lmer(ent ~ permutation + (1 + permutation | gameid) + (1 +permutation | 
 
 ```{r}
 posTags <- read_csv('sequential_posTagged.csv')
-
-clauseReduction = posTags %>%
-  group_by(occurrenceNum, intendedObj) %>%
-  #mutate(num_sbar=as.logical(num_sbar)) %>%
-  summarize(m = mean(num_sbar > 0)) %>%
-  #multi_boot_standard('num_sbar') %>%
-  mutate(measure = '% messages \nw/ subordinate clauses')
-
-ppReduction = posTags %>%
-  group_by(occurrenceNum, intendedObj) %>%
-  #mutate(num_pp=as.logical(num_pp)) %>%
-  summarize(m = mean(num_pp > 0)) %>%
-  #multi_boot_standard('acl') %>%
-  mutate(measure = '% messages \nw/ adjectival clauses')
-
-ccReduction = posTags %>%
-  group_by(occurrenceNum, intendedObj) %>%
-  #mutate(num_pp=as.logical(num_pp)) %>%
-  summarize(m = mean(num_cc > 0)) %>%
-  #multi_boot_standard('acl') %>%
-  mutate(measure = '% messages \nw/ conjunctions')
 
 listenerMsgs <- tangramCombined %>%
   group_by(gameid, occurrenceNum, intendedObj, role) %>%

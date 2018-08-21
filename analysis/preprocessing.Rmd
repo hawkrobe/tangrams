@@ -1,0 +1,313 @@
+---
+title: "Organize/pre-process data"
+output: html_notebook
+---
+
+# Import dependencies 
+
+```{r}
+library(tidyverse)
+library(tidyboot)
+```
+
+# Read in and compile data... 
+
+```{r}
+unconstrainedMsgs = read_csv("../data/tangrams_unconstrained/message/rawUnconstrainedMessages.csv") %>%
+  rename(msgTime = time, repetitionNum = roundNum, role = sender)
+
+unconstrainedResponses = read_csv("../data/tangrams_unconstrained/finalBoard/tangramsFinalBoards.csv") %>%
+  rename(finalTime = time, repetitionScore = score, repetitionNum = roundNum) %>%
+  group_by(gameid, repetitionNum) %>%
+  gather(tangramCat, position, subA:trueL) %>%
+  separate(tangramCat, into = c('type', 'tangramID'), sep = -1) %>%
+  spread(type, position) %>%
+  mutate(correct = sub == true) %>%
+  select(-sub, -true) 
+
+unconstrainedSubjInfo = read.csv("../data/tangrams_unconstrained/turk/tangrams-subject_information.csv") %>%
+  rename(gameid = gameID) %>%
+  select(-workerid, -DirectorBoards, -initialMatcherBoards)
+
+unconstrainedData.raw <- unconstrainedMsgs %>% 
+  left_join(unconstrainedSubjInfo, by = c('gameid', 'role')) %>%
+  left_join(unconstrainedResponses %>% group_by(gameid, repetitionNum) %>% 
+              summarize(repetitionScore = mean(repetitionScore))) 
+```
+
+## How accurate are participants overall? (before applying exclusion criteria)
+
+Total scores on average show that people improve across successive rounds...
+
+```{r}
+unconstrainedResponses %>% 
+  group_by(repetitionNum) %>%
+  mutate(pctScore = repetitionScore/12) %>%
+  tidyboot_mean(pctScore) %>%
+  ggplot(aes(x = repetitionNum, y = empirical_stat)) +
+    geom_line() +
+    geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), width =0) +
+    theme_bw() +
+    ylim(0, 1)
+```
+
+What is distribution across scores across games for each round? 
+
+```{r}
+unconstrainedResponses %>% 
+  group_by(repetitionNum, gameid, repetitionScore) %>%
+  tally() %>%
+  #filter(!(gameid %in% sloppyIDs)) %>%
+  select(-n) %>%
+  group_by(repetitionNum, repetitionScore) %>%
+  tally() %>%
+  ggplot(aes(x = repetitionScore, y = n)) +
+    geom_bar(stat = 'identity') +
+    facet_wrap(~ repetitionNum) +
+    theme_bw() +
+    xlim(-.5,12.5)
+```
+
+Looks like there is a subpopulation who are clicking through with very poor accuracy, even on final round...
+
+Let's gather those games who are getting less than half in any round so we can exclude them from further analyses
+
+```{r}
+sloppyIDs <- unique((unconstrainedResponses %>% 
+  group_by(repetitionNum, gameid, repetitionScore) %>%
+  tally() %>%
+  filter(repetitionScore < 6))$gameid)
+```
+
+What is variation in accuracy across tangrams?
+
+```{r}
+unconstrainedResponses %>% 
+  filter(!(gameid %in% sloppyIDs)) %>%
+  group_by(repetitionNum, tangramID) %>%
+  tidyboot_mean(correct) %>%
+  ggplot(aes(x = repetitionNum, y = empirical_stat, color = tangramID)) +
+    geom_line() +
+    #geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), width =0) +
+    theme_bw() +
+    ylim(0,1)
+```
+
+Eye-ball totally disaggregated game-by-game accuracy?
+
+```{r}
+library(ggthemes)
+unconstrainedResponses %>% 
+  group_by(gameid, repetitionNum) %>% 
+  filter(!(gameid %in% sloppyIDs)) %>%
+  summarize(matchProp = sum(correct)/12) %>%
+  ggplot(aes(x = repetitionNum, y = matchProp)) +
+    geom_line()+
+    facet_wrap(~ gameid) +
+    theme_few() +
+    ylim(0.5,1) +
+    scale_y_continuous(breaks=c(0.5,1))
+```
+
+## Apply exclusion criteria
+
+```{r}
+nonNativeSpeakerIDs <- unique((unconstrainedSubjInfo %>% filter(nativeEnglish != "yes"))$gameid)
+
+incompleteIDs <- unique((unconstrainedData.raw %>% group_by(gameid) %>% 
+                           filter(length(unique(repetitionNum)) != 6))$gameid)
+
+# 0574-6 is also incomplete (stopped after first message of round 6, so not caught by above rule)
+badGames <- unique(c('0574-6', incompleteIDs, as.character(nonNativeSpeakerIDs), sloppyIDs))
+print(paste0('excluding ', length(badGames), ' of ', length(unique(unconstrainedData.raw$gameid)), ' games that were either incomplete, poor accuracy, or had non-native english speakers'))
+```
+
+Count numbers of words, examine size of dataset
+  
+```{r}
+unconstrainedCombined <- unconstrainedData.raw %>%
+  filter(!(gameid %in% badGames)) %>%
+  mutate(numRawWords = str_count(contents, "\\S+")) %>%
+  filter(!is.na(numRawWords)) # filter out pure punctuation messages
+
+write_csv(unconstrainedCombined, '../data/tangramsUnconstrained.csv')
+
+numGames <- length(unique(unconstrainedCombined$gameid))
+numUtterances <- length(unconstrainedCombined$contents)
+print(paste0(numUtterances, ' utterances in ', numGames, ' games'))
+```
+
+# Import and preprocess *sequential* data
+
+```{r}
+sequentialMsgs = read_csv("../data/tangrams_sequential/message/sequential_message_raw.csv") %>%
+  rename(msgTime = time, role = sender, repetitionNum = occurrenceNum, trialNum = roundNum)
+
+sequentialClicks = read_csv("../data/tangrams_sequential/clickedObj/sequential_clicks.csv") %>% 
+  rename(repetitionNum = occurrenceNum, trialNum = roundNum)
+sequentialSubjInfo = read.csv("../data/tangrams_sequential/tangrams_sequential-subject_information.csv") 
+
+sequentialCombined.raw <- sequentialMsgs %>% 
+  left_join(sequentialSubjInfo, by = c('gameid', 'role')) %>% 
+  left_join(sequentialClicks, by = c('gameid', 'trialNum', 'repetitionNum'))
+```
+
+## Examine accuracy
+
+Accuracy is pretty high even at beginning but tends to go up on average (collapsed across everyone!)
+
+```{r}
+singleUtts = sequentialCombined.raw %>%
+  group_by(gameid,trialNum) %>%
+  mutate(contents = paste0(contents, collapse = '. ')) %>%
+  filter(row_number() == 1)
+
+singleUtts %>%
+  group_by(trialNum) %>%
+  summarize(propCorrect = sum(correct, na.rm = T)/length(correct)) %>%
+  ggplot(aes(x = trialNum, y = propCorrect, group = 1)) +
+    geom_point() +
+    geom_vline(xintercept = (seq(0, 12*6, 12))) +
+    geom_smooth() +
+    theme_few() +
+    ylim(0,1)
+```
+
+Look at per round histograms to spot outliers
+
+```{r}
+singleUtts %>% 
+#  filter(!(gameid %in% sloppyIDs)) %>%
+  group_by(repetitionNum, gameid) %>%
+  summarize(totalScore = sum(correct)) %>%
+  group_by(repetitionNum, totalScore) %>%
+  tally() %>%
+  ggplot(aes(x = totalScore, y = n)) +
+    geom_bar(stat = 'identity') +
+    facet_wrap(~ repetitionNum) +
+    theme_bw()
+```
+
+Break out by occurence of each tangram for each repetition (some start out harder than others; everyone gets the rabbit right but that weird angel one (B) is terrible)
+
+```{r}
+library(ggrepel)
+single_utt.toplot <- singleUtts %>%
+  group_by(repetitionNum, intendedName) %>%
+  summarize(propCorrect = sum(correct, na.rm=T)/length(correct)) %>%
+  mutate(intendedObjLabel = ifelse(intendedName %in% c('C', 'B', 'G', 'E'), intendedName, ''))
+
+ggplot(single_utt.toplot, aes(x = repetitionNum, y = propCorrect, group = intendedName, label = intendedObjLabel)) +
+    geom_line(aes(color = (intendedObjLabel == "")), alpha = 1,  size = 1.5) +
+    geom_text_repel(data = subset(single_utt.toplot, repetitionNum == min(repetitionNum)),
+                    hjust = 'left', vjust = 'middle') +
+    theme_few() +
+    ylim(0,1) +
+    guides(color=FALSE)
+```
+
+Look at overall confusion matrix of errors
+
+```{r}
+confusionMatrix <- singleUtts %>%
+  group_by(intendedName, clickedObj) %>%
+  tally() %>%
+  ungroup() %>%
+  complete(intendedName, clickedObj, fill = list(n = 1)) %>%
+  spread(intendedName, n)
+as.matrix(confusionMatrix %>%select(-clickedObj) )
+
+# dist(confusionMatrix)
+# clickedOrder <- hclust(as.matrix(confusionMatrix %>% select(-clickedObj)))$order 
+# 
+# cbind(confusionMatrix, clickedOrder) %>% gather(intendedObj, count, A:L) %>% arrange(clickedOrder, intendedObj) %>% mutate(clickedObj = factor(clickedObj, unique(clickedObj)), intendedObj = factor(intendedObj, unique(clickedObj))) %>%
+singleUtts %>%
+  group_by(intendedName, clickedObj) %>%
+  tally() %>%
+  ungroup() %>%
+  complete(intendedName, clickedObj, fill = list(n = 1)) %>%
+  ggplot(aes(x = intendedName, y = (clickedObj), fill = log(n))) +
+    geom_bin2d() +
+    theme(aspect.ratio = 1)
+```
+
+Set exclusion criteria
+
+```{r}
+nonNativeSpeakerIDs <- unique((sequentialSubjInfo %>% filter(nativeEnglish != "yes"))$gameid)
+
+incompleteIDs <- unique((sequentialCombined.raw %>% group_by(gameid) %>% 
+                           filter(length(unique(trialNum)) != 72))$gameid)
+
+sloppyIDs <- unique((singleUtts %>% 
+  group_by(repetitionNum, gameid) %>%
+  summarize(repetitionScore = sum(correct)) %>%
+  filter(repetitionScore < 6))$gameid)
+
+badGames <- unique(c(incompleteIDs, as.character(nonNativeSpeakerIDs), sloppyIDs))
+print(paste0('excluding ', length(badGames), ' of ', length(unique(sequentialCombined.raw$gameid)), ' games that were either incomplete, poor accuracy, or had non-native english speakers'))
+```
+
+Check and remove all games of duplicate turkers (note that I accidentally excluded some of the partial games before compiling rawMessages, so there are gameids in subjInfo that never appear in rawMessages...)
+
+`9477-662e7f6d-0f2a-4041-a4e7-6d33eba91fb0`	is probably okay: they only did one round in their previous game before getting kicked... also `6402-3db6c45b-0b53-4906-b5cf-17517d013671` is probably okay: this is their first game.
+
+```{r}
+duplicate_turkers = (sequentialSubjInfo %>% group_by(workerid_uniq) %>% tally() %>% filter(n > 1))$workerid_uniq
+
+sequentialCombined.raw %>% 
+  filter(workerid_uniq %in% duplicate_turkers)%>% 
+  group_by(workerid_uniq, gameid) %>% 
+  summarize(time = first(msgTime), numTrials = last(trialNum)) %>%
+  ungroup() %>%
+  arrange(workerid_uniq, time)
+
+duplicate_gameids <- c('0210-5d5ad8b6-7c94-4e2a-a3cb-760d2f613953', '9087-3c0f9d65-0427-406f-9251-94da5d2dee54', '7261-07035df8-84ee-4381-b72c-a04234c8f5ed')
+garbage_gameids <- c('7840-4bd35c77-f10c-4055-a122-f591efae2826') # This one somehow got through wihtout director saying anything
+sketchy_gameids <- c('9116-d8b8c5c1-f549-48bf-a362-ed159302a106', # This was super distracted and kept complaining and talking about how they'd skip through rounds...
+                     '7229-0a7402b0-329e-4b26-bc3a-ae26a388a6cc' # This one was having too much fun with wordplay...
+                     )
+
+other_bad_games <- unique(c(duplicate_gameids, garbage_gameids, sketchy_gameids))
+```
+
+Create filtered version of messages data (for potential hand-cleaning)
+
+```{r}
+messagesFiltered <- sequentialMsgs %>%
+  filter(!(gameid %in% badGames)) %>%
+  filter(!(gameid %in% other_bad_games)) 
+
+write_csv(messagesFiltered, '../data/tangrams_sequential/message/sequential_message_filtered.csv')
+```
+
+Count numbers of words, examine size of dataset
+
+```{r}
+sequentialCombined <- sequentialCombined.raw %>%
+  filter(!(gameid %in% badGames)) %>%
+  filter(!(gameid %in% other_bad_games)) %>%
+  mutate(numRawWords = str_count(contents, "\\S+")) %>%
+  left_join(singleUtts %>% 
+    group_by(repetitionNum, gameid) %>%
+    summarize(repetitionScore = sum(correct))) %>%
+  filter(!is.na(numRawWords)) %>% # filter out pure punctuation messages
+  select(-score, -workerid_uniq)
+  #filter(numRawWords < mean(numRawWords) + 3*sd(numRawWords)) # Get rid of outliers
+
+write_csv(sequentialCombined, '../data/tangramsSequential.csv')
+
+numGames <- length(unique(sequentialCombined$gameid))
+numUtterances <- length(sequentialCombined$contents)
+print(paste0(numUtterances, ' utterances in ', numGames, ' games'))
+```
+
+# Make combined dataset
+
+```{r}
+combined <- full_join(
+  sequentialCombined %>% mutate(taskVersion = 'cued'),
+  unconstrainedCombined %>% mutate(taskVersion = 'free')
+)
+write_csv(combined, path = '../data/tangrams.csv')
+```

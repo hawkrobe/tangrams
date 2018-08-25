@@ -192,9 +192,13 @@ tagged_df %>%
     # geom_ribbon(aes(ymax = ci_upper, ymin = ci_lower), alpha = .2) +
     geom_dl(aes(label = intendedName), method = list(dl.trans(x = x - .1), "first.points")) +
     xlab("repetition #") +
-    ylab("# words in POS category per description") +
+    ylab("# nouns per description") +
     theme(aspect.ratio = 1)
 ```
+
+TODO: sentiment analyses
+
+TODO: distance in depth of the tree between the nouns
 
 TODO: consider only showing full curve like this for ones we want to highlight (e.g. nouns vs. verbs vs. adjectives or something?), and a supplemental bar plot version with % decrease in appearance of each POS (like in the cogsci paper).
 
@@ -263,6 +267,9 @@ tagged_df %>%
     theme_few(9) +
     theme(aspect.ratio = .75)
 ```
+
+
+TODO: compare starting to ending proportions;
 
 Same thing broken out by tangram
 
@@ -434,7 +441,7 @@ allEntropies %>%
 ```
 
 ```{r}
-summary(lmer(ent ~ permutation + (1 + permutation | gameid) + (1 +permutation | intendedObj), 
+summary(lmer(ent ~ permutation + (1 + permutation | gameid) + (1 + permutation | intendedObj), 
              data = allEntropies))
 ```
 

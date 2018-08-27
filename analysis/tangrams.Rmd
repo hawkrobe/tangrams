@@ -196,8 +196,6 @@ tagged_df %>%
     theme(aspect.ratio = 1)
 ```
 
-TODO: sentiment analyses
-
 TODO: distance in depth of the tree between the nouns
 
 TODO: consider only showing full curve like this for ones we want to highlight (e.g. nouns vs. verbs vs. adjectives or something?), and a supplemental bar plot version with % decrease in appearance of each POS (like in the cogsci paper).
@@ -568,6 +566,37 @@ nonparametric_d %>%
   scale_fill_manual(values = c("random" = "black", "top"= "red")) +
   theme_few()  +
   guides(fill=FALSE)
+```
+
+## tsne visualizations
+
+```{r}
+tsne <- read_csv('sequential/embeddings.csv') %>%
+  left_join(read_csv('../data/tangrams.csv') %>% filter(role == "director")) %>%
+  select(gameid, intendedName, repetitionNum, x_tsne, y_tsne, x_mds, y_mds, contents)
+ggplot(tsne, aes(x = x_tsne, y = y_tsne, group = gameid)) +
+  geom_line(alpha = 0.1) +
+  geom_point(aes(color = repetitionNum), size = 2, 
+             data = tsne %>% filter(repetitionNum %in% c(1,6))) +
+  facet_wrap(~ intendedName) +
+  theme_few(20) +
+  ggtitle('pca + tsne embeddings') +
+  theme(aspect.ratio = 1)
+
+ggsave('tsne_embeddings.pdf', width = 15, height = 15)
+```
+
+```{r}
+ggplot(tsne, aes(x = x_mds, y = y_mds, group = gameid)) +
+  geom_line(alpha = 0.1) +
+  geom_point(aes(color = repetitionNum), size = 2, 
+             data = tsne %>% filter(repetitionNum %in% c(1,6))) +
+  facet_wrap(~ intendedName) +
+  theme_few(20) +
+  ggtitle('MDS embeddings') +
+  theme(aspect.ratio = 1)
+
+ggsave('mds_embeddings.pdf', width = 15, height = 15)
 ```
 
 # Supplemental analyses

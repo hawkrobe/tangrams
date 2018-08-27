@@ -571,32 +571,55 @@ nonparametric_d %>%
 ## tsne visualizations
 
 ```{r}
-tsne <- read_csv('sequential/embeddings.csv') %>%
+tsne <- read_csv('outputs/embeddings.csv') %>%
   left_join(read_csv('../data/tangrams.csv') %>% filter(role == "director")) %>%
-  select(gameid, intendedName, repetitionNum, x_tsne, y_tsne, x_mds, y_mds, contents)
+  select(gameid, intendedName, repetitionNum, x_tsne, y_tsne, x_mds, y_mds, contents) %>%
+  mutate(r = useful::cart2pol(x_tsne, y_tsne)$r,
+         theta = useful::cart2pol(x_tsne, y_tsne)$theta) %>%
+  group_by(gameid, intendedName) %>%
+  arrange(repetitionNum) %>%
+  mutate(finalTheta = last(theta))
+library(viridis)
+```
+
+```{r}
 ggplot(tsne, aes(x = x_tsne, y = y_tsne, group = gameid)) +
-  geom_line(alpha = 0.1) +
-  geom_point(aes(color = repetitionNum), size = 2, 
+  geom_line(alpha = 0.2) +
+  geom_point(aes(shape = factor(-repetitionNum), 
+                 color = finalTheta, 
+                 alpha = factor(repetitionNum)),
+             size = 1.5, stroke = 2,
              data = tsne %>% filter(repetitionNum %in% c(1,6))) +
   facet_wrap(~ intendedName) +
   theme_few(20) +
   ggtitle('pca + tsne embeddings') +
-  theme(aspect.ratio = 1)
+  scale_shape_manual(values = c(16, 21)) +
+  scale_alpha_discrete(range = c(0.5, 1))+
+  scale_color_gradientn(colours = viridis(5))+
+  guides(color = F, shape = F, alpha = F) +
+  theme(aspect.ratio = 1) 
 
-ggsave('tsne_embeddings.pdf', width = 15, height = 15)
+ggsave('../writing/tangrams/figs/tsne_embeddings.pdf', width = 15, height = 15)
 ```
 
 ```{r}
 ggplot(tsne, aes(x = x_mds, y = y_mds, group = gameid)) +
-  geom_line(alpha = 0.1) +
-  geom_point(aes(color = repetitionNum), size = 2, 
+  geom_line(alpha = 0.2) +
+  geom_point(aes(shape = factor(-repetitionNum), 
+                 color = finalTheta, 
+                 alpha = factor(repetitionNum)),
+             size = 1.5, stroke = 2,
              data = tsne %>% filter(repetitionNum %in% c(1,6))) +
   facet_wrap(~ intendedName) +
   theme_few(20) +
-  ggtitle('MDS embeddings') +
-  theme(aspect.ratio = 1)
+  ggtitle('mds embeddings') +
+  scale_shape_manual(values = c(16, 21)) +
+  scale_alpha_discrete(range = c(0.5, 1))+
+  scale_color_gradientn(colours = tableau_color_pal()(3))+
+  guides(color = F, shape = F, alpha = F) +
+  theme(aspect.ratio = 1) 
 
-ggsave('mds_embeddings.pdf', width = 15, height = 15)
+ggsave('../writing/tangrams/figs/mds_embeddings.pdf', width = 15, height = 15)
 ```
 
 # Supplemental analyses

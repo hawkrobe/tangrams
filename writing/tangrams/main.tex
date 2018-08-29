@@ -16,6 +16,8 @@
 
 % Add additional packages here if required
 \usepackage{siunitx}
+\usepackage{todonotes}
+\graphicspath{{./figs/}}
 
 % Update article type if known
 \papertype{Original Article}
@@ -74,10 +76,11 @@
 % Fig. 1: bunny tangram w/ T1 and TN word clouds
 
 \begin{abstract}
+\todo[inline]{Revise to pivot more explicitly to tangrams as case study and what we can learn from precisely quantifying dynamics}
 How do speakers understand one another in conversation? 
 When talking with novel partners about novel referents, speakers must go beyond their existing lexicon to flexibly coordinate on new conventions for efficient, accurate communication.
 Here we investigate three key signatures constraining theories of convention formation in such contexts: arbitrariness, stability, and increasing efficiency over time. 
-We collected a corpus of extended dyadic interactions in two variants of a classic reference game task using  initially difficult-to-describe tangram stimuli . 
+We collected a corpus ($>$15,000 utterances from 200 pairs) of extended dyadic interactions in two variants of a classic reference game task using  initially difficult-to-describe tangram stimuli . 
 Drawing upon recent advances in natural language processing, we introduce fine-grained measures of the content of utterances as speakers repeatedly referred to objects.
 While dyads converged on a wide range of equally successful conventions, the trajectory of referring expressions used within a dyad were systematically path-dependent: 
 utterances are gradually simplified by dropping redundant syntactic units and
@@ -183,13 +186,16 @@ study at a fine-grained level due to the sparseness of existing data.
 
 \section{Methods}
 
-To collect a corpus of reference game dialogue that supports more
-detailed analyses of convention-formation, we ported the tangrams task
-used in Clark \& Wilkes-Gibbs (1986) to a real-time, multi-player web
-environment. 
-We collected a corpus consisting of two variants of the game: a \emph{free-matching} version that closely replicates classic in-lab designs and a more tightly controlled \emph{cued} version that allows for higher resolution analyses of how references to individual tangrams changed over time. 
+To collect a corpus of natural dialogue that supports quantitative analyses of convention formation over time, we ported the tangrams task used in \cite{ClarkWilkesGibbs86_ReferringCollaborative} to a real-time, multi-player web environment. 
+We developed two variants of the game: a \emph{free-matching} version that closely replicates classic in-lab designs and a more tightly controlled \emph{cued} version that allows for higher resolution analyses of how references to individual tangrams changed over time (see Fig. \ref{fig:design}). 
 
-\subsection{Exp.~1: Free matching}
+\begin{figure}
+\includegraphics[scale=.65]{designAndExample.pdf}
+\caption{(A) Screenshots of the `free matching' and `cued' variants of the tangrams task; (B) Visualization of words used to refer to one tangram on the first round compared to the final round. \todo[inline]{Fix text/formatting in screenshots (maybe use scheme instead); think about less corny representation than wordcloud? figure out where to put the wavy guy, maybe add speech bubble to indicate words came from speaker?}}
+\label{fig:design}
+\end{figure}
+
+\subsection{Exp.~1a: Free matching}
 
 \subsubsection{Participants}\label{participants}
 
@@ -202,11 +208,8 @@ X utterances.
 
 \subsubsection{Stimuli}\label{stimuli}
 
-On every trial of the game, both participants were shown a
-\(6 \times 2\) grid containing twelve tangram shapes, reproduced from
-Clark \& Wilkes-Gibbs (1986). Cells were labeled with fixed numbers from
-one to twelve in order to help participants easily refer to locations in
-the grid (see Fig. \ref{fig:taskScreenshot}).
+On every trial of the game, both participants were shown a \(6 \times 2\) grid containing twelve tangram shapes, reproduced from \cite{ClarkWilkesGibbs86_ReferringCollaborative}. 
+Cells were labeled with fixed numbers from one to twelve in order to help participants easily refer to locations in the grid (see Fig. \ref{fig:design}).
 
 \subsubsection{Procedure}\label{procedure}
 
@@ -226,11 +229,29 @@ tangrams for the next round. After six rounds, players were redirected
 to a short exit survey. We collected the raw text of every message sent
 and every swapping action taken by the matcher.
 
-\begin{figure}
+\section{Exp.~1b: Cued reference}
 
+While the free matching design we replicated in Exp.~1a is highly naturalistic, it also provides messy data. Utterances included not only descriptions of the tangrams but also information about the desired location (e.g. 'number 10 is the \dots'). Additionally, because participants often revisited tangrams out of order and mentioned multiple tangrams in a single message, it was difficult to isolate exactly which utterances referred to which tangrams without extensive hand-annotation. Additionally, players occasionally advanced to the next round without referring to all 12 tangrams. In order to conduct analyses at the tangram-by-tangram level, we designed a straightforwardly sequential variation on the task where speakers are privately cued to refer to targets one-by-one and feedback is given on each round. 
+
+\subsection{Participants}\label{participants}
+
+XYZ participants were recruited from Amazon's Mechanical Turk and paired
+into dyads. We excluded games that terminated before the completion
+of the experiment, and where participants reported a native language different
+from English, leaving a corpus of X complete games with a total of
+X utterances.
+
+\subsection{Stimuli \& Procedure}\label{stimuli}
+
+On each trial, one of the twelve tangrams was privately highlighted with a box as the \emph{target} for the director (see Fig. \ref{fig:design}A). The director's goal was to produce a referring expression such that their partner could accurately select the target from their own context. Instead of clicking and dragging into place, as in Exp.~1a, listeners simply clicked the one they believed was the target. We constructed a sequence of six blocks of twelve trials (for a total of 72 trials), where each tangram appeared once per block, and the same tangram was never the target twice in a row. We used the same stimuli as Exp.~1b, but because targets were cued one at a time, numbers labeling each square in the grid were irrelevant and we removed them. The context of tangrams was scrambled on every trial, and participants were given full, immediate feedback: the director saw which tangram their partner clicked, and the matcher saw the intended tangram.
+
+\section{Changes in structure}\label{results}
+
+\begin{figure}[t]
+\includegraphics[scale=.65]{reduction.pdf}
+\caption{(A) similar reduction in \# words per tangram for both variants of the task (B) word counts broken down by part of speech, combined across both variants (C) phrasal reduction based on syntactic parse \todo[inline]{Maybe showing \% reduction is better than raw numbers, i.e. normalizing by occurrence on first round (or version mike suggested w/ bars showing proportions at beginning and end.}}
+\label{fig:reduction}
 \end{figure}
-
-\subsection{Results}\label{results}
 
 \subsubsection{Arbitrariness and
 stability}\label{arbitrariness-and-stability}
@@ -342,21 +363,23 @@ listener messages decreases significantly over the game (\(t = -13.23\),
 see Fig. \ref{fig:replication}), and there is a weak but significant
 effect of initial listener messages on overall reduction (X).
 
+\begin{figure}[t]
+\centering
+\includegraphics[scale=.3]{tsne_embeddings.pdf}
+\caption{(A) similar reduction in \# words per tangram for both variants of the task (B) word counts broken down by part of speech, combined across both variants (C) phrasal reduction based on syntactic parse \todo[inline]{Maybe showing \% reduction is better than raw numbers, i.e. normalizing by occurrence on first round (or version mike suggested w/ bars showing proportions at beginning and end.}}
+\label{fig:reduction}
+\end{figure}
 
-\section{Exp.~2: Sequential reference}\label{task2}
-
-While the open-ended matching design we replicated in Exp.~1 is highly naturalistic, it also provides messy data. Utterances included not only descriptions of the tangrams but also information about the desired location (e.g. 'number 10 is the \dots'). Additionally, because participants often revisited tangrams and jumped around the board, it was difficult to isolate exactly which utterances referred to which tangrams without extensive hand-annotation. In order to conduct analyses at the tangram-by-tangram level, we designed a straightforwardly sequential variation on the task where speakers are privately cued to refer to targets one-by-one and feedback is given on each round. 
-
-\subsection{Methods}\label{methods}
-
-\subsubsection{Participants}\label{participants}
-
-XYZ participants were recruited from Amazon's Mechanical Turk and paired
-into dyads to play a real-time communication game using the framework in
-Hawkins (2015). We excluded games that terminated before the completion
-of K rounds and where participants reported a native language different
-from English, leaving a corpus of X complete games with a total of
-X utterances.
+%\subsection{Methods}\label{methods}
+%
+%\subsubsection{Participants}\label{participants}
+%
+%XYZ participants were recruited from Amazon's Mechanical Turk and paired
+%into dyads to play a real-time communication game using the framework in
+%Hawkins (2015). We excluded games that terminated before the completion
+%of K rounds and where participants reported a native language different
+%from English, leaving a corpus of X complete games with a total of
+%X utterances.
 
 %\section{Model}\label{model}
 %

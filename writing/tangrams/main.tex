@@ -1,80 +1,59 @@
-%% Documentclass:
-\documentclass[manuscript]{stjour}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% A template for Wiley article submissions.
+% Developed by Overleaf. 
+%
+% Please note that whilst this template provides a 
+% preview of the typeset manuscript for submission, it 
+% will not necessarily be the final publication layout.
+%
+% Usage notes:
+% The "blind" option will make anonymous all author, affiliation, correspondence and funding information.
+% Use "num-refs" option for numerical citation and references style.
+% Use "alpha-refs" option for author-year citation and references style.
 
-%% Or,
+\documentclass[alpha-refs]{wiley-article}
+% \documentclass[blind,num-refs]{wiley-article}
 
-%% Manuscript, for double spaced, larger fonts
-% \documentclass[manuscript]{stjour}
-%% Only needed if you use `manuscript' option
-% \journalname{Open Mind}
+% Add additional packages here if required
+\usepackage{siunitx}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% For production only, not authors:
-%%\documentclass[OpenMind,finalfonts]{stjour}
+% Update article type if known
+\papertype{Original Article}
+% Include section in journal if known, otherwise delete
+%\paperfield{Journal Section}
 
-%%%%%%%%%%% Please supply information %%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Dynamics of structure and content in repeated reference}
 
-%% For Open Mind:
-%% Supplementary Materials:
-\supplementslinks{dx.doi.org/10.1098/rsif.2013.0969}
+% List abbreviations here, if any. Please note that it is preferred that abbreviations be defined at the first instance they appear in the text, rather than creating an abbreviations list.
+%\abbrevs{ABC, a black cat; DEF, doesn't ever fret; GHI, goes home immediately.}
 
-%% If no conflicts, this command doesn't need to be used
-%% \conflictsofinterest{}
+% Include full author names and degrees, when required by the journal.
+% Use the \authfn to add symbols for additional footnotes and present addresses, if any. Usually start with 1 for notes about author contributions; then continuing with 2 etc if any author has a different present address.
+\author[1]{Robert Hawkins}
+\author[1]{Michael Frank}
+\author[1,2]{Noah Goodman}
 
-%%%%%%%%%%% to be supplied by MIT Press, only %%%%%%%%%%%%%%%%%
+%\contrib[\authfn{1}]{Equally contributing authors.}
 
-\citation{Niyogi, R. K., Breton, Y.-A., Solomon,
-R. B., Conover, K.,\\ Shizgal, P., Dayan, P. (2015).\\ 
-Optimal indolence: a normative microscopic approach to work and leisure. Open Mind 1(1):
-1−12.}
+% Include full affiliation details for all authors
+\affil[1]{Department of Psychology, Stanford University}
+\affil[2]{Department of Computer Science, Stanford University}
 
-\received{20 October 2013}
-\accepted{7 November 2013}
-\published{26 January 2014}
+\corraddress{Robert Hawkins, Author One PhD, Department, Institution, City, State or Province, Postal Code, Country}
+\corremail{rxdh@stanford.edu}
 
-%% DOI address:
-\setdoi{10.1098/rsif.2013.0969}
+% \presentadd[\authfn{2}]{Department, Institution, City, State or Province, Postal Code, Country}
 
-%%%%%%%% End MIT Press commands %%%%%%%%%%
+\fundinginfo{Funder One, Funder One Department, Grant/Award Number: 123456, 123457 and 123458; Funder Two, Funder Two Department, Grant/Award Number: 123459}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% author definitions should be placed here:
+% Include the name of the author that should appear in the running header
+\runningauthor{Hawkins et al.}
 
-%% example definition
-\def\taupav{\tau_{\mathrm{Pav}}}
 \begin{document}
 
-\title{Arbitrariness, stability, and efficiency in repeated reference}
-%\subtitle{<Subtitle Here>} %% Optional subtitle
+\maketitle
 
-%% If shortened title for running head is needed so that the article title can fit
-%%   in the running head, use [] argument, ie,
-%%
-%%   \title[Shortened Title for Running Head]{Title of Article}
-%%   \subtitle{Subtitle Here}
-
-%%% Author/Affil
-%% Since we use \affil{} in the argument of the \author command, we
-%% need to supply another version of the author names, without \affil{}
-%% to be used for running heads:
-
-\author[Author Names]
-{Robert Hawkins, Mike Frank, Noah Goodman\thanks{<for footnote for further info>}\affil{1}}
-
-\affiliation{1}{Department of Psychology, Stanford University, Stanford, CA, US}
-
-%ie
-%\affiliation{2}{Center for Studies in
-%Behavioral Neurobiology, Concordia University, Montreal, Quebec,
-%Canada}
-
-\correspondingauthor{Robert Hawkins}{rxdh@stanford.edu}
-
-% ie,
-%\correspondingauthor{Ritwik K. Niyogi}{ritwik.niyogi@gatsby.ucl.ac.uk}
-
-\keywords{conventions; pragmatics; communication; learning}
-
+% ABSTRACT THOUGHTS
 % Framework for providing a quantitative characterization of phenomena; tracking meaningful content changing over time. how is the structure different? semantics and syntax... contents and structure.
 
 % shift from saying x in involved to saying precisely which things are involved.
@@ -88,20 +67,25 @@ Optimal indolence: a normative microscopic approach to work and leisure. Open Mi
 % compare semantic embeddings within game vs. across game?
 % compare syntax within game vs. across game
 
+% similarity on words that are there at the end vs. not there at the end...
+% qualitative -- pull out unigrams and bigrams that are maintained per tangram
+% Hinge from big picture to "this is a case study or task" surprisingly answerable by new tools
+
+% Fig. 1: bunny tangram w/ T1 and TN word clouds
+
 \begin{abstract}
-% TODO: change abstract to be more about how people
-% (1) use existing language creatively to talk about novel things, 
-% (2) rapidly adapt their language and coordinate on new meanings
-% We make use of recent advances in natural language processing to quantify how people 
 How do speakers understand one another in conversation? 
 When talking with novel partners about novel referents, speakers must go beyond their existing lexicon to flexibly coordinate on new conventions for efficient, accurate communication.
-In this paper, we investigate three key signatures constraining theories of convention formation in such contexts: arbitrariness, stability, and increasing efficiency over time. 
+Here we investigate three key signatures constraining theories of convention formation in such contexts: arbitrariness, stability, and increasing efficiency over time. 
 We collected a corpus of extended dyadic interactions in two variants of a classic reference game task using  initially difficult-to-describe tangram stimuli . 
 Drawing upon recent advances in natural language processing, we introduce fine-grained measures of the content of utterances as speakers repeatedly referred to objects.
 While dyads converged on a wide range of equally successful conventions, the trajectory of referring expressions used within a dyad were systematically path-dependent: 
 utterances are gradually simplified by dropping redundant syntactic units and
 the distinctiveness of words in lengthy initial descriptions is predictive of what becomes the succinct final labels.
 In sum, these findings advance our understanding of the dynamics of rapid semantic coordination and lays the empirical foundation for higher-resolution computational modeling.
+
+% Please include a maximum of seven keywords
+\keywords{natural language, social coordination, conventions, semantics, syntax}
 \end{abstract}
 
 \section{Introduction}\label{introduction}
@@ -592,63 +576,23 @@ research, our approach nonetheless serves as a lower bound on the degree
 of social reasoning needed to capture lexical conventions in these
 games.
 
-%%% End of Article
-%%% These elements should be used, with the exception of Appendices which
-%%% are optional.
+\section*{acknowledgements}
+Acknowledgements should include contributions from anyone who does not meet the criteria for authorship (for example, to recognize contributions from people who provided technical help, collation of data, writing assistance, acquisition of funding, or a department chairperson who provided general support), as well as any funding or other support information.
 
-%%% \section{Supportive Information}
-% \acknowledgments
-% \authorcontributions 
-% \bibliography{<name of .bib file>}
-% \appendix % optional
+\section*{conflict of interest}
+You may be asked to provide a conflict of interest statement during the submission process. Please check the journal's author guidelines for details on what to include in this section. Please ensure you liaise with all co-authors to confirm agreement with the final statement.
 
-\section{Supportive Information}
-Here you enter further sources of information, if desired.
+\printendnotes
 
-%% A possible entry might be:
-% No supportive information is available at this time.
+% Submissions are not required to reflect the precise reference formatting of the journal (use of italics, bold etc.), however it is important that all key elements of each reference are included.
+\bibliography{library}
 
-\acknowledgments
-Enter your acknowledgments here.
+% \begin{biography}[example-image-1x1]{A.~One}
+% Please check with the journal's author guidelines whether author biographies are required. They are usually only included for review-type articles, and typically require photos and brief biographies (up to 75 words) for each author.
+% \bigskip
+% \bigskip
+% \end{biography}
 
-%% ie.,
-
-% The authors thank Laurence Aitchison for fruitful discussions.  RKN
-% and PD received funding from the Gatsby Charitable Foundation. Y-AB,
-% RBS, KC and PS received funding from Canadian Institutes of Health
-% Research grant $MOP74577$,
-% Fond de recherche Qu\'{e}bec - Sant\'{e} (Group grant to the Groupe 
-% de recherche en neurobiologie comportementale, Shimon Amir, P.I.), and
-% Concordia University Research Chair (Tier I). 
-
-\authorcontributions 
-Who helped formulate the project, who supplied data, analyses and
-experiments, etc.
-
-%% ie.
-%% Project was formulated by RKN, PD, PS,
-%% based on substantial data, analyses and experiments of Y-AB, KC, RS,
-%% PS. RKN, PD formalised the model, RKN implemented and ran the model;
-%% RKN analysed the molecular ethogram data; Y-AB formalised and
-%% implemented a CTMC model. All authors wrote the manuscript.
-
-
-%%%%%%%%%%%%%%%%%%%%%%%
-%% The bibliography
-
-%% The bibliography is made using only the entries that you cite using 
-%% \cite{}, or one of the Natbib citation entries, like \citep{}, \citet{} etc.
-
-\bibliography{<your .bib file>}
-
-%ie.,
-%\bibliography{bibsamp}
-
-%% Optional Appendix
-%\appendix
-
-%\section{Sample Appendix Section}
-
+% \graphicalabstract{example-image-1x1}{Please check the journal's author guildines for whether a graphical abstract, key points, new findings, or other items are required for display in the Table of Contents.}
 
 \end{document}
-

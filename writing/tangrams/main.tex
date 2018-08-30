@@ -71,8 +71,8 @@
 
 \begin{abstract}
 How do speakers understand one another in conversation? 
-When talking with novel partners about novel referents, speakers must continuously adapt their existing lexicon to coordinate on succinct \emph{ad hoc} conventions for effective, efficient communication.
-While increasing efficiency has been demonstrated under a variety of conditions, prior work has not focused on precisely \emph{how} the structure and content of natural language referring expressions change through continued interaction.
+When talking with novel partners about novel referents, speakers must continuously adapt their existing lexicon to coordinate on \emph{ad hoc} conventions for increasingly effective, efficient communication.
+While such adaptation has been demonstrated under a variety of conditions, prior work has not focused on precisely \emph{how} the structure and content of natural language referring expressions change through continued interaction.
 Here we draw upon recent advances in natural language processing to provide a quantitative characterization of these dynamics, taking as a case study a classic repeated reference game task using initially difficult-to-describe \emph{tangram} stimuli.
 We collected a corpus ($>$15,000 utterances) of extended dyadic interactions in two variants of this task.
 Structurally, we found that utterances reduce across pairs following similar trajectories: entire modifying syntactic units drop out as conventions are established, leaving only contentful open-class parts of speech.
@@ -81,50 +81,25 @@ words that are more discriminitive in the initial context are more likely to per
 In sum, these findings highlight the systematicity and context-dependence of convention formation and lay the empirical foundation for higher-resolution theories of social adaptation.
 
 % Please include a maximum of seven keywords
-\keywords{natural language, social coordination, conventions, semantics, syntax}
+\keywords{social coordination, conventions, semantics, syntax, natural language processing, semantic embeddings}
 \end{abstract}
 
 \section{Introduction}\label{introduction}
 
-Just as drivers depend on shared behavioral conventions to safely
-navigate traffic, successful communication depends on a set of shared
-linguistic conventions. Speakers of different languages around the world
-refer to the same object in many different ways, yet when ordering a
-coffee in San Francisco, I can confidently use the English word
-``coffee'' and assume that I will be understood. How do these
-conventions -- classically characterized by Lewis (1969) as arbitrary
-but stable solutions to recurring coordination problems -- form in the
-first place?
+%% Statement of the computational problem that motivates interest in this phenomenon?
+Communication poses a challenging coordination problem for social agents. 
+While a lifetime of learning the conventions of our language community provides a crucial backbone for understanding each other \citep{Lewis69_Convention}, we frequently find ourselves in situations where our existing lexicon falls short.
+For one, no two speakers share exactly the same lexicon \cite{Davidson86_DerangementOfEpitaphs, Clark98_CommunalLexicons}. 
+Lingo, proper nouns, nicknames, slang, inside jokes, metaphors, and other creative uses of neologism all operate in a regime of uncertainty where the same word or phrase may \emph{a priori} mean something different (or nothing at all) to different partners in different contexts. (cite, cite).
+At the same time, because we live in a changing environment, we constantly experience novel entities, events, thoughts, and feelings we want to talk about---complex referents for which we have no pre-existing conventions and real uncertainty about whether a novel compositional expression will mean to our partner exactly what we intend it to mean.
+What do we do when our lexicon isn't sufficient --- when we have to talk about something we've never had to talk about before with a partner we've never met?
 
-While \emph{global} conventions adopted and sustained throughout a large
-population of speakers may develop over longer time scales, we also
-effortlessly coordinate on \emph{local} conventions -- or conceptual
-pacts (Brennan \& Clark, 1996) -- within the span of a single dialogue.
-For example, when discussing possible conditions to use in an upcoming
-experiment, a team of collaborators might begin the meeting using long
-descriptions to refer to each condition but end the meeting using
-conventional terms like ``condition A'' and ``condition B.'' Since
-global conventions are hypothesized to emerge through diffuse, repeated
-interactions of this more local kind (Garrod \& Doherty, 1994), the
-cognitive mechanisms underlying convention-formation in such games are
-of foundational interest.
+A family of interactive communication experiments called \emph{repeated reference games} have provided a natural and productive paradigm for studying language use in such scenarios. In a seminal study by \cite{KraussWeinheimer64_ReferencePhrases}, pairs of participants played a cooperative language game where they were presented with arrays of ambiguous shapes in randomized orders. 
+The players were allowed to talk freely; their goal was to find the correspondence between their boards by producing mutually understood descriptions of the shapes. 
+Critically, as particular shapes reappeared on successive rounds of the game, descriptions were dramatically shortened: a lengthy early description like ``the upside-down martini glass in a wire stand'' became simply ``martini'' by the end. 
+In other words, these results suggested that speakers addressed the computational challenge of referring to novel objects with a novel partner by initially drawing on many sources of prior information from existing conventions and then \emph{adapting} based on shared history.
 
-In a seminal study by Krauss \& Weinheimer (1964), pairs of participants
-played a cooperative language game where they were presented with arrays
-of ambiguous shapes in randomized orders. The players were assigned the
-roles of \emph{director} and \emph{matcher} and allowed to talk freely.
-The matcher's goal was to rearrange their shapes to match the director's
-board, and the director's goal was to communicate useful descriptions.
-Over multiple rounds, descriptions were dramatically shortened: an early
-description like ``upside-down martini glass in a wire stand,'' became
-simply ``martini'' by the end. Later studies (e.g. Clark \&
-Wilkes-Gibbs, 1986) refined this paradigm, using larger arrays of
-tangram-like figures and emphasizing the intricate back-and-forth
-process through which speakers and listeners negotiate over references.
-These studies revealed a number of key empirical signatures that inform
-theories of convention-formation. Here, we focus on three:
-arbitrariness, stability, and the systematic reduction of utterance
-length over time.
+This signature reduction effect has been replicated under many conditions testing the boundaries of adaptation, manipulating the kinds of objects used as targets, the contexts in which the objects appear, the identity of one's partner across repetitions, the feedback available, and the medium participants use to communicate. (cite, cite, cite). However, the details of precisely \emph{what} gets reduced remains unexplored. 
 
 \emph{Arbitrariness} is a definitional property of conventions (Lewis,
 1969): there must be multiple solutions that would be equally successful
@@ -297,6 +272,8 @@ that meaningful details are increasingly omitted. Initial phrases pile
 on multiple ambiguous, partially redundant modifiers and descriptors: as
 the game progresses and ambiguity of reference decreases, these
 additional meaningful units become less useful and can be dropped.
+
+This result accords with early observations by \cite{Carroll80_NamingHedges}, which found that in three-quarters of transcripts from \cite{KraussWeinheimer64_ReferencePhrases} the short names that participants converged upon were prominent in some syntactic construction at the beginning, often as a head noun that was initially modified or qualified by other information. 
 
 \subsubsection{Listener feedback}\label{listener-feedback}
 

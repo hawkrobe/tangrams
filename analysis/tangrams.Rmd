@@ -82,10 +82,10 @@ Seems to be markers of figurative descriptions, determiners, and modifying phras
 ### Reduction in utterance length
 
 ```{r, cache = T, warning=F}
-tagged_df <- read_csv('sequential/posTagged.csv') %>%
+tagged_df <- read_csv('./outputs/posTagged.csv') %>%
   filter(role == 'director') %>%
   select(-role, -doc, -posCounts, -pos) %>%
-  left_join(read_csv('sequential/constituency_tags.csv') %>%
+  left_join(read_csv('./outputs/constituency_tags.csv') %>%
       replace_na(list(SBAR = FALSE, PP = FALSE, CC = FALSE)) %>%
       mutate(SBAR = ifelse(SBAR == 'True', TRUE, FALSE),
            PP = ifelse(PP == 'True', TRUE, FALSE), 
@@ -103,36 +103,15 @@ tagged_df %>%
    ggplot(aes(x = repetitionNum, y = empirical_stat, color = taskVersion)) +
     geom_line() +
     xlab('repetition #') +
-    ylab('log # words') +
+    ylab('mean # words per tangram') +
     geom_ribbon(aes(ymax = ci_upper, ymin = ci_lower), alpha = .2) +
     #facet_wrap(~ taskVersion, nrow = 1, ncol = 2) +
     ylim(c(0, NA)) +
     theme_few(12) +
     theme(aspect.ratio = .75)
-```
 
-Broken out by tangrams for cued condition
-
-```{r}
-library(directlabels)
-
-lengthReduction <- tagged_df %>%
-   filter(taskVersion == "cued") %>%
-   group_by(gameid, repetitionNum, intendedName) %>%
-   summarize(individualM = sum(numRawWords)) %>%
-   group_by(repetitionNum, intendedName) %>%
-   tidyboot_mean(individualM) %>%
-   mutate(measure = '# words per tangram')
-
-ggplot(lengthReduction, aes(x = repetitionNum, y = empirical_stat ,group = intendedName)) +
-  geom_line() +
-  theme_few() +
-  geom_dl(aes(label = intendedName), method = list(dl.trans(x = x - .1), "first.points")) +
-  xlab("repetition #") +
-  ylab("mean # words") +
-  theme(aspect.ratio = 1)
-  
-ggsave('../writing/tangrams/figs/num_words_sequential.pdf')
+ggsave('../writing/tangrams/figs/wordReduction.pdf',
+       width = 5, height = 4)
 ```
 
 Statistics:
@@ -155,7 +134,7 @@ examine reduction in different parts of speech, i.e. to argue that it's not just
 tagged_df %>% 
   #filter(taskVersion == 'cued') %>%
   mutate(numNPWords = ifelse(noun_chunks == "[]", 0, str_count(noun_chunks, "\\S+"))) %>%
-  group_by(gameid, repetitionNum, taskVersion) %>% 
+  group_by(gameid, repetitionNum) %>% 
   summarize(NOUN = sum(NOUNcount),
             PRON = sum(PRONcount),
             ADJ = sum(ADJcount),
@@ -163,37 +142,19 @@ tagged_df %>%
             VERB = sum(VERBcount)) %>%
   gather(POS, count, NOUN, ADJ, DET, VERB, PRON) %>%
   mutate(count = count / 12) %>%
-  group_by(repetitionNum, POS, taskVersion) %>%
+  group_by(repetitionNum, POS) %>%
   tidyboot_mean(count) %>%
   ggplot(aes(x = repetitionNum, y = empirical_stat, color = POS)) +
     geom_line() +
     theme_few() +
     geom_ribbon(aes(ymax = ci_upper, ymin = ci_lower), alpha = .2) +
     #geom_dl(aes(label = intendedName), method = list(dl.trans(x = x - .1), "first.points")) +
-    facet_wrap(~ taskVersion) +
+    #facet_wrap(~ taskVersion) +
     xlab("repetition #") +
-    ylab("# words in POS category per description") +
+    ylab("# words in POS category per tangram") +
     theme(aspect.ratio = 1)
-```
 
-Just noun broken out by tangram
-
-```{r}
-tagged_df %>% 
-  filter(taskVersion == 'cued') %>%
-  mutate(numNPWords = ifelse(noun_chunks == "[]", 0, str_count(noun_chunks, "\\S+"))) %>%
-  group_by(gameid, repetitionNum, intendedName) %>% 
-  summarize(NOUN = sum(NOUNcount)) %>%
-  group_by(repetitionNum, intendedName) %>%
-  tidyboot_mean(NOUN) %>%
-  ggplot(aes(x = repetitionNum, y = empirical_stat, group = intendedName)) +
-    geom_line() +
-    theme_few() +
-    # geom_ribbon(aes(ymax = ci_upper, ymin = ci_lower), alpha = .2) +
-    geom_dl(aes(label = intendedName), method = list(dl.trans(x = x - .1), "first.points")) +
-    xlab("repetition #") +
-    ylab("# nouns per description") +
-    theme(aspect.ratio = 1)
+ggsave('../writing/tangrams/figs/POS_reduction.pdf', width = 5, height = 4)
 ```
 
 TODO: distance in depth of the tree between the nouns
@@ -249,6 +210,7 @@ TODO: include % including NPs? (shouldn't go down as much)
 
 ```{r}
 tagged_df %>%
+  filter(taskVersion == 'cued') %>%
   select(gameid, repetitionNum, taskVersion, SBAR, CC, PP) %>%
   gather(measure, occurrence, SBAR:PP) %>%
   group_by(taskVersion, repetitionNum, gameid, measure) %>%
@@ -262,34 +224,14 @@ tagged_df %>%
     geom_errorbar(aes(ymax = ci_upper, ymin = ci_lower), width = .1) +
     facet_grid(taskVersion ~ measure) +
     ylim(c(0, NA)) +
-    theme_few(9) +
+    theme_few(12) +
     theme(aspect.ratio = .75)
+
+ggsave('../writing/tangrams/figs/syntacticReduction.pdf', width = 8, height = 3)
 ```
 
 
 TODO: compare starting to ending proportions;
-
-Same thing broken out by tangram
-
-```{r}
-tagged_df %>%
-  filter(taskVersion == 'cued') %>%
-  select(gameid, intendedName, repetitionNum, SBAR, CC, PP) %>%
-  gather(measure, occurrence, SBAR:PP) %>%
-  group_by(repetitionNum, intendedName, gameid, measure) %>%
-  summarize(m = mean(occurrence)) %>%
-  group_by(intendedName, repetitionNum, measure) %>%
-  tidyboot_mean(m) %>%
-  ggplot(aes(x = repetitionNum, y = empirical_stat, group = intendedName)) +
-    geom_line() +
-    xlab('round #') +
-    ylab('% of messages containing syntactic feature') +
-    #geom_errorbar(aes(ymax = ci_upper, ymin = ci_lower), width = .1) +
-    facet_wrap(~ measure, nrow = 1, ncol = 3) +
-    ylim(c(0, NA)) +
-    theme_few(9) +
-    theme(aspect.ratio = .75)
-```
 
 ### Reduction in listener exchanges
 
@@ -346,6 +288,74 @@ turnTakingdf <- turnTakingEfficiency_lm$df[1]
 turnTakingCoefs <- turnTakingEfficiency_lm$coefficients[2,]
 turnTakingResult <- paste0("t(", turnTakingdf, ") = ", round(turnTakingCoefs[3],2), ", p = ", round(turnTakingCoefs[4],2))
 turnTakingEfficiencyPlot
+```
+
+### Broken out by tangram
+
+Broken out by tangrams for cued condition
+
+```{r}
+library(directlabels)
+
+lengthReduction <- tagged_df %>%
+   filter(taskVersion == "cued") %>%
+   group_by(gameid, repetitionNum, intendedName) %>%
+   summarize(individualM = sum(numRawWords)) %>%
+   group_by(repetitionNum, intendedName) %>%
+   tidyboot_mean(individualM) %>%
+   mutate(measure = '# words per tangram')
+
+ggplot(lengthReduction, aes(x = repetitionNum, y = empirical_stat ,group = intendedName)) +
+  geom_line() +
+  theme_few() +
+  geom_dl(aes(label = intendedName), method = list(dl.trans(x = x - .1), "first.points")) +
+  xlab("repetition #") +
+  ylab("mean # words") +
+  theme(aspect.ratio = 1)
+  
+ggsave('../writing/tangrams/figs/num_words_sequential.pdf')
+```
+
+Just noun broken out by tangram
+
+```{r}
+tagged_df %>% 
+  filter(taskVersion == 'cued') %>%
+  mutate(numNPWords = ifelse(noun_chunks == "[]", 0, str_count(noun_chunks, "\\S+"))) %>%
+  group_by(gameid, repetitionNum, intendedName) %>% 
+  summarize(NOUN = sum(NOUNcount)) %>%
+  group_by(repetitionNum, intendedName) %>%
+  tidyboot_mean(NOUN) %>%
+  ggplot(aes(x = repetitionNum, y = empirical_stat, group = intendedName)) +
+    geom_line() +
+    theme_few() +
+    # geom_ribbon(aes(ymax = ci_upper, ymin = ci_lower), alpha = .2) +
+    geom_dl(aes(label = intendedName), method = list(dl.trans(x = x - .1), "first.points")) +
+    xlab("repetition #") +
+    ylab("# nouns per description") +
+    theme(aspect.ratio = 1)
+```
+
+Same thing broken out by tangram
+
+```{r}
+tagged_df %>%
+  filter(taskVersion == 'cued') %>%
+  select(gameid, intendedName, repetitionNum, SBAR, CC, PP) %>%
+  gather(measure, occurrence, SBAR:PP) %>%
+  group_by(repetitionNum, intendedName, gameid, measure) %>%
+  summarize(m = mean(occurrence)) %>%
+  group_by(intendedName, repetitionNum, measure) %>%
+  tidyboot_mean(m) %>%
+  ggplot(aes(x = repetitionNum, y = empirical_stat, group = intendedName)) +
+    geom_line() +
+    xlab('round #') +
+    ylab('% of messages containing syntactic feature') +
+    #geom_errorbar(aes(ymax = ci_upper, ymin = ci_lower), width = .1) +
+    facet_wrap(~ measure, nrow = 1, ncol = 3) +
+    ylim(c(0, NA)) +
+    theme_few(9) +
+    theme(aspect.ratio = .75)
 ```
 
 # Dynamics of semantics
@@ -654,18 +664,19 @@ ggplot(aes(x = roundNum, y = m)) +
 ```{r}
 library(wordcloud)   
 
-textPerGram = tangramCombined %>%
-  filter(occurrenceNum == 6) %>%
-  group_by(intendedObj) %>%
+textPerGram = read_csv('../data/tangrams.csv') %>% 
+  filter(role == "director" & taskVersion == 'cued') %>%
+  filter(repetitionNum %in% c(1,6)) %>%
+  group_by(repetitionNum, intendedName) %>%
   # summarize(a = paste(contents, collapse = " ")) %>%
   summarize(text = paste(contents, collapse = " ")) %>%
-  rename(docs = intendedObj) %>%
+  rename(docs = intendedName) %>%
   mutate(docs = paste("doc ", docs))
 
 corpus = Corpus(VectorSource(textPerGram$text))
 corpus <- tm_map(corpus, removePunctuation)
 corpus <- tm_map(corpus, removeNumbers)
-corpus <- tm_map(corpus, removeWords, stopwords('english'))
+#corpus <- tm_map(corpus, removeWords, stopwords('english'))
 
 dtm = DocumentTermMatrix(corpus)
 
@@ -673,7 +684,12 @@ numDocs = dim(dtm)[1]
 numTerms = dim(dtm)[2]
   
 for(i in 1:numDocs) {
-  png(paste("wordcloudForTangram", i, ".png", sep = ""), bg = "transparent")
+  round = ifelse(floor((i-1) / 12) < 1, 'first', 'last')
+  print(round)
+  tangramNum = ((i-1) %% 12) + 1
+  print(tangramNum)
+  pdf(paste("../writing/tangrams/figs/wordclouds/wordcloudForTangram", tangramNum, "on", round ,"Round.pdf", sep = ""), 
+      bg = "transparent")
   freq <- sort(colSums(as.matrix(dtm[i,])), decreasing=TRUE)
   # print(entropy(freq))
    wordcloud(names(freq), freq, min.freq = 1, colors=brewer.pal(6, "Dark2"))   

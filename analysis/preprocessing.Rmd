@@ -245,6 +245,7 @@ sloppyIDs <- unique((singleUtts %>%
   filter(repetitionScore < 6))$gameid)
 
 badGames <- unique(c(incompleteIDs, as.character(nonNativeSpeakerIDs), sloppyIDs))
+
 print(paste0('excluding ', length(badGames), ' of ', length(unique(sequentialCombined.raw$gameid)), ' games that were either incomplete, poor accuracy, or had non-native english speakers'))
 ```
 
@@ -262,13 +263,19 @@ sequentialCombined.raw %>%
   ungroup() %>%
   arrange(workerid_uniq, time)
 
-duplicate_gameids <- c('0210-5d5ad8b6-7c94-4e2a-a3cb-760d2f613953', '9087-3c0f9d65-0427-406f-9251-94da5d2dee54', '7261-07035df8-84ee-4381-b72c-a04234c8f5ed')
+duplicate_gameids <- c('0210-5d5ad8b6-7c94-4e2a-a3cb-760d2f613953', 
+                       '9087-3c0f9d65-0427-406f-9251-94da5d2dee54', 
+                       '7261-07035df8-84ee-4381-b72c-a04234c8f5ed')
 garbage_gameids <- c('7840-4bd35c77-f10c-4055-a122-f591efae2826') # This one somehow got through wihtout director saying anything
-sketchy_gameids <- c('9116-d8b8c5c1-f549-48bf-a362-ed159302a106', # This was super distracted and kept complaining and talking about how they'd skip through rounds...
-                     '7229-0a7402b0-329e-4b26-bc3a-ae26a388a6cc' # This one was having too much fun with wordplay...
-                     )
 
-other_bad_games <- unique(c(duplicate_gameids, garbage_gameids, sketchy_gameids))
+sketchy_gameids <- c('9116-d8b8c5c1-f549-48bf-a362-ed159302a106', # This was super distracted and kept complaining and talking about how they'd skip through rounds...
+                     '7229-0a7402b0-329e-4b26-bc3a-ae26a388a6cc', # This one was having too much fun with wordplay...
+                     '1202-a64916b2-49d2-4ca4-bd76-cfd3e1ec3954', '7391-0be22306-9b90-402c-82b0-6bf7ce3ac35e',## these listeners seemed like theyd done it before (but dont have subject info from them to be able to tell...))
+                     '7971-85165980-35a3-4070-8ebf-ca2d159dc715') # This pair gave numbers to all of them...
+
+
+# just exclude duplicates and buggy ones for now
+other_bad_games <- unique(c(duplicate_gameids, garbage_gameids))
 ```
 
 Create filtered version of messages data (for potential hand-cleaning)
@@ -292,7 +299,8 @@ sequentialCombined <- sequentialCombined.raw %>%
     group_by(repetitionNum, gameid) %>%
     summarize(repetitionScore = sum(correct))) %>%
   filter(!is.na(numRawWords)) %>% # filter out pure punctuation messages
-  select(-score, -workerid_uniq)
+  select(-score, -workerid_uniq) %>%
+  group_by(trialNum)
   #filter(numRawWords < mean(numRawWords) + 3*sd(numRawWords)) # Get rid of outliers
 
 write_csv(sequentialCombined, '../data/tangramsSequential.csv')

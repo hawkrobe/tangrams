@@ -185,7 +185,10 @@ singleUtts %>%
   ggplot(aes(x = totalScore, y = n)) +
     geom_bar(stat = 'identity') +
     facet_wrap(~ repetitionNum) +
-    theme_bw()
+    theme_bw() +
+    theme(aspect.ratio = .5)
+
+ggsave("~/Downloads/accuracy_histograms.pdf")
 ```
 
 Break out by occurence of each tangram for each repetition (some start out harder than others; everyone gets the rabbit right but that weird angel one (B) is terrible)
@@ -203,7 +206,10 @@ ggplot(single_utt.toplot, aes(x = repetitionNum, y = propCorrect, group = intend
                     hjust = 'left', vjust = 'middle') +
     theme_few() +
     ylim(0,1) +
-    guides(color=FALSE)
+    guides(color=FALSE) +
+  theme(aspect.ratio = .75)
+
+ggsave('~/Downloads/tangram-wise-accuracy.pdf')
 ```
 
 Look at overall confusion matrix of errors
@@ -344,6 +350,7 @@ names(spellcorrector) <- paste0('\\b', names(spellcorrector), '\\b')
 names(metacorrector) <- paste0('^', names(metacorrector), '$')
 
 
+#write_csv(sequentialCombined, '../data/tangramsSequential_nocleaning.csv')
 sequentialCombined <- sequentialCombined.raw %>%
   mutate(contents = tolower(contents)) %>%
   mutate(contents = str_replace_all(contents, unlist(spellcorrector, use.names = T))) %>%
@@ -355,7 +362,7 @@ sequentialCombined <- sequentialCombined.raw %>%
   left_join(singleUtts %>% 
     group_by(repetitionNum, gameid) %>%
     summarize(repetitionScore = sum(correct))) %>%
-  filter(numRawWords > 1) %>% # filter out empty messages
+  filter(numRawWords > 0) %>% # filter out empty messages
   select(-score, -workerid_uniq)
   #filter(numRawWords < mean(numRawWords) + 3*sd(numRawWords)) # Get rid of outliers
 
@@ -365,8 +372,9 @@ write_csv(sequentialCombined %>%
             mutate(contents = str_replace_all(contents, "\\.\\.+", ".")) %>%
             mutate(contents = str_replace_all(contents, "[[:punct:]]$", "")) %>%
             mutate(contents = str_replace_all(contents, fixed('.'), ',')) %>%
-            group_by(gameid, trialNum) %>%
-            summarize(contents = paste0(contents, collapse = ', ')), 
+            group_by(gameid, trialNum, repetitionNum, intendedName) %>%
+            summarize(contents = paste0(contents, collapse = ', '),
+                      numRawWords = sum(numRawWords)), 
           '../data/tangramsSequential_collapsed.csv')
 
 

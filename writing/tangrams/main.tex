@@ -89,7 +89,7 @@ In sum, these findings highlight the systematicity and context-dependence of con
 %% Statement of the computational problem that motivates interest in this phenomenon?
 Communication poses a challenging coordination problem for social agents. 
 While a lifetime of learning the conventions of our language community provides a crucial backbone for understanding each other \citep{lewisConventionPhilosophicalStudy1969}, we frequently find ourselves in situations where our existing lexicon falls short.
-For one, no two speakers share exactly the same lexicon \citep{Davidson86_DerangementOfEpitaphs, Clark98_CommunalLexicons}. 
+For one, no two speakers share exactly the same lexicon \citep{Davidson86_DerangementOfEpitaphs, clarkCommunalLexicons1998}. 
 Lingo, proper nouns, nicknames, slang, inside jokes, metaphors, and other creative uses of neologism all operate in a regime of uncertainty where the same word or phrase may \emph{a priori} mean something different (or nothing at all) to different partners in different contexts. (cite, cite).
 At the same time, because we live in a changing environment, we constantly experience novel entities, events, thoughts, and feelings we want to talk about---complex referents for which we have no pre-existing conventions and real uncertainty about whether a novel compositional expression will mean to our partner exactly what we intend it to mean.
 What do we do when our lexicon isn't sufficient --- when we have to talk about something we've never had to talk about before with a partner we've never met?
@@ -107,6 +107,8 @@ To what extent are idiosyncratic\dots
 \todo[inline]{Refine these questions}
 
 Here we present a large corpus of utterances from a web-based 
+
+\todo[inline]{Motivate focus on structure and content; set up alternative hypotheses}
 
 \emph{Arbitrariness} is a definitional property of conventions (Lewis,
 1969): there must be multiple solutions that would be equally successful
@@ -214,9 +216,15 @@ We used a three step pre-processing pipeline to prepare our corpus for subsequen
 
 \end{enumerate}
 
+\subsection{Exclusion criteria}
+
+Accuracy varied across pairs\dots
+
+Our results, however, were robust to inclusion or exclusion, just as they were robust to data pre-processing choices...
+
 \section{Quantifying the dynamics of structure}\label{results}
 
-\subsection{The effect of listener feedback}\label{listener-feedback}
+\subsection{Effects of listener feedback}\label{listener-feedback}
 
 The theory proposed by Clark \& Wilkes-Gibbs (1986) argues that lexical conventions are established through a collaborative process requiring both speaker and listener input. 
 This predicts that (1) listener feedback should be highest on the first round and drop off once meanings are agreed upon, and (2) dyads with more initial listener feedback should converge on more efficient conventions. 
@@ -285,6 +293,10 @@ additional meaningful units become less useful and can be dropped.
 
 This result accords with early observations by \cite{Carroll80_NamingHedges}, which found that in three-quarters of transcripts from \cite{KraussWeinheimer64_ReferencePhrases} the short names that participants converged upon were prominent in some syntactic construction at the beginning, often as a head noun that was initially modified or qualified by other information. 
 
+\subsection{Shared dynamics across pairs}
+
+Tree-edit distance\dots
+
 \begin{figure}[t]
 \centering
 \includegraphics[scale=.3]{tsne_embeddings.pdf}
@@ -294,7 +306,8 @@ This result accords with early observations by \cite{Carroll80_NamingHedges}, wh
 
 \section{Quantifying the dynamics of content}
 
-\subsection{Permutation tests}\label{arbitrariness-and-stability}
+\subsection{Idiosyncracy across pairs, stability within pairs}
+\label{arbitrariness-and-stability}
 
 We begin by examining signatures of \emph{arbitrariness} and
 \emph{stability} in our data. We operationalize these concepts using the
@@ -338,10 +351,15 @@ which is significantly higher than the true entropy (averaged across
 games) of Z \(p < 0.001\). This pattern is consistent only with
 signatures of both arbitrariness and stability.
 
+\subsection{Point-wise Mutual Information}
+
+Which words are dropped and which remain?
+
 \subsection{Semantic embeddings}\label{arbitrariness-and-stability}
 
-While words can be treated as discrete tokens, as in the previous section, 
+While words can be treated as discrete tokens, as in the previous section, \dots
 
+Idiosyncracy across pairs can additionally be assessed by testing the generalization performance of a classifier on held out pairs at the beginning and end of the game. Training on earlier \dots
 
 \section{General Discussion}\label{general-discussion}
 
@@ -351,7 +369,7 @@ finding evidence of arbitrariness and stability as well as finer-grained
 reduction of meaningful clauses. 
 
 %% Paragraph about opportunities for computational models
-While we have focused on broader theoretical questions, our results also serve as a foundation for high-resolution task-performing computational models of communication seeking to explain the full richness of natural data. To build machines that naturally adapt to their interlocutors in human-robot or human-computer interaction scenarios, we must go behind quaitative effecrts.
+While we have focused on broader theoretical questions, our results also serve as a foundation for high-resolution task-performing computational models of communication seeking to explain the full richness of natural data. To build machines that naturally adapt to their interlocutors in human-robot or human-computer interaction scenarios, we must go behind qualitative efforts.
 
 Theories of convention-formation vary in the extent to which social
 reasoning about common ground is required. Our agents lie on a spectrum

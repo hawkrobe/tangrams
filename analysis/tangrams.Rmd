@@ -82,9 +82,9 @@ Seems to be markers of figurative descriptions, determiners, and modifying phras
 ### Reduction in utterance length
 
 ```{r, cache = T, warning=F}
-tagged_df <- read_csv('./outputs/posTagged.csv') %>%
-  filter(role == 'director') %>%
-  select(-role, -doc, -posCounts, -pos) %>%
+tagged_df <- read_csv('./outputs/posTaggedtangramsSequential_collapsed.csv') %>%
+  #filter(role == 'director') %>%
+  select(-text, -contents, -posCounts, -pos) %>%
   left_join(read_csv('./outputs/constituency_tags.csv') %>%
       replace_na(list(SBAR = FALSE, PP = FALSE, CC = FALSE)) %>%
       mutate(SBAR = ifelse(SBAR == 'True', TRUE, FALSE),
@@ -94,17 +94,34 @@ tagged_df <- read_csv('./outputs/posTagged.csv') %>%
 ```
 
 ```{r}
+read_csv('../data/tangramsSequential_nocleaning.csv') %>%
+   group_by(gameid, repetitionNum) %>% #taskVersion
+  filter(role != 'matcher') %>%
+   summarize(numRawWords = sum(numRawWords)/12) %>%
+    group_by(repetitionNum) %>%
+   tidyboot_mean(numRawWords, na.rm = T) 
+```
+
+```{r}
+read_csv('../data/tangramsSequential_collapsed.csv') %>%
+   group_by(repetitionNum) %>% #taskVersion
+  #  summarize(numRawWords = sum(numRawWords)/12) %>%
+  # group_by(repetitionNum) %>%
+   tidyboot_mean(numRawWords, na.rm = T) 
+```
+
+```{r}
 tagged_df %>%
-   group_by(gameid, repetitionNum, taskVersion) %>%
-   summarize(individualM = sum(numRawWords)/12) %>%
-   group_by(repetitionNum, taskVersion) %>%
-   tidyboot_mean(individualM, na.rm = T) %>%
+   # group_by(gameid, repetitionNum) %>%#, taskVersion
+   # summarize(individualM = sum(numWords)/12) %>%
+   group_by(repetitionNum) %>% #taskVersion
+   tidyboot_mean(numWords, na.rm = T) %>%
    mutate(measure = '# words per tangram') %>%
-   ggplot(aes(x = repetitionNum, y = empirical_stat, color = taskVersion)) +
+   ggplot(aes(x = repetitionNum, y = empirical_stat)) + #, color = taskVersion
     geom_line() +
     xlab('repetition #') +
     ylab('mean # words per tangram') +
-    geom_ribbon(aes(ymax = ci_upper, ymin = ci_lower), alpha = .2) +
+    #geom_ribbon(aes(ymax = ci_upper, ymin = ci_lower), alpha = .2) +
     #facet_wrap(~ taskVersion, nrow = 1, ncol = 2) +
     ylim(c(0, NA)) +
     theme_few(12) +
@@ -121,9 +138,9 @@ summary(lmer(numRawWords ~ poly(repetitionNum,2) +
                (1 + repetitionNum | gameid) + 
                (1 + repetitionNum | intendedName), 
              data = tagged_df %>% 
-               filter(taskVersion == 'cued') %>%
+               #filter(taskVersion == 'cued') %>%
                group_by(gameid, trialNum, repetitionNum, intendedName) %>% 
-               summarize(numRawWords = sum(numRawWords))))
+               summarize(numRawWords = sum(numWords))))
 ```
 
 ### Reduction in POS features 
@@ -210,19 +227,19 @@ TODO: include % including NPs? (shouldn't go down as much)
 
 ```{r}
 tagged_df %>%
-  filter(taskVersion == 'cued') %>%
-  select(gameid, repetitionNum, taskVersion, SBAR, CC, PP) %>%
+  #filter(taskVersion == 'cued') %>%
+  select(gameid, repetitionNum, SBAR, CC, PP) %>% #, taskVersion
   gather(measure, occurrence, SBAR:PP) %>%
-  group_by(taskVersion, repetitionNum, gameid, measure) %>%
+  group_by(repetitionNum, gameid, measure) %>%#taskVersion, 
   summarize(m = mean(occurrence)) %>%
-  group_by(taskVersion, repetitionNum, measure) %>%
+  group_by(repetitionNum, measure) %>%#taskVersion, 
   tidyboot_mean(m) %>%
   ggplot(aes(x = repetitionNum, y = empirical_stat)) +
     geom_line() +
-    xlab('round #') +
+    xlab('repetition #') +
     ylab('% of messages containing syntactic feature') +
     geom_errorbar(aes(ymax = ci_upper, ymin = ci_lower), width = .1) +
-    facet_grid(taskVersion ~ measure) +
+    facet_grid(. ~ measure) +#taskVersion
     ylim(c(0, NA)) +
     theme_few(12) +
     theme(aspect.ratio = .75)
@@ -236,15 +253,21 @@ TODO: compare starting to ending proportions;
 ### Reduction in listener exchanges
 
 ```{r}
-listenerMsgs <- read_csv('../data/tangrams.csv') %>%
-  group_by(gameid, repetitionNum, role, taskVersion) %>%
+# /data/tangrams_sequential/message/sequential_message_filtered.csv'
+# /data/tangramsSequential.csv'
+message_df = read_csv('../data/tangramsSequential.csv') %>%
+    #rename(repetitionNum = occurrenceNum, role = sender)  %>%
+    mutate(numRawWords = str_count(contents, "\\S+")) 
+
+listenerMsgs <- message_df %>%
+  group_by(gameid, repetitionNum, role, intendedName) %>% #taskVersion
   summarize(individualM = n()) %>%
   ungroup() %>%
-  complete(role, repetitionNum, gameid, fill = list(individualM = 0)) %>%
+  complete(role, repetitionNum, gameid, intendedName, fill = list(individualM = 0)) %>%
   spread(role, individualM)
 
 listenerReduction <- listenerMsgs %>%
-   group_by(repetitionNum) %>%
+   group_by(repetitionNum, intendedName) %>%
    tidyboot_mean(matcher) %>%
    mutate(measure = '# listener messages')  
 
@@ -256,37 +279,51 @@ print(listenerMsg_lm)
 
 ```{r}
 turnTaking <- listenerMsgs %>%
-  filter(repetitionNum %in% c(1)) %>%
-  group_by(gameid, taskVersion) %>%
-  summarize(numListenerMsgs = mean(matcher)) %>%
+  filter(repetitionNum %in% c(1,2,3,4,5)) %>%
+  group_by(gameid) %>% # taskVersion
+  summarize(numListenerMsgs = sum(matcher)) %>%
   ungroup() %>%
   #filter(numListenerMsgs < mean(numListenerMsgs) + 3*sd(numListenerMsgs)) %>%
-  select(gameid, numListenerMsgs, taskVersion)
+  select(gameid, numListenerMsgs)#taskVersion
 
-efficiency <- read_csv('../data/tangrams.csv') %>%
-   filter(role == "director") %>%
-   group_by(gameid, repetitionNum, taskVersion) %>%
-   summarize(individualM = sum(numRawWords)/12) %>%
+efficiency <- message_df %>%
+  filter(role == "director") %>%
+  group_by(gameid, repetitionNum) %>%  #taskVersion
+  summarize(individualM = sum(numRawWords, na.rm = T)) %>%
   rowwise() %>%
   mutate(id = row_number()) %>%
   mutate(repetitionNum = paste0('round', repetitionNum, collapse = '')) %>%
   spread(repetitionNum, individualM) %>%
   mutate(diffPct = (round1 - round6)/round1) %>%
   filter(diffPct >= 0) %>% # Filter out handful of people who skipped first round...
-  select(gameid, diffPct, taskVersion)
+  select(gameid, diffPct, round1,round6) #taskVersion
 
+qplot(log1p(efficiency$round6))
+qplot(log1p(turnTaking$numListenerMsgs))
+```
+
+```{r}
 turnTakingEfficiencyPlot <- ggplot(turnTaking %>% left_join(efficiency), 
-                                   aes(x = numListenerMsgs, y = diffPct, color = taskVersion)) +
+                                   aes(x = log1p(numListenerMsgs), y = log1p(round6))) +
   geom_point() +
   geom_smooth(method = 'lm') +
   theme_bw(9) +
   ylab("% reduction") +
-  xlab("# listener messages on 1st round")
+  xlab("log # listener messages on 1st round")
+turnTakingEfficiencyPlot
+```
 
-turnTakingEfficiency_lm <- summary(lm(diffPct ~ numListenerMsgs + taskVersion, data = efficiency %>% left_join(turnTaking)))
-turnTakingdf <- turnTakingEfficiency_lm$df[1]
+```{r}
+cor.test(x = log1p((efficiency %>% left_join(turnTaking))$round6), log1p((efficiency %>% left_join(turnTaking))$numListenerMsgs))
+
+summary(lmer(log1p(round6) ~ log1p(numListenerMsgs) + (1|gameid), data = efficiency %>% left_join(turnTaking)))
+
+turnTakingdf <- turnTakingEfficiency_lm$df[2]
 turnTakingCoefs <- turnTakingEfficiency_lm$coefficients[2,]
-turnTakingResult <- paste0("t(", turnTakingdf, ") = ", round(turnTakingCoefs[3],2), ", p = ", round(turnTakingCoefs[4],2))
+turnTakingResult <- paste0("b = ", round(turnTakingCoefs[1],2),
+                           ", t(", turnTakingdf, ") = ", round(turnTakingCoefs[3],2), 
+                           ", p = ", round(turnTakingCoefs[4],2))
+turnTakingResult
 turnTakingEfficiencyPlot
 ```
 

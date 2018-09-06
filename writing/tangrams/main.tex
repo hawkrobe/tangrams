@@ -225,12 +225,14 @@ Still, we verified that all results reported were robust to these exclusion crit
 
 \subsection{Reduction in dialogue}\label{listener-feedback}
 
-Before narrowing our analysis to the already rich dynamics of \emph{director} referring expressions over time, we first examine the broader dynamics of director-matcher dialogue exchanges. 
-An influential result from \cite[see also \citealp{KraussWeinheimer66_Tangrams, GarrodFayLeeOberlanderMacLeod07_GraphicalSymbolSystems}]{clarkReferringCollaborativeProcess1986} is that ad hoc conventions for referring are established \emph{collaboratively}: directors and matchers engage in a bi-directional process where matchers ask questions, suggest corrections, and verbally confirm their understanding. This predicts that (1) listener feedback should be highest on the first round and drop off once meanings are agreed upon, and (2) dyads with more initial listener feedback should converge on more efficient conventions. 
-We find correlational evidence of both patterns in our data. 
-The number of listener messages decreases significantly over the game (\(t = -13.23\), see Fig. \ref{fig:replication}), and there is a weak but significant effect of initial listener messages on overall reduction (XXX).
-
-For all subsequent analyses, we condition on this effect and 
+Before narrowing our analysis to the rich properties of \emph{director} referring expressions over time, we first examine the broader dynamics of director-matcher dialogue exchanges. 
+An influential result from \citet[see also \citealp{KraussWeinheimer66_Tangrams, GarrodFayLeeOberlanderMacLeod07_GraphicalSymbolSystems}]{clarkReferringCollaborativeProcess1986} is that ad hoc conventions for referring are established \emph{collaboratively}: 
+directors and matchers engage in a bi-directional process where matchers ask follow-up questions, suggest corrections, and acknowledge or verbally confirm their understanding through a backchannel. 
+This theory predicts that (1) listener feedback should be highest on the first round and drop off once meanings are agreed upon, and (2) dyads with more initial listener feedback should reduce to more efficient conventions. 
+Our use of a chat box rather than in-person verbal communication, along with the automatic feedback we provided each round in the \emph{cued} condition, may have diminished the bi-directionality somewhat, but we find correlational evidence of both patterns in our uncollapsed but otherwise cleaned data. 
+The number of listener messages decreases significantly over the game $(b=-0.5, t = -10.6, p < 0.001)$, and there is a small but significant effect of the (logged) number of initial listener messages on overall \% reduction in the number of words used by the director, $r = 0.26, 95\% CI = [0.57, 0.45], p = 0.014$.
+\todo[inline]{Note: this last result isn't actually saying much because when listeners say more on the first round, speaker often say more in response\dots they therefore have a higher initial word count to reduce from than if the listener didn't say anything, so it's not surprising that \% reduction is larger... we need to revise the analysis to control for this, e.g. by only considering reduction from the words used \emph{before} the listener's first message, i.e. what they \emph{would} have initially said if the listener didn't chime in? The more simple \& obvious regression formulation would be whether \# of initial listener messages predicts \emph{absolute} round 6 message length rather than \% reduction; this didn't come out, but I switched to the \% reduction version because I was worried that it was just due to pair-level variance in final round length}
+\todo[inline]{This could also be a good place to put an effect of, like, more words used for tangrams that were incorrect in the previous round.}
 
 \begin{figure}[t]
 \includegraphics[scale=.65]{reduction.pdf}

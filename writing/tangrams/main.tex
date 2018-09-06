@@ -71,7 +71,7 @@
 
 \begin{abstract}
 How do speakers understand one another in conversation? 
-When talking with novel partners about novel referents, speakers must continuously adapt their existing lexicon to coordinate on \emph{ad hoc} conventions for increasingly effective, efficient communication.
+When talking with novel partners about novel referents, speakers must continuously adapt their existing lexicon to coordinate on \emph{ad hoc} conventions. % for increasingly effective, efficient communication.
 While such adaptation has been demonstrated under a variety of conditions, prior work has not focused on \emph{how} the structure and content of natural language referring expressions change through continued interaction.
 Here we draw upon recent advances in natural language processing to provide a quantitative characterization of these dynamics, taking as a case study a classic repeated reference game task using initially difficult-to-describe \emph{tangram} stimuli.
 We collected a corpus ($>$15,000 utterances) of extended dyadic interactions in two variants of this task.
@@ -163,9 +163,6 @@ in a formal model to our knowledge.
 
 \section{Methods}
 
-To collect a corpus of natural dialogue that supports quantitative analyses of convention formation over time, we ported the tangrams task used in \cite{clarkReferringCollaborativeProcess1986} to a real-time, multi-player web environment. 
-We developed two variants of the game: a \emph{free-matching} version that closely replicates classic in-lab designs and a more tightly controlled \emph{cued} version that allows for higher resolution analyses of how references to individual tangrams changed over time (see Fig. \ref{fig:design}). 
-
 \begin{figure}
 \includegraphics[scale=.65]{designAndExample.pdf}
 \caption{(A) Screenshots of the `free matching' and `cued' variants of the tangrams task; (B) Visualization of words used to refer to one tangram on the first round compared to the final round. \todo[inline]{Fix text/formatting in screenshots (maybe use scheme instead); think about less corny representation than wordcloud? figure out where to put the wavy guy, maybe add speech bubble to indicate words came from speaker?}}
@@ -174,7 +171,10 @@ We developed two variants of the game: a \emph{free-matching} version that close
 
 \subsection{Data collection}
 
-\todo[inline]{Merge two version of experiment into a single section, since they share more details in common}
+To collect a large corpus of natural dialogue that supports quantitative analyses of convention formation over time, we implemented the classic tangrams task used in \cite{clarkReferringCollaborativeProcess1986} in a real-time, multi-player web environment. 
+We developed two variants of the game: a \emph{free-matching} version that closely replicates classic in-lab designs and a more tightly controlled \emph{cued} version that allows for higher resolution analyses of how references to individual tangrams changed over time (see Fig. \ref{fig:design}). 
+The \emph{free-matching} version was an exploratory sample, but we pre-registered our full pre-processing and analysis pipeline for the \emph{cued} version\footnote{osf.io/XXXXX}, so while we report results for both versions throughout, we privilege the \emph{cued} version as our confirmatory sample.
+
 \subsubsection{Participants}\label{participants}
 
 A total of XXX participants (YYY in the \emph{free-matching} version and ZZZ in the \emph{cued} version) were recruited from Amazon's Mechanical Turk and paired into dyads to play a real-time communication game using the framework in \cite{Hawkins15_RealTimeWebExperiments}. 
@@ -186,21 +186,18 @@ Throughout the task, participants were shown a \(6 \times 2\) grid containing tw
 After passing a short quiz about task instructions, participants were randomly assigned the role of either `director' or `matcher' and automatically paired into virtual rooms containing a chat box and grid of stimuli. 
 Both participants could freely use the chat box to communicate at any time. 
 
-The two versions of the task differed as follows:
-
-\begin{description}
-\item[free-matching] The director's tangrams were fixed in place, but the matcher could click and drag the shapes to reorder them. 
-The director had to send messages about the locations of different tangrams on their fixed board (e.g. ``\#1 looks like an X'', ``2 is the one with the Y''); the matcher had to identify the corresponding tangram shapes and move them to the correct locations. 
-When the players were satisfied that their boards matched, the matcher clicked a `submit' button that gave players feedback on their score (out of 12) and scrambled the tangrams for the next round. 
+In the \emph{free-matching} version, our procedure closely followed \cite{clarkReferringCollaborativeProcess1986}. 
+The director and matcher began each round with scrambled boards. 
+The director's tangrams were fixed in place, but the matcher's could be clicked and dragged into new positions.
+The players was instructed to communicate through the chat box such that the matcher could  rearrange their shapes to match the order of the director's board.
+When the players were satisfied that their boards matched, the matcher clicked a `submit' button that gave players batched feedback on their score (out of 12) and scrambled the tangrams for the next round. 
 After six rounds, players were redirected to a short exit survey. 
 Cells were labeled with fixed numbers from one to twelve in order to help participants easily refer to locations in the grid (see Fig. \ref{fig:design}).
-We collected the raw text of every message sent
-and every swapping action taken by the matcher.
-\item[cued] While the free matching design we replicated in Exp.~1a is highly naturalistic, it also provides messy data. Utterances included not only descriptions of the tangrams but also information about the desired location (e.g. 'number 10 is the \dots'). Additionally, because participants often revisited tangrams out of order and mentioned multiple tangrams in a single message, it was difficult to isolate exactly which utterances referred to which tangrams without extensive hand-annotation. Additionally, players occasionally advanced to the next round without referring to all 12 tangrams. In order to conduct analyses at the tangram-by-tangram level, we designed a straightforwardly sequential variation on the task where speakers are privately cued to refer to targets one-by-one and feedback is given on each round. 
 
-On each trial, one of the twelve tangrams was privately highlighted with a box as the \emph{target} for the director (see Fig. \ref{fig:design}A). The director's goal was to produce a referring expression such that their partner could accurately select the target from their own context. Instead of clicking and dragging into place, as in Exp.~1a, listeners simply clicked the one they believed was the target. We constructed a sequence of six blocks of twelve trials (for a total of 72 trials), where each tangram appeared once per block, and the same tangram was never the target twice in a row. We used the same stimuli as Exp.~1b, but because targets were cued one at a time, numbers labeling each square in the grid were irrelevant and we removed them. The context of tangrams was scrambled on every trial, and participants were given full, immediate feedback: the director saw which tangram their partner clicked, and the matcher saw the intended tangram.
+While this replicated design allows for highly naturalistic interaction, we designed the \emph{cued} version to correct several problems it posed for analyses. First, utterances contained not only descriptions of the tangrams but also information about the intended location (e.g. '\emph{number 10} is the \dots'). Additionally, because participants often revisited tangrams out of order and mentioned multiple tangrams in a single message, it was difficult to isolate exactly which utterances referred to which tangrams without extensive hand-annotation. Finally, the design of the `submit' button made it too easy for players to occasionally advance to the next round without referring to all 12 tangrams. 
 
-\end{description}
+For the \emph{cued} version, then, we designed a straightforwardly sequential variation on the task where speakers are privately cued to refer to targets one-by-one and feedback is given on each round; this allows us to straightforwardly conduct analyses at the tangram-by-tangram level. On each trial, one of the twelve tangrams was privately highlighted for the director with a box as the \emph{target} (see Fig. \ref{fig:design}A). Instead of clicking and dragging into place, listeners simply clicked the one they believed was the target. We constructed a sequence of six blocks of twelve trials (for a total of 72 trials), where each tangram appeared once per block.%, and the same tangram was never the target twice in a row. 
+Because targets were cued one at a time, numbers labeling each square in the grid were irrelevant and we removed them. The context of tangrams was scrambled on every trial, and participants were given full, immediate feedback: the director saw which tangram their partner clicked, and the matcher saw the intended tangram.
 
 \subsection{Data pre-processing}
 

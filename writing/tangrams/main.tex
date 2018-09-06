@@ -194,9 +194,9 @@ When the players were satisfied that their boards matched, the matcher clicked a
 After six rounds, players were redirected to a short exit survey. 
 Cells were labeled with fixed numbers from one to twelve in order to help participants easily refer to locations in the grid (see Fig. \ref{fig:design}).
 
-While this replicated design allows for highly naturalistic interaction, we designed the \emph{cued} version to correct several problems it posed for analyses. First, utterances contained not only descriptions of the tangrams but also information about the intended location (e.g. '\emph{number 10} is the \dots'). Additionally, because participants often revisited tangrams out of order and mentioned multiple tangrams in a single message, it was difficult to isolate exactly which utterances referred to which tangrams without extensive hand-annotation. Finally, the design of the `submit' button made it too easy for players to occasionally advance to the next round without referring to all 12 tangrams. 
+While this replicated design allows for highly naturalistic interaction, it poses several problems for text-based analyses. First, utterances must contain not only descriptions of the tangrams but also information about the intended location (e.g. '\emph{number 10} is the \dots'). Additionally, because there are no constraints on the sequence, participants can revisit tangrams out of order or mention multiple tangrams in a single message, making it difficult to isolate exactly which utterances referred to which tangrams without extensive hand-annotation. Finally, the design of the `submit' button makes it easy for players to occasionally advance to the next round without referring to all 12 tangrams. 
 
-For the \emph{cued} version, then, we designed a straightforwardly sequential variation on the task where speakers are privately cued to refer to targets one-by-one and feedback is given on each round; this allows us to straightforwardly conduct analyses at the tangram-by-tangram level. On each trial, one of the twelve tangrams was privately highlighted for the director with a box as the \emph{target} (see Fig. \ref{fig:design}A). Instead of clicking and dragging into place, listeners simply clicked the one they believed was the target. We constructed a sequence of six blocks of twelve trials (for a total of 72 trials), where each tangram appeared once per block.%, and the same tangram was never the target twice in a row. 
+For the \emph{cued} version, then, we designed a straightforwardly sequential variation on the task where speakers are privately cued to refer to targets one-by-one and feedback is given on each round; this allows us to straightforwardly conduct analyses at the tangram-by-tangram level. On each trial, one of the twelve tangrams was privately highlighted for the director with a box as the \emph{target} (see Fig. \ref{fig:design}A). Instead of clicking and dragging into place, matchers simply clicked the one they believed was the target. They were not allowed to click until after a message is sent by the speaker.  We constructed a sequence of six blocks of twelve trials (for a total of 72 trials), where each tangram appeared once per block.%, and the same tangram was never the target twice in a row. 
 Because targets were cued one at a time, numbers labeling each square in the grid were irrelevant and we removed them. The context of tangrams was scrambled on every trial, and participants were given full, immediate feedback: the director saw which tangram their partner clicked, and the matcher saw the intended tangram.
 
 \subsection{Data pre-processing}
@@ -215,18 +215,22 @@ We used a three step pre-processing pipeline to prepare our corpus for subsequen
 
 \subsection{Exclusion criteria}
 
-Accuracy varied across pairs\dots
+Because the classic work using the repeated reference game paradigm reported near ceiling accuracy for all pairs, and because the phenomenon we focus on here is not \emph{whether} people can communicate but \emph{how} they do it conditioned on being successful, we pre-registered an exclusion criterion based on accuracy. 
+Specifically, we implemented a 66/66 rule, excluding pairs that got got fewer than 66\% tangrams correct (8 of 12) on fewer than 66\% of blocks (4 of 6). 
+While the majority of pairs (X\%) were at ceiling accuracy by the final round, this excluded K pairs who on examination of their text appeared to be guessing or rushing to completion.
 
-Our results, however, were robust to inclusion or exclusion, just as they were robust to data pre-processing choices...
+Still, we verified that all results reported were robust to these exclusion criteria, and to our data pre-processing steps\todo{check}.
 
 \section{Quantifying the dynamics of structure}\label{results}
 
-\subsection{Effects of listener feedback}\label{listener-feedback}
+\subsection{Reduction in dialogue}\label{listener-feedback}
 
-The theory proposed by Clark \& Wilkes-Gibbs (1986) argues that lexical conventions are established through a collaborative process requiring both speaker and listener input. 
-This predicts that (1) listener feedback should be highest on the first round and drop off once meanings are agreed upon, and (2) dyads with more initial listener feedback should converge on more efficient conventions. 
+Before narrowing our analysis to the already rich dynamics of \emph{director} referring expressions over time, we first examine the broader dynamics of director-matcher dialogue exchanges. 
+An influential result from \cite[see also \citealp{KraussWeinheimer66_Tangrams, GarrodFayLeeOberlanderMacLeod07_GraphicalSymbolSystems}]{clarkReferringCollaborativeProcess1986} is that ad hoc conventions for referring are established \emph{collaboratively}: directors and matchers engage in a bi-directional process where matchers ask questions, suggest corrections, and verbally confirm their understanding. This predicts that (1) listener feedback should be highest on the first round and drop off once meanings are agreed upon, and (2) dyads with more initial listener feedback should converge on more efficient conventions. 
 We find correlational evidence of both patterns in our data. 
 The number of listener messages decreases significantly over the game (\(t = -13.23\), see Fig. \ref{fig:replication}), and there is a weak but significant effect of initial listener messages on overall reduction (XXX).
+
+For all subsequent analyses, we condition on this effect and 
 
 \begin{figure}[t]
 \includegraphics[scale=.65]{reduction.pdf}

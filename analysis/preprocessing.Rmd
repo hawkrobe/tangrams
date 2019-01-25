@@ -8,6 +8,8 @@ output: html_notebook
 ```{r}
 library(tidyverse)
 library(tidyboot)
+library(ggthemes)
+library(jsonlite)
 ```
 
 # Read in and compile data... 
@@ -286,9 +288,9 @@ other_bad_games <- unique(c(duplicate_gameids, garbage_gameids))
 ## First, apply spell check and create filtered version of messages data (for potential hand-cleaning)
 
 ```{r}
-library(jsonlite)
 corrector = read_json('../data/tangrams_sequential/message/spell_correction.json')
-# only match full words
+
+# only match on full words
 names(corrector) <- paste0('\\b', names(corrector), '\\b')
 
 messagesFiltered <- sequentialMsgs %>%
@@ -304,58 +306,65 @@ write_csv(messagesFiltered, '../data/tangrams_sequential/message/sequential_mess
 
 ```{r}
 # Need to escape all of these regexp special vals
-corrections = c('\\(' = '\\\\\\(',
-                '\\)' = '\\\\\\)',
-                '\\[' = '\\\\\\[',
-                '\\]' = '\\\\\\]',
-                '\\*' = '\\\\*',
-                '\\?' = '\\\\?',
-                '\\!' = '\\\\!',
-                '\\.' = '\\\\.')
+# corrections = c('\\(' = '\\\\\\(',
+#                 '\\)' = '\\\\\\)',
+#                 '\\[' = '\\\\\\[',
+#                 '\\]' = '\\\\\\]',
+#                 '\\*' = '\\\\*',
+#                 '\\?' = '\\\\?',
+#                 '\\!' = '\\\\!',
+#                 '\\.' = '\\\\.')
 full_messages_to_delete <- messagesFiltered %>%
   anti_join(read_csv('../data/tangrams_sequential/message/sequential_message_no_meta.csv'),
             by = c('trialNum', 'msgTime')) %>%
-  mutate(old = str_replace_all(contents, corrections),
-         new = "") %>%
-  select(old, new) %>%
-  distinct() %>%
-  spread(old, new)
+  mutate(new = "~~~") %>%
+  #unite(old, gameid, trialNum , old, sep = '~~~') %>%
+  select(gameid, trialNum, contents, new)# %>%
+  #distinct() %>%
+  #spread(old, new)
 
 partial_messages_to_swap <- messagesFiltered %>%
   right_join(read_csv('../data/tangrams_sequential/message/sequential_message_no_meta.csv'),
-            by = c('trialNum', 'msgTime')) %>%
+            by = c('gameid', 'trialNum', 'msgTime')) %>%
   mutate(contents.x = str_trim(contents.x),
          contents.y = str_trim(contents.y)) %>%
   filter(contents.x != contents.y) %>%
-  mutate(old = str_replace_all(contents.x, corrections), 
+  mutate(contents = contents.x, #str_replace_all(contents.x, corrections), 
          new = contents.y) %>%
-  select(old, new) %>%
-  spread(old, new) 
+  #unite(old, gameid.x, trialNum , old, sep = '~~~') %>%
+  select(gameid, trialNum, contents, new) #%>%
+  #spread(old, new) 
 
-j <- toJSON(partial_messages_to_swap %>% cbind(full_messages_to_delete), 
-            dataframe = 'rows', pretty = T)
-write(substr(j, 2, nchar(j) - 1), 
-      '../data/tangrams_sequential/message/meta-cleaning.json')
+write_csv(rbind(partial_messages_to_swap, full_messages_to_delete), '../data/tangrams_sequential/message/meta-cleaning.csv')
+# j <- toJSON(partial_messages_to_swap %>% cbind(full_messages_to_delete), 
+#             dataframe = 'rows', pretty = T)
+# write(substr(j, 2, nchar(j) - 1), 
+#       '../data/tangrams_sequential/message/meta-cleaning.json')
 ```
 
 Finally, now apply both removals, count numbers of words, examine size of dataset
 
 ```{r}
 spellcorrector = read_json('../data/tangrams_sequential/message/spell_correction.json')
-metacorrector = read_json('../data/tangrams_sequential/message/meta-cleaning.json')
+additional_spellcorrector = read_json('../data/tangrams_sequential/message/additional_spell_correction.json')
+metacorrector = read_csv('../data/tangrams_sequential/message/meta-cleaning.csv')
 
 # only match full words
 names(spellcorrector) <- paste0('\\b', names(spellcorrector), '\\b')
+names(additional_spellcorrector) <- paste0('\\b', names(additional_spellcorrector), '\\b')
 # only match whole messages
-names(metacorrector) <- paste0('^', names(metacorrector), '$')
+# names(metacorrector) <- paste0('^', names(metacorrector), '$')
 
 
 #write_csv(sequentialCombined, '../data/tangramsSequential_nocleaning.csv')
 sequentialCombined <- sequentialCombined.raw %>%
   mutate(contents = tolower(contents)) %>%
   mutate(contents = str_replace_all(contents, unlist(spellcorrector, use.names = T))) %>%
-  mutate(contents = str_replace_all(contents, unlist(metacorrector, use.names = T))) %>%
+  left_join(metacorrector, by = c('contents', 'trialNum', 'gameid')) %>%
+  mutate(contents = ifelse(!is.na(new), new, contents)) %>%
+  mutate(contents = str_replace_all(contents, unlist(additional_spellcorrector, use.names = T))) %>%
   mutate(contents = str_trim(contents)) %>%
+  filter(contents != "~~~") %>%
   filter(!(gameid %in% badGames)) %>%
   filter(!(gameid %in% other_bad_games)) %>%
   mutate(numRawWords = str_count(contents, "\\S+")) %>%

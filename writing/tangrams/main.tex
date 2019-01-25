@@ -24,7 +24,7 @@
 % Include section in journal if known, otherwise delete
 %\paperfield{Journal Section}
 
-\title{Dynamics of structure and content across repeated reference}
+\title{The dynamics of structure and content in repeated reference games}
 
 % List abbreviations here, if any. Please note that it is preferred that abbreviations be defined at the first instance they appear in the text, rather than creating an abbreviations list.
 %\abbrevs{ABC, a black cat; DEF, doesn't ever fret; GHI, goes home immediately.}
@@ -71,14 +71,14 @@
 
 \begin{abstract}
 How do speakers understand one another in conversation? 
-When talking with novel partners about novel referents, speakers must continuously adapt their existing lexicon to coordinate on \emph{ad hoc} conventions. % for increasingly effective, efficient communication.
-While such adaptation has been demonstrated under a variety of conditions, prior work has not focused on \emph{how} the structure and content of natural language referring expressions change through continued interaction.
+When talking with novel partners about novel referents, speakers must continuously adapt their lexicon to coordinate on meaning. % for increasingly effective, efficient communication.
+ \emph{how} the structure and content of natural language referring expressions change through continued interaction. %While such adaptation has been demonstrated under a variety of conditions, p
+% While such adaptation has been demonstrated under a variety of conditions, p
 Here we draw upon recent advances in natural language processing to provide a quantitative characterization of these dynamics, taking as a case study a classic repeated reference game task using initially difficult-to-describe \emph{tangram} stimuli.
 We collected a corpus ($>$15,000 utterances) of extended dyadic interactions in two variants of this task.
 Structurally, we found that utterances reduce across pairs following similar trajectories: entire modifying syntactic units drop out as conventions are established, leaving only contentful open-class parts of speech.
-When examining the semantics of referring expressions, however, we found that different pairs tend to diverge into a wide range of idiosyncratic conventions in a highly path-dependent manner:  
-words that are more discriminitive in the initial context are more likely to persist through final conventions.
-In sum, these findings highlight the systematicity and context-dependence of convention formation and lay the empirical foundation for higher-resolution theories of social adaptation.
+While different pairs coordinate on a wide range of idiosyncratic solutions to the problem of reference, they do so in a highly path-dependent manner: words that are more discriminative in the initial context (i.e. that were used for one target more than others) are more likely to persist through the final round.
+These findings provide higher resolution into the quantitative dynamics of convention formation: based on usage, existing words systematically acquire new meaning with a partner and support more efficient communication.
 
 % Please include a maximum of seven keywords
 \keywords{social coordination, conventions, semantics, syntax, natural language processing, semantic embeddings}
@@ -106,79 +106,40 @@ How systematic is the structure of changes over time?
 To what extent are idiosyncratic\dots
 \todo[inline]{Refine these questions}
 
-Here we present a large corpus of utterances from a web-based 
+Here we present a large corpus of messages sent in a web-based reference game where a speaker repeatedly refers to the same objects with the same partner. 
 
-\todo[inline]{Motivate focus on structure and content; set up alternative hypotheses}
-
-\emph{Arbitrariness} is a definitional property of conventions (Lewis,
-1969): there must be multiple solutions that would be equally successful
-as long as both players ``agree'' (e.g.~driving on the left vs.~right
-side of the road). By the final round in a language game, for example,
-the same tangram might be called the `dancer' to one pair and the
-`skater' to another. The other definitional property we consider is
-\emph{stability}: it is in everyone's best interest to keep using the
-convention, once established. Finally, \emph{reduction} is more specific
-to the reference game paradigm and refers to the transformation of
-longer, complex expressions into simpler expressions over the course of
-interaction, as Krauss \& Weinheimer (1964) observed. While this broad
-phenomenon has been replicated many times, exactly what is reduced
-remains an open empirical question.
-
-Theories of convention-formation differ primarily in the extent to which
-sophisticated social reasoning and common ground is required. At one
-extreme, agents use simple heuristic updating rules and do not need to
-represent or reason about other agents at all (Barr, 2004; Centola \&
-Baronchelli, 2015; Young, 2015). Simulations elegantly show how
-arbitrary signaling systems can spread and come to dominate large
-populations. However, due to their `rich get richer' dynamic, it is not
-clear how emergence-through-use mechanisms alone could account for
-reduction in repeated interaction. At the other extreme, are theories in
-which agents explicitly consider their partner's beliefs and track what
-information is \emph{mutual knowledge}, often formalized in a game
-theoretic setting (Lewis, 1969). Wilkes-Gibbs \& Clark (1992) and others
-have proposed that agents engage in a collaborative process of
-establishing mutual knowledge, though the mechanisms allowing
-conventions to emerge under such conditions have not been instantiated
-in a formal model to our knowledge.
-
-%In this paper, we argue for a theoretical position on the spectrum
-%between these poles: \emph{conventions form when agents assume
-%conventions already exist}. In other words, agents believe there is a
-%true lexicon used by other agents but are initially unsure of its
-%identity. Through their interactions with a partner who is assumed to be
-%knowledgeable and informative, agents can learn this true lexicon even
-%though their partner in fact begins in the same state of ignorance.
-%Agents thus coordinate on the same lexicon, which becomes conventional.
-
-%To support this theory, we first conducted a large-scale, multi-player
-%replication of the tangrams task, which has traditionally been limited
-%to relatively small sample sizes in the lab. We then demonstrate signatures
-%of arbitrariness, stability, and reduction which have been difficult to
-%study at a fine-grained level due to the sparseness of existing data.
-%Next, we formulate our theory in a computational model of communication
-%in repeated reference games, based on recent successes capturing
-%language understanding as social inference (Goodman \& Frank, 2016;
-%Goodman \& Stuhlmüller, 2013) and show that this model qualitatively
-%produces all three empirical signatures.
+\todo[inline]{TODO: Motivate focus on questions of structure and content; set up alternative hypotheses}
 
 \section{Methods}
 
 \begin{figure}
 \includegraphics[scale=.65]{designAndExample.pdf}
-\caption{(A) Screenshots of the `free matching' and `cued' variants of the tangrams task; (B) Visualization of words used to refer to one tangram on the first round compared to the final round. \todo[inline]{Fix text/formatting in screenshots (maybe use scheme instead); think about less corny representation than wordcloud? figure out where to put the wavy guy, maybe add speech bubble to indicate words came from speaker?}}
+\caption{(A) Screenshots of the `free matching' and `cued' variants of the tangrams task; (B) Visualization of words used to refer to one tangram on the first round compared to the final round. \todo[inline]{Fix text/formatting in screenshots (maybe use schematic instead); think about less corny representation than wordcloud? figure out where to put the wavy guy, maybe add speech bubble to indicate words came from speaker?}}
 \label{fig:design}
 \end{figure}
 
-\subsection{Data collection}
+\subsection{Repeated reference experiment}
 
-To collect a large corpus of natural dialogue that supports quantitative analyses of convention formation over time, we implemented the classic tangrams task used in \cite{clarkReferringCollaborativeProcess1986} in a real-time, multi-player web environment. 
-We developed two variants of the game: a \emph{free-matching} version that closely replicates classic in-lab designs and a more tightly controlled \emph{cued} version that allows for higher resolution analyses of how references to individual tangrams changed over time (see Fig. \ref{fig:design}). 
+To collect a large corpus of natural dialogue that supports computational analyses of how pairs coordinate on meaning over time, we faced two primary decisions.
+First, to observe the \emph{dynamics} of conventions over time, we needed participants to repeatedly face a natural language task where  for performance.
+Second, to observe the formative period of linguistic conventions, we required novel, ambiguous stimuli for which participants didn't already have strong initial conventions.
+These challenge were satisfied by a \emph{repeated reference game} design in which participants refer to the same objects across multiple rounds as they build up a shared history of interaction, or ‘common ground,’ with their partner. 
+
+We developed two variants of the game. 
+A relatively unconstrained \emph{free-matching} version, and a more tightly controlled \emph{cued} version that allows for higher resolution analyses of how references to individual tangrams changed over time (see Fig. \ref{fig:design}). 
 The \emph{free-matching} version was an exploratory sample, but we pre-registered our full pre-processing and analysis pipeline for the \emph{cued} version\footnote{osf.io/XXXXX}, so while we report results for both versions throughout, we privilege the \emph{cued} version as our confirmatory sample.
 
 \subsubsection{Participants}\label{participants}
 
 A total of XXX participants (YYY in the \emph{free-matching} version and ZZZ in the \emph{cued} version) were recruited from Amazon's Mechanical Turk and paired into dyads to play a real-time communication game using the framework in \cite{Hawkins15_RealTimeWebExperiments}. 
-We excluded games that terminated before the completion of the experiment, and where participants reported a native language different from English, leaving a corpus of X complete games with a total of X utterances.
+
+\subsection{Exclusion criteria}
+
+ e implemented an exclusion criterion based on accuracy. 
+% Because the classic work using the repeated reference game paradigm reported near ceiling accuracy for all pairs, and b
+Specifically, we implemented a 66/66 rule, excluding pairs that got got fewer than 66\% tangrams correct (8 of 12) on fewer than 66\% of blocks (4 of 6). 
+While the majority of pairs (X\%) were at ceiling accuracy by the final round, this excluded K pairs who on examination of their text appeared to be guessing or rushing to completion.
+We also excluded games that terminated before the completion of the experiment, and where participants reported a native language different from English, leaving a corpus of X complete games with a total of X utterances.
 
 \subsubsection{Stimuli \& Procedure}\label{stimuli}
 
@@ -213,20 +174,49 @@ We used a three step pre-processing pipeline to prepare our corpus for subsequen
 
 \end{enumerate}
 
-\subsection{Exclusion criteria}
+%Still, we verified that all results reported were robust to these exclusion criteria, and to our data pre-processing steps\todo{check}.
 
-Because the classic work using the repeated reference game paradigm reported near ceiling accuracy for all pairs, and because the phenomenon we focus on here is not \emph{whether} people can communicate but \emph{how} they do it conditioned on being successful, we pre-registered an exclusion criterion based on accuracy. 
-Specifically, we implemented a 66/66 rule, excluding pairs that got got fewer than 66\% tangrams correct (8 of 12) on fewer than 66\% of blocks (4 of 6). 
-While the majority of pairs (X\%) were at ceiling accuracy by the final round, this excluded K pairs who on examination of their text appeared to be guessing or rushing to completion.
+\section{How do meanings change over time?}
 
-Still, we verified that all results reported were robust to these exclusion criteria, and to our data pre-processing steps\todo{check}.
+Our inferential account makes three key predictions about how speakers change the content of their referring expressions over time.
+First, due to sources of variability in the population of speakers, we predict that different pairs will coordinate on diverging and idiosyncratic labels.
+In other words, different pairs will find different but equally  successful equilibria in the space of possible conventions.
+Second, as speakers learn and gradually strengthen their expectations about how their partner will interpret their referring expressions, the labels used within each pair for each tangram with stabilize.
+In other words, once there is evidence that a particular label is successfully understood, there is little reason to deviate from it.
+We examine these first two predictions jointly, using two different signatures: one based on the discrete word count distribution and the other based on vector embeddings of semantic meaning.
+Finally, if participants are also influenced by pragmatic pressures to be informative, the labels that conventionalize should not be a random draw from the initial description. 
+Instead, we predict that more \emph{distinctive} words in the initial label (e.g. words used exclusively to describe one tangram) will be more likely to remain in later descriptions while less distinctive words contained in many initial descriptions are more likely to be dropped.
+
+\subsection{Conventions diverge to multiple equilibria across pairs and converge to stable equilibria within pairs}
+
+First, we operationalize the information-theoretic measure of entropy: $$H(W) = \sum_w P(w) \log P(w)$$
+Entropy measures the predictability of a distribution. 
+It is maximized when all elements are equally likely and declines as the distribution becomes more structured, i.e.~when the probability mass is concentrated on a subset of elements.
+
+To detect the We consider a permutation-test null model in  which utterances are scrambled within each round. 
+The empirical entropy of individual games should only differ from the null distribution if \emph{both} arbitrariness and stability hold. First, note that if stability did \emph{not} hold, scrambling would have no effect on the entropy within individual games: speakers would already use different words each round, and swapping out the identity of those words would not affect the entropy of the word distribution.
+
+If stability holds but arbitrariness does not, all players would adopt the single optimal (non-arbitrary) way to refer to each tangram. Therefore, the entropy of their word distributions also should not be affected by scrambling: a speaker's real words would be swapped out for  the same words, just generated by another speaker. Finally, if both arbitrariness and stability hold, then different speakers adopt different referring expressions that persist from round to round. Hence, scrambling should \emph{increase} the average game's entropy from a relatively low level: each game's idiosyncratic, concentrated distribution of words would be mixed together to form more heterogeneous and therefore high-entropy distributions.
+
+To test this prediction, we computed the average within-game entropy for 1000 different permutations of speaker utterances. We permuted utterances within rounds rather than across the entire data set to control for the fact that earlier rounds have longer utterances and thus a larger vocabulary than later rounds (see the following section). Since this permutation scheme keeps the number of messages per participant constant and simply swaps out the content of those messages, it also controls for the fact that some speakers sent more messages than others. We found that our null distribution lay within the interval {[}X, Y{]}, which is significantly higher than the true entropy (averaged across games) of Z \(p < 0.001\). This pattern is consistent only with signatures of both arbitrariness and stability.
+
+\subsection{Semantic embeddings}\label{arbitrariness-and-stability}
+
+While words can be treated as discrete tokens, as in the previous section, \dots
+
+Idiosyncracy across pairs can additionally be assessed by testing the generalization performance of a classifier on held out pairs at the beginning and end of the game. Training on earlier \dots
+
+\subsection{More distinctive words on the first round are more likely to conventionalize}
+
+Which words are dropped and which remain?
+
 
 \section{Quantifying the dynamics of structure}\label{results}
 
-\subsection{Reduction in dialogue}\label{listener-feedback}
+\subsection{Dialogue between speaker and listener}\label{listener-feedback}
 
-Before narrowing our analysis to the rich properties of \emph{director} referring expressions over time, we first examine the broader dynamics of director-matcher dialogue exchanges. 
-An influential result from \citet[see also \citealp{KraussWeinheimer66_Tangrams, GarrodFayLeeOberlanderMacLeod07_GraphicalSymbolSystems}]{clarkReferringCollaborativeProcess1986} is that ad hoc conventions for referring are established \emph{collaboratively}: 
+Before focusing our analysis on the rich dynamics of how \emph{directors} produce referring expressions over time, we first examine the bi-directional dynamics of dialogue exchanges. 
+An influential result from is that conceptual pacts for referring are established \emph{collaboratively} \citet[see also \citealp{KraussWeinheimer66_Tangrams, GarrodFayLeeOberlanderMacLeod07_GraphicalSymbolSystems}]{clarkReferringCollaborativeProcess1986}: 
 directors and matchers engage in a bi-directional process where matchers ask follow-up questions, suggest corrections, and acknowledge or verbally confirm their understanding through a backchannel. 
 This theory predicts that (1) listener feedback should be highest on the first round and drop off once meanings are agreed upon, and (2) dyads with more initial listener feedback should reduce to more efficient conventions. 
 Our use of a chat box rather than in-person verbal communication, along with the automatic feedback we provided each round in the \emph{cued} condition, may have diminished the bi-directionality somewhat, but we find correlational evidence of both patterns in our uncollapsed but otherwise cleaned data. 
@@ -242,32 +232,18 @@ The number of listener messages decreases significantly over the game $(b=-0.5, 
 
 \subsection{Reduction in number of words}\label{reduction}
 
-Next, we turn to a set of analyses examining reduction in utterance
-length over the course of the experiment. At the coarsest level, we find
-that the mean number of words used by speakers decreases over time (see
-Fig. \ref{fig:replication}). This decrease replicates a highly reliable
-reduction effect found throughout the literature on iterated reference
-games (Brennan \& Clark, 1996; Krauss \& Weinheimer, 1964), although
-perhaps due to our purely textual (vs.~spoken) interface, participants
-in our task used many fewer words overall than previously reported. The
-following analyses break down this broad reduction into a finer-grained
-set of phenomena.
+Next, we turn to a set of analyses examining reduction in utterance length over the course of the experiment. 
+At the coarsest level, we find that the mean number of words used by speakers decreases over time (see Fig. \ref{fig:replication}). 
+This decrease replicates a highly reliable reduction effect found throughout the literature on iterated reference games (Brennan \& Clark, 1996; Krauss \& Weinheimer, 1964), although perhaps due to our purely textual (vs.~spoken) interface, participants in our task used many fewer words overall than previously reported. 
+The following analyses break down this broad reduction into a finer-grained set of phenomena.
 
 \subsection{Reduction in parts of speech}
-The next level of granularity motivating our model approach concerns
-which kinds of words are most likely to be dropped. Is the speaker
-adopting a shorthand where they drop uninformative function words, or
-are they simplifying or narrowing their descriptions by omitting
-meaningful details (Clark \& Wilkes-Gibbs, 1986)? We used the Stanford
-CoreNLP part-of-speech tagger (Toutanova, Klein, Manning, \& Singer,
-2003) to count the number of words belonging to each part of speech in
-each message. Fig. \ref{fig:pos} shows the percent reduction of
-different parts of speech from the first round to the sixth round. We
-find that determiners (`the', `a', `an') are the most likely class of
-words to be dropped with an X\% reduction rate, on average. Nouns
-(`dancer', `rabbit') are the least likely class to be dropped with only
-an Y\% rate. Closed-class parts of speech are strictly more likely to be
-dropped than open-class parts of speech.
+The next level of granularity motivating our model approach concerns which kinds of words are most likely to be dropped. 
+Is the speaker adopting a shorthand where they drop uninformative function words, or are they simplifying or narrowing their descriptions by omitting meaningful details (Clark \& Wilkes-Gibbs, 1986)? 
+We used the Stanford CoreNLP part-of-speech tagger (Toutanova, Klein, Manning, \& Singer, 2003) to count the number of words belonging to each part of speech in each message. Fig. \ref{fig:pos} shows the percent reduction of different parts of speech from the first round to the sixth round. 
+We find that determiners (`the', `a', `an') are the most likely class of words to be dropped with an X\% reduction rate, on average. 
+Nouns (`dancer', `rabbit') are the least likely class to be dropped with only an Y\% rate. 
+Closed-class parts of speech are strictly more likely to be dropped than open-class parts of speech.
 
 While this finding suggests that speakers might just be adopting a
 shorthand using more ungrammatical fragments as the game proceeds, we
@@ -307,62 +283,6 @@ Tree-edit distance\dots
 \label{fig:reduction}
 \end{figure}
 
-\section{Quantifying the dynamics of content}
-
-\subsection{Idiosyncracy across pairs, stability within pairs}
-\label{arbitrariness-and-stability}
-
-We begin by examining signatures of \emph{arbitrariness} and
-\emph{stability} in our data. We operationalize these concepts using the
-information-theoretic measure of entropy:
-\[H(W) = \sum_w P(w) \log P(w)\] Broadly speaking, entropy measures the
-predictability of a distribution. It is maximized when all elements are
-equally likely and declines as the distribution becomes more structured,
-i.e.~when the probability mass is concentrated on a subset of elements.
-
-To derive predictions, we consider a permutation-test null model in
-which utterances are scrambled within each round. The empirical entropy
-of individual games should only differ from the null distribution if
-\emph{both} arbitrariness and stability hold. First, note that if
-stability did \emph{not} hold, scrambling would have no effect on the
-entropy within individual games: speakers would already use different
-words each round, and swapping out the identity of those words would not
-affect the entropy of the word distribution.
-
-If stability holds but arbitrariness does not, all players would adopt
-the single optimal (non-arbitrary) way to refer to each tangram.
-Therefore, the entropy of their word distributions also should not be
-affected by scrambling: a speaker's real words would be swapped out for
-the same words, just generated by another speaker. Finally, if both
-arbitrariness and stability hold, then different speakers adopt
-different referring expressions that persist from round to round. Hence,
-scrambling should \emph{increase} the average game's entropy from a
-relatively low level: each game's idiosyncratic, concentrated
-distribution of words would be mixed together to form more heterogeneous
-and therefore high-entropy distributions.
-
-To test this prediction, we computed the average within-game entropy for
-1000 different permutations of speaker utterances. We permuted
-utterances within rounds rather than across the entire data set to
-control for the fact that earlier rounds have longer utterances and thus
-a larger vocabulary than later rounds (see the following section). Since
-this permutation scheme keeps the number of messages per participant
-constant and simply swaps out the content of those messages, it also
-controls for the fact that some speakers sent more messages than others.
-We found that our null distribution lay within the interval {[}X, Y{]},
-which is significantly higher than the true entropy (averaged across
-games) of Z \(p < 0.001\). This pattern is consistent only with
-signatures of both arbitrariness and stability.
-
-\subsection{Point-wise Mutual Information}
-
-Which words are dropped and which remain?
-
-\subsection{Semantic embeddings}\label{arbitrariness-and-stability}
-
-While words can be treated as discrete tokens, as in the previous section, \dots
-
-Idiosyncracy across pairs can additionally be assessed by testing the generalization performance of a classifier on held out pairs at the beginning and end of the game. Training on earlier \dots
 
 \section{General Discussion}\label{general-discussion}
 

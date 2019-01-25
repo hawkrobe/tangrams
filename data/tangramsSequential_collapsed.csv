@@ -14,7 +14,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 0057-414228f8-c268-40d6-9349-b35df4f080d9,13,2,J,"first diamond on top of state shape again, straight line on top",12
 0057-414228f8-c268-40d6-9349-b35df4f080d9,14,2,F,graduate sitting and looking down from 2 questions ago,9
 0057-414228f8-c268-40d6-9349-b35df4f080d9,15,2,A,spy vs spy,3
-0057-414228f8-c268-40d6-9349-b35df4f080d9,16,2,D,graduate at lectern,3
+0057-414228f8-c268-40d6-9349-b35df4f080d9,16,2,D,"graduate at lectern, yes",4
 0057-414228f8-c268-40d6-9349-b35df4f080d9,17,2,E,rabbit ears lightning bolt base looking right,7
 0057-414228f8-c268-40d6-9349-b35df4f080d9,18,2,G,seal with ball - diamond on left strange hook shape on right,12
 0057-414228f8-c268-40d6-9349-b35df4f080d9,19,2,B,"mouse from beginning, mountain base",5
@@ -88,7 +88,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 0349-951c1418-40e9-48b3-8290-7ed4461f4d54,15,2,K,"kneeling holding plate, facing right",5
 0349-951c1418-40e9-48b3-8290-7ed4461f4d54,16,2,J,only one with completely straight vertical line on left side,10
 0349-951c1418-40e9-48b3-8290-7ed4461f4d54,17,2,F,sitting down facing left,4
-0349-951c1418-40e9-48b3-8290-7ed4461f4d54,18,2,H,"legless man, on ground, facing us almost",7
+0349-951c1418-40e9-48b3-8290-7ed4461f4d54,18,2,H,"legless man, sitting, on ground, facing us almost",8
 0349-951c1418-40e9-48b3-8290-7ed4461f4d54,19,2,G,"the weird one, woman in dress spread on floor",9
 0349-951c1418-40e9-48b3-8290-7ed4461f4d54,20,2,B,kneeling down with arms raised to left and right,9
 0349-951c1418-40e9-48b3-8290-7ed4461f4d54,21,2,D,"standing with plate, facing left",5
@@ -187,10 +187,10 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 0413-e4a76b36-4367-4e30-abf9-93e823913630,43,4,C,man with arms in air,5
 0413-e4a76b36-4367-4e30-abf9-93e823913630,44,4,F,man sitting against wall,4
 0413-e4a76b36-4367-4e30-abf9-93e823913630,45,4,K,man on knees two diamonds on upper section,8
-0413-e4a76b36-4367-4e30-abf9-93e823913630,46,4,E,mountainside with cube plus 2 triangles,6
+0413-e4a76b36-4367-4e30-abf9-93e823913630,46,4,E,mountainside with cube+2 triangles,4
 0413-e4a76b36-4367-4e30-abf9-93e823913630,47,4,A,man with leg up,4
 0413-e4a76b36-4367-4e30-abf9-93e823913630,48,4,D,"man with object facing left, *facing",6
-0413-e4a76b36-4367-4e30-abf9-93e823913630,49,5,E,mountain side with cube plus 2 triangles,7
+0413-e4a76b36-4367-4e30-abf9-93e823913630,49,5,E,mountain side with cube+2 triangles,5
 0413-e4a76b36-4367-4e30-abf9-93e823913630,50,5,I,diamond on top 2 left triangles,6
 0413-e4a76b36-4367-4e30-abf9-93e823913630,51,5,B,"man on knees, triangle arms facing both sides",8
 0413-e4a76b36-4367-4e30-abf9-93e823913630,52,5,H,used toothpaste,2
@@ -262,7 +262,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 0461-f522f8f4-37dc-4bb0-89bf-9f6bcf43274a,46,4,H,"triangle touching house, diamond touching house",6
 0461-f522f8f4-37dc-4bb0-89bf-9f6bcf43274a,47,4,E,pinwheel at top the smaller pinwheel,6
 0461-f522f8f4-37dc-4bb0-89bf-9f6bcf43274a,48,4,F,sitting down facing left,4
-0461-f522f8f4-37dc-4bb0-89bf-9f6bcf43274a,49,5,A,facing left with right foot in air,7
+0461-f522f8f4-37dc-4bb0-89bf-9f6bcf43274a,49,5,A,"facing left with right foot in air, no",8
 0461-f522f8f4-37dc-4bb0-89bf-9f6bcf43274a,50,5,C,both arms in air,4
 0461-f522f8f4-37dc-4bb0-89bf-9f6bcf43274a,51,5,F,sitting down facing left,4
 0461-f522f8f4-37dc-4bb0-89bf-9f6bcf43274a,52,5,B,large pinwheel,2
@@ -272,7 +272,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 0461-f522f8f4-37dc-4bb0-89bf-9f6bcf43274a,56,5,K,kneeling down weird shape,4
 0461-f522f8f4-37dc-4bb0-89bf-9f6bcf43274a,57,5,L,kneeling down,2
 0461-f522f8f4-37dc-4bb0-89bf-9f6bcf43274a,58,5,H,diamond on house,3
-0461-f522f8f4-37dc-4bb0-89bf-9f6bcf43274a,59,5,I,foot in air something in hands,6
+0461-f522f8f4-37dc-4bb0-89bf-9f6bcf43274a,59,5,I,"foot in air something in hands, yes",7
 0461-f522f8f4-37dc-4bb0-89bf-9f6bcf43274a,60,5,E,small pinwheel,2
 0461-f522f8f4-37dc-4bb0-89bf-9f6bcf43274a,61,6,I,one foot outstretched hands,4
 0461-f522f8f4-37dc-4bb0-89bf-9f6bcf43274a,62,6,A,one foot no hands,4
@@ -283,7 +283,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 0461-f522f8f4-37dc-4bb0-89bf-9f6bcf43274a,67,6,F,sitting down facing left,4
 0461-f522f8f4-37dc-4bb0-89bf-9f6bcf43274a,68,6,E,small pinwheel,2
 0461-f522f8f4-37dc-4bb0-89bf-9f6bcf43274a,69,6,H,diamond on house,3
-0461-f522f8f4-37dc-4bb0-89bf-9f6bcf43274a,70,6,G,facing left leaning back on right hand,7
+0461-f522f8f4-37dc-4bb0-89bf-9f6bcf43274a,70,6,G,"facing left leaning back on right hand, sitting",8
 0461-f522f8f4-37dc-4bb0-89bf-9f6bcf43274a,71,6,J,diamond on top straight side on left,7
 0461-f522f8f4-37dc-4bb0-89bf-9f6bcf43274a,72,6,K,kneeling weird job,3
 0711-b03679d3-9904-4263-bd2f-8ec8e7a45af7,1,1,J,diamond on a self,4
@@ -352,15 +352,16 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 0711-b03679d3-9904-4263-bd2f-8ec8e7a45af7,64,6,B,arms wide,2
 0711-b03679d3-9904-4263-bd2f-8ec8e7a45af7,65,6,F,leg,1
 0711-b03679d3-9904-4263-bd2f-8ec8e7a45af7,66,6,G,salsa woman,2
+0711-b03679d3-9904-4263-bd2f-8ec8e7a45af7,67,6,I,one leg,2
 0711-b03679d3-9904-4263-bd2f-8ec8e7a45af7,68,6,C,flying,1
-0711-b03679d3-9904-4263-bd2f-8ec8e7a45af7,69,6,L,"squatting, pointed right",3
+0711-b03679d3-9904-4263-bd2f-8ec8e7a45af7,69,6,L,"squatting ,pointed right",3
 0711-b03679d3-9904-4263-bd2f-8ec8e7a45af7,70,6,A,pointed nose,2
 0711-b03679d3-9904-4263-bd2f-8ec8e7a45af7,71,6,E,rabbit ears,2
 0711-b03679d3-9904-4263-bd2f-8ec8e7a45af7,72,6,H,no arms or legs,4
 0723-9b842133-a121-4b53-9c37-784e6023e022,1,1,I,"click on the one that looks like a tail is pointing to the right, and is standing",17
 0723-9b842133-a121-4b53-9c37-784e6023e022,2,1,A,"this one looks like something standing with one foot kicking out to the left of the other leg, the 'head' be tilted towards the top right corner",27
 0723-9b842133-a121-4b53-9c37-784e6023e022,3,1,E,this one looks like something sitting int he bottom left corner and it has bunny ears,16
-0723-9b842133-a121-4b53-9c37-784e6023e022,4,1,K,"this one is kind of chunky and looks like someone kneeling, the head is attached to another square similar to the head, the feet kind of look like they point up",31
+0723-9b842133-a121-4b53-9c37-784e6023e022,4,1,K,"this one is kind of chunky and looks like someone kneeling, the head is attached to another square similar to the head, the feet kind of look like they point up, yes",32
 0723-9b842133-a121-4b53-9c37-784e6023e022,5,1,B,this is another kneeling but the arms are pointed to the left and it has another triangle awkwardly attached on the right side of the head,26
 0723-9b842133-a121-4b53-9c37-784e6023e022,6,1,H,"this is a kneeling that is one block with no arms, feet/knees pointing to the right, kind of",18
 0723-9b842133-a121-4b53-9c37-784e6023e022,7,1,C,this one has it's arms wide open,7
@@ -439,7 +440,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 0785-68fedef2-3b2f-466f-a7c3-ab464e5811ca,8,1,B,figure kneeling arms out sleeves look like triangles,8
 0785-68fedef2-3b2f-466f-a7c3-ab464e5811ca,9,1,A,kicking leg up head looks like beak,7
 0785-68fedef2-3b2f-466f-a7c3-ab464e5811ca,10,1,G,"upper body at angle, leg on my left is resting on floor, leg on my left looks like shin is on floor",22
-0785-68fedef2-3b2f-466f-a7c3-ab464e5811ca,11,1,F,resting against something on my right,6
+0785-68fedef2-3b2f-466f-a7c3-ab464e5811ca,11,1,F,"resting against something on my right, sitting",7
 0785-68fedef2-3b2f-466f-a7c3-ab464e5811ca,12,1,E,sitting resting on my left,5
 0785-68fedef2-3b2f-466f-a7c3-ab464e5811ca,13,2,B,"kneeling with arms out, repeat",5
 0785-68fedef2-3b2f-466f-a7c3-ab464e5811ca,14,2,J,"my left is straight angle like square, another one we did before, shoulder is 90 degree",16
@@ -448,10 +449,12 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 0785-68fedef2-3b2f-466f-a7c3-ab464e5811ca,17,2,I,back kick,2
 0785-68fedef2-3b2f-466f-a7c3-ab464e5811ca,18,2,D,holding tray on my left,5
 0785-68fedef2-3b2f-466f-a7c3-ab464e5811ca,19,2,A,beak head,2
+0785-68fedef2-3b2f-466f-a7c3-ab464e5811ca,20,2,C,angel,1
 0785-68fedef2-3b2f-466f-a7c3-ab464e5811ca,21,2,L,tray on my right zig zag,6
 0785-68fedef2-3b2f-466f-a7c3-ab464e5811ca,22,2,K,tray on my right not zig zag,7
 0785-68fedef2-3b2f-466f-a7c3-ab464e5811ca,23,2,E,sitting leaning my left,4
 0785-68fedef2-3b2f-466f-a7c3-ab464e5811ca,24,2,G,"leg laying on floor, shin down",6
+0785-68fedef2-3b2f-466f-a7c3-ab464e5811ca,25,3,C,angel,1
 0785-68fedef2-3b2f-466f-a7c3-ab464e5811ca,26,3,A,beak head,2
 0785-68fedef2-3b2f-466f-a7c3-ab464e5811ca,27,3,L,zig zag,2
 0785-68fedef2-3b2f-466f-a7c3-ab464e5811ca,28,3,K,not zig zag,3
@@ -464,6 +467,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 0785-68fedef2-3b2f-466f-a7c3-ab464e5811ca,35,3,G,shin down,2
 0785-68fedef2-3b2f-466f-a7c3-ab464e5811ca,36,3,B,kneeling arms out,3
 0785-68fedef2-3b2f-466f-a7c3-ab464e5811ca,37,4,J,left straight angle,3
+0785-68fedef2-3b2f-466f-a7c3-ab464e5811ca,38,4,C,angel,1
 0785-68fedef2-3b2f-466f-a7c3-ab464e5811ca,39,4,D,left tray,2
 0785-68fedef2-3b2f-466f-a7c3-ab464e5811ca,40,4,G,shin down,2
 0785-68fedef2-3b2f-466f-a7c3-ab464e5811ca,41,4,L,zig zag,2
@@ -485,9 +489,11 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 0785-68fedef2-3b2f-466f-a7c3-ab464e5811ca,57,5,L,zig zag,2
 0785-68fedef2-3b2f-466f-a7c3-ab464e5811ca,58,5,B,"kneeling, arms out",3
 0785-68fedef2-3b2f-466f-a7c3-ab464e5811ca,59,5,J,left straight angle,3
+0785-68fedef2-3b2f-466f-a7c3-ab464e5811ca,60,5,C,angel,1
 0785-68fedef2-3b2f-466f-a7c3-ab464e5811ca,61,6,B,kneeling,1
 0785-68fedef2-3b2f-466f-a7c3-ab464e5811ca,62,6,J,left straight,2
 0785-68fedef2-3b2f-466f-a7c3-ab464e5811ca,63,6,A,beak,1
+0785-68fedef2-3b2f-466f-a7c3-ab464e5811ca,64,6,C,angel,1
 0785-68fedef2-3b2f-466f-a7c3-ab464e5811ca,65,6,L,zig zag,2
 0785-68fedef2-3b2f-466f-a7c3-ab464e5811ca,66,6,D,tray left,2
 0785-68fedef2-3b2f-466f-a7c3-ab464e5811ca,67,6,E,leaning left,2
@@ -505,8 +511,8 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 1202-a64916b2-49d2-4ca4-bd76-cfd3e1ec3954,7,1,E,bunny ears is next,4
 1202-a64916b2-49d2-4ca4-bd76-cfd3e1ec3954,8,1,I,now kick back,3
 1202-a64916b2-49d2-4ca4-bd76-cfd3e1ec3954,9,1,F,sad man,2
-1202-a64916b2-49d2-4ca4-bd76-cfd3e1ec3954,10,1,K,this is one that looks like he is begging but we didn't name him yet facing to the right,19
-1202-a64916b2-49d2-4ca4-bd76-cfd3e1ec3954,11,1,D,beggar,1
+1202-a64916b2-49d2-4ca4-bd76-cfd3e1ec3954,10,1,K,"this is one that looks like he is begging but we didn't name him yet facing to the right, yeah",20
+1202-a64916b2-49d2-4ca4-bd76-cfd3e1ec3954,11,1,D,"ok, beggar",2
 1202-a64916b2-49d2-4ca4-bd76-cfd3e1ec3954,12,1,A,front kick,2
 1202-a64916b2-49d2-4ca4-bd76-cfd3e1ec3954,13,2,D,beggar again,2
 1202-a64916b2-49d2-4ca4-bd76-cfd3e1ec3954,14,2,B,praying monk,2
@@ -518,7 +524,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 1202-a64916b2-49d2-4ca4-bd76-cfd3e1ec3954,20,2,K,kneeling beggar,2
 1202-a64916b2-49d2-4ca4-bd76-cfd3e1ec3954,21,2,A,front kick,2
 1202-a64916b2-49d2-4ca4-bd76-cfd3e1ec3954,22,2,C,arms up,2
-1202-a64916b2-49d2-4ca4-bd76-cfd3e1ec3954,23,2,G,"this is the last one we didn't name, kinda looks like he is on one knee",16
+1202-a64916b2-49d2-4ca4-bd76-cfd3e1ec3954,23,2,G,"this is the last one we didn't name, kinda looks like he is on one knee, yeah",17
 1202-a64916b2-49d2-4ca4-bd76-cfd3e1ec3954,24,2,I,"k, kick back",3
 1202-a64916b2-49d2-4ca4-bd76-cfd3e1ec3954,25,3,J,diamond top,2
 1202-a64916b2-49d2-4ca4-bd76-cfd3e1ec3954,26,3,I,kick back,2
@@ -560,7 +566,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 1202-a64916b2-49d2-4ca4-bd76-cfd3e1ec3954,62,6,E,bunny ears,2
 1202-a64916b2-49d2-4ca4-bd76-cfd3e1ec3954,63,6,D,beggar,1
 1202-a64916b2-49d2-4ca4-bd76-cfd3e1ec3954,64,6,H,baby,1
-1202-a64916b2-49d2-4ca4-bd76-cfd3e1ec3954,65,6,K,"kneeling, beggar",2
+1202-a64916b2-49d2-4ca4-bd76-cfd3e1ec3954,65,6,K,"kneeling, beggar, sorry",3
 1202-a64916b2-49d2-4ca4-bd76-cfd3e1ec3954,66,6,G,arms out,2
 1202-a64916b2-49d2-4ca4-bd76-cfd3e1ec3954,67,6,C,arms up,2
 1202-a64916b2-49d2-4ca4-bd76-cfd3e1ec3954,68,6,B,praying monk,2
@@ -586,6 +592,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,16,2,K,"'kneeling presenter' - kneeling, facing right, way down on knees, head up, holding a tablet or something",17
 1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,17,2,B,"angel -  sort of like an angel kneeling, facing right, with a triangle in her teeth",16
 1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,18,2,E,bunny - with triangle ears,5
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,19,2,C,ghost,1
 1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,20,2,H,"japanese - sitting, facing sort of forward/right, no arms, no lower legs",12
 1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,21,2,G,"i called this shovelling snow last time - faces right, arm like they're pushing a shovel - sort of behind them, with a bunch of stuff lower right, i mean lower left",32
 1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,22,2,D,"priest - a priest, facing left, wearing robes, presenting a tablet or something",13
@@ -597,6 +604,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,28,3,J,"head on a pedestal - straight left side, angled right side - no arms",14
 1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,29,3,I,"yoga - standing on one foot, facing left, raised leg extended",11
 1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,30,3,B,"angel -  sort of like an angel kneeling, facing right, with a triangle in her teeth",16
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,31,3,C,ghost,1
 1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,32,3,D,"priest - a priest, facing left, wearing robes, presenting a tablet or something",13
 1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,33,3,H,"japanese - sitting, facing sort of forward/right, no arms, no lower legs",12
 1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,34,3,A,bear,1
@@ -610,21 +618,27 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,42,4,H,"japanese - sitting, facing sort of forward/right, no arms, no lower legs",12
 1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,43,4,K,"'kneeling presenter' - kneeling, facing right, way down on knees, head up, holding a tablet or something",17
 1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,44,4,J,"head on a pedestal - straight left side, angled right side - no arms",14
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,45,4,B,angel,1
 1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,46,4,L,"squatting - squatting, facing right, presenting a tablet",8
 1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,47,4,D,"priest - a priest, facing left, wearing robes, presenting a tablet or something",13
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,48,4,C,ghost,1
 1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,49,5,I,yoga,1
 1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,50,5,A,bear,1
 1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,51,5,H,"japanese - sitting, facing sort of forward/right, no arms, no lower legs",12
 1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,52,5,J,"head on a pedestal - straight left side, angled right side - no arms",14
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,53,5,B,angel,1
 1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,54,5,D,"priest - a priest, facing left, wearing robes, presenting a tablet or something",13
 1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,55,5,F,"sitting, legs bent, facing left",5
 1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,56,5,L,"squatting - squatting, facing right, presenting a tablet",8
 1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,57,5,G,shovelling snow,2
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,58,5,C,ghost,1
 1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,59,5,K,"'kneeling presenter' - kneeling, facing right, way down on knees, head up, holding a tablet or something",17
 1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,60,5,E,bunny,1
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,61,6,C,ghost,1
 1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,62,6,A,bear,1
 1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,63,6,F,"sitting, legs bent, facing left",5
 1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,64,6,K,"'kneeling presenter' - kneeling, facing right, way down on knees, head up, holding a tablet or something",17
+1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,65,6,B,angel,1
 1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,66,6,L,"squatting - squatting, facing right, presenting a tablet",8
 1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,67,6,J,head on a pedestal,4
 1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,68,6,D,"priest - a priest, facing left, wearing robes, presenting a tablet or something",13
@@ -665,7 +679,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,31,3,G,"square tilts left, one triangle points to it, one triangle points to the bottom, flat bottom",16
 1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,32,3,C,person with hands in the air,6
 1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,33,3,D,"diamond head, person standing, their arm out to the left, square under arm",13
-1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,34,3,I,"figure skater, both arms to the left",7
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,34,3,I,"figure skater, both arms to the left, one leg",9
 1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,35,3,K,"2 diamonds on top of each other, 3 triangles overlap",10
 1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,36,3,A,"dinosaur with a flag, square upper right,  one leg",9
 1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,37,4,D,"looks like a person standing, diamond head, left arm",9
@@ -688,7 +702,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,54,5,C,person with both arms waving in air,7
 1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,55,5,B,"square tilts right, 2 triangles point towards it, triangle in bottom left corner",13
 1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,56,5,F,person sat on ground looking down knee bent towards ceiling,10
-1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,57,5,L,"person squatting down, arm and knee point right",8
+1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,57,5,L,"person squatting down, arm and knee point right, no",9
 1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,58,5,A,"dinosaur with flag, one leg, square top right",8
 1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,59,5,K,"2 diamonds stacked, 3 triangles overlap",6
 1526-db8d7e61-c668-4fe2-9119-cbf018ccb1c1,60,5,I,"figure skater, 2 arms left, standing on one leg",9
@@ -763,7 +777,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 1567-e80221b4-f349-4b3b-9921-224ee47eea1f,57,5,I,"yoga, yoga",2
 1567-e80221b4-f349-4b3b-9921-224ee47eea1f,58,5,L,"arms east triangle head, straight is back, look like a road arrow on his legs",15
 1567-e80221b4-f349-4b3b-9921-224ee47eea1f,59,5,D,straight west,2
-1567-e80221b4-f349-4b3b-9921-224ee47eea1f,60,5,K,"okay gotcha, woman getting gifts",5
+1567-e80221b4-f349-4b3b-9921-224ee47eea1f,60,5,K,woman getting gifts,3
 1567-e80221b4-f349-4b3b-9921-224ee47eea1f,61,6,J,dude straight facing east,4
 1567-e80221b4-f349-4b3b-9921-224ee47eea1f,62,6,K,gift lady,2
 1567-e80221b4-f349-4b3b-9921-224ee47eea1f,63,6,I,yoga,1
@@ -792,13 +806,14 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 1598-17655913-31a4-4ca6-b86c-383db06bfde9,17,2,B,head with triangle attached,4
 1598-17655913-31a4-4ca6-b86c-383db06bfde9,18,2,L,praying with bent legs,4
 1598-17655913-31a4-4ca6-b86c-383db06bfde9,19,2,I,"one leg in the air, two arms on left, exercise position",11
-1598-17655913-31a4-4ca6-b86c-383db06bfde9,20,2,F,"one leg on left, back on right",7
+1598-17655913-31a4-4ca6-b86c-383db06bfde9,20,2,F,"sitting, one leg on left, back on right",8
 1598-17655913-31a4-4ca6-b86c-383db06bfde9,21,2,G,horse like,2
 1598-17655913-31a4-4ca6-b86c-383db06bfde9,22,2,E,flower head,2
-1598-17655913-31a4-4ca6-b86c-383db06bfde9,23,2,C,flying,1
+1598-17655913-31a4-4ca6-b86c-383db06bfde9,23,2,C,"ghost, flying",2
 1598-17655913-31a4-4ca6-b86c-383db06bfde9,24,2,A,"head tipping off, one leg in air left side",9
 1598-17655913-31a4-4ca6-b86c-383db06bfde9,25,3,I,exercise,1
 1598-17655913-31a4-4ca6-b86c-383db06bfde9,26,3,B,head with triangle attached,4
+1598-17655913-31a4-4ca6-b86c-383db06bfde9,27,3,C,ghost,1
 1598-17655913-31a4-4ca6-b86c-383db06bfde9,28,3,L,pray,1
 1598-17655913-31a4-4ca6-b86c-383db06bfde9,29,3,K,pray with one leg folded,5
 1598-17655913-31a4-4ca6-b86c-383db06bfde9,30,3,E,flower head,2
@@ -810,15 +825,22 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 1598-17655913-31a4-4ca6-b86c-383db06bfde9,37,4,J,"plain with two triangles, right side, shoulder on right side, pointing out",12
 1598-17655913-31a4-4ca6-b86c-383db06bfde9,38,4,E,flower,1
 1598-17655913-31a4-4ca6-b86c-383db06bfde9,39,4,K,"praying bent leg, left side",5
+1598-17655913-31a4-4ca6-b86c-383db06bfde9,40,4,G,horse,1
 1598-17655913-31a4-4ca6-b86c-383db06bfde9,41,4,B,head with triangle,3
+1598-17655913-31a4-4ca6-b86c-383db06bfde9,42,4,C,ghost,1
 1598-17655913-31a4-4ca6-b86c-383db06bfde9,43,4,A,gorilla,1
 1598-17655913-31a4-4ca6-b86c-383db06bfde9,44,4,I,exercise,1
+1598-17655913-31a4-4ca6-b86c-383db06bfde9,45,4,H,plain,1
 1598-17655913-31a4-4ca6-b86c-383db06bfde9,46,4,D,hat,1
+1598-17655913-31a4-4ca6-b86c-383db06bfde9,47,4,F,sitting,1
 1598-17655913-31a4-4ca6-b86c-383db06bfde9,48,4,L,"sit praying, bent",3
+1598-17655913-31a4-4ca6-b86c-383db06bfde9,49,5,F,sitting,1
 1598-17655913-31a4-4ca6-b86c-383db06bfde9,50,5,L,"praying with bent, legs",4
+1598-17655913-31a4-4ca6-b86c-383db06bfde9,51,5,G,horse,1
 1598-17655913-31a4-4ca6-b86c-383db06bfde9,52,5,D,hat,1
 1598-17655913-31a4-4ca6-b86c-383db06bfde9,53,5,H,plane,1
 1598-17655913-31a4-4ca6-b86c-383db06bfde9,54,5,J,shoulder,1
+1598-17655913-31a4-4ca6-b86c-383db06bfde9,55,5,C,ghost,1
 1598-17655913-31a4-4ca6-b86c-383db06bfde9,56,5,A,gorilla,1
 1598-17655913-31a4-4ca6-b86c-383db06bfde9,57,5,E,flower,1
 1598-17655913-31a4-4ca6-b86c-383db06bfde9,58,5,K,praying leg left,3
@@ -827,11 +849,14 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 1598-17655913-31a4-4ca6-b86c-383db06bfde9,61,6,L,"praying, no leg",3
 1598-17655913-31a4-4ca6-b86c-383db06bfde9,62,6,K,"praying leg, left",3
 1598-17655913-31a4-4ca6-b86c-383db06bfde9,63,6,B,"head, with triangle",3
+1598-17655913-31a4-4ca6-b86c-383db06bfde9,64,6,C,ghost,1
 1598-17655913-31a4-4ca6-b86c-383db06bfde9,65,6,I,exercise,1
 1598-17655913-31a4-4ca6-b86c-383db06bfde9,66,6,A,gorilla,1
 1598-17655913-31a4-4ca6-b86c-383db06bfde9,68,6,E,flower,1
 1598-17655913-31a4-4ca6-b86c-383db06bfde9,69,6,D,hat,1
-1598-17655913-31a4-4ca6-b86c-383db06bfde9,72,6,H,leg right,2
+1598-17655913-31a4-4ca6-b86c-383db06bfde9,70,6,J,plain,1
+1598-17655913-31a4-4ca6-b86c-383db06bfde9,71,6,G,horse,1
+1598-17655913-31a4-4ca6-b86c-383db06bfde9,72,6,H,"plain, leg right",3
 1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,1,1,J,"it looks like a partial box with a diamond head, the right part of the box is missing",18
 1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,2,1,L,"this one looks like a man with his knees bent to the right and holding his hands out to the right, together",22
 1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,3,1,D,"this one the man is facing to the left and holding a book, it looks like a priest in a robe",21
@@ -902,6 +927,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,68,6,I,balancing,1
 1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,69,6,K,big triangle right small left,5
 1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,70,6,C,arms in air,3
+1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,71,6,F,sitting,1
 1624-fe1e73c3-3feb-4949-8e71-31e9f955db53,72,6,E,bunny,1
 1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,1,1,D,a diamond is at the top,6
 1670-7a1fc24b-6599-4efb-8a98-22ce7368261a,2,1,E,"3 shapes at the top, triangle 2 and one rectangle",10
@@ -1016,7 +1042,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 1747-31c92e68-6900-4f75-b1d5-f0fe4ea823a3,39,4,I,one legged balancing guy with a leg stretched out behind him,11
 1747-31c92e68-6900-4f75-b1d5-f0fe4ea823a3,40,4,L,lunch boy - squatting to the right with a tray,10
 1747-31c92e68-6900-4f75-b1d5-f0fe4ea823a3,41,4,F,sad college student,3
-1747-31c92e68-6900-4f75-b1d5-f0fe4ea823a3,42,4,G,super lunger!!,2
+1747-31c92e68-6900-4f75-b1d5-f0fe4ea823a3,42,4,G,"super lunger!!, but my queue is building up",8
 1747-31c92e68-6900-4f75-b1d5-f0fe4ea823a3,43,4,J,straight edge (left side,4
 1747-31c92e68-6900-4f75-b1d5-f0fe4ea823a3,44,4,C,the angel,2
 1747-31c92e68-6900-4f75-b1d5-f0fe4ea823a3,45,4,E,easter bunny,2
@@ -1030,7 +1056,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 1747-31c92e68-6900-4f75-b1d5-f0fe4ea823a3,53,5,C,the angel,2
 1747-31c92e68-6900-4f75-b1d5-f0fe4ea823a3,54,5,E,easter bunny,2
 1747-31c92e68-6900-4f75-b1d5-f0fe4ea823a3,55,5,F,sad college student against tree,5
-1747-31c92e68-6900-4f75-b1d5-f0fe4ea823a3,56,5,B,leo arms stretched out kneeling,5
+1747-31c92e68-6900-4f75-b1d5-f0fe4ea823a3,56,5,B,leo arms outstretched kneeling,4
 1747-31c92e68-6900-4f75-b1d5-f0fe4ea823a3,57,5,H,burrito of sadness,3
 1747-31c92e68-6900-4f75-b1d5-f0fe4ea823a3,58,5,J,straight edge guy,3
 1747-31c92e68-6900-4f75-b1d5-f0fe4ea823a3,59,5,A,drunk,1
@@ -1055,12 +1081,12 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 2002-d128dee1-72d2-4585-9488-fcedfabe7722,6,1,J,the top of the shape is flat and a box is setting on its corner edge,16
 2002-d128dee1-72d2-4585-9488-fcedfabe7722,7,1,L,"its shaped kinda like a lighting bolt with a box setting on top on its corner edge, yes it kinda looks like a s",24
 2002-d128dee1-72d2-4585-9488-fcedfabe7722,8,1,F,"looks like a guy sitting on his butt with his back against the wall, setting",15
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,9,1,G,at the bottom of this object its flat than goes up 45 degrees at the end of the angle is a triangle,22
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,9,1,G,"at the bottom of this object its flat than goes up 45 degrees at the end of the angle is a triangle, no",23
 2002-d128dee1-72d2-4585-9488-fcedfabe7722,10,1,K,"looks like a chinese lady on her knees, no a box",11
 2002-d128dee1-72d2-4585-9488-fcedfabe7722,11,1,D,it look like some standing and looking down at its hands,11
 2002-d128dee1-72d2-4585-9488-fcedfabe7722,12,1,E,looks like a girl with a bow in her hair,10
 2002-d128dee1-72d2-4585-9488-fcedfabe7722,13,2,E,same one you just picked,5
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,14,2,I,looks like a person fixing to kick a ball you picked it earlier,13
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,14,2,I,"looks like a person fixing to kick a ball you picked it earlier, yes",14
 2002-d128dee1-72d2-4585-9488-fcedfabe7722,15,2,A,this one look like it has a pointed beak a box is on it back right leg is lifted,19
 2002-d128dee1-72d2-4585-9488-fcedfabe7722,16,2,F,"looks like a person setting with there knees bent up and their back is against a wall, left",18
 2002-d128dee1-72d2-4585-9488-fcedfabe7722,17,2,K,looks like a chinese lady on her knees with her hands out facing right and it not the one you picked earlier,22
@@ -1072,7 +1098,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 2002-d128dee1-72d2-4585-9488-fcedfabe7722,23,2,G,this one has a 2 triangle and a box in it,11
 2002-d128dee1-72d2-4585-9488-fcedfabe7722,24,2,D,its standing up arms out facing left kinda looks like someone looking at a book,15
 2002-d128dee1-72d2-4585-9488-fcedfabe7722,25,3,D,same one you just picked,5
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,26,3,E,"girl with bow in her hair, my hit is expire i do not know if it will let me finish or not",22
+2002-d128dee1-72d2-4585-9488-fcedfabe7722,26,3,E,girl with bow in her hair,6
 2002-d128dee1-72d2-4585-9488-fcedfabe7722,27,3,H,the fat one with no features,6
 2002-d128dee1-72d2-4585-9488-fcedfabe7722,28,3,I,looks like a person kicking a ball leg raised facing left,11
 2002-d128dee1-72d2-4585-9488-fcedfabe7722,29,3,B,"the one with a triangle point at the mouth it touching the box, facing right",15
@@ -1123,14 +1149,14 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 2223-ecc53ef3-7e9a-4776-b7c5-6811400d1a65,2,1,K,"next one has a large base, with multiple zig zag going up, left sides first curve inward is like an upside down check mark, first curve inward from base, right side is a distant sideways white triangle going into the shape to form the black zig and zag, the head looks like it has another half diamond as the neck, the other half attaches to the base, standing for sure, that is probably the best description, the head is diamond, whose bottom tip is attached to the top tip of another diamond, whose bottom right quarter is morphed into the rest of the shape",104
 2223-ecc53ef3-7e9a-4776-b7c5-6811400d1a65,3,1,D,"this one is hope is easy, most closely resembles a shadow of the pope walking with a bible in hand, not kneeling and praying, looks similar, to the left",29
 2223-ecc53ef3-7e9a-4776-b7c5-6811400d1a65,4,1,J,"ok this imagine an entire black rectangle, with a diamond on top, then someone ate the side, see if that can get ya, its the most dense block in the formation, right side is eaten",35
-2223-ecc53ef3-7e9a-4776-b7c5-6811400d1a65,5,1,I,"oh this one is like a figure skater, leaning to the left side with arms outstretched, leg out to right, sorry",21
+2223-ecc53ef3-7e9a-4776-b7c5-6811400d1a65,5,1,I,"oh this one is like a figure skater, leaning to the left side with arms outstretched, no, leg out to right, sorry",22
 2223-ecc53ef3-7e9a-4776-b7c5-6811400d1a65,6,1,G,"phew, this one is harder, ok so long flat base, a triangle is of to the right of the formation, comes to a slim center with a diamond facing to the left, um, hard to tell, i would say kneeling, if you look it has the most elongated bottom, a trapezoid would be the bottom piece i believe, could definitely be wrong, the only other one with triangle on bottom right is the figure skating one, and its a little higher i wouldnt say bottom for that, its the only distinctive black triangle on bottom right connected by 1 tip",100
 2223-ecc53ef3-7e9a-4776-b7c5-6811400d1a65,7,1,E,"this one has a bunny ear top, diamond face, and a declining financial forecast base, so sitting with hands on knees almost",22
 2223-ecc53ef3-7e9a-4776-b7c5-6811400d1a65,8,1,C,"ok priest on the street corner arms raised praising the lord, raised to the sky, pointing upward, yes, left",19
-2223-ecc53ef3-7e9a-4776-b7c5-6811400d1a65,9,1,H,"i would say kneeling, legs coming out the back on right side, slanted to the right, otherwise fairly straight body and head alignment compared to all others, thick body as well, thickest in the bunch, no hands",37
-2223-ecc53ef3-7e9a-4776-b7c5-6811400d1a65,10,1,F,"legs outstretched to left, sitting up, picture from the side like a model, no hands i can see",18
+2223-ecc53ef3-7e9a-4776-b7c5-6811400d1a65,9,1,H,"i would say kneeling, legs coming out the back on right side, slanted to the right, otherwise fairly straight body and head alignment compared to all others, thick body as well, thickest in the bunch, right, no hands",38
+2223-ecc53ef3-7e9a-4776-b7c5-6811400d1a65,10,1,F,"sitting, legs outstretched to left, sitting up, picture from the side like a model, no hands i can see",19
 2223-ecc53ef3-7e9a-4776-b7c5-6811400d1a65,11,1,A,"looks like an indian rain man dancing, um, looks like a dinosaur head on one side and the actual head on other, like he 2 headed, 2 legs facing left, outmost one is raised",34
-2223-ecc53ef3-7e9a-4776-b7c5-6811400d1a65,12,1,L,"kneeling slightly book in hand facing to the left, like bending down slightly, book facing left, legs facing right, reverse, book is facing right and legs are left, legs do not come out past body, by much",37
+2223-ecc53ef3-7e9a-4776-b7c5-6811400d1a65,12,1,L,"kneeling slightly book in hand facing to the left, like bending down slightly, book facing left, legs facing right, reverse, book is facing right and legs are left, legs do not come out past body, by much, think you got it",41
 2223-ecc53ef3-7e9a-4776-b7c5-6811400d1a65,13,2,F,"sitting down like against a tree resting, legs outstretched to left, bent knees",13
 2223-ecc53ef3-7e9a-4776-b7c5-6811400d1a65,14,2,C,"leaning to left, upper body only, preacher arms pointing up",10
 2223-ecc53ef3-7e9a-4776-b7c5-6811400d1a65,15,2,G,"this was that thick long base one, with the triangle bottom right only 1 tip touching, only one with triangle on bottom right and you said something  i cant remember it",31
@@ -1145,11 +1171,11 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 2223-ecc53ef3-7e9a-4776-b7c5-6811400d1a65,24,2,D,"walking with book on left very bottom feet stick out slighty to left, legs are together, standing i should have said",21
 2223-ecc53ef3-7e9a-4776-b7c5-6811400d1a65,25,3,F,"leaning against tree legs out to left, knees bent, no arms",11
 2223-ecc53ef3-7e9a-4776-b7c5-6811400d1a65,26,3,E,bunny ears,2
-2223-ecc53ef3-7e9a-4776-b7c5-6811400d1a65,27,3,A,"monster dinosaur faceregular face, legs to left outermost raised, its the easiest for sure",14
+2223-ecc53ef3-7e9a-4776-b7c5-6811400d1a65,27,3,A,"monster dinosaur faceregular face, legs to left outermost raised",9
 2223-ecc53ef3-7e9a-4776-b7c5-6811400d1a65,28,3,H,"large center mass, no arms, legs out slightly to right",10
 2223-ecc53ef3-7e9a-4776-b7c5-6811400d1a65,29,3,I,"figure skater arms left, back leg up",7
 2223-ecc53ef3-7e9a-4776-b7c5-6811400d1a65,30,3,B,"triangle tail left side, arms out like chick from titanic",10
-2223-ecc53ef3-7e9a-4776-b7c5-6811400d1a65,31,3,D,"standing book guy to the left, feet slightly stick out to left, do not think so, i mistakenly said walking last time, book to left, feet barely even stick out mostly 1 mass, book is facing left, feet barely stick out to left",43
+2223-ecc53ef3-7e9a-4776-b7c5-6811400d1a65,31,3,D,"standing book guy to the left, feet slightly stick out to left, i mistakenly said walking last time, book to left, feet barely even stick out mostly 1 mass, book is facing left, feet barely stick out to left",39
 2223-ecc53ef3-7e9a-4776-b7c5-6811400d1a65,32,3,J,"this the guy that got eaten on left side, large square that got eaten",14
 2223-ecc53ef3-7e9a-4776-b7c5-6811400d1a65,33,3,C,"this is now known as the inflatable balloon guy, leaning to left upper body only arms outstretched",17
 2223-ecc53ef3-7e9a-4776-b7c5-6811400d1a65,34,3,L,"knees slightly bent, hands to right, feet to left",9
@@ -1175,7 +1201,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 2223-ecc53ef3-7e9a-4776-b7c5-6811400d1a65,54,5,F,guy against tree,3
 2223-ecc53ef3-7e9a-4776-b7c5-6811400d1a65,55,5,L,"slightly bent guy, arms right legs left",7
 2223-ecc53ef3-7e9a-4776-b7c5-6811400d1a65,56,5,E,bunny ears!,2
-2223-ecc53ef3-7e9a-4776-b7c5-6811400d1a65,57,5,K,"big feet, arms right legs left, big feet",8
+2223-ecc53ef3-7e9a-4776-b7c5-6811400d1a65,57,5,K,"big feet, arms right legs left, no problem, big feet",10
 2223-ecc53ef3-7e9a-4776-b7c5-6811400d1a65,58,5,H,big mass legs out right no arms,7
 2223-ecc53ef3-7e9a-4776-b7c5-6811400d1a65,59,5,G,"triangle with one touching tip, bottom right",7
 2223-ecc53ef3-7e9a-4776-b7c5-6811400d1a65,60,5,B,"triangle tail, arms out",4
@@ -1195,7 +1221,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 2403-abcbe4e3-634c-40ec-89f8-95a95baedff9,2,1,L,this one looks like a duck with a diamond on his head,12
 2403-abcbe4e3-634c-40ec-89f8-95a95baedff9,3,1,J,"this one has a straight edge and then a diamond on top, it looks like the diamond is on a cliff",21
 2403-abcbe4e3-634c-40ec-89f8-95a95baedff9,4,1,D,this is also a straight edge but it looks like a person with their hands out,16
-2403-abcbe4e3-634c-40ec-89f8-95a95baedff9,5,1,F,this looks like a man sitting down,7
+2403-abcbe4e3-634c-40ec-89f8-95a95baedff9,5,1,F,"this looks like a man sitting down, yes",8
 2403-abcbe4e3-634c-40ec-89f8-95a95baedff9,6,1,G,this one looks like a woman dancing with her dress trailing alongside her,13
 2403-abcbe4e3-634c-40ec-89f8-95a95baedff9,7,1,K,this one looks like the duck one but has an extra part on the bottom sticking up,17
 2403-abcbe4e3-634c-40ec-89f8-95a95baedff9,8,1,A,looks like a guy walking with a block on his back,11
@@ -1209,7 +1235,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 2403-abcbe4e3-634c-40ec-89f8-95a95baedff9,16,2,F,guy sitting,2
 2403-abcbe4e3-634c-40ec-89f8-95a95baedff9,17,2,B,girl with bow begging,4
 2403-abcbe4e3-634c-40ec-89f8-95a95baedff9,18,2,I,guy on one leg,4
-2403-abcbe4e3-634c-40ec-89f8-95a95baedff9,19,2,K,the weirder looking duck,4
+2403-abcbe4e3-634c-40ec-89f8-95a95baedff9,19,2,K,"the weirder looking duck, second one",6
 2403-abcbe4e3-634c-40ec-89f8-95a95baedff9,20,2,L,duck,1
 2403-abcbe4e3-634c-40ec-89f8-95a95baedff9,21,2,J,diamond on cliff,3
 2403-abcbe4e3-634c-40ec-89f8-95a95baedff9,22,2,H,last one i couldn't describe of diamond on oval,9
@@ -1270,28 +1296,29 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,5,1,L,"it looks very similar to another, square looks like a diamond and the man is kneeling",16
 2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,6,1,D,"man standing straight with hands out, as to offer food",10
 2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,7,1,I,leg bent backwards,3
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,8,1,E,sitting,1
 2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,9,1,J,"it looks like a baby in big dress, hands up",10
 2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,10,1,C,flying,1
 2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,11,1,K,"kneeling with hands out, forward",5
-2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,12,1,B,"kneeling with hands out to side, on knees, hands out to side, my right",14
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,12,1,B,"kneeling with hands out to side, on knees, hands out to side, right, my right",15
 2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,13,2,G,"karate move, head cocked to left",6
 2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,14,2,H,"baby swaddled, in a blanket, or a cocoon, no arms",10
 2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,15,2,C,flying,1
-2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,16,2,J,"baby penguin, short legs, maybe, hands up, both legs, it is unclear",12
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,16,2,J,"baby penguin, short legs, yes, maybe, hands up, both legs, it is unclear, yes",14
 2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,17,2,D,"man offering, standing",3
-2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,18,2,K,"person kneeling to my right, arms out to their forward",10
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,18,2,K,"person kneeling to my right, arms out to their forward, no",11
 2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,19,2,I,"flying with one leg down, yoga pose",7
-2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,20,2,F,"man laying/sitting, no arms",4
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,20,2,F,"man laying/sitting, no arms, no",5
 2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,21,2,B,person on knees turned towards my right with arms out to their sides,13
 2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,22,2,A,"frankenstein, monster, dinosaur",3
-2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,23,2,E,"person with hat, sitting down, head facing my right",9
-2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,24,2,L,"person bending towards my right, arms out forward, arms out to right side of photo",15
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,23,2,E,"person with hat, sitting down, head facing my right, yes",10
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,24,2,L,"person bending towards my right, arms out forward, arms out to right side of photo, yes",16
 2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,25,3,L,person kneeling to right side,5
 2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,26,3,J,"standing forward, arms out to side, two",7
 2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,27,3,I,"flying with leg down, one leg down",7
 2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,28,3,C,flying,1
-2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,29,3,D,offering food while standing,4
-2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,30,3,A,"one leg up, head towards side",6
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,29,3,D,"offering food while standing, yes",5
+2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,30,3,A,"one leg up, head towards side, no, yes",8
 2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,31,3,E,"sitting head toward the right side, hat, triangle hat",9
 2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,32,3,H,cocoon,1
 2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,33,3,B,"arms out, on knees, arms out to side",8
@@ -1334,16 +1361,16 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,70,6,G,karate,1
 2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,71,6,B,"on knees, facing forward, both arms out to sides",9
 2535-a47c997d-4aac-43f5-adad-6d8e492ba2eb,72,6,I,flying with one leg down,5
-3296-212e4ca6-9ec7-4e38-bacf-a739c9812e48,1,1,J,"it has a diamond head and bulky body, bulky, with a pointy shoe on the bottom, it looks like it's pointing to someone",23
+3296-212e4ca6-9ec7-4e38-bacf-a739c9812e48,1,1,J,"it has a diamond head and bulky body, bulky, with a pointy shoe on the bottom, yes, it looks like it's pointing to someone",24
 3296-212e4ca6-9ec7-4e38-bacf-a739c9812e48,2,1,H,"diamond head, no arms, standing, looks like fat banana",9
-3296-212e4ca6-9ec7-4e38-bacf-a739c9812e48,3,1,F,"square head, can see the legs",6
+3296-212e4ca6-9ec7-4e38-bacf-a739c9812e48,3,1,F,"sitting, square head, can see the legs",7
 3296-212e4ca6-9ec7-4e38-bacf-a739c9812e48,4,1,C,flying,1
 3296-212e4ca6-9ec7-4e38-bacf-a739c9812e48,5,1,E,bunny ears,2
 3296-212e4ca6-9ec7-4e38-bacf-a739c9812e48,6,1,A,"one leg up, the one with a flag on its back, not the karate kicker",15
-3296-212e4ca6-9ec7-4e38-bacf-a739c9812e48,7,1,D,"diamond head standing, looks like wearing a robe and giving a graduation speech",13
+3296-212e4ca6-9ec7-4e38-bacf-a739c9812e48,7,1,D,"diamond head standing, looks like wearing a robe and giving a graduation speech, yes",14
 3296-212e4ca6-9ec7-4e38-bacf-a739c9812e48,8,1,L,diamond head knees bent pointing right,6
 3296-212e4ca6-9ec7-4e38-bacf-a739c9812e48,9,1,B,"its chest looks two broken triangles, sitting down, has a large butt/waist",12
-3296-212e4ca6-9ec7-4e38-bacf-a739c9812e48,10,1,G,"looks like a high heel shoe, not the bunny ears",10
+3296-212e4ca6-9ec7-4e38-bacf-a739c9812e48,10,1,G,"looks like a high heel shoe, not the bunny ears, sitting",11
 3296-212e4ca6-9ec7-4e38-bacf-a739c9812e48,11,1,I,karate kick,2
 3296-212e4ca6-9ec7-4e38-bacf-a739c9812e48,12,1,K,"standing, looks like the letter e, except it has a diamond head, and arm pointing to right, and legs pointing to right",22
 3296-212e4ca6-9ec7-4e38-bacf-a739c9812e48,13,2,G,high heel shoe,3
@@ -1356,7 +1383,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 3296-212e4ca6-9ec7-4e38-bacf-a739c9812e48,20,2,K,"the letter e, diamond head, but the back, of it has a point",13
 3296-212e4ca6-9ec7-4e38-bacf-a739c9812e48,21,2,I,karate kick,2
 3296-212e4ca6-9ec7-4e38-bacf-a739c9812e48,22,2,H,fat banana,2
-3296-212e4ca6-9ec7-4e38-bacf-a739c9812e48,23,2,L,the letter e but no tail/point,6
+3296-212e4ca6-9ec7-4e38-bacf-a739c9812e48,23,2,L,"the letter e but no tail/point, yes",7
 3296-212e4ca6-9ec7-4e38-bacf-a739c9812e48,24,2,B,"split triangle chest, sitting down",5
 3296-212e4ca6-9ec7-4e38-bacf-a739c9812e48,25,3,L,zig zag body,3
 3296-212e4ca6-9ec7-4e38-bacf-a739c9812e48,26,3,D,giving speech pointing left,4
@@ -1411,11 +1438,11 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 3321-5540179d-7955-4363-b9d2-e392f26a1256,3,1,G,"long parallelogram along the bottom, then a space with the triangle pointing right",13
 3321-5540179d-7955-4363-b9d2-e392f26a1256,4,1,D,"a lot of these look like people doing stuff to me, this one looks like the person is standing straight up looking down at a tray of food, big rectangle in the middle, small part of triangle for feet",39
 3321-5540179d-7955-4363-b9d2-e392f26a1256,5,1,J,"similar to the server but facing the other way, and looks fatter, flat across the bottom just like the other one but the triangle 'toes' on the bottom are facing the other way, holding the tray up higher, near his neck, big square in the middle",46
-3321-5540179d-7955-4363-b9d2-e392f26a1256,6,1,L,"this looks like someone praying and looking at a bible to me, like they are kneeling (parallelogram on the bottom, six sided figure in the middle for the body, triangle for hands/book",32
+3321-5540179d-7955-4363-b9d2-e392f26a1256,6,1,L,"he's the fat server, this looks like someone praying and looking at a bible to me, like they are kneeling (parallelogram on the bottom, six sided figure in the middle for the body, triangle for hands/book",36
 3321-5540179d-7955-4363-b9d2-e392f26a1256,7,1,F,"that one almost looks like a female zombie, ok, this one looks like he is sitting facing left with legs kicked out, this one is sitting looks like a bunch of different shapes in the middle, long rectangle for feet (only one like legs are together, *long rectangle for legs, triangle for foot/feet, aside from the female zombie has the most length across, female zombie is longer because of her dress",71
 3321-5540179d-7955-4363-b9d2-e392f26a1256,8,1,H,"this shape has a diamond on top, looks like a six sided figure in the middle, and maybe a squished diamond attached at the bottom, doesn't really look like anything to me",32
-3321-5540179d-7955-4363-b9d2-e392f26a1256,9,1,C,"this one looks like a ghost flying, with arms out",10
-3321-5540179d-7955-4363-b9d2-e392f26a1256,10,1,I,this one looks like figure skating with leg kicked back in air,12
+3321-5540179d-7955-4363-b9d2-e392f26a1256,9,1,C,"that was easy, this one looks like a ghost flying, with arms out",13
+3321-5540179d-7955-4363-b9d2-e392f26a1256,10,1,I,"that's zombie dude from thriller, this one looks like figure skating with leg kicked back in air",17
 3321-5540179d-7955-4363-b9d2-e392f26a1256,11,1,A,"zombie dude now, walking zombie",5
 3321-5540179d-7955-4363-b9d2-e392f26a1256,12,1,E,"looks similar to the sitting guy, but with triangles on his head, really flat across the bottom, love it bunny head :",22
 3321-5540179d-7955-4363-b9d2-e392f26a1256,13,2,F,sitting dude again,3
@@ -1477,7 +1504,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 3321-5540179d-7955-4363-b9d2-e392f26a1256,69,6,C,"flying ghost, no dress/feet",4
 3321-5540179d-7955-4363-b9d2-e392f26a1256,70,6,F,sitting man,2
 3321-5540179d-7955-4363-b9d2-e392f26a1256,71,6,H,six sided man,3
-3321-5540179d-7955-4363-b9d2-e392f26a1256,72,6,A,"thriller zombie, no dress, zombie, no dress",7
+3321-5540179d-7955-4363-b9d2-e392f26a1256,72,6,A,"i should've made them chicks, girl power, thriller zombie, no dress, zombie, no dress",14
 3419-7061f84e-30ba-48dc-9bc3-133c5fdf8fa3,1,1,J,look for an object that looks like a podium with a flat surface and a diamond on top,18
 3419-7061f84e-30ba-48dc-9bc3-133c5fdf8fa3,2,1,C,looks like jesus with open arms giving a hug,9
 3419-7061f84e-30ba-48dc-9bc3-133c5fdf8fa3,3,1,G,"looks like most of the object is on the left, the hug this time has his head thrust backward",19
@@ -1545,7 +1572,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 3419-7061f84e-30ba-48dc-9bc3-133c5fdf8fa3,65,6,J,podium diamond,2
 3419-7061f84e-30ba-48dc-9bc3-133c5fdf8fa3,66,6,B,angel praying,2
 3419-7061f84e-30ba-48dc-9bc3-133c5fdf8fa3,67,6,H,bride with no feet no train,6
-3419-7061f84e-30ba-48dc-9bc3-133c5fdf8fa3,68,6,E,sitting under a plant,4
+3419-7061f84e-30ba-48dc-9bc3-133c5fdf8fa3,68,6,E,"sitting under a plant, right",5
 3419-7061f84e-30ba-48dc-9bc3-133c5fdf8fa3,69,6,G,not jesus but hugging,4
 3419-7061f84e-30ba-48dc-9bc3-133c5fdf8fa3,70,6,K,bride at desk with train upward,6
 3419-7061f84e-30ba-48dc-9bc3-133c5fdf8fa3,71,6,D,man takes up offering,4
@@ -1571,7 +1598,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 3453-2eab60c9-d1cd-4245-919c-c499f303740e,19,2,H,blocky diamond shape,3
 3453-2eab60c9-d1cd-4245-919c-c499f303740e,20,2,G,all on the bottom half,5
 3453-2eab60c9-d1cd-4245-919c-c499f303740e,21,2,J,like a straight left side,5
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,22,2,I,"oops, first dancer with/ big boobs",6
+3453-2eab60c9-d1cd-4245-919c-c499f303740e,22,2,I,first dancer with/ big boobs,5
 3453-2eab60c9-d1cd-4245-919c-c499f303740e,23,2,E,"rabbit ears, triangle sitting on ground",6
 3453-2eab60c9-d1cd-4245-919c-c499f303740e,24,2,K,"kneeling toes up, third time using same description, can you remember from other trials",14
 3453-2eab60c9-d1cd-4245-919c-c499f303740e,25,3,C,leaning back arms spread,4
@@ -1622,7 +1649,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 3453-2eab60c9-d1cd-4245-919c-c499f303740e,70,6,D,guess,1
 3453-2eab60c9-d1cd-4245-919c-c499f303740e,71,6,G,guess,1
 3453-2eab60c9-d1cd-4245-919c-c499f303740e,72,6,I,one leg dancer,3
-3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1,1,I,"looks like a person balancing on one leg and sticking the other back, like an ice skater spinning",18
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,1,1,I,"looks like a person balancing on one leg and sticking the other back, like an ice skater spinning, yes",19
 3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,2,1,G,"looks like person punching something on ground, looking down",9
 3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,3,1,H,"looks like person holding something in their lap or sitting, nothing on head",13
 3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,4,1,L,"praying, theres 2 that look similar, the one without feet pointing up, (feet pointed back",15
@@ -1637,7 +1664,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,13,2,J,"diamond head, wide top thin bottom",6
 3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,14,2,B,"praying, you picked it earlier, feet and hands are triangles, hood on, head tilted down",15
 3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,15,2,D,"diamond head, arm out, sleeve",5
-3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,16,2,I,"first one, leaning forward",4
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,16,2,I,"first one, leaning forward, one leg",6
 3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,17,2,F,"sitting head down pace under knees, space",7
 3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,18,2,L,"knees bent, arms out diamond head",6
 3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,19,2,H,"diamond head, wider bottom than top",6
@@ -1652,7 +1679,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,28,3,E,triangles on head,3
 3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,29,3,I,on one leg,3
 3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,30,3,L,"hands out diamond head, bent knees",6
-3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,31,3,F,space under knees,3
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,31,3,F,"sitting, space under knees",4
 3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,32,3,G,punching ground,2
 3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,33,3,J,"diamond head, wide top narrow bottom",6
 3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,34,3,A,marching,1
@@ -1666,6 +1693,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,42,4,D,"arm out, sleeve",3
 3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,43,4,C,confused,1
 3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,44,4,J,"diamond head, wide top, narrow bottom",6
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,45,4,I,one leg,2
 3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,46,4,E,triangles on head,3
 3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,47,4,A,marching,1
 3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,48,4,F,sitting space under knees,4
@@ -1680,10 +1708,12 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,57,5,D,"arm out, sleeve",3
 3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,58,5,C,confused,1
 3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,59,5,J,"diamond head, wide top",4
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,60,5,I,one leg,2
 3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,61,6,G,punching,1
 3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,62,6,K,on knees,2
 3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,63,6,A,marching,1
 3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,64,6,L,bent knees,2
+3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,65,6,I,one leg,2
 3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,66,6,F,space under knee,3
 3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,67,6,B,praying,1
 3617-9ac86786-87e4-468d-bbd9-ffdb2a55bf4e,68,6,C,confused,1
@@ -1752,7 +1782,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 3752-a8b52b62-f711-4601-a8cc-a8afddd35560,59,5,J,"straight line, on left",4
 3752-a8b52b62-f711-4601-a8cc-a8afddd35560,60,5,K,"kneel face right, holding plate",5
 3752-a8b52b62-f711-4601-a8cc-a8afddd35560,61,6,B,kneel arms spread to left and right,7
-3752-a8b52b62-f711-4601-a8cc-a8afddd35560,62,6,C,y,1
+3752-a8b52b62-f711-4601-a8cc-a8afddd35560,62,6,C,"ghost, y",2
 3752-a8b52b62-f711-4601-a8cc-a8afddd35560,63,6,J,"straight line, on left",4
 3752-a8b52b62-f711-4601-a8cc-a8afddd35560,64,6,A,"stand 1 leg, both arms raised",6
 3752-a8b52b62-f711-4601-a8cc-a8afddd35560,65,6,G,woman elbow raised,3
@@ -1841,7 +1871,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 4045-c97cdcce-7538-408d-b8dd-5de0f2de8574,4,1,G,"this one looks like a folding lawn chair, it looks a bit like a high heel shoe, or a backwards left",21
 4045-c97cdcce-7538-408d-b8dd-5de0f2de8574,5,1,H,"very blocky with a diamond o n the top,  veers to the right at the bottom",16
 4045-c97cdcce-7538-408d-b8dd-5de0f2de8574,6,1,E,"two triangles on top, looks like bunny ears,  square falling down a mountainside",13
-4045-c97cdcce-7538-408d-b8dd-5de0f2de8574,7,1,B,diamond on top with two triangles underneath with a small space between them,13
+4045-c97cdcce-7538-408d-b8dd-5de0f2de8574,7,1,B,"diamond on top with two triangles underneath with a small space between them, i don't think so",17
 4045-c97cdcce-7538-408d-b8dd-5de0f2de8574,8,1,L,person going down to kneel,5
 4045-c97cdcce-7538-408d-b8dd-5de0f2de8574,9,1,F,"person sitting on the ground looking down, knees bent up",10
 4045-c97cdcce-7538-408d-b8dd-5de0f2de8574,10,1,C,person putting hands up like they don't know the answer,10
@@ -1920,7 +1950,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 4090-bf4b8726-1596-4231-84d9-718a2a37eee3,11,1,I,"i will call him karate guy, he is kicking, kicking to the right, hands to the left, standing on one foot",21
 4090-bf4b8726-1596-4231-84d9-718a2a37eee3,12,1,B,"this is the other tai chi guy, on knees but legs together, arms out, sort of the two arms are like triangles, and he is kneeling",26
 4090-bf4b8726-1596-4231-84d9-718a2a37eee3,13,2,I,"karate guy! kicking right, on one leg",7
-4090-bf4b8726-1596-4231-84d9-718a2a37eee3,14,2,B,this is that angle tai chi guy,7
+4090-bf4b8726-1596-4231-84d9-718a2a37eee3,14,2,B,"this is that angle tai chi guy, angel",8
 4090-bf4b8726-1596-4231-84d9-718a2a37eee3,15,2,D,standing dude pointing to the left,6
 4090-bf4b8726-1596-4231-84d9-718a2a37eee3,16,2,J,"rectangle guy, pointing right",4
 4090-bf4b8726-1596-4231-84d9-718a2a37eee3,17,2,E,sad bunny,2
@@ -1935,7 +1965,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 4090-bf4b8726-1596-4231-84d9-718a2a37eee3,26,3,B,"tai chi guy with legs together and arms like angel, kneeling",11
 4090-bf4b8726-1596-4231-84d9-718a2a37eee3,27,3,D,standing guy pointing left,4
 4090-bf4b8726-1596-4231-84d9-718a2a37eee3,28,3,G,tai guy guy pointing right legs open,7
-4090-bf4b8726-1596-4231-84d9-718a2a37eee3,29,3,I,"karate kick guy, standing on one leg",7
+4090-bf4b8726-1596-4231-84d9-718a2a37eee3,29,3,I,"karate kick guy, standing on one leg, right",8
 4090-bf4b8726-1596-4231-84d9-718a2a37eee3,30,3,H,diamond guy,2
 4090-bf4b8726-1596-4231-84d9-718a2a37eee3,31,3,F,sad guy,2
 4090-bf4b8726-1596-4231-84d9-718a2a37eee3,32,3,E,sad bunny,2
@@ -1996,6 +2026,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 4369-cd2d1d26-3bf9-4e54-a79a-2aacea53b331,15,2,K,"looks like a person kneeling, holding something out in front of them",12
 4369-cd2d1d26-3bf9-4e54-a79a-2aacea53b331,16,2,I,"looks like person standing on one leg with other behind, both arms out in front",15
 4369-cd2d1d26-3bf9-4e54-a79a-2aacea53b331,17,2,G,the one you just picked,5
+4369-cd2d1d26-3bf9-4e54-a79a-2aacea53b331,18,2,C,ghost,1
 4369-cd2d1d26-3bf9-4e54-a79a-2aacea53b331,19,2,B,person kneeling one arm front one arm back feet together,10
 4369-cd2d1d26-3bf9-4e54-a79a-2aacea53b331,20,2,F,person sitting legs in front of the arms not visible,10
 4369-cd2d1d26-3bf9-4e54-a79a-2aacea53b331,21,2,H,person sitting or kneeling no legs or arms visible,9
@@ -2010,6 +2041,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 4369-cd2d1d26-3bf9-4e54-a79a-2aacea53b331,30,3,F,sitting legs extended in front no arms no bow,9
 4369-cd2d1d26-3bf9-4e54-a79a-2aacea53b331,31,3,H,"sitting or kneeling, no arms no legs",7
 4369-cd2d1d26-3bf9-4e54-a79a-2aacea53b331,32,3,E,sitting bow on head,4
+4369-cd2d1d26-3bf9-4e54-a79a-2aacea53b331,33,3,C,ghost,1
 4369-cd2d1d26-3bf9-4e54-a79a-2aacea53b331,34,3,J,"standing feet and hands to front, hands level with shoulders",10
 4369-cd2d1d26-3bf9-4e54-a79a-2aacea53b331,35,3,G,"kneeling looking behind,arms in front, one near head",8
 4369-cd2d1d26-3bf9-4e54-a79a-2aacea53b331,36,3,K,kneeling holding something in front,5
@@ -2022,6 +2054,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 4369-cd2d1d26-3bf9-4e54-a79a-2aacea53b331,43,4,F,sitting legs extended in front no arms no bow,9
 4369-cd2d1d26-3bf9-4e54-a79a-2aacea53b331,44,4,D,standing holding something in front,5
 4369-cd2d1d26-3bf9-4e54-a79a-2aacea53b331,45,4,L,kneeling holding something in front,5
+4369-cd2d1d26-3bf9-4e54-a79a-2aacea53b331,46,4,C,ghost,1
 4369-cd2d1d26-3bf9-4e54-a79a-2aacea53b331,47,4,H,"sitting or kneeling, no arms or legs",7
 4369-cd2d1d26-3bf9-4e54-a79a-2aacea53b331,48,4,J,the one you just picked,5
 4369-cd2d1d26-3bf9-4e54-a79a-2aacea53b331,49,5,A,"long pointy face looking at one raised foot, square on back",11
@@ -2035,6 +2068,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 4369-cd2d1d26-3bf9-4e54-a79a-2aacea53b331,57,5,K,kneeling holding something in front,5
 4369-cd2d1d26-3bf9-4e54-a79a-2aacea53b331,58,5,G,kneeling looking behind both arms in front one near head,10
 4369-cd2d1d26-3bf9-4e54-a79a-2aacea53b331,59,5,E,bow on head,3
+4369-cd2d1d26-3bf9-4e54-a79a-2aacea53b331,60,5,C,ghost,1
 4369-cd2d1d26-3bf9-4e54-a79a-2aacea53b331,61,6,I,standing on one foot one leg behind both arms raised in front,12
 4369-cd2d1d26-3bf9-4e54-a79a-2aacea53b331,62,6,A,long pointy face looking down at raised foot square on back,11
 4369-cd2d1d26-3bf9-4e54-a79a-2aacea53b331,63,6,E,bow on head,3
@@ -2044,6 +2078,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 4369-cd2d1d26-3bf9-4e54-a79a-2aacea53b331,67,6,J,standing arms in front at shoulder height,7
 4369-cd2d1d26-3bf9-4e54-a79a-2aacea53b331,68,6,G,"kneeling, looking behind, both arms in front",7
 4369-cd2d1d26-3bf9-4e54-a79a-2aacea53b331,69,6,D,standing holding something in front,5
+4369-cd2d1d26-3bf9-4e54-a79a-2aacea53b331,70,6,C,ghost,1
 4369-cd2d1d26-3bf9-4e54-a79a-2aacea53b331,71,6,B,kneeling one arm in front one in back front arm perfect triangle,12
 4369-cd2d1d26-3bf9-4e54-a79a-2aacea53b331,72,6,K,kneeling holding something in front,5
 4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,1,1,D,"standing, hands left",3
@@ -2120,7 +2155,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 4505-8cf1d946-db8a-413a-93bd-97bb5ba3fda6,72,6,E,back left,2
 4513-c541e940-73fd-46b6-b19c-221458a22970,1,1,I,looks like they are figure skating with a leg up in the air,13
 4513-c541e940-73fd-46b6-b19c-221458a22970,2,1,H,"no arms or legs, just body and head",8
-4513-c541e940-73fd-46b6-b19c-221458a22970,3,1,D,"person standing straight up & holding out hand like gonna be given something, no bending knees",16
+4513-c541e940-73fd-46b6-b19c-221458a22970,3,1,D,"wow, we're good at this, person standing straight up & holding out hand like gonna be given something, no bending knees",21
 4513-c541e940-73fd-46b6-b19c-221458a22970,4,1,B,"person is kneeling, looks like they're vomiting a triangle, have triangle sticking out of back",15
 4513-c541e940-73fd-46b6-b19c-221458a22970,5,1,L,triangle boobs & kinda kneeling (back is straight line,9
 4513-c541e940-73fd-46b6-b19c-221458a22970,6,1,E,bunny ears slouching looking down,5
@@ -2195,7 +2230,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 4676-a65ba686-b220-4f71-91d6-0fbf1138e726,3,1,A,"head thrown back, one leg lifted facing left",8
 4676-a65ba686-b220-4f71-91d6-0fbf1138e726,4,1,H,"flat back, kneeling, facing right",5
 4676-a65ba686-b220-4f71-91d6-0fbf1138e726,5,1,F,"sitting, legs out facing right, left",6
-4676-a65ba686-b220-4f71-91d6-0fbf1138e726,6,1,K,"kneeling, facing with with plate, pointed back",7
+4676-a65ba686-b220-4f71-91d6-0fbf1138e726,6,1,K,"kneeling, facing with with plate, pointed back, right",8
 4676-a65ba686-b220-4f71-91d6-0fbf1138e726,7,1,C,"falling backwards towards left, arms up, falling towards left, both up",11
 4676-a65ba686-b220-4f71-91d6-0fbf1138e726,8,1,E,"sitting, facing right, big bow on head",7
 4676-a65ba686-b220-4f71-91d6-0fbf1138e726,9,1,I,"facing left, standing on one leg, arms out left, one leg up pointing right",14
@@ -2359,7 +2394,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 4803-a27d2cc6-e504-4f67-8216-22679d81b1a6,23,2,B,arms out in both directions,5
 4803-a27d2cc6-e504-4f67-8216-22679d81b1a6,24,2,E,"weird figure that doesn't look like a person, hmm, its a big right triangle on the bottom, and, a square on top of that, with 2 smaller triangles on top of that",32
 4803-a27d2cc6-e504-4f67-8216-22679d81b1a6,25,3,K,kneeling down holding something,4
-4803-a27d2cc6-e504-4f67-8216-22679d81b1a6,26,3,J,fat body short arm,4
+4803-a27d2cc6-e504-4f67-8216-22679d81b1a6,26,3,J,"no problem, fat body short arm",6
 4803-a27d2cc6-e504-4f67-8216-22679d81b1a6,27,3,H,sitting vertical no arms,4
 4803-a27d2cc6-e504-4f67-8216-22679d81b1a6,28,3,G,"dancing, slanted rectangle",3
 4803-a27d2cc6-e504-4f67-8216-22679d81b1a6,29,3,E,weird figure not human,4
@@ -2433,7 +2468,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 4824-58d5c545-a718-4653-89db-4be922da59d7,25,3,E,2 triangles on head wrapped in blanket,7
 4824-58d5c545-a718-4653-89db-4be922da59d7,26,3,L,"bent knees, standing",3
 4824-58d5c545-a718-4653-89db-4be922da59d7,27,3,H,floating grad,2
-4824-58d5c545-a718-4653-89db-4be922da59d7,28,3,G,big steps,2
+4824-58d5c545-a718-4653-89db-4be922da59d7,28,3,G,"big steps, yes",3
 4824-58d5c545-a718-4653-89db-4be922da59d7,29,3,I,bird with diamond,3
 4824-58d5c545-a718-4653-89db-4be922da59d7,30,3,F,"leaning on wall feet to the left, head bowed",9
 4824-58d5c545-a718-4653-89db-4be922da59d7,31,3,K,"i forgot, we just need to agree on the bird, kneeling , tall one",14
@@ -2538,6 +2573,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 4843-98b6ce35-ee60-474f-8281-9a944213f01e,58,5,L,"upright, knees partly bent, back to your left",8
 4843-98b6ce35-ee60-474f-8281-9a944213f01e,59,5,J,left side of body is a square,7
 4843-98b6ce35-ee60-474f-8281-9a944213f01e,60,5,F,sitting with back to your right legs in front,9
+4843-98b6ce35-ee60-474f-8281-9a944213f01e,61,6,F,same,1
 4843-98b6ce35-ee60-474f-8281-9a944213f01e,62,6,B,arms like airplane wings,4
 4843-98b6ce35-ee60-474f-8281-9a944213f01e,63,6,I,ice skater,2
 4843-98b6ce35-ee60-474f-8281-9a944213f01e,64,6,E,rabbit ears,2
@@ -2610,6 +2646,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 4853-e6b0e457-f035-428e-be9a-9191a3a4a222,59,5,E,bunny,1
 4853-e6b0e457-f035-428e-be9a-9191a3a4a222,60,5,H,torso,1
 4853-e6b0e457-f035-428e-be9a-9191a3a4a222,61,6,J,diamond cliff,2
+4853-e6b0e457-f035-428e-be9a-9191a3a4a222,62,6,I,one leg,2
 4853-e6b0e457-f035-428e-be9a-9191a3a4a222,63,6,B,baby arms spread,3
 4853-e6b0e457-f035-428e-be9a-9191a3a4a222,64,6,C,arms spread no legs,4
 4853-e6b0e457-f035-428e-be9a-9191a3a4a222,65,6,D,priest,1
@@ -2633,25 +2670,26 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 5032-f97819b4-cbef-4293-9d27-81134172edac,11,1,D,person holding bowl standing,4
 5032-f97819b4-cbef-4293-9d27-81134172edac,12,1,K,"diamond top middle,  facing right,  maybe kneeling ",8
 5032-f97819b4-cbef-4293-9d27-81134172edac,13,2,I,figure skater,2
-5032-f97819b4-cbef-4293-9d27-81134172edac,14,2,B,"square on top, triangle pointing at it like a pony tail",11
+5032-f97819b4-cbef-4293-9d27-81134172edac,14,2,B,"some of these suck, square on top, triangle pointing at it like a pony tail",15
 5032-f97819b4-cbef-4293-9d27-81134172edac,15,2,A,walking to left,3
 5032-f97819b4-cbef-4293-9d27-81134172edac,16,2,G,"i don't know what this one is,  lets say a seal balancing a square",14
 5032-f97819b4-cbef-4293-9d27-81134172edac,17,2,F,man sitting,2
 5032-f97819b4-cbef-4293-9d27-81134172edac,18,2,D,holding bowl,2
-5032-f97819b4-cbef-4293-9d27-81134172edac,19,2,C,arms up (ghost,3
+5032-f97819b4-cbef-4293-9d27-81134172edac,19,2,C,"lets trade roles, arms up (ghost",6
 5032-f97819b4-cbef-4293-9d27-81134172edac,20,2,J,candle,1
 5032-f97819b4-cbef-4293-9d27-81134172edac,21,2,E,bunny,1
 5032-f97819b4-cbef-4293-9d27-81134172edac,22,2,K,"we've got the candle and bunny down, (lady kneeling),  thats the new name for this one,  facing right,  heels up,  not the one that is partially bending down, maybe holding a bowl",32
 5032-f97819b4-cbef-4293-9d27-81134172edac,23,2,H,"(rounded bottom) everything together,  similar to candle",7
 5032-f97819b4-cbef-4293-9d27-81134172edac,24,2,L,(squatting) like the kneeling just a little higher,8
 5032-f97819b4-cbef-4293-9d27-81134172edac,25,3,E,bunny,1
+5032-f97819b4-cbef-4293-9d27-81134172edac,26,3,C,ghost,1
 5032-f97819b4-cbef-4293-9d27-81134172edac,27,3,L,ok here is the squatting one again,7
 5032-f97819b4-cbef-4293-9d27-81134172edac,28,3,I,figure skater,2
 5032-f97819b4-cbef-4293-9d27-81134172edac,29,3,K,kneeling,1
 5032-f97819b4-cbef-4293-9d27-81134172edac,30,3,A,squatting,1
 5032-f97819b4-cbef-4293-9d27-81134172edac,31,3,F,man laying/sitting,2
 5032-f97819b4-cbef-4293-9d27-81134172edac,32,3,B,little zombie with ponytail,4
-5032-f97819b4-cbef-4293-9d27-81134172edac,33,3,D,man carrying bowl facing left,5
+5032-f97819b4-cbef-4293-9d27-81134172edac,33,3,D,"we got it!!, man carrying bowl facing left",8
 5032-f97819b4-cbef-4293-9d27-81134172edac,34,3,G,weirdest looking one,3
 5032-f97819b4-cbef-4293-9d27-81134172edac,35,3,H,"this is the rounded bottom, but the last one looked like a chicken fell on its face",17
 5032-f97819b4-cbef-4293-9d27-81134172edac,36,3,J,candle,1
@@ -2664,6 +2702,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 5032-f97819b4-cbef-4293-9d27-81134172edac,43,4,G,"weird one (not walking one, chicken, chicken",7
 5032-f97819b4-cbef-4293-9d27-81134172edac,44,4,H,rounded bottom,2
 5032-f97819b4-cbef-4293-9d27-81134172edac,45,4,B,zombie,1
+5032-f97819b4-cbef-4293-9d27-81134172edac,46,4,C,ghost,1
 5032-f97819b4-cbef-4293-9d27-81134172edac,47,4,J,candle,1
 5032-f97819b4-cbef-4293-9d27-81134172edac,48,4,F,man sitting/laying,2
 5032-f97819b4-cbef-4293-9d27-81134172edac,49,5,H,"rounded bottom,   ok a penguin that slipped on ice",9
@@ -2672,7 +2711,8 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 5032-f97819b4-cbef-4293-9d27-81134172edac,52,5,B,zombie,1
 5032-f97819b4-cbef-4293-9d27-81134172edac,53,5,D,"standing, bowl, left",3
 5032-f97819b4-cbef-4293-9d27-81134172edac,54,5,I,figure skater,2
-5032-f97819b4-cbef-4293-9d27-81134172edac,56,5,A,walking left (box on back,5
+5032-f97819b4-cbef-4293-9d27-81134172edac,55,5,C,ghost,1
+5032-f97819b4-cbef-4293-9d27-81134172edac,56,5,A,"this game makes me realize how weird my brain is, walking left (box on back",15
 5032-f97819b4-cbef-4293-9d27-81134172edac,57,5,K,"kneeling, heels up",3
 5032-f97819b4-cbef-4293-9d27-81134172edac,58,5,E,bunny,1
 5032-f97819b4-cbef-4293-9d27-81134172edac,59,5,J,candle,1
@@ -2685,9 +2725,10 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 5032-f97819b4-cbef-4293-9d27-81134172edac,66,6,J,candle,1
 5032-f97819b4-cbef-4293-9d27-81134172edac,67,6,B,zombie,1
 5032-f97819b4-cbef-4293-9d27-81134172edac,68,6,E,bunny,1
+5032-f97819b4-cbef-4293-9d27-81134172edac,69,6,C,ghost,1
 5032-f97819b4-cbef-4293-9d27-81134172edac,70,6,K,"kneeling, lady",2
 5032-f97819b4-cbef-4293-9d27-81134172edac,71,6,I,figure skater,2
-5032-f97819b4-cbef-4293-9d27-81134172edac,72,6,A,walking left box on back,5
+5032-f97819b4-cbef-4293-9d27-81134172edac,72,6,A,"they should pay us twice so we can keep going, walking left box on back",15
 5100-ae37a906-ac5a-4cf2-b89a-aeb68b66e2b2,1,1,A,this character looks like they have a pack on their back while walking,13
 5100-ae37a906-ac5a-4cf2-b89a-aeb68b66e2b2,2,1,F,this character is seated and seems to be looking at the ground and mourning,14
 5100-ae37a906-ac5a-4cf2-b89a-aeb68b66e2b2,3,1,E,this character is wearing an indian headdress and is seated,10
@@ -2769,7 +2810,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 5108-ab2d0b72-034a-4f00-991a-416faf93c98c,7,1,A,"this one looks like it has two feet and one of them is being kicked to the left just slightly elevated,  looks like they are leaning forward a bit with a square on their back",35
 5108-ab2d0b72-034a-4f00-991a-416faf93c98c,8,1,F,"this looks like a person sitting on the ground with their legs in front of them to the left,  head tilted slightly forward like they are napping",27
 5108-ab2d0b72-034a-4f00-991a-416faf93c98c,9,1,H,"looks like a bean with a diamond on top, no legs or anything to make it look like a person, it doesn't really look like anything,  it's like an oval shape with a little bit that sticks out on the bottom right with a diamond above it, they could be sitting on their feet",54
-5108-ab2d0b72-034a-4f00-991a-416faf93c98c,10,1,C,this looks like someone leaned to the left with both arms in the air,14
+5108-ab2d0b72-034a-4f00-991a-416faf93c98c,10,1,C,"this looks like someone leaned to the left with both arms in the air, yes",15
 5108-ab2d0b72-034a-4f00-991a-416faf93c98c,11,1,B,"this is one we haven't had that also looks like someone kneeling, can see feet, arms in both directions head slightly to the right",24
 5108-ab2d0b72-034a-4f00-991a-416faf93c98c,12,1,K,this is the one you just picked that looks like someone kneeling with their head straight up,17
 5108-ab2d0b72-034a-4f00-991a-416faf93c98c,13,2,F,"this is the one that looks like they are sitting on the ground sleeping, head to the left can see feet, we've had it before",25
@@ -2780,6 +2821,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 5108-ab2d0b72-034a-4f00-991a-416faf93c98c,18,2,A,this is the weird one that looks like a person kicking one of their feet up to the left,19
 5108-ab2d0b72-034a-4f00-991a-416faf93c98c,19,2,H,the one that looks like a bean or a person sitting on their feet,14
 5108-ab2d0b72-034a-4f00-991a-416faf93c98c,20,2,B,this is the kneeling one where the head is tilted to the right and arms go in both directions,19
+5108-ab2d0b72-034a-4f00-991a-416faf93c98c,21,2,C,ghost,1
 5108-ab2d0b72-034a-4f00-991a-416faf93c98c,22,2,J,"the odd one that doesn't look like a person,  straight edge on left and top",15
 5108-ab2d0b72-034a-4f00-991a-416faf93c98c,23,2,E,the one that also looks like someone sitting on the ground napping but facing right and with big triangle bunny ears,21
 5108-ab2d0b72-034a-4f00-991a-416faf93c98c,24,2,L,this is the one that looks like they are about to kneel with knees bent to the right but not yet on the ground,24
@@ -2792,6 +2834,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 5108-ab2d0b72-034a-4f00-991a-416faf93c98c,31,3,J,straight left and top,4
 5108-ab2d0b72-034a-4f00-991a-416faf93c98c,32,3,G,dancing person,2
 5108-ab2d0b72-034a-4f00-991a-416faf93c98c,33,3,B,kneeling with arms in both directions and tilted head,9
+5108-ab2d0b72-034a-4f00-991a-416faf93c98c,34,3,C,ghost,1
 5108-ab2d0b72-034a-4f00-991a-416faf93c98c,35,3,D,professor,1
 5108-ab2d0b72-034a-4f00-991a-416faf93c98c,36,3,F,sitting on ground without rabbit ears,6
 5108-ab2d0b72-034a-4f00-991a-416faf93c98c,37,4,H,bean,1
@@ -2802,11 +2845,13 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 5108-ab2d0b72-034a-4f00-991a-416faf93c98c,42,4,E,rabbit ears,2
 5108-ab2d0b72-034a-4f00-991a-416faf93c98c,43,4,I,bird,1
 5108-ab2d0b72-034a-4f00-991a-416faf93c98c,44,4,F,sitting on ground facing left with no ears,8
+5108-ab2d0b72-034a-4f00-991a-416faf93c98c,45,4,C,ghost,1
 5108-ab2d0b72-034a-4f00-991a-416faf93c98c,46,4,D,professor,1
 5108-ab2d0b72-034a-4f00-991a-416faf93c98c,47,4,L,about to kneel,3
 5108-ab2d0b72-034a-4f00-991a-416faf93c98c,48,4,A,weird leg kicking to the left,6
 5108-ab2d0b72-034a-4f00-991a-416faf93c98c,49,5,E,rabbit ears,2
 5108-ab2d0b72-034a-4f00-991a-416faf93c98c,50,5,J,straight left and top,4
+5108-ab2d0b72-034a-4f00-991a-416faf93c98c,51,5,C,ghost,1
 5108-ab2d0b72-034a-4f00-991a-416faf93c98c,52,5,I,bird,1
 5108-ab2d0b72-034a-4f00-991a-416faf93c98c,53,5,K,kneeling straight up,3
 5108-ab2d0b72-034a-4f00-991a-416faf93c98c,54,5,A,weird one with leg kicking,5
@@ -2827,6 +2872,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 5108-ab2d0b72-034a-4f00-991a-416faf93c98c,69,6,H,bean,1
 5108-ab2d0b72-034a-4f00-991a-416faf93c98c,70,6,J,straight left and top,4
 5108-ab2d0b72-034a-4f00-991a-416faf93c98c,71,6,B,kneeling tilted head,3
+5108-ab2d0b72-034a-4f00-991a-416faf93c98c,72,6,C,ghost,1
 5154-e7f636b5-f787-4bef-be2b-83083fd48c28,1,1,F,looks like a man sitting down,6
 5154-e7f636b5-f787-4bef-be2b-83083fd48c28,2,1,C,a man flying,3
 5154-e7f636b5-f787-4bef-be2b-83083fd48c28,3,1,K,two diamond shapes above it stacked,6
@@ -2839,7 +2885,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 5154-e7f636b5-f787-4bef-be2b-83083fd48c28,10,1,H,"this one's hard because a lot of them look like they're sitting, looks like a man sitting staring forward",19
 5154-e7f636b5-f787-4bef-be2b-83083fd48c28,11,1,B,"a dog laying down looking up at its owner, big floppy ears",12
 5154-e7f636b5-f787-4bef-be2b-83083fd48c28,12,1,I,a man with two hands forward kicking his leg behind him,11
-5154-e7f636b5-f787-4bef-be2b-83083fd48c28,13,2,D,priest again,2
+5154-e7f636b5-f787-4bef-be2b-83083fd48c28,13,2,D,"priest again, yes",3
 5154-e7f636b5-f787-4bef-be2b-83083fd48c28,14,2,F,man sitting next to something looking down,7
 5154-e7f636b5-f787-4bef-be2b-83083fd48c28,15,2,L,bending at the knees,4
 5154-e7f636b5-f787-4bef-be2b-83083fd48c28,16,2,H,looking forward,2
@@ -2959,6 +3005,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 5192-8023d95b-29c5-49aa-a245-42924607dd4b,58,5,J,"square left, squiggly right",4
 5192-8023d95b-29c5-49aa-a245-42924607dd4b,59,5,E,rabbit,1
 5192-8023d95b-29c5-49aa-a245-42924607dd4b,60,5,B,diamond intersecting triangles,3
+5192-8023d95b-29c5-49aa-a245-42924607dd4b,61,6,B,same,1
 5192-8023d95b-29c5-49aa-a245-42924607dd4b,62,6,G,slug body,2
 5192-8023d95b-29c5-49aa-a245-42924607dd4b,63,6,K,christmas tree,2
 5192-8023d95b-29c5-49aa-a245-42924607dd4b,64,6,E,rabbit,1
@@ -2996,7 +3043,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,24,2,A,"leaning back one one foot, looking left, tall one",9
 5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,25,3,A,"one foot, looking left, tall, leaning back",7
 5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,26,3,I,"leaning forward to the the left, one foot, long, not tall",11
-5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,27,3,H,"no arms or legs, tall",5
+5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,27,3,H,"no arms or legs, sitting, right, tall",7
 5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,28,3,C,flat both arms out,4
 5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,29,3,K,"kneeling looking left, arm out, foot sticking up, sticking up",10
 5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,30,3,F,"sitting looking left, no arms, has legs",7
@@ -3128,7 +3175,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 5774-0e16513f-9938-4b1e-a647-86933d7ef911,12,1,K,"this is the kneeling one you chose before when i was talking about the other one, it's kneeling and like has it's feet in back and is holding something like a bowl again in front of her,it",37
 5774-0e16513f-9938-4b1e-a647-86933d7ef911,13,2,I,"this is the leg out guy again, standing on one",10
 5774-0e16513f-9938-4b1e-a647-86933d7ef911,14,2,G,"this is the head turned around one again, with hands out front",12
-5774-0e16513f-9938-4b1e-a647-86933d7ef911,15,2,K,"this is the same kneeling woman you just picked, i'll call her kneeling lady 2",15
+5774-0e16513f-9938-4b1e-a647-86933d7ef911,15,2,K,"this is the same kneeling woman you just picked, i'll call her kneeling lady 2, yeah",16
 5774-0e16513f-9938-4b1e-a647-86933d7ef911,16,2,D,this is the standing lady presenting a bowl facing to the left,12
 5774-0e16513f-9938-4b1e-a647-86933d7ef911,17,2,H,this is the no arms lady again,7
 5774-0e16513f-9938-4b1e-a647-86933d7ef911,18,2,A,the bird head guy again with the flag,8
@@ -3142,6 +3189,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 5774-0e16513f-9938-4b1e-a647-86933d7ef911,26,3,A,"bird head, with flag",4
 5774-0e16513f-9938-4b1e-a647-86933d7ef911,27,3,L,lady kneeling with no feet out back - lady kneeling one,11
 5774-0e16513f-9938-4b1e-a647-86933d7ef911,28,3,D,"lady standing with bowl, facing left",6
+5774-0e16513f-9938-4b1e-a647-86933d7ef911,29,3,C,angel,1
 5774-0e16513f-9938-4b1e-a647-86933d7ef911,30,3,I,"leg out guy,in back",4
 5774-0e16513f-9938-4b1e-a647-86933d7ef911,31,3,G,head turned guy with hands out,6
 5774-0e16513f-9938-4b1e-a647-86933d7ef911,32,3,B,lady with triangle in back,5
@@ -3159,6 +3207,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 5774-0e16513f-9938-4b1e-a647-86933d7ef911,44,4,J,mantle piece,2
 5774-0e16513f-9938-4b1e-a647-86933d7ef911,45,4,G,head turned guy with hands out front,7
 5774-0e16513f-9938-4b1e-a647-86933d7ef911,46,4,L,"kneeling lady one, no feet",5
+5774-0e16513f-9938-4b1e-a647-86933d7ef911,47,4,C,angel,1
 5774-0e16513f-9938-4b1e-a647-86933d7ef911,48,4,B,"triangle in back of head lady with hands out front, sort of on ground",14
 5774-0e16513f-9938-4b1e-a647-86933d7ef911,49,5,D,"super,lady standing with bowl",4
 5774-0e16513f-9938-4b1e-a647-86933d7ef911,50,5,F,"guy sitting, leaning on wall",5
@@ -3169,6 +3218,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 5774-0e16513f-9938-4b1e-a647-86933d7ef911,55,5,L,"lady kneeling one, no feet",5
 5774-0e16513f-9938-4b1e-a647-86933d7ef911,56,5,B,triangle in the back of the head girl,8
 5774-0e16513f-9938-4b1e-a647-86933d7ef911,57,5,J,mantle,1
+5774-0e16513f-9938-4b1e-a647-86933d7ef911,58,5,C,angel,1
 5774-0e16513f-9938-4b1e-a647-86933d7ef911,59,5,A,bird head,2
 5774-0e16513f-9938-4b1e-a647-86933d7ef911,60,5,I,leg out guy,3
 5774-0e16513f-9938-4b1e-a647-86933d7ef911,61,6,G,head turned,2
@@ -3178,6 +3228,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 5774-0e16513f-9938-4b1e-a647-86933d7ef911,65,6,D,lady standing withbowl,3
 5774-0e16513f-9938-4b1e-a647-86933d7ef911,66,6,B,triangle in back of head,5
 5774-0e16513f-9938-4b1e-a647-86933d7ef911,67,6,A,bird head,2
+5774-0e16513f-9938-4b1e-a647-86933d7ef911,68,6,C,angel,1
 5774-0e16513f-9938-4b1e-a647-86933d7ef911,69,6,I,leg in back,3
 5774-0e16513f-9938-4b1e-a647-86933d7ef911,70,6,H,no arms,2
 5774-0e16513f-9938-4b1e-a647-86933d7ef911,71,6,F,sitting leaning against the wall,5
@@ -3236,7 +3287,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 5792-f5aa5cf6-b3d0-4444-8442-4ef42e3b7c08,52,5,E,funny hat,2
 5792-f5aa5cf6-b3d0-4444-8442-4ef42e3b7c08,53,5,D,hands out as if offering something,6
 5792-f5aa5cf6-b3d0-4444-8442-4ef42e3b7c08,54,5,F,knees up feet pointed up sitting back head forward,9
-5792-f5aa5cf6-b3d0-4444-8442-4ef42e3b7c08,55,5,I,"foot stretched out in the back two arms out in front diamond head, one foot on ground",17
+5792-f5aa5cf6-b3d0-4444-8442-4ef42e3b7c08,55,5,I,"foot outstretched in the back two arms out in front diamond head, one foot on ground",16
 5792-f5aa5cf6-b3d0-4444-8442-4ef42e3b7c08,56,5,C,arms out stretched,3
 5792-f5aa5cf6-b3d0-4444-8442-4ef42e3b7c08,57,5,L,"knees bent two arms together in the front forming triangle, no feet shown",13
 5792-f5aa5cf6-b3d0-4444-8442-4ef42e3b7c08,58,5,K,"on knees feet up in back forming triangle hands in front, diamond head",13
@@ -3270,6 +3321,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 5851-2c495782-8cef-496e-abba-1730655488cb,14,2,D,"standing in robes, one arm out, priest",7
 5851-2c495782-8cef-496e-abba-1730655488cb,15,2,H,standing no arms,3
 5851-2c495782-8cef-496e-abba-1730655488cb,16,2,I,ice skating,2
+5851-2c495782-8cef-496e-abba-1730655488cb,17,2,B,angel,1
 5851-2c495782-8cef-496e-abba-1730655488cb,18,2,C,ghost with arms out,4
 5851-2c495782-8cef-496e-abba-1730655488cb,19,2,K,"kneeling, small hand out",4
 5851-2c495782-8cef-496e-abba-1730655488cb,20,2,G,"zombie, dragging big leg",4
@@ -3278,8 +3330,10 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 5851-2c495782-8cef-496e-abba-1730655488cb,23,2,J,"standing, small hand out",4
 5851-2c495782-8cef-496e-abba-1730655488cb,24,2,A,"zombie, arms dangling, kicking",4
 5851-2c495782-8cef-496e-abba-1730655488cb,25,3,D,priest,1
+5851-2c495782-8cef-496e-abba-1730655488cb,26,3,B,angel,1
 5851-2c495782-8cef-496e-abba-1730655488cb,27,3,G,"zombie, dragging leg",3
 5851-2c495782-8cef-496e-abba-1730655488cb,28,3,I,ice skating,2
+5851-2c495782-8cef-496e-abba-1730655488cb,29,3,C,ghost,1
 5851-2c495782-8cef-496e-abba-1730655488cb,30,3,J,"standing, small hand",3
 5851-2c495782-8cef-496e-abba-1730655488cb,31,3,A,"zombie, arms dangling up",4
 5851-2c495782-8cef-496e-abba-1730655488cb,32,3,H,"standing, no arms",3
@@ -3290,7 +3344,9 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 5851-2c495782-8cef-496e-abba-1730655488cb,37,4,H,"standing, no arms",3
 5851-2c495782-8cef-496e-abba-1730655488cb,38,4,D,priest,1
 5851-2c495782-8cef-496e-abba-1730655488cb,39,4,I,ice skating,2
+5851-2c495782-8cef-496e-abba-1730655488cb,40,4,C,ghost,1
 5851-2c495782-8cef-496e-abba-1730655488cb,41,4,E,bunny,1
+5851-2c495782-8cef-496e-abba-1730655488cb,42,4,B,angel,1
 5851-2c495782-8cef-496e-abba-1730655488cb,43,4,L,"standing, knees bent",3
 5851-2c495782-8cef-496e-abba-1730655488cb,44,4,F,"sitting, looking down",3
 5851-2c495782-8cef-496e-abba-1730655488cb,45,4,K,"kneeling, hand out, calling that one praying",7
@@ -3302,8 +3358,10 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 5851-2c495782-8cef-496e-abba-1730655488cb,51,5,J,"standing, small hand",3
 5851-2c495782-8cef-496e-abba-1730655488cb,52,5,A,"zombie, arms dangling",3
 5851-2c495782-8cef-496e-abba-1730655488cb,53,5,H,"standing, no arms",3
+5851-2c495782-8cef-496e-abba-1730655488cb,54,5,C,ghost,1
 5851-2c495782-8cef-496e-abba-1730655488cb,55,5,L,"standing, knees bent",3
 5851-2c495782-8cef-496e-abba-1730655488cb,56,5,G,"zombie, leg dragging",3
+5851-2c495782-8cef-496e-abba-1730655488cb,57,5,B,angel,1
 5851-2c495782-8cef-496e-abba-1730655488cb,58,5,E,bunny,1
 5851-2c495782-8cef-496e-abba-1730655488cb,59,5,F,sitting looking down,3
 5851-2c495782-8cef-496e-abba-1730655488cb,60,5,I,ice skating,2
@@ -3313,9 +3371,11 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 5851-2c495782-8cef-496e-abba-1730655488cb,64,6,F,sitting looking down,3
 5851-2c495782-8cef-496e-abba-1730655488cb,65,6,I,skating,1
 5851-2c495782-8cef-496e-abba-1730655488cb,66,6,A,zombie arms dangling,3
+5851-2c495782-8cef-496e-abba-1730655488cb,67,6,B,angel,1
 5851-2c495782-8cef-496e-abba-1730655488cb,68,6,G,"zombie, leg drag",3
 5851-2c495782-8cef-496e-abba-1730655488cb,69,6,H,standing no arms,3
 5851-2c495782-8cef-496e-abba-1730655488cb,70,6,K,praying,1
+5851-2c495782-8cef-496e-abba-1730655488cb,71,6,C,ghost,1
 5851-2c495782-8cef-496e-abba-1730655488cb,72,6,J,"standing, small arm out",4
 5964-47d6642b-ed6a-4458-8592-8919b41eda6e,1,1,E,it looks like a sitting down bunny kinda facing right,10
 5964-47d6642b-ed6a-4458-8592-8919b41eda6e,2,1,L,"it looks like someone crouching down, not all the way though, just part way",14
@@ -3369,7 +3429,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 5964-47d6642b-ed6a-4458-8592-8919b41eda6e,50,5,I,ice skater,2
 5964-47d6642b-ed6a-4458-8592-8919b41eda6e,51,5,J,big block with head,4
 5964-47d6642b-ed6a-4458-8592-8919b41eda6e,52,5,A,dinosaur,1
-5964-47d6642b-ed6a-4458-8592-8919b41eda6e,53,5,G,weird forehead growth,3
+5964-47d6642b-ed6a-4458-8592-8919b41eda6e,53,5,G,"weird forehead growth, sitting",4
 5964-47d6642b-ed6a-4458-8592-8919b41eda6e,54,5,C,flyer,1
 5964-47d6642b-ed6a-4458-8592-8919b41eda6e,55,5,H,no limbs,2
 5964-47d6642b-ed6a-4458-8592-8919b41eda6e,56,5,B,"puking, kneeling",2
@@ -3392,16 +3452,16 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 6064-6e0d77e9-b8e8-4a65-97d2-320567c486cc,1,1,L,looks like a person pointing,5
 6064-6e0d77e9-b8e8-4a65-97d2-320567c486cc,2,1,H,"a person with no arms or legs, nothing is pointing they have a head with no arms or legs",19
 6064-6e0d77e9-b8e8-4a65-97d2-320567c486cc,3,1,D,they are pointing left,4
-6064-6e0d77e9-b8e8-4a65-97d2-320567c486cc,4,1,K,oddly shaped and pointing right,5
+6064-6e0d77e9-b8e8-4a65-97d2-320567c486cc,4,1,K,"oddly shaped and pointing right, yes",6
 6064-6e0d77e9-b8e8-4a65-97d2-320567c486cc,5,1,C,looks like the flying nun,5
 6064-6e0d77e9-b8e8-4a65-97d2-320567c486cc,6,1,E,looks like a bunny rabbit,5
 6064-6e0d77e9-b8e8-4a65-97d2-320567c486cc,7,1,J,they are pointing right with no legs really,8
 6064-6e0d77e9-b8e8-4a65-97d2-320567c486cc,8,1,B,looks like a mouse,4
 6064-6e0d77e9-b8e8-4a65-97d2-320567c486cc,9,1,G,"looks like they are stretching, like a ballet move",9
-6064-6e0d77e9-b8e8-4a65-97d2-320567c486cc,10,1,I,looks like they are lifting on leg in the air,10
-6064-6e0d77e9-b8e8-4a65-97d2-320567c486cc,11,1,F,sitting down,2
-6064-6e0d77e9-b8e8-4a65-97d2-320567c486cc,12,1,A,like they are carrying something on their back,8
-6064-6e0d77e9-b8e8-4a65-97d2-320567c486cc,13,2,F,sitting down with leg out,5
+6064-6e0d77e9-b8e8-4a65-97d2-320567c486cc,10,1,I,"looks like they are lifting on leg in the air, yes",11
+6064-6e0d77e9-b8e8-4a65-97d2-320567c486cc,11,1,F,"sitting down, yes",3
+6064-6e0d77e9-b8e8-4a65-97d2-320567c486cc,12,1,A,"like they are carrying something on their back, yes",9
+6064-6e0d77e9-b8e8-4a65-97d2-320567c486cc,13,2,F,"sitting down with leg out, yes",6
 6064-6e0d77e9-b8e8-4a65-97d2-320567c486cc,14,2,H,the one with no arms or legs,7
 6064-6e0d77e9-b8e8-4a65-97d2-320567c486cc,15,2,G,"the ballet move stretching one, like a pointing toe",9
 6064-6e0d77e9-b8e8-4a65-97d2-320567c486cc,16,2,A,"carrying on the back a square, square",7
@@ -3581,7 +3641,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 6335-f2ee42fb-60a5-4238-9bfc-e23b14160049,46,4,D,"robed person, pointing left",4
 6335-f2ee42fb-60a5-4238-9bfc-e23b14160049,47,4,G,"wide based bottom with awkward triangle on the right side, square looks like it's about to fall off on top to the left",23
 6335-f2ee42fb-60a5-4238-9bfc-e23b14160049,48,4,C,belly flop,2
-6335-f2ee42fb-60a5-4238-9bfc-e23b14160049,49,5,K,"the one with the two diamonds on top, one on top fo the other, there is a kind of wide base on the bottom, has two points to the right side, jesus this doesn't need to be 72 rounds",39
+6335-f2ee42fb-60a5-4238-9bfc-e23b14160049,49,5,K,"the one with the two diamonds on top, one on top fo the other, there is a kind of wide base on the bottom, has two points to the right side",31
 6335-f2ee42fb-60a5-4238-9bfc-e23b14160049,50,5,D,robed person pointing to the left,6
 6335-f2ee42fb-60a5-4238-9bfc-e23b14160049,51,5,B,"mouse looking one with square on top, triangle below the square hanging off to the right, wide based bottom, small is triangle on the bottom left side, i hate describing this one, it's kind of hard",36
 6335-f2ee42fb-60a5-4238-9bfc-e23b14160049,52,5,H,"diamond on top, kind of thick base below it, small protrusion on bottom right",14
@@ -3638,6 +3698,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 6402-3db6c45b-0b53-4906-b5cf-17517d013671,31,3,D,graduate,1
 6402-3db6c45b-0b53-4906-b5cf-17517d013671,32,3,G,sassy centaur,2
 6402-3db6c45b-0b53-4906-b5cf-17517d013671,33,3,H,blob man,2
+6402-3db6c45b-0b53-4906-b5cf-17517d013671,34,3,C,angel,1
 6402-3db6c45b-0b53-4906-b5cf-17517d013671,35,3,F,"this man looks depressed, sitting on floor with back to the right side of square, will call debbie downer in future",21
 6402-3db6c45b-0b53-4906-b5cf-17517d013671,36,3,E,mountain (triangle,2
 6402-3db6c45b-0b53-4906-b5cf-17517d013671,37,4,A,frankenstein,1
@@ -3650,6 +3711,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 6402-3db6c45b-0b53-4906-b5cf-17517d013671,44,4,F,debbie downer,2
 6402-3db6c45b-0b53-4906-b5cf-17517d013671,45,4,D,graduate,1
 6402-3db6c45b-0b53-4906-b5cf-17517d013671,46,4,K,prayer,1
+6402-3db6c45b-0b53-4906-b5cf-17517d013671,47,4,C,angel,1
 6402-3db6c45b-0b53-4906-b5cf-17517d013671,48,4,L,squatty,1
 6402-3db6c45b-0b53-4906-b5cf-17517d013671,49,5,I,ice skater,2
 6402-3db6c45b-0b53-4906-b5cf-17517d013671,50,5,E,native american,2
@@ -3660,6 +3722,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 6402-3db6c45b-0b53-4906-b5cf-17517d013671,55,5,F,debbie downer,2
 6402-3db6c45b-0b53-4906-b5cf-17517d013671,56,5,L,squatty,1
 6402-3db6c45b-0b53-4906-b5cf-17517d013671,57,5,H,blob,1
+6402-3db6c45b-0b53-4906-b5cf-17517d013671,58,5,C,angel,1
 6402-3db6c45b-0b53-4906-b5cf-17517d013671,59,5,G,centaur,1
 6402-3db6c45b-0b53-4906-b5cf-17517d013671,60,5,K,prayer,1
 6402-3db6c45b-0b53-4906-b5cf-17517d013671,61,6,H,blob,1
@@ -3672,13 +3735,14 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 6402-3db6c45b-0b53-4906-b5cf-17517d013671,68,6,L,squatty,1
 6402-3db6c45b-0b53-4906-b5cf-17517d013671,69,6,K,prayer,1
 6402-3db6c45b-0b53-4906-b5cf-17517d013671,70,6,D,graduate,1
+6402-3db6c45b-0b53-4906-b5cf-17517d013671,71,6,C,angel,1
 6402-3db6c45b-0b53-4906-b5cf-17517d013671,72,6,J,mountain,1
 6413-5ebde90e-fb15-4c9b-a6f9-0934ba1cc2a1,1,1,J,"it has only a right hand and right foot showing, left side is one flat line",16
 6413-5ebde90e-fb15-4c9b-a6f9-0934ba1cc2a1,2,1,A,this one looks like it's dancing to ska music,9
 6413-5ebde90e-fb15-4c9b-a6f9-0934ba1cc2a1,3,1,I,"head tilted to our right, this one is balancing on one foot",12
 6413-5ebde90e-fb15-4c9b-a6f9-0934ba1cc2a1,4,1,C,this one looks like a ghost,6
 6413-5ebde90e-fb15-4c9b-a6f9-0934ba1cc2a1,5,1,K,"this one is praying, with foot sticking up",8
-6413-5ebde90e-fb15-4c9b-a6f9-0934ba1cc2a1,6,1,F,this one is sitting down with its legs out,9
+6413-5ebde90e-fb15-4c9b-a6f9-0934ba1cc2a1,6,1,F,"this one is sitting down with its legs out, nope",10
 6413-5ebde90e-fb15-4c9b-a6f9-0934ba1cc2a1,7,1,L,this one is bending at the knees with its arm out,11
 6413-5ebde90e-fb15-4c9b-a6f9-0934ba1cc2a1,8,1,B,"this ones a little weird, sitting down, on knees, has triangle on face, only 1 triangle not 2",18
 6413-5ebde90e-fb15-4c9b-a6f9-0934ba1cc2a1,9,1,D,"this one is standing up, looks like it has some sorta cloak on and has one hand out pointed to our left",22
@@ -3687,6 +3751,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 6413-5ebde90e-fb15-4c9b-a6f9-0934ba1cc2a1,12,1,E,this looks like a bunny sitting on the ground,9
 6413-5ebde90e-fb15-4c9b-a6f9-0934ba1cc2a1,13,2,I,this one is kicking a leg backwards while standing on the other leg,13
 6413-5ebde90e-fb15-4c9b-a6f9-0934ba1cc2a1,14,2,A,ska dancer again,3
+6413-5ebde90e-fb15-4c9b-a6f9-0934ba1cc2a1,15,2,C,ghost,1
 6413-5ebde90e-fb15-4c9b-a6f9-0934ba1cc2a1,16,2,F,sitting guy with legs out,5
 6413-5ebde90e-fb15-4c9b-a6f9-0934ba1cc2a1,17,2,J,"only hand and foot on our right, flat left side",10
 6413-5ebde90e-fb15-4c9b-a6f9-0934ba1cc2a1,18,2,G,weird stretched out guy,4
@@ -3702,12 +3767,14 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 6413-5ebde90e-fb15-4c9b-a6f9-0934ba1cc2a1,28,3,F,sitting with legs out,4
 6413-5ebde90e-fb15-4c9b-a6f9-0934ba1cc2a1,29,3,H,no arms or legs,4
 6413-5ebde90e-fb15-4c9b-a6f9-0934ba1cc2a1,30,3,E,bunny,1
+6413-5ebde90e-fb15-4c9b-a6f9-0934ba1cc2a1,31,3,C,ghost,1
 6413-5ebde90e-fb15-4c9b-a6f9-0934ba1cc2a1,32,3,G,stretched out,2
 6413-5ebde90e-fb15-4c9b-a6f9-0934ba1cc2a1,33,3,J,flat side with right arms and foot,7
 6413-5ebde90e-fb15-4c9b-a6f9-0934ba1cc2a1,34,3,L,knees bent,2
 6413-5ebde90e-fb15-4c9b-a6f9-0934ba1cc2a1,35,3,I,kicking behind,2
 6413-5ebde90e-fb15-4c9b-a6f9-0934ba1cc2a1,36,3,B,on knees with triangle,4
 6413-5ebde90e-fb15-4c9b-a6f9-0934ba1cc2a1,37,4,J,flat side,2
+6413-5ebde90e-fb15-4c9b-a6f9-0934ba1cc2a1,38,4,C,ghost,1
 6413-5ebde90e-fb15-4c9b-a6f9-0934ba1cc2a1,39,4,I,kicking behind,2
 6413-5ebde90e-fb15-4c9b-a6f9-0934ba1cc2a1,40,4,G,stretched out,2
 6413-5ebde90e-fb15-4c9b-a6f9-0934ba1cc2a1,41,4,B,knees with triangle,3
@@ -3718,6 +3785,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 6413-5ebde90e-fb15-4c9b-a6f9-0934ba1cc2a1,46,4,K,on knees feet up,4
 6413-5ebde90e-fb15-4c9b-a6f9-0934ba1cc2a1,47,4,H,no arms or legs,4
 6413-5ebde90e-fb15-4c9b-a6f9-0934ba1cc2a1,48,4,A,ska,1
+6413-5ebde90e-fb15-4c9b-a6f9-0934ba1cc2a1,49,5,C,ghost,1
 6413-5ebde90e-fb15-4c9b-a6f9-0934ba1cc2a1,50,5,E,bunny,1
 6413-5ebde90e-fb15-4c9b-a6f9-0934ba1cc2a1,51,5,L,knees bent,2
 6413-5ebde90e-fb15-4c9b-a6f9-0934ba1cc2a1,52,5,B,on knees with triangle,4
@@ -3729,6 +3797,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 6413-5ebde90e-fb15-4c9b-a6f9-0934ba1cc2a1,58,5,J,flat side,2
 6413-5ebde90e-fb15-4c9b-a6f9-0934ba1cc2a1,59,5,D,cloak,1
 6413-5ebde90e-fb15-4c9b-a6f9-0934ba1cc2a1,60,5,G,stretched,1
+6413-5ebde90e-fb15-4c9b-a6f9-0934ba1cc2a1,61,6,C,ghost,1
 6413-5ebde90e-fb15-4c9b-a6f9-0934ba1cc2a1,62,6,I,kicking back,2
 6413-5ebde90e-fb15-4c9b-a6f9-0934ba1cc2a1,63,6,B,knees with triangle,3
 6413-5ebde90e-fb15-4c9b-a6f9-0934ba1cc2a1,64,6,A,ska,1
@@ -3794,6 +3863,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,52,5,I,"facing left, leg in air, looks like it is flying",10
 6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,53,5,F,"facing left, sitting down, knees bent",6
 6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,54,5,J,"facing forward, left side of body is straight, two triangles on right side of body",15
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,55,5,C,ghost,1
 6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,56,5,L,"facing right, almost kneeling, no triangle in its back",9
 6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,57,5,B,girl with pony tail,4
 6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,58,5,E,bunny rabbit,2
@@ -3810,6 +3880,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,69,6,F,"facing left, sitting down, knees bent",6
 6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,70,6,B,girl with pony tail,4
 6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,71,6,I,"facing left, leg in air, looks like it is flying",10
+6488-1c981017-2f98-48e2-88b2-b8a814c93bc1,72,6,C,ghost,1
 6956-00137ff0-3569-4135-81ab-8c0453a2f6ce,1,1,G,the object looks like someone doing a side lunge with left elbow up and right hand across body to the floor,21
 6956-00137ff0-3569-4135-81ab-8c0453a2f6ce,2,1,B,person looks like they are kneeling with head looking down not up,12
 6956-00137ff0-3569-4135-81ab-8c0453a2f6ce,3,1,H,image looks like it doesn't have feet and they are covered,11
@@ -3906,7 +3977,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,22,2,D,standing preacher,2
 7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,23,2,B,"do not think we had this one, square head with diamond on right side",14
 7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,24,2,H,"similar to kid, no pointy chest",6
-7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,25,3,J,kid,1
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,25,3,J,"kid, yes",2
 7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,26,3,C,ghost man,2
 7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,27,3,B,"square triangle on side, like last time",7
 7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,28,3,D,standing preacher,2
@@ -3915,7 +3986,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,31,3,H,kid with not pointy chest,5
 7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,32,3,I,dancing man,2
 7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,33,3,F,"hump man, on ground",4
-7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,34,3,L,bending preacher,2
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,34,3,L,"bending preacher, ok",3
 7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,35,3,K,kneeling preacher,2
 7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,36,3,A,hazmat,1
 7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,37,4,I,dancing man,2
@@ -3925,6 +3996,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,41,4,D,standing preacher,2
 7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,42,4,G,dancing lady,2
 7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,43,4,A,hazmat,1
+7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,44,4,C,ghost,1
 7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,45,4,B,square triangle on side forgot that one,7
 7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,46,4,J,kid pointy chest,3
 7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,47,4,E,bunny ears,2
@@ -3955,8 +4027,8 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 7026-d36b3d5a-1ba3-403c-bcbd-31d0d1a0aa6b,72,6,A,hazmat,1
 7171-cf9d40d1-2a66-4c80-8db6-58ac192916f2,1,1,C,"person looks like they are laying on the ground with arms outstretched, like a snow angel",16
 7171-cf9d40d1-2a66-4c80-8db6-58ac192916f2,2,1,E,"only box that does not have a square directly on top, it is 2 triangles than the square, large square on bottom",22
-7171-cf9d40d1-2a66-4c80-8db6-58ac192916f2,3,1,H,"square on top, bottom looks like a large blob, right side pointing right, sorry hard, bottom part has 8 sides, only 2 parts",23
-7171-cf9d40d1-2a66-4c80-8db6-58ac192916f2,4,1,K,"square on top shaped like diamond, bottom whole piece with a cutout on the left like a square fits in, right side looks like a mouth opened or a 1/2 diamond shape could fit in it, top part looks like 2 squares attached",43
+7171-cf9d40d1-2a66-4c80-8db6-58ac192916f2,3,1,H,"square on top, bottom looks like a large blob, right side pointing right, sorry hard, bottom part has 8 sides, only 2 parts, no",24
+7171-cf9d40d1-2a66-4c80-8db6-58ac192916f2,4,1,K,"square on top shaped like diamond, bottom whole piece with a cutout on the left like a square fits in, right side looks like a mouth opened or a 1/2 diamond shape could fit in it, no, top part looks like 2 squares attached",44
 7171-cf9d40d1-2a66-4c80-8db6-58ac192916f2,5,1,B,"square with a triangle on the right side attached, also looks like there is a triangle on the bottom left hand corner",22
 7171-cf9d40d1-2a66-4c80-8db6-58ac192916f2,6,1,A,looks like a person kicking there foot with a square that is on it's back,15
 7171-cf9d40d1-2a66-4c80-8db6-58ac192916f2,7,1,D,"looks like a person standing and holding something, square diamond shaped head, and the shape looks like a square with a plate on top",24
@@ -4069,11 +4141,13 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,42,4,E,rabbit ears,2
 7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,43,4,A,pitcher,1
 7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,44,4,F,hobo,1
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,45,4,C,ghost,1
 7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,46,4,J,toddler facing right,3
 7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,47,4,L,'>' legs,2
 7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,48,4,B,triangle stab,2
 7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,49,5,E,rabbit ears,2
 7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,50,5,L,'>' legs,2
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,51,5,C,ghost,1
 7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,52,5,A,pitcher,1
 7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,53,5,I,skater,1
 7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,54,5,F,hobo,1
@@ -4093,21 +4167,22 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,68,6,K,kneeling monk right,3
 7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,69,6,L,'>' legs,2
 7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,70,6,F,hobo,1
+7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,71,6,C,ghost,1
 7194-9e2d0432-1fda-4f7d-8faa-908b7f14cb8d,72,6,H,baby,1
-7229-0a7402b0-329e-4b26-bc3a-ae26a388a6cc,1,1,G,"looks like a horse on its side, has a square at the top",13
+7229-0a7402b0-329e-4b26-bc3a-ae26a388a6cc,1,1,G,"looks like a horse on its side, has a square at the top, top",14
 7229-0a7402b0-329e-4b26-bc3a-ae26a388a6cc,2,1,F,liike like a man sitting down,6
 7229-0a7402b0-329e-4b26-bc3a-ae26a388a6cc,3,1,C,looks like the mans hands are in the air,9
 7229-0a7402b0-329e-4b26-bc3a-ae26a388a6cc,4,1,K,"sideways square head ,am on his knees looking to the right praying",12
 7229-0a7402b0-329e-4b26-bc3a-ae26a388a6cc,5,1,H,"this one has less shapes suare head long body a little bump on the right side, sideways square head, almost looks like its facing the right on his knees but turned towards us",33
 7229-0a7402b0-329e-4b26-bc3a-ae26a388a6cc,6,1,B,"facing the right looks like it has wings on its knees with its feet hanging out back to the left, no it looks more like a lowercase i but with pointed sides, and some siwed thing on the bottom left",40
 7229-0a7402b0-329e-4b26-bc3a-ae26a388a6cc,7,1,I,karate master looke like he is standing on one leg leaning to the left,14
-7229-0a7402b0-329e-4b26-bc3a-ae26a388a6cc,8,1,L,praying man again,3
-7229-0a7402b0-329e-4b26-bc3a-ae26a388a6cc,9,1,D,"this one is facing the left, looks like a butler holding a tray, or a box",16
+7229-0a7402b0-329e-4b26-bc3a-ae26a388a6cc,8,1,L,"g, winged thing is good, praying man again",8
+7229-0a7402b0-329e-4b26-bc3a-ae26a388a6cc,9,1,D,"right, this one is facing the left, looks like a butler holding a tray, or a box",17
 7229-0a7402b0-329e-4b26-bc3a-ae26a388a6cc,10,1,E,looks like a man with bunny ears sitting on the left facing right,13
 7229-0a7402b0-329e-4b26-bc3a-ae26a388a6cc,11,1,A,this one looks like a man walking with his head facing the left maybe with some wind up thing in his back,22
 7229-0a7402b0-329e-4b26-bc3a-ae26a388a6cc,12,1,J,"the lowercase i you picked the first time, the one you picked instead of the winged one, it looks more like a i than the winged one",27
 7229-0a7402b0-329e-4b26-bc3a-ae26a388a6cc,13,2,K,praying man with his feet up i think this one was the s praying man,15
-7229-0a7402b0-329e-4b26-bc3a-ae26a388a6cc,14,2,G,i think i described this as a horse,8
+7229-0a7402b0-329e-4b26-bc3a-ae26a388a6cc,14,2,G,"ok, i think i described this as a horse",9
 7229-0a7402b0-329e-4b26-bc3a-ae26a388a6cc,15,2,A,wind up guy,3
 7229-0a7402b0-329e-4b26-bc3a-ae26a388a6cc,16,2,I,karate master,2
 7229-0a7402b0-329e-4b26-bc3a-ae26a388a6cc,17,2,H,"this one is a praying man, kneeling man, it was the one facing us",14
@@ -4115,7 +4190,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 7229-0a7402b0-329e-4b26-bc3a-ae26a388a6cc,19,2,E,bunny ears,2
 7229-0a7402b0-329e-4b26-bc3a-ae26a388a6cc,20,2,D,the butler,2
 7229-0a7402b0-329e-4b26-bc3a-ae26a388a6cc,21,2,F,this one looks like a chill dude too,8
-7229-0a7402b0-329e-4b26-bc3a-ae26a388a6cc,22,2,J,this one is the letter i,6
+7229-0a7402b0-329e-4b26-bc3a-ae26a388a6cc,22,2,J,"its all good, this one is the letter i",9
 7229-0a7402b0-329e-4b26-bc3a-ae26a388a6cc,23,2,C,hands in the air dude,5
 7229-0a7402b0-329e-4b26-bc3a-ae26a388a6cc,24,2,L,"praying 1,0, feet down",4
 7229-0a7402b0-329e-4b26-bc3a-ae26a388a6cc,26,3,J,letter i again,3
@@ -4124,12 +4199,12 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 7229-0a7402b0-329e-4b26-bc3a-ae26a388a6cc,29,3,H,the chill dude,3
 7229-0a7402b0-329e-4b26-bc3a-ae26a388a6cc,30,3,E,mister bunny ears strikes again,5
 7229-0a7402b0-329e-4b26-bc3a-ae26a388a6cc,31,3,L,praying man feet down,4
-7229-0a7402b0-329e-4b26-bc3a-ae26a388a6cc,32,3,C,"my memory is bad  i do not remember what we were calling that one, this one is hands in the air dude",22
+7229-0a7402b0-329e-4b26-bc3a-ae26a388a6cc,32,3,C,this one is hands in the air dude,8
 7229-0a7402b0-329e-4b26-bc3a-ae26a388a6cc,33,3,G,the majestic horse,3
 7229-0a7402b0-329e-4b26-bc3a-ae26a388a6cc,34,3,K,praying s with the feet up,6
 7229-0a7402b0-329e-4b26-bc3a-ae26a388a6cc,35,3,B,winged bandit,2
 7229-0a7402b0-329e-4b26-bc3a-ae26a388a6cc,36,3,A,mister wind up,3
-7229-0a7402b0-329e-4b26-bc3a-ae26a388a6cc,37,4,A,its mister wind up again,5
+7229-0a7402b0-329e-4b26-bc3a-ae26a388a6cc,37,4,A,"i used to want to make comics can you tell, its mister wind up again",15
 7229-0a7402b0-329e-4b26-bc3a-ae26a388a6cc,38,4,K,praying with the feet up,5
 7229-0a7402b0-329e-4b26-bc3a-ae26a388a6cc,39,4,E,this one could be a superhero its mister bunny ears,10
 7229-0a7402b0-329e-4b26-bc3a-ae26a388a6cc,40,4,F,"chill dude 2,0",3
@@ -4155,7 +4230,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 7229-0a7402b0-329e-4b26-bc3a-ae26a388a6cc,60,5,L,feet down,2
 7229-0a7402b0-329e-4b26-bc3a-ae26a388a6cc,61,6,C,this ones hands up dude,5
 7229-0a7402b0-329e-4b26-bc3a-ae26a388a6cc,62,6,G,that horse,2
-7229-0a7402b0-329e-4b26-bc3a-ae26a388a6cc,63,6,L,this ones feet down,4
+7229-0a7402b0-329e-4b26-bc3a-ae26a388a6cc,63,6,L,"i couldnt top equestrian champion, this ones feet down",9
 7229-0a7402b0-329e-4b26-bc3a-ae26a388a6cc,64,6,F,"chill dude 2,0",3
 7229-0a7402b0-329e-4b26-bc3a-ae26a388a6cc,65,6,E,mister bunny ears,3
 7229-0a7402b0-329e-4b26-bc3a-ae26a388a6cc,66,6,I,my karate man,3
@@ -4167,7 +4242,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 7229-0a7402b0-329e-4b26-bc3a-ae26a388a6cc,72,6,B,and my guy the winged man,6
 7391-0be22306-9b90-402c-82b0-6bf7ce3ac35e,1,1,D,"triangle head looks like holding a book, facing left, diamond sorry, drape-y yes",13
 7391-0be22306-9b90-402c-82b0-6bf7ce3ac35e,2,1,J,"point is to the right, looks like the shape of a state, not easy, small point on the bottom",19
-7391-0be22306-9b90-402c-82b0-6bf7ce3ac35e,3,1,B,"going to say diamond off to the right, possibly looks like a tea pot, triangle on corner of diamond, triangle to bottom left also, pyramid",25
+7391-0be22306-9b90-402c-82b0-6bf7ce3ac35e,3,1,B,"going to say diamond off to the right, possibly looks like a tea pot, triangle on corner of diamond, triangle to bottom left also, yes, pyramid",26
 7391-0be22306-9b90-402c-82b0-6bf7ce3ac35e,4,1,L,"monk squatting to the right, point in the middle",9
 7391-0be22306-9b90-402c-82b0-6bf7ce3ac35e,5,1,E,"rabbit ears, sitting facing right",5
 7391-0be22306-9b90-402c-82b0-6bf7ce3ac35e,6,1,A,"frankenstein looking square head hanging off foot up, foot kicking forward",11
@@ -4183,11 +4258,11 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 7391-0be22306-9b90-402c-82b0-6bf7ce3ac35e,16,2,C,choir boy,2
 7391-0be22306-9b90-402c-82b0-6bf7ce3ac35e,17,2,H,"forward monk, candle looking",4
 7391-0be22306-9b90-402c-82b0-6bf7ce3ac35e,18,2,L,squatting monk,2
-7391-0be22306-9b90-402c-82b0-6bf7ce3ac35e,19,2,D,monk (facing left,3
+7391-0be22306-9b90-402c-82b0-6bf7ce3ac35e,19,2,D,"monk (facing left, yes",4
 7391-0be22306-9b90-402c-82b0-6bf7ce3ac35e,20,2,B,minnesota,1
 7391-0be22306-9b90-402c-82b0-6bf7ce3ac35e,21,2,J,"minnesota, looks like a candle",5
 7391-0be22306-9b90-402c-82b0-6bf7ce3ac35e,22,2,A,frank,1
-7391-0be22306-9b90-402c-82b0-6bf7ce3ac35e,23,2,K,"kneeling monk, pointing to the left",6
+7391-0be22306-9b90-402c-82b0-6bf7ce3ac35e,23,2,K,"kneeling monk, pointing to the left, right",7
 7391-0be22306-9b90-402c-82b0-6bf7ce3ac35e,24,2,G,boot,1
 7391-0be22306-9b90-402c-82b0-6bf7ce3ac35e,25,3,L,squatting monk to the right,5
 7391-0be22306-9b90-402c-82b0-6bf7ce3ac35e,26,3,G,boot,1
@@ -4315,14 +4390,14 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,4,1,D,"this one like a monk, holding something in his hand, facing left",12
 7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,5,1,G,"someone doing the tango, a shoe with a heal but the top doesn't look like a shoe",17
 7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,6,1,E,someone meditating facing right,4
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,7,1,H,"this one looks like someone sitting on they have no arms, just a triangle head",15
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,7,1,H,"this one looks like someone sitting on they have no arms, just a triangle head, right",16
 7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,8,1,L,"this one looks like a woman, facing right",8
 7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,9,1,F,"sleeping man leaning against something, facing left",7
 7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,10,1,A,this one looks like their looking at their feet facing left,11
 7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,11,1,C,a singer leaning backwards with arms raised upwards,8
 7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,12,1,J,"this looks like a triangle sitting on top of a half square, jagged",13
 7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,13,2,J,same as the last round,5
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,14,2,E,"this one looks like alice has her head in a book, facing right, she has a bow her hair",19
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,14,2,E,"this one looks like alice has her head in a book, facing right, right, she has a bow her hair",20
 7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,15,2,K,"a geisha, facing right, with the bow behind her",9
 7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,16,2,F,this is the man leaning against the wall again,9
 7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,17,2,I,"standing on leg, looks like chicken, facing left",8
@@ -4353,14 +4428,14 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,42,4,J,the triangle on top the jagged square,7
 7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,43,4,I,the one legged chicken,4
 7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,44,4,B,the kneeling one facing left,5
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,45,4,L,"the lady like with the book facing right, or can this one be a chicken singing, with mouth open to the right",22
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,45,4,L,"the lady like with the book facing right, we can't seem to get the other one, or can this one be a chicken singing, with mouth open to the right",30
 7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,46,4,G,dancing tango,2
 7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,47,4,C,"arms upwards, falling backwards",4
 7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,48,4,F,"sitting with back against the wall, facing left",8
 7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,49,5,J,triangle on jagged square,4
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,50,5,F,back against the wall facing left,6
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,50,5,F,"back against the wall facing left, sitting",7
 7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,51,5,C,falling arms facing upwards,4
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,52,5,I,"standing on one leg, facing left, this one you asked if was standing on one leg",16
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,52,5,I,"one leg, standing on one leg, facing left, this one you asked if was standing on one leg",18
 7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,53,5,L,"sitting lady like book facing right, i think is how we described this, knees",14
 7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,54,5,K,"this the geisha, with he bow behind",7
 7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,55,5,D,"monk, left",2
@@ -4378,7 +4453,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,68,6,B,"this we get mixed too:(, kneeling facing left, arms out",10
 7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,69,6,D,monk,1
 7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,70,6,J,triangle on jagged square,4
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,71,6,F,"back against the wall, facing left, not alice, with bow in hair",12
+7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,71,6,F,"back against the wall, facing left, not alice, with bow in hair, sitting",13
 7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,72,6,E,"this one is alice, facing left, book",7
 7547-22755035-a3a9-4044-aca1-efacfbd02163,1,1,L,image looks like a person holding a bowl kneeling slightly,10
 7547-22755035-a3a9-4044-aca1-efacfbd02163,2,1,H,"image looks like a house with a diamond on the roof, the house has a shadow",16
@@ -4543,7 +4618,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 7919-c64a8035-5c54-4696-9fab-21367611c8b6,17,2,E,"this one rabbit ears again, looking downward",7
 7919-c64a8035-5c54-4696-9fab-21367611c8b6,18,2,G,"this one again we had last time, looks like high heels on the bottom",14
 7919-c64a8035-5c54-4696-9fab-21367611c8b6,19,2,C,arms raised to the sky again,6
-7919-c64a8035-5c54-4696-9fab-21367611c8b6,20,2,I,"one leg standing with a leg behind him again, arms forward",11
+7919-c64a8035-5c54-4696-9fab-21367611c8b6,20,2,I,"one leg standing with a leg behind him again, arms forward, yes",12
 7919-c64a8035-5c54-4696-9fab-21367611c8b6,21,2,F,"sitting on the floor again, knees up",7
 7919-c64a8035-5c54-4696-9fab-21367611c8b6,22,2,B,"this is the one i can't describe, no shape to recognize, square on top with triangle on the right side and big triangle below it, tiny triangle on the left side on the bottom",34
 7919-c64a8035-5c54-4696-9fab-21367611c8b6,23,2,H,"'no shape' one, this one is a fat candle",9
@@ -4601,7 +4676,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 7971-85165980-35a3-4070-8ebf-ca2d159dc715,3,1,E,"looks like a man sitting down with two triangles on its head, looking to the right",16
 7971-85165980-35a3-4070-8ebf-ca2d159dc715,4,1,I,"looks like a man facing left with to hands and a foot in the air, two",16
 7971-85165980-35a3-4070-8ebf-ca2d159dc715,5,1,G,"a man with his two hands point right and a foot pointing right and his head and another foot facing left, standing like he's dancing",25
-7971-85165980-35a3-4070-8ebf-ca2d159dc715,6,1,A,man standing with right foot in the air head facing right both arms in the air,16
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,6,1,A,"it's fine hard to explain for me, man standing with right foot in the air head facing right both arms in the air",23
 7971-85165980-35a3-4070-8ebf-ca2d159dc715,7,1,D,man standing straight looking left and down with hands straight forward like he's reading something,15
 7971-85165980-35a3-4070-8ebf-ca2d159dc715,8,1,J,figure is standing up and has his hands to the right and his head is like in a perfect diamond shape position,22
 7971-85165980-35a3-4070-8ebf-ca2d159dc715,9,1,B,"figure is on his knees and facing right one hand to the left and another to the right, you can see one of his feet from kneeling on the left side",31
@@ -4618,7 +4693,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 7971-85165980-35a3-4070-8ebf-ca2d159dc715,20,2,A,"figure has right foot in the air standing straight and looking to the right, body facing left head facing to the right",22
 7971-85165980-35a3-4070-8ebf-ca2d159dc715,21,2,D,figure looks like he's reading something head tilted down and facing left,12
 7971-85165980-35a3-4070-8ebf-ca2d159dc715,22,2,B,"figure is on their knees facing right with both hands in the air head tilting right and down, they look like they are sliding on their knees one hand to the left and one to the right and head facing right and down",43
-7971-85165980-35a3-4070-8ebf-ca2d159dc715,23,2,F,"this one is a man sitting down with legs out facing left his head is down, like he is napping",20
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,23,2,F,"ok, this one is a man sitting down with legs out facing left his head is down, like he is napping",21
 7971-85165980-35a3-4070-8ebf-ca2d159dc715,24,2,K,"figure looks like they are on their knees looking up, (not the one with the knees bent they exactly the same though, figure is facing right",26
 7971-85165980-35a3-4070-8ebf-ca2d159dc715,25,3,D,figure is facing left standing up with hands to the left looking down like he's reading something,17
 7971-85165980-35a3-4070-8ebf-ca2d159dc715,26,3,B,ok this one is #1 --the one that looks like they are sliding,13
@@ -4649,7 +4724,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 7971-85165980-35a3-4070-8ebf-ca2d159dc715,51,5,I,11,1
 7971-85165980-35a3-4070-8ebf-ca2d159dc715,52,5,G,10,1
 7971-85165980-35a3-4070-8ebf-ca2d159dc715,53,5,E,8,1
-7971-85165980-35a3-4070-8ebf-ca2d159dc715,54,5,C,12,1
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,54,5,C,"i think if you send them an email with the code they make you a hit or something cause this takes forever, 12, ok",24
 7971-85165980-35a3-4070-8ebf-ca2d159dc715,55,5,D,3,1
 7971-85165980-35a3-4070-8ebf-ca2d159dc715,56,5,K,6,1
 7971-85165980-35a3-4070-8ebf-ca2d159dc715,57,5,L,5,1
@@ -4674,10 +4749,10 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 8505-2fa3d6f9-8e28-49ed-8cd1-de703e113a82,4,1,J,"sideways square for a head on top of an elongated rectangle, with a triangle for a shoulder/arm, indentation on the bottom that looks like a connected foot, think fat roman soldier standing very straight and erect",36
 8505-2fa3d6f9-8e28-49ed-8cd1-de703e113a82,5,1,I,"okay, another sideways square for a head on top of what looks two triangles put together into almost a beak, two more triangles for a butt/tail on top of an elongated rectangle with a foot, like a scary big crane on one leg, not the one that looks like it has two legs, yeah, i can see the figure skater, leg out in the back",65
 8505-2fa3d6f9-8e28-49ed-8cd1-de703e113a82,6,1,F,"sad guy sitting with his back against a wall, legs out to the left, his body looks like it's made of a baseball diamond",24
-8505-2fa3d6f9-8e28-49ed-8cd1-de703e113a82,7,1,C,"looks like one of those wind advertisements at car dealerships, arms are two squares connected to rectangles with a rectangle for a body",23
+8505-2fa3d6f9-8e28-49ed-8cd1-de703e113a82,7,1,C,"looks like one of those wind advertisements at car dealerships, arms are two squares connected to rectangles with a rectangle for a body, yes",24
 8505-2fa3d6f9-8e28-49ed-8cd1-de703e113a82,8,1,A,"two legs, facing left, the top leg looks like he's kicking something",12
 8505-2fa3d6f9-8e28-49ed-8cd1-de703e113a82,9,1,B,"looks like a little mouse sitting down, square and triangle for ears, square for a head with a connected triangle for a nose/snout, small triangle on the side out to the left",32
-8505-2fa3d6f9-8e28-49ed-8cd1-de703e113a82,10,1,H,"sideways square for a head, connected to a triangle on top of a square for a body, on top of a,almost looks like a single duck flipper, very solid image, the square head is behind the main body a little bit, *sideways, the flipper thing is kicked out towards the right, no not that one i do not think, it's the only one that the diamond looks like it's behind the triangle neck, well, more so than the others, head is a little off center towards the right from the main image",92
+8505-2fa3d6f9-8e28-49ed-8cd1-de703e113a82,10,1,H,"my grandma would be proud, sideways square for a head, connected to a triangle on top of a square for a body, on top of a,almost looks like a single duck flipper, very solid image, the square head is behind the main body a little bit, *sideways, the flipper thing is kicked out towards the right, no not that one i do not think, it's the only one that the diamond looks like it's behind the triangle neck, well, more so than the others, head is a little off center towards the right from the main image",97
 8505-2fa3d6f9-8e28-49ed-8cd1-de703e113a82,11,1,K,"two diamond heads on top of a square with a right triangle attached to the body square, sitting on top of two other triangles, looks almost like a big pac man facing to the right on the main part of the body, but not the one that looks like a roadway",51
 8505-2fa3d6f9-8e28-49ed-8cd1-de703e113a82,12,1,L,"okay, the other cayman image that does look like a roadway sign, diamond head on top of triangle on top of a parallelogram, yeah i can see that",28
 8505-2fa3d6f9-8e28-49ed-8cd1-de703e113a82,13,2,E,"sad bunny sitting against the wall again, triangle bunny ears, square face, big triangle body with triangle knees facing right",20
@@ -4690,7 +4765,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 8505-2fa3d6f9-8e28-49ed-8cd1-de703e113a82,20,2,B,"little mouse again, square and triangle ears",7
 8505-2fa3d6f9-8e28-49ed-8cd1-de703e113a82,21,2,C,"car dealership guy, falling to the left",7
 8505-2fa3d6f9-8e28-49ed-8cd1-de703e113a82,22,2,D,"diamond head guy, foot out to the left, holding the square top hat with the lip",16
-8505-2fa3d6f9-8e28-49ed-8cd1-de703e113a82,23,2,H,"okay the diamond head one that's back behind the body a bit, flipper facing right, diamond head on top of triangle fitted to a square body with the duck flipper on the bottom",33
+8505-2fa3d6f9-8e28-49ed-8cd1-de703e113a82,23,2,H,"okay the diamond head one that's back behind the body a bit, flipper facing right, diamond head on top of triangle fitted to a square body with the duck flipper on the bottom, yes",34
 8505-2fa3d6f9-8e28-49ed-8cd1-de703e113a82,24,2,L,"kneeling guy in robe, cayman but highway cayman, not the triangle tail with two heads, the robe looking one, so maybe yes a tail, not that one, parallelogram on the bottom",31
 8505-2fa3d6f9-8e28-49ed-8cd1-de703e113a82,25,3,E,"sad bunny, triangle ears on square head, facing the right, triangle body with little triangle knees",16
 8505-2fa3d6f9-8e28-49ed-8cd1-de703e113a82,26,3,L,"cayman guy with parallelogram tail, not triangle butt",8
@@ -4818,14 +4893,14 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 8654-d24d0e84-d1d0-455c-8f51-b3102bf9240c,4,1,I,"diamond top,then a mouth left side, looks like its being held up by a single foot, then a tail in the right end",23
 8654-d24d0e84-d1d0-455c-8f51-b3102bf9240c,5,1,J,"diamond top, then an incomplete square looking body, like the right sides been ripped off, but the left side is perfectly fine",22
 8654-d24d0e84-d1d0-455c-8f51-b3102bf9240c,6,1,E,"looks like a shoe with a rabbits head on it, pointing right, has a curve on the slope",18
-8654-d24d0e84-d1d0-455c-8f51-b3102bf9240c,7,1,B,"square at the top, triangle shape behind it, odd boot looking shape underneath, its got a messed up shaping at the very bottom",23
+8654-d24d0e84-d1d0-455c-8f51-b3102bf9240c,7,1,B,"square at the top, triangle shape behind it, odd boot looking shape underneath, its got a messed up shaping at the very bottom, yeah",24
 8654-d24d0e84-d1d0-455c-8f51-b3102bf9240c,8,1,C,"looks like a guy with his arms stretch out, diamond head, then two arms, and a body",17
 8654-d24d0e84-d1d0-455c-8f51-b3102bf9240c,9,1,A,"looks like a penguin with its foot up, square behind it, looking down, pointy nose, only one with a pointy nose really, walking, look at the legs, then it has a shape that looks like a head looking down, then a square next to it, i can see how the square kind throws it off",55
-8654-d24d0e84-d1d0-455c-8f51-b3102bf9240c,10,1,F,"okay square head, looks like a guy laying back",9
+8654-d24d0e84-d1d0-455c-8f51-b3102bf9240c,10,1,F,"well you got it, okay square head, looks like a guy laying back",13
 8654-d24d0e84-d1d0-455c-8f51-b3102bf9240c,11,1,D,"diamond head, looks like someone pointing out, wearing a robe, pointing left",12
 8654-d24d0e84-d1d0-455c-8f51-b3102bf9240c,12,1,H,"okay head square, just looks like a body, no limbs visible, feet kinda sticking out if they were under a blanket or something, pointing right, looks like a head with a cocoon or something",34
-8654-d24d0e84-d1d0-455c-8f51-b3102bf9240c,13,2,L,"square head, knees bent, pointing right, i do not think so, knees bent, pointing right, diamond head",17
-8654-d24d0e84-d1d0-455c-8f51-b3102bf9240c,14,2,A,"penguin head again, walking left, two feet, pointy nose, square behind it, looks like a head",16
+8654-d24d0e84-d1d0-455c-8f51-b3102bf9240c,13,2,L,"square head, knees bent, pointing right, yeah thatll work better to be honest, knees bent, pointing right, diamond head",19
+8654-d24d0e84-d1d0-455c-8f51-b3102bf9240c,14,2,A,"penguin head again, walking left, okay my bad, two feet, pointy nose, square behind it, looks like a head",19
 8654-d24d0e84-d1d0-455c-8f51-b3102bf9240c,15,2,E,"bunny shoe looking thing, has two shapes on top of square, which look like theyre on top of a slope, with a curve near the middle",26
 8654-d24d0e84-d1d0-455c-8f51-b3102bf9240c,16,2,F,"man laying back, square head",5
 8654-d24d0e84-d1d0-455c-8f51-b3102bf9240c,17,2,K,"diamond head, pointing right, some weird spike behind",8
@@ -4845,7 +4920,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 8654-d24d0e84-d1d0-455c-8f51-b3102bf9240c,31,3,H,cocoon man,2
 8654-d24d0e84-d1d0-455c-8f51-b3102bf9240c,32,3,G,"shoe with weird triangle hanging off back, triangle shape right side",11
 8654-d24d0e84-d1d0-455c-8f51-b3102bf9240c,33,3,F,man laying back,3
-8654-d24d0e84-d1d0-455c-8f51-b3102bf9240c,34,3,J,"damn forgot what we called this one, weird shape man, diamond head and half the square body is ripped off, square body shape",23
+8654-d24d0e84-d1d0-455c-8f51-b3102bf9240c,34,3,J,"damn forgot what we called this one, weird shape man, :, diamond head and half the square body is ripped off, square body shape",24
 8654-d24d0e84-d1d0-455c-8f51-b3102bf9240c,35,3,C,hands stretched out man,4
 8654-d24d0e84-d1d0-455c-8f51-b3102bf9240c,36,3,A,"penguin head walking left, square behind",6
 8654-d24d0e84-d1d0-455c-8f51-b3102bf9240c,37,4,B,boot with square and triangle on top,7
@@ -4857,7 +4932,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 8654-d24d0e84-d1d0-455c-8f51-b3102bf9240c,43,4,H,cocoon man,2
 8654-d24d0e84-d1d0-455c-8f51-b3102bf9240c,44,4,G,boot with triangle shape hanging off right,7
 8654-d24d0e84-d1d0-455c-8f51-b3102bf9240c,45,4,F,laying back man,3
-8654-d24d0e84-d1d0-455c-8f51-b3102bf9240c,46,4,J,"weird body shaped square man, triangle on top, spike pointing right",11
+8654-d24d0e84-d1d0-455c-8f51-b3102bf9240c,46,4,J,"weird body shaped square man, triangle on top, spike pointing right, yup",12
 8654-d24d0e84-d1d0-455c-8f51-b3102bf9240c,47,4,E,"flat left man, new name, bunny head on shoe",9
 8654-d24d0e84-d1d0-455c-8f51-b3102bf9240c,48,4,K,pointing right with back spike,5
 8654-d24d0e84-d1d0-455c-8f51-b3102bf9240c,49,5,B,"boot with square and triangle, on top",7
@@ -4908,12 +4983,13 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 8656-2ce86ed6-891b-459e-b44f-f8d0ba10c8e2,22,2,I,"person bent over to the left, leg stuck straight out to the right, i'll call this one the chicken pose if it shows up again",25
 8656-2ce86ed6-891b-459e-b44f-f8d0ba10c8e2,23,2,H,sleeping bag guy,3
 8656-2ce86ed6-891b-459e-b44f-f8d0ba10c8e2,24,2,F,"guy sitting and reading, back against a wall",8
+8656-2ce86ed6-891b-459e-b44f-f8d0ba10c8e2,25,3,C,ghost,1
 8656-2ce86ed6-891b-459e-b44f-f8d0ba10c8e2,26,3,E,windmill box on a hill,5
 8656-2ce86ed6-891b-459e-b44f-f8d0ba10c8e2,27,3,G,impossible candle like one,4
 8656-2ce86ed6-891b-459e-b44f-f8d0ba10c8e2,28,3,H,sleeping bag guy,3
 8656-2ce86ed6-891b-459e-b44f-f8d0ba10c8e2,29,3,F,guy reading against a wall,5
 8656-2ce86ed6-891b-459e-b44f-f8d0ba10c8e2,30,3,D,"graduation guy, holding a box to the left",8
-8656-2ce86ed6-891b-459e-b44f-f8d0ba10c8e2,31,3,K,"guy kneeling, arms to the left, slightly bigger gown in the back, oops arms to the right",17
+8656-2ce86ed6-891b-459e-b44f-f8d0ba10c8e2,31,3,K,"guy kneeling, arms to the left, slightly bigger gown in the back, arms to the right",16
 8656-2ce86ed6-891b-459e-b44f-f8d0ba10c8e2,32,3,I,chicken pose,2
 8656-2ce86ed6-891b-459e-b44f-f8d0ba10c8e2,33,3,A,"sad guy kicking leg to the left, looking down, i'll just call this one the sad guy if that works for you haha",23
 8656-2ce86ed6-891b-459e-b44f-f8d0ba10c8e2,34,3,B,"arms spread to the sides, leg stuck out to the left, kneeling slightly",13
@@ -4923,6 +4999,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 8656-2ce86ed6-891b-459e-b44f-f8d0ba10c8e2,38,4,F,guy reading,2
 8656-2ce86ed6-891b-459e-b44f-f8d0ba10c8e2,39,4,A,sad guy,2
 8656-2ce86ed6-891b-459e-b44f-f8d0ba10c8e2,40,4,G,"the impossible one, triangles on the right side",8
+8656-2ce86ed6-891b-459e-b44f-f8d0ba10c8e2,41,4,C,ghost,1
 8656-2ce86ed6-891b-459e-b44f-f8d0ba10c8e2,42,4,I,chicken pose,2
 8656-2ce86ed6-891b-459e-b44f-f8d0ba10c8e2,43,4,H,sleeping bag,2
 8656-2ce86ed6-891b-459e-b44f-f8d0ba10c8e2,44,4,K,"bigger gown in back, arms to the right, slightly kneeling",10
@@ -4934,6 +5011,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 8656-2ce86ed6-891b-459e-b44f-f8d0ba10c8e2,50,5,I,chicken,1
 8656-2ce86ed6-891b-459e-b44f-f8d0ba10c8e2,51,5,E,windmill box on hill,4
 8656-2ce86ed6-891b-459e-b44f-f8d0ba10c8e2,52,5,K,"bigger gown in back one, arms to the right",9
+8656-2ce86ed6-891b-459e-b44f-f8d0ba10c8e2,53,5,C,ghost,1
 8656-2ce86ed6-891b-459e-b44f-f8d0ba10c8e2,54,5,B,"arms spread, leg to the left",6
 8656-2ce86ed6-891b-459e-b44f-f8d0ba10c8e2,55,5,F,guy reading,2
 8656-2ce86ed6-891b-459e-b44f-f8d0ba10c8e2,56,5,J,candle,1
@@ -4949,11 +5027,12 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 8656-2ce86ed6-891b-459e-b44f-f8d0ba10c8e2,66,6,L,small gown,2
 8656-2ce86ed6-891b-459e-b44f-f8d0ba10c8e2,67,6,G,"impossible one, triangles hanging off on the right",8
 8656-2ce86ed6-891b-459e-b44f-f8d0ba10c8e2,68,6,D,graduation guy,2
+8656-2ce86ed6-891b-459e-b44f-f8d0ba10c8e2,69,6,C,ghost,1
 8656-2ce86ed6-891b-459e-b44f-f8d0ba10c8e2,70,6,A,sad guy,2
 8656-2ce86ed6-891b-459e-b44f-f8d0ba10c8e2,71,6,J,candle,1
 8656-2ce86ed6-891b-459e-b44f-f8d0ba10c8e2,72,6,B,"arms spread, leg out to the left",7
 8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1,1,I,"it's the dude who's standing on one leg, the other leg is stretched out to the right",17
-8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,2,1,F,"this one is in a reclining position, you can't see the arms, the feet are to the left",18
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,2,1,F,"this one is in a reclining position, you can't see the arms, the feet are to the left, yes",19
 8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,3,1,G,"this one has both arms stretched out behind him (to the right), one really high and one really low",19
 8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,4,1,K,"good luck! standing up, weird triangle to the right that's one arm i think, and the left knee is up, the top is almost like two diamonds on top of each other",32
 8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,5,1,H,"okay, this one is upright, no arms or legs sticking out so it's mostly rectangular",15
@@ -4962,7 +5041,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,8,1,B,"umm this one barely looks like a person? there's a square and triangle on top, and then two partial triangles pointing left in the middle and bottom",27
 8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,9,1,L,"! this one has knees bent but is standing, looks like he's offering something",14
 8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,10,1,D,"standing up, upside down graduation hat sticking out to the left, or wait is that a right side up graduation hat, okay, it's an upside down triangle with a square under it, his feet are a triangle to the left too",41
-8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,11,1,A,"this one is standing, left leg is up, kind of cyclops cause his head is leaning way back instead of being at the normal spot, the leg that's up is the one on the left, i think it is bird guy",41
+8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,11,1,A,"this one is standing, left leg is up, kind of cyclops cause his head is leaning way back instead of being at the normal spot, nope, the leg that's up is the one on the left, i think it is bird guy",42
 8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,12,1,J,this one is almost entirely a square except the right part is jagged,13
 8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,13,2,A,this is bird man again,5
 8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,14,2,F,"sitting down with knees up, facing left, no arms",9
@@ -5032,7 +5111,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,6,1,K,"kneeling, feet up, facing right arms in praying position",9
 8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,7,1,F,"sitting, reclining, facing left",4
 8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,8,1,B,"arms to both sides, kneeling, facing right, foot a triangle in lower left, yes it is almost separated",18
-8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,9,1,H,"body one solid shape, no arms visible, kind of sitting",10
+8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,9,1,H,"body one solid shape, no arms visible, kind of sitting, yes",11
 8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,10,1,A,"standing on one leg, walking to the left with arm bent oddly on the left side, head back",18
 8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,11,1,E,rabbit,1
 8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,12,1,C,"arms waving in the air, leaning left, head left, no legs, body diagonal, yeah",14
@@ -5099,7 +5178,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 8740-51fc5610-27fd-4f47-a2a2-ce204bd572d1,1,1,I,"looks like a ballerina leaning left with foot up and pointing to the right, yes and two triangle points are pointing left like arms",24
 8740-51fc5610-27fd-4f47-a2a2-ce204bd572d1,2,1,K,"looks like a person facing right and kneeling down, flat bottom",11
 8740-51fc5610-27fd-4f47-a2a2-ce204bd572d1,3,1,H,"this one is hard, triangle on top, pentagon under that, then slanted bottom on left side and triangle pointing to right , all filled in black, no spaces between shapes, not a triangle on top! a tilted square, yes, the rest is kind of straight up and down except the slant on the bottom left",55
-8740-51fc5610-27fd-4f47-a2a2-ce204bd572d1,4,1,G,"this one has a long flat bottom on the left, goes up to the right and has a triangle hanging off the bottom right, top has a square touching only by a corner on the left side of the figure",40
+8740-51fc5610-27fd-4f47-a2a2-ce204bd572d1,4,1,G,"this one has a long flat bottom on the left, goes up to the right and has a triangle hanging off the bottom right, top has a square touching only by a corner on the left side of the figure, yes",41
 8740-51fc5610-27fd-4f47-a2a2-ce204bd572d1,5,1,J,"diamond on top, a rectangle on bottom but with part of the right side missing",15
 8740-51fc5610-27fd-4f47-a2a2-ce204bd572d1,6,1,B,"tilted square top, to the right and a bit below is a medium size triangle, there is a sharp point to the left of the figure at the top, bottom looks like someone kneeling, a small triangle on the bottom left form the feet, it looks like a tilted square head with shoulders underneath long and to the left then a triangle kind of hanging under the head to the right, the bottom right corner has straight side and straight bottom, and a tiny triangle as a foot on the bottom left",92
 8740-51fc5610-27fd-4f47-a2a2-ce204bd572d1,7,1,D,"this one looks like a person facing right wearing a robe with a long sleeve hanging down from an outstretched arm, facing left",23
@@ -5166,7 +5245,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 8740-51fc5610-27fd-4f47-a2a2-ce204bd572d1,68,6,C,jeremy,1
 8740-51fc5610-27fd-4f47-a2a2-ce204bd572d1,69,6,L,almost kneeling,2
 8740-51fc5610-27fd-4f47-a2a2-ce204bd572d1,70,6,F,sitting against a tree,4
-8740-51fc5610-27fd-4f47-a2a2-ce204bd572d1,71,6,G,head falling left,3
+8740-51fc5610-27fd-4f47-a2a2-ce204bd572d1,71,6,G,"ok my name is, head falling left",7
 8740-51fc5610-27fd-4f47-a2a2-ce204bd572d1,72,6,K,kneeling,1
 8806-7b0fde86-a7ed-4821-9482-22cb3454e156,1,1,L,image looks like a person kneeling,6
 8806-7b0fde86-a7ed-4821-9482-22cb3454e156,2,1,I,image looks like a person ice skating with one leg up,11
@@ -5178,7 +5257,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 8806-7b0fde86-a7ed-4821-9482-22cb3454e156,8,1,K,"person kneeling and facing to the right holding a bowl, feet pointing up, diamond head, corner of a triangle pointing to the right and another corner of a triangle pointing up behind",32
 8806-7b0fde86-a7ed-4821-9482-22cb3454e156,9,1,G,"a person looks like they are dancing a taking a long step, diamond head, triangle to the right of the diamond, triangle bottom right, rhombus bottom left",27
 8806-7b0fde86-a7ed-4821-9482-22cb3454e156,10,1,F,looks like a person sitting facing left,7
-8806-7b0fde86-a7ed-4821-9482-22cb3454e156,11,1,A,"square top left, sideways trapezoid under square and what looks like one leg kicking left",15
+8806-7b0fde86-a7ed-4821-9482-22cb3454e156,11,1,A,"square top left, sideways trapezoid under square and what looks like one leg kicking left, i see that now",19
 8806-7b0fde86-a7ed-4821-9482-22cb3454e156,12,1,D,"looks like person looking left holding a bowl, wearing a robe",11
 8806-7b0fde86-a7ed-4821-9482-22cb3454e156,13,2,A,bird with flag,3
 8806-7b0fde86-a7ed-4821-9482-22cb3454e156,14,2,H,"diamond head and what looks like a house under it, looks like a person kneeling facing you",17
@@ -5187,7 +5266,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 8806-7b0fde86-a7ed-4821-9482-22cb3454e156,17,2,C,person falling backward with arms in the air,8
 8806-7b0fde86-a7ed-4821-9482-22cb3454e156,18,2,K,"diamond head, diamond under, triangle corner pointing right",8
 8806-7b0fde86-a7ed-4821-9482-22cb3454e156,19,2,I,person ice skating with leg in the air,8
-8806-7b0fde86-a7ed-4821-9482-22cb3454e156,20,2,F,person sitting looking to the left,6
+8806-7b0fde86-a7ed-4821-9482-22cb3454e156,20,2,F,"person sitting looking to the left, no, yes",8
 8806-7b0fde86-a7ed-4821-9482-22cb3454e156,21,2,L,person holding bowl facing right - not kneeling but sort of bending knees,13
 8806-7b0fde86-a7ed-4821-9482-22cb3454e156,22,2,E,rabbit sitting facing right,4
 8806-7b0fde86-a7ed-4821-9482-22cb3454e156,23,2,B,"diamond head, two separate triangles under (looks like stretched out arms",11
@@ -5302,6 +5381,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 8915-5ba403bf-9d53-44e0-a5e3-2682167d0da8,60,5,L,on knees with arms out to the right,8
 8915-5ba403bf-9d53-44e0-a5e3-2682167d0da8,61,6,C,arms in air,3
 8915-5ba403bf-9d53-44e0-a5e3-2682167d0da8,62,6,D,looking up with arm out towards left,7
+8915-5ba403bf-9d53-44e0-a5e3-2682167d0da8,63,6,K,robe,1
 8915-5ba403bf-9d53-44e0-a5e3-2682167d0da8,64,6,B,speaking through megaphone,3
 8915-5ba403bf-9d53-44e0-a5e3-2682167d0da8,65,6,F,sitting down with back against right wall,7
 8915-5ba403bf-9d53-44e0-a5e3-2682167d0da8,66,6,H,head on block that curves to right at bottom,9
@@ -5407,7 +5487,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 9116-d8b8c5c1-f549-48bf-a362-ed159302a106,22,2,E,the rabbit,2
 9116-d8b8c5c1-f549-48bf-a362-ed159302a106,23,2,L,"the right carrying thing that is a parrellogram at the bottom, triangle for neck",14
 9116-d8b8c5c1-f549-48bf-a362-ed159302a106,24,2,I,this one is the triangle on its own on the right,11
-9116-d8b8c5c1-f549-48bf-a362-ed159302a106,25,3,B,"this is the one you jut picked, the triangle and square falling off the mountain, so your hit window doesn't have a place at all to submit, because it says do not worry a code",35
+9116-d8b8c5c1-f549-48bf-a362-ed159302a106,25,3,B,"this is the one you jut picked, the triangle and square falling off the mountain",15
 9116-d8b8c5c1-f549-48bf-a362-ed159302a106,26,3,G,this thing is a mess of shapres with a square dangling off the left top,15
 9116-d8b8c5c1-f549-48bf-a362-ed159302a106,27,3,F,person sitting down,3
 9116-d8b8c5c1-f549-48bf-a362-ed159302a106,28,3,H,blobby mass with the square at the top,8
@@ -5418,11 +5498,11 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 9116-d8b8c5c1-f549-48bf-a362-ed159302a106,33,3,I,"this thing is a mess, got what looks like a single leg on the ground, triangle dangling off the right",20
 9116-d8b8c5c1-f549-48bf-a362-ed159302a106,34,3,L,"triangle neck right carrying lady, id say so, parallelogram",9
 9116-d8b8c5c1-f549-48bf-a362-ed159302a106,35,3,A,"the dancing animal with the square rolling off its back, right side, its got like a triangle for a beak and foot off the ground, and its not the chicken",30
-9116-d8b8c5c1-f549-48bf-a362-ed159302a106,36,3,C,the wide arm flailing thing,5
+9116-d8b8c5c1-f549-48bf-a362-ed159302a106,36,3,C,"the wide arm flailing thing, halfway done in 50 minutes",10
 9116-d8b8c5c1-f549-48bf-a362-ed159302a106,37,4,G,square and triangle both rolling off the top in opposite directions,11
 9116-d8b8c5c1-f549-48bf-a362-ed159302a106,38,4,B,square and triangle both rolling off the right side,9
 9116-d8b8c5c1-f549-48bf-a362-ed159302a106,39,4,D,left carrying soup man with the triangle neck,8
-9116-d8b8c5c1-f549-48bf-a362-ed159302a106,40,4,A,"still need $10 for my goal after this,sucks, the mutant chicken man",12
+9116-d8b8c5c1-f549-48bf-a362-ed159302a106,40,4,A,the mutant chicken man,4
 9116-d8b8c5c1-f549-48bf-a362-ed159302a106,41,4,E,the rabbit,2
 9116-d8b8c5c1-f549-48bf-a362-ed159302a106,42,4,J,blobby mass with the square on top,7
 9116-d8b8c5c1-f549-48bf-a362-ed159302a106,43,4,K,"right carrying lady with the jutted out triange, triangle",9
@@ -5442,7 +5522,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 9116-d8b8c5c1-f549-48bf-a362-ed159302a106,57,5,L,right carrying person with the triangle neck,7
 9116-d8b8c5c1-f549-48bf-a362-ed159302a106,58,5,I,the chicken,2
 9116-d8b8c5c1-f549-48bf-a362-ed159302a106,59,5,E,the rabbit,2
-9116-d8b8c5c1-f549-48bf-a362-ed159302a106,60,5,K,"nice, might be a complete grind fest up to $20, right facing lady with jutted out triangle",17
+9116-d8b8c5c1-f549-48bf-a362-ed159302a106,60,5,K,right facing lady with jutted out triangle,7
 9116-d8b8c5c1-f549-48bf-a362-ed159302a106,61,6,H,tombstone blob,2
 9116-d8b8c5c1-f549-48bf-a362-ed159302a106,62,6,J,the square on the flat surface by itself,8
 9116-d8b8c5c1-f549-48bf-a362-ed159302a106,63,6,B,triangle and square falling off to the right,8
@@ -5671,6 +5751,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,70,6,K,kneeling with bowl,3
 9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,71,6,D,standing with bowl,3
 9286-508b20ce-1cbb-409f-bd5a-f2e6b3ffa7a8,72,6,C,YMCA,1
+9471-f19badf8-f934-48be-af51-c28ad91605b9,1,1,L,sitting,1
 9471-f19badf8-f934-48be-af51-c28ad91605b9,2,1,B,it was like chimney,4
 9471-f19badf8-f934-48be-af51-c28ad91605b9,3,1,K,"diamond shape on top, tail at back",7
 9471-f19badf8-f934-48be-af51-c28ad91605b9,4,1,H,diamond on top and shirt without hand,7
@@ -5784,7 +5865,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 9477-662e7f6d-0f2a-4041-a4e7-6d33eba91fb0,40,4,G,"laying down, one arm above and one below",8
 9477-662e7f6d-0f2a-4041-a4e7-6d33eba91fb0,41,4,H,"candle shaped, curvy",3
 9477-662e7f6d-0f2a-4041-a4e7-6d33eba91fb0,42,4,L,"legs are angled, kinda squatting, triangle upside down on front",10
-9477-662e7f6d-0f2a-4041-a4e7-6d33eba91fb0,43,4,F,laying down sade,3
+9477-662e7f6d-0f2a-4041-a4e7-6d33eba91fb0,43,4,F,laying down sad,3
 9477-662e7f6d-0f2a-4041-a4e7-6d33eba91fb0,44,4,C,"flying, arms out",3
 9477-662e7f6d-0f2a-4041-a4e7-6d33eba91fb0,45,4,B,"little girl begging, head like a bow, head up, arm out pointy",12
 9477-662e7f6d-0f2a-4041-a4e7-6d33eba91fb0,46,4,K,"diamond head, foot pointed up, triangle poking out of back",10
@@ -5800,7 +5881,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 9477-662e7f6d-0f2a-4041-a4e7-6d33eba91fb0,56,5,J,"candle, angled, boxy",3
 9477-662e7f6d-0f2a-4041-a4e7-6d33eba91fb0,57,5,E,"sitting down, triangle body, helicopter head",6
 9477-662e7f6d-0f2a-4041-a4e7-6d33eba91fb0,58,5,C,"flying, arms out",3
-9477-662e7f6d-0f2a-4041-a4e7-6d33eba91fb0,59,5,F,"laying down sade, foot out",5
+9477-662e7f6d-0f2a-4041-a4e7-6d33eba91fb0,59,5,F,"laying down sad, foot out",5
 9477-662e7f6d-0f2a-4041-a4e7-6d33eba91fb0,60,5,I,"arms out in front, one leg behind, bending over",9
 9477-662e7f6d-0f2a-4041-a4e7-6d33eba91fb0,61,6,E,"sitting down, helicopter head, triangle body",6
 9477-662e7f6d-0f2a-4041-a4e7-6d33eba91fb0,62,6,A,walking like a monster,4
@@ -5813,7 +5894,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 9477-662e7f6d-0f2a-4041-a4e7-6d33eba91fb0,69,6,I,"bending over, one leg up",5
 9477-662e7f6d-0f2a-4041-a4e7-6d33eba91fb0,70,6,D,"standing up straight, holding something",5
 9477-662e7f6d-0f2a-4041-a4e7-6d33eba91fb0,71,6,C,"flying, arms out",3
-9477-662e7f6d-0f2a-4041-a4e7-6d33eba91fb0,72,6,F,laying down sade,3
+9477-662e7f6d-0f2a-4041-a4e7-6d33eba91fb0,72,6,F,laying down sad,3
 9559-04e2b195-6540-4711-9830-5178487fc07c,1,1,H,it sort of looks like a person kneeling,8
 9559-04e2b195-6540-4711-9830-5178487fc07c,2,1,J,you can't see arms either,5
 9559-04e2b195-6540-4711-9830-5178487fc07c,3,1,L,"this one is kneeling as well,  it has an arm facing to the right",14
@@ -5926,6 +6007,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 9567-370cab8f-7744-4910-8e41-e0a50b191fac,39,4,A,one foot on ground on off head back,8
 9567-370cab8f-7744-4910-8e41-e0a50b191fac,40,4,I,chicken,1
 9567-370cab8f-7744-4910-8e41-e0a50b191fac,41,4,L,bending at knee,3
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,42,4,C,angel,1
 9567-370cab8f-7744-4910-8e41-e0a50b191fac,43,4,F,slouching while sitting,3
 9567-370cab8f-7744-4910-8e41-e0a50b191fac,44,4,H,like grad but with slight bend in back,8
 9567-370cab8f-7744-4910-8e41-e0a50b191fac,45,4,G,"triangle holding up person, head tipped forward",7
@@ -5941,8 +6023,9 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 9567-370cab8f-7744-4910-8e41-e0a50b191fac,55,5,I,chicken,1
 9567-370cab8f-7744-4910-8e41-e0a50b191fac,56,5,A,one foot on ground one off ground head back,9
 9567-370cab8f-7744-4910-8e41-e0a50b191fac,57,5,E,"triangle holding square, 2 triangles out of square",8
-9567-370cab8f-7744-4910-8e41-e0a50b191fac,58,5,F,slouching,1
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,58,5,F,"slouching, i'm trying",3
 9567-370cab8f-7744-4910-8e41-e0a50b191fac,59,5,D,grad,1
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,60,5,C,angel,1
 9567-370cab8f-7744-4910-8e41-e0a50b191fac,61,6,K,kneeling,1
 9567-370cab8f-7744-4910-8e41-e0a50b191fac,62,6,E,"triangle, square, 2 triangles",4
 9567-370cab8f-7744-4910-8e41-e0a50b191fac,63,6,J,standing with arm out,4
@@ -5950,6 +6033,7 @@ gameid,trialNum,repetitionNum,intendedName,contents,numRawWords
 9567-370cab8f-7744-4910-8e41-e0a50b191fac,65,6,B,"triangle behind head, sitting",4
 9567-370cab8f-7744-4910-8e41-e0a50b191fac,66,6,D,grad,1
 9567-370cab8f-7744-4910-8e41-e0a50b191fac,67,6,A,one foot on the ground one off,7
+9567-370cab8f-7744-4910-8e41-e0a50b191fac,68,6,C,angel,1
 9567-370cab8f-7744-4910-8e41-e0a50b191fac,69,6,I,chicken,1
 9567-370cab8f-7744-4910-8e41-e0a50b191fac,70,6,L,squatting,1
 9567-370cab8f-7744-4910-8e41-e0a50b191fac,71,6,H,standing with slight bend,4

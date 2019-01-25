@@ -14,38 +14,281 @@ library(tidyverse)
 library(lme4)
 library(lmerTest)
 library(tm)
-library(stringr)
-library(knitr)
-library(NLP)
-library(readr)
 library(tidyboot)
 library(xtable)
 library(ggthemes)
 library(entropy)
+
+source('./utils/analysis_helpers.R')
+```
+
+# Dynamics of content
+
+```{r}
+d <- read_csv('../data/tangramsSequential_collapsed.csv')
+```
+
+## What determines whether a label gets conventionalized?
+
+Scatter plot (all datapoints)
+
+TODO: glm is a little weird since it breaks out match % by num occurrences but still aggregates pmi -- should it entirely be at granularity of participant (i.e. gameid, word, pmi, match (T/F) so we can do glmer?) granted, that might be pretty noisy and hard to estimate pmi of individual words per participant... 
+
+```{r}
+distinctiveness_d <- read.csv("outputs/sequential_matchAndPMI.csv", header = TRUE) %>%
+  filter(pmi > 0) %>%
+  rename(num_occurrences = total) %>%
+  filter(num_occurrences > 1) %>%
+  #filter(POS == "NN") %>%
+  mutate(bunny = word == "bunny") %>%
+  mutate(a_match = word == "a")
+cbbPalette <- c("#000000", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
+
+# Split out into binary values:
+binary.d <- distinctiveness_d %>% 
+  mutate(numOnes = match * num_occurrences,
+         numZeros = num_occurrences - numOnes) %>%
+  do(rbind(data.frame(.[rep(1:nrow(.), .$numOnes),]) %>% mutate(singleMatch = 1),
+           data.frame(.[rep(1:nrow(.), .$numZeros),]) %>% mutate(singleMatch = 0))) 
+
+ggplot(distinctiveness_d %>% 
+         filter(match > 0) %>%
+         filter(match < 1),
+         aes(x = pmi, y = log(match))) +
+  geom_point(aes(size = num_occurrences), color = 'white') +
+  geom_smooth(method = "lm") +
+  scale_y_continuous() +#continuous(trans = 'log1p') +
+  # geom_smooth(data = binary.d, aes(x = pmi, y = singleMatch),
+  #   method = "glm", method.args = list(family = "binomial"),
+  #   se = TRUE) +
+  ylab('log P(match)') +
+  xlab('pointwise mutual information on first repetition') +
+  mytheme(24) +
+  theme(aspect.ratio = 1) +
+  guides(size = FALSE)
+
+ggsave("../writing/tangrams/figs/PMI_by_match.png", bg = 'transparent')
+```  
+
+```{r}
+distinctiveness_d %>% 
+         filter(match > 0) %>%
+         filter(match < 1) %>%
+         summarize(r = cor(match, pmi))
+summary(lm(match ~ pmi + num_occurrences, data=distinctiveness_d))
+```
+
+### Look at pmi across POS...
+
+```{r}
+pos_d <- read.csv("sequential_matchAndPMI.csv", header = TRUE) %>%
+  filter(pmi > 0) %>%
+  mutate(POS = as.character(POS)) %>%
+  mutate(POS = ifelse(POS %in% c('NN', 'NNS', 'NNP', 'NNPS'), "noun", POS)) %>%
+  mutate(POS = ifelse(POS %in% c('MD', 'VB', 'VBZ', 'VBP', 'VBD', 'VBN', 'VBG'), "verb", POS)) %>%
+  mutate(POS = ifelse(POS %in% c('DT', 'WDT'), 'det', POS)) %>%
+  mutate(POS = ifelse(POS %in% c('PRP', 'PRP$', 'WP', 'WP$'), 'pronoun', POS)) %>%
+  mutate(POS = ifelse(POS %in% c('CC'), 'conjunction', POS)) %>%
+  mutate(POS = ifelse(POS %in% c('JJ', 'JJR', 'JJS'), 'adjective', POS)) %>%
+  mutate(POS = ifelse(POS == 'IN', 'preposition', POS)) %>%
+  mutate(POS = ifelse(POS %in% c('noun', 'verb', 'det', 'pronoun', 'conjunction', 'adjective', 'preposition'), POS, 'other')) %>%
+  group_by(POS) %>%
+  summarize(se = sd(pmi)/sqrt(length(pmi)),
+            mean_pmi = mean(pmi),
+            num = sum(total),
+            mean_match = mean(match)) %>%
+  filter(num > 200)
+cbbPalette <- c("#000000", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
+
+ggplot(pos_d %>% filter(POS != 'other'), aes(x = reorder(POS,mean_pmi,
+                     function(x)-x), y = mean_pmi)) +
+  geom_bar(stat='identity') +
+  geom_errorbar(aes(ymax = mean_pmi + se, ymin = mean_pmi - se)) +
+  theme_few() +
+  xlab("part of speech") +
+  ylab("pointwise mutual information")
+```
+
+
+Alternatively, can do a nonparametric analysis: draw a random word from each tangram/gameid pair and look at the percentage that match with round 6... This gives a null distribution. Then we can take the highest PMI word (or words) for each tangram/gameid pair and look at the percentage of *those* that match. We see that it's much higher than expected under the null.
+
+```{r}
+# TODO: get red to show up in legend
+nonparametric_d = read.csv("outputs/PMIbootstrap.csv", header = TRUE) %>%
+  mutate(PMI = factor(highest, levels = c('null', 'highest'), labels = c('random', 'top')))
+
+highestValAvg = (nonparametric_d %>% filter(highest == 'highest') %>% summarize(avg = mean(match)))$avg
+
+nonparametric_d %>%
+  group_by(sampleNum, PMI) %>%
+  filter(PMI == 'random') %>%
+  summarize(avgMatchRate = mean(match)) %>%
+  ungroup() %>%
+  ggplot(aes(x = avgMatchRate, fill = PMI)) +
+  geom_histogram(binwidth = .0075) +
+  geom_vline(aes(xintercept = highestValAvg), 
+             color = 'red', linetype = "dashed", size = 2) +
+  xlab("probability of match b/w Rounds 1 & 6") +
+  scale_fill_manual(values = c("random" = "white", "top"= "red")) +
+  guides(fill=FALSE) +
+  mytheme(24) +
+  theme(aspect.ratio = 1)
+
+ggsave('../writing/tangrams/figs/bootstrappedPMI.png',
+       bg = 'transparent')
+```
+
+## How much is within-game similarity disrupted by scrambling utterances across games?
+
+Calculate entropy under permutation tests
+
+Note that we explicitly do *not* normalize entropies, as this
+removes the contribution of a bigger vocabulary (as we would expect)
+
+```{r}
+getCounts <- function(contents) {
+  corpus <- Corpus(VectorSource(paste(contents, collapse = " ")))
+  return(colSums(as.matrix(DocumentTermMatrix(corpus))))
+}
+
+permutationTest <- function(d, sample_id) {
+  # scramble across games within each repetition/tangram
+  permuted = d %>%
+    group_by(repetitionNum, intendedName) %>%
+    mutate(permutation = sample(contents)) %>%
+    group_by(gameid, intendedName) %>%
+    summarize(ent = entropy(getCounts(permutation))) %>%
+    group_by(intendedName) %>%
+    summarize(meanEnt = mean(ent)) %>%
+    mutate(sample_id = sample_id)
+  return(permuted)
+}
+
+permutations <- map_dfr(seq_len(1000), ~permutationTest(d, .x))
+
+trueEntropy <- (tangramCombined %>%
+  group_by(gameid, intendedName) %>%
+  summarize(trueEntropy = entropy(getCounts(contents))) %>%
+  group_by(intendedName) %>%
+  summarize(meanEnt = mean(trueEntropy))
+)
+
+
+```
+
+Plotted 
+
+```{r}
+ggplot(rbind(permutations, trueEntropy), aes(x = 0, y = permuted)) +
+  geom_violin(fill = '#d07e93', alpha = 0.25, color = NA) +
+  geom_point(aes(x = 0, y = true), size = 4, color = "#163c4e") +
+  theme_bw() +
+  ylab('entropy of word distribution') +
+  coord_flip() +
+  scale_x_continuous(breaks = NULL) +
+  theme(aspect.ratio = 1/5)
+```
+
+```{r}
+summary(lmer(ent ~ permutation + (1 + permutation | gameid) + (1 + permutation | intendedName), 
+             data = allEntropies))
+```
+
+## tsne visualizations
+
+```{r}
+tsne <- read_csv('outputs/embeddings.csv') %>%
+  left_join(read_csv('../data/tangramsSequential_collapsed.csv') ) %>%
+  select(gameid, intendedName, repetitionNum, x_tsne, y_tsne, x_mds, y_mds, contents) %>%
+  mutate(r = useful::cart2pol(x_tsne, y_tsne)$r,
+         theta = useful::cart2pol(x_tsne, y_tsne)$theta) %>%
+  group_by(gameid, intendedName) %>%
+  arrange(repetitionNum) %>%
+  mutate(finalTheta = last(theta)) 
+library(viridis)
+library(gganimate)
+
+```
+
+```{r}
+p <- ggplot(tsne %>% filter(repetitionNum %in% c(1,6)) %>% group_by(gameid, intendedName) %>% filter(length(gameid) == 2), aes(x = x_tsne, y = y_tsne, group = interaction(gameid,intendedName))) +
+  #geom_line(alpha = 0.2) +
+  geom_point(aes(#shape = factor(-repetitionNum),
+                 color = finalTheta,
+                 alpha = 1
+    ),
+             size = 1.5, stroke = 2
+             ) +
+  facet_wrap(~ intendedName) +
+  theme_few(20) +
+  ggtitle('pca + tsne embeddings') +
+  scale_shape_manual(values = c(21)) +
+  scale_alpha_continuous(range = c(0.5, 1))+
+  scale_color_gradientn(colours = viridis(5))+
+  guides(color = F, shape = F, alpha = F) +
+  theme(aspect.ratio = 1)  +
+  labs(title = "Rep. {floor(frame_time)}", x = "", y = "") +
+  theme(axis.title=element_blank(),
+      axis.text=element_blank(),
+      axis.ticks=element_blank()) +
+  transition_time(as.numeric(repetitionNum)) # speed it up!
+
+   
+animate(p, nframes = 50)
+anim_save(filename = '../writing/tangrams/figs/tsne-animation.gif')
+```
+
+Just save out final frame
+
+```{r}
+ggplot(tsne %>% filter(repetitionNum %in% c(6)), aes(x = x_tsne, y = y_tsne)) +
+  #geom_line(alpha = 0.2) +
+  geom_point(aes(#shape = factor(-repetitionNum),
+                 color = finalTheta,
+                 ),
+             size = 1.5, stroke = 2
+             ) +
+  facet_wrap(~ intendedName) +
+  theme_few(20) +
+  ggtitle('pca + tsne embeddings') +
+  scale_shape_manual(values = c(21)) +
+  scale_alpha_continuous(range = c(0.5, 1))+
+  scale_color_gradientn(colours = viridis(5))+
+    theme(axis.title=element_blank(),
+      axis.text=element_blank(),
+      axis.ticks=element_blank()) +
+  labs(x = "", y = "") +
+  guides(color = F, shape = F, alpha = F) +
+  theme(aspect.ratio = 1)  #+
+
+ggsave(filename = '../writing/tangrams/figs/tsne-animation_final.pdf')
+```
+
+```{r}
+ggplot(tsne, aes(x = x_mds, y = y_mds, group = gameid, frame = paste0('repetition: ', repetitionNum)) +
+  geom_line(alpha = 0.2) +
+  geom_point(aes(shape = factor(-repetitionNum), 
+                 color = finalTheta, 
+                 alpha = factor(repetitionNum)),
+             size = 1.5, stroke = 2,
+             data = tsne %>% filter(repetitionNum %in% c(1,6))) +
+  facet_wrap(~ intendedName) +
+  theme_few(20) +
+  ggtitle('mds embeddings') +
+  scale_shape_manual(values = c(16, 21)) +
+  scale_alpha_discrete(range = c(0.5, 1))+
+  scale_color_gradientn(colours = tableau_color_pal()(3))+
+  guides(color = F, shape = F, alpha = F) +
+  theme(aspect.ratio = 1) 
+
+ggsave('../writing/tangrams/figs/mds_embeddings.pdf', width = 15, height = 15)
 ```
 
 # Dynamics of structure/syntax
 
-We've already done most of the work using nltk in the ipython notebook, so here we just read in the csv files we created there, do a bit of post-processing, and make plots.
+We've already done most of the pre-processing work in preprocessing.Rmd and the jupyter notebook, so here we just read in the csv files we created there, do a bit of post-processing, and make plots.
 
 ## What are the unigrams/bigrams/trigrams that drop the most in frequency across whole data set?
-
-```{r}
-# Function takes a countType ['unigrams', 'bigrams', 'trigrams'] and returns a table of most reduced n-gram
-getMostReduced = function(countType) {
-  filename <- paste0("sequential/", countType, "Counts.csv")
-  print(filename)
-  return(read_csv(filename, col_names = T) %>%
-    group_by(word, repetitionNum) %>%
-    summarize(count = sum(count)) %>%
-    rowwise() %>%
-    mutate(repetitionNum = paste0("rep", repetitionNum, collapse = "")) %>%
-    spread(repetitionNum, count) %>%
-    mutate(diffSize = rep1 - rep6,
-           diffPct = (rep1 - rep6)/rep1) %>%
-    arrange(desc(diffSize))) 
-}
-```
 
 ```{r}
 getMostReduced('unigrams')
@@ -53,7 +296,6 @@ getMostReduced('unigrams')
 
 ```{r}
 getMostReduced('bigrams')
-
 ```
 
 ```{r}
@@ -63,16 +305,7 @@ getMostReduced('trigrams')
 Make little table to put in supplemental?
 
 ```{r}
-topWords <- t(cbind(getMostReduced('unigrams') %>% select(word) %>% head(10), 
-                    getMostReduced('bigrams') %>% select(word) %>% head(10),
-                    getMostReduced('trigrams') %>% select(word) %>% head(10)))
-
-colnames(topWords) <- paste0(paste('#', seq(10), sep = ''))
-rownames(topWords) <- c('unigrams', 'bigrams', 'trigrams')
-topWords.toPrint = xtable(topWords, label = 'tab:words',
-                          caption = 'Top 10 unigrams and bigrams with the highest reduction')
-align(topWords.toPrint) <- paste0(c("|r||", rep('l|', 10)), collapse = "")
-print(topWords.toPrint, floating.environment = "table*", comment=F, table.placement = 't')
+makeNGramTable(10)
 ```
 
 Seems to be markers of figurative descriptions, determiners, and modifying phrases like 'on the left'?
@@ -82,32 +315,16 @@ Seems to be markers of figurative descriptions, determiners, and modifying phras
 ### Reduction in utterance length
 
 ```{r, cache = T, warning=F}
-tagged_df <- read_csv('./outputs/posTaggedtangramsSequential_collapsed.csv') %>%
+tagged_df <- read_csv('./outputs/posTagged_tangramsSequential_collapsed.csv', 
+                      col_types = 'ciicciiiiiiiccii') %>%
   #filter(role == 'director') %>%
-  select(-text, -contents, -posCounts, -pos) %>%
-  left_join(read_csv('./outputs/constituency_tags.csv') %>%
-      replace_na(list(SBAR = FALSE, PP = FALSE, CC = FALSE)) %>%
+  #select(-text, -contents, -posCounts, -pos) #%>%
+  left_join(read_csv('./outputs/constituency_tags.csv', col_names = T , col_types = '-cicccccc') %>%
+      replace_na(list(SBAR = FALSE, PP = FALSE, CC = FALSE, NP = FALSE)) %>%
       mutate(SBAR = ifelse(SBAR == 'True', TRUE, FALSE),
-           PP = ifelse(PP == 'True', TRUE, FALSE), 
-           CC = ifelse(CC == 'True', TRUE, FALSE)) %>%
-      select(-X1))
-```
-
-```{r}
-read_csv('../data/tangramsSequential_nocleaning.csv') %>%
-   group_by(gameid, repetitionNum) %>% #taskVersion
-  filter(role != 'matcher') %>%
-   summarize(numRawWords = sum(numRawWords)/12) %>%
-    group_by(repetitionNum) %>%
-   tidyboot_mean(numRawWords, na.rm = T) 
-```
-
-```{r}
-read_csv('../data/tangramsSequential_collapsed.csv') %>%
-   group_by(repetitionNum) %>% #taskVersion
-  #  summarize(numRawWords = sum(numRawWords)/12) %>%
-  # group_by(repetitionNum) %>%
-   tidyboot_mean(numRawWords, na.rm = T) 
+           PP = ifelse(PP == 'True', TRUE, FALSE),
+           NP = ifelse(NP == 'True', TRUE, FALSE),
+           CC = ifelse(CC == 'True', TRUE, FALSE)))
 ```
 
 ```{r}
@@ -118,23 +335,21 @@ tagged_df %>%
    tidyboot_mean(numWords, na.rm = T) %>%
    mutate(measure = '# words per tangram') %>%
    ggplot(aes(x = repetitionNum, y = empirical_stat)) + #, color = taskVersion
-    geom_line() +
+    geom_ribbon(aes(ymax = ci_upper, ymin = ci_lower), fill = 'gray50') +
+    geom_line(color = 'white') +
     xlab('repetition #') +
-    ylab('mean # words per tangram') +
-    #geom_ribbon(aes(ymax = ci_upper, ymin = ci_lower), alpha = .2) +
+    ylab('mean # words used \n per tangram') +
     #facet_wrap(~ taskVersion, nrow = 1, ncol = 2) +
+    scale_x_continuous(breaks = round(seq(1, 6, by = 1),1)) +
     ylim(c(0, NA)) +
-    theme_few(12) +
-    theme(aspect.ratio = .75)
-
-ggsave('../writing/tangrams/figs/wordReduction.pdf',
-       width = 5, height = 4)
+    mytheme(24) 
+ggsave('../writing/tangrams/figs/wordReduction.png', bg = 'transparent')
 ```
 
 Statistics:
 
 ```{r}
-summary(lmer(numRawWords ~ poly(repetitionNum,2) + 
+summary(lmer(log(numRawWords) ~ poly(repetitionNum,2) + 
                (1 + repetitionNum | gameid) + 
                (1 + repetitionNum | intendedName), 
              data = tagged_df %>% 
@@ -148,30 +363,65 @@ summary(lmer(numRawWords ~ poly(repetitionNum,2) +
 examine reduction in different parts of speech, i.e. to argue that it's not just small-talk going down or something. 
 
 ```{r}
-tagged_df %>% 
-  #filter(taskVersion == 'cued') %>%
-  mutate(numNPWords = ifelse(noun_chunks == "[]", 0, str_count(noun_chunks, "\\S+"))) %>%
-  group_by(gameid, repetitionNum) %>% 
-  summarize(NOUN = sum(NOUNcount),
-            PRON = sum(PRONcount),
-            ADJ = sum(ADJcount),
-            DET = sum(DETcount),
-            VERB = sum(VERBcount)) %>%
-  gather(POS, count, NOUN, ADJ, DET, VERB, PRON) %>%
-  mutate(count = count / 12) %>%
-  group_by(repetitionNum, POS) %>%
-  tidyboot_mean(count) %>%
-  ggplot(aes(x = repetitionNum, y = empirical_stat, color = POS)) +
-    geom_line() +
-    theme_few() +
-    geom_ribbon(aes(ymax = ci_upper, ymin = ci_lower), alpha = .2) +
-    #geom_dl(aes(label = intendedName), method = list(dl.trans(x = x - .1), "first.points")) +
-    #facet_wrap(~ taskVersion) +
-    xlab("repetition #") +
-    ylab("# words in POS category per tangram") +
-    theme(aspect.ratio = 1)
+cum_pos.d <- tagged_df %>%
+  group_by(repetitionNum) %>%
+  summarize(numWords = sum(numWords),
+            numMessages = length(gameid),
+            nouns = sum(NOUNcount),
+            verbs = sum(VERBcount),
+            dets= sum(DETcount),
+            pronouns = sum(PRONcount),
+            preps = sum(ADPcount),
+            adverbs = sum(ADVcount),
+            conjunctions = sum(CCONJcount),
+            adjectives = sum(ADJcount)) %>%
+  mutate(OTHER = (numWords - nouns - verbs - dets - pronouns -
+                      preps - adjectives - conjunctions - adverbs)) %>%
+  gather(POS, total, nouns:OTHER) %>%
+  mutate(total = total/numMessages) %>% # normalize to # / message
+  mutate(POS = factor(POS, levels = c('nouns', 'verbs',  'preps', 'dets', 
+                                      'adjectives', 'adverbs', 'pronouns', 'conjunctions', 'OTHER'))) %>%
+  select(repetitionNum, POS, total) 
 
-ggsave('../writing/tangrams/figs/POS_reduction.pdf', width = 5, height = 4)
+ggplot(cum_pos.d, aes(x = repetitionNum, y = total, fill = POS)) +
+    geom_area(alpha=0.6 , size=.5, colour="white") +
+    geom_text(data=cum_pos.d %>% 
+                filter(repetitionNum == 1) %>%
+                arrange(POS) %>%
+                mutate(cum = rev(cumsum(rev(total)))), 
+              aes(x=1, y=cum-.5, label=POS),
+              hjust = 0, color = 'white', size=7) +
+    scale_fill_brewer(palette = "Set1") +
+    guides(fill = FALSE) +
+    mytheme(24)
+
+ggsave('../writing/tangrams/figs/wordReduction_by_POS.png', bg = 'transparent')
+```
+
+
+```{r}
+tagged_df %>%
+  group_by(repetitionNum) %>%
+  summarize(numWords = sum(numWords),
+            nouns = sum(NOUNcount)/sum(numWords),
+            verbs = sum(VERBcount)/sum(numWords),
+            dets= sum(DETcount)/sum(numWords),
+            pronouns = sum(PRONcount)/sum(numWords),
+            preps = sum(ADPcount)/sum(numWords),
+            adverbs = sum(ADVcount)/sum(numWords),
+            conjunctions = sum(CCONJcount)/sum(numWords),
+            adjectives = sum(ADJcount)/sum(numWords)) %>%
+  mutate(OTHER = (1 - nouns - verbs - dets - pronouns -
+                      preps - adjectives - conjunctions - adverbs)) %>%
+  gather(POS, prop, nouns:OTHER) %>%
+  mutate(POS = factor(POS, levels = c('nouns',  'dets', 'verbs', 'adjectives', 'adverbs', 
+                              'preps', 'pronouns', 'conjunctions', 'OTHER'))) %>%
+
+  select(repetitionNum, POS, prop) %>%
+  ggplot(aes(x = repetitionNum, y = prop, fill = POS)) +
+    geom_area(alpha=0.6 , size=1, colour="black") +
+    scale_fill_brewer(palette = "Set1") +
+    theme_bw()
 ```
 
 TODO: distance in depth of the tree between the nouns
@@ -179,46 +429,55 @@ TODO: distance in depth of the tree between the nouns
 TODO: consider only showing full curve like this for ones we want to highlight (e.g. nouns vs. verbs vs. adjectives or something?), and a supplemental bar plot version with % decrease in appearance of each POS (like in the cogsci paper).
 
 ```{r}
-# df_tagged %>%
-#   group_by(roundNum, gameid) %>%
-#   summarize(numWords = sum(numWords),
-#             nouns = sum(nouns),
-#             #numbers = sum(numbers),
-#             verbs = sum(verbs),
-#             dets= sum(determiners),
-#             pronouns = sum(pronouns),
-#             preps = sum(prepositions),
-#             adjectives = sum(adjectives),
-#             adverbs = sum(adverbs)) %>%
-#   gather(POS, count, nouns:adverbs) %>%
-#   select(gameid, roundNum, POS, count) %>%
-#   # Need to put in ids to spread
-#   rowwise() %>%
-#   mutate(id = row_number()) %>%
-#   mutate(roundNum = paste0('round', roundNum, collapse = '')) %>%
-#   spread(roundNum, count) %>%
-#   # Compute % reduction from first to last round
-#   mutate(diffPct = (round1 - round6)/round1) %>%
-#   group_by(POS) %>%
-#   # Filter out handful of people who skipped first round w/ negative %...
-#   filter(diffPct >= 0) %>%
-#   filter(POS != "OTHER") %>%
-#   # Take mean & se over participants
-#   multi_boot_standard('diffPct') %>%
-#   mutate(cat = ifelse(POS %in% c('dets', 'pronouns', 'preps'), 'closed', 'open')) %>%
-#   # rearrange
-#   transform(POS=reorder(POS, -mean) )
-# 
-# detReductionRate <- (posReduction %>% filter(POS == 'dets'))$mean * 100
-# nounReductionRate <- (posReduction %>% filter(POS == 'nouns'))$mean * 100
-# 
-# ggplot(posReduction, aes(x = POS, y = mean, fill = cat)) +
-#   geom_bar(stat = 'identity') +
-#   geom_errorbar(aes(ymax = summary_ci_upper, ymin = summary_ci_lower), width = .1)+
-#   theme_bw(9) +
-#   theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
-#   ylab("% reduction") +
-#   xlab("Part of Speech category")
+posReduction <- tagged_df %>%
+  group_by(gameid, repetitionNum) %>%
+  summarize(numWords = sum(numWords),
+            numMessages = length(gameid),
+            nouns = sum(NOUNcount),
+            verbs = sum(VERBcount),
+            dets= sum(DETcount),
+            pronouns = sum(PRONcount),
+            preps = sum(ADPcount),
+            adverbs = sum(ADVcount),
+            conjunctions = sum(CCONJcount),
+            adjectives = sum(ADJcount)) %>%
+  gather(POS, count, nouns:adjectives) %>%
+  select(gameid, repetitionNum, POS, count) %>%
+  # Need to put in ids to spread
+  rowwise() %>%
+  mutate(id = row_number()) %>%
+  mutate(repetitionNum = paste0('rep', repetitionNum, collapse = '')) %>%
+  spread(repetitionNum, count) %>%
+  # Compute % reduction from first to last round
+  mutate(diffPct = (rep1 - rep6)/rep1) %>%
+  group_by(POS) %>%
+  # Filter out handful of people who skipped first round w/ negative %...
+  filter(diffPct >= 0) %>%
+  filter(POS != "OTHER") %>%
+  group_by(POS) %>%
+  # Take mean & se over participants
+  tidyboot_mean(column = diffPct, na.rm = T) %>%
+  mutate(cat = ifelse(POS %in% c('dets', 'pronouns', 'preps', 'conjunctions'), 'closed', 
+                      ifelse(POS == 'adverbs', '?', 'open'))) %>%
+  mutate(cat = factor(cat, levels = c('closed', '?', 'open'))) %>%
+  # rearrange
+  transform(POS=reorder(POS, mean))
+
+detReductionRate <- (posReduction %>% filter(POS == 'dets'))$mean * 100
+nounReductionRate <- (posReduction %>% filter(POS == 'nouns'))$mean * 100
+
+ggplot(posReduction, aes(x = POS, y = mean, fill = cat)) +
+  geom_bar(stat = 'identity') +
+  geom_errorbar(aes(ymax = ci_upper, ymin = ci_lower), width = .1,
+                color = 'white')+
+  ylab("% reduction") +
+  xlab("Part of Speech category")  +
+  mytheme(24) +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
+  scale_fill_manual(values=c('tomato3', 'gray', 'orange'))
+
+
+ggsave('../writing/tangrams/figs/posReduction.png', bg = 'transparent')
 ```
 
 ### Reduction in syntactic features 
@@ -228,23 +487,26 @@ TODO: include % including NPs? (shouldn't go down as much)
 ```{r}
 tagged_df %>%
   #filter(taskVersion == 'cued') %>%
-  select(gameid, repetitionNum, SBAR, CC, PP) %>% #, taskVersion
-  gather(measure, occurrence, SBAR:PP) %>%
+  select(gameid, repetitionNum, SBAR, CC, PP, NP) %>% #, taskVersion
+  gather(measure, occurrence, SBAR:NP) %>%
   group_by(repetitionNum, gameid, measure) %>%#taskVersion, 
   summarize(m = mean(occurrence)) %>%
   group_by(repetitionNum, measure) %>%#taskVersion, 
-  tidyboot_mean(m) %>%
+  tidyboot_mean(m, na.rm = T) %>%
+  filter(measure != "NP") %>%
   ggplot(aes(x = repetitionNum, y = empirical_stat)) +
-    geom_line() +
+    geom_ribbon(aes(ymax = ci_upper, ymin = ci_lower), width = .1,
+                  color = 'grey50') +
+    geom_line(color = 'white') +
     xlab('repetition #') +
-    ylab('% of messages containing syntactic feature') +
-    geom_errorbar(aes(ymax = ci_upper, ymin = ci_lower), width = .1) +
+    ylab('% of messages \n with syntactic feature') +
     facet_grid(. ~ measure) +#taskVersion
     ylim(c(0, NA)) +
-    theme_few(12) +
+    mytheme(24) +
+    scale_x_continuous(breaks = round(seq(1, 6, by = 1),1)) +
     theme(aspect.ratio = .75)
 
-ggsave('../writing/tangrams/figs/syntacticReduction.pdf', width = 8, height = 3)
+ggsave('../writing/tangrams/figs/syntacticReduction.pdf', width = 8, height = 3, bg = 'transparent')
 ```
 
 
@@ -267,11 +529,30 @@ listenerMsgs <- message_df %>%
   spread(role, individualM)
 
 listenerReduction <- listenerMsgs %>%
-   group_by(repetitionNum, intendedName) %>%
-   tidyboot_mean(matcher) %>%
+   group_by(repetitionNum, gameid) %>%
+   summarize(matcherTalks = sum(matcher) > 0) %>%
+   group_by(repetitionNum) %>%
+   tidyboot_mean(matcherTalks) %>%
    mutate(measure = '# listener messages')  
+```
 
-listenerMsg_lm = summary(lmer(matcher ~ repetitionNum + (1 | gameid), data = listenerMsgs))
+Plot it.
+
+```{r}
+ggplot(listenerReduction, aes(x = repetitionNum, y = mean*100)) +
+  geom_ribbon(aes(ymax = 100*ci_upper, ymin = 100*ci_lower), fill = 'gray50') +
+  geom_line(color = 'white') +
+  ylab('% games where \n matcher sent message') +
+  xlab('repetition #') +
+  ylim(0,100) +
+  scale_x_continuous(breaks = round(seq(1, 6, by = 1),1)) +
+  mytheme(24)
+
+ggsave('../writing/tangrams/figs/listenerResponses.png', bg = "transparent")
+
+listenerMsg_lm = summary(glmer(matcherBin ~ repetitionNum + (1 + repetitionNum | gameid) + (1  + repetitionNum | intendedName), 
+                               data = listenerMsgs %>% mutate(matcherBin = matcher > 0), 
+                               family = 'binomial'))
 print(listenerMsg_lm)
 ```
 
@@ -395,281 +676,26 @@ tagged_df %>%
     theme(aspect.ratio = .75)
 ```
 
-# Dynamics of semantics
-
-## How much is within-game similarity disrupted by scrambling utterances across games?
-
-Calculate entropy under permutation tests
-
-```{r}
-getCounts <- function(contents) {
-  corpus <- Corpus(VectorSource(paste(contents, collapse = " ")))
-  return(colSums(as.matrix(DocumentTermMatrix(corpus))))
-}
-
-permutationTest <- function(df) {
-  permuted = df %>%
-    group_by(roundNum) %>%
-    mutate(permutation = sample(contents)) %>%
-    group_by(gameid) %>%
-    summarize(ent = entropy(getCounts(permutation))) %>%
-    ungroup()
-  return(mean(permuted$ent))
-}
-
-permutations <- replicate(1000, {
-  permutationTest(tangramCombined)
-})
-
-# Note that we explicitly do *not* normalize entropies, as this
-# removes the contribution of a bigger vocabulary (as we would expect)
-trueEntropy <- mean((tangramCombined %>%
-  group_by(gameid) %>%
-  summarize(ent = entropy(getCounts(contents))) %>%
-  ungroup())$ent)
-
-ggplot() +
-  geom_histogram(aes(x = permutations), binwidth = .005) +
-  geom_vline(xintercept = trueEntropy, color = 'red') +
-  theme_few(9) +
-  xlab('entropy')
-```
-
-More targeted tangram-by-tangram analysis of cued version only
-
-```{r}
-tangramCombined %>%
-    group_by(occurrenceNum, intendedObj) %>%
-    mutate(permutation = sample(contents)) %>%
-    group_by(gameid, intendedObj) %>%
-    summarize(ent = entropy(getCounts(permutation))) %>%
-    group_by(intendedObj) %>%
-    summarize(meanEnt = mean(ent))
-
-permutationTest <- function(df) {
-  permuted = df %>%
-    group_by(occurrenceNum, intendedObj) %>%
-    mutate(permutation = sample(contents)) %>%
-    group_by(gameid, intendedObj) %>%
-    summarize(ent = entropy(getCounts(permutation))) %>%
-    group_by(intendedObj) %>%
-    summarize(meanEnt = mean(ent))
-  return(permuted$meanEnt)
-}
-
-numPermutations = 1000
-permutations <- replicate(numPermutations, {
-  permutationTest(tangramCombined)
-})
-
-# Note that we explicitly do *not* normalize entropies, as this
-# removes the contribution of a bigger vocabulary (as we would expect)
-trueEntropy <- (tangramCombined %>%
-  group_by(gameid, intendedObj) %>%
-  summarize(trueEntropy = entropy(getCounts(contents))) %>%
-  group_by(intendedObj) %>%
-  summarize(meanEnt = mean(trueEntropy))
-)
-
-allEntropies <- cbind(trueEntropy, permutations) %>% 
-  gather(permutationNum, ent, `1`:`1000`) %>%
-  mutate(permutation = ifelse(permutationNum != 'trueEntropy', TRUE, FALSE))
-
-allEntropies %>%
-  ggplot(aes(x = ent)) +
-    geom_histogram(binwidth = .01) +
-    geom_vline(aes(xintercept = meanEnt), color = 'red') +
-    theme_few(9) +
-    facet_wrap( ~ intendedObj, scale = "free_y") +
-    xlab('entropy') +
-    theme(aspect.ratio = .5) 
-```
-
-```{r}
-summary(lmer(ent ~ permutation + (1 + permutation | gameid) + (1 + permutation | intendedObj), 
-             data = allEntropies))
-```
-
-## What determines whether a label gets conventionalized?
-
-Scatter plot (all datapoints)
-
-```{r}
-distinctiveness_d <- read.csv("sequential_matchAndPMI.csv", header = TRUE) %>%
-  mutate(POS = as.character(POS)) %>%
-  mutate(POS = ifelse(POS %in% c('NN', 'NNS', 'NNP', 'NNPS'), "noun", POS)) %>%
-  mutate(POS = ifelse(POS %in% c('MD', 'VB', 'VBZ', 'VBP', 'VBD', 'VBN', 'VBG'), "verb", POS)) %>%
-  mutate(POS = ifelse(POS %in% c('DT', 'WDT'), 'det', POS)) %>%
-  mutate(POS = ifelse(POS %in% c('PRP', 'PRP$', 'WP', 'WP$'), 'pronoun', POS)) %>%
-  mutate(POS = ifelse(POS %in% c('CC'), 'conjunction', POS)) %>%
-  mutate(POS = ifelse(POS %in% c('JJ', 'JJR', 'JJS'), 'adjective', POS)) %>%
-  mutate(POS = ifelse(POS == 'IN', 'preposition', POS)) %>%
-  mutate(POS = ifelse(POS %in% c('noun', 'verb', 'det', 'pronoun', 'conjunction', 'adjective', 'preposition'), 
-                      POS, 'other')) %>%
-  filter(pmi > 0) %>%
-  rename(num_occurrences = total) %>%
-  filter(num_occurrences > 1) %>%
-  #filter(POS == "NN") %>%
-  mutate(bunny = word == "bunny") %>%
-  mutate(a_match = word == "a")
-cbbPalette <- c("#000000", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
-
-# Split out into binary values:
-binary.d <- distinctiveness_d %>% 
-  mutate(numOnes = match * num_occurrences,
-         numZeros = num_occurrences - numOnes) %>%
-  do(rbind(data.frame(.[rep(1:nrow(.), .$numOnes),]) %>% mutate(singleMatch = 1),
-           data.frame(.[rep(1:nrow(.), .$numZeros),]) %>% mutate(singleMatch = 0))) 
-
-summary(glm(singleMatch ~ pmi, data=binary.d, family = 'binomial'))
-
-ggplot(distinctiveness_d, aes(x = pmi, y = match)) +
-  geom_point(aes(size = num_occurrences)) +
-  geom_smooth(data = binary.d, aes(x = pmi, y = singleMatch),
-    method = "glm", method.args = list(family = "binomial"), 
-    se = FALSE) +
-  theme_few()
-```  
-
-### Restrict to words with more occurences & common POS
-
-```{r}
-restricted_distinctiveness_d <- distinctiveness_d %>% 
-   filter(POS %in% c('noun', 'preposition', 'det', 'adjective', 'verb'))%>%
-   filter(num_occurrences > 1)
-                
-restricted_binary.d <- restricted_distinctiveness_d %>% 
-  mutate(numOnes = match * num_occurrences,
-         numZeros = num_occurrences - numOnes) %>%
-  do(rbind(data.frame(.[rep(1:nrow(.), .$numOnes),]) %>% mutate(singleMatch = 1),
-           data.frame(.[rep(1:nrow(.), .$numZeros),]) %>% mutate(singleMatch = 0))) 
-
-summary(glm(singleMatch ~ pmi, data=restricted_binary.d, family = 'binomial'))
-
-ggplot(restricted_distinctiveness_d, aes(x = pmi, y = match)) +
-  geom_point(aes(size = num_occurrences)) +
-  geom_point(aes(x = pmi, y = match), color = 'red', data = subset(distinctiveness_d, bunny == TRUE)) +
-  geom_point(aes(x = pmi, y = match), stroke = 3, color = 'yellow', data = subset(distinctiveness_d, a_match == TRUE)) +
-  #geom_smooth(method = 'loess', span = .8) +
-  geom_smooth(data = restricted_binary.d, aes(x = pmi, y = singleMatch),
-    method = "glm", method.args = list(family = "binomial"), 
-    se = FALSE) +
-  theme_few() +
-  scale_colour_manual(values=cbbPalette)+
-  guides(color=FALSE)
-```
-
-### Look at pmi across POS...
-
-```{r}
-pos_d <- read.csv("sequential_matchAndPMI.csv", header = TRUE) %>%
-  filter(pmi > 0) %>%
-  mutate(POS = as.character(POS)) %>%
-  mutate(POS = ifelse(POS %in% c('NN', 'NNS', 'NNP', 'NNPS'), "noun", POS)) %>%
-  mutate(POS = ifelse(POS %in% c('MD', 'VB', 'VBZ', 'VBP', 'VBD', 'VBN', 'VBG'), "verb", POS)) %>%
-  mutate(POS = ifelse(POS %in% c('DT', 'WDT'), 'det', POS)) %>%
-  mutate(POS = ifelse(POS %in% c('PRP', 'PRP$', 'WP', 'WP$'), 'pronoun', POS)) %>%
-  mutate(POS = ifelse(POS %in% c('CC'), 'conjunction', POS)) %>%
-  mutate(POS = ifelse(POS %in% c('JJ', 'JJR', 'JJS'), 'adjective', POS)) %>%
-  mutate(POS = ifelse(POS == 'IN', 'preposition', POS)) %>%
-  mutate(POS = ifelse(POS %in% c('noun', 'verb', 'det', 'pronoun', 'conjunction', 'adjective', 'preposition'), POS, 'other')) %>%
-  group_by(POS) %>%
-  summarize(se = sd(pmi)/sqrt(length(pmi)),
-            mean_pmi = mean(pmi),
-            num = sum(total),
-            mean_match = mean(match)) %>%
-  filter(num > 200)
-cbbPalette <- c("#000000", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
-
-ggplot(pos_d %>% filter(POS != 'other'), aes(x = reorder(POS,mean_pmi,
-                     function(x)-x), y = mean_pmi)) +
-  geom_bar(stat='identity') +
-  geom_errorbar(aes(ymax = mean_pmi + se, ymin = mean_pmi - se)) +
-  theme_few() +
-  xlab("part of speech") +
-  ylab("pointwise mutual information")
-```
-
-
-Alternatively, can do a nonparametric analysis: draw a random word from each tangram/gameid pair and look at the percentage that match with round 6... This gives a null distribution. Then we can take the highest PMI word (or words) for each tangram/gameid pair and look at the percentage of *those* that match. We see that it's much higher than expected under the null.
-
-```{r}
-# TODO: get red to show up in legend
-nonparametric_d = read.csv("PMIbootstrap.csv", header = TRUE) %>%
-  mutate(PMI = factor(highest, levels = c('null', 'highest'), labels = c('random', 'top')))
-
-highestValAvg = nonparametric_d %>% filter(highest == 'highest') %>% summarize(avg = mean(match))
-
-nonparametric_d %>%
-  group_by(sampleNum, PMI) %>%
-  filter(PMI == 'random') %>%
-  summarize(avgMatchRate = mean(match)) %>%
-  ungroup() %>%
-  ggplot(aes(x = avgMatchRate, fill = PMI)) +
-  geom_histogram(binwidth = .0075) +
-  geom_vline(aes(xintercept = highestValAvg), 
-             color = 'red', linetype = "dashed", size = 2) +
-  xlab("probability of match b/w Rounds 1 & 6") +
-  scale_fill_manual(values = c("random" = "black", "top"= "red")) +
-  theme_few()  +
-  guides(fill=FALSE)
-```
-
-## tsne visualizations
-
-```{r}
-tsne <- read_csv('outputs/embeddings.csv') %>%
-  left_join(read_csv('../data/tangrams.csv') %>% filter(role == "director")) %>%
-  select(gameid, intendedName, repetitionNum, x_tsne, y_tsne, x_mds, y_mds, contents) %>%
-  mutate(r = useful::cart2pol(x_tsne, y_tsne)$r,
-         theta = useful::cart2pol(x_tsne, y_tsne)$theta) %>%
-  group_by(gameid, intendedName) %>%
-  arrange(repetitionNum) %>%
-  mutate(finalTheta = last(theta))
-library(viridis)
-```
-
-```{r}
-ggplot(tsne, aes(x = x_tsne, y = y_tsne, group = gameid)) +
-  geom_line(alpha = 0.2) +
-  geom_point(aes(shape = factor(-repetitionNum), 
-                 color = finalTheta, 
-                 alpha = factor(repetitionNum)),
-             size = 1.5, stroke = 2,
-             data = tsne %>% filter(repetitionNum %in% c(1,6))) +
-  facet_wrap(~ intendedName) +
-  theme_few(20) +
-  ggtitle('pca + tsne embeddings') +
-  scale_shape_manual(values = c(16, 21)) +
-  scale_alpha_discrete(range = c(0.5, 1))+
-  scale_color_gradientn(colours = viridis(5))+
-  guides(color = F, shape = F, alpha = F) +
-  theme(aspect.ratio = 1) 
-
-ggsave('../writing/tangrams/figs/tsne_embeddings.pdf', width = 15, height = 15)
-```
-
-```{r}
-ggplot(tsne, aes(x = x_mds, y = y_mds, group = gameid)) +
-  geom_line(alpha = 0.2) +
-  geom_point(aes(shape = factor(-repetitionNum), 
-                 color = finalTheta, 
-                 alpha = factor(repetitionNum)),
-             size = 1.5, stroke = 2,
-             data = tsne %>% filter(repetitionNum %in% c(1,6))) +
-  facet_wrap(~ intendedName) +
-  theme_few(20) +
-  ggtitle('mds embeddings') +
-  scale_shape_manual(values = c(16, 21)) +
-  scale_alpha_discrete(range = c(0.5, 1))+
-  scale_color_gradientn(colours = tableau_color_pal()(3))+
-  guides(color = F, shape = F, alpha = F) +
-  theme(aspect.ratio = 1) 
-
-ggsave('../writing/tangrams/figs/mds_embeddings.pdf', width = 15, height = 15)
-```
-
 # Supplemental analyses
+
+## Compare cleaned vs. uncleaned on basic measures
+
+```{r}
+read_csv('../data/tangramsSequential_nocleaning.csv') %>%
+   group_by(gameid, repetitionNum) %>% #taskVersion
+  filter(role != 'matcher') %>%
+   summarize(numRawWords = sum(numRawWords)/12) %>%
+    group_by(repetitionNum) %>%
+   tidyboot_mean(numRawWords, na.rm = T) 
+```
+
+```{r}
+read_csv('../data/tangramsSequential_collapsed.csv') %>%
+   group_by(repetitionNum) %>% #taskVersion
+  #  summarize(numRawWords = sum(numRawWords)/12) %>%
+  # group_by(repetitionNum) %>%
+   tidyboot_mean(numRawWords, na.rm = T) 
+```
 
 ## What proportion of messages sent by director vs. matcher, respectively?
 
@@ -677,16 +703,16 @@ At beginning, directors send about 60% of total messages (close to equal!) At en
 
 ```{r}
 tangramCombined %>% 
-  group_by(gameid, roundNum, role) %>% 
+  group_by(gameid, repetitionNum, role) %>% 
   summarize(individualM = n()) %>% 
   ungroup() %>%
-  complete(role, roundNum, gameid, fill = list(individualM = 0)) %>% 
+  complete(role, repetitionNum, gameid, fill = list(individualM = 0)) %>% 
   spread(role, individualM) %>% 
   mutate(ratio = director / (director + matcher)) %>%
-   group_by(roundNum) %>% 
+   group_by(repetitionNum) %>% 
    summarize(m = mean(ratio), 
              se = sd(ratio)/sqrt(length(ratio))) %>%
-ggplot(aes(x = roundNum, y = m)) +
+ggplot(aes(x = repetitionNum, y = m)) +
   geom_line() +
   geom_errorbar(aes(ymax = m + se, ymin = m - se), width = .1) +
   ylab("% of total messages sent by director") +
@@ -751,12 +777,12 @@ acrossPair <- oldGrams %>%
   filter(tangramRef != 0) %>%
   filter(tangramRef != 'None') %>%
   filter(tangramRef != '*') %>%
-  group_by(tangramRef, roundNum) %>% 
+  group_by(tangramRef, repetitionNum) %>% 
   summarize(acrossEnt = entropy(colSums(as.matrix(DocumentTermMatrix(Corpus(VectorSource(paste(cleanMsg, collapse = " ")))))))) %>%
   left_join(withinPair, by = "tangramRef") %>%
   gather(type, entropy, acrossEnt, withinEnt)
 
-ggplot(acrossPair, aes(x = roundNum, y = entropy, 
+ggplot(acrossPair, aes(x = repetitionNum, y = entropy, 
                        color = type, linetype = tangramRef)) +
   geom_line()
 ```
@@ -768,7 +794,7 @@ library(entropy)
 
 withinPair <- oldGrams %>% 
   filter(tangram != 0) %>%
-  mutate(half = factor(ifelse(roundNum <= 3, "beg", "end"))) %>%
+  mutate(half = factor(ifelse(repetitionNum <= 3, "beg", "end"))) %>%
   group_by(gameid, tangram, half) %>%
   summarize(ent = entropy(colSums(as.matrix(DocumentTermMatrix(Corpus(VectorSource(paste(cleanMsg, collapse = " ")))))))) %>%
   group_by(tangram, half) %>%
@@ -778,7 +804,7 @@ withinPair
 
 acrossPair <- oldGrams %>% 
   filter(tangram != 0) %>%
-  mutate(half = factor(ifelse(roundNum <= 3, "beg", "end"))) %>%
+  mutate(half = factor(ifelse(repetitionNum <= 3, "beg", "end"))) %>%
   group_by(tangram, half) %>% 
   summarize(acrossEnt = entropy(colSums(as.matrix(DocumentTermMatrix(Corpus(VectorSource(paste(cleanMsg, collapse = " ")))))))) %>%
   left_join(withinPair, by = c("tangram", "half")) %>%
@@ -790,4 +816,37 @@ ggplot(acrossPair,
        aes(x = half, y = entropy, 
            color = tangram, linetype = type, group = interaction(tangram, type))) +
   geom_line()
+```
+
+## Look at raw number of POS over time
+
+Advantage to this is that you can see error bars...
+
+Disadvantage is that it doesn't really help you see how the *proportions* change over time... i.e. what portion of the total these are...
+
+```{r}
+tagged_df %>% 
+  #filter(taskVersion == 'cued') %>%
+  mutate(numNPWords = ifelse(noun_chunks == "[]", 0, str_count(noun_chunks, "\\S+"))) %>%
+  group_by(gameid, repetitionNum) %>% 
+  summarize(NOUN = sum(NOUNcount),
+            PRON = sum(PRONcount),
+            ADJ = sum(ADJcount),
+            DET = sum(DETcount),
+            VERB = sum(VERBcount)) %>%
+  gather(POS, count, NOUN, ADJ, DET, VERB, PRON) %>%
+  mutate(count = count / 12) %>%
+  group_by(repetitionNum, POS) %>%
+  tidyboot_mean(count) %>%
+  ggplot(aes(x = repetitionNum, y = empirical_stat, color = POS)) +
+    geom_line() +
+    theme_few() +
+    geom_ribbon(aes(ymax = ci_upper, ymin = ci_lower), alpha = .2) +
+    #geom_dl(aes(label = intendedName), method = list(dl.trans(x = x - .1), "first.points")) +
+    #facet_wrap(~ taskVersion) +
+    xlab("repetition #") +
+    ylab("# words in POS category per tangram") +
+    theme(aspect.ratio = 1)
+
+ggsave('../writing/tangrams/figs/POS_reduction.pdf', width = 5, height = 4)
 ```

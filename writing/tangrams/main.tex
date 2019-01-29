@@ -97,9 +97,12 @@ Lingo, proper nouns, nicknames, slang, inside jokes, metaphors, and other creati
 Second, because we live in a changing environment, we constantly experience novel entities, events, thoughts, and feelings we want to talk about---complex referents for which we have no pre-existing conventions and real uncertainty about whether a novel compositional expression will mean to our partner exactly what we intend it to mean.
 What do we do when our background conventions are sufficient --- when we have to talk about something we've never had to talk about before with a partner we've never met?
 
-In this paper, we explore the possibility that agents solve this problem by creating new \emph{ad hoc} conventions on the fly.
-Building on the collaborative model proposed by Clark \cite{}, we propose an \emph{inferential} model 
-A family of interactive communication experiments called \emph{repeated reference games} have provided a natural and productive paradigm for studying language use in such scenarios. In a seminal study by \cite{KraussWeinheimer64_ReferencePhrases}, pairs of participants played a cooperative language game where they were presented with arrays of ambiguous shapes in randomized orders. 
+In this paper, we explore the possibility that agents solve this problem by coordinating on new \emph{ad hoc} conventions on the fly.
+We describe an \emph{inferential} account of this rapid coordination, which builds on the collaborative account proposed by Clark \cite{}.
+Testing the predictions of this account have become newly tractable using modern techniques from natural language processing (NLP). 
+
+\emph{Repeated reference games}, first studies by \cite{KraussWeinheimer64_ReferencePhrases}, provide a natural and productive paradigm for studying rapid coordination on meaning.
+Pairs of participants played a cooperative language game where they were presented with arrays of ambiguous shapes in randomized orders. 
 The players were allowed to talk freely; their goal was to find the correspondence between their boards by producing mutually understood descriptions of the shapes. 
 Critically, as particular shapes reappeared on successive rounds of the game, descriptions were dramatically shortened: a lengthy early description like ``the upside-down martini glass in a wire stand'' became simply ``martini'' by the end. 
 In other words, these results suggested that speakers addressed the computational challenge of referring to novel objects with a novel partner by initially drawing on many sources of prior information from existing conventions and then \emph{adapting} with their partner based on shared history.
@@ -183,20 +186,32 @@ We used a three step pre-processing pipeline to prepare our corpus for subsequen
 
 \section{How do meanings change over time?}
 
-Our inferential account makes three key predictions about how speakers change the content of their referring expressions over time.
-First, due to sources of variability in the population of speakers, we predict that different pairs will coordinate on diverging and idiosyncratic labels.
-In other words, different pairs will find different but equally  successful equilibria in the space of possible conventions.
-Second, as speakers learn and gradually strengthen their expectations about how their partner will interpret their referring expressions, the labels used within each pair for each tangram with stabilize.
+An inferential account makes three key predictions about how speakers change the content of their referring expressions over time.
+\emph{First}, due to sources of variability in the population of speakers, we predict that the referring expressions used by different pairs will increasingly diverge to different, idiosyncratic labels.
+In other words, different pairs will find different but equally successful equilibria in the space of possible linguistic conventions.
+\emph{Second}, as speakers learn and gradually strengthen their expectations about how their partner will interpret their referring expressions, the labels used within each pair for each tangram with stabilize.
 In other words, once there is evidence that a particular label is successfully understood, there is little reason to deviate from it.
-We examine these first two predictions using two different signatures: one based on the discrete word count distribution and the other based on vector embeddings of semantic meaning.
-Finally, if participants are also influenced by pragmatic pressures to be informative, the labels that conventionalize should not be a random draw from the initial description. 
+\emph{Third}, if participants are also influenced by pragmatic pressures to be informative, the labels that conventionalize should not be a random draw from the initial description. 
 Instead, we predict that more \emph{distinctive} words in the initial label (e.g. words used exclusively to describe one tangram) will be more likely to remain in later descriptions while less distinctive words contained in many initial descriptions are more likely to be dropped.
 
-\subsection{Conventions diverge to multiple equilibria across pairs and converge to stable equilibria within pairs}
+\subsection{Conventions diverge across pairs but converge to stable equilibria within pairs}
 
-\subsubsection{Using semantic embeddings}
+We examine the first two predictions using two different signatures of similarity: one based on distances computed between continuous vector embeddings of referring expressions and the other based on properties of the discrete word count distribution.
 
+\subsubsection{Semantic embeddings}
 
+\begin{figure}[t]
+\centering
+\includegraphics[scale=.3]{tsne_embeddings.pdf}
+\caption{Semantic embeddings of referring expressions for each tangram, as they change over the game. \todo[inline]{Without really zooming in, it's harder to see the open/closed circles indicating beginning/end (color dominates)}}
+\label{fig:tsne}
+\end{figure}
+
+Although the idea of using vector space representations of words to measure similarity is an old one \cite{XXX}, recent breakthroughs in machine learning have yielded rapid improvements in these representations \cite{XXX}.
+To examine the dynamics of semantic context in referring expressions across and within games, we extracted the GloVe vector for each word \cite{} and averaged word vectors to obtain a single vector for each referring expression.
+To avoid artifacts from function words, we only included content words (nouns, adjectives, verbs) in this average.
+
+We then examine by 
 
 Idiosyncracy across pairs can additionally be assessed by testing the generalization performance of a classifier on held out pairs at the beginning and end of the game. Training on earlier \dots
 
@@ -290,13 +305,6 @@ This result accords with early observations by \cite{Carroll80_NamingHedges}, wh
 \subsection{Shared dynamics across pairs}
 
 Tree-edit distance\dots
-
-\begin{figure}[t]
-\centering
-\includegraphics[scale=.3]{tsne_embeddings.pdf}
-\caption{Semantic embeddings of referring expressions for each tangram, as they change over the game. \todo[inline]{Without really zooming in, it's harder to see the open/closed circles indicating beginning/end (color dominates)}}
-\label{fig:reduction}
-\end{figure}
 
 
 \section{General Discussion}\label{general-discussion}

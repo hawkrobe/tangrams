@@ -198,14 +198,14 @@ Instead, we predict that more \emph{distinctive} words in the initial label (e.g
 
 We examine the first two predictions using two different signatures of similarity: one based on distances computed between continuous vector embeddings of referring expressions and the other based on properties of the discrete word count distribution.
 
-\subsubsection{Semantic embeddings}
-
-\begin{figure}[t]
+\begin{figure}[t!]
 \centering
 \includegraphics[scale=.3]{tsne_embeddings.pdf}
 \caption{Semantic embeddings of referring expressions for each tangram, as they change over the game. \todo[inline]{Without really zooming in, it's harder to see the open/closed circles indicating beginning/end (color dominates)}}
 \label{fig:tsne}
 \end{figure}
+
+\subsubsection{Semantic embeddings}
 
 Although the idea of using vector space representations of words to measure similarity is an old one \cite{XXX}, recent breakthroughs in machine learning have yielded rapid improvements in these representations \cite{XXX}.
 To examine the dynamics of semantic context in referring expressions across and within games, we extracted the 300-dimensional GloVe vector for each word \cite{} and averaged word vectors to obtain a single vector for each referring expression.
@@ -214,11 +214,11 @@ To avoid artifacts from function words, we only included content words (nouns, a
 In Fig. \ref{fig:tsne}, we visualize the trajectories of each game in a common vector space using dimensional reduction techniques.
 Specifically, we feed the first 50 components recovered by PCA into the t-SNE algorithm, which stochastically embeds the semantic representations of each utterance used to refer to a given tangram in a common 2D vector space. 
 Utterances from the same speaker are connected by lines, with the initial state marked by an open circle and final state marked by a closed circle.
-
 We make two exploratory observations from this visualization.
 First, while the initial utterances of games cluster tightly near the center of the space, the final utterances are \emph{dispersed} widely around the edges in a ring. 
-This suggests that different speakers overlap more in their early descriptions before diverging to more idiosyncratic utterances late in the game.
-Second, 
+This suggests that different speakers overlap more in the content of their early descriptions before diverging to more idiosyncratic utterances late in the game.
+Second, single pairs generally do not jump widely around the space; most trajectories are `spoke'-like, emitting from the center to near the end-state.
+This suggests that speakers converge fairly monotonically and consistently to their final utterances. 
 
 To test these observations more rigorously, we computed the average vector similarity of utterances used to refer to each tangram on different repetitions \emph{within} a game and also the average similarity \emph{across games}. 
 We predicted that the similarity within games would be higher than the similarity across games, so the statistic of interest was the ratio of these two similarities.
@@ -227,7 +227,7 @@ We found that this ratio was significantly lower than unity, $CI: [], p = XXX$, 
 
 %Idiosyncracy across pairs can additionally be assessed by testing the generalization performance of a classifier on held out pairs at the beginning and end of the game. Training on earlier \dots
 
-\subsubsection{Using discrete word distributions}
+\subsubsection{Discrete word distributions}
 Another way to quantify convergence and divergence across different pairs is to examine the \emph{distribution of words} that each pair uses to refer to each tangram.
 If a pair of participants converges on stable labels for a tangram, then this stability should manifest in a highly structured distribution over words throughout the game for that pair.
 If different speakers discover diverging conventions, this idiosyncracy should also manifest in differing word distributions.
@@ -249,7 +249,16 @@ We found that our null distribution lay within the interval $X, Y$, which is sig
 
 \subsection{More distinctive words on the first round are more likely to conventionalize}
 
-Which words are dropped and which remain?
+A third key prediction concerns \emph{which} words are dropped and which remain? 
+For each word, we estimated the average point-wise mutual information (PMI) on the initial round. 
+PMI is a measure of distinctiveness, comparing the joint probability of a word occurring with a particular tangram to the probability of the word occurring overall: 
+$$PMI_{word, tangram} = \log\frac{P(word, tangram)}{P(word)P(tangram)}$$
+When a word appears equally often with all targets (e.g. an article like ``the''), the PMI is near 0. 
+When a word appears exclusively with a single target (e.g. a descriptive noun like ``rabbit''), the PMI is higher.
+
+We were interested in the extent to which distinctiveness accounts for conventionalization, i.e. the probability of a word in the initial description being preserved until the end of the game. 
+We operationalized conventionalization as the conditional probability of occurring in the final round given an occurrence on the initial round, computed across all pairs. 
+A mixed-effects logistic regression of \dots (see Fig. blah).
 
 
 \section{Quantifying the dynamics of structure}\label{results}

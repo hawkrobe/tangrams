@@ -18,6 +18,9 @@ library(tidyboot)
 library(xtable)
 library(ggthemes)
 library(entropy)
+library(useful)
+library(viridis)
+library(gganimate)
 
 source('./utils/analysis_helpers.R')
 ```
@@ -27,6 +30,221 @@ source('./utils/analysis_helpers.R')
 ```{r}
 d <- read_csv('../data/tangramsSequential_collapsed.csv')
 ```
+
+## semantic similarity analyses
+
+```{r}
+source('./utils/helpers.R')
+library(broom)
+detach('package:lmerTest')
+M_mat = read_csv('./outputs/meta_tangrams_embeddings.csv') %>%
+  #select(gameID, target, repetition, trial_num, feature_ind) %>%
+  mutate(feature_ind = X1 + 1,
+         gameID = gameid,
+         target = intendedName,
+         #trial_num = as.numeric(trial_num),
+         repetition = as.numeric(repetitionNum)) %>% # Have to correct for R 1-indexing...
+  arrange(gameid, intendedName, repetitionNum) 
+F_mat = as.matrix(read_delim('outputs/feats_tangrams_embeddings.txt',
+                                   delim=',', col_names=F))
+colnames(F_mat) <- NULL
+```
+
+## do tangrams cluster?
+
+```{r}
+M_mat %>%
+  group_by(target, gameid) %>%
+  do(flatten_sim_matrix(get_sim_matrix(., F_mat, method = 'euclidean'),
+                          .$repetition))  %>%
+  group_by(target) 
+```
+
+```{r}
+true_lmer.drift <- make_within_df(M_mat, F_mat, 'euclidean') %>% filter(rep1 == 1) %>% ungroup()
+true_lmer.drift.out <- lmer(sim ~ poly(rep2,2) + (1  | gameID) + (1 | target), data = true_lmer.drift)
+compute_within_drift(M_mat, F_mat, 'empirical', method = 'euclidean', nboot = 1000) %>%
+  ggplot(aes(x = `rep diff`, y = empirical_stat, 
+               fill = sample_id, color = sample_id, group = sample_id)) +
+      geom_point(size = 2) +
+      geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), width = 0) +
+      geom_smooth(method = 'lm', formula = y ~ poly(x, 2), se = F) +
+      scale_x_discrete(labels = c('(1,2)','(1,3)', '(1,4)', '(1,5)', '(1,6)' ,'(1,7)','(1,8)')) +
+      #ylim(.5, .8) +
+      ylab('correlation') +
+      ggtitle('drift from initial') +
+      theme_few() +
+      xlab('repetition pair') +
+      guides(color = F, fill = F) +
+      theme(legend.position = c(0.5, 0.8), text = element_text(size=18), 
+            element_line(size=1), element_rect(size=2, color="#00000"))
+summary(true_lmer.drift.out)
+```
+
+## Within-interaction convergence
+
+```{r}
+true_lmer.within <- make_within_df(M_mat, F_mat, 'euclidean') %>% filter(rep2 == rep1 + 1) %>% ungroup()
+summary(lmer(sim ~ poly(rep1,2) + (1  | gameID) + (1 | target), data = true_lmer.within))
+compute_within_convergence(M_mat, F_mat, 'empirical', method = 'euclidean', nboot = 1000) %>%
+  ggplot(aes(x = `rep diff`, y = empirical_stat, fill = sample_id, color = sample_id, group = sample_id)) +
+      geom_line(size = 2) +
+      geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), width = 0) +
+      #geom_smooth(method = 'lm', formula = y ~ poly(x, 2), se = F) +
+      scale_x_discrete(labels = c('(1,2)','(2,3)', '(3,4)', '(4,5)', '(5,6)')) +
+      #ylim(.5, 1) +
+      ylab('correlation') +
+      ggtitle('stability') +
+      theme_few() +
+      xlab('repetition pair') +
+      guides(color = F, fill = F) +
+      theme(legend.position = c(0.5, 0.8), text = element_text(size=18), 
+            element_line(size=1), element_rect(size=2, color="#00000"))
+
+```
+
+## Between-interaction divergence 
+
+
+```{r}
+M_mat %>%
+  group_by(target, repetition) %>%
+  do(flatten_sim_matrix(get_sim_matrix(., F_mat, method = 'cor'),
+                        .$gameID)) %>%
+  unite(col = 'gamepair', dim1, dim2)
+
+compute_across_similarity(M_mat, F_mat,   'raw_cor_nonorm', method = 'euclidean', nboot = 1000) %>%
+  ggplot(aes(x = repetition, y = empirical_stat, 
+             fill = sample_id, color = sample_id, group = sample_id)) +
+    geom_line(size = 2) +
+    geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), width = 0) +
+    #geom_smooth(method = 'lm', formula = y ~ poly(x, 2), se = F) +
+    scale_x_continuous(breaks = c(1,2,3,4,5,6), labels = c(1,2,3,4,5,6)) +
+    #ylim(.5, 1) +
+    ylab('correlation') +
+    ggtitle('across pairs') +
+    theme_few() +
+    xlab('repetition') +
+    guides(color = F, fill = F) +
+    theme(legend.position = c(0.5, 0.8), text = element_text(size=18), 
+          element_line(size=1), element_rect(size=2, color="#00000"))
+```
+
+## tsne visualizations
+
+```{r}
+tsne <- read_csv('outputs/embeddings.csv') %>%
+  left_join(read_csv('../data/tangramsSequential_collapsed.csv') ) %>%
+  select(gameid, intendedName, repetitionNum, x_tsne, y_tsne, x_mds, y_mds, contents) %>%
+  mutate(r = useful::cart2pol(x_tsne, y_tsne)$r,
+         theta = useful::cart2pol(x_tsne, y_tsne)$theta) %>%
+  group_by(gameid, intendedName) %>%
+  arrange(repetitionNum) %>%
+  mutate(finalTheta = last(theta)) 
+
+```
+
+```{r}
+ggplot(tsne %>% filter(repetitionNum %in% c(6)), aes(x = x_tsne, y = y_tsne)) +
+  #geom_line(alpha = 0.2) +
+  geom_point(aes(#shape = factor(-repetitionNum),
+                 color = finalTheta,
+                 ),
+             size = 1.5, stroke = 2
+             ) +
+  facet_wrap(~ intendedName) +
+  theme_few(20) +
+  ggtitle('pca + tsne embeddings') +
+  scale_shape_manual(values = c(21)) +
+  scale_alpha_continuous(range = c(0.5, 1))+
+  scale_color_gradientn(colours = viridis(5))+
+    theme(axis.title=element_blank(),
+      axis.text=element_blank(),
+      axis.ticks=element_blank()) +
+  labs(x = "", y = "") +
+  guides(color = F, shape = F, alpha = F) +
+  theme(aspect.ratio = 1)  #+
+
+ggsave(filename = '../writing/tangrams/figs/tsne-animation_final.pdf')
+```
+
+```{r}
+ggplot(tsne, aes(x = x_mds, y = y_mds, group = gameid, frame = paste0('repetition: ', repetitionNum)) +
+  geom_line(alpha = 0.2) +
+  geom_point(aes(shape = factor(-repetitionNum), 
+                 color = finalTheta, 
+                 alpha = factor(repetitionNum)),
+             size = 1.5, stroke = 2,
+             data = tsne %>% filter(repetitionNum %in% c(1,6))) +
+  facet_wrap(~ intendedName) +
+  theme_few(20) +
+  ggtitle('mds embeddings') +
+  scale_shape_manual(values = c(16, 21)) +
+  scale_alpha_discrete(range = c(0.5, 1))+
+  scale_color_gradientn(colours = tableau_color_pal()(3))+
+  guides(color = F, shape = F, alpha = F) +
+  theme(aspect.ratio = 1) 
+
+ggsave('../writing/tangrams/figs/mds_embeddings.pdf', width = 15, height = 15)
+```
+
+
+## How much is within-game similarity disrupted by scrambling utterances across games?
+
+Calculate entropy under permutation tests
+
+Note that we explicitly do *not* normalize entropies, as this
+removes the contribution of a bigger vocabulary (as we would expect)
+
+```{r}
+getCounts <- function(contents) {
+  corpus <- Corpus(VectorSource(paste(contents, collapse = " ")))
+  return(colSums(as.matrix(DocumentTermMatrix(corpus))))
+}
+
+permutationTest <- function(d, sample_id) {
+  # scramble across games within each repetition/tangram
+  permuted = d %>%
+    group_by(repetitionNum, intendedName) %>%
+    mutate(permutation = sample(contents)) %>%
+    group_by(gameid, intendedName) %>%
+    summarize(ent = entropy(getCounts(permutation))) %>%
+    group_by(intendedName) %>%
+    summarize(meanEnt = mean(ent)) %>%
+    mutate(sample_id = sample_id)
+  return(permuted)
+}
+
+permutations <- map_dfr(seq_len(1000), ~permutationTest(d, .x))
+
+trueEntropy <- (tangramCombined %>%
+  group_by(gameid, intendedName) %>%
+  summarize(trueEntropy = entropy(getCounts(contents))) %>%
+  group_by(intendedName) %>%
+  summarize(meanEnt = mean(trueEntropy))
+)
+
+
+```
+
+Plotted 
+
+```{r}
+ggplot(rbind(permutations, trueEntropy), aes(x = 0, y = permuted)) +
+  geom_violin(fill = '#d07e93', alpha = 0.25, color = NA) +
+  geom_point(aes(x = 0, y = true), size = 4, color = "#163c4e") +
+  theme_bw() +
+  ylab('entropy of word distribution') +
+  coord_flip() +
+  scale_x_continuous(breaks = NULL) +
+  theme(aspect.ratio = 1/5)
+```
+
+```{r}
+summary(lmer(ent ~ permutation + (1 + permutation | gameid) + (1 + permutation | intendedName), 
+             data = allEntropies))
+```
+
 
 ## What determines whether a label gets conventionalized?
 
@@ -136,152 +354,6 @@ nonparametric_d %>%
 
 ggsave('../writing/tangrams/figs/bootstrappedPMI.png',
        bg = 'transparent')
-```
-
-## How much is within-game similarity disrupted by scrambling utterances across games?
-
-Calculate entropy under permutation tests
-
-Note that we explicitly do *not* normalize entropies, as this
-removes the contribution of a bigger vocabulary (as we would expect)
-
-```{r}
-getCounts <- function(contents) {
-  corpus <- Corpus(VectorSource(paste(contents, collapse = " ")))
-  return(colSums(as.matrix(DocumentTermMatrix(corpus))))
-}
-
-permutationTest <- function(d, sample_id) {
-  # scramble across games within each repetition/tangram
-  permuted = d %>%
-    group_by(repetitionNum, intendedName) %>%
-    mutate(permutation = sample(contents)) %>%
-    group_by(gameid, intendedName) %>%
-    summarize(ent = entropy(getCounts(permutation))) %>%
-    group_by(intendedName) %>%
-    summarize(meanEnt = mean(ent)) %>%
-    mutate(sample_id = sample_id)
-  return(permuted)
-}
-
-permutations <- map_dfr(seq_len(1000), ~permutationTest(d, .x))
-
-trueEntropy <- (tangramCombined %>%
-  group_by(gameid, intendedName) %>%
-  summarize(trueEntropy = entropy(getCounts(contents))) %>%
-  group_by(intendedName) %>%
-  summarize(meanEnt = mean(trueEntropy))
-)
-
-
-```
-
-Plotted 
-
-```{r}
-ggplot(rbind(permutations, trueEntropy), aes(x = 0, y = permuted)) +
-  geom_violin(fill = '#d07e93', alpha = 0.25, color = NA) +
-  geom_point(aes(x = 0, y = true), size = 4, color = "#163c4e") +
-  theme_bw() +
-  ylab('entropy of word distribution') +
-  coord_flip() +
-  scale_x_continuous(breaks = NULL) +
-  theme(aspect.ratio = 1/5)
-```
-
-```{r}
-summary(lmer(ent ~ permutation + (1 + permutation | gameid) + (1 + permutation | intendedName), 
-             data = allEntropies))
-```
-
-## tsne visualizations
-
-```{r}
-tsne <- read_csv('outputs/embeddings.csv') %>%
-  left_join(read_csv('../data/tangramsSequential_collapsed.csv') ) %>%
-  select(gameid, intendedName, repetitionNum, x_tsne, y_tsne, x_mds, y_mds, contents) %>%
-  mutate(r = useful::cart2pol(x_tsne, y_tsne)$r,
-         theta = useful::cart2pol(x_tsne, y_tsne)$theta) %>%
-  group_by(gameid, intendedName) %>%
-  arrange(repetitionNum) %>%
-  mutate(finalTheta = last(theta)) 
-library(viridis)
-library(gganimate)
-
-```
-
-```{r}
-p <- ggplot(tsne %>% filter(repetitionNum %in% c(1,6)) %>% group_by(gameid, intendedName) %>% filter(length(gameid) == 2), aes(x = x_tsne, y = y_tsne, group = interaction(gameid,intendedName))) +
-  #geom_line(alpha = 0.2) +
-  geom_point(aes(#shape = factor(-repetitionNum),
-                 color = finalTheta,
-                 alpha = 1
-    ),
-             size = 1.5, stroke = 2
-             ) +
-  facet_wrap(~ intendedName) +
-  theme_few(20) +
-  ggtitle('pca + tsne embeddings') +
-  scale_shape_manual(values = c(21)) +
-  scale_alpha_continuous(range = c(0.5, 1))+
-  scale_color_gradientn(colours = viridis(5))+
-  guides(color = F, shape = F, alpha = F) +
-  theme(aspect.ratio = 1)  +
-  labs(title = "Rep. {floor(frame_time)}", x = "", y = "") +
-  theme(axis.title=element_blank(),
-      axis.text=element_blank(),
-      axis.ticks=element_blank()) +
-  transition_time(as.numeric(repetitionNum)) # speed it up!
-
-   
-animate(p, nframes = 50)
-anim_save(filename = '../writing/tangrams/figs/tsne-animation.gif')
-```
-
-Just save out final frame
-
-```{r}
-ggplot(tsne %>% filter(repetitionNum %in% c(6)), aes(x = x_tsne, y = y_tsne)) +
-  #geom_line(alpha = 0.2) +
-  geom_point(aes(#shape = factor(-repetitionNum),
-                 color = finalTheta,
-                 ),
-             size = 1.5, stroke = 2
-             ) +
-  facet_wrap(~ intendedName) +
-  theme_few(20) +
-  ggtitle('pca + tsne embeddings') +
-  scale_shape_manual(values = c(21)) +
-  scale_alpha_continuous(range = c(0.5, 1))+
-  scale_color_gradientn(colours = viridis(5))+
-    theme(axis.title=element_blank(),
-      axis.text=element_blank(),
-      axis.ticks=element_blank()) +
-  labs(x = "", y = "") +
-  guides(color = F, shape = F, alpha = F) +
-  theme(aspect.ratio = 1)  #+
-
-ggsave(filename = '../writing/tangrams/figs/tsne-animation_final.pdf')
-```
-
-```{r}
-ggplot(tsne, aes(x = x_mds, y = y_mds, group = gameid, frame = paste0('repetition: ', repetitionNum)) +
-  geom_line(alpha = 0.2) +
-  geom_point(aes(shape = factor(-repetitionNum), 
-                 color = finalTheta, 
-                 alpha = factor(repetitionNum)),
-             size = 1.5, stroke = 2,
-             data = tsne %>% filter(repetitionNum %in% c(1,6))) +
-  facet_wrap(~ intendedName) +
-  theme_few(20) +
-  ggtitle('mds embeddings') +
-  scale_shape_manual(values = c(16, 21)) +
-  scale_alpha_discrete(range = c(0.5, 1))+
-  scale_color_gradientn(colours = tableau_color_pal()(3))+
-  guides(color = F, shape = F, alpha = F) +
-  theme(aspect.ratio = 1) 
-
-ggsave('../writing/tangrams/figs/mds_embeddings.pdf', width = 15, height = 15)
 ```
 
 # Dynamics of structure/syntax
@@ -849,4 +921,34 @@ tagged_df %>%
     theme(aspect.ratio = 1)
 
 ggsave('../writing/tangrams/figs/POS_reduction.pdf', width = 5, height = 4)
+```
+
+## tsne animation
+
+```{r}
+p <- ggplot(tsne %>% filter(repetitionNum %in% c(1,6)) %>% group_by(gameid, intendedName) %>% filter(length(gameid) == 2), aes(x = x_tsne, y = y_tsne, group = interaction(gameid,intendedName))) +
+  #geom_line(alpha = 0.2) +
+  geom_point(aes(#shape = factor(-repetitionNum),
+                 color = finalTheta,
+                 alpha = 1
+    ),
+             size = 1.5, stroke = 2
+             ) +
+  facet_wrap(~ intendedName) +
+  theme_few(20) +
+  ggtitle('pca + tsne embeddings') +
+  scale_shape_manual(values = c(21)) +
+  scale_alpha_continuous(range = c(0.5, 1))+
+  scale_color_gradientn(colours = viridis(5))+
+  guides(color = F, shape = F, alpha = F) +
+  theme(aspect.ratio = 1)  +
+  labs(title = "Rep. {floor(frame_time)}", x = "", y = "") +
+  theme(axis.title=element_blank(),
+      axis.text=element_blank(),
+      axis.ticks=element_blank()) +
+  transition_time(as.numeric(repetitionNum)) # speed it up!
+
+   
+animate(p, nframes = 50)
+anim_save(filename = '../writing/tangrams/figs/tsne-animation.gif')
 ```

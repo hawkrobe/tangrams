@@ -383,10 +383,9 @@ write_csv(sequentialCombined %>%
             mutate(contents = str_replace_all(contents, fixed('.'), ',')) %>%
             group_by(gameid, trialNum, repetitionNum, intendedName) %>%
             summarize(contents = paste0(contents, collapse = ', '),
-                      numRawWords = sum(numRawWords)), 
+                      numRawWords = sum(numRawWords),
+                      correct = mean(correct)), 
           '../data/tangramsSequential_collapsed.csv')
-
-
 
 numGames <- length(unique(sequentialCombined$gameid))
 numUtterances <- length(sequentialCombined$contents)

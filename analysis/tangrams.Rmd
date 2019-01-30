@@ -20,6 +20,7 @@ library(ggthemes)
 library(entropy)
 library(useful)
 library(viridis)
+library(broom)
 library(gganimate)
 
 source('./utils/analysis_helpers.R')
@@ -34,9 +35,7 @@ d <- read_csv('../data/tangramsSequential_collapsed.csv')
 ## semantic similarity analyses
 
 ```{r}
-source('./utils/helpers.R')
-library(broom)
-detach('package:lmerTest')
+#detach('package:lmerTest')
 M_mat = read_csv('./outputs/meta_tangrams_embeddings.csv') %>%
   #select(gameID, target, repetition, trial_num, feature_ind) %>%
   mutate(feature_ind = X1 + 1,
@@ -79,6 +78,8 @@ compute_within_drift(M_mat, F_mat, 'empirical', method = 'euclidean', nboot = 10
       theme(legend.position = c(0.5, 0.8), text = element_text(size=18), 
             element_line(size=1), element_rect(size=2, color="#00000"))
 summary(true_lmer.drift.out)
+
+ggsave('../writing/tangrams/figs/drift.pdf', height = 10, width = 7, units = 'cm', useDingbats = F)
 ```
 
 ## Within-interaction convergence
@@ -88,9 +89,10 @@ true_lmer.within <- make_within_df(M_mat, F_mat, 'euclidean') %>% filter(rep2 ==
 summary(lmer(sim ~ poly(rep1,2) + (1  | gameID) + (1 | target), data = true_lmer.within))
 compute_within_convergence(M_mat, F_mat, 'empirical', method = 'euclidean', nboot = 1000) %>%
   ggplot(aes(x = `rep diff`, y = empirical_stat, fill = sample_id, color = sample_id, group = sample_id)) +
-      geom_line(size = 2) +
+      #geom_line(size = 1) +
+      geom_point(size = 2) +
       geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), width = 0) +
-      #geom_smooth(method = 'lm', formula = y ~ poly(x, 2), se = F) +
+      geom_smooth(method = 'lm', formula = y ~ poly(x, 2), se = F) +
       scale_x_discrete(labels = c('(1,2)','(2,3)', '(3,4)', '(4,5)', '(5,6)')) +
       #ylim(.5, 1) +
       ylab('correlation') +
@@ -100,6 +102,7 @@ compute_within_convergence(M_mat, F_mat, 'empirical', method = 'euclidean', nboo
       guides(color = F, fill = F) +
       theme(legend.position = c(0.5, 0.8), text = element_text(size=18), 
             element_line(size=1), element_rect(size=2, color="#00000"))
+ggsave('../writing/tangrams/figs/stability.pdf', height = 10, width = 7, units = 'cm', useDingbats = F)
 
 ```
 
@@ -113,12 +116,12 @@ M_mat %>%
                         .$gameID)) %>%
   unite(col = 'gamepair', dim1, dim2)
 
-compute_across_similarity(M_mat, F_mat,   'raw_cor_nonorm', method = 'euclidean', nboot = 1000) %>%
+compute_across_similarity(M_mat, F_mat,   'raw_cor_nonorm', method = 'euclidean', nboot = 1) %>%
   ggplot(aes(x = repetition, y = empirical_stat, 
              fill = sample_id, color = sample_id, group = sample_id)) +
-    geom_line(size = 2) +
+    geom_point(size = 2) +
     geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), width = 0) +
-    #geom_smooth(method = 'lm', formula = y ~ poly(x, 2), se = F) +
+    geom_smooth(method = 'lm', formula = y ~ poly(x, 2), se = F) +
     scale_x_continuous(breaks = c(1,2,3,4,5,6), labels = c(1,2,3,4,5,6)) +
     #ylim(.5, 1) +
     ylab('correlation') +
@@ -128,6 +131,7 @@ compute_across_similarity(M_mat, F_mat,   'raw_cor_nonorm', method = 'euclidean'
     guides(color = F, fill = F) +
     theme(legend.position = c(0.5, 0.8), text = element_text(size=18), 
           element_line(size=1), element_rect(size=2, color="#00000"))
+ggsave('../writing/tangrams/figs/divergence.pdf', height = 10, width = 7, units = 'cm', useDingbats = F)
 ```
 
 ## tsne visualizations
@@ -167,6 +171,8 @@ ggplot(tsne %>% filter(repetitionNum %in% c(6)), aes(x = x_tsne, y = y_tsne)) +
 
 ggsave(filename = '../writing/tangrams/figs/tsne-animation_final.pdf')
 ```
+
+MDS ...
 
 ```{r}
 ggplot(tsne, aes(x = x_mds, y = y_mds, group = gameid, frame = paste0('repetition: ', repetitionNum)) +

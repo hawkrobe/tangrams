@@ -23,7 +23,7 @@ knitr::opts_chunk$set(fig.width=3, fig.height=3, fig.crop = F, fig.pos = "tb", f
                       echo=F, warning=F, cache=F, message=F, sanitize = T)
 library(devtools)
 library(cogsci2016)
-library(langcog)
+#library(langcog)
 ```
 
 ```{r, libraries, include = FALSE}
@@ -36,14 +36,13 @@ library(dplyr)
 library(stringr)
 library(knitr)
 library(readr)
-library(png)
+#library(png)
 library(grid)
 library(ggplot2)
 library(xtable)
 library(rwebppl)
-library(langcog)
 library(ggthemes)
-library(cowplot)
+# library(cowplot)
 library(latex2exp)
 ```
 
@@ -86,7 +85,7 @@ To collect a corpus of reference game dialogue that supports more detailed analy
 
 ```{r, cache=T}
 # Import message data...
-tangramMsgs = read_csv("../../analysis/tangrams/handTagged.csv") %>%
+tangramMsgs = read_csv("../../data/analysis/tangrams/handTagged.csv") %>%
   rename(msgTime = time, 
          role = sender)
 
@@ -495,20 +494,20 @@ conjunctionModel <- function(alpha, beta) {
 }
 
 conjunctionRes <- complete(data.frame(
-    alpha=c(10),		
-    beta =c(1)		
+    alpha=c(14),		
+    beta =c(.5)		
  ), alpha, beta) %>%		
    rowwise() %>%		
    do(conjunctionModel(.$alpha,.$beta))
 ```
 
 ```{r arbitrarinessFig, fig.env = "figure*", fig.pos = "t", fig.align='center', fig.width=7, fig.height=1.83, num.cols.cap=2, fig.cap = "\\label{fig:modelResults} (A) Probability of speaker using $u_1$ to refer to $s_1$, broken out by initial observation: while players are initially ambivalent between the two labels (arbitrariness), the initial mapping is likely to persist (stability). (B) Accuracy rises as speaker and listener align. (C) When conjunctions are introduced into the grammar, utterances get shorter over time (reduction)."}
-
+library(tidyboot)
 reductionRes <- conjunctionRes %>% 
   spread(type, value) %>%
   mutate(numWords = str_count(utt, "\\S+")) %>%
   group_by(roundNum) %>%
-  multi_boot_standard('numWords')
+  tidyboot_mean(column = numWords)
 
 plot.reduction <- ggplot(reductionRes, aes(x = roundNum, y = mean, group=1)) +
   ylab('mean # words') +
@@ -516,11 +515,12 @@ plot.reduction <- ggplot(reductionRes, aes(x = roundNum, y = mean, group=1)) +
   geom_line() +
   geom_errorbar(aes(ymax = ci_upper, ymin = ci_lower), width = .1) +  
   theme_bw(9) +
-  ylim(1,1.4) +
+  #ylim(1,1.4) +
   theme_few(9) +  
   theme(plot.margin=unit(x=c(1,0,0,0),units="mm"))
-
+library(cowplot)
 plot_grid(plot.arbitrariness, plot.accuracy, plot.reduction, labels = c('A', 'B', 'C'), ncol = 3, align = 'vh')
+ggsave('../cogsci/figs/modelResults.pdf',  height = 6, width = 18,units = 'cm', useDingbats = F)
 ```
 
 Consider an environment with two abstract shapes ($\{s_1, s_2\}$), where the speaker must choose between two utterances ($\{u_1, u_2\}$) incurring equal cost. Their prior $P(\mathcal{L})$ over the meaning of each utterance is given by a Beta distribution^[In our implementation, we enumerate over coarse-grained bins; preliminary experiments using variational inference on the full continuous distribution give similar results.], so on the first round both utterances are equally likely to apply to either shape. If the speaker was trying to get their partner to pick $s_1$, then, since each utterance is equally (un)informative, they would randomly sample one (say, $u_1$), and observe the listener's selection of a shape (say, $s_1$). On the next round, the speaker uses the observed pair $\{u_1, s_1\}$ to update their beliefs about their partner's true lexicon, uses these beliefs to generate a new utterance, and so on. To examine expected dynamics over multiple rounds, we forward sample many possible trajectories.

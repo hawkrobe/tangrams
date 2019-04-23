@@ -12,16 +12,16 @@ var getTrajectories = function(data) {
   return reduce(function(key, memo) {
     var timeBasedKeys = map(function(i) {return key + "." + i}, _.range(data.length));
     var vals = _.map(data, key);
-    return _.extend(_.zipObject(timeBasedKeys, vals), memo)
+    return extend({}, _.zipObject(timeBasedKeys, vals), memo)
   }, [], keys)
 };
 ///
 
-var params = {
-  alpha: [1],
-  beta: [1],
-  numSteps : [2]
-};
+// var params = {
+//   alpha: [2],
+//   beta: [.1],
+//   numSteps : [2]
+// };
 
 // possible states of the world
 var states = [{type: 0, color: 0}, 
@@ -66,6 +66,10 @@ var uttFitness = cache(function(utt, state, lexicon) {
 var L0 = cache(function(utt, lexicon) {
   return Infer({method:"enumerate"}, function(){
     var state = sample(statePrior);
+    // console.log(utt);
+    // console.log(state);
+    // console.log(lexicon);
+    // console.log(uttFitness(utt, state, lexicon));
     factor(uttFitness(utt, state, lexicon));
     return state;
   });
@@ -105,26 +109,26 @@ var lexiconPosterior = cache(function(originAgent, data) {
 });
 
 // conventional listener (L1, marginalizing over lexicons)
-var L = cache(function(utt, data) {
+var L1_uncertain = cache(function(utt, lexPosterior) {
   return Infer({method:"enumerate"}, function(){
-    var lexicon = sample(lexiconPosterior('L', data));
-    var state = sample(L1(utt, lexicon));
+    var state = sample(statePrior);
+    var lexicon = sample(lexPosterior);
+    observe(S1(state, lexicon), utt);
     return state;
   });
+});
+
+var L = cache(function(utt, data) {
+  return L1_uncertain(utt, lexiconPosterior('L', data));
 });
 
 // conventional speaker (S1, reasoning about expected listener across lexicons)
 var S = cache(function(state, data) {
   return Infer({method:"enumerate"}, function(){
     var utt = sample(utterancePrior);
-    var utility = expectation(Infer({method: 'enumerate'}, function() {
-      var lexicon = sample(lexiconPosterior('S', data));
-      return (params.alpha[0] * L1(utt, lexicon).score(state) -
-	      params.beta[0] * uttCost(utt));
-    }));
-//    console.log(utt);
-//    console.log(utility);
-    factor(utility);
+    var listener = L1_uncertain(utt, lexiconPosterior('S', data));
+    factor(params.alpha[0] * listener.score(state) -
+	   params.beta[0] * uttCost(utt));
     return utt;
   });
 });
@@ -145,4 +149,4 @@ var model = function() {
 // console.log(L('type_a', []));
 // console.log(L('color_a', []));
 
-//S(states[0], []);
+S(states[0], []);

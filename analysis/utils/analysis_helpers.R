@@ -45,17 +45,26 @@ mytheme <- function(base_size) {
     ) 
 }
 
-
+dprime = function(df_in) {
+  d <- df_in %>% 
+    group_by(source) %>%
+    summarize(m = mean(empirical_stat), v = var(empirical_stat)) %>%
+    gather(quantity, val, m, v) %>%
+    unite(source,quantity, source) %>%
+    spread(source, val)
+  return (d$m_across - d$m_within)/sqrt(.5 * (d$v_across + d$v_within))    
+}
 
 # note: cor expects featurs to be in columns so we transpose
 get_sim_matrix = function(df, F_mat, normalize = F, method = 'cor') {
   feats = (if(normalize) channel_norm(F_mat[df$feature_ind,]) 
            else F_mat[df$feature_ind,])
-  
   if(method == 'cor') {
     return(cor(t(feats), method = 'pearson'))
   } else if (method == 'euclidean') {
     return(as.matrix(dist(feats, method = 'euclidean')))
+  } else if (method == 'cosine') {
+    return(as.matrix(lsa::cosine(t(feats))))
   } else {
     stop(paste0('unknown method', method))
   }

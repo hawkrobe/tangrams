@@ -72,20 +72,25 @@ unconstrainedResponses %>%
 
 Looks like there is a subpopulation who are clicking through with very poor accuracy, even on final round...
 
-Let's gather those games who are getting less than half in any round so we can exclude them from further analyses
+Implement our 66/66 rule...exclude pairs that got fewer than 2/3 correct on fewer than 2/3 of blocks.
 
 ```{r}
-sloppyIDs <- unique((unconstrainedResponses %>% 
-  group_by(repetitionNum, gameid, repetitionScore) %>%
+badIDs <- unique((unconstrainedResponses %>% 
+  ungroup() %>%
+  mutate(numBlocks = max(repetitionNum)) %>%
+  group_by(repetitionNum, gameid, repetitionScore, numBlocks) %>%
   tally() %>%
-  filter(repetitionScore < 6))$gameid)
+  mutate(lessThan66Pct = repetitionScore <= 2/3 * n) %>%
+  group_by(gameid) %>%
+  filter(sum(lessThan66Pct) >= 2/3 * numBlocks))$gameid)
+
 ```
 
 What is variation in accuracy across tangrams?
 
 ```{r}
 unconstrainedResponses %>% 
-  filter(!(gameid %in% sloppyIDs)) %>%
+  filter(!(gameid %in% badIDs)) %>%
   group_by(repetitionNum, tangramID) %>%
   tidyboot_mean(correct) %>%
   ggplot(aes(x = repetitionNum, y = empirical_stat, color = tangramID)) +
@@ -101,7 +106,7 @@ Eye-ball totally disaggregated game-by-game accuracy?
 library(ggthemes)
 unconstrainedResponses %>% 
   group_by(gameid, repetitionNum) %>% 
-  filter(!(gameid %in% sloppyIDs)) %>%
+  filter(!(gameid %in% badIDs)) %>%
   summarize(matchProp = sum(correct)/12) %>%
   ggplot(aes(x = repetitionNum, y = matchProp)) +
     geom_line()+
@@ -118,9 +123,12 @@ nonNativeSpeakerIDs <- unique((unconstrainedSubjInfo %>% filter(nativeEnglish !=
 
 incompleteIDs <- unique((unconstrainedData.raw %>% group_by(gameid) %>% 
                            filter(length(unique(repetitionNum)) != 6))$gameid)
-
+firstRoundExclusions <- union(incompleteIDs, nonNativeSpeakerIDs)
 # 0574-6 is also incomplete (stopped after first message of round 6, so not caught by above rule)
-badGames <- unique(c('0574-6', incompleteIDs, as.character(nonNativeSpeakerIDs), sloppyIDs))
+badGames <- unique(c('0574-6', incompleteIDs, as.character(nonNativeSpeakerIDs), badIDs))
+cat(length(incompleteIDs) + 1, 'excluded for incompleteness')
+cat(length(union(incompleteIDs, nonNativeSpeakerIDs)) - length(incompleteIDs), 'for non-native english')
+cat(length(union(firstRoundExclusions, badIDs)) - length(firstRoundExclusions), 'for low accuracy')
 print(paste0('excluding ', length(badGames), ' of ', length(unique(unconstrainedData.raw$gameid)), ' games that were either incomplete, poor accuracy, or had non-native english speakers'))
 ```
 
@@ -242,26 +250,6 @@ singleUtts %>%
 Set exclusion criteria
 
 ```{r}
-nonNativeSpeakerIDs <- unique((sequentialSubjInfo %>% filter(nativeEnglish != "yes"))$gameid)
-
-incompleteIDs <- unique((sequentialCombined.raw %>% group_by(gameid) %>% 
-                           filter(length(unique(trialNum)) != 72))$gameid)
-
-sloppyIDs <- unique((singleUtts %>% 
-  group_by(repetitionNum, gameid) %>%
-  summarize(repetitionScore = sum(correct)) %>%
-  filter(repetitionScore < 6))$gameid)
-
-badGames <- unique(c(incompleteIDs, as.character(nonNativeSpeakerIDs), sloppyIDs))
-
-print(paste0('excluding ', length(badGames), ' of ', length(unique(sequentialCombined.raw$gameid)), ' games that were either incomplete, poor accuracy, or had non-native english speakers'))
-```
-
-Check and remove all games of duplicate turkers (note that I accidentally excluded some of the partial games before compiling rawMessages, so there are gameids in subjInfo that never appear in rawMessages...)
-
-`9477-662e7f6d-0f2a-4041-a4e7-6d33eba91fb0`	is probably okay: they only did one round in their previous game before getting kicked... also `6402-3db6c45b-0b53-4906-b5cf-17517d013671` is probably okay: this is their first game.
-
-```{r}
 duplicate_turkers = (sequentialSubjInfo %>% group_by(workerid_uniq) %>% tally() %>% filter(n > 1))$workerid_uniq
 
 sequentialCombined.raw %>% 
@@ -276,14 +264,47 @@ duplicate_gameids <- c('0210-5d5ad8b6-7c94-4e2a-a3cb-760d2f613953',
                        '7261-07035df8-84ee-4381-b72c-a04234c8f5ed')
 garbage_gameids <- c('7840-4bd35c77-f10c-4055-a122-f591efae2826') # This one somehow got through wihtout director saying anything
 
-sketchy_gameids <- c('9116-d8b8c5c1-f549-48bf-a362-ed159302a106', # This was super distracted and kept complaining and talking about how they'd skip through rounds...
-                     '7229-0a7402b0-329e-4b26-bc3a-ae26a388a6cc', # This one was having too much fun with wordplay...
-                     '1202-a64916b2-49d2-4ca4-bd76-cfd3e1ec3954', '7391-0be22306-9b90-402c-82b0-6bf7ce3ac35e',## these listeners seemed like theyd done it before (but dont have subject info from them to be able to tell...))
-                     '7971-85165980-35a3-4070-8ebf-ca2d159dc715', # This pair gave numbers to all of them...
-                      '3453-2eab60c9-d1cd-4245-919c-c499f303740e') #this pair said to guess a lot...
-# just exclude duplicates and buggy ones for now
-other_bad_games <- unique(c(duplicate_gameids, garbage_gameids))
+badGames <- union(duplicate_gameids, garbage_gameids)
+
+incompleteIDs <- unique((sequentialCombined.raw %>% group_by(gameid) %>% 
+                           filter(length(unique(trialNum)) != 72))$gameid)
+
+cat('excluded', length(union(badGames, incompleteIDs)) - length(badGames), 'for incompelte\n')
+badGames <- union(badGames, incompleteIDs)
+
+nonNativeSpeakerIDs <- unique((sequentialSubjInfo %>% filter(nativeEnglish != "yes"))$gameid)
+
+cat('excluded', length(union(nonNativeSpeakerIDs, badGames)) - length(badGames), 'for non-native\n')
+badGames <- union(badGames, nonNativeSpeakerIDs)
+
+lowAccuracyIDs <- unique((singleUtts %>% 
+  filter(!(gameid %in% incompleteIDs)) %>%
+  ungroup() %>%
+  mutate(numBlocks = max(repetitionNum)) %>%
+  group_by(repetitionNum, gameid, numBlocks) %>%
+  summarize(totalCorrect = sum(correct)) %>%
+  mutate(lessThan66Pct = totalCorrect <= 2/3 * 12) %>%
+  group_by(gameid) %>%
+  filter(sum(lessThan66Pct) >= 2/3 * numBlocks))$gameid)
+
+cat('excluded', length(union(lowAccuracyIDs, badGames)) - length(badGames), 'for low accuracy\n')
+badGames <- union(badGames, nonNativeSpeakerIDs)
+
+print(paste0('excluding ', length(badGames), ' of ', length(unique(sequentialCombined.raw$gameid)), ' games that were either incomplete, poor accuracy, or had non-native english speakers'))
 ```
+
+
+
+other sketchy gameids... 
+'9116-d8b8c5c1-f549-48bf-a362-ed159302a106' was super distracted and kept complaining and talking about how they'd skip through rounds...
+'7229-0a7402b0-329e-4b26-bc3a-ae26a388a6cc' was having too much fun with wordplay...
+'1202-a64916b2-49d2-4ca4-bd76-cfd3e1ec3954', '7391-0be22306-9b90-402c-82b0-6bf7ce3ac35e' listeners seemed like theyd done it before (but dont have subject info from them to be able to tell...))
+'7971-85165980-35a3-4070-8ebf-ca2d159dc715' gave numbers to all of them...
+'3453-2eab60c9-d1cd-4245-919c-c499f303740e' this pair said to guess a lot...
+
+Check and remove all games of duplicate turkers (note that I accidentally excluded some of the partial games before compiling rawMessages, so there are gameids in subjInfo that never appear in rawMessages...)
+
+`9477-662e7f6d-0f2a-4041-a4e7-6d33eba91fb0`	is probably okay: they only did one round in their previous game before getting kicked... also `6402-3db6c45b-0b53-4906-b5cf-17517d013671` is probably okay: this is their first game.
 
 ## First, apply spell check and create filtered version of messages data (for potential hand-cleaning)
 
@@ -300,20 +321,15 @@ messagesFiltered <- sequentialMsgs %>%
   mutate(contents = str_replace_all(contents, unlist(corrector, use.names = T)))
 
 write_csv(messagesFiltered, '../data/tangrams_sequential/message/sequential_message_filtered.csv')
+
+numGames <- length(unique(messagesFiltered$gameid))
+numUtterances <- length(messagesFiltered$contents)
+print(paste0(numUtterances, ' utterances in ', numGames, ' games'))
 ```
 
 ## Then read in hand-cleaned meta data & record that to json
 
 ```{r}
-# Need to escape all of these regexp special vals
-# corrections = c('\\(' = '\\\\\\(',
-#                 '\\)' = '\\\\\\)',
-#                 '\\[' = '\\\\\\[',
-#                 '\\]' = '\\\\\\]',
-#                 '\\*' = '\\\\*',
-#                 '\\?' = '\\\\?',
-#                 '\\!' = '\\\\!',
-#                 '\\.' = '\\\\.')
 full_messages_to_delete <- messagesFiltered %>%
   anti_join(read_csv('../data/tangrams_sequential/message/sequential_message_no_meta.csv'),
             by = c('trialNum', 'msgTime')) %>%

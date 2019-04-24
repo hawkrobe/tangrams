@@ -52,7 +52,12 @@ dprime = function(df_in) {
     gather(quantity, val, m, v) %>%
     unite(source,quantity, source) %>%
     spread(source, val)
-  return (d$m_across - d$m_within)/sqrt(.5 * (d$v_across + d$v_within))    
+  num = d$m_across - d$m_within
+  #print(num)
+  denom = sqrt(.5 * (d$v_across + d$v_within))
+  # print(denom)
+  # print(num / denom)
+  return(num / denom)  
 }
 
 # note: cor expects featurs to be in columns so we transpose

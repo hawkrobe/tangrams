@@ -288,7 +288,7 @@ lowAccuracyIDs <- unique((singleUtts %>%
   filter(sum(lessThan66Pct) >= 2/3 * numBlocks))$gameid)
 
 cat('excluded', length(union(lowAccuracyIDs, badGames)) - length(badGames), 'for low accuracy\n')
-badGames <- union(badGames, nonNativeSpeakerIDs)
+badGames <- union(badGames, lowAccuracyIDs)
 
 print(paste0('excluding ', length(badGames), ' of ', length(unique(sequentialCombined.raw$gameid)), ' games that were either incomplete, poor accuracy, or had non-native english speakers'))
 ```
@@ -316,7 +316,6 @@ names(corrector) <- paste0('\\b', names(corrector), '\\b')
 
 messagesFiltered <- sequentialMsgs %>%
   filter(!(gameid %in% badGames)) %>%
-  filter(!(gameid %in% other_bad_games)) %>%
   mutate(contents = tolower(contents)) %>%
   mutate(contents = str_replace_all(contents, unlist(corrector, use.names = T)))
 
@@ -330,9 +329,8 @@ print(paste0(numUtterances, ' utterances in ', numGames, ' games'))
 ## Then read in hand-cleaned meta data & record that to json
 
 ```{r}
-full_messages_to_delete <- messagesFiltered %>%
-  anti_join(read_csv('../data/tangrams_sequential/message/sequential_message_no_meta.csv'),
-            by = c('trialNum', 'msgTime')) %>%
+full_messages_to_delete <- anti_join(messagesFiltered, read_csv('../data/tangrams_sequential/message/sequential_message_no_meta.csv'),
+            by = c('gameid', 'trialNum', 'msgTime')) %>%
   mutate(new = "~~~") %>%
   #unite(old, gameid, trialNum , old, sep = '~~~') %>%
   select(gameid, trialNum, contents, new)# %>%
@@ -374,6 +372,7 @@ names(additional_spellcorrector) <- paste0('\\b', names(additional_spellcorrecto
 
 #write_csv(sequentialCombined, '../data/tangramsSequential_nocleaning.csv')
 sequentialCombined <- sequentialCombined.raw %>%
+  filter(!(gameid %in% badGames)) %>%
   mutate(contents = tolower(contents)) %>%
   mutate(contents = str_replace_all(contents, unlist(spellcorrector, use.names = T))) %>%
   left_join(metacorrector, by = c('contents', 'trialNum', 'gameid')) %>%
@@ -381,8 +380,6 @@ sequentialCombined <- sequentialCombined.raw %>%
   mutate(contents = str_replace_all(contents, unlist(additional_spellcorrector, use.names = T))) %>%
   mutate(contents = str_trim(contents)) %>%
   filter(contents != "~~~") %>%
-  filter(!(gameid %in% badGames)) %>%
-  filter(!(gameid %in% other_bad_games)) %>%
   mutate(numRawWords = str_count(contents, "\\S+")) %>%
   left_join(singleUtts %>% 
     group_by(repetitionNum, gameid) %>%

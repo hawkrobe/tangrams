@@ -8,7 +8,7 @@ import pandas as pd
 
 def get_feats(d_in, docs_emb, nlp) :
     d = d_in.drop(d_in.columns.difference(['gameid', 'intendedName', 'repetitionNum', 'text', 'correct']), axis=1)
-    meta = pd.DataFrame(columns = ['gameid',  'intendedName','repetitionNum', 'correct', 'empty'])
+    meta = pd.DataFrame(columns = ['gameid',  'intendedName','repetitionNum', 'correct', 'is_nan'])
     raw_avg_feats = np.array([]).reshape(0, 300)
     weighted_feats = np.array([]).reshape(0, 300)
 
@@ -19,20 +19,24 @@ def get_feats(d_in, docs_emb, nlp) :
         if pd.isna(row['text']) :
             raw_avg_embedding = null_embedding
             weighted_embedding = null_embedding
-            is_empty = True
+            is_nan = True
         else :
             weighted_embedding = docs_emb[i,]
             local_embedding = np.array([]).reshape(0, 300)
             for token in row['text'] :
-                if token.pos_ in ['NOUN', 'VERB', 'ADJ'] and token.has_vector :
-                    local_embedding = np.vstack((local_embedding, nlp.vocab[token.lemma].vector))
-            is_empty = local_embedding.size == 0
-            if is_empty :
+                if token.pos_ in ['NOUN', 'VERB', 'ADJ', 'ADV'] and token.has_vector :
+                    if token.lemma in nlp.vocab :
+                        local_embedding = np.vstack((local_embedding, nlp.vocab[token.lemma].vector))
+                    else :
+                        local_embedding = np.vstack((local_embedding, token.vector))
+
+            is_nan = local_embedding.size == 0
+            if is_nan :
                 raw_avg_embedding = null_embedding
             else :
                 raw_avg_embedding = np.nanmean(local_embedding, axis = 0)
-        new_row = list(row[:4]) + [is_empty]
-        new_df = pd.DataFrame([new_row], columns = ['gameid',  'intendedName', 'repetitionNum', 'correct', 'empty'])
+        new_row = list(row[:4]) + [is_nan]
+        new_df = pd.DataFrame([new_row], columns = ['gameid',  'intendedName', 'repetitionNum', 'correct', 'is_nan'])
         meta = meta.append(new_df, ignore_index=True)
         raw_avg_feats = np.vstack((raw_avg_feats, raw_avg_embedding))
         weighted_feats = np.vstack((weighted_feats, weighted_embedding))

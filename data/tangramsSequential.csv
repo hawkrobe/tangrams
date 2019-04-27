@@ -1808,81 +1808,6 @@ gameid,msgTime,trialNum,repetitionNum,role,intendedName,timeElapsed,contents,tot
 9471-f19badf8-f934-48be-af51-c28ad91605b9,1490392155548,70,6,director,L,1751,without tail,NA,NA,NA,NA,NA,1490392160364,L,L,8,1,NA,2,12
 9471-f19badf8-f934-48be-af51-c28ad91605b9,1490392166828,71,6,director,B,892,dog 2,NA,NA,NA,NA,NA,1490392172018,B,B,4,1,NA,2,12
 9471-f19badf8-f934-48be-af51-c28ad91605b9,1490392232277,72,6,director,I,2487,back leg raise,NA,NA,NA,NA,NA,1490392243535,I,I,12,1,NA,3,12
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490390891280,1,1,director,L,14953,kneeling without toes flipped up,1742462,yes,director does most the work and should get paid more,not much,yes,1490390904449,L,F,4,0,NA,5,8
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490390925543,2,1,director,E,10812,sitting triangle with bunny ears,1742462,yes,director does most the work and should get paid more,not much,yes,1490390937732,E,E,4,1,NA,5,8
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490390961117,3,1,director,I,18793,"dancer on one leg, other in air",1742462,yes,director does most the work and should get paid more,not much,yes,1490390967068,I,I,3,1,NA,7,8
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490390985330,4,1,director,D,11112,"robed person, rectangle body",1742462,yes,director does most the work and should get paid more,not much,yes,1490390993021,D,D,1,1,NA,4,8
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490391051273,5,1,director,H,34744,"all gathered in the center, this one is hard, like a diamond with a foot poking out",1742462,yes,director does most the work and should get paid more,not much,yes,1490391067459,H,L,10,0,NA,17,8
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490391090222,6,1,director,G,12732,"all splayed out, looks like sliding on ice",1742462,yes,director does most the work and should get paid more,not much,yes,1490391102743,G,G,1,1,NA,8,8
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490391117348,7,1,director,C,7421,"leaning back, arms spread wide",1742462,yes,director does most the work and should get paid more,not much,yes,1490391122224,C,C,3,1,NA,5,8
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490391136529,8,1,director,F,7621,nodding out sitting on ground,1742462,yes,director does most the work and should get paid more,not much,yes,1490391140761,F,F,5,1,NA,5,8
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490391157983,9,1,director,A,9624,dancing barney the dinosaur,1742462,yes,director does most the work and should get paid more,not much,yes,1490391163007,A,A,5,1,NA,4,8
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490391181771,10,1,director,J,10685,left side is straight line top to bottom,1742462,yes,director does most the work and should get paid more,not much,yes,1490391193018,J,G,9,0,NA,8,8
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490391213661,11,1,director,B,11243,angel wings triangles on both sides,1742462,yes,director does most the work and should get paid more,not much,yes,1490391224417,B,B,3,1,NA,6,8
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490391243820,12,1,director,K,6406,kneeling with toes up,1742462,yes,director does most the work and should get paid more,not much,yes,1490391251845,K,F,10,0,NA,4,8
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490391268605,13,2,director,F,6325,nodder sitting on ground,1742462,yes,director does most the work and should get paid more,not much,yes,1490391271602,F,F,4,1,NA,4,6
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490391282539,14,2,director,L,5454,"kneeling, no toes up",1742462,yes,director does most the work and should get paid more,not much,yes,1490391292787,L,B,1,0,NA,4,6
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490391306909,15,2,director,B,8265,"angel wings, just picked it",1742462,yes,director does most the work and should get paid more,not much,yes,1490391317490,B,C,2,0,NA,5,6
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490391329966,16,2,director,C,5711,leaning back arms spread,1742462,yes,director does most the work and should get paid more,not much,yes,1490391332864,C,C,2,1,NA,4,6
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490391347933,17,2,director,D,8317,robed standing with hand out,1742462,yes,director does most the work and should get paid more,not much,yes,1490391351316,D,D,9,1,NA,5,6
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490391364861,18,2,director,A,8128,dancing barney dinosaur,1742462,yes,director does most the work and should get paid more,not much,yes,1490391367364,A,A,6,1,NA,3,6
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490391381575,19,2,director,H,5872,blocky diamond shape,1742462,yes,director does most the work and should get paid more,not much,yes,1490391390719,H,H,1,1,NA,3,6
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490391414632,20,2,director,G,5515,all on the bottom half,1742462,yes,director does most the work and should get paid more,not much,yes,1490391420341,G,K,7,0,NA,5,6
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490391432432,21,2,director,J,14394,like a straight left side,1742462,yes,director does most the work and should get paid more,not much,yes,1490391444141,J,E,6,0,NA,5,6
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490391458199,22,2,director,I,17068,first dancer with/ big boobs,1742462,yes,director does most the work and should get paid more,not much,yes,1490391470761,I,K,9,0,first dancer w/ big boobs,5,6
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490391478266,23,2,matcher,E,2811,those are arms,1499808,yes,NA,not much,yes,1490391496011,E,E,1,1,NA,3,6
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490391489790,23,2,director,E,12742,"rabbit ears, triangle sitting on ground",1742462,yes,director does most the work and should get paid more,not much,yes,1490391496011,E,E,1,1,NA,6,6
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490391534579,24,2,director,K,22742,"kneeling toes up, third time using same description, can you remember from other trials?",1742462,yes,director does most the work and should get paid more,not much,yes,1490391566995,K,G,9,0,NA,14,6
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490391573628,25,3,matcher,C,2005,i remember now,1499808,yes,NA,not much,yes,1490391614645,C,C,4,1,NA,3,6
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490391610513,25,3,director,C,5721,leaning back arms spread,1742462,yes,director does most the work and should get paid more,not much,yes,1490391614645,C,C,4,1,NA,4,6
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490391623594,26,3,director,F,2802,nodding out,1742462,yes,director does most the work and should get paid more,not much,yes,1490391631938,F,J,10,0,NA,2,6
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490391654823,27,3,director,E,17077,"rabbit ears, 4th time, you got it right twice",1742462,yes,director does most the work and should get paid more,not much,yes,1490391659405,E,E,6,1,NA,9,6
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490391672464,28,3,director,H,4233,diamond shape,1742462,yes,director does most the work and should get paid more,not much,yes,1490391681066,H,H,6,1,NA,2,6
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490391690935,29,3,director,J,4413,straight left side,1742462,yes,director does most the work and should get paid more,not much,yes,1490391697696,J,G,4,0,NA,3,6
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490391711293,30,3,director,B,7608,angel wings arms spread,1742462,yes,director does most the work and should get paid more,not much,yes,1490391716845,B,B,9,1,NA,4,6
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490391726626,31,3,director,L,3798,"kneeling, no toes",1742462,yes,director does most the work and should get paid more,not much,yes,1490391746689,L,G,5,0,NA,3,6
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490391757592,32,3,director,K,5660,kneeling toes up,1742462,yes,director does most the work and should get paid more,not much,yes,1490391763525,K,F,7,0,NA,3,6
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490391772641,33,3,director,A,3513,dancing barney,1742462,yes,director does most the work and should get paid more,not much,yes,1490391775535,A,A,2,1,NA,2,6
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490391782250,34,3,director,D,1186,guess,1742462,yes,director does most the work and should get paid more,not much,yes,1490391806336,D,G,7,0,NA,1,6
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490391814204,35,3,director,G,21188,"we're not even halfway and your memory sucks, so guess, please guess",1742462,yes,director does most the work and should get paid more,not much,yes,1490391827619,G,C,3,0,NA,12,6
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490391821118,35,3,director,G,1209,guess,1742462,yes,director does most the work and should get paid more,not much,yes,1490391827619,G,C,3,0,NA,1,6
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490391838592,36,3,director,I,3417,dancer one foot,1742462,yes,director does most the work and should get paid more,not much,yes,1490391841513,I,I,5,1,NA,3,6
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490391849718,37,4,director,G,1164,guess,1742462,yes,director does most the work and should get paid more,not much,yes,1490391852616,G,G,5,1,NA,1,8
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490391867446,38,4,director,C,5330,lean back arms spread,1742462,yes,director does most the work and should get paid more,not much,yes,1490391870233,C,C,11,1,NA,4,8
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490391878985,39,4,director,A,3331,dancing barney,1742462,yes,director does most the work and should get paid more,not much,yes,1490391881243,A,A,12,1,NA,2,8
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490391890465,40,4,director,J,4138,straight left side,1742462,yes,director does most the work and should get paid more,not much,yes,1490391894709,J,J,3,1,NA,3,8
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490391903131,41,4,director,H,2382,diamond,1742462,yes,director does most the work and should get paid more,not much,yes,1490391908025,H,H,7,1,NA,1,8
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490391916784,42,4,director,I,3328,one leg dancer,1742462,yes,director does most the work and should get paid more,not much,yes,1490391919159,I,I,9,1,NA,3,8
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490391928067,43,4,director,L,3456,kneeling no toes,1742462,yes,director does most the work and should get paid more,not much,yes,1490391930575,L,B,11,0,NA,3,8
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490391944386,44,4,director,E,5004,bunny ears triangle,1742462,yes,director does most the work and should get paid more,not much,yes,1490391948777,E,E,9,1,NA,3,8
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490391956601,45,4,director,D,1420,guess,1742462,yes,director does most the work and should get paid more,not much,yes,1490391959075,D,H,5,0,NA,1,8
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490391968431,46,4,director,K,3467,kneeling toes up,1742462,yes,director does most the work and should get paid more,not much,yes,1490391970749,K,F,10,0,NA,3,8
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490391979431,47,4,director,F,3583,nodding out,1742462,yes,director does most the work and should get paid more,not much,yes,1490391982203,F,F,11,1,NA,2,8
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490391990397,48,4,director,B,1132,guess,1742462,yes,director does most the work and should get paid more,not much,yes,1490391993776,B,K,11,0,NA,1,8
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490392002242,49,5,director,F,2631,nodding out,1742462,yes,director does most the work and should get paid more,not much,yes,1490392004581,F,F,5,1,NA,2,10
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490392011414,50,5,director,D,1051,guess,1742462,yes,director does most the work and should get paid more,not much,yes,1490392012776,D,F,4,0,NA,1,10
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490392022659,51,5,director,J,4310,straight left side,1742462,yes,director does most the work and should get paid more,not much,yes,1490392026929,J,J,11,1,NA,3,10
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490392037495,52,5,director,L,5128,kneeling no toes,1742462,yes,director does most the work and should get paid more,not much,yes,1490392039633,L,L,9,1,NA,3,10
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490392047725,53,5,director,G,1125,guess,1742462,yes,director does most the work and should get paid more,not much,yes,1490392049271,G,E,4,0,NA,1,10
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490392060135,54,5,director,C,4979,lean back arms spread,1742462,yes,director does most the work and should get paid more,not much,yes,1490392063460,C,C,6,1,NA,4,10
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490392073026,55,5,director,K,3713,kneeling toes up,1742462,yes,director does most the work and should get paid more,not much,yes,1490392078040,K,K,12,1,NA,3,10
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490392086680,56,5,director,I,3264,one leg dancer,1742462,yes,director does most the work and should get paid more,not much,yes,1490392089033,I,I,12,1,NA,3,10
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490392096100,57,5,director,H,1669,diamond,1742462,yes,director does most the work and should get paid more,not much,yes,1490392107630,H,H,6,1,NA,1,10
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490392120467,58,5,director,B,5793,angel wings arms wide,1742462,yes,director does most the work and should get paid more,not much,yes,1490392124527,B,B,4,1,NA,4,10
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490392134071,59,5,director,A,3806,dancing barney,1742462,yes,director does most the work and should get paid more,not much,yes,1490392136600,A,A,1,1,NA,2,10
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490392148048,60,5,director,E,5643,rabbit ears triangle,1742462,yes,director does most the work and should get paid more,not much,yes,1490392149824,E,E,10,1,NA,3,10
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490392158776,61,6,director,L,3802,kneeling no toes,1742462,yes,director does most the work and should get paid more,not much,yes,1490392161817,L,K,11,0,NA,3,8
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490392170349,62,6,director,A,3428,dancing barney,1742462,yes,director does most the work and should get paid more,not much,yes,1490392172073,A,A,8,1,NA,2,8
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490392185969,63,6,director,J,7415,straight left side,1742462,yes,director does most the work and should get paid more,not much,yes,1490392190488,J,H,2,0,NA,3,8
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490392201966,64,6,director,E,5347,rabbit ears triangle,1742462,yes,director does most the work and should get paid more,not much,yes,1490392211415,E,E,9,1,NA,3,8
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490392220753,65,6,director,K,4117,kneeling toes up,1742462,yes,director does most the work and should get paid more,not much,yes,1490392223455,K,K,9,1,NA,3,8
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490392236397,66,6,director,B,6490,angel wings arm wide,1742462,yes,director does most the work and should get paid more,not much,yes,1490392242272,B,B,6,1,NA,4,8
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490392253312,67,6,director,C,5745,arms spread leans back,1742462,yes,director does most the work and should get paid more,not much,yes,1490392256963,C,C,3,1,NA,4,8
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490392264659,68,6,director,H,1831,diamond,1742462,yes,director does most the work and should get paid more,not much,yes,1490392266667,H,H,11,1,NA,1,8
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490392275282,69,6,director,F,2912,nodding out,1742462,yes,director does most the work and should get paid more,not much,yes,1490392279056,F,F,4,1,NA,2,8
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490392285548,70,6,director,D,1200,guess,1742462,yes,director does most the work and should get paid more,not much,yes,1490392287078,D,F,5,0,NA,1,8
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490392293789,71,6,director,G,1219,guess,1742462,yes,director does most the work and should get paid more,not much,yes,1490392295341,G,I,11,0,NA,1,8
-3453-2eab60c9-d1cd-4245-919c-c499f303740e,1490392307394,72,6,director,I,3278,one leg dancer,1742462,yes,director does most the work and should get paid more,not much,yes,1490392311357,I,I,1,1,NA,3,8
 0057-414228f8-c268-40d6-9349-b35df4f080d9,1490389434809,1,1,director,B,16665,"looking for a diamond at the top, triangle pointing towards the left",1682322,yes,"Once we came up with a short hand, the game went much faster.",liked,yes,1490389619203,B,B,9,1,NA,12,9
 0057-414228f8-c268-40d6-9349-b35df4f080d9,1490389446167,1,1,director,B,9481,close to a person praying on their knees,1682322,yes,"Once we came up with a short hand, the game went much faster.",liked,yes,1490389619203,B,B,9,1,NA,8,9
 0057-414228f8-c268-40d6-9349-b35df4f080d9,1490389501444,1,1,matcher,B,9942,is there a triangle pointing right as well?,1615789,yes,No.,loved,yes,1490389619203,B,B,9,1,NA,8,9
@@ -2200,6 +2125,138 @@ gameid,msgTime,trialNum,repetitionNum,role,intendedName,timeElapsed,contents,tot
 0461-f522f8f4-37dc-4bb0-89bf-9f6bcf43274a,1490397303671,70,6,director,G,700,sitting,2538517,yes,no,loved,yes,1490397309776,G,G,3,1,NA,1,12
 0461-f522f8f4-37dc-4bb0-89bf-9f6bcf43274a,1490397325713,71,6,director,J,5711,diamond on top straight side on left,2538517,yes,no,loved,yes,1490397332293,J,J,10,1,NA,7,12
 0461-f522f8f4-37dc-4bb0-89bf-9f6bcf43274a,1490397352028,72,6,director,K,6684,kneeling weird job,2538517,yes,no,loved,yes,1490397356375,K,K,2,1,NA,3,12
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490393146985,1,1,director,A,9335,pick the one where it looks like a guy is kicking forward,NA,NA,NA,NA,NA,1490393152381,A,A,4,1,NA,12,8
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490393168317,2,1,director,I,9595,"pick the weird ballet looking one, one legged another leg in the air",NA,NA,NA,NA,NA,1490393173894,I,I,7,1,NA,13,8
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490393194226,3,1,director,G,8480,the one where the guy is sort of laying foward and praying,NA,NA,NA,NA,NA,1490393208574,G,B,8,0,NA,12,8
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490393199171,3,1,director,G,3200,with his head reared back,NA,NA,NA,NA,NA,1490393208574,G,B,8,0,NA,5,8
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490393228771,4,1,director,L,9543,the one where the guy is sort of quatting with his hands forward,NA,NA,NA,NA,NA,1490393262017,L,L,11,1,NA,13,8
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490393240329,4,1,director,L,8663,it kind of looks like a a weird s,NA,NA,NA,NA,NA,1490393262017,L,L,11,1,NA,9,8
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490393250169,4,1,matcher,L,2185,if the head,2572057,yes,It can run long and is harder than it seems!  Thanks for the HIT!  I did my best and hope the data is useful!,liked,yes,1490393262017,L,L,11,1,NA,3,8
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490393255745,4,1,director,L,2126,head is straight,NA,NA,NA,NA,NA,1490393262017,L,L,11,1,NA,3,8
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490393274178,5,1,director,C,2360,leaning like superman,NA,NA,NA,NA,NA,1490393285016,C,C,2,1,NA,3,8
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490393276766,5,1,director,C,952,arms out,NA,NA,NA,NA,NA,1490393285016,C,C,2,1,NA,2,8
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490393282080,5,1,director,C,2447,body diagnol,NA,NA,NA,NA,NA,1490393285016,C,C,2,1,NA,2,8
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490393300915,6,1,director,D,8110,facing left his hands are outstretched like he is begging,NA,NA,NA,NA,NA,1490393339084,D,F,3,0,NA,10,8
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490393307676,6,1,matcher,D,49225,im gonna assume the top of the head is facing at noon...otherwise can you give me a time on the clock?,2572057,yes,It can run long and is harder than it seems!  Thanks for the HIT!  I did my best and hope the data is useful!,liked,yes,1490393339084,D,F,3,0,NA,21,8
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490393307859,6,1,director,D,2381,both feet on the ground,NA,NA,NA,NA,NA,1490393339084,D,F,3,0,NA,5,8
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490393327068,6,1,matcher,D,1239,sitting?,2572057,yes,It can run long and is harder than it seems!  Thanks for the HIT!  I did my best and hope the data is useful!,liked,yes,1490393339084,D,F,3,0,NA,1,8
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490393356556,7,1,director,H,10185,"the one where he is sort of slouched, no arms out legs facing right",NA,NA,NA,NA,NA,1490393376831,H,E,11,0,NA,14,8
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490393388555,8,1,director,K,4329,begging on his knees arms facing right,NA,NA,NA,NA,NA,1490393392120,K,K,5,1,NA,7,8
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490393416977,9,1,director,B,17479,"like the last one but with more shapes, like his head titled forward and his arms out more",NA,NA,NA,NA,NA,1490393434745,B,B,5,1,NA,18,8
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490393450701,10,1,director,E,10016,"slouched, facing right with his feet out and the two weird things on his head",NA,NA,NA,NA,NA,1490393457744,E,E,3,1,NA,15,8
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490393455984,10,1,director,E,1793,like a sad bunny,NA,NA,NA,NA,NA,1490393457744,E,E,3,1,NA,4,8
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490393471214,11,1,matcher,J,1757,split hat,2572057,yes,It can run long and is harder than it seems!  Thanks for the HIT!  I did my best and hope the data is useful!,liked,yes,1490393496723,J,K,6,0,NA,2,8
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490393473759,11,1,director,J,6663,short looking facing right,NA,NA,NA,NA,NA,1490393496723,J,K,6,0,NA,4,8
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490393481532,11,1,director,J,3071,no distinct arms,NA,NA,NA,NA,NA,1490393496723,J,K,6,0,NA,3,8
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490393490647,11,1,director,J,4201,well one arms kinda under the head,NA,NA,NA,NA,NA,1490393496723,J,K,6,0,NA,7,8
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490393511840,12,1,director,F,6832,like he is slouched against a wall facing the left,NA,NA,NA,NA,NA,1490393522230,F,F,7,1,NA,10,8
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490393536796,13,2,director,C,8032,"facing left arms out, flying like superman",NA,NA,NA,NA,NA,1490393565035,C,I,7,0,NA,7,5
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490393558019,13,2,director,C,953,or a bird,NA,NA,NA,NA,NA,1490393565035,C,I,7,0,NA,3,5
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490393560164,13,2,matcher,C,4409,diagonal body?,2572057,yes,It can run long and is harder than it seems!  Thanks for the HIT!  I did my best and hope the data is useful!,liked,yes,1490393565035,C,I,7,0,NA,2,5
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490393593215,14,2,director,K,17888,begging facing left heels up no hood (head is up),NA,NA,NA,NA,NA,1490393615873,K,D,6,0,begging facing left heels up no hood (head is up),10,5
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490393642058,15,2,director,A,12846,"looks like a bird, facing left legs kicking up",NA,NA,NA,NA,NA,1490393657027,A,A,3,1,NA,9,5
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490393647773,15,2,director,A,2072,head way back,NA,NA,NA,NA,NA,1490393657027,A,A,3,1,NA,3,5
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490393668496,16,2,matcher,F,5232,that ones wig is peeled back,2572057,yes,It can run long and is harder than it seems!  Thanks for the HIT!  I did my best and hope the data is useful!,liked,yes,1490393711917,F,F,6,1,NA,6,5
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490393673361,16,2,director,F,10048,slouched in the corner facing right,NA,NA,NA,NA,NA,1490393711917,F,F,6,1,NA,6,5
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490393685692,16,2,director,F,9775,oh that's what it is? it's like some weird monster monk,NA,NA,NA,NA,NA,1490393711917,F,F,6,1,NA,11,5
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490393694713,16,2,matcher,F,4554,split hat?,2572057,yes,It can run long and is harder than it seems!  Thanks for the HIT!  I did my best and hope the data is useful!,liked,yes,1490393711917,F,F,6,1,NA,2,5
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490393705721,16,2,director,F,2536,no facing left sorry,NA,NA,NA,NA,NA,1490393711917,F,F,6,1,NA,4,5
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490393708919,16,2,director,F,2904,i mean right corner facing left,NA,NA,NA,NA,NA,1490393711917,F,F,6,1,NA,6,5
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490393733217,17,2,director,L,15919,"facing right (i am sure this time), sort of bent knees arms outstretched",NA,NA,NA,NA,NA,1490393745204,L,G,6,0,NA,13,5
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490393753610,18,2,director,G,2221,the one you just picked,NA,NA,NA,NA,NA,1490393810939,G,K,8,0,NA,5,5
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490393756122,18,2,matcher,G,5910,we can call that one the beggar,2572057,yes,It can run long and is harder than it seems!  Thanks for the HIT!  I did my best and hope the data is useful!,liked,yes,1490393810939,G,K,8,0,NA,7,5
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490393760275,18,2,director,G,1566,beggar,NA,NA,NA,NA,NA,1490393810939,G,K,8,0,NA,1,5
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490393766539,18,2,matcher,G,2903,kneeling beggar?,2572057,yes,It can run long and is harder than it seems!  Thanks for the HIT!  I did my best and hope the data is useful!,liked,yes,1490393810939,G,K,8,0,NA,2,5
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490393780462,18,2,director,G,7614,you mean the one you were uspposed to pick or did pick?,NA,NA,NA,NA,NA,1490393810939,G,K,8,0,NA,12,5
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490393785956,18,2,matcher,G,1155,did,2572057,yes,It can run long and is harder than it seems!  Thanks for the HIT!  I did my best and hope the data is useful!,liked,yes,1490393810939,G,K,8,0,NA,1,5
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490393794232,18,2,director,G,13519,"sure, do the kneeling beggar",NA,NA,NA,NA,NA,1490393810939,G,K,8,0,NA,5,5
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490393799697,18,2,director,G,2984,the choice you made last time,NA,NA,NA,NA,NA,1490393810939,G,K,8,0,NA,6,5
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490393817604,19,2,matcher,H,1726,it,2572057,yes,It can run long and is harder than it seems!  Thanks for the HIT!  I did my best and hope the data is useful!,liked,yes,1490393909406,H,L,10,0,NA,1,5
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490393855397,19,2,director,H,14119,"this one is sort of sitting, his legs are facing right and his arms are at his sides",NA,NA,NA,NA,NA,1490393909406,H,L,10,0,NA,18,5
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490393878543,19,2,matcher,H,1887,split hat?,2572057,yes,It can run long and is harder than it seems!  Thanks for the HIT!  I did my best and hope the data is useful!,liked,yes,1490393909406,H,L,10,0,NA,2,5
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490393890924,19,2,director,H,6463,no one hat (single diamond thing),NA,NA,NA,NA,NA,1490393909406,H,L,10,0,NA,6,5
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490393918383,20,2,matcher,I,2926,that ones like a blob,2572057,yes,It can run long and is harder than it seems!  Thanks for the HIT!  I did my best and hope the data is useful!,liked,yes,1490393997530,I,I,8,1,NA,5,5
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490393946681,20,2,director,I,23879,"yeah you are right. this one is facing right, it looks like both his arms are out and one leg is kicked back",NA,NA,NA,NA,NA,1490393997530,I,I,8,1,NA,23,5
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490393955824,20,2,director,I,6176,"and he is standing on the other leg, kind of like a flamingo",NA,NA,NA,NA,NA,1490393997530,I,I,8,1,NA,13,5
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490393960100,20,2,director,I,1392,or a fountain,NA,NA,NA,NA,NA,1490393997530,I,I,8,1,NA,3,5
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490393989067,20,2,matcher,I,4279,facing left or right?,2572057,yes,It can run long and is harder than it seems!  Thanks for the HIT!  I did my best and hope the data is useful!,liked,yes,1490393997530,I,I,8,1,NA,4,5
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490394021791,21,2,director,E,17936,"sitting down with his back to the left side, facing right (split hat) sad bunny",NA,NA,NA,NA,NA,1490394031557,E,E,6,1,NA,15,5
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490394037647,22,2,matcher,D,1881,split hat works,2572057,yes,It can run long and is harder than it seems!  Thanks for the HIT!  I did my best and hope the data is useful!,liked,yes,1490394096167,D,D,1,1,NA,3,5
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490394055980,22,2,director,D,12764,"solid hat facing right, his arms out begging",NA,NA,NA,NA,NA,1490394096167,D,D,1,1,NA,8,5
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490394078975,22,2,matcher,D,7208,kneeling or crouching?,2572057,yes,It can run long and is harder than it seems!  Thanks for the HIT!  I did my best and hope the data is useful!,liked,yes,1490394096167,D,D,1,1,NA,3,5
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490394091535,22,2,director,D,7040,sorry facing left,NA,NA,NA,NA,NA,1490394096167,D,D,1,1,NA,3,5
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490394109377,23,2,director,J,7007,this time he is facing right,NA,NA,NA,NA,NA,1490394168297,J,G,10,0,NA,6,5
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490394118466,23,2,director,J,7248,"you can't make out his legs, he looks kind of squat",NA,NA,NA,NA,NA,1490394168297,J,G,10,0,NA,11,5
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490394137128,23,2,matcher,J,1963,begging?,2572057,yes,It can run long and is harder than it seems!  Thanks for the HIT!  I did my best and hope the data is useful!,liked,yes,1490394168297,J,G,10,0,NA,1,5
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490394153195,23,2,director,J,7543,more just looking like a candle,NA,NA,NA,NA,NA,1490394168297,J,G,10,0,more just looking like a candle,6,5
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490394173756,24,2,matcher,B,874,the blob,2572057,yes,It can run long and is harder than it seems!  Thanks for the HIT!  I did my best and hope the data is useful!,liked,yes,1490394233153,B,L,4,0,NA,2,5
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490394198161,24,2,director,B,18767,"there are two blobs. this one has the feet on the left and the hands on the right, begging, split hat but his hood is facing out",NA,NA,NA,NA,NA,1490394233153,B,L,4,0,NA,27,5
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490394243756,25,3,director,J,3881,the last blob we talked about,NA,NA,NA,NA,NA,1490394253269,J,H,12,0,NA,6,10
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490394279449,26,3,director,B,12710,"this was the last praying/begging guy. head down facing the left, hands up, hood back",NA,NA,NA,NA,NA,1490394320508,B,D,7,0,NA,15,10
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490394338501,27,3,director,G,8416,this one he is facing right,NA,NA,NA,NA,NA,1490394357204,G,G,3,1,this one he is facing right,6,10
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490394349719,27,3,director,G,8648,"really right, his head is up facing the sky, his arm is out",NA,NA,NA,NA,NA,1490394357204,G,G,3,1,NA,13,10
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490394380280,28,3,director,E,14334,"facing the right, back is against the left side, split hat/sad bunny",NA,NA,NA,NA,NA,1490394388579,E,E,11,1,NA,12,10
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490394409539,29,3,director,L,8806,"facing the right, begging but standing",NA,NA,NA,NA,NA,1490394416727,L,L,10,1,NA,6,10
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490394446131,30,3,director,A,20671,"facing the left, kicking one foot up head back",NA,NA,NA,NA,NA,1490394454173,A,A,5,1,NA,9,10
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490394452347,30,3,director,A,3031,back straight,NA,NA,NA,NA,NA,1490394454173,A,A,5,1,NA,2,10
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490394487492,31,3,director,H,9616,blob with the sort of leg on the right side,NA,NA,NA,NA,NA,1490394493305,H,H,2,1,NA,10,10
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490394510359,32,3,director,K,4448,begging on his knees facing right,NA,NA,NA,NA,NA,1490394513771,K,K,4,1,NA,6,10
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490394531029,33,3,director,F,11007,"back against the right side, facing left slouched",NA,NA,NA,NA,NA,1490394537043,F,F,9,1,NA,8,10
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490394554035,34,3,director,C,7151,diagnol body arms stretched out,NA,NA,NA,NA,NA,1490394560977,C,C,10,1,NA,5,10
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490394572376,35,3,matcher,D,2239,superman!,2572057,yes,It can run long and is harder than it seems!  Thanks for the HIT!  I did my best and hope the data is useful!,liked,yes,1490394586867,D,D,3,1,NA,1,10
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490394582260,35,3,director,D,14738,"facing the left, begging",NA,NA,NA,NA,NA,1490394586867,D,D,3,1,NA,4,10
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490394602661,36,3,director,I,9110,"leaning forward on one leg facing left, like a lawn flamingo",NA,NA,NA,NA,NA,1490394607221,I,I,9,1,NA,11,10
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490394619527,37,4,director,E,1743,sad bunny,NA,NA,NA,NA,NA,1490394647534,E,F,4,0,NA,2,10
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490394636210,37,4,matcher,E,5279,sitting or kicking the stone?,2572057,yes,It can run long and is harder than it seems!  Thanks for the HIT!  I did my best and hope the data is useful!,liked,yes,1490394647534,E,F,4,0,NA,5,10
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490394646287,37,4,director,E,4256,sitting and facing left,NA,NA,NA,NA,NA,1490394647534,E,F,4,0,NA,4,10
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490394656286,38,4,director,A,4657,right,NA,NA,NA,NA,NA,1490394673334,A,A,2,1,NA,1,10
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490394658914,38,4,matcher,A,1377,split hat,2572057,yes,It can run long and is harder than it seems!  Thanks for the HIT!  I did my best and hope the data is useful!,liked,yes,1490394673334,A,A,2,1,NA,2,10
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490394669200,38,4,director,A,9272,this is the one where he is facing left and kicking a can or stone,NA,NA,NA,NA,NA,1490394673334,A,A,2,1,NA,15,10
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490394685723,39,4,director,H,5600,blob with the little thing on the right,NA,NA,NA,NA,NA,1490394688537,H,H,1,1,NA,8,10
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490394696152,40,4,director,C,1910,superman,NA,NA,NA,NA,NA,1490394698319,C,C,9,1,NA,1,10
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490394726086,41,4,director,B,18344,"facing left, praying, his head is down, and his hands are up, you can see his feet on the left",NA,NA,NA,NA,NA,1490394760564,B,B,7,1,NA,20,10
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490394752714,41,4,matcher,B,2419,facing right,2572057,yes,It can run long and is harder than it seems!  Thanks for the HIT!  I did my best and hope the data is useful!,liked,yes,1490394760564,B,B,7,1,NA,2,10
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490394754645,41,4,matcher,B,198,?,2572057,yes,It can run long and is harder than it seems!  Thanks for the HIT!  I did my best and hope the data is useful!,liked,yes,1490394760564,B,B,7,1,NA,1,10
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490394757977,41,4,director,B,2336,"facing right, sorry",NA,NA,NA,NA,NA,1490394760564,B,B,7,1,NA,3,10
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490394775419,42,4,director,G,7824,this was like the last one but he is looking up to the right corner,NA,NA,NA,NA,NA,1490394788408,G,G,6,1,NA,15,10
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490394807938,43,4,director,L,13351,"begging, facing the right (yes the right) standing but bent kneed)",NA,NA,NA,NA,NA,1490394812428,L,L,11,1,NA,11,10
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490394821669,44,4,director,I,1458,lawn flamingo,NA,NA,NA,NA,NA,1490394827912,I,I,4,1,NA,2,10
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490394822555,44,4,matcher,I,6139,the crouching beggar!,2572057,yes,It can run long and is harder than it seems!  Thanks for the HIT!  I did my best and hope the data is useful!,liked,yes,1490394827912,I,I,4,1,NA,3,10
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490394847950,45,4,director,J,13134,blob with the weird little arm. it's like a diamond on a flat line,NA,NA,NA,NA,NA,1490394852048,J,J,5,1,NA,14,10
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490394876888,46,4,director,K,18031,crouching beggar knees on the ground (facing right),NA,NA,NA,NA,NA,1490394880081,K,L,12,0,NA,8,10
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490394911687,47,4,director,F,12048,"facing left, slouched against the right side",NA,NA,NA,NA,NA,1490394922331,F,F,5,1,NA,7,10
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490394914822,47,4,director,F,1791,like sitting down,NA,NA,NA,NA,NA,1490394922331,F,F,5,1,NA,3,10
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490394928172,48,4,matcher,D,1543,john cruer,2572057,yes,It can run long and is harder than it seems!  Thanks for the HIT!  I did my best and hope the data is useful!,liked,yes,1490394952534,D,D,12,1,NA,2,10
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490394929915,48,4,matcher,D,566,cryer,2572057,yes,It can run long and is harder than it seems!  Thanks for the HIT!  I did my best and hope the data is useful!,liked,yes,1490394952534,D,D,12,1,NA,1,10
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490394947835,48,4,director,D,4990,begging facing the left,NA,NA,NA,NA,NA,1490394952534,D,D,12,1,NA,4,10
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490394973210,49,5,director,C,961,superman,NA,NA,NA,NA,NA,1490394975606,C,C,10,1,NA,1,11
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490394991961,50,5,director,D,5936,facing left begging like the last beggar,NA,NA,NA,NA,NA,1490394995354,D,D,7,1,NA,7,11
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490395022951,51,5,director,J,13743,one of the blobs (the one with the arm kinda),NA,NA,NA,NA,NA,1490395027462,J,J,12,1,NA,10,11
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490395046879,52,5,director,L,6576,"facing right, begging standing",NA,NA,NA,NA,NA,1490395055211,L,L,4,1,NA,4,11
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490395065165,53,5,director,H,2543,blob with the legs,NA,NA,NA,NA,NA,1490395071326,H,H,1,1,NA,4,11
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490395095634,54,5,director,G,7993,this one is begging with his head up facing the corner,NA,NA,NA,NA,NA,1490395110230,G,G,1,1,NA,11,11
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490395130375,55,5,director,B,5776,"begging on his knees, facing right, head down",NA,NA,NA,NA,NA,1490395148340,B,E,3,0,NA,8,11
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490395155394,56,5,director,I,960,flamingo,NA,NA,NA,NA,NA,1490395158193,I,I,2,1,NA,1,11
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490395182385,57,5,director,A,9928,this one is the one where he is sort of kicking the can,NA,NA,NA,NA,NA,1490395188219,A,A,1,1,this one is the one where he is sort of kicking the can,13,11
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490395209008,58,5,director,K,9808,"facing right and begging, his knees are on the ground but his body is straight",NA,NA,NA,NA,NA,1490395214864,K,K,11,1,NA,15,11
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490395224267,59,5,director,E,936,split hat,NA,NA,NA,NA,NA,1490395229339,E,E,2,1,NA,2,11
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490395278054,60,5,director,F,18567,"facing the left, slouched down leaning/sitting against the right side",NA,NA,NA,NA,NA,1490395285929,F,F,6,1,NA,10,11
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490395305488,61,6,director,H,5512,blob with the leg facing right,NA,NA,NA,NA,NA,1490395310490,H,H,4,1,NA,6,11
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490395325909,62,6,director,C,7825,superman,NA,NA,NA,NA,NA,1490395352741,C,C,4,1,superman,1,11
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490395350650,62,6,director,C,1488,superman,NA,NA,NA,NA,NA,1490395352741,C,C,4,1,NA,1,11
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490395373056,63,6,director,B,10737,praying. facing right head down,NA,NA,NA,NA,NA,1490395396895,B,E,4,0,NA,5,11
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490395423394,64,6,director,G,17766,head up facing right looking up with his hands out stetched (you can see one of his feet),NA,NA,NA,NA,NA,1490395432926,G,G,2,1,NA,18,11
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490395539964,65,6,director,L,6959,"begging facing right, standing up",NA,NA,NA,NA,NA,1490395544084,L,L,10,1,NA,5,11
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490395562396,66,6,director,E,952,split hat,NA,NA,NA,NA,NA,1490395569109,E,E,6,1,NA,2,11
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490395579933,67,6,director,J,5366,blob (the one with the arm not the foot),NA,NA,NA,NA,NA,1490395584218,J,J,11,1,NA,9,11
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490395614141,68,6,director,F,7912,the sitting on the right,NA,NA,NA,NA,NA,1490395625391,F,F,2,1,NA,5,11
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490395615074,68,6,matcher,F,5242,just letting you know,2572057,yes,It can run long and is harder than it seems!  Thanks for the HIT!  I did my best and hope the data is useful!,liked,yes,1490395625391,F,F,2,1,NA,4,11
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490395617575,68,6,director,F,2833,looking left slouching,NA,NA,NA,NA,NA,1490395625391,F,F,2,1,NA,3,11
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490395630808,69,6,director,I,936,flamingo,NA,NA,NA,NA,NA,1490395634015,I,I,7,1,NA,1,11
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490395644916,70,6,director,K,4136,begger facing right on his knees,NA,NA,NA,NA,NA,1490395648414,K,K,9,1,NA,6,11
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490395655546,71,6,director,A,7800,kicking the can,NA,NA,NA,NA,NA,1490395663632,A,A,11,1,NA,3,11
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490395659318,71,6,director,A,1776,or stone,NA,NA,NA,NA,NA,1490395663632,A,A,11,1,NA,2,11
+6524-a23c203d-4591-4fa2-aabd-d9c0063cea73,1490395672686,72,6,director,D,2751,begging facing the left,NA,NA,NA,NA,NA,1490395677530,D,D,8,1,NA,4,11
 5192-8023d95b-29c5-49aa-a245-42924607dd4b,1490393301241,1,1,director,F,10829,looks like a dude sitting down,1656504,yes,Thank god I got a smart partner,loved,yes,1490393305795,F,F,6,1,NA,6,11
 5192-8023d95b-29c5-49aa-a245-42924607dd4b,1490393353540,2,1,director,A,25341,tilted square in top right corner. looks like he is falling,1656504,yes,Thank god I got a smart partner,loved,yes,1490393363228,A,C,1,0,tilted square in top right corner. looks like he is falling,11,11
 5192-8023d95b-29c5-49aa-a245-42924607dd4b,1490393391411,3,1,director,K,17779,diamond on top. fat base. kind of like a christmas tree,1656504,yes,Thank god I got a smart partner,loved,yes,1490393403801,K,K,9,1,NA,11,11
@@ -2638,107 +2695,6 @@ gameid,msgTime,trialNum,repetitionNum,role,intendedName,timeElapsed,contents,tot
 9559-04e2b195-6540-4711-9830-5178487fc07c,1490403723165,70,6,director,B,5669,ain't no thing but a chicken wing.,1675221,yes,"I thought this was a ton of fun.  My imagination is kind of outrageous, but the partner definitely caught on.  thanks!",loved,yes,1490403728169,B,B,4,1,NA,7,11
 9559-04e2b195-6540-4711-9830-5178487fc07c,1490403736106,71,6,director,J,2981,90 degree angle dude,1675221,yes,"I thought this was a ton of fun.  My imagination is kind of outrageous, but the partner definitely caught on.  thanks!",loved,yes,1490403745042,J,J,10,1,NA,4,11
 9559-04e2b195-6540-4711-9830-5178487fc07c,1490403754820,72,6,director,C,12948,the falling guy.,1675221,yes,"I thought this was a ton of fun.  My imagination is kind of outrageous, but the partner definitely caught on.  thanks!",loved,yes,1490403758339,C,C,8,1,the falling guy.,3,11
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490402650394,1,1,director,C,16539,pick the shape that looks like a person flying,NA,NA,NA,NA,NA,1490402655776,C,C,11,1,NA,9,7
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490402706889,2,1,director,I,31345,pick the shape that looks like its arms are stretched out and about to kick a ball,NA,NA,NA,NA,NA,1490402717501,I,A,3,0,NA,17,7
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490402761785,3,1,director,B,33186,pick the shape that looks like a person and has a triangle pointed toward its mouth,NA,NA,NA,NA,NA,1490402776870,B,B,10,1,NA,16,7
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490402827801,4,1,director,A,38047,pick the shape that looks like it has a box on its back and has its right leg lifted up,NA,NA,NA,NA,NA,1490402891200,A,G,2,0,NA,20,7
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490402951512,5,1,director,H,45661,pick the fat shape that has no arms and a box on to setting on a corner edge,NA,NA,NA,NA,NA,1490403000199,H,H,2,1,NA,18,7
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490402988221,5,1,matcher,H,15017,is it the one with legs?,NA,NA,NA,NA,NA,1490403000199,H,H,2,1,NA,6,7
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490403047068,6,1,director,J,33938,the top of the shape is flat and a box is setting on its corner edge,NA,NA,NA,NA,NA,1490403055661,J,J,3,1,NA,16,7
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490403137591,7,1,director,L,65023,its shaped kinda like a lighting bolt with a box setting on top on its corner edge,NA,NA,NA,NA,NA,1490403214522,L,K,2,0,NA,17,7
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490403176112,7,1,matcher,L,8872,is the part the box is touching a point?,NA,NA,NA,NA,NA,1490403214522,L,K,2,0,NA,9,7
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490403209251,7,1,director,L,14621,yes it kinda looks like a s,NA,NA,NA,NA,NA,1490403214522,L,K,2,0,NA,7,7
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490403238595,8,1,director,F,16712,looks like a guy sitting on his butt with his back against the wall,NA,NA,NA,NA,NA,1490403244583,F,E,1,0,NA,14,7
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490403243410,8,1,director,F,1830,setting,NA,NA,NA,NA,NA,1490403244583,F,E,1,0,NA,1,7
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490403331043,9,1,director,G,66256,at the bottom of this object its flat than goes up 45 degrees at the end of the angle is a triangle,NA,NA,NA,NA,NA,1490403437184,G,G,3,1,NA,22,7
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490403377801,9,1,matcher,G,5992,does the whole bottom look like a triangle,NA,NA,NA,NA,NA,1490403437184,G,G,3,1,NA,8,7
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490403389648,9,1,director,G,1522,no,NA,NA,NA,NA,NA,1490403437184,G,G,3,1,NA,1,7
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490403493215,10,1,director,K,30801,looks like a chinese lady on her knees,NA,NA,NA,NA,NA,1490403569075,K,B,2,0,NA,8,7
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490403537219,10,1,matcher,K,3781,does it have two triangles on top?,NA,NA,NA,NA,NA,1490403569075,K,B,2,0,NA,7,7
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490403549295,10,1,director,K,5660,no a box,NA,NA,NA,NA,NA,1490403569075,K,B,2,0,NA,3,7
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490403608446,11,1,director,D,24818,it look like some standing and looking down at its hands,NA,NA,NA,NA,NA,1490403619291,D,D,7,1,NA,11,7
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490403644563,12,1,director,E,19202,looks like a girl with a bow in her hair,NA,NA,NA,NA,NA,1490403656147,E,E,10,1,NA,10,7
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490403671327,13,2,director,E,6992,same one you just picked,NA,NA,NA,NA,NA,1490403673865,E,E,10,1,NA,5,8
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490403702717,14,2,director,I,17157,looks like a person fixing to kick a ball you picked it earlier,NA,NA,NA,NA,NA,1490403740355,I,I,8,1,NA,13,8
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490403728445,14,2,matcher,I,2236,is a leg in the air,NA,NA,NA,NA,NA,1490403740355,I,I,8,1,NA,6,8
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490403733052,14,2,director,I,870,yes,NA,NA,NA,NA,NA,1490403740355,I,I,8,1,NA,1,8
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490403790428,15,2,director,A,39100,this one look like it has a pointed beak a box is on it back right leg is lifted,NA,NA,NA,NA,NA,1490403830067,A,K,5,0,NA,19,8
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490403886807,16,2,director,F,45077,looks like a person setting with there knees bent up and their back is against a wall,NA,NA,NA,NA,NA,1490403921750,F,F,2,1,NA,17,8
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490403906937,16,2,matcher,F,3339,are they facing left or right,NA,NA,NA,NA,NA,1490403921750,F,F,2,1,NA,6,8
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490403919147,16,2,director,F,1374,left,NA,NA,NA,NA,NA,1490403921750,F,F,2,1,NA,1,8
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490403992417,17,2,director,K,52869,looks like a chinese lady on her knees with her hands out facing right and it not the one you picked earlier,NA,NA,NA,NA,NA,1490404078253,K,G,9,0,NA,22,8
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490404051971,17,2,matcher,K,7331,is there two diamonds on the top or one?,NA,NA,NA,NA,NA,1490404078253,K,G,9,0,NA,9,8
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490404125608,18,2,director,H,37177,its the fat one with no features like arms or legs just a box on top,NA,NA,NA,NA,NA,1490404154333,H,H,1,1,NA,16,8
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490404217144,19,2,director,L,45525,kinda shaped like a s or a lighting bolt it is facing right,NA,NA,NA,NA,NA,1490404238198,L,K,4,0,NA,13,8
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490404255190,20,2,director,C,10408,the one that looks like a person flying,NA,NA,NA,NA,NA,1490404259885,C,C,3,1,NA,8,8
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490404337350,21,2,director,J,51794,this shape has a diamond on top and its straight on the left side and the bottom,NA,NA,NA,NA,NA,1490404357869,J,J,2,1,NA,17,8
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490404381796,22,2,director,B,11197,the one with the triangle at its mouth,NA,NA,NA,NA,NA,1490404402013,B,B,2,1,NA,8,8
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490404474948,23,2,director,G,35298,this one has a 2 triangle and a box in it,NA,NA,NA,NA,NA,1490404493098,G,E,10,0,NA,11,8
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490404548836,24,2,director,D,37917,its standing up arms out facing left kinda looks like someone looking at a book,NA,NA,NA,NA,NA,1490404566134,D,D,5,1,NA,15,8
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490404578834,25,3,director,D,7212,same one you just picked,NA,NA,NA,NA,NA,1490404582480,D,D,4,1,NA,5,8
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490404597458,26,3,director,E,7679,girl with bow in her hair,NA,NA,NA,NA,NA,1490404629229,E,B,3,0,NA,6,8
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490404645426,27,3,director,H,10047,the fat one with no features,NA,NA,NA,NA,NA,1490404650640,H,H,1,1,NA,6,8
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490404699411,28,3,director,I,27015,looks like a person kicking a ball leg raised facing left,NA,NA,NA,NA,NA,1490404711824,I,A,7,0,NA,11,8
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490404777264,29,3,director,B,48720,the one with a triangle point at the mouth it touching the box,NA,NA,NA,NA,NA,1490404812009,B,B,5,1,NA,13,8
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490404800221,29,3,matcher,B,3118,facing left or right?,NA,NA,NA,NA,NA,1490404812009,B,B,5,1,NA,4,8
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490404809280,29,3,director,B,4819,facing right,NA,NA,NA,NA,NA,1490404812009,B,B,5,1,NA,2,8
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490404907935,30,3,director,J,75918,the diamond shape is on top of this one it looks centered kinda like it a table,NA,NA,NA,NA,NA,1490404920768,J,J,9,1,NA,17,8
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490404966542,31,3,director,G,31332,this one has 2 triangle on the right side and a box on the left,NA,NA,NA,NA,NA,1490404986323,G,G,5,1,NA,15,8
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490405035166,32,3,director,L,39232,the one thats shaped light a lighting bolt facing right,NA,NA,NA,NA,NA,1490405051078,L,L,1,1,NA,10,8
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490405157824,33,3,director,K,90195,the one that look like a chinese lady on her knees facing right there is another one that look similar but this one has a point on its back,NA,NA,NA,NA,NA,1490405182733,K,B,10,0,NA,29,8
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490405224954,34,3,director,A,25888,pointed has looks like it looking at its right shoe the leg is raised,NA,NA,NA,NA,NA,1490405256269,A,G,10,0,NA,14,8
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490405236969,34,3,director,A,3385,pointed face],NA,NA,NA,NA,NA,1490405256269,A,G,10,0,NA,2,8
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490405274281,35,3,director,C,12202,the one that looks like its flying,NA,NA,NA,NA,NA,1490405279958,C,C,11,1,NA,7,8
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490405336138,36,3,director,F,43374,imagine your setting on your butt with your knees bend reading a book thats what this one looks like,NA,NA,NA,NA,NA,1490405344531,F,F,2,1,NA,19,8
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490405355448,37,4,director,C,4115,flying one again,NA,NA,NA,NA,NA,1490405360922,C,C,7,1,NA,3,8
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490405388472,38,4,director,D,12646,the one standing straight up facing left,NA,NA,NA,NA,NA,1490405425821,D,D,4,1,NA,7,8
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490405423048,38,4,director,D,16443,looks like it looking at something in its hands,NA,NA,NA,NA,NA,1490405425821,D,D,4,1,NA,9,8
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490405461079,39,4,director,K,24606,chinese lady again facing left,NA,NA,NA,NA,NA,1490405528691,K,B,10,0,NA,5,8
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490405507159,39,4,matcher,K,4578,standing or sitting?,NA,NA,NA,NA,NA,1490405528691,K,B,10,0,NA,3,8
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490405516119,39,4,director,K,5611,on her knees,NA,NA,NA,NA,NA,1490405528691,K,B,10,0,NA,3,8
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490405576182,40,4,director,A,23384,person with pointed face looking at there right shoe,NA,NA,NA,NA,NA,1490405584720,A,A,3,1,NA,9,8
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490405628263,41,4,director,B,32777,the one you picked as the chinese lady triangle at her mouth,NA,NA,NA,NA,NA,1490405649888,B,B,8,1,NA,12,8
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490405670564,42,4,director,F,10355,person with knees bend reading a book,NA,NA,NA,NA,NA,1490405691347,F,L,9,0,NA,7,8
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490405719585,43,4,director,L,15226,light bolt shaped one,NA,NA,NA,NA,NA,1490405744154,L,L,10,1,NA,4,8
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490405768707,44,4,director,G,14341,the one with 2 triangle on the left and a box on the right,NA,NA,NA,NA,NA,1490405883504,G,B,1,0,NA,14,8
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490405787554,44,4,director,G,8659,the triangles are on the right,NA,NA,NA,NA,NA,1490405883504,G,B,1,0,NA,6,8
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490405793346,44,4,director,G,4640,and box on the left,NA,NA,NA,NA,NA,1490405883504,G,B,1,0,NA,5,8
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490405807059,44,4,director,G,3128,triangles,NA,NA,NA,NA,NA,1490405883504,G,B,1,0,NA,1,8
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490405897602,45,4,director,E,7902,girl with bow in her hair,NA,NA,NA,NA,NA,1490405901930,E,E,1,1,NA,6,8
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490405937250,46,4,director,I,25196,guy kicking a ball has his right leg lifted high facing left,NA,NA,NA,NA,NA,1490405958202,I,A,1,0,NA,12,8
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490405976512,47,4,director,J,5762,diamond on a table,NA,NA,NA,NA,NA,1490405983750,J,J,1,1,NA,4,8
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490405999584,48,4,director,H,8394,fat one with no features,NA,NA,NA,NA,NA,1490406003911,H,H,1,1,NA,5,8
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406014688,49,5,director,C,5383,flying one,NA,NA,NA,NA,NA,1490406022854,C,C,1,1,NA,2,9
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406066033,50,5,director,B,35230,the one you picked as the chinese lady triangle look like its in her mouth,NA,NA,NA,NA,NA,1490406088109,B,B,10,1,NA,15,9
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406118656,51,5,director,I,22724,guy kicking a ball not the one you picked earlier with the pointed face,NA,NA,NA,NA,NA,1490406172186,I,A,7,0,NA,14,9
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406147950,51,5,director,I,7393,it has a triangle for a foot,NA,NA,NA,NA,NA,1490406172186,I,A,7,0,NA,7,9
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406152893,51,5,matcher,I,7351,i don't see that guy with the leg back behind him,NA,NA,NA,NA,NA,1490406172186,I,A,7,0,NA,11,9
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406185086,52,5,director,L,5705,the lighting bolt one,NA,NA,NA,NA,NA,1490406191547,L,L,11,1,NA,4,9
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406203264,53,5,director,H,6521,fat one with no features,NA,NA,NA,NA,NA,1490406235975,H,H,2,1,NA,5,9
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406231422,53,5,director,H,14671,fat one with no features again,NA,NA,NA,NA,NA,1490406235975,H,H,2,1,NA,6,9
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406265261,54,5,director,D,23110,the one standing straight up looking at something in its hands facing left,NA,NA,NA,NA,NA,1490406277011,D,A,11,0,NA,13,9
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406317100,55,5,director,G,26077,2 triangle on the left and a box on the right,NA,NA,NA,NA,NA,1490406394317,G,L,4,0,NA,11,9
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406343455,55,5,director,G,13786,sorry they are on the right,NA,NA,NA,NA,NA,1490406394317,G,L,4,0,NA,6,9
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406350060,55,5,director,G,5694,the triangles,NA,NA,NA,NA,NA,1490406394317,G,L,4,0,NA,2,9
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406363275,55,5,director,G,4325,box is on the right,NA,NA,NA,NA,NA,1490406394317,G,L,4,0,NA,5,9
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406417803,56,5,director,F,16075,guy reading with knees bend setting on his butt,NA,NA,NA,NA,NA,1490406422829,F,F,3,1,NA,9,9
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406445930,57,5,director,A,15113,pointed faced one looking at his shoe,NA,NA,NA,NA,NA,1490406454573,A,A,7,1,NA,7,9
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406468107,58,5,director,J,7854,diamond on a table,NA,NA,NA,NA,NA,1490406476384,J,J,4,1,NA,4,9
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406484682,59,5,director,E,2769,bow in hair,NA,NA,NA,NA,NA,1490406489629,E,E,8,1,NA,3,9
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406553242,60,5,director,K,51397,chinese lady on her knees facing right does not have a triangle pointed toward its mouth,NA,NA,NA,NA,NA,1490406581302,K,K,3,1,NA,16,9
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406573065,60,5,director,K,8260,its arms are straight out,NA,NA,NA,NA,NA,1490406581302,K,K,3,1,NA,5,9
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406609017,61,6,director,D,18551,guy standing straight up looking at a book,NA,NA,NA,NA,NA,1490406615188,D,D,9,1,NA,8,9
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406636504,62,6,director,B,14992,triangle in its mouth,NA,NA,NA,NA,NA,1490406655730,B,B,8,1,NA,4,9
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406715192,63,6,director,G,51352,2 triangles on the right and a box on the left the box and 1 triangle are side by side at the top,NA,NA,NA,NA,NA,1490406737997,G,G,7,1,NA,23,9
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406790760,64,6,director,I,43850,the guy kicking a ball no the pointed face one it is standing on one leg,NA,NA,NA,NA,NA,1490406798139,I,I,5,1,NA,16,9
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406809126,65,6,director,A,5315,pointed face one,NA,NA,NA,NA,NA,1490406819510,A,A,1,1,NA,3,9
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406831781,66,6,director,L,4205,lighting bolt one,NA,NA,NA,NA,NA,1490406858567,L,K,11,0,NA,3,9
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406873269,67,6,director,J,9471,diamond on a table,NA,NA,NA,NA,NA,1490406877181,J,J,3,1,NA,4,9
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406903174,68,6,director,F,18803,guy with his knees bent setting on his but,NA,NA,NA,NA,NA,1490406914813,F,F,11,1,NA,9,9
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490406984580,69,6,director,K,17190,chinese lady arms pointed straight out,NA,NA,NA,NA,NA,1490406996860,K,D,7,0,NA,6,9
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490407009060,70,6,director,H,6816,fat one with no features,NA,NA,NA,NA,NA,1490407015366,H,H,8,1,NA,5,9
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490407023539,71,6,director,E,2618,bow in hair,NA,NA,NA,NA,NA,1490407047561,E,B,8,0,NA,3,9
-2002-d128dee1-72d2-4585-9488-fcedfabe7722,1490407057459,72,6,director,C,4349,flying one,NA,NA,NA,NA,NA,1490407063626,C,C,4,1,NA,2,9
 4853-e6b0e457-f035-428e-be9a-9191a3a4a222,1490641340280,1,1,director,B,12991,it kinda looks like a child in a blanket with its arms spread out,1191572,yes,,liked,yes,1490641350602,B,C,4,0,NA,14,8
 4853-e6b0e457-f035-428e-be9a-9191a3a4a222,1490641347588,1,1,director,B,1551,or like a baby,1191572,yes,,liked,yes,1490641350602,B,C,4,0,NA,4,8
 4853-e6b0e457-f035-428e-be9a-9191a3a4a222,1490641364170,2,1,director,E,4809,it looks like a bunny,1191572,yes,,liked,yes,1490641404775,E,E,12,1,NA,5,8
@@ -3847,6 +3803,82 @@ gameid,msgTime,trialNum,repetitionNum,role,intendedName,timeElapsed,contents,tot
 8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490647620936,70,6,director,J,3398,rectangle,2321382,yes,This was fun!,loved,yes,1490647622924,J,J,3,1,NA,1,12
 8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490647629259,71,6,director,C,1453,falling,2321382,yes,This was fun!,loved,yes,1490647631643,C,C,1,1,NA,1,12
 8717-5275ed0c-7fcc-4114-8327-2e32a234c2e0,1490647639576,72,6,director,F,3165,reclining,2321382,yes,This was fun!,loved,yes,1490647641692,F,F,9,1,NA,1,12
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490646593792,1,1,director,K,9660,the one that is standing,1522405,yes,no,loved,yes,1490646664491,K,H,7,0,NA,5,4
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490646617728,1,1,matcher,K,3337,i see a couple standing.,1381707,yes,,liked,yes,1490646664491,K,H,7,0,NA,5,4
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490646638056,1,1,director,K,6003,with an opening on each side,1522405,yes,no,loved,yes,1490646664491,K,H,7,0,NA,6,4
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490646688270,2,1,director,J,6856,the fattest one,1522405,yes,no,loved,yes,1490646693057,J,H,2,0,NA,3,4
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490646706283,3,1,director,G,4111,the one shaped like a star,1522405,yes,no,loved,yes,1490646731984,G,B,4,0,NA,6,4
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490646749820,4,1,director,C,4422,the one that looks like it is flying,1522405,yes,no,loved,yes,1490646752751,C,C,12,1,NA,8,4
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490646764220,5,1,director,B,4733,the one where the top looks like a toilet,1522405,yes,no,loved,yes,1490646784928,B,B,7,1,NA,9,4
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490646775596,5,1,director,B,3093,and has a triangle behind it,1522405,yes,no,loved,yes,1490646784928,B,B,7,1,NA,6,4
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490646806634,6,1,director,A,16416,the one one with that looks like it is looking down and kicking,1522405,yes,no,loved,yes,1490646820255,A,F,1,0,NA,13,4
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490646829170,7,1,director,H,3212,the fat one,1522405,yes,no,loved,yes,1490646838808,H,J,12,0,NA,3,4
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490646859412,8,1,director,D,14638,the one tht looks like the statue of liberty,1522405,yes,no,loved,yes,1490646874443,D,K,6,0,NA,9,4
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490646892406,9,1,director,F,12085,the one that ilooks like it is sitting down and facing the left,1522405,yes,no,loved,yes,1490646896451,F,F,1,1,NA,13,4
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490646909726,10,1,director,E,8200,the one that looks like it is sitting down and looking towards the right,1522405,yes,no,loved,yes,1490646921814,E,E,11,1,NA,14,4
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490646938422,11,1,director,I,10935,the one that looks like a bird eating,1522405,yes,no,loved,yes,1490646958967,I,A,10,0,NA,8,4
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490646980732,12,1,director,L,14331,the one that looks like a zig zag,1522405,yes,no,loved,yes,1490647003637,L,K,11,0,NA,8,4
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490646996023,12,1,director,L,4839,with the square on the very top,1522405,yes,no,loved,yes,1490647003637,L,K,11,0,NA,7,4
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490647022434,13,2,director,F,13223,the one sitting down looking towards the left and has a square on the very top,1522405,yes,no,loved,yes,1490647029374,F,F,8,1,NA,16,10
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490647047026,14,2,director,G,13034,the one that looks like a shoe,1522405,yes,no,loved,yes,1490647056075,G,G,4,1,NA,7,10
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490647068601,15,2,director,H,5954,the fat one with a square on top,1522405,yes,no,loved,yes,1490647076095,H,H,2,1,NA,8,10
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490647083859,16,2,director,E,1865,bunny ears,1522405,yes,no,loved,yes,1490647086691,E,E,11,1,NA,2,10
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490647102015,17,2,director,K,7139,the one with a wide opening on the right side,1522405,yes,no,loved,yes,1490647113117,K,C,7,0,NA,10,10
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490647139715,18,2,director,I,20229,the one with looks like a mouth on the left side,1522405,yes,no,loved,yes,1490647154240,I,K,1,0,NA,11,10
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490647162143,19,2,director,C,1616,the flying one,1522405,yes,no,loved,yes,1490647165076,C,C,11,1,NA,3,10
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490647177427,20,2,director,L,7729,the zizag with square on top,1522405,yes,no,loved,yes,1490647180837,L,L,7,1,NA,6,10
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490647195091,21,2,director,A,8568,man looking down kicking a stone,1522405,yes,no,loved,yes,1490647200642,A,A,6,1,NA,6,10
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490647225232,22,2,director,J,10251,square on top and plain shape on bottom,1522405,yes,no,loved,yes,1490647234362,J,J,8,1,NA,8,10
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490647246778,23,2,director,D,4183,statue of liberty,1522405,yes,no,loved,yes,1490647251423,D,D,7,1,NA,3,10
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490647263336,24,2,director,B,6736,toilet with triangle behind,1522405,yes,no,loved,yes,1490647270045,B,B,2,1,NA,4,10
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490647301132,25,3,director,K,10288,double mouth one,1522405,yes,no,loved,yes,1490647309594,K,K,7,1,NA,3,11
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490647317264,26,3,director,D,1984,statue of liberty,1522405,yes,no,loved,yes,1490647321689,D,D,1,1,NA,3,11
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490647334066,27,3,director,J,5255,square on top plain shape on bottom,1522405,yes,no,loved,yes,1490647337635,J,J,6,1,NA,7,11
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490647343730,28,3,director,A,1317,man kicking,1522405,yes,no,loved,yes,1490647347439,A,A,9,1,NA,2,11
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490647356667,29,3,director,I,3722,bird eating,1522405,yes,no,loved,yes,1490647360537,I,I,12,1,NA,2,11
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490647367146,30,3,director,E,1511,bunny ears,1522405,yes,no,loved,yes,1490647371515,E,E,2,1,NA,2,11
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490647377238,31,3,director,C,838,flying,1522405,yes,no,loved,yes,1490647380079,C,C,10,1,NA,1,11
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490647387864,32,3,director,H,3053,fat one with square on top,1522405,yes,no,loved,yes,1490647390755,H,H,9,1,NA,6,11
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490647399967,33,3,director,B,4388,toilet with triangle behind,1522405,yes,no,loved,yes,1490647405183,B,B,5,1,NA,4,11
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490647413187,34,3,director,G,2755,shoe,1522405,yes,no,loved,yes,1490647416390,G,G,8,1,NA,1,11
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490647425762,35,3,director,L,2530,double opening,1522405,yes,no,loved,yes,1490647438476,L,K,3,0,NA,2,11
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490647455438,36,3,director,F,12094,man sitting looking down,1522405,yes,no,loved,yes,1490647463642,F,F,11,1,NA,4,11
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490647471854,37,4,director,F,3370,man sitting looking down,1522405,yes,no,loved,yes,1490647474634,F,F,6,1,NA,4,12
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490647493974,38,4,director,K,11042,square on top opening on each side,1522405,yes,no,loved,yes,1490647501824,K,K,8,1,NA,7,12
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490647512305,39,4,director,L,5040,zig zag with square on top,1522405,yes,no,loved,yes,1490647517578,L,L,6,1,NA,6,12
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490647524477,40,4,director,E,1219,bunny ears,1522405,yes,no,loved,yes,1490647539813,E,E,8,1,NA,2,12
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490647545634,41,4,director,C,783,flying,1522405,yes,no,loved,yes,1490647549388,C,C,12,1,NA,1,12
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490647560903,42,4,director,A,2475,man standing kicking,1522405,yes,no,loved,yes,1490647563678,A,A,12,1,NA,3,12
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490647574124,43,4,director,J,5216,square on top plain shape on bottom,1522405,yes,no,loved,yes,1490647578455,J,J,7,1,NA,7,12
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490647584993,44,4,director,I,1487,bird eating,1522405,yes,no,loved,yes,1490647588959,I,I,2,1,NA,2,12
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490647599410,45,4,director,H,4848,square on top fat shape on bottom,1522405,yes,no,loved,yes,1490647602918,H,H,7,1,NA,7,12
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490647608609,46,4,director,G,540,shoe,1522405,yes,no,loved,yes,1490647614722,G,G,3,1,NA,1,12
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490647621977,47,4,director,D,2627,statue of liberty,1522405,yes,no,loved,yes,1490647625042,D,D,2,1,NA,3,12
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490647631382,48,4,director,B,758,toilet,1522405,yes,no,loved,yes,1490647635564,B,B,1,1,NA,1,12
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490647641873,49,5,director,B,691,toilet,1522405,yes,no,loved,yes,1490647644840,B,B,4,1,NA,1,12
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490647650135,50,5,director,G,547,shoe,1522405,yes,no,loved,yes,1490647652378,G,G,9,1,NA,1,12
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490647659241,51,5,director,E,2134,bunny ears,1522405,yes,no,loved,yes,1490647661213,E,E,1,1,NA,2,12
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490647671759,52,5,director,K,4924,square on top double opening on sides,1522405,yes,no,loved,yes,1490647678290,K,K,10,1,NA,7,12
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490647688891,53,5,director,L,5268,square on top zig zag on bottom,1522405,yes,no,loved,yes,1490647692965,L,L,5,1,NA,7,12
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490647706665,54,5,director,F,8404,man sitting looking down,1522405,yes,no,loved,yes,1490647709610,F,F,4,1,NA,4,12
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490647718109,55,5,director,D,2072,statue of liberty,1522405,yes,no,loved,yes,1490647725338,D,D,2,1,NA,3,12
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490647730810,56,5,director,C,989,flying,1522405,yes,no,loved,yes,1490647735699,C,C,6,1,NA,1,12
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490647744914,57,5,director,J,4215,square on top plain shape on bottom,1522405,yes,no,loved,yes,1490647750602,J,J,5,1,NA,7,12
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490647761413,58,5,director,H,5395,square on top fat shape on bottom,1522405,yes,no,loved,yes,1490647763932,H,H,4,1,NA,7,12
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490647769257,59,5,director,I,646,bird,1522405,yes,no,loved,yes,1490647773467,I,I,10,1,NA,1,12
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490647779768,60,5,director,A,1429,man kicking,1522405,yes,no,loved,yes,1490647782754,A,A,5,1,NA,2,12
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490647788876,61,6,director,A,1532,man kicking,1522405,yes,no,loved,yes,1490647791866,A,A,2,1,NA,2,12
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490647799617,62,6,director,L,2373,zig zag,1522405,yes,no,loved,yes,1490647805697,L,L,4,1,NA,2,12
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490647810709,63,6,director,G,769,shoe,1522405,yes,no,loved,yes,1490647818269,G,G,12,1,NA,1,12
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490647823367,64,6,director,I,615,bird,1522405,yes,no,loved,yes,1490647825821,I,I,4,1,NA,1,12
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490647831281,65,6,director,B,757,toilet,1522405,yes,no,loved,yes,1490647839066,B,B,9,1,NA,1,12
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490647852537,66,6,director,K,7987,square on top openings on both sides,1522405,yes,no,loved,yes,1490647854988,K,K,2,1,NA,7,12
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490647865643,67,6,director,J,5599,square on top plain shape on bottom,1522405,yes,no,loved,yes,1490647870126,J,J,8,1,NA,7,12
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490647876248,68,6,director,F,1320,man sitting,1522405,yes,no,loved,yes,1490647881890,F,F,4,1,NA,2,12
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490647890854,69,6,director,H,4097,square on top fat shape on bottom,1522405,yes,no,loved,yes,1490647901871,H,H,2,1,NA,7,12
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490647908564,70,6,director,D,2290,statue of liberty,1522405,yes,no,loved,yes,1490647910236,D,D,3,1,NA,3,12
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490647916299,71,6,director,E,1685,bunny ears,1522405,yes,no,loved,yes,1490647919002,E,E,10,1,NA,2,12
+4076-4cf65365-3773-4e94-abc7-06f8f15081f3,1490647933369,72,6,director,C,6663,flying,1522405,yes,no,loved,yes,1490647934963,C,C,10,1,NA,1,12
 2223-ecc53ef3-7e9a-4776-b7c5-6811400d1a65,1490647187098,1,1,director,B,8818,"it has a tail, two arms, diamond head",NA,NA,NA,NA,NA,1490647290962,B,B,6,1,NA,8,12
 2223-ecc53ef3-7e9a-4776-b7c5-6811400d1a65,1490647192e3,1,1,director,B,3338,snowman bottom almost,NA,NA,NA,NA,NA,1490647290962,B,B,6,1,NA,3,12
 2223-ecc53ef3-7e9a-4776-b7c5-6811400d1a65,1490647209309,1,1,director,B,7840,there is a slit under his right arm pit,NA,NA,NA,NA,NA,1490647290962,B,B,6,1,NA,9,12
@@ -7658,200 +7690,6 @@ gameid,msgTime,trialNum,repetitionNum,role,intendedName,timeElapsed,contents,tot
 0349-951c1418-40e9-48b3-8290-7ed4461f4d54,1490665214479,70,6,director,L,3826,about to kneel,3619118,yes,no,liked,yes,1490665218772,L,L,10,1,NA,3,12
 0349-951c1418-40e9-48b3-8290-7ed4461f4d54,1490665224560,71,6,director,E,1005,bunny,3619118,yes,no,liked,yes,1490665244404,E,E,6,1,NA,1,12
 0349-951c1418-40e9-48b3-8290-7ed4461f4d54,1490665256935,72,6,director,H,5102,legless sits facing us,3619118,yes,no,liked,yes,1490665277974,H,H,1,1,NA,4,12
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662200501,1,1,director,I,17296,it has a tail,4784053,yes,fun but long,liked,yes,1490662246774,I,I,10,1,NA,4,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662234719,1,1,matcher,I,11173,standing on one leg?,NA,NA,NA,NA,NA,1490662246774,I,I,10,1,NA,4,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662281866,2,1,director,K,8200,looks like cayman,4784053,yes,fun but long,liked,yes,1490662343417,K,L,2,0,NA,3,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662293009,2,1,director,K,8861,when he's chomping,4784053,yes,fun but long,liked,yes,1490662343417,K,L,2,0,NA,3,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662329750,2,1,matcher,K,4256,is it kneeling?,NA,NA,NA,NA,NA,1490662343417,K,L,2,0,NA,3,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662384667,3,1,director,B,21981,this one kind of look like a bow in a girl's hair,4784053,yes,fun but long,liked,yes,1490662399531,B,E,12,0,NA,12,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662458578,4,1,director,D,26155,this one like a monk,4784053,yes,fun but long,liked,yes,1490662509502,D,D,8,1,NA,5,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662469428,4,1,director,D,6907,holding something in his hand,4784053,yes,fun but long,liked,yes,1490662509502,D,D,8,1,NA,5,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662486862,4,1,matcher,D,4563,facing left or right?,NA,NA,NA,NA,NA,1490662509502,D,D,8,1,NA,4,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662493424,4,1,director,D,3521,facing left,4784053,yes,fun but long,liked,yes,1490662509502,D,D,8,1,NA,2,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662535901,5,1,matcher,G,4409,yes!,NA,NA,NA,NA,NA,1490662636003,G,G,3,1,NA,1,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662546409,5,1,director,G,5254,someone doing the tango,4784053,yes,fun but long,liked,yes,1490662636003,G,G,3,1,NA,4,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662582505,5,1,matcher,G,9918,do you think it looks like a shoe?,NA,NA,NA,NA,NA,1490662636003,G,G,3,1,NA,8,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662623354,5,1,director,G,21430,a shoe with a heal but the top doesn't look like a shoe,4784053,yes,fun but long,liked,yes,1490662636003,G,G,3,1,NA,13,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662683966,6,1,matcher,E,14046,3 whole cents for the bonus! !,NA,NA,NA,NA,NA,1490662703587,E,H,12,0,NA,7,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662685259,6,1,director,E,11293,someone meditating facing right,4784053,yes,fun but long,liked,yes,1490662703587,E,H,12,0,NA,4,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662743971,7,1,matcher,H,15161,i bet your end is hard trying to describe these,NA,NA,NA,NA,NA,1490662892159,H,H,8,1,NA,10,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662821176,7,1,director,H,47591,this one looks like someone sitting on they have no arms,4784053,yes,fun but long,liked,yes,1490662892159,H,H,8,1,NA,11,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662850981,7,1,matcher,H,4317,which way they facing?,NA,NA,NA,NA,NA,1490662892159,H,H,8,1,NA,4,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662857523,7,1,director,H,10521,just a triangle head,4784053,yes,fun but long,liked,yes,1490662892159,H,H,8,1,NA,4,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662886343,7,1,director,H,1307,right,4784053,yes,fun but long,liked,yes,1490662892159,H,H,8,1,NA,1,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662926697,8,1,director,L,10146,this one looks like a woman,4784053,yes,fun but long,liked,yes,1490662995502,L,K,8,0,NA,6,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662934936,8,1,director,L,3109,facing right,4784053,yes,fun but long,liked,yes,1490662995502,L,K,8,0,NA,2,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662963579,8,1,matcher,L,13885,look like she sitting on knees?,NA,NA,NA,NA,NA,1490662995502,L,K,8,0,NA,6,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490662981462,8,1,matcher,L,4729,hunch backed as well?,NA,NA,NA,NA,NA,1490662995502,L,K,8,0,NA,4,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663022435,9,1,director,F,13672,sleeping man leaning against something,4784053,yes,fun but long,liked,yes,1490663059437,F,F,5,1,NA,5,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663058989,9,1,director,F,4932,facing left,4784053,yes,fun but long,liked,yes,1490663059437,F,F,5,1,NA,2,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663081026,10,1,director,A,11886,this one looks like their looking at their feet facing left,4784053,yes,fun but long,liked,yes,1490663096805,A,E,10,0,NA,11,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663185973,11,1,director,C,41037,a singer leaning backwards with arms raised upwards,4784053,yes,fun but long,liked,yes,1490663255900,C,C,9,1,NA,8,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663239712,11,1,matcher,C,11617,does it look like they are falling backwards?,NA,NA,NA,NA,NA,1490663255900,C,C,9,1,NA,8,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663291984,12,1,director,J,16994,this looks like a triangle sitting on top of a half square,4784053,yes,fun but long,liked,yes,1490663344007,J,J,2,1,NA,12,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663331826,12,1,matcher,J,19046,is it the square part cracked or jagged looking?,NA,NA,NA,NA,NA,1490663344007,J,J,2,1,NA,9,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663342684,12,1,director,J,2437,jagged,4784053,yes,fun but long,liked,yes,1490663344007,J,J,2,1,NA,1,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663390991,13,2,director,J,6140,same as the last round,4784053,yes,fun but long,liked,yes,1490663409114,J,J,11,1,NA,5,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663405240,13,2,matcher,J,2304,jagged?,NA,NA,NA,NA,NA,1490663409114,J,J,11,1,NA,1,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663437224,14,2,director,E,13075,this one looks like alice has her head in a book,4784053,yes,fun but long,liked,yes,1490663506667,E,E,3,1,NA,11,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663452160,14,2,director,E,1948,facing right,4784053,yes,fun but long,liked,yes,1490663506667,E,E,3,1,NA,2,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663457575,14,2,matcher,E,4430,facing left or right?,NA,NA,NA,NA,NA,1490663506667,E,E,3,1,NA,4,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663468437,14,2,director,E,1143,right,4784053,yes,fun but long,liked,yes,1490663506667,E,E,3,1,NA,1,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663498951,14,2,matcher,E,14374,knees or squatting?,NA,NA,NA,NA,NA,1490663506667,E,E,3,1,NA,3,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663500006,14,2,director,E,11834,she has a bow her hair,4784053,yes,fun but long,liked,yes,1490663506667,E,E,3,1,NA,6,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663541586,15,2,director,K,3497,a geisha,4784053,yes,fun but long,liked,yes,1490663585068,K,K,3,1,NA,2,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663543185,15,2,director,K,2787,facing right,4784053,yes,fun but long,liked,yes,1490663585068,K,K,3,1,NA,2,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663556702,15,2,director,K,6405,with the bow behind her,4784053,yes,fun but long,liked,yes,1490663585068,K,K,3,1,NA,5,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663601754,16,2,director,F,7981,this is the man leaning against the wall again,4784053,yes,fun but long,liked,yes,1490663615463,F,F,4,1,NA,9,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663631045,17,2,director,I,5572,standing on leg,4784053,yes,fun but long,liked,yes,1490663667497,I,I,4,1,NA,3,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663649314,17,2,matcher,I,6851,one leg left or right?,NA,NA,NA,NA,NA,1490663667497,I,I,4,1,NA,5,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663650105,17,2,director,I,8245,looks like chicken,4784053,yes,fun but long,liked,yes,1490663667497,I,I,4,1,NA,3,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663654282,17,2,director,I,2607,facing left,4784053,yes,fun but long,liked,yes,1490663667497,I,I,4,1,NA,2,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663690644,18,2,matcher,G,7994,30 minutes to go for me,NA,NA,NA,NA,NA,1490663706240,G,G,9,1,NA,6,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663694402,18,2,director,G,4591,lady doing th tango,4784053,yes,fun but long,liked,yes,1490663706240,G,G,9,1,NA,4,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663720097,19,2,director,C,6603,lady with arms facing upwards,4784053,yes,fun but long,liked,yes,1490663802241,C,C,1,1,NA,5,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663782589,19,2,matcher,C,6898,knees or squatting?,NA,NA,NA,NA,NA,1490663802241,C,C,1,1,NA,3,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663791841,19,2,director,C,5371,like she's falling backward,4784053,yes,fun but long,liked,yes,1490663802241,C,C,1,1,NA,4,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663795441,19,2,director,C,3374,with arms in the air,4784053,yes,fun but long,liked,yes,1490663802241,C,C,1,1,NA,5,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663825729,20,2,director,H,699,hmm,4784053,yes,fun but long,liked,yes,1490663938471,H,E,12,0,NA,1,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663897535,20,2,director,H,17402,sitting lady liike\,4784053,yes,fun but long,liked,yes,1490663938471,H,E,12,0,sitting lady liike\,3,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663907071,20,2,director,H,8098,with knees facing right,4784053,yes,fun but long,liked,yes,1490663938471,H,E,12,0,NA,4,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490663978939,21,2,director,L,19873,geisha carrying something facing right,4784053,yes,fun but long,liked,yes,1490663990342,L,K,12,0,NA,5,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664037562,22,2,director,B,16431,this one faces left,4784053,yes,fun but long,liked,yes,1490664138794,B,B,3,1,NA,4,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664046092,22,2,director,B,4813,pointy nose,4784053,yes,fun but long,liked,yes,1490664138794,B,B,3,1,NA,2,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664104619,22,2,director,B,3504,kneeling,4784053,yes,fun but long,liked,yes,1490664138794,B,B,3,1,NA,1,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664107905,22,2,director,B,2763,facing left,4784053,yes,fun but long,liked,yes,1490664138794,B,B,3,1,NA,2,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664165977,23,2,director,D,13231,this one is like the other but standing,4784053,yes,fun but long,liked,yes,1490664210143,D,L,8,0,NA,8,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664178218,23,2,director,D,7073,or carrying something facing left,4784053,yes,fun but long,liked,yes,1490664210143,D,L,8,0,NA,5,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664222392,24,2,director,A,5486,looking at feet,4784053,yes,fun but long,liked,yes,1490664275292,A,A,5,1,NA,3,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664224611,24,2,matcher,A,8835,hit the wrong one!,NA,NA,NA,NA,NA,1490664275292,A,A,5,1,NA,4,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664248309,24,2,matcher,A,5820,facing left or right?,NA,NA,NA,NA,NA,1490664275292,A,A,5,1,NA,4,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664252056,24,2,director,A,5647,or facing left,4784053,yes,fun but long,liked,yes,1490664275292,A,A,5,1,NA,3,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664255364,24,2,director,A,2031,one foot up,4784053,yes,fun but long,liked,yes,1490664275292,A,A,5,1,NA,3,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664289037,25,3,director,C,7085,arms open facing up,4784053,yes,fun but long,liked,yes,1490664341544,C,C,7,1,NA,4,8
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664299493,25,3,director,C,3435,falling backwards,4784053,yes,fun but long,liked,yes,1490664341544,C,C,7,1,NA,2,8
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664316609,25,3,director,C,5145,not the one with the long dress,4784053,yes,fun but long,liked,yes,1490664341544,C,C,7,1,NA,7,8
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664356653,26,3,director,A,6545,looking with one foot up,4784053,yes,fun but long,liked,yes,1490664454911,A,I,1,0,NA,5,8
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664381714,26,3,matcher,A,4942,head thrown back?,NA,NA,NA,NA,NA,1490664454911,A,I,1,0,NA,3,8
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664390538,26,3,director,A,5752,no looking at the foot,4784053,yes,fun but long,liked,yes,1490664454911,A,I,1,0,NA,5,8
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664437079,26,3,director,A,3018,head down,4784053,yes,fun but long,liked,yes,1490664454911,A,I,1,0,NA,2,8
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664442662,26,3,matcher,A,7478,sitting or standing?,NA,NA,NA,NA,NA,1490664454911,A,I,1,0,NA,3,8
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664447757,26,3,director,A,3453,standing,4784053,yes,fun but long,liked,yes,1490664454911,A,I,1,0,NA,1,8
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664478108,27,3,matcher,J,13562,that was the one one with the head thrown back,NA,NA,NA,NA,NA,1490664484675,J,J,5,1,NA,10,8
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664480861,27,3,director,J,15157,triangle on top of a jagged square,4784053,yes,fun but long,liked,yes,1490664484675,J,J,5,1,NA,7,8
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664499273,28,3,director,I,8114,this one is the one\\\\,4784053,yes,fun but long,liked,yes,1490664534596,I,I,11,1,this one is the one\\\\,5,8
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664524183,28,3,director,I,14154,like a chicken about the look at the ground,4784053,yes,fun but long,liked,yes,1490664534596,I,I,11,1,NA,9,8
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664529307,28,3,director,I,1880,facing left,4784053,yes,fun but long,liked,yes,1490664534596,I,I,11,1,NA,2,8
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664558412,29,3,director,G,7493,lady dancing facing right,4784053,yes,fun but long,liked,yes,1490664565450,G,G,8,1,NA,4,8
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664578430,30,3,director,F,5409,man sitting back against the wall,4784053,yes,fun but long,liked,yes,1490664596668,F,F,5,1,NA,6,8
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664582940,30,3,director,F,1477,facing left,4784053,yes,fun but long,liked,yes,1490664596668,F,F,5,1,NA,2,8
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664588986,30,3,matcher,F,16723,20 cents for bonus so far,NA,NA,NA,NA,NA,1490664596668,F,F,5,1,NA,6,8
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664616422,31,3,director,B,8237,kneeling facing left,4784053,yes,fun but long,liked,yes,1490664653564,B,K,2,0,NA,3,8
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664675492,32,3,director,E,14973,sitting facing right with back against the wall,4784053,yes,fun but long,liked,yes,1490664688955,E,E,3,1,NA,8,8
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664704377,33,3,director,D,17617,monk facing left,4784053,yes,fun but long,liked,yes,1490664788254,D,D,8,1,NA,3,8
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664806769,34,3,director,H,11305,sitting lady like with knees facing right,4784053,yes,fun but long,liked,yes,1490664827271,H,H,10,1,NA,7,8
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664823062,34,3,director,H,5564,no hands or feet,4784053,yes,fun but long,liked,yes,1490664827271,H,H,10,1,NA,4,8
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664844354,35,3,director,L,6780,kneeling with a book,4784053,yes,fun but long,liked,yes,1490664857737,L,D,4,0,NA,4,8
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664848374,35,3,director,L,1962,facing right,4784053,yes,fun but long,liked,yes,1490664857737,L,D,4,0,NA,2,8
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664874594,36,3,matcher,K,9071,i swear i know my directions,NA,NA,NA,NA,NA,1490664922515,K,L,5,0,NA,6,8
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664901021,36,3,director,K,9642,this one looks just like the one before,4784053,yes,fun but long,liked,yes,1490664922515,K,L,5,0,NA,8,8
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664911653,36,3,director,K,9872,except,4784053,yes,fun but long,liked,yes,1490664922515,K,L,5,0,NA,1,8
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664937066,37,4,director,A,7349,looking at the ground with one foot up,4784053,yes,fun but long,liked,yes,1490664949879,A,I,1,0,NA,8,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490664964050,38,4,director,E,7082,sitting with back against the wall facing right,4784053,yes,fun but long,liked,yes,1490664982263,E,E,9,1,NA,8,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665002172,39,4,director,H,14160,"sitting lady like, knees facing right",4784053,yes,fun but long,liked,yes,1490665026469,H,E,7,0,NA,6,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665020388,39,4,director,H,4234,nothing in hands,4784053,yes,fun but long,liked,yes,1490665026469,H,E,7,0,NA,3,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665042828,40,4,director,D,3589,monk facing left,4784053,yes,fun but long,liked,yes,1490665058911,D,D,1,1,NA,3,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665046890,40,4,director,D,3693,carrying something,4784053,yes,fun but long,liked,yes,1490665058911,D,D,1,1,NA,2,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665050851,40,4,matcher,D,19069,try to remember what you used before that is easier for me,NA,NA,NA,NA,NA,1490665058911,D,D,1,1,NA,12,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665078673,41,4,director,K,8741,geisha with bow behind her,4784053,yes,fun but long,liked,yes,1490665144529,K,A,11,0,NA,5,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665084668,41,4,director,K,1000,standing,4784053,yes,fun but long,liked,yes,1490665144529,K,A,11,0,NA,1,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665108743,41,4,director,K,4435,the bow is on the right,4784053,yes,fun but long,liked,yes,1490665144529,K,A,11,0,NA,6,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665168661,42,4,director,J,17927,the triangle on top the jagged square,4784053,yes,fun but long,liked,yes,1490665176649,J,J,10,1,NA,7,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665192594,43,4,director,I,8813,the one legged chicken,4784053,yes,fun but long,liked,yes,1490665199571,I,I,2,1,NA,4,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665221593,44,4,director,B,7510,the kneeling one facing left,4784053,yes,fun but long,liked,yes,1490665231092,B,K,10,0,NA,5,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665245131,45,4,director,L,8740,the lady like with the book facing right,4784053,yes,fun but long,liked,yes,1490665321633,L,K,10,0,NA,8,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665259236,45,4,director,L,13604,we can't seem to get the other one,4784053,yes,fun but long,liked,yes,1490665321633,L,K,10,0,NA,8,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665288610,45,4,director,L,10489,or can this one be a chicken singing,4784053,yes,fun but long,liked,yes,1490665321633,L,K,10,0,NA,8,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665301182,45,4,director,L,5550,with mouth open to the right,4784053,yes,fun but long,liked,yes,1490665321633,L,K,10,0,NA,6,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665333127,46,4,director,G,1622,dancing tango,4784053,yes,fun but long,liked,yes,1490665368043,G,G,2,1,NA,2,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665377717,47,4,director,C,3640,arms upwards,4784053,yes,fun but long,liked,yes,1490665385013,C,C,2,1,NA,2,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665381421,47,4,director,C,3271,falling backwards,4784053,yes,fun but long,liked,yes,1490665385013,C,C,2,1,NA,2,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665399519,48,4,director,F,8364,sitting with back against the wall,4784053,yes,fun but long,liked,yes,1490665416255,F,F,9,1,NA,6,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665409517,48,4,director,F,5548,facing left,4784053,yes,fun but long,liked,yes,1490665416255,F,F,9,1,NA,2,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665434318,49,5,director,J,11786,triangle on jagged square,4784053,yes,fun but long,liked,yes,1490665441076,J,J,1,1,NA,4,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665463331,50,5,matcher,F,8575,they better if i have a code,NA,NA,NA,NA,NA,1490665493334,F,F,1,1,NA,7,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665464943,50,5,director,F,11466,back against the wall facing left,4784053,yes,fun but long,liked,yes,1490665493334,F,F,1,1,NA,6,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665470726,50,5,director,F,1036,sitting,4784053,yes,fun but long,liked,yes,1490665493334,F,F,1,1,NA,1,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665504754,51,5,director,C,5580,falling arms facing upwards,4784053,yes,fun but long,liked,yes,1490665541325,C,C,9,1,NA,4,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665536189,51,5,matcher,C,4478,falling backwards one?,NA,NA,NA,NA,NA,1490665541325,C,C,9,1,NA,3,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665563886,52,5,director,I,2476,one leg,4784053,yes,fun but long,liked,yes,1490665641761,I,I,9,1,NA,2,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665573107,52,5,director,I,8459,standing on one leg,4784053,yes,fun but long,liked,yes,1490665641761,I,I,9,1,NA,4,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665588794,52,5,matcher,I,6304,head thrown back?,NA,NA,NA,NA,NA,1490665641761,I,I,9,1,NA,3,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665603576,52,5,director,I,3044,facing left,4784053,yes,fun but long,liked,yes,1490665641761,I,I,9,1,NA,2,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665617525,52,5,director,I,11139,this one you asked if was standing on one leg,4784053,yes,fun but long,liked,yes,1490665641761,I,I,9,1,NA,10,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665662015,53,5,director,L,7319,sitting lady like book facing right,4784053,yes,fun but long,liked,yes,1490665714219,L,K,10,0,NA,6,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665692163,53,5,director,L,18342,i think is how we described this,4784053,yes,fun but long,liked,yes,1490665714219,L,K,10,0,NA,7,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665701778,53,5,matcher,L,11644,knees or squatting?,NA,NA,NA,NA,NA,1490665714219,L,K,10,0,NA,3,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665712051,53,5,director,L,2728,knees,4784053,yes,fun but long,liked,yes,1490665714219,L,K,10,0,NA,1,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665720750,54,5,matcher,K,2261,squatting,NA,NA,NA,NA,NA,1490665772796,K,B,4,0,NA,1,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665725428,54,5,matcher,K,3085,its ok,NA,NA,NA,NA,NA,1490665772796,K,B,4,0,NA,2,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665757978,54,5,director,K,15207,this the geisha,4784053,yes,fun but long,liked,yes,1490665772796,K,B,4,0,NA,3,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665770152,54,5,director,K,9488,with he bow behind,4784053,yes,fun but long,liked,yes,1490665772796,K,B,4,0,NA,4,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665780735,55,5,director,D,750,monk,4784053,yes,fun but long,liked,yes,1490665796075,D,D,9,1,NA,1,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665790009,55,5,matcher,D,1599,facing?,NA,NA,NA,NA,NA,1490665796075,D,D,9,1,NA,1,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665794334,55,5,director,D,657,left,4784053,yes,fun but long,liked,yes,1490665796075,D,D,9,1,NA,1,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665809564,56,5,director,G,985,tango,4784053,yes,fun but long,liked,yes,1490665814846,G,G,4,1,NA,1,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665812941,56,5,matcher,G,3530,36 in bonus,NA,NA,NA,NA,NA,1490665814846,G,G,4,1,NA,3,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665834839,57,5,director,B,13677,this is the one you thought i was talking about when i said geisha,4784053,yes,fun but long,liked,yes,1490665844075,B,B,12,1,NA,14,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665854416,58,5,director,A,2097,one leg up,4784053,yes,fun but long,liked,yes,1490665928239,A,A,9,1,NA,3,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665859276,58,5,director,A,3728,looking down at the foot,4784053,yes,fun but long,liked,yes,1490665928239,A,A,9,1,NA,5,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665875259,58,5,matcher,A,8013,head thrown back?,NA,NA,NA,NA,NA,1490665928239,A,A,9,1,NA,3,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665888816,58,5,director,A,9142,head looking to the ground,4784053,yes,fun but long,liked,yes,1490665928239,A,A,9,1,NA,5,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665908801,58,5,director,A,4752,two legs,4784053,yes,fun but long,liked,yes,1490665928239,A,A,9,1,NA,2,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665912833,58,5,matcher,A,6870,leg up behind him?,NA,NA,NA,NA,NA,1490665928239,A,A,9,1,NA,4,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665919178,58,5,director,A,7095,one up one down,4784053,yes,fun but long,liked,yes,1490665928239,A,A,9,1,NA,4,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665922048,58,5,matcher,A,2320,or in front?,NA,NA,NA,NA,NA,1490665928239,A,A,9,1,NA,3,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665926060,58,5,director,A,1134,in front,4784053,yes,fun but long,liked,yes,1490665928239,A,A,9,1,NA,2,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665940873,59,5,director,E,6887,sitting alice with head in a book,4784053,yes,fun but long,liked,yes,1490665957644,E,E,3,1,NA,7,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665946644,59,5,director,E,3574,back against the wall,4784053,yes,fun but long,liked,yes,1490665957644,E,E,3,1,NA,4,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665949747,59,5,director,E,2322,facing right,4784053,yes,fun but long,liked,yes,1490665957644,E,E,3,1,NA,2,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665975769,60,5,director,H,10802,this one we get mixed up on,4784053,yes,fun but long,liked,yes,1490666023694,H,E,5,0,NA,7,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665986113,60,5,director,H,9596,the lady facing right,4784053,yes,fun but long,liked,yes,1490666023694,H,E,5,0,NA,4,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665994371,60,5,director,H,6300,with her knees facing right,4784053,yes,fun but long,liked,yes,1490666023694,H,E,5,0,NA,5,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490665994745,60,5,director,H,1188,no book,4784053,yes,fun but long,liked,yes,1490666023694,H,E,5,0,NA,2,9
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666034495,61,6,director,C,4372,falling backwards,4784053,yes,fun but long,liked,yes,1490666042319,C,C,12,1,NA,2,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666041184,61,6,director,C,5887,arms open upwards,4784053,yes,fun but long,liked,yes,1490666042319,C,C,12,1,NA,3,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666054383,62,6,director,H,5881,repeat on the lady no book,4784053,yes,fun but long,liked,yes,1490666074071,H,K,10,0,NA,6,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666062605,62,6,director,H,5825,knees facing right,4784053,yes,fun but long,liked,yes,1490666074071,H,K,10,0,NA,3,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666083737,63,6,matcher,L,4415,sorry,NA,NA,NA,NA,NA,1490666104013,L,E,9,0,NA,1,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666116055,64,6,director,A,3654,one leg up,4784053,yes,fun but long,liked,yes,1490666134550,A,A,7,1,NA,3,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666119622,64,6,director,A,2202,facing left,4784053,yes,fun but long,liked,yes,1490666134550,A,A,7,1,NA,2,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666125738,64,6,director,A,2947,leg in front,4784053,yes,fun but long,liked,yes,1490666134550,A,A,7,1,NA,3,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666151189,65,6,director,K,4652,carrying the book,4784053,yes,fun but long,liked,yes,1490666198282,K,K,1,1,NA,3,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666157464,65,6,director,K,2411,going to the right,4784053,yes,fun but long,liked,yes,1490666198282,K,K,1,1,NA,4,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666169623,65,6,matcher,K,6155,knees or squatting?,NA,NA,NA,NA,NA,1490666198282,K,K,1,1,NA,3,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666181621,65,6,director,K,6113,more like standing,4784053,yes,fun but long,liked,yes,1490666198282,K,K,1,1,NA,3,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666183658,65,6,director,K,2484,the bottom,4784053,yes,fun but long,liked,yes,1490666198282,K,K,1,1,NA,2,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666189641,65,6,director,K,5453,looks like a fish,4784053,yes,fun but long,liked,yes,1490666198282,K,K,1,1,NA,4,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666194613,65,6,director,K,3004,tail on the left,4784053,yes,fun but long,liked,yes,1490666198282,K,K,1,1,NA,4,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666215072,66,6,matcher,I,13221,knee,NA,NA,NA,NA,NA,1490666236819,I,I,2,1,NA,1,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666218495,66,6,director,I,13228,this one is the chicken looking down,4784053,yes,fun but long,liked,yes,1490666236819,I,I,2,1,NA,7,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666224669,66,6,matcher,I,5270,that is what i call knees,NA,NA,NA,NA,NA,1490666236819,I,I,2,1,NA,6,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666234205,66,6,director,I,7889,or forwards,4784053,yes,fun but long,liked,yes,1490666236819,I,I,2,1,NA,2,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666244988,67,6,director,G,896,tango,4784053,yes,fun but long,liked,yes,1490666249088,G,G,6,1,NA,1,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666263811,68,6,director,B,6166,this we get mixed too:(\,4784053,yes,fun but long,liked,yes,1490666282909,B,K,7,0,this we get mixed too:(\,5,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666276226,68,6,director,B,5119,kneeling facing left,4784053,yes,fun but long,liked,yes,1490666282909,B,K,7,0,NA,3,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666283025,68,6,director,B,4599,arms out,4784053,yes,fun but long,liked,yes,1490666282909,B,K,7,0,NA,2,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666290835,69,6,director,D,975,monk,4784053,yes,fun but long,liked,yes,1490666323781,D,D,5,1,NA,1,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666339254,70,6,director,J,7999,triangle on jagged square,4784053,yes,fun but long,liked,yes,1490666373065,J,J,12,1,NA,4,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666393617,71,6,director,F,9550,back against the wall,4784053,yes,fun but long,liked,yes,1490666453498,F,B,2,0,NA,4,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666399164,71,6,director,F,6431,facing left,4784053,yes,fun but long,liked,yes,1490666453498,F,B,2,0,NA,2,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666403228,71,6,director,F,1701,not alice,4784053,yes,fun but long,liked,yes,1490666453498,F,B,2,0,NA,2,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666410097,71,6,director,F,2765,with bow in hair,4784053,yes,fun but long,liked,yes,1490666453498,F,B,2,0,NA,4,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666453623,71,6,director,F,3413,sitting,4784053,yes,fun but long,liked,yes,1490666453498,F,B,2,0,NA,1,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666461654,72,6,director,E,2345,this one is alice,4784053,yes,fun but long,liked,yes,1490666473398,E,B,9,0,NA,4,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666465498,72,6,director,E,1768,facing left,4784053,yes,fun but long,liked,yes,1490666473398,E,B,9,0,NA,2,7
-7543-8662d7c6-aa4c-46a2-8125-7fad6ccd5afe,1490666466949,72,6,director,E,1004,book,4784053,yes,fun but long,liked,yes,1490666473398,E,B,9,0,NA,1,7
 5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490663752744,1,1,director,D,13112,a man sitting with his arms out to the left,NA,NA,NA,NA,NA,1490663760747,D,F,6,0,NA,10,9
 5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490663799336,2,1,director,E,20990,a shape that looks like a bunny sitting down. the ears are easy to spot,NA,NA,NA,NA,NA,1490663827479,E,E,12,1,NA,15,9
 5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490663819e3,2,1,matcher,E,5295,is it facing right or left,NA,NA,NA,NA,NA,1490663827479,E,E,12,1,NA,6,9
@@ -7946,81 +7784,6 @@ gameid,msgTime,trialNum,repetitionNum,role,intendedName,timeElapsed,contents,tot
 5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490665914864,70,6,director,K,6729,"kneeling right, feet sticking up",NA,NA,NA,NA,NA,1490665921837,K,K,12,1,NA,5,10
 5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490665929815,71,6,director,H,1848,no arms or legs,NA,NA,NA,NA,NA,1490665934101,H,H,9,1,NA,4,10
 5315-f238c198-20c0-4162-932c-76cb0ad9e5b8,1490665955280,72,6,director,B,14915,"looking right, both arms sticking out. feet in back",NA,NA,NA,NA,NA,1490665977059,B,K,9,0,"looking right, both arms sticking out. feet in back",9,10
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490663193394,1,1,director,C,24484,the image you need to identify looks like it is flying - holding it's hands up,3126621,yes,,okay,yes,1490663222561,C,C,9,1,NA,16,9
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490663211427,1,1,matcher,C,2482,a person?,3036180,yes,This took way longer than expected and not worth the pay imo,liked,yes,1490663222561,C,C,9,1,NA,2,9
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490663221590,1,1,director,C,4352,yes a person,3126621,yes,,okay,yes,1490663222561,C,C,9,1,NA,3,9
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490663260014,2,1,director,A,30126,this one is holding one foot up in front of it and looks like it is holding a flag,3126621,yes,,okay,yes,1490663268289,A,A,5,1,NA,19,9
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490663297346,3,1,director,I,22342,this one looks like it is leaning forward and holding one foot behind it.,3126621,yes,,okay,yes,1490663310243,I,I,3,1,NA,14,9
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490663357811,4,1,director,G,34205,this one has a square near the top and two triangles that looks like hands,3126621,yes,,okay,yes,1490663369371,G,B,5,0,NA,15,9
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490663403534,5,1,director,L,26358,this one has a square head and is doing a squat with triangle hands held in front,3126621,yes,,okay,yes,1490663417190,L,B,12,0,NA,17,9
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490663498818,6,1,director,B,69963,"this one has a square at the top, a triangle on the right and opposite of the triangle it has a point; the whole thing looks like it's kneeling",3126621,yes,,okay,yes,1490663527343,B,B,12,1,NA,29,9
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490663577606,7,1,director,K,36707,"this one is kneeling with a point on the right, it's knees are pointing to the right and what looks like feet on the left",3126621,yes,,okay,yes,1490663593952,K,K,4,1,NA,25,9
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490663644690,8,1,director,J,39812,"diamond head on top, rectangular shape on left points just below the head and at the feet both on the right",3126621,yes,,okay,yes,1490663693038,J,J,2,1,NA,21,9
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490663735810,9,1,director,F,32734,leaning with its back against a wall (wall to the right) feet to the left side of frame,3126621,yes,,okay,yes,1490663757962,F,A,4,0,NA,18,9
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490663822841,10,1,director,H,37575,"diamond head at top, no arms, looks to be kneeling down - has the least amount of shape of any of the figures",3126621,yes,,okay,yes,1490663838886,H,H,7,1,NA,23,9
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490663902161,11,1,director,D,53303,"diamond head at top, standing sideways, arms out to the left like they are holding a bowl or something, kind of looks like it's wearing a long robe",3126621,yes,,okay,yes,1490663916532,D,D,7,1,NA,28,9
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490663977496,12,1,director,E,50046,figure is sitting with its back against a wall and it's face it pointed to the right; looks like it's wearing a headdress (two pointy things coming out of its head),3126621,yes,,okay,yes,1490663995180,E,E,8,1,NA,31,9
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490664044893,13,2,director,H,34997,"diamond head, no arms, looks like it's kneeling",3126621,yes,,okay,yes,1490664051968,H,H,4,1,NA,8,8
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490664086017,14,2,director,C,14338,looks like it's flying - has its arms stretched out,3126621,yes,,okay,yes,1490664090421,C,C,3,1,NA,10,8
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490664117524,15,2,director,F,19703,"leaning against a wall/wall on right of frame, feet stretched out to left side",3126621,yes,,okay,yes,1490664132713,F,L,9,0,NA,14,8
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490664175102,16,2,director,I,31280,"standing on one foot with other stretched out behind, arms stretched out to left side of frame",3126621,yes,,okay,yes,1490664185675,I,I,9,1,NA,17,8
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490664243739,17,2,director,K,49389,"side view, kneeling with arms stretched to right side of frame, feet on left side of frame",3126621,yes,,okay,yes,1490664256681,K,L,12,0,NA,17,8
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490664289523,18,2,director,E,15478,"sitting against wall, head bowed, wearing headdress",3126621,yes,,okay,yes,1490664298176,E,E,7,1,NA,7,8
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490664331664,19,2,director,A,25174,"side view, facing left side of frame, one foot up, holding a flag or something square",3126621,yes,,okay,yes,1490664337096,A,A,4,1,NA,16,8
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490664462131,20,2,director,G,98811,doesn't look like a person - tilted square at top with point connected to long piece and a triangle on other side; below has a triangle at the bottom right,3126621,yes,,okay,yes,1490664482138,G,G,8,1,NA,30,8
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490664533895,21,2,director,L,39691,"diamond head, standing sideways and looks like person doing a squat with arms pointing to the right of frame",3126621,yes,,okay,yes,1490664551986,L,L,5,1,NA,19,8
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490664595429,22,2,director,J,36038,"diamond head, left side of body is a rectangle, right side has two points top and bottom",3126621,yes,,okay,yes,1490664622938,J,L,11,0,NA,17,8
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490664720858,23,2,director,B,76371,"diamond at top, full triangle connected on right, point on left, additional triangle bottom left (like a foot)",3126621,yes,,okay,yes,1490664739350,B,K,2,0,NA,18,8
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490664765486,24,2,director,D,15660,"standing sideways facing left, arms out holding a bowl, wearing a robe",3126621,yes,,okay,yes,1490664774851,D,D,2,1,NA,12,8
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490664837129,25,3,director,F,52332,you see figure from the side; it is facing left and is leaning against a wall (wall on right side of frame),3126621,yes,,okay,yes,1490664858942,F,F,1,1,NA,22,8
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490664892321,26,3,director,L,21267,"side view, facing right side of frame, crouching down with arms pointing to right",3126621,yes,,okay,yes,1490664900508,L,K,5,0,NA,14,8
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490664946664,27,3,director,J,36424,"diamond head, body is rectangular on left side with points top/bottom on right",3126621,yes,,okay,yes,1490664971428,J,J,3,1,NA,13,8
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665052115,28,3,director,G,6175,"diamond head, two points on right",3126621,yes,,okay,yes,1490665060674,G,L,9,0,NA,6,8
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665072777,29,3,director,B,4822,"diamond head, triangle on right",3126621,yes,,okay,yes,1490665079520,B,J,4,0,NA,5,8
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665095402,30,3,director,H,8680,"diamond head, no arms, kneeling",3126621,yes,,okay,yes,1490665101918,H,H,9,1,NA,5,8
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665113841,31,3,director,C,6815,looks like it's flying - arms out,3126621,yes,,okay,yes,1490665116523,C,C,5,1,NA,7,8
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665136008,32,3,director,A,10150,"facing left, one foot up, holding flag",3126621,yes,,okay,yes,1490665142308,A,A,8,1,NA,7,8
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665157159,33,3,director,E,7155,"leaning against wall, wearing headdress",3126621,yes,,okay,yes,1490665161062,E,E,9,1,NA,5,8
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665176225,34,3,director,D,6799,"facing left, wearing robe, holding bowl",3126621,yes,,okay,yes,1490665187113,D,D,2,1,NA,6,8
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665208255,35,3,director,I,14666,"facing left, arms out, one foot back",3126621,yes,,okay,yes,1490665210649,I,I,5,1,NA,7,8
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665227133,36,3,director,K,6072,"facing left, kneeling left, arms out",3126621,yes,,okay,yes,1490665241062,K,C,4,0,NA,6,8
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665262076,37,4,director,E,10685,"sitting with back against wall, wearing headdress",3126621,yes,,okay,yes,1490665265017,E,E,3,1,NA,7,8
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665278096,38,4,director,A,6399,"facing left, one foot up, holding flag",3126621,yes,,okay,yes,1490665283002,A,A,11,1,NA,7,8
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665292444,39,4,director,C,3000,flying with arms out,3126621,yes,,okay,yes,1490665295461,C,C,10,1,NA,4,8
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665316814,40,4,director,B,13694,"diamond on top, triangle on right side, point on left",3126621,yes,,okay,yes,1490665323720,B,L,5,0,NA,10,8
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665345922,41,4,director,G,12430,"tilted square at top, triangles top and bottom on right",3126621,yes,,okay,yes,1490665354235,G,K,11,0,NA,10,8
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665380713,42,4,director,L,12478,"standing sideways facing right of frame, arms out, crouching",3126621,yes,,okay,yes,1490665395404,L,L,4,1,NA,9,8
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665411376,43,4,director,D,9112,"facing left, arms out holding bowl, wearing robes",3126621,yes,,okay,yes,1490665417228,D,D,5,1,NA,8,8
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665440033,44,4,director,F,15063,"sitting with back against wall, facing to left of frame, feet out",3126621,yes,,okay,yes,1490665450723,F,G,9,0,NA,12,8
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665466945,45,4,director,K,10023,kneeling and facing right side of frame with arms out,3126621,yes,,okay,yes,1490665472762,K,G,8,0,NA,10,8
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665490647,46,4,director,I,9247,"facing left side of frame, arms out, one foot back",3126621,yes,,okay,yes,1490665497946,I,I,7,1,NA,10,8
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665521831,47,4,director,J,14919,"body is rectangular on left side and two points on right, top and bottom",3126621,yes,,okay,yes,1490665528180,J,J,9,1,NA,14,8
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665541039,48,4,director,H,5310,"no arms, kneeling",3126621,yes,,okay,yes,1490665543718,H,H,9,1,NA,3,8
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665564846,49,5,director,G,12453,"tilted square on top, two triangles right side, top/bottom",3126621,yes,,okay,yes,1490665573424,G,G,6,1,NA,9,10
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665592720,50,5,director,K,9430,"side view, facing right, arms out, kneeling",3126621,yes,,okay,yes,1490665600228,K,K,6,1,NA,7,10
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665622652,51,5,director,J,12325,"left side of body is rectangular, points on right top/bottom",3126621,yes,,okay,yes,1490665628417,J,J,2,1,NA,10,10
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665642845,52,5,director,I,8534,"side view, facing left, arms out, foot back",3126621,yes,,okay,yes,1490665652428,I,I,12,1,NA,8,10
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665668940,53,5,director,A,9344,"side view, facing left, one foot up, holding flag",3126621,yes,,okay,yes,1490665672715,A,A,3,1,NA,9,10
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665681194,54,5,director,H,2840,"no arms, kneeling",3126621,yes,,okay,yes,1490665684408,H,H,1,1,NA,3,10
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665698697,55,5,director,D,7917,"side view, facing left, holding bowl, wearing robe",3126621,yes,,okay,yes,1490665701903,D,D,10,1,NA,8,10
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665726646,56,5,director,B,15998,diamond head connected to triangle (right side),3126621,yes,,okay,yes,1490665736627,B,F,8,0,NA,7,10
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665755765,57,5,director,E,13351,"side view, facing right, leaning against wall wearing headdress",3126621,yes,,okay,yes,1490665761043,E,E,6,1,NA,9,10
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665768748,58,5,director,C,2654,"flying, arms out",3126621,yes,,okay,yes,1490665770680,C,C,5,1,NA,3,10
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665783018,59,5,director,F,6734,"side view, facing left, against wall",3126621,yes,,okay,yes,1490665792714,F,F,6,1,NA,6,10
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665808049,60,5,director,L,7332,"side view, facing right, arms out, crouching",3126621,yes,,okay,yes,1490665819262,L,G,6,0,NA,7,10
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665834656,61,6,director,I,9152,"side view, facing left, arms out, one foot back",3126621,yes,,okay,yes,1490665837393,I,I,10,1,NA,9,8
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665853372,62,6,director,J,9016,"rectangular body on left side, points on right",3126621,yes,,okay,yes,1490665861928,J,H,7,0,NA,8,8
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665876129,63,6,director,H,8151,"no arms, kneeling",3126621,yes,,okay,yes,1490665882438,H,H,9,1,NA,3,8
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665912282,64,6,director,F,23310,"side view, against wall facing left",3126621,yes,,okay,yes,1490665923549,F,F,5,1,NA,6,8
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665941895,65,6,director,E,12076,"side view, sitting against wall, facing right, headdress",3126621,yes,,okay,yes,1490665945280,E,E,5,1,NA,8,8
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490665965816,66,6,director,K,14102,"side view, kneeling, arms out, facing right",3126621,yes,,okay,yes,1490665975267,K,L,5,0,NA,7,8
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490666004341,67,6,director,B,19320,"diamond head connected to triangle on right, looks like it's kneeling",3126621,yes,,okay,yes,1490666017952,B,K,11,0,NA,11,8
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490666032302,68,6,director,A,7382,"side view, facing left, one foot up, holding flat",3126621,yes,,okay,yes,1490666038383,A,A,10,1,NA,9,8
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490666033951,68,6,director,A,463,flag,3126621,yes,,okay,yes,1490666038383,A,A,10,1,NA,1,8
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490666050860,69,6,director,D,6670,"side view, facing left, holding bowl, robe",3126621,yes,,okay,yes,1490666053253,D,D,10,1,NA,7,8
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490666068557,70,6,director,L,9662,"side view, facing right, crouching, arms out",3126621,yes,,okay,yes,1490666088346,L,L,9,1,NA,7,8
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490666123791,71,6,director,G,25542,"two triangles on right side of frame, tilted square to left",3126621,yes,,okay,yes,1490666132579,G,J,2,0,NA,11,8
-9021-ad91b3af-fb13-4360-931d-dc6bc2744e7a,1490666141547,72,6,director,C,3502,"flying, arms out",3126621,yes,,okay,yes,1490666146992,C,C,3,1,NA,3,8
 5032-f97819b4-cbef-4293-9d27-81134172edac,1490667562519,1,1,director,C,5683,it looks like a person with his hands up,1992420,yes,This was fun! (E2iZwi8d),loved,yes,1490667566162,C,C,3,1,NA,9,9
 5032-f97819b4-cbef-4293-9d27-81134172edac,1490667593750,2,1,director,A,18492,a person walking.  leg in front,1992420,yes,This was fun! (E2iZwi8d),loved,yes,1490667600654,A,A,4,1,NA,6,9
 5032-f97819b4-cbef-4293-9d27-81134172edac,1490667634909,3,1,director,G,17333,"box directly in the top middle.  long bottom, small triangle right side on bottom",1992420,yes,This was fun! (E2iZwi8d),loved,yes,1490667653579,G,J,10,0,NA,14,9

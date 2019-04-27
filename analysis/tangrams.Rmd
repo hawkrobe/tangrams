@@ -12,7 +12,7 @@ output:
 ```{r}
 library(tidyverse)
 library(lme4)
-library(lmerTest)
+library(ggthemes)
 library(tm)
 library(tidyboot)
 library(xtable)
@@ -30,14 +30,13 @@ source('./utils/analysis_helpers.R')
 
 ```{r}
 d <- read_csv('../data/tangramsSequential_collapsed.csv')
-d 
 ```
 
 ## semantic similarity analyses
 
 ```{r}
 M_mat = read_csv('./outputs/meta_tangrams_embeddings.csv') %>%
-  mutate(feature_ind = X1 + 1, # Have to correct for R's terrible 1-indexing...
+  mutate(feature_ind = X1 + 1, # Have to correct for R's (stupid) 1-indexing...
          gameID = gameid,
          target = intendedName,
          repetition = as.numeric(repetitionNum)) #%>% 
@@ -45,37 +44,14 @@ F_mat = as.matrix(read_delim('outputs/feats_tangrams_embeddings_rawavg.txt', del
 colnames(F_mat) <- NULL
 ```
 
-### overall btw vs. within similarity analyses
+### overall btw vs. within similarity
 
 ```{r}
-library(ggthemes)
-withinGames <- M_mat %>%
-  group_by(target, gameid) %>%
-  do(flatten_sim_matrix(get_sim_matrix(., F_mat, method = 'cosine'),
-                        .$repetition)) %>%
-  summarize(empirical_stat = mean(sim, na.rm = T)) %>%
-  filter(!is.na(empirical_stat)) %>%
-  mutate(source = 'within')
-
-acrossGames <- M_mat %>%
-  group_by(target) %>%
-  unite(combo_id, gameid, repetitionNum) %>%
-  do(flatten_sim_matrix(get_sim_matrix(., F_mat, method = 'cosine'),
-                        .$combo_id)) %>%
-  separate(dim1, into = c('gameid1', 'repnum1'), sep = '_') %>%
-  separate(dim2, into = c('gameid2', 'repnum2'), sep = '_') %>%
-  filter(gameid1 != gameid2) 
-
-combined.df <- acrossGames %>%
-  group_by(target, gameid1) %>%
-  summarize(empirical_stat = mean(sim, na.rm =T)) %>%
-  rename(gameid = gameid1) %>%
-  mutate(source = 'across') %>%
-  bind_rows(withinGames) 
+combined.df <- compute_within_vs_across(M_mat, F_mat)
 
 true_dprime = dprime(combined.df)
-dprimes <- map_dbl(seq_len(1000), ~ dprime(combined.df %>% mutate(source = sample(source))))
-cat('CI for permuted=', sort(dprimes)[25], sort(dprimes)[975])
+permuted_dprimes <- map_dbl(seq_len(1000), ~ dprime(combined.df %>% mutate(source = sample(source))))
+cat('CI for permuted=', sort(permuted_dprimes)[25], sort(permuted_dprimes)[975])
 cat('true=', true_dprime)
       
 combined.df %>%
@@ -91,81 +67,67 @@ ggsave('../writing/tangrams/figs/across_vs_within.pdf',  height = 7, width = 10,
 
 ### Drift
 
-
 Stats 
 
 ```{r}
-detach("package:lmerTest", unload=TRUE)
-true_lmer.drift <- make_within_df(M_mat, F_mat, 'cor') %>% filter(rep1 == 1) %>% ungroup()
-true_lmer.drift.out <- lmer(sim ~ poly(rep2,2) + (1 + poly(rep2, 1) | gameID) + (1 + poly(rep2, 1)| target), data = true_lmer.drift)
-summary(true_lmer.drift.out)
-permuted_tstats.drift <- map_dbl(seq_len(1000), ~ M_mat %>%
- # scrambles repetition
-  group_by(target, repetitionNum) %>% mutate(gameID = sample(gameID)) %>% ungroup() %>%
-  arrange(gameID, target, repetitionNum) %>%
-  make_within_df(F_mat, 'cosine') %>%
-  filter(rep1 == 1) %>%
-  # turns into a list to make `map` happy
-  ungroup() %>%  mutate(sample_id = 1) %>% split(.$sample_id) %>%
-  map(~ lmer(sim ~ poly(rep2,2) + (1 + poly(rep2, 1) | gameID) + (1 + poly(rep2, 1)| target), data = .)) %>%
-  map(~ (tidy(., effects = 'fixed') %>% filter(term == 'poly(rep2, 2)1'))$statistic) %>%
-  unlist())
-cat('CI for drift analysis=', sort(permuted_tstats.drift)[1], sort(permuted_tstats.drift)[10])
-cat('true for drift analysis=', (tidy(true_lmer.drift.out, effects = 'fixed') %>% filter(term == 'poly(rep2, 2)1'))$statistic)
+permuted.drift <- compute_permuted_estimates(M_mat, F_mat, 'drift', 100)
+cat('CI for drift analysis=', sort(permuted.drift)[2], sort(permuted.drift)[98])
+
+true_lmer.drift <- make_within_df(M_mat, F_mat, 'cosine') %>% filter(rep1 == 1) %>% ungroup()
+true_lmer.drift.out <- lmer(sim ~ poly(rep2,2) + (1  | gameID) + (1 | target), data = true_lmer.drift)
+cat('true for drift analysis=', (tidy(true_lmer.drift.out, effects = 'fixed') %>% filter(term == 'poly(rep2, 2)1'))$estimate)
 ```
 
-Viz
+Viz (raw data)
 
 ```{r}
-num_permutations <- 1000
-empirical.drift <- compute_within_drift(M_mat, F_mat, 'empirical', 
-                                        method = 'cosine', nboot = 1000) %>% 
-    rename(repdiff = `rep diff`) %>%
-    bind_rows(data.frame(repdiff ='1->1', n= 1, empirical_stat=1, ci_lower=1, 
-                       mean=1, ci_upper=1, sample_id='empirical')) 
-
-baselines.drift <- map_dfr(seq_len(10), ~M_mat %>%
-  group_by(target, repetitionNum) %>%
-  mutate(gameID = sample(gameID)) %>% # shuffle within target-rep 
-  ungroup() %>%
-  arrange(gameID, target, repetitionNum) %>%
-  compute_within_drift(F_mat, .x, method = 'cosine')) %>% # this passes in the iteration number
-  rename(repdiff = `rep diff`) 
-
-d.toplot.drift <- baselines.drift %>%
+true_lmer.drift %>% 
+  unite('repdiff', rep1, rep2, sep = '->') %>%
+  bind_rows(data.frame(repdiff ='1->1', sim = 1)) %>%
   group_by(repdiff) %>%
-  summarize(`ci_upper`=quantile(empirical_stat, probs=0.975),
-            `ci_lower`=quantile(empirical_stat, probs=0.025),
-            `empirical_stat`=quantile(empirical_stat, probs=0.5)) %>%
-  mutate(sample_id = 'baseline') %>%
-  rbind(empirical.drift %>% select(-n, -mean)) 
+  mutate(group_mean = mean(sim, na.rm = T)) %>%
+  ggplot(aes(x = repdiff, y = sim)) +
+    geom_boxplot() +#width = .1, outlier.size=0
+    scale_x_discrete(labels = c('(1,1)','(1,2)', '(1,3)', '(1,4)', '(1,5)' ,'(1,6)','(1,7)')) +
+    ylim(0, 1) +
+    ylab('cosine similarity') +
+    ggtitle('drift from initial within game') +
+    theme_few() +
+    xlab('repetition pair') +
+    guides(color = F, fill = F) +
+    theme(aspect.ratio = 1, legend.position = c(0.5, 0.8), text = element_text(size=18), 
+          element_line(size=1), element_rect(size=2, color="#00000"))
 
-ggplot(d.toplot.drift, aes(x = repdiff, y = empirical_stat, 
-               fill = sample_id, color = sample_id, group = sample_id)) +
-    # geom_ribbon(aes(ymin = ci_lower, ymax = ci_upper), alpha = 0.5, color = NA,
-    #             d.toplot.drift %>% filter(sample_id == 'baseline')) +
-    # geom_line(size = 1, linetype = 'dashed', data = d.toplot.drift %>% filter(sample_id == 'baseline')) +
-    geom_point(size = 1, data = d.toplot.drift %>% filter(sample_id == 'empirical')) +
-    geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), width = 0,
-                  data = d.toplot.drift %>% filter(sample_id == 'empirical')) +
-    geom_smooth(method = 'lm', formula = y ~ poly(x, 2), se = F,
-                data = d.toplot.drift %>% filter(sample_id == 'empirical')) +
+ggsave('../writing/tangrams/figs/drift_boxplot.pdf', height = 10, width = 10, units = 'cm', useDingbats = F)
+```
 
-      #geom_point(size = 1) +
-      #geom_line() +
-      # geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), width = 0) +
-      # geom_smooth(method = 'lm', formula = y ~ poly(x, 2), se = F) +
-      scale_x_discrete(labels = c('(1,1)','(1,2)', '(1,3)', '(1,4)', '(1,5)' ,'(1,6)','(1,7)')) +
-      ylim(.4, 1) +
-      ylab('cosine similarity') +
-      ggtitle('drift from initial within game') +
-      theme_few() +
-      xlab('repetition pair') +
-      guides(color = F, fill = F) +
-      theme(aspect.ratio = 1, legend.position = c(0.5, 0.8), text = element_text(size=18), 
-            element_line(size=1), element_rect(size=2, color="#00000"))
+Viz (mean estimates w/ baseline)
 
-ggsave('../writing/tangrams/figs/drift.pdf', height = 10, width = 10, units = 'cm', useDingbats = F)
+```{r}
+empirical_baselines.drift <- combine_empirical_and_baselines(M_mat, F_mat, 'drift', 10) %>%
+    bind_rows(data.frame(repdiff ='1->1', n= 1, empirical_stat=1, ci_lower=1, 
+                         mean=1, ci_upper=1, sample_id='empirical')) %>%
+    bind_rows(compute_across_similarity(M_mat, F_mat, 'baseline', 'cosine') %>%
+                filter(repetition == 1) %>% select(-n, -mean, -repetition) %>%
+                mutate(repdiff = '1->1')) 
+
+empirical_baselines.drift %>%
+  ggplot(aes(x = repdiff, y = empirical_stat, color = sample_id, linetype = sample_id, group = sample_id)) +
+    geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), width = 0, data = empirical_baselines.drift %>% filter(sample_id == 'empirical')) +
+    geom_line()  +
+    geom_ribbon(aes(ymin = ci_lower, ymax = ci_upper), alpha = 0.5, color = NA, data = empirical_baselines.drift %>% filter(sample_id == 'baseline')) +
+    scale_x_discrete(labels = c('(1,1)','(1,2)', '(1,3)', '(1,4)', '(1,5)' ,'(1,6)','(1,7)')) +
+    ylim(0.4, 1) +
+    ylab('cosine similarity') +
+    ggtitle('drift from initial within game') +
+    theme_few() +
+    xlab('repetition pair') +
+    guides(color = F, fill = F) +
+    theme(aspect.ratio = 1, legend.position = c(0.8, 0.8), text = element_text(size=18), 
+          element_line(size=1), element_rect(size=2, color="#00000"))
+
+ggsave('../writing/tangrams/figs/drift_mean.pdf', height = 10, width = 10, units = 'cm', useDingbats = F)
+
 ```
 
 ### Within-interaction convergence
@@ -173,76 +135,102 @@ ggsave('../writing/tangrams/figs/drift.pdf', height = 10, width = 10, units = 'c
 Stats 
 
 ```{r}
-true_lmer.within <- make_within_df(M_mat, F_mat, 'cor') %>% filter(rep2 == rep1 + 1) %>% ungroup()
-summary(lmer(sim ~ poly(rep1,2) + (1  + poly(rep1,1)| gameID) + (1+poly(rep1,2) | target), data = true_lmer.within))
-permuted_tstats.within <- map_dbl(seq_len(1000), ~ M_mat %>%
- # scrambles repetition
-  group_by(target, repetition) %>% mutate(gameID = sample(gameID)) %>% ungroup() %>%
-  arrange(gameID, target, repetition) %>%
-  make_within_df(F_mat, 'cosine') %>%
-  filter(rep2 == rep1 + 1) %>% 
-  # turns into a list to make `map` happy
-  ungroup() %>%  mutate(sample_id = 1) %>% split(.$sample_id) %>%
-  map(~ lmer(sim ~ poly(rep1,2) + (1 + poly(rep1,1)| gameID) + (1 + poly(rep1,1)| target), data = .)) %>%
-  map(~ (tidy(., effects = 'fixed') %>% filter(term == 'poly(rep1, 2)1'))$statistic) %>%
-  unlist())
-cat('CI for within analysis=', sort(permuted_tstats.within)[25], sort(permuted_tstats.within)[975])
+true_lmer.within <- make_within_df(M_mat, F_mat, 'cosine') %>% filter(rep2 == rep1 + 1) %>% ungroup()
+true_lmer.within.out <- lmer(sim ~ poly(rep1,2) + (1 + poly(rep1,1) | gameID) + (1+ poly(rep1,1)| target), data = true_lmer.within)
+summary(true_lmer.within.out)
+cat('true for within analysis=', (tidy(true_lmer.within.out, effects = 'fixed') %>% filter(term == 'poly(rep1, 2)1'))$estimate)
+
+permuted.within <- compute_permuted_estimates(M_mat, F_mat, 'within', 100)
+cat('CI for within analysis=', sort(permuted.within)[2], sort(permuted.within)[98])
 ```
 
-Viz
+Viz (raw data)
 
 ```{r}
-num_permutations <- 1000
-# empirical.within <- compute_within_convergence(M_mat, F_mat, 'empirical', 
-#                                                method = 'cosine', nboot = 1000)
-# baselines.within <- map_dfr(seq_len(100), ~M_mat %>%
-#   group_by(target, repetition) %>%
-#   mutate(gameID = sample(gameID)) %>% # shuffle within target-rep 
-#   ungroup() %>%
-#   arrange(gameID, target, repetition) %>%
-#   compute_within_convergence(F_mat, .x, method = 'cosine')) # this passes in the iteration number
-# 
-# d.toplot.within <- baselines.within %>%
-#   group_by(`rep diff`) %>%
-#   summarize(`ci_upper`=quantile(empirical_stat, probs=0.975),
-#             `ci_lower`=quantile(empirical_stat, probs=0.025),
-#             `empirical_stat`=quantile(empirical_stat, probs=0.5)) %>%
-#   mutate(sample_id = 'baseline') %>%
-#   rbind(empirical.within %>% select(-n, -mean))
+true_lmer.within %>% 
+  unite('repdiff', rep1, rep2, sep = '->') %>%
+  group_by(repdiff) %>%
+  mutate(group_mean = mean(sim, na.rm = T)) %>%
+  ggplot(aes(x = repdiff, y = sim)) +
+    geom_boxplot() +#width = .1, outlier.size=0
+    scale_x_discrete(labels = c('(1,1)','(1,2)', '(1,3)', '(1,4)', '(1,5)' ,'(1,6)','(1,7)')) +
+    ylim(0, 1) +
+    ylab('cosine similarity') +
+    ggtitle('convergence within game') +
+    theme_few() +
+    xlab('repetition pair') +
+    guides(color = F, fill = F) +
+    theme(aspect.ratio = 1, legend.position = c(0.5, 0.8), text = element_text(size=18), 
+          element_line(size=1), element_rect(size=2, color="#00000"))
+```
 
-ggplot(d.toplot.within, aes(x = `rep diff`, y = empirical_stat, fill = sample_id, color = sample_id, group = sample_id)) +
-    # geom_ribbon(aes(ymin = ci_lower, ymax = ci_upper), alpha = 0.5, color = NA,
-    #             d.toplot.within %>% filter(sample_id == 'baseline')) +
-    #geom_line(size = 1, linetype = 'dashed', data = d.toplot.within %>% filter(sample_id == 'baseline')) +
-    geom_point(size = 1, data = d.toplot.within %>% filter(sample_id == 'empirical')) +
-    geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), width = 0,
-                  data = d.toplot.within %>% filter(sample_id == 'empirical')) +
-    geom_smooth(method = 'lm', formula = y ~ poly(x, 2), se = F,
-                data = d.toplot.within %>% filter(sample_id == 'empirical')) +
-      scale_x_discrete(labels = c('(1,2)','(2,3)', '(3,4)', '(4,5)', '(5,6)')) +
-      ylim(.4, 1) +
-      ylab('cosine similarity') +
-      ggtitle('stability within game') +
-      theme_few() +
-      xlab('repetition pair') +
-      guides(color = F, fill = F) +
-      theme(aspect.ratio = 1, legend.position = c(0.5, 0.8), text = element_text(size=18), 
-            element_line(size=1), element_rect(size=2, color="#00000"))
+Viz (mean estimates w/ baseline)
+
+```{r}
+combined.within <- combine_empirical_and_baselines(M_mat, F_mat, 'within', 2)
+
+combined.within %>%
+  ggplot(aes(x = repdiff, y = empirical_stat, color = sample_id, linetype = sample_id, group = sample_id)) +
+    geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), width = 0, data = combined.within %>% filter(sample_id == 'empirical')) +
+    geom_line()  +
+    geom_ribbon(aes(ymin = ci_lower, ymax = ci_upper), alpha = 0.5, color = NA, data = combined.within %>% filter(sample_id == 'baseline')) +
+    scale_x_discrete(labels = c('(1,2)','(2,3)', '(3,4)', '(4,5)', '(5,6)' )) +
+    ylim(0.4, 1) +
+    ylab('cosine similarity') +
+    ggtitle('convergence within game') +
+    theme_few() +
+    xlab('repetition pair') +
+    guides(color = F, fill = F) +
+    theme(aspect.ratio = 1, text = element_text(size=18), 
+          element_line(size=1), element_rect(size=2, color="#00000"))
+
 ggsave('../writing/tangrams/figs/stability.pdf', height = 10, width = 10, units = 'cm', useDingbats = F)
 
 ```
 
 ### Between-interaction divergence 
 
+Stats 
 
 ```{r}
-compute_across_similarity(M_mat, F_mat, 'raw_cor_nonorm', method = 'cosine', nboot = 100) %>%
-  ggplot(aes(x = repetition, y = empirical_stat, 
-             fill = sample_id, color = sample_id, group = sample_id)) +
-    geom_point(size = 1) +
-    #geom_line() +
-    geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), width = 0) +
-    geom_smooth(method = 'lm', formula = y ~ poly(x, 2), se = F) +
+true_lmer.across <- M_mat %>% 
+   group_by(target, repetition) %>%  
+   do(flatten_sim_matrix(get_sim_matrix(., F_mat, method = 'cor'), .$gameID)) %>% 
+   unite(col = 'gamepair', dim1, dim2)
+true_lmer.across.out <- lmer(sim ~ poly(repetition, 2) + (1 | gamepair) + (1 | target), data = true_lmer.across)
+cat('true for within analysis=', (tidy(true_lmer.across.out, effects = 'fixed') %>% filter(term == 'poly(repetition, 2)1'))$estimate)
+
+permuted.across <- compute_permuted_estimates(M_mat, F_mat, 'across', 100)
+cat('CI for within analysis=', sort(permuted.across)[2], sort(permuted.across)[99])
+```
+
+Viz (full data)
+
+```{r}
+true_lmer.across %>% 
+  ggplot(aes(x = factor(repetition), y = sim)) +
+    geom_boxplot() +#width = .1, outlier.size=0
+    scale_x_discrete(labels = c('(1,1)','(1,2)', '(1,3)', '(1,4)', '(1,5)' ,'(1,6)','(1,7)')) +
+    ylim(0, 1) +
+    ylab('cosine similarity') +
+    ggtitle('convergence within game') +
+    theme_few() +
+    xlab('repetition pair') +
+    guides(color = F, fill = F) +
+    theme(aspect.ratio = 1, legend.position = c(0.5, 0.8), text = element_text(size=18), 
+          element_line(size=1), element_rect(size=2, color="#00000"))
+```
+
+Viz (aggregated)
+
+```{r}
+combined.across <- combine_empirical_and_baselines(M_mat, F_mat, 'across', 100)
+
+ggplot(combined.across, aes(x = IV, y = empirical_stat, 
+               fill = sample_id, color = sample_id, group = sample_id)) +
+    geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), width = 0, data = combined.across %>% filter(sample_id == 'empirical')) +
+    geom_line()  +
+    geom_ribbon(aes(ymin = ci_lower, ymax = ci_upper), alpha = 0.5, color = NA, data = combined.across %>% filter(sample_id == 'baseline')) +
     scale_x_continuous(breaks = c(1,2,3,4,5,6), labels = c(1,2,3,4,5,6)) +
     ylim(.4, 1) +
     ylab('cosine similarity') +
@@ -253,18 +241,6 @@ compute_across_similarity(M_mat, F_mat, 'raw_cor_nonorm', method = 'cosine', nbo
     theme(aspect.ratio = 1, legend.position = c(0.5, 0.8), text = element_text(size=18), 
           element_line(size=1), element_rect(size=2, color="#00000"))
 ggsave('../writing/tangrams/figs/divergence.pdf', height = 10, width = 10, units = 'cm', useDingbats = F)
-```
-
-Stats...
-
-```{r}
-lmer.in <- M_mat %>%
-    group_by(target, repetition) %>%
-    do(flatten_sim_matrix(get_sim_matrix(., F_mat, method = 'cosine'),
-                          .$gameID)) %>%
-    unite(col = 'gamepair', dim1, dim2)
-lmer.out <- lmer(sim ~ poly(repetition,2) + (1 + repetition | gamepair) + (1+ repetition| target),
-                data = lmer.in)
 ```
 
 

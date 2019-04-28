@@ -23,25 +23,107 @@ library(viridis)
 library(broom)
 library(gganimate)
 
+# reticulate lets us import npy files with numpy python package
+library(reticulate)
+np <- import("numpy")
+
 source('./utils/analysis_helpers.R')
 ```
 
 # Dynamics of content
 
 ```{r}
-d <- read_csv('../data/tangramsSequential_collapsed.csv')
+d <- read_csv('../data/tangramsSequential_collapsed.csv', col_types = 'ciiccil')
+```
+
+
+## What determines whether a label gets conventionalized?
+
+Scatter plot (all datapoints)
+
+TODO: glm is a little weird since it breaks out match % by num occurrences but still aggregates pmi -- should it entirely be at granularity of participant (i.e. gameid, word, pmi, match (T/F) so we can do glmer?) granted, that might be pretty noisy and hard to estimate pmi of individual words per participant... 
+
+```{r}
+distinctiveness_d <- read.csv("outputs/sequential_matchAndPMI.csv", header = TRUE) %>%
+  filter(pmi > 0) %>%
+  rename(num_occurrences = total) %>%
+  filter(num_occurrences > 1) %>%
+  #filter(POS == "NN") %>%
+  mutate(bunny = word == "bunny") %>%
+  mutate(a_match = word == "a")
+cbbPalette <- c("#000000", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
+
+# Split out into binary values:
+binary.d <- distinctiveness_d %>% 
+  mutate(numOnes = match * num_occurrences,
+         numZeros = num_occurrences - numOnes) %>%
+  do(rbind(data.frame(.[rep(1:nrow(.), .$numOnes),]) %>% mutate(singleMatch = 1),
+           data.frame(.[rep(1:nrow(.), .$numZeros),]) %>% mutate(singleMatch = 0))) 
+
+ggplot(distinctiveness_d %>% 
+         filter(match > 0) %>%
+         filter(match < 1),
+         aes(x = pmi, y = log(match))) +
+  geom_point(aes(size = num_occurrences), color = 'white') +
+  geom_smooth(method = "lm") +
+  scale_y_continuous() +#continuous(trans = 'log1p') +
+  # geom_smooth(data = binary.d, aes(x = pmi, y = singleMatch),
+  #   method = "glm", method.args = list(family = "binomial"),
+  #   se = TRUE) +
+  ylab('log P(match)') +
+  xlab('pointwise mutual information on first repetition') +
+  mytheme(24) +
+  theme(aspect.ratio = 1) +
+  guides(size = FALSE)
+
+ggsave("../writing/tangrams/figs/PMI_by_match.png", bg = 'transparent')
+```  
+
+```{r}
+distinctiveness_d %>% 
+         filter(match > 0) %>%
+         filter(match < 1) %>%
+         summarize(r = cor(match, pmi))
+summary(lm(match ~ pmi + num_occurrences, data=distinctiveness_d))
+```
+
+Alternatively, can do a nonparametric analysis: draw a random word from each tangram/gameid pair and look at the percentage that match with round 6... This gives a null distribution. Then we can take the highest PMI word (or words) for each tangram/gameid pair and look at the percentage of *those* that match. We see that it's much higher than expected under the null.
+
+```{r}
+# TODO: get red to show up in legend
+nonparametric_d = read.csv("outputs/PMIbootstrap.csv", header = TRUE) %>%
+  mutate(PMI = factor(highest, levels = c('null', 'highest'), labels = c('random', 'top')))
+
+highestValAvg = (nonparametric_d %>% filter(highest == 'highest') %>% summarize(avg = mean(match)))$avg
+
+nonparametric_d %>%
+  group_by(sampleNum, PMI) %>%
+  filter(PMI == 'random') %>%
+  summarize(avgMatchRate = mean(match)) %>%
+  ungroup() %>%
+  ggplot(aes(x = avgMatchRate, fill = PMI)) +
+  geom_histogram(binwidth = .0075) +
+  geom_vline(aes(xintercept = highestValAvg), 
+             color = 'red', linetype = "dashed", size = 2) +
+  xlab("probability of match b/w Rounds 1 & 6") +
+  scale_fill_manual(values = c("random" = "white", "top"= "red")) +
+  guides(fill=FALSE) +
+  mytheme(24) +
+  theme(aspect.ratio = 1)
+
+ggsave('../writing/tangrams/figs/bootstrappedPMI.png',
+       bg = 'transparent')
 ```
 
 ## semantic similarity analyses
 
 ```{r}
-M_mat = read_csv('./outputs/meta_tangrams_embeddings.csv') %>%
+M_mat = read_csv('./outputs/meta_tangrams_embeddings.csv', col_types = "nccnlc", na = c('[nan]')) %>%
   mutate(feature_ind = X1 + 1, # Have to correct for R's (stupid) 1-indexing...
          gameID = gameid,
          target = intendedName,
          repetition = as.numeric(repetitionNum)) #%>% 
-F_mat = as.matrix(read_delim('outputs/feats_tangrams_embeddings_rawavg.txt', delim=',', col_names=F))
-colnames(F_mat) <- NULL
+F_mat <- np$load('outputs/feats_tangrams_embeddings_rawavg.npy')
 ```
 
 ### overall btw vs. within similarity
@@ -74,8 +156,9 @@ permuted.drift <- compute_permuted_estimates(M_mat, F_mat, 'drift', 100)
 cat('CI for drift analysis=', sort(permuted.drift)[2], sort(permuted.drift)[98])
 
 true_lmer.drift <- make_within_df(M_mat, F_mat, 'cosine') %>% filter(rep1 == 1) %>% ungroup()
-true_lmer.drift.out <- lmer(sim ~ poly(rep2,2) + (1  | gameID) + (1 | target), data = true_lmer.drift)
+true_lmer.drift.out <- lmer(sim ~ poly(rep2,2) + (1 + poly(rep2, 2)  | gameID) + (1 + poly(rep2, 2)| target), data = true_lmer.drift)
 cat('true for drift analysis=', (tidy(true_lmer.drift.out, effects = 'fixed') %>% filter(term == 'poly(rep2, 2)1'))$estimate)
+summary(true_lmer.drift.out)
 ```
 
 Viz (raw data)
@@ -105,14 +188,14 @@ Viz (mean estimates w/ baseline)
 
 ```{r}
 empirical_baselines.drift <- combine_empirical_and_baselines(M_mat, F_mat, 'drift', 10) %>%
-    bind_rows(data.frame(repdiff ='1->1', n= 1, empirical_stat=1, ci_lower=1, 
-                         mean=1, ci_upper=1, sample_id='empirical')) %>%
+    bind_rows(data.frame(IV ='1->1', empirical_stat=1, ci_lower=1, 
+                         ci_upper=1, sample_id='empirical')) %>%
     bind_rows(compute_across_similarity(M_mat, F_mat, 'baseline', 'cosine') %>%
-                filter(repetition == 1) %>% select(-n, -mean, -repetition) %>%
-                mutate(repdiff = '1->1')) 
+                filter(IV == 1) %>% select(-n, -mean) %>%
+                mutate(IV = '1->1')) 
 
 empirical_baselines.drift %>%
-  ggplot(aes(x = repdiff, y = empirical_stat, color = sample_id, linetype = sample_id, group = sample_id)) +
+  ggplot(aes(x = IV, y = empirical_stat, color = sample_id, linetype = sample_id, group = sample_id)) +
     geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), width = 0, data = empirical_baselines.drift %>% filter(sample_id == 'empirical')) +
     geom_line()  +
     geom_ribbon(aes(ymin = ci_lower, ymax = ci_upper), alpha = 0.5, color = NA, data = empirical_baselines.drift %>% filter(sample_id == 'baseline')) +
@@ -136,7 +219,7 @@ Stats
 
 ```{r}
 true_lmer.within <- make_within_df(M_mat, F_mat, 'cosine') %>% filter(rep2 == rep1 + 1) %>% ungroup()
-true_lmer.within.out <- lmer(sim ~ poly(rep1,2) + (1 + poly(rep1,1) | gameID) + (1+ poly(rep1,1)| target), data = true_lmer.within)
+true_lmer.within.out <- lmer(sim ~ poly(rep1,2) + (1 + poly(rep1,2) | gameID) + (1+ poly(rep1,2)| target), data = true_lmer.within)
 summary(true_lmer.within.out)
 cat('true for within analysis=', (tidy(true_lmer.within.out, effects = 'fixed') %>% filter(term == 'poly(rep1, 2)1'))$estimate)
 
@@ -170,7 +253,7 @@ Viz (mean estimates w/ baseline)
 combined.within <- combine_empirical_and_baselines(M_mat, F_mat, 'within', 2)
 
 combined.within %>%
-  ggplot(aes(x = repdiff, y = empirical_stat, color = sample_id, linetype = sample_id, group = sample_id)) +
+  ggplot(aes(x = IV, y = empirical_stat, color = sample_id, linetype = sample_id, group = sample_id)) +
     geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), width = 0, data = combined.within %>% filter(sample_id == 'empirical')) +
     geom_line()  +
     geom_ribbon(aes(ymin = ci_lower, ymax = ci_upper), alpha = 0.5, color = NA, data = combined.within %>% filter(sample_id == 'baseline')) +
@@ -195,9 +278,14 @@ Stats
 ```{r}
 true_lmer.across <- M_mat %>% 
    group_by(target, repetition) %>%  
-   do(flatten_sim_matrix(get_sim_matrix(., F_mat, method = 'cor'), .$gameID)) %>% 
-   unite(col = 'gamepair', dim1, dim2)
-true_lmer.across.out <- lmer(sim ~ poly(repetition, 2) + (1 | gamepair) + (1 | target), data = true_lmer.across)
+   do(flatten_sim_matrix(get_sim_matrix(., F_mat, method = 'cosine'), .$gameID)) %>% 
+   #unite(col = 'gamepair', dim1, dim2) %>%
+  ungroup() %>%
+  mutate(target = factor(target))
+true_lmer.across.out <- lmer(sim ~ poly(repetition, 2) + (1 +poly(repetition, 2)  | target), control = lmerControl(optimizer ='optimx', optCtrl=list(method='nlminb')),  data = true_lmer.across,verbose = TRUE)
+summary(true_lmer.across.out)
+# , 
+
 cat('true for within analysis=', (tidy(true_lmer.across.out, effects = 'fixed') %>% filter(term == 'poly(repetition, 2)1'))$estimate)
 
 permuted.across <- compute_permuted_estimates(M_mat, F_mat, 'across', 100)
@@ -315,6 +403,7 @@ TODO: how do tangrams cluster?
 
 ```{r}
 
+#? 
 ```
 
 ## Discrete analyses: How much is within-game similarity disrupted by scrambling utterances across games?
@@ -374,55 +463,6 @@ summary(lmer(ent ~ permutation + (1 + permutation | gameid) + (1 + permutation |
 ```
 
 
-## What determines whether a label gets conventionalized?
-
-Scatter plot (all datapoints)
-
-TODO: glm is a little weird since it breaks out match % by num occurrences but still aggregates pmi -- should it entirely be at granularity of participant (i.e. gameid, word, pmi, match (T/F) so we can do glmer?) granted, that might be pretty noisy and hard to estimate pmi of individual words per participant... 
-
-```{r}
-distinctiveness_d <- read.csv("outputs/sequential_matchAndPMI.csv", header = TRUE) %>%
-  filter(pmi > 0) %>%
-  rename(num_occurrences = total) %>%
-  filter(num_occurrences > 1) %>%
-  #filter(POS == "NN") %>%
-  mutate(bunny = word == "bunny") %>%
-  mutate(a_match = word == "a")
-cbbPalette <- c("#000000", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
-
-# Split out into binary values:
-binary.d <- distinctiveness_d %>% 
-  mutate(numOnes = match * num_occurrences,
-         numZeros = num_occurrences - numOnes) %>%
-  do(rbind(data.frame(.[rep(1:nrow(.), .$numOnes),]) %>% mutate(singleMatch = 1),
-           data.frame(.[rep(1:nrow(.), .$numZeros),]) %>% mutate(singleMatch = 0))) 
-
-ggplot(distinctiveness_d %>% 
-         filter(match > 0) %>%
-         filter(match < 1),
-         aes(x = pmi, y = log(match))) +
-  geom_point(aes(size = num_occurrences), color = 'white') +
-  geom_smooth(method = "lm") +
-  scale_y_continuous() +#continuous(trans = 'log1p') +
-  # geom_smooth(data = binary.d, aes(x = pmi, y = singleMatch),
-  #   method = "glm", method.args = list(family = "binomial"),
-  #   se = TRUE) +
-  ylab('log P(match)') +
-  xlab('pointwise mutual information on first repetition') +
-  mytheme(24) +
-  theme(aspect.ratio = 1) +
-  guides(size = FALSE)
-
-ggsave("../writing/tangrams/figs/PMI_by_match.png", bg = 'transparent')
-```  
-
-```{r}
-distinctiveness_d %>% 
-         filter(match > 0) %>%
-         filter(match < 1) %>%
-         summarize(r = cor(match, pmi))
-summary(lm(match ~ pmi + num_occurrences, data=distinctiveness_d))
-```
 
 ### Look at pmi across POS...
 
@@ -453,35 +493,6 @@ ggplot(pos_d %>% filter(POS != 'other'), aes(x = reorder(POS,mean_pmi,
   theme_few() +
   xlab("part of speech") +
   ylab("pointwise mutual information")
-```
-
-
-Alternatively, can do a nonparametric analysis: draw a random word from each tangram/gameid pair and look at the percentage that match with round 6... This gives a null distribution. Then we can take the highest PMI word (or words) for each tangram/gameid pair and look at the percentage of *those* that match. We see that it's much higher than expected under the null.
-
-```{r}
-# TODO: get red to show up in legend
-nonparametric_d = read.csv("outputs/PMIbootstrap.csv", header = TRUE) %>%
-  mutate(PMI = factor(highest, levels = c('null', 'highest'), labels = c('random', 'top')))
-
-highestValAvg = (nonparametric_d %>% filter(highest == 'highest') %>% summarize(avg = mean(match)))$avg
-
-nonparametric_d %>%
-  group_by(sampleNum, PMI) %>%
-  filter(PMI == 'random') %>%
-  summarize(avgMatchRate = mean(match)) %>%
-  ungroup() %>%
-  ggplot(aes(x = avgMatchRate, fill = PMI)) +
-  geom_histogram(binwidth = .0075) +
-  geom_vline(aes(xintercept = highestValAvg), 
-             color = 'red', linetype = "dashed", size = 2) +
-  xlab("probability of match b/w Rounds 1 & 6") +
-  scale_fill_manual(values = c("random" = "white", "top"= "red")) +
-  guides(fill=FALSE) +
-  mytheme(24) +
-  theme(aspect.ratio = 1)
-
-ggsave('../writing/tangrams/figs/bootstrappedPMI.png',
-       bg = 'transparent')
 ```
 
 # Dynamics of structure/syntax

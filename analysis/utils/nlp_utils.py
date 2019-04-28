@@ -6,6 +6,47 @@ import json
 import numpy as np
 import pandas as pd
 
+def keep_token(t):
+    return (t.is_alpha and 
+            not (t.is_space or t.is_punct))
+
+def lemmatize_doc(doc):
+    return [ t.lemma_ for t in doc if keep_token(t)]
+
+def memoize(d, gameid, counts) : 
+    if "counts" not in counts : 
+        counts["counts"] = getWordCounts(d, gameid, "1")
+        counts["numWords"] = float(sum(counts["counts"].values()))
+        return counts
+    else :
+        return counts
+
+#returns a table with the all words above 0 PMI and their counts for a given tangram
+#calculate the probability for words given tangram A ------ p(x|y)
+def makeMyPMI(df, tangram, roundNum, gameid, totals):
+
+    # count words w/in tangram
+    tangramCounts = getWordCounts(df, gameid, roundNum, tangram)
+
+    #total number of words 
+    tangramNumWords = (1 if sum(tangramCounts.values()) == 0 
+                       else sum(tangramCounts.values()))
+
+    #dataframe to compare 
+    indicatorDF = pd.merge(pd.DataFrame(list(tangramCounts.items()), columns=['word', 'count']),
+                           pd.DataFrame(list(totals["counts"].items()), columns=['word', 'totalCount']),
+                           on='word', how = 'inner')
+
+    #calculate PMI without log first. Having trouble with float issues. 
+    indicatorDF['roughPMI'] = ((indicatorDF['count']/tangramNumWords)
+                                / (indicatorDF['totalCount']/totals["numWords"]))
+    indicatorDF['logPMI'] = [math.log10(num) for num in indicatorDF['roughPMI']]
+    
+    #remove column rough PMI
+    indicatorDF = indicatorDF.drop('roughPMI', 1)
+    
+    return indicatorDF
+
 def get_feats(d_in, docs_emb, nlp) :
     d = d_in.drop(d_in.columns.difference(['gameid', 'intendedName', 'repetitionNum', 'text', 'correct']), axis=1)
     meta = pd.DataFrame(columns = ['gameid',  'intendedName','repetitionNum', 'correct', 'is_nan'])

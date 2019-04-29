@@ -43,7 +43,8 @@ Note that the only way to get an exact 0 is if word never appeared with tangram.
 
 ```{r}
 distinctiveness_d <- read.csv("outputs/PMI.csv", header = TRUE) %>%
-  mutate(finalRoundMatch = ifelse(finalRoundMatch == 'True', 1, 0))
+  mutate(finalRoundMatch = ifelse(finalRoundMatch == 'True', 1, 0)) %>%
+  filter(!is.na(tf.idf))
 
 distinctiveness_d %>% mutate(isZero = tf.idf == 0) %>% group_by(finalRoundMatch, isZero) %>% tally()
 summary(glmer(finalRoundMatch ~ tf.idf + (1 + tf.idf | intendedName) + (1 + tf.idf | gameid), 
@@ -55,17 +56,20 @@ Not exactly sure how to look at this...
 ```{r}
 distinctiveness_d %>%
   filter(tf.idf != 0) %>%
-  mutate(bin = .6*floor(tf.idf / .6) + .3) %>%
-  group_by(bin) %>%
+  mutate(num_tangrams_occurred_with =  round(1 / ((2^tf.idf) /12))) %>%
+  #mutate(bin = .6*floor(tf.idf / .6) + .3) %>%
+  group_by(num_tangrams_occurred_with) %>%
   tidyboot_mean(finalRoundMatch) %>%
   rename(sample_size = n) %>%
-  ggplot(aes(x = bin, y =empirical_stat)) +
+  ggplot(aes(x = as.integer(num_tangrams_occurred_with), y =empirical_stat)) +
     geom_point(aes(size = sample_size), stat = 'identity') +
     geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), width = 0.1) +
-    ylim(0, .25) +
-    ylab('% final convention') +
-    xlab('distinctiveness on initial repetition (binned)') +
-    xlim(0,3.5) +
+    geom_smooth(method = 'lm', formula = y ~ poly(x, 2), se = F) +
+    ylim(0, .22) +
+    ylab('% appearing in final utterance') +
+    xlab('distinctiveness of word in initial utterance (# tangrams)') +
+    xlim(0,12) +
+    scale_x_continuous(breaks = c(1,3, 5,7,9,11))+
     theme_few() +
     theme(aspect.ratio = 1)
 

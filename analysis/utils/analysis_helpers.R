@@ -1,5 +1,3 @@
-library(Rfast)
-
 # Function takes a countType ['unigrams', 'bigrams', 'trigrams'] and returns a table of most reduced n-gram
 getMostReduced = function(countType) {
   filename <- paste0("outputs/", countType, "Counts.csv")
@@ -58,9 +56,8 @@ dprime = function(df_in) {
 }
 
 # note: cor expects featurs to be in columns so we transpose
-get_sim_matrix = function(df, F_mat, normalize = F, method = 'cor') {
-  feats = (if(normalize) channel_norm(F_mat[df$feature_ind,]) 
-           else F_mat[df$feature_ind,])
+get_sim_matrix = function(df, F_mat, method = 'cosine') {
+  feats = F_mat[df$feature_ind,]
   if(method == 'cor') {
     return(cor(t(feats), method = 'pearson'))
   } else if (method == 'euclidean') {

@@ -101,7 +101,7 @@ compute_within_convergence <- function(M_mat, F_mat, id,
     tidyboot_mean(col = sim, na.rm = T, nboot = nboot) %>%
     unite(repdiff, rep1, rep2, sep = '->') %>%
     mutate(sample_id = id) %>%
-    mutate(IV = repdiff)
+    rename(IV = repdiff)
 }
 
 compute_within_drift <- function(M_mat, F_mat, id, 
@@ -113,7 +113,7 @@ compute_within_drift <- function(M_mat, F_mat, id,
     tidyboot_mean(col = sim, na.rm = T, nboot = nboot) %>%
     unite(repdiff, rep1, rep2, sep = '->') %>%
     mutate(sample_id = id) %>%
-    mutate(IV = repdiff)
+    rename(IV = repdiff)
 }
 
 make_across_df <- function(M_mat, F_mat, method) {
@@ -129,7 +129,7 @@ compute_across_similarity <- function(M_mat, F_mat, id,
     group_by(repetition) %>%
     tidyboot_mean(col = sim, nboot, na.rm = T) %>%
     mutate(sample_id = id) %>%
-    mutate(IV = repetition)
+    rename(IV = repetition)
 }
 
 compute_within_vs_across <- function(M_mat, F_mat) {
@@ -201,7 +201,7 @@ compute_permuted_estimates <- function(M_mat, F_mat, analysis_type, num_permutat
       mutate(sample_id = 1) %>%
       split(.$sample_id)
     if(analysis_type == 'across') {
-      model.out <- model.in %>% map(~ lmer(sim ~ poly(rep,2) + (1 | gamepair) + (1 | target), data = .))
+      model.out <- model.in %>% map(~ lmer(sim ~ poly(rep,2) + (1 | target), data = .))
     } else {
       model.out <- model.in %>% map(~ lmer(sim ~ poly(rep,2) + (1 | gameID) + (1 | target), data = .))
     }
@@ -222,8 +222,7 @@ combine_empirical_and_baselines <- function(M_mat, F_mat, analysis_type, num_per
     stop('unknown analysis type')
   }
   empirical <- f(M_mat, F_mat, 'empirical', method = 'cosine', nboot = 100) %>% 
-     select(-repetition, -mean, -n) %>% mutate(sample_id = 'empirical')
-  print(empirical)
+     select(-mean, -n) %>% mutate(sample_id = 'empirical')
   pb <- progress_estimated(num_permutations)
   baseline <- map_dfr(seq_len(num_permutations), ~{
     pb$tick()$print()

@@ -39,52 +39,37 @@ d <- read_csv('../data/tangramsSequential_collapsed.csv', col_types = 'ciiccil')
 
 ## What determines whether a label gets conventionalized?
 
-Scatter plot (all datapoints)
-
-TODO: glm is a little weird since it breaks out match % by num occurrences but still aggregates pmi -- should it entirely be at granularity of participant (i.e. gameid, word, pmi, match (T/F) so we can do glmer?) granted, that might be pretty noisy and hard to estimate pmi of individual words per participant... 
+Note that the only way to get an exact 0 is if word never appeared with tangram... so we want to filter these out ()
 
 ```{r}
-distinctiveness_d <- read.csv("outputs/sequential_matchAndPMI.csv", header = TRUE) %>%
-  filter(pmi > 0) %>%
-  rename(num_occurrences = total) %>%
-  filter(num_occurrences > 1) %>%
-  #filter(POS == "NN") %>%
-  mutate(bunny = word == "bunny") %>%
-  mutate(a_match = word == "a")
-cbbPalette <- c("#000000", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
+distinctiveness_d <- read.csv("outputs/PMI.csv", header = TRUE) %>%
+  mutate(finalRoundMatch = ifelse(finalRoundMatch == 'True', 1, 0))
 
-# Split out into binary values:
-binary.d <- distinctiveness_d %>% 
-  mutate(numOnes = match * num_occurrences,
-         numZeros = num_occurrences - numOnes) %>%
-  do(rbind(data.frame(.[rep(1:nrow(.), .$numOnes),]) %>% mutate(singleMatch = 1),
-           data.frame(.[rep(1:nrow(.), .$numZeros),]) %>% mutate(singleMatch = 0))) 
+distinctiveness_d %>% mutate(isZero = tf.idf == 0) %>% group_by(finalRoundMatch, isZero) %>% tally()
+summary(glmer(finalRoundMatch ~ tf.idf + (1 + tf.idf | intendedName) + (1 + tf.idf | gameid), 
+              family = 'binomial', control = glmerControl(optCtrl = list(maxfun = 200000)), data = distinctiveness_d %>%   filter(tf.idf != 0 )))
+```
 
-ggplot(distinctiveness_d %>% 
-         filter(match > 0) %>%
-         filter(match < 1),
-         aes(x = pmi, y = log(match))) +
-  geom_point(aes(size = num_occurrences), color = 'white') +
-  geom_smooth(method = "lm") +
-  scale_y_continuous() +#continuous(trans = 'log1p') +
-  # geom_smooth(data = binary.d, aes(x = pmi, y = singleMatch),
-  #   method = "glm", method.args = list(family = "binomial"),
-  #   se = TRUE) +
-  ylab('log P(match)') +
-  xlab('pointwise mutual information on first repetition') +
-  mytheme(24) +
-  theme(aspect.ratio = 1) +
-  guides(size = FALSE)
-
-ggsave("../writing/tangrams/figs/PMI_by_match.png", bg = 'transparent')
-```  
+Not exactly sure how to look at this... 
 
 ```{r}
-distinctiveness_d %>% 
-         filter(match > 0) %>%
-         filter(match < 1) %>%
-         summarize(r = cor(match, pmi))
-summary(lm(match ~ pmi + num_occurrences, data=distinctiveness_d))
+distinctiveness_d %>%
+  filter(tf.idf != 0) %>%
+  mutate(bin = .6*floor(tf.idf / .6) + .3) %>%
+  group_by(bin) %>%
+  tidyboot_mean(finalRoundMatch) %>%
+  rename(sample_size = n) %>%
+  ggplot(aes(x = bin, y =empirical_stat)) +
+    geom_point(aes(size = sample_size), stat = 'identity') +
+    geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), width = 0.1) +
+    ylim(0, .25) +
+    ylab('% final convention') +
+    xlab('distinctiveness on initial repetition (binned)') +
+    xlim(0,3.5) +
+    theme_few() +
+    theme(aspect.ratio = 1)
+
+ggsave('../writing/tangrams/figs/distinctiveness.pdf',  height = 7, width = 10, units = 'cm', useDingbats = F)
 ```
 
 Alternatively, can do a nonparametric analysis: draw a random word from each tangram/gameid pair and look at the percentage that match with round 6... This gives a null distribution. Then we can take the highest PMI word (or words) for each tangram/gameid pair and look at the percentage of *those* that match. We see that it's much higher than expected under the null.

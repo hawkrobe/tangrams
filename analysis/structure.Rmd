@@ -130,34 +130,26 @@ Seems to be markers of figurative descriptions, determiners, and modifying phras
 
 ```{r, cache = T, warning=F}
 tagged_df <- read_csv('./outputs/posTagged_tangramsSequential_collapsed.csv', 
-                      col_types = 'ciicciiiiiiiccii') %>%
-  #filter(role == 'director') %>%
-  #select(-text, -contents, -posCounts, -pos) #%>%
-  left_join(read_csv('./outputs/constituency_tags.csv', col_names = T , col_types = '-cicccccc') %>%
-      replace_na(list(SBAR = FALSE, PP = FALSE, CC = FALSE, NP = FALSE)) %>%
-      mutate(SBAR = ifelse(SBAR == 'True', TRUE, FALSE),
-           PP = ifelse(PP == 'True', TRUE, FALSE),
-           NP = ifelse(NP == 'True', TRUE, FALSE),
-           CC = ifelse(CC == 'True', TRUE, FALSE)))
+                      col_types = 'ciicciiiiiiiccii') 
 ```
 
 ```{r}
 tagged_df %>%
-   # group_by(gameid, repetitionNum) %>%#, taskVersion
-   # summarize(individualM = sum(numWords)/12) %>%
    group_by(repetitionNum) %>% #taskVersion
    tidyboot_mean(numWords, na.rm = T) %>%
    mutate(measure = '# words per tangram') %>%
    ggplot(aes(x = repetitionNum, y = empirical_stat)) + #, color = taskVersion
-    geom_ribbon(aes(ymax = ci_upper, ymin = ci_lower), fill = 'gray50') +
-    geom_line(color = 'white') +
+    geom_ribbon(aes(ymax = ci_upper, ymin = ci_lower), alpha= 0.1) +
+    geom_line() +
     xlab('repetition #') +
     ylab('mean # words used \n per tangram') +
     #facet_wrap(~ taskVersion, nrow = 1, ncol = 2) +
     scale_x_continuous(breaks = round(seq(1, 6, by = 1),1)) +
     ylim(c(0, NA)) +
-    mytheme(24) 
-ggsave('../writing/tangrams/figs/wordReduction.png', bg = 'transparent')
+    theme_few() +
+    theme(aspect.ratio = 1)
+ggsave('../writing/tangrams/figs/wordReduction.pdf',
+        height = 8, width = 10, units = 'cm', useDingbats = F)
 ```
 
 Statistics:
@@ -174,7 +166,7 @@ summary(lmer(log(numRawWords) ~ poly(repetitionNum,2) +
 
 ### Reduction in POS features 
 
-examine reduction in different parts of speech, i.e. to argue that it's not just small-talk going down or something. 
+examine reduction in different parts of speech
 
 ```{r}
 cum_pos.d <- tagged_df %>%
@@ -198,16 +190,16 @@ cum_pos.d <- tagged_df %>%
   select(repetitionNum, POS, total) 
 
 ggplot(cum_pos.d, aes(x = repetitionNum, y = total, fill = POS)) +
-    geom_area(alpha=0.6 , size=.5, colour="white") +
+    geom_area(alpha=0.6 , size=.5) +
     geom_text(data=cum_pos.d %>% 
                 filter(repetitionNum == 1) %>%
                 arrange(POS) %>%
                 mutate(cum = rev(cumsum(rev(total)))), 
               aes(x=1, y=cum-.5, label=POS),
-              hjust = 0, color = 'white', size=7) +
+              hjust = 0, size=7) +
     scale_fill_brewer(palette = "Set1") +
     guides(fill = FALSE) +
-    mytheme(24)
+  theme_few()
 
 ggsave('../writing/tangrams/figs/wordReduction_by_POS.png', bg = 'transparent')
 ```
@@ -220,22 +212,28 @@ tagged_df %>%
             nouns = sum(NOUNcount)/sum(numWords),
             verbs = sum(VERBcount)/sum(numWords),
             dets= sum(DETcount)/sum(numWords),
-            pronouns = sum(PRONcount)/sum(numWords),
+            #pronouns = sum(PRONcount)/sum(numWords),
             preps = sum(ADPcount)/sum(numWords),
             adverbs = sum(ADVcount)/sum(numWords),
-            conjunctions = sum(CCONJcount)/sum(numWords),
+            #conjunctions = sum(CCONJcount)/sum(numWords),
             adjectives = sum(ADJcount)/sum(numWords)) %>%
-  mutate(OTHER = (1 - nouns - verbs - dets - pronouns -
-                      preps - adjectives - conjunctions - adverbs)) %>%
+  mutate(OTHER = (1 - nouns - verbs - dets - #pronouns - conjunctions
+                      preps - adjectives - adverbs)) %>%
   gather(POS, prop, nouns:OTHER) %>%
-  mutate(POS = factor(POS, levels = c('nouns',  'dets', 'verbs', 'adjectives', 'adverbs', 
-                              'preps', 'pronouns', 'conjunctions', 'OTHER'))) %>%
-
+  mutate(POS = factor(POS, levels = c('nouns',  'verbs', 'adjectives', 'adverbs',
+                              'preps', 'dets', 'OTHER'))) %>%
   select(repetitionNum, POS, prop) %>%
+  #mutate(POS = fct_reorder(POS, prop)) %>%
   ggplot(aes(x = repetitionNum, y = prop, fill = POS)) +
     geom_area(alpha=0.6 , size=1, colour="black") +
     scale_fill_brewer(palette = "Set1") +
-    theme_bw()
+    theme_bw() +
+    scale_x_continuous(breaks = c(1,2,3,4,5,6))+
+    theme(aspect.ratio = 2)
+ggsave('../writing/tangrams/figs/posChange.pdf',
+        height = 8, width = 16, units = 'cm', useDingbats = F)
+
+
 ```
 
 TODO: distance in depth of the tree between the nouns
@@ -282,16 +280,17 @@ nounReductionRate <- (posReduction %>% filter(POS == 'nouns'))$mean * 100
 
 ggplot(posReduction, aes(x = POS, y = mean, fill = cat)) +
   geom_bar(stat = 'identity') +
-  geom_errorbar(aes(ymax = ci_upper, ymin = ci_lower), width = .1,
-                color = 'white')+
+  geom_errorbar(aes(ymax = ci_upper, ymin = ci_lower), width = .1)+
   ylab("% reduction") +
   xlab("Part of Speech category")  +
-  mytheme(24) +
   theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
-  scale_fill_manual(values=c('tomato3', 'gray', 'orange'))
+  scale_fill_manual(values=c('tomato3', 'gray', 'orange')) +
+  theme_few() +
+  theme(aspect.ratio = 1/2)
 
 
-ggsave('../writing/tangrams/figs/posReduction.png', bg = 'transparent')
+ggsave('../writing/tangrams/figs/posReduction.pdf',
+        height = 8, width = 16, units = 'cm', useDingbats = F)
 ```
 
 ### Reduction in syntactic features 
@@ -299,7 +298,12 @@ ggsave('../writing/tangrams/figs/posReduction.png', bg = 'transparent')
 TODO: include % including NPs? (shouldn't go down as much)
 
 ```{r}
-tagged_df %>%
+read_csv('./outputs/constituency_tags.csv', col_names = T , col_types = '-cicccccc') %>%
+      replace_na(list(SBAR = FALSE, PP = FALSE, CC = FALSE, NP = FALSE)) %>%
+      mutate(SBAR = ifelse(SBAR == 'True', TRUE, FALSE),
+           PP = ifelse(PP == 'True', TRUE, FALSE),
+           NP = ifelse(NP == 'True', TRUE, FALSE),
+           CC = ifelse(CC == 'True', TRUE, FALSE)) %>%
   #filter(taskVersion == 'cued') %>%
   select(gameid, repetitionNum, SBAR, CC, PP, NP) %>% #, taskVersion
   gather(measure, occurrence, SBAR:NP) %>%

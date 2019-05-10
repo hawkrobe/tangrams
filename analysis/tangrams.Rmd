@@ -43,10 +43,21 @@ Note that the only way to get an exact 0 is if word never appeared with tangram.
 
 ```{r}
 distinctiveness_d <- read.csv("outputs/PMI.csv", header = TRUE) %>%
-  mutate(finalRoundMatch = ifelse(finalRoundMatch == 'True', 1, 0))
+  mutate(finalRoundMatch = ifelse(finalRoundMatch == 'True', 1, 0)) %>%
+  filter(!is.na(tf.idf)) %>%
+  mutate(num_tangrams_occurred_with =  round(1 / ((2^tf.idf) /12))) 
+```
 
-distinctiveness_d %>% mutate(isZero = tf.idf == 0) %>% group_by(finalRoundMatch, isZero) %>% tally()
-summary(glmer(finalRoundMatch ~ tf.idf + (1 + tf.idf | intendedName) + (1 + tf.idf | gameid), 
+look at how often final round occurred on early round
+```{r}
+distinctiveness_d %>% mutate(didNotOccurOnFirstRound = tf.idf == 0) %>% 
+  group_by(finalRoundMatch, didNotOccurOnFirstRound) %>% tally()
+```
+
+stats
+
+```{r}
+summary(glmer(finalRoundMatch ~ num_tangrams_occurred_with + (1 + num_tangrams_occurred_with | intendedName) + (1 + num_tangrams_occurred_with | gameid), 
               family = 'binomial', control = glmerControl(optCtrl = list(maxfun = 200000)), data = distinctiveness_d %>%   filter(tf.idf != 0 )))
 ```
 
@@ -55,17 +66,18 @@ Not exactly sure how to look at this...
 ```{r}
 distinctiveness_d %>%
   filter(tf.idf != 0) %>%
-  mutate(bin = .6*floor(tf.idf / .6) + .3) %>%
-  group_by(bin) %>%
+  group_by(num_tangrams_occurred_with) %>%
   tidyboot_mean(finalRoundMatch) %>%
   rename(sample_size = n) %>%
-  ggplot(aes(x = bin, y =empirical_stat)) +
+  ggplot(aes(x = as.integer(num_tangrams_occurred_with), y =empirical_stat)) +
     geom_point(aes(size = sample_size), stat = 'identity') +
     geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), width = 0.1) +
-    ylim(0, .25) +
-    ylab('% final convention') +
-    xlab('distinctiveness on initial repetition (binned)') +
-    xlim(0,3.5) +
+    geom_smooth(method = 'lm', formula = y ~ poly(x, 2), se = F) +
+    ylim(0, .22) +
+    ylab('% appearing in final utterance') +
+    xlab('distinctiveness of word in initial utterance (# tangrams)') +
+    xlim(0,12) +
+    scale_x_continuous(breaks = c(1,3, 5,7,9,11))+
     theme_few() +
     theme(aspect.ratio = 1)
 
@@ -76,28 +88,24 @@ Alternatively, can do a nonparametric analysis: draw a random word from each tan
 
 ```{r}
 # TODO: get red to show up in legend
-nonparametric_d = read.csv("outputs/PMIbootstrap.csv", header = TRUE) %>%
-  mutate(PMI = factor(highest, levels = c('null', 'highest'), labels = c('random', 'top')))
-
-highestValAvg = (nonparametric_d %>% filter(highest == 'highest') %>% summarize(avg = mean(match)))$avg
-
-nonparametric_d %>%
-  group_by(sampleNum, PMI) %>%
-  filter(PMI == 'random') %>%
-  summarize(avgMatchRate = mean(match)) %>%
+nonparametric_ds = map_dbl(seq_len(1000), ~{ distinctiveness_d %>%
+  group_by(intendedName, gameid) %>%
+  sample_n(1) %>%
+    ungroup() %>%
+    summarize(m = mean(finalRoundMatch)) %>%
+    pull(m)})
+    
+highest <- map_dbl(seq_len(1000), ~{ distinctiveness_d %>%
+  group_by(intendedName, gameid) %>%
+  filter(num_tangrams_occurred_with == min(num_tangrams_occurred_with)) %>%
+  sample_n(1) %>%
   ungroup() %>%
-  ggplot(aes(x = avgMatchRate, fill = PMI)) +
-  geom_histogram(binwidth = .0075) +
-  geom_vline(aes(xintercept = highestValAvg), 
-             color = 'red', linetype = "dashed", size = 2) +
-  xlab("probability of match b/w Rounds 1 & 6") +
-  scale_fill_manual(values = c("random" = "white", "top"= "red")) +
-  guides(fill=FALSE) +
-  mytheme(24) +
-  theme(aspect.ratio = 1)
+  summarize(m = mean(finalRoundMatch)) %>%
+  pull(m)})
+  
+cat('range for permuted=', sort(nonparametric_ds)[1], sort(nonparametric_ds)[1000])
+cat('range for highest=', sort(highest)[1], sort(highest)[1000])
 
-ggsave('../writing/tangrams/figs/bootstrappedPMI.png',
-       bg = 'transparent')
 ```
 
 ## semantic similarity analyses
@@ -363,7 +371,6 @@ ggsave(filename = '../writing/tangrams/figs/tsne-tangramC.pdf', width = 15, heig
 MDS ...
 
 ```{r}
-library(gganimate)
 ggplot(tsne %>% filter(intendedName == 'C'), 
        aes(x = x_tsne, y = y_tsne, group = gameid, frame = paste0('repetition: ', repetitionNum))) +
   geom_line(alpha = 0.2) +

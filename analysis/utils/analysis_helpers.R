@@ -1,6 +1,6 @@
 # Function takes a countType ['unigrams', 'bigrams', 'trigrams'] and returns a table of most reduced n-gram
 getMostReduced = function(countType) {
-  filename <- paste0("outputs/", countType, "Counts.csv")
+  filename <- paste0("./outputs/", countType, "Counts.csv")
   return(read_csv(filename, col_names = T, col_types = 'cici') %>%
            group_by(word, repetitionNum) %>%
            summarize(count = sum(count)) %>%
@@ -13,15 +13,15 @@ getMostReduced = function(countType) {
 }
 
 makeNGramTable = function(size) {
-  topWords <- t(cbind(getMostReduced('unigrams') %>% select(word) %>% head(size), 
+  topWords <- cbind(getMostReduced('unigrams') %>% select(word) %>% head(size), 
                       getMostReduced('bigrams') %>% select(word) %>% head(size),
-                      getMostReduced('trigrams') %>% select(word) %>% head(size)))
+                      getMostReduced('trigrams') %>% select(word) %>% head(size))
   
-  colnames(topWords) <- paste0(paste('#', seq(size), sep = ''))
-  rownames(topWords) <- c('unigrams', 'bigrams', 'trigrams')
+  rownames(topWords) <- paste0(paste('#', seq(size), sep = ''))
+  colnames(topWords) <- c('unigrams', 'bigrams', 'trigrams')
   topWords.toPrint = xtable(topWords, label = 'tab:words',
                             caption = 'Top 10 unigrams and bigrams with the highest reduction')
-  align(topWords.toPrint) <- paste0(c("|r||", rep('l|', size)), collapse = "")
+  align(topWords.toPrint) <- paste0(c("|r||", rep('l|', 3)), collapse = "")
   print(topWords.toPrint, floating.environment = "table*", comment=F, table.placement = 't')
 }
 

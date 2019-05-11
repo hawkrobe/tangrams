@@ -214,22 +214,23 @@ tagged_df %>%
             dets= sum(DETcount)/sum(numWords),
             #pronouns = sum(PRONcount)/sum(numWords),
             preps = sum(ADPcount)/sum(numWords),
-            adverbs = sum(ADVcount)/sum(numWords),
+            #adverbs = sum(ADVcount)/sum(numWords),
             #conjunctions = sum(CCONJcount)/sum(numWords),
             adjectives = sum(ADJcount)/sum(numWords)) %>%
-  mutate(OTHER = (1 - nouns - verbs - dets - #pronouns - conjunctions
-                      preps - adjectives - adverbs)) %>%
+  mutate(OTHER = (1 - nouns - verbs - dets - #pronouns - conjunctions - adverbs
+                      preps - adjectives)) %>%
   gather(POS, prop, nouns:OTHER) %>%
-  mutate(POS = factor(POS, levels = c('nouns',  'verbs', 'adjectives', 'adverbs',
+  mutate(POS = factor(POS, levels = c('nouns',  'verbs', 'adjectives', #'adverbs',
                               'preps', 'dets', 'OTHER'))) %>%
   select(repetitionNum, POS, prop) %>%
   #mutate(POS = fct_reorder(POS, prop)) %>%
   ggplot(aes(x = repetitionNum, y = prop, fill = POS)) +
     geom_area(alpha=0.6 , size=1, colour="black") +
     scale_fill_brewer(palette = "Set1") +
-    theme_bw() +
+    theme_few() +
     scale_x_continuous(breaks = c(1,2,3,4,5,6))+
-    theme(aspect.ratio = 2)
+    theme(aspect.ratio = 2) +
+    ylab('% words')
 ggsave('../writing/tangrams/figs/posChange.pdf',
         height = 8, width = 16, units = 'cm', useDingbats = F)
 
@@ -273,7 +274,7 @@ posReduction <- tagged_df %>%
                       ifelse(POS == 'adverbs', '?', 'open'))) %>%
   mutate(cat = factor(cat, levels = c('closed', '?', 'open'))) %>%
   # rearrange
-  transform(POS=reorder(POS, mean))
+  transform(POS=reorder(POS, -mean))
 
 detReductionRate <- (posReduction %>% filter(POS == 'dets'))$mean * 100
 nounReductionRate <- (posReduction %>% filter(POS == 'nouns'))$mean * 100
@@ -281,12 +282,13 @@ nounReductionRate <- (posReduction %>% filter(POS == 'nouns'))$mean * 100
 ggplot(posReduction, aes(x = POS, y = mean, fill = cat)) +
   geom_bar(stat = 'identity') +
   geom_errorbar(aes(ymax = ci_upper, ymin = ci_lower), width = .1)+
-  ylab("% reduction") +
+  ylab("absolute % reduction") +
   xlab("Part of Speech category")  +
   theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
   scale_fill_manual(values=c('tomato3', 'gray', 'orange')) +
   theme_few() +
-  theme(aspect.ratio = 1/2)
+  coord_flip() +
+  theme(aspect.ratio = 1)
 
 
 ggsave('../writing/tangrams/figs/posReduction.pdf',
@@ -294,6 +296,16 @@ ggsave('../writing/tangrams/figs/posReduction.pdf',
 ```
 
 ### Reduction in syntactic features 
+
+Get list of all words dropped on each round...
+
+```{r}
+d <- read_csv('../data/tangramsSequential_collapsed.csv', col_types = 'ciiccil')
+
+d %>%
+  group_by(gameid, intendedName) %>%
+  mutate(nextUtterance = lead(contents)) %>%
+```
 
 TODO: include % including NPs? (shouldn't go down as much)
 

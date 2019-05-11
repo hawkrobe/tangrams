@@ -301,10 +301,9 @@ Get list of all words dropped on each round...
 
 ```{r}
 d <- read_csv('../data/tangramsSequential_collapsed.csv', col_types = 'ciiccil')
+permuted <- read_delim('./outputs/permuted_distribution.txt', ',', col_names = c('vals'))
 
-d %>%
-  group_by(gameid, intendedName) %>%
-  mutate(nextUtterance = lead(contents)) %>%
+qplot(permuted$vals)
 ```
 
 TODO: include % including NPs? (shouldn't go down as much)

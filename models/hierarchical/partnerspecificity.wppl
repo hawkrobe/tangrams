@@ -1,0 +1,90 @@
+// run using, e.g.:
+// WEBPPL_PARAM_PATH='./bdaOutput/'; echo $WEBPPL_PARAM_PATH; webppl BDA.wppl --param-store file --param-id game1 --require ./refModule/ -- --gameid game1
+
+var numUtterances = 2
+var numStates = 2
+var utterances = map(function(i) {return 'word' + i;}, _.range(1, numUtterances+1));
+var states = map(function(i) {return 'object' + i;}, _.range(1, numUtterances+1));
+var lexDims = [numUtterances, numStates];
+
+var tensorSoftplus = function(x) {
+  return T.log(T.add(T.exp(x), 1));
+};
+
+var lexiconGuide = function(paramName) {
+  return function() {
+    DiagCovGaussian({
+      mu: param({name: paramName + 'mu', dims: lexDims}),
+      sigma: tensorSoftplus(param({name: paramName + 'sigma', dims: lexDims}))
+    });
+  };
+};
+
+var sampleHyperlexica = function() {
+  var lexPrior = DiagCovGaussian({ mu: zeros(lexDims), sigma: T.mul(ones(lexDims), 5)});
+  return sample(lexPrior, {guide: lexiconGuide('hyper')});
+};
+
+var partnerLexica = function(i) {
+  var hyperLex = sampleHyperlexica();
+  var lexPrior = DiagCovGaussian({ mu: hyperLex, sigma: T.mul(ones(lexDims), 1)});
+  return sample(lexPrior, {guide: lexiconGuide('partner' + i)});
+};
+
+var observeRound = function(llex, datum) {
+  // For listener, we observe the object they clicked given the utterance they heard
+  var listenerScore = refModule.getListenerScore(datum.clickedName, datum.wordID,{
+    context: ['object1', 'object2'],
+    lexicon: llex
+  });
+  factor(listenerScore);
+};
+
+// literal listener (using real-valued lexicon)
+var L0 = function(utt, context, partner) {
+  var lexicon = partnerLexica(partner);
+  return Infer({method:"enumerate"}, function(){
+    var state = uniformDraw(context);
+    var score = refModule.getLexiconElement(lexicon, utt, state);
+    factor(score);
+    return state;
+  });
+};
+
+// at each point in this sequence, we want the model's predictions 
+var iterate = function() {
+  var data = [{partnerID: 1, clickedName: 'object1', wordID: 'word1'},
+	      {partnerID: 1, clickedName: 'object1', wordID: 'word1'},
+	      {partnerID: 1, clickedName: 'object1', wordID: 'word1'},
+	      {partnerID: 2, clickedName: 'object1', wordID: 'word1'},
+	      {partnerID: 2, clickedName: 'object1', wordID: 'word1'},
+	      {partnerID: 2, clickedName: 'object1', wordID: 'word1'},
+	      {partnerID: 3, clickedName: 'object1', wordID: 'word1'},
+	      {partnerID: 3, clickedName: 'object1', wordID: 'word1'}];
+  map(function(t) {
+    // grab data up to this point
+    var dataSoFar = data.slice(0,t);
+    console.log('updating on', dataSoFar)
+    // run VI on current data
+    Optimize({
+      steps: 10000, verbose: false, optMethod: {adam: {stepSize: 0.0005}},
+      model: function() {
+	mapData({data: dataSoFar}, function(trialDatum) {
+	  observeRound(partnerLexica(trialDatum.partnerID), trialDatum);
+	});
+      }
+    });
+
+    // predict next data point
+    var nextDataPoint = data[t];
+    display(param({name: 'hypermu', dims: lexDims}))
+    display(param({name: 'partner1mu', dims: lexDims}))
+    console.log('prediction for', nextDataPoint);
+    display(expectation(Infer({model: function() {
+      return Math.exp(L0(nextDataPoint.wordID, ['object1', 'object2'],nextDataPoint.partnerID)
+		      .score(nextDataPoint.clickedName));
+    }, method: 'forward', samples: 10000, guide: true})));
+  }, _.range(data.length ));
+}
+
+iterate();

@@ -1,0 +1,12 @@
+{
+  "name": "refModule",
+  "main": "ref.js",
+  "webppl": {
+    "wppl": []
+  },
+  "dependencies": {
+    "babyparse": "*",
+    "lodash": "~4.17.4",
+    "JSONStream": "*"
+  }
+}

@@ -25,7 +25,7 @@ data.frame(prediction = c(0.48319292387482204, 0.5427530392854598, 0.61420429784
     ylab("P(target)") +
     theme(aspect.ratio = 1)
 
-ggsave('partnerspecificity.pdf', height = 8, width = 8, units = 'cm', useDingbats = F)
+ggsave('../../dissertation/dissertation/figures/modeling/partnerspecificity.pdf', height = 8, width = 8, units = 'cm', useDingbats = F)
 ```
 
 Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.

@@ -163,7 +163,7 @@ These findings provide a new window into the quantitative dynamics of learning i
 \begin{figure}
 \centering
 \includegraphics[scale=.9]{designAndExample.pdf}
-\caption{`Free matching' and `cued' variants of the tangrams task.}
+\caption{Display and procedure for the repeated reference game task.}
 \label{fig:design}
 \end{figure}
 
@@ -173,8 +173,8 @@ Second, to observe the \emph{dynamics} of conventions over time, we needed the s
 These criteria are satisfied by a \emph{repeated reference game} design in which participants refer to the same objects across multiple rounds as they build up a shared history of interaction, or common ground, with their partner. 
 
 We developed two variants of the game: a relatively unconstrained \emph{free-matching} version that more closely replicates the classic in-lab design, and a more tightly controlled \emph{cued} version that allows for higher resolution analyses of how references to individual tangrams changed over time (see Fig. \ref{fig:design}). 
-The \emph{free-matching} version was an exploratory sample, but we pre-registered our full pre-processing and analysis pipeline for the \emph{cued} version\footnote{https://osf.io/2zwmx}. 
-While we have released the corpus from the free-matching version\footnote{https://cocolab.stanford.edu/datasets/tangrams.html}, we only use the \emph{cued} version throughout the paper as our confirmatory sample.
+We considered the free-matching version to be an exploratory pilot sample, and we subsequently pre-registered our full pre-processing and analysis pipeline for the \emph{cued} version\footnote{https://osf.io/2zwmx}. 
+While we have released the corpus from the free-matching version\footnote{https://cocolab.stanford.edu/datasets/tangrams.html}, we restrict our analyses to the \emph{cued} version throughout the paper as our confirmatory sample.
 
 \subsection{Participants}\label{participants}
 
@@ -240,7 +240,6 @@ Instead, we predict that more \emph{distinctive} words in initially successful l
 In other words, different pairs will find different but equally successful equilibria in the space of possible linguistic conventions.
 \emph{Third}, as speakers learn and gradually strengthen their expectations about how their partner will interpret their referring expressions, the labels used within each pair for each tangram with stabilize.
 In other words, once there is evidence that a particular label is successfully understood, there is little reason to deviate from it.
-Because these analyses depend on tangram-level resolution, we only examine the ``cued'' dataset in this section.
 
 \subsection{Initially distinctive words are more likely to conventionalize}
 \label{sec:distinctive}
@@ -452,22 +451,11 @@ Instead, this pattern of results is consistent with sensitivity to tangram-speci
 
 \begin{figure}[t]
 \centering
-\includegraphics[scale=.8]{reduction.pdf}
-\caption{Similar reduction in \# words per tangram for both variants of the task. Error ribbons are 95\% confidence intervals.} % \todo[inline]{Maybe showing \% reduction is better than raw numbers, i.e. normalizing by occurrence on first round (or version mike suggested w/ bars showing proportions at beginning and end.}}
+\includegraphics[scale=.6]{reduction.pdf}
+\caption{Reduction in \# words per tangram. Error ribbons are 95\% confidence intervals.}
 \label{fig:reduction}
 \end{figure}
 
-
-\subsection{Understanding reduction}\label{reduction}
-
-Next, we turn to a set of analyses examining the reduction in utterance length over the course of the experiment. 
-At the coarsest level, we find that the mean number of words used by speakers decreases over time (see Fig. \ref{fig:reduction}) in both the free matching and cued variants of the task. 
-Free matching required more words overall because participants needed to additionally mention which tangram they were referring to (i.e. ``number 3 is the \dots``).
-This result replicates the highly reliable reduction effect found throughout the literature on repeated reference games \citep[e.g.][]{KraussWeinheimer64_ReferencePhrases,BrennanClark96_ConceptualPactsConversation}. 
-Perhaps because of the text-based (vs.~spoken) interface, participants in our task used fewer words overall than reported by \cite{ClarkWilkesGibbs86_ReferringCollaborative}. 
-The following analyses break down this broad reduction into a finer-grained set of phenomena on the \emph{cued} corpus.
-
-\paragraph{Reduction in parts of speech}
 \begin{table*}[t]
 \centering
 \begin{tabular}{|r||l|l|l|}
@@ -494,6 +482,17 @@ The following analyses break down this broad reduction into a finer-grained set 
 \caption{Top 15 unigrams, bigrams, and trigrams with the highest numeric reduction from first round to last round. Text lemmatized before n-grams computed. } 
 \label{tab:words}
 \end{table*}
+
+
+\subsection{Understanding reduction}\label{reduction}
+
+Next, we turn to a set of analyses examining the reduction in utterance length over the course of the experiment. 
+At the coarsest level, we find that the mean number of words used by speakers decreases over time (see Fig. \ref{fig:reduction})\footnote{A similar reduction curve was found in our pilot ``free matching'' version of the task, although it required more words overall. Participants needed to additionally mention which tangram they were referring to (i.e. ``number 3 is the \dots``)}.
+This result replicates the highly reliable reduction effect found throughout the literature on repeated reference games \citep[e.g.][]{KraussWeinheimer64_ReferencePhrases,BrennanClark96_ConceptualPactsConversation}. 
+Perhaps because of the text-based (vs.~spoken) interface, participants in our task used fewer words overall than reported by \cite{ClarkWilkesGibbs86_ReferringCollaborative}. 
+The following analyses break down this broad reduction into a finer-grained set of phenomena.
+
+\paragraph{Reduction in parts of speech}
 
 
 The first level of granularity concerns which \emph{kinds} of words are most likely to be dropped. 

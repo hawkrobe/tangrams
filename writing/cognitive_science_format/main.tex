@@ -25,7 +25,7 @@
 % Include section in journal if known, otherwise delete
 %\paperfield{Journal Section}
 
-\title{The dynamics of structure and content in repeated reference games}
+\title{Characterizing the dynamics of learning in repeated reference games}
 
 % List abbreviations here, if any. Please note that it is preferred that abbreviations be defined at the first instance they appear in the text, rather than creating an abbreviations list.
 %\abbrevs{ABC, a black cat; DEF, doesn't ever fret; GHI, goes home immediately.}
@@ -42,12 +42,12 @@
 \affil[1]{Department of Psychology, Stanford University}
 \affil[2]{Department of Computer Science, Stanford University}
 
-\corraddress{Robert Hawkins, Author One PhD, Department, Institution, City, State or Province, Postal Code, Country}
-\corremail{rxdh@stanford.edu}
+\corraddress{Robert Hawkins, Department of Psychology, Princeton University, Princeton, NJ 08540}
+\corremail{robertdh@princeton.edu}
 
 % \presentadd[\authfn{2}]{Department, Institution, City, State or Province, Postal Code, Country}
 
-\fundinginfo{Funder One, Funder One Department, Grant/Award Number: 123456, 123457 and 123458; Funder Two, Funder Two Department, Grant/Award Number: 123459}
+%\fundinginfo{Funder One, Funder One Department, Grant/Award Number: 123456, 123457 and 123458; Funder Two, Funder Two Department, Grant/Award Number: 123459}
 
 % Include the name of the author that should appear in the running header
 \runningauthor{Hawkins et al.}
@@ -77,8 +77,9 @@ When talking with novel partners about novel referents, speakers must continuall
 % for increasingly effective, efficient communication.
 % \emph{How} the structure and content of natural language referring expressions change through continued interaction. %While such adaptation has been demonstrated under a variety of conditions, p
 Here we draw upon recent advances in natural language processing to provide a finer-grained characterization of the dynamics of such adaptation.
-We collected a corpus ($>$15,000 utterances) of extended dyadic interactions in a classic repeated reference game task where pairs of partners had to coordinate on how to talk about initially difficult-to-describe \emph{tangram} stimuli.
-While different pairs coordinate on a wide range of idiosyncratic solutions to the problem of reference, they do so in a highly path-dependent manner: words that are more discriminative in the initial context (i.e. that were used for one target more than others) are more likely to persist through the final round.
+We release an open corpus ($>$15,000 utterances) of extended dyadic interactions in a classic repeated reference game task where pairs of partners had to coordinate on how to talk about initially difficult-to-describe tangram stimuli.
+We find that different pairs coordinate on a wide range of idiosyncratic solutions to the problem of reference, but they do so in a highly systematic manner. 
+Words that are more discriminative in the initial context (i.e. that were used for one target more than others) are more likely to persist through the final round.
 Structurally, we found that utterances reduce across pairs following similar trajectories: entire modifying syntactic units drop out as conventions are established, leaving only contentful open-class parts of speech.
 These findings provide higher resolution into the quantitative dynamics of \emph{ad hoc} convention formation: based on a shared history of usage, words systematically acquire new meaning with a partner to support more efficient communication.
 
@@ -112,46 +113,50 @@ These findings provide higher resolution into the quantitative dynamics of \emph
 %
 %Here we present a large corpus of messages sent in a web-based reference game where a speaker repeatedly refers to the same objects with the same partner. 
 
-Human language use is remarkably flexible. % and adaptive to the needs of the current situation. 
-To meet the diverse challenges posed by different communicative interactions, we are able to coax new meanings out of existing words or even coin new ones. 
-Slang, technical lingo, nicknames, inside jokes, metaphors, and other neologisms may coalesce over timescales as short as a single conversation. % all operate in a regime of uncertainty where the same word or phrase may \emph{a priori} mean something different (or nothing at all) to different partners in different contexts. (cite, cite).
-This flexibility is partially explained by one-shot pragmatic reasoning, allowing listeners to use context to infer an intended meaning even in cases of non-standard or non-literal usage.
-However, a rich theoretical thread in the literature has suggested that \emph{learning} may also play an important role, allowing speakers and listeners to dynamically adapt their representations of meaning in a partner-specific manner over the course of an interaction.
-% a lifetime of learning the conventions of our language community provides a crucial backbone for understanding each other \cite{Lewis69_Convention}, we frequently find ourselves in situations where our existing lexicon falls short.
-%For one, no two speakers share exactly the same lexicon \cite{, Clark98_CommunalLexicons}. 
-%At the same time, because we live in a changing environment, we constantly experience novel entities, events, thoughts, and feelings we want to talk about---complex referents for which we have no pre-existing conventions and real uncertainty about whether a novel compositional expression will mean to our partner exactly what we intend it to mean.
-%What do we do when our lexicon isn't sufficient --- when we have to talk about something we've never had to talk about before with a partner we've never met?
+Human language use is remarkably flexible. 
+We are able to coax new meanings out of existing words, or even coin new ones, to handle the diverse challenges encountered in everyday communication \citep{Clark83_NonceSense,davidson_nice_1986}.
+This flexibility is partially explained by one-shot pragmatic reasoning, which allows listeners to use context to infer an intended meaning even in cases of ambiguous or non-literal usage \citep{LascaridesCopestake98_PragmaticsWordMeaning,Glucksberg01_FigurativeLanguage,piantadosi2012communicative,GoodmanFrank16_RSATiCS}.
+However, a rich theoretical thread in the literature has suggested that \emph{learning} mechanisms may also play an important role, allowing speakers and listeners to dynamically adapt their representations of meaning over the course of an interaction \citep{BrennanClark96_ConceptualPactsConversation,pickering2004toward,delaney2019neural}.
 
-The \emph{repeated reference game} task has provided a natural and productive paradigm for evaluating different theories of learning in communication.
-In this task, pairs of participants are presented with arrays of novel, ambiguous objects. 
-On each trial, one player -- the speaker -- must produce a message allowing their partner to select a given target object from the context.
-In addition to feedback at the end of each trial about which object the listener selected, the speaker and listener are allowed to communicate freely. 
-Critically, each object appears as the target multiple times over the course of the interaction, allowing the experimenter to examine how referring expressions change as the speaker and listener accumulate shared experience.
-A key early result first reported by \cite{KraussWeinheimer64_ReferencePhrases} is that descriptions are dramatically shortened: early descriptions like ``the one that looks like an upside-down martini glass in a wire stand'' become simply ``martini'' by the end. 
+Two functional considerations motivate the need for continued learning in communication, even among adults.
+First, just as there is substantial phonetic variability across speakers with different accents \citep{kleinschmidt2019structure}, lexical items may vary in meaning from speaker to speaker. 
+This variability is clear for cases like slang, technical lingo, nicknames, or colloquialisms \citep[e.g.][]{Clark98_CommunalLexicons}, but may extend even to more ordinary nouns and adjectives. 
+It may be difficult to know at the 
+Second, because we live in a changing environment, we often experience novel entities, events, thoughts, and feelings we want to talk about but do not already have (literal) words to express.
+Both of these obstacles can be overcome using feedback from one's partner to dynamically re-calibrate expectations about meaning.
+%A learning mechanism thus allows us to understand one another increasingly well and allows our knowledge of language to extend further. 
 
-Subsequent work has established a number of important qualitative properties of convention formation through careful experimental manipulations.
-For example, \dots \todo[inline]{Mention here}
-However, further model development depends critically upon a finer-grained characterization of the \emph{quantitative} signatures of semantic adaptation found in human communication. 
+The \emph{repeated reference game} task has provided a natural and productive paradigm for eliciting behavior under such conditions.
+In this task, pairs of participants are presented with arrays of novel, conceptually ambiguous objects. 
+On each trial, one player -- the speaker -- is privately shown a \emph{target} object and must produce a referring expression allowing their partner to correctly select that object from the context.
+The speaker is then given feedback at the end of each trial about which object the listener selected, and the listener is given feedback about the true target object. 
+Critically, each object appears as the target multiple times in the trial sequence, allowing the experimenter to examine how referring expressions change as the speaker and listener accumulate shared experience.
+To the extent that the speaker and listener converge on an accurate system of stable referring expressions, and these referring expressions differ from the ones that were initially produced, the data indicate that \emph{conventions} or \emph{pacts} have formed through some learning process.
+
+Indeed, a key early result first reported by \cite{KraussWeinheimer64_ReferencePhrases} is that descriptions are dramatically shortened across repetitions: an initial description like ``the one that looks like an upside-down martini glass in a wire stand'' may gradually converge to ``martini'' by the end. 
+Subsequent work has established a number of signature properties of convention formation through careful experimental manipulation.
+For example, reduction is contingent on listener feedback \citep{KraussWeinheimer66_Tangrams,KraussEtAl77_AudioVisualBackChannel,HupetChantraine92_CollaborationOrRepitition}, and is therefore not easily explained as a mere practice or repetition effect; the resulting conventions are \emph{partner-specific} in the sense that they do not transfer if a novel listener is introduced \citep{WilkesGibbsClark92_CoordinatingBeliefs,MetzingBrennan03_PartnerSpecificPacts,brennan_partner-specific_2009}; and they are \emph{sticky} in the sense that they persist through precedent even after the context changes \citep{BrennanClark96_ConceptualPactsConversation}.
+
+A variety of models, at varying levels of formal precision, have been proposed to explain these qualitative effects.
+However, further model development depends critically upon a finer-grained characterization of the \emph{quantitative} signatures of adaptation.
 Certain fundamental descriptive questions remain unanswered, and important theoretical constructs remain poorly operationalized. 
-% in this literature. %on repeated reference games has 
-For example, it has been widely observed that utterances reduce in length as common ground is accumulated.
-But a precise characterization \emph{what} gets reduced, and \emph{how}, has remained elusive.
+For example, while it has been widely observed that utterances reduce in length as common ground is accumulated, a precise characterization \emph{what} gets reduced, and \emph{how}, has remained elusive.
 %How systematic is the structure of reduction over time?
 What determines whether a particular word is dropped or preserved? 
 Are words dropped randomly or clustered together in phrases?
-Similarly, while theoretical definitions of constructs like arbitrariness or stability have loomed over the theoretical analysis of conventions \citep{Lewis69_Convention}, it has been unclear how exactly to measure the extent to which these properties hold in a particular task and how they may evolve over the course of interaction. 
-Without addressing these gaps in measurement, it is difficult to set criteria to distinguish among different models.
+Similarly, while constructs like arbitrariness or stability have loomed over the theoretical analysis of conventions \citep[e.g.][]{Lewis69_Convention}, it has been unclear how exactly to measure the extent to which these properties hold in a particular task and how they may evolve over the course of interaction. 
+Without addressing these gaps in measurement, it is difficult to set finer-grained criteria to distinguish among different models.
 
-In this chapter, we examine these questions in a large corpus of referring expressions from a new web-based replication of the classic Tangrams task \citep{ClarkWilkesGibbs86_ReferringCollaborative}.
+In this paper, rather than arguing for a particular model, we release a large corpus of repeated reference games and conduct a variety of computational analyses to provide a foundation for future model development.
 The computational techniques necessary to analyze such rich natural language data were limited at the time of prior work, but have become newly tractable given developments in natural language processing (NLP). 
+%In particular, we examine these questions using a web-based replication of the classic Tangrams task \citep{ClarkWilkesGibbs86_ReferringCollaborative}.
 Our analyses divide into two broad categories roughly corresponding the dynamics of \emph{content} and \emph{structure} of referring expressions across interaction.
 To examine content, we extracted word embeddings (e.g. GloVe vectors) for each message to calculate the similarity of messages within and across pairs. 
 We found that while different pairs coordinate on a wide range of idiosyncratic solutions to the problem of reference, they do so in an increasingly stable and path-dependent manner. 
 Further, words that are more discriminative in the initial context (i.e. that were used for one target more than others) are more likely to persist through the final round. 
 To examine structure, we extracted parts of speech and syntax trees from the text to understand what was reducing and how.
 We found that pairs systematically drop entire modifying phrases at each repetition, leaving only open-class parts of speech (e.g. an adjective and noun) by the final round. 
-These findings provide higher resolution into the quantitative dynamics of convention formation and support the modeling framework introduced in earlier chapters. 
-Based on usage, new meanings are systematically grounded with a partner to support more efficient communication.
+These findings provide a new window into the quantitative dynamics of learning in communication and raise new questions about how conventions form.
 
 \section{Methods: Repeated reference experiment}
 
@@ -228,8 +233,8 @@ We used a three step pre-processing pipeline to prepare our corpus for subsequen
 
 \section{Results: characterizing the dynamics of content}
 
-The inferential account laid out in earlier chapters makes three key predictions about how speakers change the content of their referring expressions over time.
-\emph{First}, if participants are influenced by pragmatic pressures to be informative, the labels that conventionalize should not be a random draw from the initial description. 
+Based on recent developments in theory, we pre-registered about how speakers change the content of their referring expressions over time.
+\emph{First}, if participants are influenced on each trial by pragmatic pressures to be informative, the labels that conventionalize should not be a random draw from the initial description. 
 Instead, we predict that more \emph{distinctive} words in initially successful labels (e.g. words used exclusively to describe one tangram) will be more likely to remain in later descriptions.
 \emph{Second}, due to sources of variability in the population of speakers, we predict that the referring expressions used by different pairs will increasingly diverge to different, idiosyncratic labels.
 In other words, different pairs will find different but equally successful equilibria in the space of possible linguistic conventions.
@@ -241,11 +246,10 @@ Because these analyses depend on tangram-level resolution, we only examine the `
 \label{sec:distinctive}
 
 We begin by investigating \emph{which} content is dropped and which is preserved.
-Which computational principles may allow us to predict whether a particular word in a speaker's initial description of an object will become established as a convention for referring to it on later rounds?
-In previous chapters, we discussed two principles that are particular relevant for this question.
+Two computational principles guide our exploration of this question.
 First, if speakers are attempting to be informative in a particular context of other tangrams then the Gricean maxim of quality suggests that a good referring expression is one that applies more strongly to the target than to the distractors. 
 Properties that are shared in common across multiple objects are poor candidates for conventions that must distinguish among them.
-Second, the principles of cross-situational meaning adaptation suggest that these informativity considerations will be strengthened through learning.
+Second, the principles of cross-situational learning suggest that these informativity considerations will be strengthened over time.
 The exclusive usage of a word with one tangram and no others should reinforce the specificity of that meaning in the local discourse context, even if the listener may be \emph{a priori} willing to extend it to other targets.
 Conversely, if a particular word has been successfully used with several different referents, its specificity may be weakened in the local context.
 Putting these principles together, we hypothesized that more \emph{initially distinctive} words would be more likely to conventionalize.
@@ -258,7 +262,7 @@ In our case, the ``documents'' are just the referring expressions used for a dis
 We can thus retrieve our simpler measure by exponentiating, dividing by $12$, and taking the inverse.
 The second is \emph{positive point-wise mutual information} (PPMI). 
 Point-wise mutual information compares the joint probability of a word occurring with a particular tangram to the probability of the two occurring independently: 
-$$PMI_{word, tangram} = \log\frac{P(word, tangram)}{P(word)P(tangram)}$$
+$$PMI_{\textrm{word},\textrm{tangram}} = \log\frac{P(\textrm{word}, \textrm{tangram})}{P(\textrm{word})P(\textrm{tangram})}$$
 \emph{Positive} point-wise mutual information is given by $\min(0, \textrm{PMI})$, restricting the lower bound to 0. 
 It can be shown for our case that \emph{tf-idf} is the maximum likelihood estimator for PPMI: the numerator reduces to a boolean when we only have one observation per tangram \citep{robertson2004understanding}.
 
@@ -349,7 +353,7 @@ To more rigorously test our predictions about gradual divergence to multiple equ
 First, we hypothesized that there was cumulative change in the semantic content of a particular pair's utterances across repetitions.
 Concretely, we predicted that within a particular pair of participants, utterances on later repetitions would become increasingly dissimilar from the initial utterance.
 We tested this prediction in a mixed-effects regression model including (orthogonalized) linear and quadratic fixed effects of the `lag' from the first repetition (i.e. 1 for the second repetition, 2 for the third repetition, etc) as well as maximal random effects for each tangram and pair of participants.
-We found a significant linear decrease in similarity to the initial round as the lag becomes larger, $b = -3.5,~t = 12.2$, as well as a significant quadratic term, $b=1.1, t=5.3$, suggesting that this decrease in similarity slows down over time (see Fig.~\ref{within-across}A).
+We found a significant linear decrease in similarity to the initial round as the lag becomes larger, $b = -3.5,~t = 12.2$, as well as a significant quadratic term, $b=1.1, t=5.3$, suggesting that this decrease in similarity slows down over time (see Fig.~\ref{fig:similarity}A).
 
 However, since the entire distribution of utterances may have drifted to a different region of the semantic space for generic reasons (e.g., because they were shorter overall), we compared the estimated drift \emph{within} pairs of participants to a permuted baseline.
 For each target tangram, we scrambled utterances across different pairs of participants and re-ran our mixed-effects model to obtain a null distribution representing the decrease in semantic distance from a \emph{random} speaker's utterance on the first round.
@@ -367,7 +371,7 @@ This difference is likely a consequence of random utterances from different spea
 
 As speakers modified their utterances across successive repetitions, we additionally hypothesized that they would converge on increasingly consistent ways of referring to each tangram.
 To test this prediction, we computed the semantic similarity between successive utterances produced by each speaker when referring to same tangram (i.e.~repetition $k$ to $k+1$). %.^, and evaluated how this similarity changed across repetitions.
-A mixed-effects model with linear and quadratic fixed effects of repetition number and maximal random effects for both tangram and pair of participants showed that similarity between successive utterances increased substantially throughout an interaction ($b = 2.7,~t = 10.9$; Fig.~\ref{within-across}B). 
+A mixed-effects model with linear and quadratic fixed effects of repetition number and maximal random effects for both tangram and pair of participants showed that similarity between successive utterances increased substantially throughout an interaction ($b = 2.7,~t = 10.9$; Fig.~\ref{fig:similarity}B). 
 The quadratic term was not significant ($b= -0.4,~t=-1.8$).
 Again, we compared our empirical estimate of the magnitude of this trend to a null distribution of slopes estimated by scrambling utterances across pairs and re-running the regression model.% to disrupt the consistency of interactions.
 The estimated slope fell outside this null distribution, for which similarity was strongly \emph{decreasing}, $CI = [-5.9, -5.4]$, providing evidence that increasingly consistent ways of referring to each object manifested only for series of utterances produced within the same interaction.
@@ -379,7 +383,7 @@ The large sample of pairwise similarities ($N = 257,040 = 12~\textrm{tangrams} \
 On one hand, we could obtain highly reliable estimates of mean similarity. 
 On the other hand, larger random-effects structures led to convergence problems.
 We therefore ran a mixed-effects regression model including linear and quadratic fixed effects of repetition number including maximal random effects only at the tangram-level. 
-We found a strong negative linear fixed effect of repetition on between-game semantic similarity ($b = -50.7, t= 16.8$) as well as a significant quadratic effect ($b= 16.1, t = 12$), indicating that this divergence slows over time as each pair stabilizes, (see Fig.~\ref{within-across}C).
+We found a strong negative linear fixed effect of repetition on between-game semantic similarity ($b = -50.7, t= 16.8$) as well as a significant quadratic effect ($b= 16.1, t = 12$), indicating that this divergence slows over time as each pair stabilizes, (see Fig.~\ref{fig:similarity}C).
 We again conducted a permutation test to compare this $t$ value with what would be expected from scrambling utterances across repetitions for each pair and target.
 We found that the estimated slope was highly unlikely under this distribution $(CI = -2.5, 2.9],~p~<~0.001)$. 
 
@@ -459,7 +463,7 @@ Instead, this pattern of results is consistent with sensitivity to tangram-speci
 Next, we turn to a set of analyses examining the reduction in utterance length over the course of the experiment. 
 At the coarsest level, we find that the mean number of words used by speakers decreases over time (see Fig. \ref{fig:reduction}) in both the free matching and cued variants of the task. 
 Free matching required more words overall because participants needed to additionally mention which tangram they were referring to (i.e. ``number 3 is the \dots``).
-This result replicates the highly reliable reduction effect found throughout the literature on repeated reference games \citep[e.g.][]{KraussWeinheimer64_ReferencePhrases,BrennanClark96_ConceptualPactsConversation}, including our own results using COCO images in Chapter 3. 
+This result replicates the highly reliable reduction effect found throughout the literature on repeated reference games \citep[e.g.][]{KraussWeinheimer64_ReferencePhrases,BrennanClark96_ConceptualPactsConversation}. 
 Perhaps because of the text-based (vs.~spoken) interface, participants in our task used fewer words overall than reported by \cite{ClarkWilkesGibbs86_ReferringCollaborative}. 
 The following analyses break down this broad reduction into a finer-grained set of phenomena on the \emph{cued} corpus.
 
@@ -541,7 +545,7 @@ This result accords with early observations by \cite{Carroll80_NamingHedges}, wh
 
 \section{Discussion}\label{general-discussion}
 
-In this chapter, we characterized the dynamics of convention formation in a classic repeated reference game paradigm.
+In this paper, we characterized the dynamics of convention formation in a classic repeated reference game paradigm.
 First, we found that pairs of participants systematically tend to conventionalize words that are more distinctive in the initial context.
 Using both discrete and continuous measures of semantic content, we found this process leads to stable usage within pairs but multiple equilibria across different pairs.
 Second, speakers reduce the length of their descriptions over the course of the task in a way that is sensitive to evidence of listener understanding and syntactically structured to omit entire meaningful units.
@@ -560,30 +564,29 @@ Further, because it is based entirely on the frequency of tokens, it may treat e
 Thus, these two approaches provide complementary evidence for the dynamics of content.
 
 \paragraph{Symmetry-breaking}
-Our results in this chapter raise a subtle cognitive question about classic definitional notions of arbitrariness in convention \citep{Lewis69_Convention}, which hold that there must counterfactually exist an alternative solution to the coordination problem for any particular solution to be conventional.
+Our results in this paper also raise a subtle cognitive question about classic definitional notions of arbitrariness in convention \citep{Lewis69_Convention}, which hold that there must counterfactually exist an alternative solution to the coordination problem for any particular solution to be conventional.
 How can such systematicity in the formation process co-exist with conventionality?
 The symmetry of different solutions must break somewhere to account for the empirical existence of many alternative but equally successful referential conventions at the population level, but our results are consistent with two different cognitive realities \emph{within} games.
 
 One possibility is that this arbitrariness is a product of substantial variability in a population of fairly rigid speakers.
 That is, each individual speaker may have strong but idiosyncratic initial preferences for how to refer to each tangram. 
-They may begin with additional elaboration given their representation of uncertainty about whether these strong preferences are shared, but without strong evidence that their partner cannot understand, they will persist with their preferred and pre-meditated label.
-
+They may begin with additional elaboration given their representation of uncertainty about whether these strong preferences are shared, and in the absence of misunderstandings they will persist with their preferred and pre-meditated label.
 A second possibility is that the population of speakers is homogenous but only weakly constrained by prior preferences. 
 That is, speakers may not only be uncertain of which messages their partner will understand, but are themselves unclear on an appropriate way to refer to these unfamiliar objects.
-If speakers initially sample from a variable distribution, and then from their updated distribution on subsequent rounds, different pairs may end up in different equilibria due to the path-dependence of the process. 
+If speakers initially produce an utterance from a broad distribution of acceptable labels, and update their distribution on subsequent rounds, different pairs may end up in different equilibria due to the path-dependence of the process. 
 In this way, the symmetry may be broken through randomness in the sampling step (or in the updating step, if learning is stochastic.)
 These possibilities are not mutually exclusive.
-Our experiments ruled out the possibility of a homogeneously rigid population, but it is possible that some speakers have strong preferences while others do not.
+Our results rule out the possibility of a homogeneously rigid population, but it is possible that some speakers have strong preferences about labels while others are uncertain.
 
-While prior empirical work has indirectly tested expectations and prior preferences -- for instance, by asking speakers to either produce descriptions for others or for themselves in the future \citep{FussellKrauss89_IntendedAudienceCommonGround} -- an important direction for further work is to design experiments that disentangle these possibilities.
+While prior empirical work has indirectly tested initial expectations and  preferences -- for instance, by asking speakers to either produce descriptions for others or for themselves in the future \citep{FussellKrauss89_IntendedAudienceCommonGround} -- an important direction for further work is to design experiments that disentangle these possibilities.
 For instance, a Bayesian truth serum approach \citep{prelec2004bayesian} could estimate both an individual's own subjective preferences and their expectations about whether these would be shared by others.
 More broadly, following recent attempts to estimate the true variability across speakers in phonetic properties of speech production \citep{kleinschmidt2019structure}, it would be valuable to estimate how much variability in semantic expectations there really is in the population \citep{FurnasEtAl87_VocabularyProblem}.
 
-\section*{acknowledgements}
-Acknowledgements should include contributions from anyone who does not meet the criteria for authorship (for example, to recognize contributions from people who provided technical help, collation of data, writing assistance, acquisition of funding, or a department chairperson who provided general support), as well as any funding or other support information.
-
-\section*{conflict of interest}
-You may be asked to provide a conflict of interest statement during the submission process. Please check the journal's author guidelines for details on what to include in this section. Please ensure you liaise with all co-authors to confirm agreement with the final statement.
+%\section*{acknowledgements}
+%We 
+%
+%\section*{conflict of interest}
+%You may be asked to provide a conflict of interest statement during the submission process. Please check the journal's author guidelines for details on what to include in this section. Please ensure you liaise with all co-authors to confirm agreement with the final statement.
 
 \printendnotes
 

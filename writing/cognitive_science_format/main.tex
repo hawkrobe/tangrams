@@ -377,8 +377,8 @@ The estimated slope fell outside this null distribution, for which similarity wa
 
 \paragraph{Increasingly different content across interactions}
 Finally, we predicted that the way different pairs refer to the same tangram would become increasingly dissimilar from each other across repetitions, gradually diverging into different equilibria.
-We tested this prediction by computing the mean pairwise similarity between utterances used by different speakers to refer to the same object.
-The large sample of pairwise similarities ($N = 257,040 = 12~\textrm{tangrams} \times 6~\textrm{repetitions} \times \frac{85 \cdot 84}{2}~\textrm{distinct pairs}$) presented both advantages and disadvantages.
+We tested this prediction by computing the mean similarity between utterances used by different speakers to refer to the same object.
+The large sample of similarities ($N = 257,040 = 12~\textrm{tangrams} \times 6~\textrm{repetitions} \times \frac{85 \cdot 84}{2}~\textrm{distinct pairs}$) presented both advantages and disadvantages.
 On one hand, we could obtain highly reliable estimates of mean similarity. 
 On the other hand, larger random-effects structures led to convergence problems.
 We therefore ran a mixed-effects regression model including linear and quadratic fixed effects of repetition number including maximal random effects only at the tangram-level. 
@@ -386,6 +386,9 @@ We found a strong negative linear fixed effect of repetition on between-game sem
 We again conducted a permutation test to compare this $t$ value with what would be expected from scrambling utterances across repetitions for each pair and target.
 We found that the estimated slope was highly unlikely under this distribution $(CI = -2.5, 2.9],~p~<~0.001)$. 
 
+To check whether this divergence effect can be explained as an artifact of utterance length, we conducted an additional null model.
+\todo[inline]{explain rationale}
+\todo[inline]{also make point about divergence *within* pairs relative to across pairs}
 
 \begin{figure}[t!]
 \centering

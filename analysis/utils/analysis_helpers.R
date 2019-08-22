@@ -136,7 +136,7 @@ compute_within_vs_across <- function(M_mat, F_mat) {
                           .$repetition)) %>%
     summarize(empirical_stat = mean(sim, na.rm = T)) %>%
     filter(!is.na(empirical_stat)) %>%
-    mutate(source = 'within')
+    mutate(source = 'within games')
   
   acrossGames <- M_mat %>%
     group_by(target) %>%
@@ -151,7 +151,7 @@ compute_within_vs_across <- function(M_mat, F_mat) {
            group_by(target, gameid1) %>%
            summarize(empirical_stat = mean(sim, na.rm =T)) %>%
            rename(gameid = gameid1) %>%
-           mutate(source = 'across') %>%
+           mutate(source = 'across games') %>%
            bind_rows(withinGames))
 }
 

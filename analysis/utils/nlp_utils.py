@@ -47,29 +47,44 @@ def makeMyPMI(df, tangram, roundNum, gameid, totals):
     
     return indicatorDF
 
-def get_feats(d_in, docs_emb, nlp) :
-    d = d_in.drop(d_in.columns.difference(['gameid', 'intendedName', 'repetitionNum', 'text', 'correct']), axis=1)
+import random
+
+def scramble_words(d) :
+    scrambled_d = pd.DataFrame(columns = d.columns)
+    for name, group_d in d.groupby(['repetitionNum', 'gameid']) :
+        all_tokens = [item for sublist in group_d['contentful'] for item in sublist]
+        np.random.shuffle(all_tokens)
+        new_group = group_d.assign(contentful = lambda x : [[all_tokens.pop() for i in range(len(tokens))] 
+                                                            for tokens in group_d['contentful']])
+        scrambled_d = scrambled_d.append(new_group)
+    return scrambled_d
+
+def get_feats(d_in, docs_emb, nlp, scramble = False) :
+    d = d_in.drop(d_in.columns.difference(['gameid', 'intendedName', 'repetitionNum', 'text', 'correct', 'contentful']), axis=1)
     meta = pd.DataFrame(columns = ['gameid',  'intendedName','repetitionNum', 'correct', 'is_nan'])
     raw_avg_feats = np.array([]).reshape(0, 300)
     weighted_feats = np.array([]).reshape(0, 300)
 
+    if scramble :
+        d = scramble_words(d)
+        
     for i, row in d.iterrows() :
         null_embedding = np.full((1,300), np.nan)
 
         # sometimes we have a missing row and we want to put in NANs so it's handled properly when taking means
-        if pd.isna(row['text']) :
-            raw_avg_embedding = null_embedding
-            weighted_embedding = null_embedding
-            is_nan = True
-        else :
-            weighted_embedding = docs_emb[i,]
-            local_embedding = np.array([]).reshape(0, 300)
-            for token in row['text'] :
-                if token.pos_ in ['NOUN', 'VERB', 'ADJ', 'ADV'] and token.has_vector :
-                    if token.lemma in nlp.vocab :
-                        local_embedding = np.vstack((local_embedding, nlp.vocab[token.lemma].vector))
-                    else :
-                        local_embedding = np.vstack((local_embedding, token.vector))
+        weighted_embedding = docs_emb[i,]
+        local_embedding = np.array([]).reshape(0, 300)
+        for token in row['contentful'] :
+            if pd.isna(token) :
+                raw_avg_embedding = null_embedding
+                weighted_embedding = null_embedding
+                is_nan = True
+                break
+            else :
+                if token.lemma in nlp.vocab :
+                    local_embedding = np.vstack((local_embedding, nlp.vocab[token.lemma].vector))
+                else :
+                    local_embedding = np.vstack((local_embedding, token.vector))
 
             is_nan = local_embedding.size == 0
             if is_nan :

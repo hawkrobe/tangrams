@@ -128,9 +128,8 @@ true_dprime = dprime(combined.df)
 permuted_dprimes <- map_dbl(seq_len(1000), ~ dprime(combined.df %>% mutate(source = sample(source))))
 cat('CI for permuted=', sort(permuted_dprimes)[25], sort(permuted_dprimes)[975])
 cat('true=', true_dprime)
-      
+
 combined.df %>%
-  mutate(source = ifelse(source == 'across', 'across games', 'within games')) %>%
   ggplot(aes(x = empirical_stat, fill = source)) +
     geom_density(adjust = 1.5, alpha = .5) +
     #facet_wrap(~ target) +
@@ -139,6 +138,42 @@ combined.df %>%
 
 ggsave('../writing/tangrams/figs/across_vs_within.pdf',  height = 7, width = 10, units = 'cm', useDingbats = F)
 ```
+
+### Baseline across tangrams within game
+
+One concern is that these effects are an artifact of our method of creating utterance vectors by averaging word vectors. Maybe this procedure causes all long utterances to be more similar?
+
+It may look like different pairs are diverging and getting further apart, but expect, however, that at each point in time, 
+
+It appears that similarity is slightly *higher* among utterances for the same tangram across different games than for different tangrams within the same game. 
+
+```{r}
+acrossGames <- M_mat %>%
+    group_by(target, repetitionNum) %>%
+    do(flatten_sim_matrix(get_sim_matrix(., F_mat, method = 'cosine'),
+                          .$gameid)) %>%
+    filter(dim1 != dim2) %>%
+  rename(gameid = dim1) %>%
+    group_by(repetitionNum,gameid) %>%
+  summarize(empirical_stat = mean(sim, na.rm = T)) %>% mutate(source ='across')
+
+diffTangramWithinGames <- M_mat %>%
+  group_by(gameid, repetitionNum) %>%
+  do(flatten_sim_matrix(get_sim_matrix(., F_mat, method = 'cosine'),
+                        .$target)) %>%
+  summarize(empirical_stat = mean(sim, na.rm = T)) %>%
+  filter(!is.na(empirical_stat)) %>%
+  mutate(source = 'across tangrams in game') 
+
+bind_rows(acrossGames,diffTangramWithinGames) %>%
+  spread(source, empirical_stat) %>%
+  mutate(diff = across - `across tangrams in game`) %>%
+  group_by(repetitionNum) %>%
+  tidyboot_mean(diff, na.rm = T)
+  ggplot(aes(x = as.character(repetitionNum), y = empirical_stat, color = source)) +
+    geom_violin()
+```
+
 
 ### Drift
 
@@ -296,7 +331,7 @@ cat('CI for within analysis=', sort(permuted.across)[2], sort(permuted.across)[9
 Viz (full data)
 
 ```{r}
-true_lmer.across %>% 
+true_lmer.across %>%
   ggplot(aes(x = factor(repetition), y = sim)) +
     geom_boxplot() +#width = .1, outlier.size=0
     scale_x_discrete(labels = c('(1,1)','(1,2)', '(1,3)', '(1,4)', '(1,5)' ,'(1,6)','(1,7)')) +
@@ -316,7 +351,6 @@ Viz (aggregated)
 
 ```{r}
 combined.across <- combine_empirical_and_baselines(M_mat, F_mat, 'across', 100)
-
 combined.across %>%
   mutate(sample_id = fct_relevel(sample_id, 'empirical', 'baseline')) %>%
 ggplot(aes(x = IV, y = empirical_stat, 
@@ -333,8 +367,39 @@ ggplot(aes(x = IV, y = empirical_stat,
     theme(aspect.ratio = 1, legend.position = c(0.5, 0.8), text = element_text(size=18), 
           element_line(size=1), element_rect(size=2, color="#00000"))
 ggsave('../writing/tangrams/figs/divergence_mean.pdf', height = 10, width = 10, units = 'cm', useDingbats = F)
+
 ```
 
+## some controls
+
+i'm making this claim in the paper that people start out with something shared in how they talk about particular tangrams; people are closer together at the beginning in a tangram-specific way. but maybe everyone is using long utterances at the beginning which makes it look similar. if that were true, then sampling of the content wouldn't matter. if you scramble words across tangrams within games and recompute the averaged utterance vector, then you'd expect that permutation to be equally similar. instead, we find that similarity drops.
+
+BUT maybe they're saying similar things for every tangram?
+
+2. take actual rep 1 things people say and scramble game ids... (how much is due to tangram differentiation overall vs. pragmatic informativity pressures)
+
+
+```{r}
+M_mat_scrambled <- read_csv('./outputs/meta_tangrams_embeddings_scrambled0.csv', col_types = "nccnlc", na = c('[nan]')) %>%
+    mutate(feature_ind = X1 + 1, # Have to correct for R's (stupid) 1-indexing...
+         gameID = gameid,
+         target = intendedName,
+         repetition = as.numeric(repetitionNum)) 
+
+raw_npy_names <- dir(path = './outputs/', pattern = "feats_tangrams_embeddings_rawavg_scrambled[0-9]*", full.names = T)
+raw_data <- map(raw_npy_names, ~ {
+   M_mat_scrambled %>% 
+    group_by(target, repetition) %>%  
+    do(flatten_sim_matrix(get_sim_matrix(., np$load(.x), method = 'cosine'), .$gameID)) %>% 
+    ungroup() %>%
+    group_by(repetition) %>%
+    summarize(m = mean(sim, na.rm = T)) %>%
+    mutate(sample_id = .x)
+  }) %>%
+  reduce(rbind)               # read all csvs and combine into single data frame
+
+raw_data %>% group_by(repetition) %>% summarize(min = min(m), max = max(m)) %>% left_join(true_lmer.across %>% group_by(repetition) %>% summarize(empirical = mean(sim, na.rm = T)))
+```
 
 ## tsne visualizations
 

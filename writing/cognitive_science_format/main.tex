@@ -245,10 +245,10 @@ In other words, once there is evidence that a particular label is successfully u
 \label{sec:distinctive}
 
 We begin by investigating \emph{which} content is dropped and which is preserved.
-Two computational principles guide our exploration of this question.
-First, if directors are attempting to be informative in a particular context of other tangrams then the Gricean maxim of quality suggests that a good referring expression is one that applies more strongly to the target than to the distractors. 
+Two general computational principles guide our exploration of this question.
+First, if directors are attempting to be informative in a particular context of other tangrams then Gricean principles suggest that a good referring expression is one that applies more strongly to the target than to the distractors. 
 Properties that are shared in common across multiple objects are poor candidates for conventions that must distinguish among them.
-Second, the principles of cross-situational learning suggest that these informativity considerations will be strengthened over time.
+Second, principles of cross-situational learning suggest that these informativity considerations will be strengthened over time.
 The exclusive usage of a word with one tangram and no others should reinforce the specificity of that meaning in the local discourse context, even if the matcher may be \emph{a priori} willing to extend it to other targets.
 Conversely, if a particular word has been successfully used with several different referents, its specificity may be weakened in the local context.
 Putting these principles together, we hypothesized that more \emph{initially distinctive} words would be more likely to conventionalize.
@@ -285,9 +285,10 @@ Repeating this procedure 1000 times yielded a null distribution ranging from 2.5
 However, if we instead sample from the words with \emph{maximal distinctiveness}, we obtained a distribution ranging from 24\% to 31\%, which is non-overlapping with the null distribution.
 Thus, if we must make a bet on which words will become conventionalized, placing our bet on the most distinctive ones will yield much higher returns.
 
-\subsection{Conventions diverge across pairs and stabilize within pairs}
+\subsection{Language diverges across pairs and stabilizes within pairs}
 
-To jointly examine our other predictions about the dynamics of content, we introduce two different quantitative measures of similarity: one based on properties of the discrete word count distribution and the other based on distances computed between continuous vector embeddings of referring expressions. 
+Our remaining predictions about the dynamics of content concern the increasing ``stability'' and ``arbitrariness'' of conventions \cite{Lewis69_Convention}.
+We introduce two different quantitative measures of similarity to operationalize these constructs: one based on properties of the discrete word count distribution and the other based on distances computed between continuous vector embeddings of referring expressions. 
 Because these analyses depend on the identity of word tokens, we applied a lemmatizer to further standardize the input.
 Lemmatization maps multiple morphological variants (e.g. `played,' `playing,' `plays') to the same stem (`play').
 We do not want an observed difference between two pairs to be driven simply by different forms of the same word.
@@ -323,9 +324,9 @@ A more direct way to quantify convergence within and divergence across different
 Although the idea of using dense vector space representations of words to measure similarity is an old one \citep{osgood1952nature,landauer_solution_1997,bengio_neural_2003}, recent breakthroughs in machine learning have yielded rapid improvements in these representations \citep[e.g.][]{mikolov2013distributed,pennington2014glove}.
 To quantify the dynamics of semantic context in referring expressions across and within games, we extracted the 300-dimensional GloVe vector for each word. 
 We then averaged these word vectors to obtain a single sentence vector for each referring expression\footnote{Variations on such naive averaging methods are surprisingly strong baselines for sentence representations \citep{arora2017asimple}, performing better than supervised LSTM representations or unsupervised skip-thought vectors \citep{KirosEtAl15_SkipThought}}.
-To avoid artifacts from function words, we only included open-class content words (nouns, adjectives, verbs) in this average.
+To avoid artifacts from function words, we only included open-class content words (nouns, adjectives, verbs, and adverbs) in this average.
 We can then define a similarity metric between any pair of vectors $\langle u_i, u_j \rangle$.
-We find that our results are robust to several choices of metric, but for simplicity we will use cosine similarity $$\cos \theta_{ij} = \frac{u_i \cdot u_j}{\| u_i\| \| u_j \|}$$ throughout the presentation below.
+We find that our results are robust to several choices of metric, but for simplicity we will use cosine similarity throughout the presentation below: $$\cos \theta_{ij} = \frac{u_i \cdot u_j}{\| u_i\| \| u_j \|}$$
 
 \begin{figure}[t!]
 \centering
@@ -335,7 +336,7 @@ We find that our results are robust to several choices of metric, but for simpli
 \end{figure}
 
 \paragraph{Utterances are more similar overall within games than between games}  
-Before examining the dynamics of these vectors, we first test the basic prediction that utterances \emph{within} a game are more similar overall than utterances \emph{across} games, reflecting systematic variability in how different pairs solve the referential challenge posed by the reference game.
+Before examining the dynamics of these vectors, we first test the basic prediction that utterances used by a single speaker to refer to a tangram \emph{within} a game are more similar overall than utterances used to refer to that tangram by different speakers \emph{across} games, reflecting systematic variability in how different pairs solve the referential challenge posed by the reference game.
 For each tangram, we computed the pairwise similarity between all utterances \emph{within} a game and also \emph{across} games. 
 The distributions of these values are shown in Fig. \ref{fig:withinvsacross}.
 We estimated the distance between these distributions using the standard normalized sensitivity $d' = \frac{\mu_A - \mu_W}{\sqrt{1/2(\sigma^2_A+\sigma^2_W)}} = 2.71$.
@@ -347,7 +348,7 @@ This observation is consistent with our hypothesis that different pairs discover
 Having established this separation between similarity distributions in aggregate, we proceed to ask more fine-grained questions about the \emph{dynamics} through space: how do individual pairs evolve in their content over successive repetitions?
 To more rigorously test our predictions about gradual divergence to multiple equilibria and convergence to internally stable conventions, we conducted three analyses directly on the semantic vectors.
 
-\paragraph{Increasing dissimilarity from initial utterance}
+\paragraph{Later utterances are increasingly different from initial utterance}
 
 First, we hypothesized that there was cumulative change in the semantic content of a particular pair's utterances across repetitions.
 Concretely, we predicted that within a particular pair of participants, utterances on later repetitions would become increasingly dissimilar from the initial utterance.
@@ -366,7 +367,7 @@ This difference is likely a consequence of random utterances from different spea
 \label{fig:similarity}
 \end{figure}
 
-\paragraph{Increasing internal consistency within interaction}
+\paragraph{Utterances are increasingly consistent within interaction}
 
 As directors modified their utterances across successive repetitions, we additionally hypothesized that they would converge on increasingly consistent ways of referring to each tangram.
 To test this prediction, we computed the semantic similarity between successive utterances produced by each director when referring to same tangram (i.e.~repetition $k$ to $k+1$). %.^, and evaluated how this similarity changed across repetitions.
@@ -375,7 +376,7 @@ The quadratic term was not significant ($b= -0.4,~t=-1.8$).
 Again, we compared our empirical estimate of the magnitude of this trend to a null distribution of slopes estimated by scrambling utterances across pairs and re-running the regression model.% to disrupt the consistency of interactions.
 The estimated slope fell outside this null distribution, for which similarity was strongly \emph{decreasing}, $CI = [-5.9, -5.4]$, providing evidence that increasingly consistent ways of referring to each object manifested only for series of utterances produced within the same interaction.
 
-\paragraph{Increasingly different content across interactions}
+\paragraph{Utterances are increasingly different across interactions}
 Finally, we predicted that the way different pairs refer to the same tangram would become increasingly dissimilar from each other across repetitions, gradually diverging into different equilibria.
 We tested this prediction by computing the mean similarity between utterances used by different speakers to refer to the same object.
 The large sample of similarities ($N = 257,040 = 12~\textrm{tangrams} \times 6~\textrm{repetitions} \times \frac{85 \cdot 84}{2}~\textrm{distinct pairs}$) presented both advantages and disadvantages.
@@ -386,7 +387,10 @@ We found a strong negative linear fixed effect of repetition on between-game sem
 We again conducted a permutation test to compare this $t$ value with what would be expected from scrambling utterances across repetitions for each pair and target.
 We found that the estimated slope was highly unlikely under this distribution $(CI = -2.5, 2.9],~p~<~0.001)$. 
 
-To check whether this divergence effect can be explained as an artifact of utterance length, we conducted an additional null model.
+Could this divergence effect be explained simply as an artifact of utterance lengths at different points in time?
+It is possible that the vectors obtained by averaging together words in longer sentences are generically more similar one another.
+To check whether this , we constructed an additional null model.
+In particular, 
 \todo[inline]{explain rationale}
 \todo[inline]{also make point about divergence *within* pairs relative to across pairs}
 
@@ -396,7 +400,6 @@ To check whether this divergence effect can be explained as an artifact of utter
 \caption{2D projection of semantic embeddings for example tangram. Each arrow represents the trajectory between the first repetition to last repetition for a distinct pair of participants. Color represents the rotational angle of the final location to more easily see where each pair began. Annotations are provided for select utterances, representing different equilibria found by different participants.}
 \label{fig:tsne}
 \end{figure}
-
 
 \paragraph{Visualizing trajectories through vector space}  
 Finally, to better understand the changes uncovered by these analyses of utterance embeddings, we visualize the trajectories taken by each pair of participants when referring to a particular example tangram, annotating utterances in several parts of the space.

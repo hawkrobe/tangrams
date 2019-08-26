@@ -387,11 +387,19 @@ We found a strong negative linear fixed effect of repetition on between-game sem
 We again conducted a permutation test to compare this $t$ value with what would be expected from scrambling utterances across repetitions for each pair and target.
 We found that the estimated slope was highly unlikely under this distribution $(CI = -2.5, 2.9],~p~<~0.001)$. 
 
-Could this divergence effect be explained simply as an artifact of utterance lengths at different points in time?
-It is possible that the vectors obtained by averaging together words in longer sentences are generically more similar one another.
-To check whether this , we constructed an additional null model.
-In particular, 
-\todo[inline]{explain rationale}
+Could this divergence effect be explained away as an artifact of our procedure for computing utterance embeddings?
+If averaging together greater numbers of word vectors generically washes out differences and causes the resulting utterance vectors to be more similar one another, then the decrease in semantic similarity could be explained by the decrease in utterance \emph{length} (see Section 4.2) rather than divergence in content.
+We tested this null hypothesis using a further permutation test. 
+Specifically, we reasoned that if the effect is in fact driven by length, then the similarity measured across interactions should be invariant to re-sampling utterance content---the individual words that will be averaged together---within interactions.
+We thus scrambled the words used by a participant across all twelve tangrams at each repetition, destroying any tangram-specific shared content across games, but preserving utterance length.
+By repeating this procedure 100 times, we found that the true mean similarity across games was higher than predicted under the null distribution for all six repetitions, $p < 0.01$, suggesting that our semantic similarity measure is picking up on something more than pure utterance length.
+
+At the same time, we observed that this permutation test disrupted the mean similarity less than expected.
+On the first repetition, for instance, the range of the null samples was $[0.754, 0.764]$ only slightly lower (in absolute terms) than the empirical value of $0.774$. 
+Why is this the case?
+One possibility is that there is already substantial baseline similarity in how a single speaker refers to different tangrams.
+Do utterances used by the same speaker to refer to different tangrams \emph{within} an interaction diverge to the same degree as utterances used by different speakers to refer to the same tangram?
+
 \todo[inline]{also make point about divergence *within* pairs relative to across pairs}
 
 \begin{figure}[t!]

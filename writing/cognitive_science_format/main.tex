@@ -388,19 +388,30 @@ We again conducted a permutation test to compare this $t$ value with what would 
 We found that the estimated slope was highly unlikely under this distribution $(CI = -2.5, 2.9],~p~<~0.001)$. 
 
 Could this divergence effect be explained away as an artifact of our procedure for computing utterance embeddings?
-If averaging together greater numbers of word vectors generically washes out differences and causes the resulting utterance vectors to be more similar one another, then the decrease in semantic similarity could be explained by the decrease in utterance \emph{length} (see Section 4.2) rather than divergence in content.
-We tested this null hypothesis using a further permutation test. 
-Specifically, we reasoned that if the effect is in fact driven by length, then the similarity measured across interactions should be invariant to re-sampling utterance content---the individual words that will be averaged together---within interactions.
-We thus scrambled the words used by a participant across all twelve tangrams at each repetition, destroying any tangram-specific shared content across games, but preserving utterance length.
-By repeating this procedure 100 times, we found that the true mean similarity across games was higher than predicted under the null distribution for all six repetitions, $p < 0.01$, suggesting that our semantic similarity measure is picking up on something more than pure utterance length.
+If averaging together greater numbers of word vectors generically causes the resulting utterance vectors to be washed out and more similar one another, then the decrease in semantic similarity could be explained by a decrease in utterance \emph{length} (see Section 4.2) rather than divergence in content.
+We tested this null hypothesis using a further  permutation test. 
+We reasoned that if the effect is in fact driven by length, then the similarity measured across interactions should be invariant to re-sampling utterance \emph{content}---the individual words that will be averaged together---within interactions.
+We thus scrambled the words used by a participant across all twelve tangrams at each repetition, destroying any tangram-specific semantic content, but preserving utterance length.
+By repeating this procedure 100 times, we found that the true mean similarity across pairs was higher than predicted under the null distribution at all six repetitions, $p < 0.01$, suggesting that the divergence effect is not solely driven by utterance length.
 
 At the same time, we observed that this permutation test disrupted the mean similarity less than expected.
-On the first repetition, for instance, the range of the null samples was $[0.754, 0.764]$ only slightly lower (in absolute terms) than the empirical value of $0.774$. 
-Why is this the case?
-One possibility is that there is already substantial baseline similarity in how a single speaker refers to different tangrams.
-Do utterances used by the same speaker to refer to different tangrams \emph{within} an interaction diverge to the same degree as utterances used by different speakers to refer to the same tangram?
+On the first repetition, for instance, the range of the null samples was $[0.754, 0.764]$, only slightly lower (in absolute terms) than the empirical value of $0.774$. 
+Why would this be the case, and how should we interpret the absolute degree of divergence?
+One possibility is that there is already substantial semantic overlap on the first round in how a single speaker refers to different tangrams, so that scrambling does not dramatically disrupt the semantic content.
+This possibility suggests examining the divergence between utterances used to refer to \emph{different tangrams within an interaction} as a useful baseline. 
+Based on our results in Section 3.1, we predicted that pragmatic pressures would lead labels for different tangrams \emph{within} an interaction to diverge more strongly than those for the same tangram \emph{across} interactions, despite starting with roughly similar overlap.
+Indeed, we found that the average semantic similarity within an interaction was indistinguishable from the similarity across interactions on the first repetition (\emph{paired difference}: $0.003$) but the gap appeared to widen over subsequent rounds, indicating that the pressure to distinguish tangrams leads to greater divergence for a single speaker than the neutral divergence across different speakers would predict.
 
-\todo[inline]{also make point about divergence *within* pairs relative to across pairs}
+To test the statistical significance of this observation, we conducted a model comparison between mixed-effects models. 
+The dependent variable in both models is the difference score between mean within-speaker and across-speaker similarities (aggregated at the level of the speaker). 
+In the null model, we include only an intercept, which allows for a non-zero difference but does not allow this difference to increase or decrease with time.
+In the full model, we additionally include a linear term for repetition number.
+Because we have a mean difference score for each speaker, we also include random intercepts at the speaker level for both models.
+A likelihood ratio test between these models shows that the full model fits the data significantly better, controlling for the additional degree of freedom\footnote{We have focused on this comparison to hold random effects constant, but including an additional term for a quadratic effect of repetition and an additional random effect of repetition are also supported by likelihood ratio tests. In this full model, we find a marginally significant linear effect of repetition, $b = 0.15, t = 1.9, p = 0.059$.}, $\chi^2(1) = 10.8, p < 0.001.$
+
+To summarize, we suggested the use of a baseline to better interpret our core result showing divergence in labels across different speakers as pairs discover different conventions.
+This baseline---the divergence in a speaker's \emph{own} utterances for different tangrams---begins at a similar level, indicating that the initial utterances used by different speakers overlap approximately as much as the different initial utterances used by a single speaker.
+While their subsequent trajectories both indicate divergence, the different labels used by a single speaker rapidly spread out in vector space and become more distinct from one another than the labels used by different speakers.
 
 \begin{figure}[t!]
 \centering

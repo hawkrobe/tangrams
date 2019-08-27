@@ -16,7 +16,6 @@ library(ggthemes)
 library(tm)
 library(tidyboot)
 library(xtable)
-library(ggthemes)
 library(entropy)
 library(useful)
 library(viridis)
@@ -138,42 +137,6 @@ combined.df %>%
 
 ggsave('../writing/tangrams/figs/across_vs_within.pdf',  height = 7, width = 10, units = 'cm', useDingbats = F)
 ```
-
-### Baseline across tangrams within game
-
-One concern is that these effects are an artifact of our method of creating utterance vectors by averaging word vectors. Maybe this procedure causes all long utterances to be more similar?
-
-It may look like different pairs are diverging and getting further apart, but expect, however, that at each point in time, 
-
-It appears that similarity is slightly *higher* among utterances for the same tangram across different games than for different tangrams within the same game. 
-
-```{r}
-acrossGames <- M_mat %>%
-    group_by(target, repetitionNum) %>%
-    do(flatten_sim_matrix(get_sim_matrix(., F_mat, method = 'cosine'),
-                          .$gameid)) %>%
-    filter(dim1 != dim2) %>%
-  rename(gameid = dim1) %>%
-    group_by(repetitionNum,gameid) %>%
-  summarize(empirical_stat = mean(sim, na.rm = T)) %>% mutate(source ='across')
-
-diffTangramWithinGames <- M_mat %>%
-  group_by(gameid, repetitionNum) %>%
-  do(flatten_sim_matrix(get_sim_matrix(., F_mat, method = 'cosine'),
-                        .$target)) %>%
-  summarize(empirical_stat = mean(sim, na.rm = T)) %>%
-  filter(!is.na(empirical_stat)) %>%
-  mutate(source = 'across tangrams in game') 
-
-bind_rows(acrossGames,diffTangramWithinGames) %>%
-  spread(source, empirical_stat) %>%
-  mutate(diff = across - `across tangrams in game`) %>%
-  group_by(repetitionNum) %>%
-  tidyboot_mean(diff, na.rm = T)
-  ggplot(aes(x = as.character(repetitionNum), y = empirical_stat, color = source)) +
-    geom_violin()
-```
-
 
 ### Drift
 
@@ -370,13 +333,9 @@ ggsave('../writing/tangrams/figs/divergence_mean.pdf', height = 10, width = 10, 
 
 ```
 
-## some controls
+#### some controls
 
 i'm making this claim in the paper that people start out with something shared in how they talk about particular tangrams; people are closer together at the beginning in a tangram-specific way. but maybe everyone is using long utterances at the beginning which makes it look similar. if that were true, then sampling of the content wouldn't matter. if you scramble words across tangrams within games and recompute the averaged utterance vector, then you'd expect that permutation to be equally similar. instead, we find that similarity drops.
-
-BUT maybe they're saying similar things for every tangram?
-
-2. take actual rep 1 things people say and scramble game ids... (how much is due to tangram differentiation overall vs. pragmatic informativity pressures)
 
 
 ```{r}
@@ -398,7 +357,69 @@ raw_data <- map(raw_npy_names, ~ {
   }) %>%
   reduce(rbind)               # read all csvs and combine into single data frame
 
-raw_data %>% group_by(repetition) %>% summarize(min = min(m), max = max(m)) %>% left_join(true_lmer.across %>% group_by(repetition) %>% summarize(empirical = mean(sim, na.rm = T)))
+raw_data %>% group_by(repetition) %>% summarize(l = length(m), min = min(m), max = max(m)) %>% left_join(true_lmer.across %>% group_by(repetition) %>% summarize(empirical = mean(sim, na.rm = T)))
+```
+
+
+BUT maybe they're saying similar things for every tangram?
+
+2. take actual rep 1 things people say and scramble game ids... (how much is due to tangram differentiation overall vs. pragmatic informativity pressures)
+
+It appears that similarity is slightly *higher* among utterances for the same tangram across different games than for different tangrams within the same game. 
+
+```{r}
+acrossGames <- M_mat %>%
+    group_by(target, repetitionNum) %>%
+    do(flatten_sim_matrix(get_sim_matrix(., F_mat, method = 'cosine'),
+                          .$gameid)) %>%
+    filter(dim1 != dim2) %>%
+  rename(gameid = dim1) %>%
+    group_by(repetitionNum,gameid) %>%
+  summarize(empirical_stat = mean(sim, na.rm = T)) %>% mutate(source ='across')
+
+diffTangramWithinGames <- M_mat %>%
+  group_by(gameid, repetitionNum) %>%
+  do(flatten_sim_matrix(get_sim_matrix(., F_mat, method = 'cosine'),
+                        .$target)) %>%
+  summarize(empirical_stat = mean(sim, na.rm = T)) %>%
+  filter(!is.na(empirical_stat)) %>%
+  mutate(source = 'across tangrams in game') 
+
+bind_rows(acrossGames,diffTangramWithinGames) %>%
+  spread(source, empirical_stat) %>%
+  mutate(diff = across - `across tangrams in game`) %>%
+  group_by(repetitionNum) %>%
+  tidyboot_mean(diff, na.rm = T) %>%
+  ggplot(aes(x = as.character(repetitionNum), y = empirical_stat)) +
+    geom_line() +
+  geom_point() +
+    geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), width = 0) +
+    geom_hline(yintercept = 0) +
+    theme_few()
+```
+
+```{r}
+library(lmerTest)
+unchanging_model <- lmer(diff ~ (1 |gameid), data = bind_rows(acrossGames,diffTangramWithinGames) %>%
+  spread(source, empirical_stat) %>%
+  mutate(diff = across - `across tangrams in game`))
+mod2 <- lmer(diff ~ repetitionNum + (1 |gameid), data = bind_rows(acrossGames,diffTangramWithinGames) %>%
+  spread(source, empirical_stat) %>%
+  mutate(diff = across - `across tangrams in game`))
+full_model <- lmer(diff ~ poly(repetitionNum,2) + (1 + repetitionNum|gameid), data = bind_rows(acrossGames,diffTangramWithinGames) %>%
+  spread(source, empirical_stat) %>%
+  mutate(diff = across - `across tangrams in game`))
+
+anova(unchanging_model, mod2, full_model)
+summary(full_model)
+
+bind_rows(acrossGames,diffTangramWithinGames) %>%
+  spread(source, empirical_stat) %>%
+  mutate(diff = across - `across tangrams in game`) %>%
+  group_by(repetitionNum) %>%
+  summarize(diff = mean(diff, na.rm = T),
+            across = mean(across, na.rm = T),
+            `across tangrams in game` = mean(`across tangrams in game`, na.rm = T))
 ```
 
 ## tsne visualizations
@@ -476,7 +497,7 @@ TODO: how do tangrams cluster?
 
 ## Discrete analyses: How much is within-game similarity disrupted by scrambling utterances across games?
 
-Calculate entropy under permutation tests
+Calculate entropy under permutation tests.
 
 Note that we explicitly do *not* normalize entropies, as this
 removes the contribution of a bigger vocabulary (as we would expect)

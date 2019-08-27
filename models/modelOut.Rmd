@@ -10,6 +10,9 @@ Try executing this chunk by clicking the *Run* button within the chunk or by pla
 ```{r}
 library(tidyverse)
 library(ggthemes)
+```
+
+```{r}
 data.frame(prediction = c(0.48319292387482204, 0.5427530392854598, 0.6142042978402963,
                           0.5216966792994756, 0.5845228687964401, 0.6583643792065222, 
                           0.5948892425562737, 0.6583853974068616, 0.7282353919606799,
@@ -23,14 +26,25 @@ data.frame(prediction = c(0.48319292387482204, 0.5427530392854598, 0.61420429784
     theme_few() +
     xlab('time') +
     ylab("P(target)") +
+    scale_x_continuous(breaks = c(1,4,7,10)) +
     theme(aspect.ratio = 1)
 
 ggsave('../../dissertation/dissertation/figures/modeling/partnerspecificity.pdf', height = 8, width = 8, units = 'cm', useDingbats = F)
 ```
 
-Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.
+```{r}
+data.frame(prediction = c(40.7, 19.1, 13.1, 11.0, 9.2, 8.2, 30.4, 18.1, 13.4, 8.2, 7.8, 6.7),
+           t = seq(1,12),
+           partner = factor(c(1,1,1,1,1,1,2,2,2,2,2,2))) %>%
+  ggplot(aes(x = t, y = prediction, color = partner)) +
+    geom_point() +
+    geom_line() +
+    theme_few() +
+    xlab('trial #') +
+    ylab("# words") +
+    scale_x_continuous(breaks = c(1,3,5,7,9,11)) +
+    geom_vline(aes(xintercept = 6.5)) +
+    theme(aspect.ratio = 1)
 
-When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Cmd+Shift+K* to preview the HTML file). 
-
-The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
-
+ggsave('../../dissertation/dissertation/figures/modeling/clark92.pdf', height = 8, width = 8, units = 'cm', useDingbats = F)
+```

@@ -32,9 +32,9 @@
 
 % Include full author names and degrees, when required by the journal.
 % Use the \authfn to add symbols for additional footnotes and present addresses, if any. Usually start with 1 for notes about author contributions; then continuing with 2 etc if any author has a different present address.
-\author[1]{Robert Hawkins}
-\author[1]{Michael Frank}
-\author[1,2]{Noah Goodman}
+\author[1]{Robert D. Hawkins}
+\author[1]{Michael C. Frank}
+\author[1,2]{Noah D. Goodman}
 
 %\contrib[\authfn{1}]{Equally contributing authors.}
 
@@ -80,8 +80,8 @@ Here we draw upon recent advances in natural language processing to provide a fi
 We release an open corpus ($>$15,000 utterances) of extended dyadic interactions in a classic repeated reference game task where pairs of partners had to coordinate on how to talk about initially difficult-to-describe tangram stimuli.
 We find that different pairs coordinate on a wide range of idiosyncratic solutions to the problem of reference, but they do so in a highly systematic manner. 
 Words that are more discriminative in the initial context (i.e. that were used for one target more than others) are more likely to persist through the final repetition.
-Structurally, we found that utterances reduce across pairs following similar trajectories: entire modifying syntactic units drop out as conventions are established, leaving only contentful open-class parts of speech.
-These findings provide higher resolution into the quantitative dynamics of \emph{ad hoc} convention formation: based on a shared history of usage, words systematically acquire new meaning with a partner to support more efficient communication.
+Structurally, we found that utterances reduce in length: entire modifying syntactic units drop out as conventions are established, leaving only contentful open-class parts of speech.
+These findings provide a higher resolution look at the quantitative dynamics of \emph{ad hoc} convention formation: based on a shared history of usage, words systematically acquire new meaning to support more efficient communication with a partner.
 
 % Please include a maximum of seven keywords
 \keywords{social coordination, conventions, semantics, syntax, natural language processing, semantic embeddings}
@@ -119,23 +119,25 @@ This flexibility is partially explained by one-shot pragmatic reasoning, which a
 However, a rich theoretical thread in the literature has suggested that \emph{learning} mechanisms may also play an important role, allowing speakers and listeners to dynamically adapt their representations of meaning over the course of an interaction \citep{BrennanClark96_ConceptualPactsConversation,pickering2004toward,delaney2019neural}.
 
 Two functional considerations motivate the need for continued learning in communication, even among adults.
-First, just as there is substantial phonetic variability across speakers with different accents \citep{kleinschmidt2019structure}, lexical items may vary in meaning from speaker to speaker. 
+First, just as there is substantial phonetic variability across speakers with different accents \citep{kleinschmidt2019structure}, meanings may vary in meaning from speaker to speaker. 
 This variability is clear for cases like slang, technical lingo, nicknames, or colloquialisms \citep[e.g.][]{Clark98_CommunalLexicons}, but may extend even to more ordinary nouns and adjectives. 
-It may be difficult to know at the 
-Second, because we live in a changing environment, we often experience novel entities, events, thoughts, and feelings we want to talk about but do not already have (literal) words to express.
+It may be difficult to know at the outset of an interaction exactly which meanings will be shared and which will not.
+Second, because we live in a changing environment, we often experience novel entities, events, thoughts, and feelings we want to talk about but do not already share (literal) words to express.
 Both of these obstacles can be overcome using feedback from one's partner to dynamically re-calibrate expectations about meaning.
 %A learning mechanism thus allows us to understand one another increasingly well and allows our knowledge of language to extend further. 
 
 The \emph{repeated reference game} task has provided a natural and productive paradigm for eliciting behavior under such conditions.
-In this task, pairs of participants are presented with arrays of novel, conceptually ambiguous objects. 
-On each trial, one player -- the director -- is privately shown a \emph{target} object and must produce a referring expression allowing their partner -- the matcher -- to correctly select that object from the context.
+In this task, pairs of participants are presented with arrays of novel objects. 
+On each trial, one player (the director) is privately shown a \emph{target} object and must produce a referring expression allowing their partner (the matcher) to correctly select that object from the array.
 The director is then given feedback at the end of each trial about which object the matcher selected, and the matcher is given feedback about the true target object. 
 Critically, each object appears as the target multiple times in the trial sequence, allowing the experimenter to examine how referring expressions change as the director and matcher accumulate shared experience.
 To the extent that the director and matcher converge on an accurate system of stable referring expressions, and these referring expressions differ from the ones that were initially produced, the data indicate that \emph{conventions} or \emph{pacts} have formed through some learning process.
 
 Indeed, a key early result first reported by \cite{KraussWeinheimer64_ReferencePhrases} is that descriptions are dramatically shortened across repetitions: an initial description like ``the one that looks like an upside-down martini glass in a wire stand'' may gradually converge to ``martini'' by the end. 
 Subsequent work has established a number of signature properties of convention formation through careful experimental manipulation.
-For example, reduction is contingent on matcher feedback \citep{KraussWeinheimer66_Tangrams,KraussEtAl77_AudioVisualBackChannel,HupetChantraine92_CollaborationOrRepitition}, and is therefore not easily explained as a mere practice or repetition effect; the resulting conventions are \emph{partner-specific} in the sense that they do not transfer if a novel matcher is introduced \citep{WilkesGibbsClark92_CoordinatingBeliefs,MetzingBrennan03_PartnerSpecificPacts,brennan_partner-specific_2009}; and they are \emph{sticky} in the sense that they persist through precedent even after the context changes \citep{BrennanClark96_ConceptualPactsConversation}.
+First, the extent to which descriptions are shortened is contingent on evidence of understanding from the matcher \citep{KraussWeinheimer66_Tangrams,KraussEtAl77_AudioVisualBackChannel,HupetChantraine92_CollaborationOrRepitition}, and is therefore not easily explained as a mere practice or repetition effect.
+Second, the resulting conventions are \emph{partner-specific} in the sense that they do not transfer if a novel matcher is introduced \citep{WilkesGibbsClark92_CoordinatingBeliefs,MetzingBrennan03_PartnerSpecificPacts,brennan_partner-specific_2009}.
+Third, they are \emph{sticky} in the sense that they persist through precedent with the same partner even after the set of objects changes \citep{BrennanClark96_ConceptualPactsConversation}.
 
 A variety of models, at varying levels of formal precision, have been proposed to explain these qualitative effects.
 However, further model development depends critically upon a finer-grained characterization of the \emph{quantitative} signatures of adaptation.
@@ -376,7 +378,7 @@ The quadratic term was not significant ($b= -0.4,~t=-1.8$).
 Again, we compared our empirical estimate of the magnitude of this trend to a null distribution of slopes estimated by scrambling utterances across pairs and re-running the regression model.% to disrupt the consistency of interactions.
 The estimated slope fell outside this null distribution, for which similarity was strongly \emph{decreasing}, $CI = [-5.9, -5.4]$, providing evidence that increasingly consistent ways of referring to each object manifested only for series of utterances produced within the same interaction.
 
-\paragraph{Utterances are increasingly different across interactions}
+\paragraph{Utterances become increasingly different across interactions}
 Finally, we predicted that the way different pairs refer to the same tangram would become increasingly dissimilar from each other across repetitions, gradually diverging into different equilibria.
 We tested this prediction by computing the mean similarity between utterances used by different speakers to refer to the same object.
 The large sample of similarities ($N = 257,040 = 12~\textrm{tangrams} \times 6~\textrm{repetitions} \times \frac{85 \cdot 84}{2}~\textrm{distinct pairs}$) presented both advantages and disadvantages.
@@ -411,7 +413,8 @@ A likelihood ratio test between these models shows that the full model fits the 
 
 To summarize, we suggested the use of a baseline to better interpret our core result showing divergence in labels across different speakers as pairs discover different conventions.
 This baseline---the divergence in a speaker's \emph{own} utterances for different tangrams---begins at a similar level, indicating that the initial utterances used by different speakers overlap approximately as much as the different initial utterances used by a single speaker.
-While their subsequent trajectories both indicate divergence, the different labels used by a single speaker rapidly spread out in vector space and become more distinct from one another than the labels used by different speakers.
+While both subsequent trajectories indicate divergence, the different labels used by a single speaker rapidly spread out in vector space and become more distinct from one another than the labels used by different speakers.
+%In light of our results in Section 3.1, the effect of dropping overlapping words shared many tangrams
 
 \begin{figure}[t!]
 \centering

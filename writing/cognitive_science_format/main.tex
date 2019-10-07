@@ -142,19 +142,18 @@ Third, they are \emph{sticky} in the sense that they persist through precedent w
 
 %A variety of models, at varying levels of formal precision, have been proposed to explain these qualitative effects.
 Taken together, these qualitative effects provide an empirical backbone that theories of adaptation, common ground, and conventionalization must explain.
-However, as these theories are increasingly formalized as computational models that aim to make precise quantitative predictions, model comparison will depend critically upon a finer-grained characterization of the dynamics of adaptation.
-Certain fundamental questions about the data remain unanswered, and important theoretical constructs remain poorly operationalized. 
-The computational techniques necessary to provide such a characterization of rich natural language data were limited at the time of prior work, but have become newly tractable given developments in natural language processing (NLP).
-In this paper, rather than arguing for a particular theory, we release a large corpus of repeated reference games and conduct a variety of analyses with the aim of establishing a firmer foundation for future model development.
+However, as these theories are increasingly formalized as computational models that aim to make precise quantitative predictions, setting criteria to distinguish between these models will depend critically upon a finer-grained characterization of the dynamics of adaptation in rich natural language data.
+The computational techniques necessary to provide such a characterization were limited at the time of prior work, but have become newly tractable given developments in natural language processing (NLP).
+In this paper, rather than arguing for a particular theory, we release a large corpus of repeated reference games and conduct a variety of analyses to address current gaps in measurement and establish a firmer foundation for future model development.
 
-Our analyses divide into two broad categories roughly corresponding the dynamics of \emph{content} and \emph{structure} of referring expressions across interaction.
+Our analyses divide into two broad categories roughly corresponding to the dynamics of \emph{content} and \emph{structure} of referring expressions across interaction.
 
 For example, a precise characterization which parts of utterances are shortened, and how, has remained elusive.
 %How systematic is the structure of reduction over time?
 What determines whether a particular word is dropped or preserved? 
 Are words dropped randomly or clustered together in phrases?
 Similarly, while constructs like arbitrariness or stability have loomed over the theoretical analysis of conventions \citep[e.g.][]{Lewis69_Convention}, it has been unclear how exactly to measure the extent to which these properties hold in a particular task and how they may evolve over the course of interaction. 
-Without addressing these gaps in measurement, it is difficult to set finer-grained criteria to distinguish among different models.
+%Without addressing these gaps in measurement, it is difficult to set finer-grained criteria to distinguish among different models.
 
 %In particular, we examine these questions using a web-based replication of the classic Tangrams task \citep{ClarkWilkesGibbs86_ReferringCollaborative}.
 To examine content, we extracted word embeddings (e.g. GloVe vectors) for each message to calculate the similarity of messages within and across pairs. 

@@ -127,32 +127,36 @@ Both of these obstacles can be overcome using feedback from one's partner to dyn
 %A learning mechanism thus allows us to understand one another increasingly well and allows our knowledge of language to extend further. 
 
 The \emph{repeated reference game} task has provided a natural and productive paradigm for eliciting behavior under such conditions.
-In this task, pairs of participants are presented with arrays of novel objects. 
+In this task, pairs of participants are presented with arrays of novel images. 
 On each trial, one player (the director) is privately shown a \emph{target} object and must produce a referring expression allowing their partner (the matcher) to correctly select that object from the array.
 The director is then given feedback at the end of each trial about which object the matcher selected, and the matcher is given feedback about the true target object. 
 Critically, each object appears as the target multiple times in the trial sequence, allowing the experimenter to examine how referring expressions change as the director and matcher accumulate shared experience.
-To the extent that the director and matcher converge on an accurate system of stable referring expressions, and these referring expressions differ from the ones that were initially produced, the data indicate that \emph{conventions} or \emph{pacts} have formed through some learning process.
+To the extent that the director and matcher converge on an accurate system of stable referring expressions, and these referring expressions differ from the ones that were initially produced, it may be claimed that \emph{ad hoc conventions} or \emph{pacts} have formed within the dyad.
 
-Indeed, a key early result first reported by \cite{KraussWeinheimer64_ReferencePhrases} is that descriptions are dramatically shortened across repetitions: an initial description like ``the one that looks like an upside-down martini glass in a wire stand'' may gradually converge to ``martini'' by the end. 
-Subsequent work has established a number of signature properties of convention formation through careful experimental manipulation.
+One of the earliest and most intriguing phenomena observed in this task is that descriptions are dramatically shortened across repetitions: an initial description like ``the one that looks like an upside-down martini glass in a wire stand'' may gradually converge to ``martini'' by the end  \citep{KraussWeinheimer64_ReferencePhrases}. 
+That is, speakers are able to communicate the same referential content much more efficiently over time.
+Subsequent work has established a number of signature properties of this process through careful experimental manipulation.
 First, the extent to which descriptions are shortened is contingent on evidence of understanding from the matcher \citep{KraussWeinheimer66_Tangrams,KraussEtAl77_AudioVisualBackChannel,HupetChantraine92_CollaborationOrRepitition}, and is therefore not easily explained as a mere practice or repetition effect.
-Second, the resulting conventions are \emph{partner-specific} in the sense that they do not transfer if a novel matcher is introduced \citep{WilkesGibbsClark92_CoordinatingBeliefs,MetzingBrennan03_PartnerSpecificPacts,brennan_partner-specific_2009}.
-Third, they are \emph{sticky} in the sense that they persist through precedent with the same partner even after the set of objects changes \citep{BrennanClark96_ConceptualPactsConversation}.
+Second, the resulting labels are \emph{partner-specific} in the sense that they do not transfer if a novel matcher is introduced \citep{WilkesGibbsClark92_CoordinatingBeliefs,MetzingBrennan03_PartnerSpecificPacts,brennan_partner-specific_2009}.
+Third, they are \emph{sticky} in the sense that they persist through precedent with the same partner even after the referential context changes \citep{BrennanClark96_ConceptualPactsConversation}, and are readily extended to similar objects \citep{MarkmanMakin98_ReferentialCommunicationCategory}.
 
-A variety of models, at varying levels of formal precision, have been proposed to explain these qualitative effects.
-However, further model development depends critically upon a finer-grained characterization of the \emph{quantitative} signatures of adaptation.
-Certain fundamental descriptive questions remain unanswered, and important theoretical constructs remain poorly operationalized. 
-For example, while it has been widely observed that utterances reduce in length as common ground is accumulated, a precise characterization \emph{what} gets reduced, and \emph{how}, has remained elusive.
+%A variety of models, at varying levels of formal precision, have been proposed to explain these qualitative effects.
+Taken together, these qualitative effects provide an empirical backbone that theories of adaptation, common ground, and conventionalization must explain.
+However, as these theories are increasingly formalized as computational models that aim to make precise quantitative predictions, model comparison will depend critically upon a finer-grained characterization of the dynamics of adaptation.
+Certain fundamental questions about the data remain unanswered, and important theoretical constructs remain poorly operationalized. 
+The computational techniques necessary to provide such a characterization of rich natural language data were limited at the time of prior work, but have become newly tractable given developments in natural language processing (NLP).
+In this paper, rather than arguing for a particular theory, we release a large corpus of repeated reference games and conduct a variety of analyses with the aim of establishing a firmer foundation for future model development.
+
+Our analyses divide into two broad categories roughly corresponding the dynamics of \emph{content} and \emph{structure} of referring expressions across interaction.
+
+For example, a precise characterization which parts of utterances are shortened, and how, has remained elusive.
 %How systematic is the structure of reduction over time?
 What determines whether a particular word is dropped or preserved? 
 Are words dropped randomly or clustered together in phrases?
 Similarly, while constructs like arbitrariness or stability have loomed over the theoretical analysis of conventions \citep[e.g.][]{Lewis69_Convention}, it has been unclear how exactly to measure the extent to which these properties hold in a particular task and how they may evolve over the course of interaction. 
 Without addressing these gaps in measurement, it is difficult to set finer-grained criteria to distinguish among different models.
 
-In this paper, rather than arguing for a particular model, we release a large corpus of repeated reference games and conduct a variety of computational analyses to provide a foundation for future model development.
-The computational techniques necessary to analyze such rich natural language data were limited at the time of prior work, but have become newly tractable given developments in natural language processing (NLP). 
 %In particular, we examine these questions using a web-based replication of the classic Tangrams task \citep{ClarkWilkesGibbs86_ReferringCollaborative}.
-Our analyses divide into two broad categories roughly corresponding the dynamics of \emph{content} and \emph{structure} of referring expressions across interaction.
 To examine content, we extracted word embeddings (e.g. GloVe vectors) for each message to calculate the similarity of messages within and across pairs. 
 We found that while different pairs coordinate on a wide range of idiosyncratic solutions to the problem of reference, they do so in an increasingly stable and path-dependent manner. 
 Further, words that are more discriminative in the initial context (i.e. that were used for one target more than others) are more likely to persist through the final repetition. 
@@ -169,14 +173,10 @@ These findings provide a new window into the quantitative dynamics of learning i
 \label{fig:design}
 \end{figure}
 
-To collect a large corpus of natural dialogue that allows us to measure how pairs coordinate on meaning over time, we faced two primary decisions.
-First, to observe the formative period of linguistic conventions, we required novel, ambiguous stimuli for which participants didn't already have strong initial conventions.
-Second, to observe the \emph{dynamics} of conventions over time, we needed the same coordination problem to be repeated over time, such that earlier outcomes are relevant for later decisions.
-These criteria are satisfied by a \emph{repeated reference game} design in which participants refer to the same objects across multiple repetitions as they build up a shared history of interaction, or common ground, with their partner. 
-
-We developed two variants of the game: a relatively unconstrained \emph{free-matching} version that more closely replicates the classic in-lab design, and a more tightly controlled \emph{cued} version that allows for higher resolution analyses of how references to individual tangrams changed over time (see Fig. \ref{fig:design}). 
-We considered the free-matching version to be an exploratory pilot sample, and we subsequently pre-registered our full pre-processing and analysis pipeline for the \emph{cued} version\footnote{https://osf.io/2zwmx}. 
-While we have released the corpus from the free-matching version\footnote{https://cocolab.stanford.edu/datasets/tangrams.html}, we restrict our analyses to the \emph{cued} version throughout the paper as our confirmatory sample.
+We developed two variants of a repeated reference task: a relatively unconstrained \emph{free-matching} version that more closely replicates classic in-lab designs, and a more tightly controlled \emph{cued} version (see Fig. \ref{fig:design}). 
+Most importantly, the \emph{cued} version allows us to identify which object each utterance refers to, supporting higher-resolution analyses at the object-by-object level.
+We considered the free-matching version to be an exploratory pilot sample and subsequently pre-registered our predictions for the \emph{cued} version\footnote{https://osf.io/2zwmx}.
+While we are also releasing the corpus from the free-matching version, we restrict our analyses to the \emph{cued} version throughout the paper as a confirmatory sample.
 
 \subsection{Participants}\label{participants}
 

@@ -142,7 +142,7 @@ Third, they are \emph{sticky} in the sense that they persist through precedent w
 
 %A variety of models, at varying levels of formal precision, have been proposed to explain these qualitative effects.
 Taken together, these qualitative effects provide an empirical backbone that theories of communication must explain. %adaptation, common ground, and conventionalization 
-However, as these theories are increasingly formalized as computational models that aim to make precise quantitative predictions, setting criteria to distinguish between these models will depend critically upon a finer-grained characterization of the dynamics of adaptation in rich natural language data.
+However, as theories are increasingly formalized as computational models that aim to make precise quantitative predictions, setting criteria to distinguish between them will depend critically upon a finer-grained, quantitative characterization of the dynamics of adaptation in rich natural language data.
 The computational techniques necessary to provide such a characterization were limited at the time of prior work, but have become newly tractable given developments in natural language processing (NLP).
 In this paper, rather than arguing for a particular theory, we release a large corpus of repeated reference games and conduct a variety of analyses to address current gaps in measurement and establish a firmer foundation for future model development.
 Our analyses roughly divide into two broad categories corresponding to the dynamics of semantic \emph{content} and syntactic \emph{structure}.
@@ -156,11 +156,11 @@ In particular, we test the prediction that pragmatic pressures to be informative
 
 %while constructs like arbitrariness or stability have loomed over the theoretical analysis of conventions , it has been unclear how exactly to measure the extent to which these properties hold in a particular task and how they may evolve over the course of interaction. 
 
-Our investigations of syntactic structure in Section \ref{sec:structure} are geared more specifically toward understanding the process of shortening referring expressions.
+Our investigations of syntactic structure in Section \ref{sec:structure} are geared more specifically toward understanding the process by which referring expressions are shortened, and the ways that speakers are sensitive to listener feedback.
 One particularly simple model, for example, might predict that shortening is purely driven by a noisy-channel corruption process: at each repetition, each word from the previous repetition's utterance has some probability of being dropped.
-Raw word counts alone are not sufficient for disambiguating this model from more complex proposals.
+Raw word counts alone are not sufficient for disambiguating this simple model from more cognitively complex proposals.
 To move beyond word counts, we extracted part-of-speech tags and syntax trees from the text to understand which parts of utterances were being dropped, and in which sequence.
-We find that entire modifying phrases are likely to be dropped as a cluster at each repetition, leaving only open-class parts of speech (e.g. an adjective and noun) by the final repetition. 
+We find that entire modifying phrases are likely to be dropped in clusters, leaving only open-class parts of speech (e.g. an adjective and noun) by the final repetition. 
 In Section \ref{sec:discussion}, we discuss several implications of these findings for how conventions form.
 %In particular, we examine these questions using a web-based replication of the classic Tangrams task \citep{ClarkWilkesGibbs86_ReferringCollaborative}.
 

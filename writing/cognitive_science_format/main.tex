@@ -161,7 +161,7 @@ One particularly simple model, for example, might predict that shortening is pur
 Raw word counts alone are not sufficient for disambiguating this simple model from more cognitively complex proposals.
 To move beyond word counts, we extracted part-of-speech tags and syntax trees from the text to understand which parts of utterances were being dropped, and in which sequence.
 We find that entire modifying phrases are likely to be dropped in clusters, leaving only open-class parts of speech (e.g. an adjective and noun) by the final repetition. 
-In Section \ref{sec:discussion}, we discuss several implications of these findings for how conventions form.
+In Section \ref{sec:discussion}, we discuss several implications of these findings.
 %In particular, we examine these questions using a web-based replication of the classic Tangrams task \citep{ClarkWilkesGibbs86_ReferringCollaborative}.
 
 
@@ -174,14 +174,14 @@ In Section \ref{sec:discussion}, we discuss several implications of these findin
 \label{fig:design}
 \end{figure}
 
-We developed two variants of a repeated reference task: a relatively unconstrained \emph{free-matching} version that more closely replicates classic in-lab designs, and a more tightly controlled \emph{cued} version (see Fig. \ref{fig:design}). 
+We developed two variants of the repeated reference task used in classic work by \cite{ClarkWilkesGibbs86_ReferringCollaborative}: a relatively unconstrained \emph{free-matching} version that more closely replicates classic in-lab designs, and a more tightly controlled \emph{cued} version (see Fig. \ref{fig:design}). 
 Most importantly, the \emph{cued} version allows us to identify which object each utterance refers to, supporting higher-resolution analyses at the object-by-object level.
 We considered the free-matching version to be an exploratory pilot sample and subsequently pre-registered our predictions for the \emph{cued} version\footnote{https://osf.io/2zwmx}.
 While we are also releasing the corpus from the free-matching version, we restrict our analyses to the \emph{cued} version throughout the paper as a confirmatory sample.
 
 \subsection{Participants}\label{participants}
 
-A total of 480 participants (218 in the \emph{free-matching} version and 262 in the \emph{cued} version) were recruited from Amazon's Mechanical Turk and paired into dyads to play a real-time communication game using the framework in \cite{Hawkins15_RealTimeWebExperiments}. 
+A total of 480 participants (218 in the \emph{free-matching} version and 262 in the \emph{cued} version) were recruited from Amazon's Mechanical Turk and paired into dyads to play a real-time communication game using the software framework for running multi-player web experiments described by \cite{Hawkins15_RealTimeWebExperiments}. 
 
 \subsection{Exclusion criteria}
 
@@ -203,20 +203,21 @@ The director's tangrams were fixed in place, but the matcher's could be clicked 
 The players was instructed to communicate through the chat box such that the matcher could rearrange their shapes to match the order of the director's board.
 When the players were satisfied that their boards matched, the matcher clicked a `submit' button that gave players batched feedback on their score (out of 12) and scrambled the tangrams for the next round. 
 After six rounds, players were redirected to a short exit survey. 
-Cells were labeled with fixed numbers from one to twelve in order to help participants easily refer to locations in the grid (see Fig. \ref{fig:design}).
+Cells were labeled with fixed numbers from one to twelve in order to help participants easily refer to locations in the grid.
 
 While this replicated design allows for highly naturalistic interaction, it poses several problems for text-based analyses. 
 First, utterances must contain not only descriptions of the tangrams but also information about the intended location (e.g. '\emph{number 10} is the \dots'). 
-Additionally, because there were no constraints on the sequence, participants can revisit tangrams out of order or mention multiple tangrams in a single message, making it difficult to isolate exactly which utterances referred to which tangrams without extensive hand-annotation. 
+Additionally, because there were no constraints on the sequence, participants could revisit tangrams out of order or mention multiple tangrams in a single message, making it difficult to isolate exactly which utterances referred to which tangrams without extensive hand-annotation. 
 Finally, the design of the `submit' button made it easy for players to occasionally advance to the next round without referring to all 12 tangrams. 
 
-For the \emph{cued} version, then, we designed a more straightforwardly sequential variation on the task where directors are privately cued to refer to targets one-by-one and feedback is given on each trial (see Fig. \ref{fig:design}); this allows us to straightforwardly conduct analyses at the tangram-by-tangram level. 
+To address these problems, we designed a more straightforwardly sequential \emph{cued} variant of the task design where directors were privately cued to refer to targets one-by-one and feedback was given on each trial (see Fig. \ref{fig:design}).
+This additional structure allowed us to conduct analyses at the object-by-object level. 
 On each trial, one of the twelve tangrams was privately highlighted for the director as the \emph{target}. 
 Instead of clicking and dragging into place, matchers simply clicked the one they believed was the target. 
 They were not allowed to click until after a message was sent by the director.  
 We constructed a sequence of six blocks of twelve trials (for a total of 72 trials), where each tangram appeared once per block.
 Because targets were cued one at a time, numbers labeling each square in the grid were irrelevant and we removed them. 
-The context of tangrams was scrambled on every trial, and participants were given full, immediate feedback: the director saw which tangram their partner clicked, and the matcher saw the intended tangram.
+The grid of tangrams was scrambled on every trial, and participants were given full, immediate feedback: the director saw which tangram their partner clicked, and the matcher saw the intended tangram.
 
 \subsection{Data pre-processing}
 
@@ -224,7 +225,7 @@ We used a three step pre-processing pipeline to prepare our corpus for subsequen
 
 \begin{enumerate}
 
-\item \textbf{Spell-checking and regularization}: We conservatively extracted all tokens that did not exist in the vocabulary of the smallest available ($\sim$ 50,000 word) \texttt{spaCy} model and passed them through the SymSpell spell-checker \footnote{\texttt{https://github.com/wolfgarbe/SymSpell}}. These suggested corrections were then sequentially presented to the first author and either accepted or overridden at their judgement. This process constructed a reproducible spell-correction dictionary we applied to our dataset.
+\item \textbf{Spell-checking and regularization}: We conservatively extracted all tokens that did not exist in the vocabulary of the smallest available ($\sim$ 50,000 word) \texttt{spaCy} model and passed them through the SymSpell spell-checker \footnote{\texttt{https://github.com/wolfgarbe/SymSpell}. We used the smallest model because larger models include typo forms (e.g. `teh') in their vocabulary and thus cannot catch errors.}. These suggested corrections were then sequentially presented to the first author and either accepted or overridden at their judgement. This process constructed a reproducible spell-correction dictionary we applied to our dataset.
 
 \item \textbf{Cleaning unrelated discourse}: Because we allowed our participants to interact in real-time through the chat box, many pairs produced text unrelated to the task of referring to the current target (e.g. greeting one another, asking personal questions, commenting on the length of the task or the results of previous trials). We wanted to ensure that our structural results were not confounded by patterns in this kind of discourse across the task, and that the semantic content we observe on a particular trial is in fact being used to refer to the current target rather than task-irrelevant topics or, as we found in some cases, referring to other tangrams while debriefing previous errors. We therefore applied a manual pass applying a rubric that any text not directly referring to the current target is removed. For example, utterances like ``this is the one we got wrong last time'' were kept in because they were referring to a property of the current tangram, but utterances like ``good job'' and ``they'll go quicker if you remember what I say!'' are not. This process also created a reproducible JSON.
 
@@ -573,7 +574,8 @@ The words that were dropped tended to be closer to one another in the dependency
 Other statistics such as the minimum dependency path or the raw distance in the sequence of words gave similar results.
 This result accords with early observations by \cite{Carroll80_NamingHedges}, which found that in three-quarters of transcripts from \cite{KraussWeinheimer64_ReferencePhrases} the short names that participants converged upon were prominent in some syntactic construction at the beginning, often as a head noun that was initially modified or qualified by other information. 
 
-\section{Discussion}\label{general-discussion}
+\section{Discussion}
+\label{sec:discussion}
 
 In this paper, we characterized the dynamics of convention formation in a classic repeated reference game paradigm.
 First, we found that pairs of participants systematically tend to conventionalize words that are more distinctive in the initial context.

@@ -21,6 +21,7 @@ library(useful)
 library(viridis)
 library(broom)
 library(gganimate)
+library(modeest)
 
 # reticulate lets us import npy files with numpy python package
 library(reticulate)
@@ -59,8 +60,6 @@ stats
 summary(glmer(finalRoundMatch ~ num_tangrams_occurred_with + (1 + num_tangrams_occurred_with | intendedName) + (1 + num_tangrams_occurred_with | gameid), 
               family = 'binomial', control = glmerControl(optCtrl = list(maxfun = 200000)), data = distinctiveness_d %>%   filter(tf.idf != 0 )))
 ```
-
-Not exactly sure how to look at this... 
 
 ```{r}
 distinctiveness_d %>%
@@ -524,9 +523,11 @@ permutationTest <- function(d, sample_id) {
     group_by(repetitionNum, intendedName) %>%
     mutate(permutation = sample(contents)) %>%
     group_by(gameid, intendedName) %>%
-    summarize(ent = entropy(getCounts(permutation))) %>%
+    summarize(rawEntropy = entropy(getCounts(permutation)),
+              l = length(getCounts(permutation)),
+            normedEntropy = rawEntropy/log(l)) %>%
     group_by(intendedName) %>%
-    summarize(meanEnt = mean(ent)) %>%
+    summarize(meanEnt = mean(rawEntropy)) %>%
     mutate(sample_id = sample_id)
   return(permuted)
 }
@@ -537,9 +538,10 @@ permutations <- map_dfr(seq_len(1000), ~permutationTest(d, .x)) %>%
 
 trueEntropy <- d %>%
   group_by(gameid, intendedName) %>%
-  summarize(trueEntropy = entropy(getCounts(contents))) %>%
+  summarize(rawEntropy = entropy(getCounts(contents)), l = length(getCounts(contents)),
+            normedEntropy = rawEntropy/log(l)) %>%
   group_by(intendedName) %>%
-  tidyboot_mean(trueEntropy) %>%
+  tidyboot_mean(rawEntropy, na.rm = T) %>%
   mutate(sample_id = 'empirical') %>% 
   select(intendedName, ci_lower,ci_upper, empirical_stat, sample_id)
 
@@ -557,7 +559,7 @@ ggplot(discrete.out, aes(x = empirical_stat, y = fct_reorder(factor(intendedName
   ylab('tangram') +
   xlab('mean entropy') +
   #coord_flip() +
-  scale_x_continuous(breaks = NULL) +
+  #scale_x_continuous(breaks = NULL) +
   theme(aspect.ratio = 1/2)
 
 ggsave('../writing/tangrams/figs/permutedDiscrete.pdf', height = 8, width = 16, units = 'cm', useDingbats = F)

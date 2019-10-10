@@ -114,9 +114,9 @@ These findings provide a higher resolution look at the quantitative dynamics of 
 %Here we present a large corpus of messages sent in a web-based reference game where a speaker repeatedly refers to the same objects with the same partner. 
 
 Human language use is remarkably flexible. 
-We are able to coax new meanings out of existing words, or even coin new ones, to handle the diverse challenges encountered in everyday communication \citep{Clark83_NonceSense,davidson_nice_1986}.
-This flexibility is partially explained by one-shot pragmatic reasoning, which allows listeners to use context to infer an intended meaning even in cases of ambiguous or non-literal usage \citep{LascaridesCopestake98_PragmaticsWordMeaning,Glucksberg01_FigurativeLanguage,piantadosi2012communicative,GoodmanFrank16_RSATiCS}.
-However, a rich theoretical thread in the literature has suggested that \emph{learning} mechanisms may also play an important role, allowing speakers and listeners to dynamically adapt their representations of meaning over the course of an interaction \citep{BrennanClark96_ConceptualPactsConversation,pickering2004toward,delaney2019neural}.
+We are able to coax new meanings out of existing words --- or even coin new ones --- to handle the diverse challenges encountered in everyday communication \citep{Clark83_NonceSense,davidson_nice_1986}.
+This flexibility is partially explained by one-shot pragmatic reasoning, which allows listeners to use context to infer an intended meaning even in cases of ambiguous or non-literal usage \citep{LascaridesCopestake98_PragmaticsWordMeaning,Glucksberg01_FigurativeLanguage,GoodmanFrank16_RSATiCS}.
+However, a rich theoretical thread in the literature has suggested that learning mechanisms may also play an important role, allowing speakers and listeners to dynamically adapt their representations of meaning over the course of an interaction \citep{BrennanClark96_ConceptualPactsConversation,pickering2004toward,delaney2019neural}.
 
 Two functional considerations motivate the need for continued learning in communication, even among adults.
 First, just as there is substantial phonetic variability across speakers with different accents \citep{kleinschmidt2019structure}, meanings may vary in meaning from speaker to speaker. 
@@ -131,7 +131,7 @@ In this task, pairs of participants are presented with arrays of novel images.
 On each trial, one player (the director) is privately shown a \emph{target} object and must produce a referring expression allowing their partner (the matcher) to correctly select that object from the array.
 The director is then given feedback at the end of each trial about which object the matcher selected, and the matcher is given feedback about the true target object. 
 Critically, each object appears as the target multiple times in the trial sequence, allowing the experimenter to examine how referring expressions change as the director and matcher accumulate shared experience.
-To the extent that the director and matcher converge on an accurate system of stable referring expressions, and these referring expressions differ from the ones that were initially produced, it may be claimed that \emph{ad hoc conventions} or \emph{pacts} have formed within the dyad.
+To the extent that the director and matcher converge on an accurate system of stable referring expressions, and these referring expressions differ from the ones that were initially produced, it may be claimed that \emph{ad hoc conventions} or \emph{pacts} have formed within the dyad \citep{hawkins2018emergence}.
 
 One of the earliest and most intriguing phenomena observed in this task is that descriptions are dramatically shortened across repetitions: an initial description like ``the one that looks like an upside-down martini glass in a wire stand'' may gradually converge to ``martini'' by the end  \citep{KraussWeinheimer64_ReferencePhrases}. 
 That is, speakers are able to communicate the same referential content much more efficiently over time.
@@ -167,6 +167,11 @@ In Section \ref{sec:discussion}, we discuss several implications of these findin
 
 \section{Methods: Repeated reference experiment}
 
+We developed two variants of the repeated reference task used in classic work by \cite{ClarkWilkesGibbs86_ReferringCollaborative}: a relatively unconstrained \emph{free-matching} version that more closely replicates classic in-lab designs, and a more tightly controlled \emph{cued} version. 
+Most importantly, the \emph{cued} version allows us to identify which object each utterance refers to, supporting higher-resolution analyses at the object-by-object level.
+We considered the free-matching version to be an exploratory pilot sample and subsequently pre-registered our predictions for the \emph{cued} version\footnote{https://osf.io/2zwmx}.
+While we are also releasing the corpus from the free-matching version, we restrict our analyses to the \emph{cued} version throughout the paper as a confirmatory sample.
+
 \begin{figure}
 \centering
 \includegraphics[scale=.9]{designAndExample.pdf}
@@ -174,10 +179,6 @@ In Section \ref{sec:discussion}, we discuss several implications of these findin
 \label{fig:design}
 \end{figure}
 
-We developed two variants of the repeated reference task used in classic work by \cite{ClarkWilkesGibbs86_ReferringCollaborative}: a relatively unconstrained \emph{free-matching} version that more closely replicates classic in-lab designs, and a more tightly controlled \emph{cued} version (see Fig. \ref{fig:design}). 
-Most importantly, the \emph{cued} version allows us to identify which object each utterance refers to, supporting higher-resolution analyses at the object-by-object level.
-We considered the free-matching version to be an exploratory pilot sample and subsequently pre-registered our predictions for the \emph{cued} version\footnote{https://osf.io/2zwmx}.
-While we are also releasing the corpus from the free-matching version, we restrict our analyses to the \emph{cued} version throughout the paper as a confirmatory sample.
 
 \subsection{Participants}\label{participants}
 
@@ -193,7 +194,7 @@ After all exclusions, we were left with a \emph{free matching} corpus containing
 
 \subsection{Stimuli \& Procedure}\label{stimuli}
 
-On every trial, participants were shown a \(6 \times 2\) grid containing twelve tangram shapes, reproduced from \cite{ClarkWilkesGibbs86_ReferringCollaborative}.  
+On every trial, participants were shown a \(6 \times 2\) grid containing twelve tangram shapes (see Fig. \ref{fig:design}), reproduced from \cite{ClarkWilkesGibbs86_ReferringCollaborative}.  
 After passing a short quiz about task instructions, participants were randomly assigned the role of either `director' or `matcher' and automatically paired into virtual rooms containing a chat box and the grid of stimuli. 
 Both participants could freely use the chat box to communicate at any time. 
 
@@ -210,7 +211,7 @@ First, utterances must contain not only descriptions of the tangrams but also in
 Additionally, because there were no constraints on the sequence, participants could revisit tangrams out of order or mention multiple tangrams in a single message, making it difficult to isolate exactly which utterances referred to which tangrams without extensive hand-annotation. 
 Finally, the design of the `submit' button made it easy for players to occasionally advance to the next round without referring to all 12 tangrams. 
 
-To address these problems, we designed a more straightforwardly sequential \emph{cued} variant of the task design where directors were privately cued to refer to targets one-by-one and feedback was given on each trial (see Fig. \ref{fig:design}).
+To address these problems, we designed a more straightforwardly sequential \emph{cued} variant of the task design where directors were privately cued to refer to targets one-by-one and feedback was given on each trial (Fig. \ref{fig:design}).
 This additional structure allowed us to conduct analyses at the object-by-object level. 
 On each trial, one of the twelve tangrams was privately highlighted for the director as the \emph{target}. 
 Instead of clicking and dragging into place, matchers simply clicked the one they believed was the target. 
@@ -227,7 +228,7 @@ We used a three step pre-processing pipeline to prepare our corpus for subsequen
 
 \item \textbf{Spell-checking and regularization}: We conservatively extracted all tokens that did not exist in the vocabulary of the smallest available ($\sim$ 50,000 word) \texttt{spaCy} model and passed them through the SymSpell spell-checker \footnote{\texttt{https://github.com/wolfgarbe/SymSpell}. We used the smallest model because larger models include typo forms (e.g. `teh') in their vocabulary and thus cannot catch errors.}. These suggested corrections were then sequentially presented to the first author and either accepted or overridden at their judgement. This process constructed a reproducible spell-correction dictionary we applied to our dataset.
 
-\item \textbf{Cleaning unrelated discourse}: Because we allowed our participants to interact in real-time through the chat box, many pairs produced text unrelated to the task of referring to the current target (e.g. greeting one another, asking personal questions, commenting on the length of the task or the results of previous trials). We wanted to ensure that our structural results were not confounded by patterns in this kind of discourse across the task, and that the semantic content we observe on a particular trial is in fact being used to refer to the current target rather than task-irrelevant topics or, as we found in some cases, referring to other tangrams while debriefing previous errors. We therefore applied a manual pass applying a rubric that any text not directly referring to the current target is removed. For example, utterances like ``this is the one we got wrong last time'' were kept in because they were referring to a property of the current tangram, but utterances like ``good job'' and ``they'll go quicker if you remember what I say!'' are not. This process also created a reproducible JSON.
+\item \textbf{Cleaning unrelated discourse}: Because we allowed our participants to interact in real-time through the chat box, many pairs produced text unrelated to the task of referring to the current target (e.g. greeting one another, asking personal questions, commenting on the length of the task or the results of previous trials). We wanted to ensure that our results were not confounded by patterns in this kind of discourse across the task, and that the semantic content we observe on a particular trial is in fact being used to refer to the current target rather than task-irrelevant topics or, as we found in some cases, referring to other tangrams while debriefing previous errors. We therefore conducted a manual review removing any text not directly referring to the current target. For example, utterances like ``the dancing woman'' and ``this is the one we got wrong last time'' were kept in because they were referring to properties of the current tangram, but utterances like ``good job'' and ``they'll go quicker if you remember what I say!'' were not. We also saved these corrections in a dictionary.
 
 \item \textbf{Collapsing multiple messages within a trial}: Finally, some directors used our chat box like an texting interface, hitting the enter key between every micro-phrase of text. This made it difficult to interpret the output of syntactic parses. We therefore collapsed repeated messages by a participant within a trial into a single message by inserting commas between successive messages. We chose to use commas because it tends to maintain grammaticality and does not inflate word counts.
 
@@ -238,25 +239,21 @@ We used a three step pre-processing pipeline to prepare our corpus for subsequen
 \section{Results: characterizing the dynamics of semantic content}
 \label{sec:content} 
 
-Based on recent developments in theory, we pre-registered several predictions about how directors change the content of their referring expressions over time.
-\emph{First}, if participants are influenced on each trial by pragmatic pressures to be informative, the labels that conventionalize should not be a random draw from the initial description. 
-Instead, we predict that more \emph{distinctive} words in initially successful labels (e.g. words used exclusively to describe one tangram) will be more likely to remain in later descriptions.
-\emph{Second}, due to sources of variability in the population of directors, we predict that the referring expressions used by different pairs will increasingly diverge to different, idiosyncratic labels.
-In other words, different pairs will find different but equally successful equilibria in the space of possible linguistic conventions.
-\emph{Third}, as directors learn and gradually strengthen their expectations about how their partner will interpret their referring expressions, the labels used within each pair for each tangram with stabilize.
-In other words, once there is evidence that a particular label is successfully understood, there is little reason to deviate from it.
+We begin by examining the semantic content of the labels speakers chose to use. 
+We focus on two core questions about how this content changes over time: (1) why are some words from a speaker's initial description more likely than others to become conventionalized in their final labels, and (2) what trajectory do these conventions take as they stabilize within interactions and diverge from other interactions?
+In exploring these questions, we find support for a view of adaptation as a path-dependent process of gradually paring down redundant information and honing in on the most relevant features for the given context.
 
 \subsection{Initially distinctive words are more likely to conventionalize}
 \label{sec:distinctive}
 
-We begin by investigating \emph{which} content is dropped and which is preserved.
+We begin by investigating which content is dropped and which is preserved.
 Two general computational principles guide our exploration of this question.
 First, if directors are attempting to be informative in a particular context of other tangrams then Gricean principles suggest that a good referring expression is one that applies more strongly to the target than to the distractors. 
 Properties that are shared in common across multiple objects are poor candidates for conventions that must distinguish among them.
 Second, principles of cross-situational learning suggest that these informativity considerations will be strengthened over time.
 The exclusive usage of a word with one tangram and no others should reinforce the specificity of that meaning in the local discourse context, even if the matcher may be \emph{a priori} willing to extend it to other targets.
 Conversely, if a particular word has been successfully used with several different referents, its specificity may be weakened in the local context.
-Putting these principles together, we hypothesized that more \emph{initially distinctive} words would be more likely to conventionalize.
+Putting these principles together, we hypothesized that the labels that conventionalize should not be a random draw from the initial description; instead, more \emph{initially distinctive} words would be more likely to conventionalize.
 
 For each pair of participants, we quantified the distinctiveness of a word $w$ as $n_w$: the number of tangrams that it was used to describe on the first repetition. 
 A word that is only used in the description of a single tangram (e.g. a descriptive noun like ``rabbit'') would be very distinctive, while a word used with all 12 tangrams (e.g. an article like ``the'') would be not distinctive at all.
@@ -278,60 +275,52 @@ It can be shown for our case that \emph{tf-idf} is the maximum likelihood estima
 \end{figure}
 
 Given this simple but principled measure of word distinctiveness at the speaker-by-speaker level -- the number of tangrams it was initially used with -- we were interested in the extent to which it accounts for conventionalization, the probability that a word in the director's initial description is preserved until the end of the game. 
-More than half of the words used to refer to a tangram on the final repetition (57\%) appeared in the initial utterance. \footnote{The 43\% of final repetition words that did not exactly match were sometimes synonyms or otherwise semantically related to words used on the first repetition, e.g. ``foot'' on the first repetition vs. ``leg'' on the last. In other cases, the labels used at the end were introduced after the first repetition, e.g. one pair only started using the conventionalized label ``portrait'' on repetition 3.}
+More than half of the words used to refer to a tangram on the final repetition (57\%) appeared in the initial utterance\footnote{The 43\% of final repetition words that did not exactly match were sometimes synonyms or otherwise semantically related to words used on the first repetition, e.g. ``foot'' on the first repetition vs. ``leg'' on the last. In other cases, the labels used at the end were introduced after the first repetition, e.g. one pair only started using the conventionalized label ``portrait'' on repetition 3.}.
 We thus restricted our attention to this subset of words, coding them with a 1 if they later appeared at the final repetition and 0 if they did not.
-We then ran a mixed-effects logistic regression including a fixed effect of initial distinctiveness (using the transformed \emph{tf-idf} for stability) and maximal random effect structure with intercepts and slopes for each tangram and pair of participants.
+We then ran a mixed-effects logistic regression including a fixed effect of initial distinctiveness and maximal random effect structure with intercepts and slopes for each tangram and pair of participants.
 We found a significant positive effect of distinctiveness: words that were used with a larger number of tangrams on the first repetition were less likely to conventionalize, $b = -0.23, z = -6.1$ (see Fig. \ref{fig:distinct}). 
-Similar results are found using the derived measure of \emph{tf-idf}.
+Similar results are found using the \emph{tf-idf}.
 
 Finally, we conducted a non-parametric permutation test.
-For each speaker and tangram, we \emph{randomly sampled} a word from the initial utterance and computed the mean probability of this word also being used on the final repetition.
-Repeating this procedure 1000 times yielded a null distribution ranging from 2.5\% to 6.6\%.
-However, if we instead sample from the words with \emph{maximal distinctiveness}, we obtained a distribution ranging from 24\% to 31\%, which is non-overlapping with the null distribution.
+For each speaker and tangram, we sampled from the words with \emph{maximal distinctiveness} and computed the mean probability of this word also being used on the final repetition, obtaining a distribution ranging from 24\% to 31\%.
+As a baseline null model, we randomly sampled from the list of all words contained in the initial utterance instead of the most distinctive one.
+Repeating this procedure 1000 times yielded a null distribution ranging from 2.5\% to 6.6\%, which was significantly lower than the one derived from distinctive words.
 Thus, if we must make a bet on which words will become conventionalized, placing our bet on the most distinctive ones will yield much higher returns.
 
-\subsection{Language diverges across pairs and stabilizes within pairs}
+\subsection{Semantic meaning diverges across pairs and stabilizes within pairs}
 
-Our remaining predictions about the dynamics of content concern the increasing ``stability'' and ``arbitrariness'' of conventions \cite{Lewis69_Convention}.
-We introduce two different quantitative measures of similarity to operationalize these constructs: one based on properties of the discrete word count distribution and the other based on distances computed between continuous vector embeddings of referring expressions. 
-Because these analyses depend on the identity of word tokens, we applied a lemmatizer to further standardize the input.
-Lemmatization maps multiple morphological variants (e.g. `played,' `playing,' `plays') to the same stem (`play').
-We do not want an observed difference between two pairs to be driven simply by different forms of the same word.
+Our remaining predictions about the dynamics of content concern the increasing stability and arbitrariness of conventions \citep{Lewis69_Convention}.
+First, due to sources of variability in the population of speakers, we predict that the referring expressions used by different pairs will increasingly diverge to different, idiosyncratic labels.
+In other words, different pairs will find different but equally successful equilibria in the space of possible linguistic conventions.
+Second, as directors learn and gradually strengthen their expectations about how their partner will interpret their referring expressions, the labels used within each pair for each tangram with stabilize.
+In other words, once there is evidence that a particular label is successfully understood, there should be little reason to deviate from it.
 
-\paragraph{Measuring convergence and divergence with discrete word distributions}
 
-We begin by examining the discrete \emph{distribution of words} that each pair uses to refer to each tangram, excluding standard stop words.
-If a pair of participants converges on stable labels for a tangram, then this stability should manifest in a highly structured distribution over words throughout the game for that pair.
-If different speakers discover diverging conventions, this idiosyncracy should also manifest in differing word distributions.
-We formalize these intuitions by examining the information-theoretic measure of entropy: $$H(W) = \sum_w P(w) \log P(w)$$
-The entropy of the word distribution for a pair is maximized when all words are used equally often and declines as the distribution becomes more structured, i.e.~when the probability mass is more concentrated on a subset of words.
-
-To compare word distributions across games, we use a permutation test methodology.
-By scrambling referring expressions for each tangram across games and recomputing the entropy of the scrambled word distribution, we effectively disrupt any structure within each pair.
-There are two important inferences we can draw from this test.
 \begin{figure}[t!]
 \centering
-\includegraphics[scale=.9]{permutedDiscrete.pdf}
-\caption{Permuting utterances across pairs increases entropy of word distribution, consistent with internal stability and multiple equilibria. Mean empirical entropy (red) and mean permuted entropy (blue) are shown for each tangram. Error bars are 95\% CIs for bootstrapped empirical entropy and the permuted distribution, respectively.}
-\label{fig:permuted}
+\includegraphics[scale=.6]{tsne-tangramC_annotated.pdf}
+\caption{2D projection of semantic embeddings for example tangram. Each arrow represents the trajectory between the first repetition to last repetition for a distinct pair of participants. Color represents the rotational angle of the final location to more easily see where each pair began. Annotations are provided for select utterances, representing different equilibria found by different participants.}
+\label{fig:tsne}
 \end{figure}
-First, in a null scenario where different pairs did \emph{not} diverge as predicted and instead every pair coordinated on roughly the same (optimal) convention for each tangram, this permutation operation would have no effect since it would be mixing together copies of the same distribution.
-Second, in another null scenario where pairs did not converge and instead varied wildly in the words they used from repetition to repetition, then permuting across games would also have no effect since it would simply mix together word distributions that already have high entropy.
-Hence, scrambling should \emph{increase} the average game's entropy only in the case where both predictions hold: each game's idiosyncratic but concentrated distribution of words would be mixed together to form more heterogeneous and therefore high-entropy distributions.
 
-Following this logic, we computed the average within-game entropy for 1000 different permutations of director utterances. 
-We permuted utterances within repetitions rather than across the entire data set to control for the fact that earlier repetitions may generically differ from later ones. 
-Because we are permuting and measuring entropy at the tangram-level, this yields 12 permuted distributions (see Fig. \ref{fig:permuted}).
-We found that the mean empirical entropy lay well outside the null distribution for all twelve tangrams, $p < .001$, consistent with our predictions of internal stability within pairs and multiple equilibria across pairs.
 
-\paragraph{Measuring similarity using vector space embeddings} 
-A more direct way to quantify convergence within and divergence across different pairs is to use a continuous similarity between vector space embeddings of utterances.
-Although the idea of using dense vector space representations of words to measure similarity is an old one \citep{osgood1952nature,landauer_solution_1997,bengio_neural_2003}, recent breakthroughs in machine learning have yielded rapid improvements in these representations \citep[e.g.][]{mikolov2013distributed,pennington2014glove}.
-To quantify the dynamics of semantic context in referring expressions across and within games, we extracted the 300-dimensional GloVe vector for each word. 
+To operationalize these constructs, we introduce a continuous measure of similarity based on distances computed between continuous vector space embeddings of referring expressions (see Appendix A for an alternative approach based on discrete word distributions). 
+Although the idea of using such representations of words to measure similarity is an old one \citep{osgood1952nature,landauer_solution_1997,bengio_neural_2003}, recent breakthroughs in machine learning have yielded rapid improvements in the quality of these representations \citep[e.g.][]{mikolov2013distributed,pennington2014glove}.
+To quantify the dynamics of semantic context in referring expressions across and within games, we therefore first extracted the 300-dimensional GloVe vector for each word. 
 We then averaged these word vectors to obtain a single sentence vector for each referring expression\footnote{Variations on such naive averaging methods are surprisingly strong baselines for sentence representations \citep{arora2017asimple}, performing better than supervised LSTM representations or unsupervised skip-thought vectors \citep{KirosEtAl15_SkipThought}}.
-To avoid artifacts from function words, we only included open-class content words (nouns, adjectives, verbs, and adverbs) in this average.
+To avoid artifacts from function words, we only included open-class content words (nouns, adjectives, verbs, and adverbs) in this average\footnote{Because different forms of a word may have slightly different representation, we also applied a lemmatizer to further standardize the input. Lemmatization maps multiple morphological variants (e.g. `played,' `playing,' `plays') to the same stem (`play'). We did not want an observed difference between two pairs to be driven simply by different forms of the same word.}.
 We can then define a similarity metric between any pair of vectors $\langle u_i, u_j \rangle$.
 We find that our results are robust to several choices of metric, but for simplicity we will use cosine similarity throughout the presentation below: $$\cos \theta_{ij} = \frac{u_i \cdot u_j}{\| u_i\| \| u_j \|}$$
+
+To gain an intuition about the changes uncovered by these analyses of utterance embeddings, we first visualize the trajectories taken by each pair of participants when referring to a particular example tangram, annotating utterances in several parts of the space.
+First, we took the first 50 components recovered by running Principal Components Analysis (PCA) on the 300-dimensional utterance embeddings. 
+We then use t-SNE \citep{maaten2008visualizing} to stochastically embed the lower-dimensional PCA representation of each utterance in a common 2D vector space. 
+In Fig. \ref{fig:tsne}, each arrow connects the first and last utterance a particular pair used to refer to this tangram.
+
+We observe that the initial utterances of each game tend to cluster tightly near the center of the space and the final utterances are \emph{dispersed} more widely around the edges. 
+This pattern is consistent with the hypothesis that different speakers overlap more in the content of their early descriptions before honing in on more distinctive different equilibria later in the game  (see \ref{sec:distinctive}). 
+For this particular tangram, there were a handful of semantically distinct labels that served as equilibria for multiple pairs (``ghost,'' ``flying,'' ``angel'') as well as many more idiosyncratic labels.
+Pairs often initially mentioned multiple properties (e.g. ``person raising their arms up like a choir singer'') before breaking the symmetry and collapsing to one of these properties (``choir singer'').
 
 \begin{figure}[t!]
 \centering
@@ -418,27 +407,6 @@ To summarize, we suggested the use of a baseline to better interpret our core re
 This baseline---the divergence in a speaker's \emph{own} utterances for different tangrams---begins at a similar level, indicating that the initial utterances used by different speakers overlap approximately as much as the different initial utterances used by a single speaker.
 While both subsequent trajectories indicate divergence, the different labels used by a single speaker rapidly spread out in vector space and become more distinct from one another than the labels used by different speakers.
 %In light of our results in Section 3.1, the effect of dropping overlapping words shared many tangrams
-
-\begin{figure}[t!]
-\centering
-\includegraphics[scale=.6]{tsne-tangramC_annotated.pdf}
-\caption{2D projection of semantic embeddings for example tangram. Each arrow represents the trajectory between the first repetition to last repetition for a distinct pair of participants. Color represents the rotational angle of the final location to more easily see where each pair began. Annotations are provided for select utterances, representing different equilibria found by different participants.}
-\label{fig:tsne}
-\end{figure}
-
-\paragraph{Visualizing trajectories through vector space}  
-Finally, to better understand the changes uncovered by these analyses of utterance embeddings, we visualize the trajectories taken by each pair of participants when referring to a particular example tangram, annotating utterances in several parts of the space.
-First, we took the first 50 components recovered by running Principal Components Analysis (PCA) on the 300-dimensional utterance embeddings. 
-We then use t-SNE \citep{maaten2008visualizing} to stochastically embed the lower-dimensional PCA representation of each utterance in a common 2D vector space. 
-In Fig. \ref{fig:tsne}, each arrow connects the first and last utterance a particular pair used to refer to this tangram.
-
-We observe that the initial utterances of each game tend to cluster tightly near the center of the space and the final utterances are \emph{dispersed} more widely around the edges. 
-This pattern is consistent with the hypothesis that different speakers overlap more in the content of their early descriptions before honing in on more distinctive different equilibria later in the game  (see \ref{sec:distinctive}). 
-For this particular tangram, there were a handful of semantically distinct labels that served as equilibria for multiple pairs (``ghost,'' ``flying,'' ``angel'') as well as many more idiosyncratic labels.
-Pairs often initially mentioned multiple properties (e.g. ``person raising their arms up like a choir singer'') before breaking the symmetry and collapsing to one of these properties (``choir singer'').
-%Second, single pairs generally do not jump widely around the space; most trajectories are `spoke'-like, emitting from the center to near the end-state.
-%This suggests that speakers converge fairly monotonically and consistently to their final utterances. 
-
 
 \section{Results: characterizing the dynamics of structure}
 \label{sec:structure}
@@ -583,18 +551,6 @@ Using both discrete and continuous measures of semantic content, we found this p
 Second, directors reduce the length of their descriptions over the course of the task in a way that is sensitive to evidence of matcher understanding and syntactically structured to omit entire meaningful units.
 In sum, these results establish new benchmark phenomena that computational models of adaptation and convention formation must account for.
 
-\paragraph{Discrete vs. continuous semantic measures}
-Because our results hinged on our quantification of semantic content, it is worth noting some advantages and disadvantages of discrete measures compared to continuous vector space measures.
-A key advantage of measures based on the word distribution is that the entropy is not dependent on any particular choice of pre-trained vector embedding. 
-Due to biases in the training corpora, vector representations also may not capture some of the more idiosyncratic conventions that participants converge on (e.g. ``YMCA'' or ``zig zag'' or ``Frank'' -- short for ``Frankenstein'').
-To the extent we find converging results, the discrete measure may address concerns about the quality of the continuous representation.
-
-A key disadvantage is that the entropy is sensitive to the support of the word distribution --- the vocabulary present in the corpus on a particular repetition --- and thus does not have a natural scale.
-While directly measuring divergence between word distributions at different repetitions and between different pairs is technically possible, their sparsity makes this approach not as informative at these finer granularities of analysis.
-Many pairs use entirely disjoint sets of words, and on later repetitions, the distribution may only contain one or two words. 
-Further, because it is based entirely on the frequency of tokens, it may treat even close synonyms as entirely distinct tokens in the word distribution. 
-Thus, these two approaches provide complementary evidence for the dynamics of content.
-
 \paragraph{Symmetry-breaking}
 Our results in this paper also raise a subtle cognitive question about classic definitional notions of arbitrariness in convention \citep{Lewis69_Convention}, which hold that there must counterfactually exist an alternative solution to the coordination problem for any particular solution to be conventional.
 How can such systematicity in the formation process co-exist with conventionality?
@@ -624,6 +580,44 @@ Taken together, this work provides a new window into the quantitative dynamics o
 
 % Submissions are not required to reflect the precise reference formatting of the journal (use of italics, bold etc.), however it is important that all key elements of each reference are included.
 \bibliography{library}
+
+\section*{Appendix A: Measuring convergence and divergence using discrete word distributions}
+
+We begin by examining the discrete \emph{distribution of words} that each pair uses to refer to each tangram, excluding stop words.
+This distribution is a \emph{unigram} distribution over the vector of words that appear throughout the utterances produced by a given speaker to refer to a particular object (the modal support size of this distribution is 7 words.)
+If a pair of participants converges on stable labels for a tangram, this stability should manifest in a highly structured distribution over words throughout the game for that pair.
+If different speakers discover diverging conventions, this idiosyncracy should manifest in differing word distributions.
+We formalize these intuitions by examining entropy, an information-theoretic measure: $$H(W) = \sum_w P(w) \log P(w)$$
+The entropy of the word distribution for a pair is maximized when all words are used equally often and declines as the distribution becomes more structured, i.e.~when the probability mass is more concentrated on a subset of words\footnote{It also increases as a function of the support size; because in principle we consider this an important signature of a game, we focus on this unnormalized measure; however, the results hold if we control for the support size (i.e. divide the entropy by $\log(N)$ so that a uniform distribution will always have the maximum value of one.)}.
+
+To compare word distributions across games, we use a permutation test methodology.
+By scrambling referring expressions for each tangram across games and recomputing the entropy of the scrambled word distribution, we effectively disrupt any structure within each pair.
+There are two important inferences we can draw from this test.
+\begin{figure}[t!]
+\centering
+\includegraphics[scale=.9]{permutedDiscrete.pdf}
+\caption{Permuting utterances across pairs increases entropy of word distribution, consistent with internal stability and multiple equilibria. Mean empirical entropy (red) and mean permuted entropy (blue) are shown for each tangram. Error bars are 95\% CIs for bootstrapped empirical entropy and the permuted distribution, respectively.}
+\label{fig:permuted}
+\end{figure}
+First, in a null scenario where different pairs did \emph{not} diverge as predicted and instead every pair coordinated on roughly the same (optimal) convention for each tangram, this permutation operation would have no effect since it would be mixing together copies of the same distribution.
+Second, in another null scenario where pairs did not converge and instead varied wildly in the words they used from repetition to repetition, then permuting across games would also have no effect since it would simply mix together word distributions that already have high entropy.
+Hence, scrambling should \emph{increase} the average game's entropy only in the case where both predictions hold: each game's idiosyncratic but concentrated distribution of words would be mixed together to form more heterogeneous and therefore high-entropy distributions.
+
+Following this logic, we computed the average within-game entropy for 1000 different permutations of director utterances. 
+We permuted utterances within repetition blocks rather than across the entire data set to control for the fact that earlier trials may generically differ from later ones (e.g. in utterance length). 
+Because we are permuting and measuring entropy at the tangram-level, this yields 12 permuted distributions (see Fig. \ref{fig:permuted}).
+We found that the mean empirical entropy lay well outside the null distribution for all twelve tangrams, $p < .001$, consistent with our predictions of internal stability within pairs and multiple equilibria across pairs.
+
+Finally, it is worth noting some advantages and disadvantages of this discrete measure compared to the continuous vector space measure used in the main text.
+A key advantage is that the entropy is not dependent on any particular choice of pre-trained vector embedding.
+Due to biases in the vocabulary of their training corpora, vector representations also may not capture some of the more idiosyncratic conventions that participants converge on (e.g. ``YMCA'' or ``zig zag'' or ``Frank'' -- short for ``Frankenstein'').
+Thus, to the extent we find converging results, the discrete measure may address concerns about the quality of the continuous representation.
+A key disadvantage, on the other hand, is that our permutation test methodology is more indirect and does not have a natural scale. 
+We can strongly reject the complete absence of arbitrariness and stability --- a lower bound --- but there is no clear derivation for a corresponding upper bound showing exactly how strong these effects are.
+Directly measuring divergence between word distributions is technically possible using divergence measures, but would not be informative at the fine granularity required for these analyses (i.e. at the level of single utterances).
+Most utterances use entirely disjoint sets of words, and on later repetitions, the distribution may only contain one or two contentful words. 
+A final disadvantage is that discrete analyses treat even close synonyms as entirely distinct tokens in the word distribution because they are based entirely on the frequency of tokens rather than semantic content.
+In summary, these two approaches provide complementary and converging evidence.
 
 % \begin{biography}[example-image-1x1]{A.~One}
 % Please check with the journal's author guidelines whether author biographies are required. They are usually only included for review-type articles, and typically require photos and brief biographies (up to 75 words) for each author.

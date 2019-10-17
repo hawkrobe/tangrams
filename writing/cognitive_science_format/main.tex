@@ -145,25 +145,27 @@ Taken together, these qualitative effects provide an empirical backbone that the
 However, as theories are increasingly formalized as computational models that aim to make precise quantitative predictions, setting criteria to distinguish between them will depend critically upon a finer-grained, quantitative characterization of the dynamics of adaptation in rich natural language data.
 The computational techniques necessary to provide such a characterization were limited at the time of prior work, but have become newly tractable given developments in natural language processing (NLP).
 In this paper, rather than arguing for a particular theory, we release a large corpus of repeated reference games and conduct a variety of analyses to address current gaps in measurement and establish a firmer foundation for future model development.
-Our analyses roughly divide into two broad categories corresponding to the dynamics of semantic \emph{content} and syntactic \emph{structure}.
+Our analyses roughly divide into two broad categories corresponding to the dynamics of syntactic \emph{structure} and semantic \emph{content}.
+
+Our investigations of syntactic structure in Section \ref{sec:structure} focus on the process by which referring expressions are shortened to communicate the same idea more efficiently.
+One particularly simple model, for example, might predict that shortening is purely driven by a noisy-channel corruption process: at each repetition, each word from the previous repetition's utterance has some probability of being dropped.
+Raw word counts alone are not sufficient for disambiguating this simple model from more cognitively complex proposals.
+To move beyond word counts, we extracted part-of-speech tags and syntax trees from the text to understand which parts of utterances were being dropped, and in which sequence.
+We find that entire modifying phrases are likely to be dropped in clusters, leaving only open-class parts of speech (e.g. an adjective and noun) by the final repetition, and that the choice to shorten an utterance or not depends on listener feedback. 
 
 Our investigations of semantic content in Section \ref{sec:content} revolve around the constructs of \emph{arbitrariness} and \emph{stability}, which have been central to accounts of convention since \cite{Lewis69_Convention}.
 Arbitrariness refers to the claim that multiple equally successful solutions exist in the space of possible conventions: there is no single optimal solution that all speakers should use.
 Stability refers to the claim that, once a solution has been found, speakers should not deviate from it.
 Our contribution is to operationalize these claims in the high-dimensional space of vector embeddings for referring expressions (e.g. GloVe vectors).
 By measuring the similarity between referring expressions in this space, we show that signatures of arbitrariness and stability increase over the course of the interaction.
-We also clarify the (non-arbitrary) processes shaping which words produced on early trials eventually become conventions.
-In particular, we test the prediction that pragmatic pressures to be informative in context lead more discriminative words to conventionalize \citep{KirbyTamarizCornishSmith15_CompressionCommunication,GibsonEtAl17_ColorNamingUse,hawkins_emerging_abstractions_2018}. % cause words that were more discriminative in the initial context (i.e. that were used for one target more than others) are more likely to persist through the final repetition. 
+We also clarify the (non-arbitrary) processes shaping which words eventually become conventions.
+In particular, we test the prediction that pragmatic pressures to be informative in context lead more discriminative words to conventionalize \citep{KirbyTamarizCornishSmith15_CompressionCommunication,GibsonEtAl17_ColorNamingUse,hawkins_emerging_abstractions_2018}. 
+Taken together, our findings characterize core processes operating within the microcosm of dyadic, natural-language interactions that may ultimately contribute to the adaptive properties of conventions shared across a language community.
+% cause words that were more discriminative in the initial context (i.e. that were used for one target more than others) are more likely to persist through the final repetition. 
 
 %while constructs like arbitrariness or stability have loomed over the theoretical analysis of conventions , it has been unclear how exactly to measure the extent to which these properties hold in a particular task and how they may evolve over the course of interaction. 
 
-Our investigations of syntactic structure in Section \ref{sec:structure} are geared more specifically toward understanding the process by which referring expressions are shortened, and the ways that speakers are sensitive to listener feedback.
-One particularly simple model, for example, might predict that shortening is purely driven by a noisy-channel corruption process: at each repetition, each word from the previous repetition's utterance has some probability of being dropped.
-Raw word counts alone are not sufficient for disambiguating this simple model from more cognitively complex proposals.
-To move beyond word counts, we extracted part-of-speech tags and syntax trees from the text to understand which parts of utterances were being dropped, and in which sequence.
-We find that entire modifying phrases are likely to be dropped in clusters, leaving only open-class parts of speech (e.g. an adjective and noun) by the final repetition. 
-In Section \ref{sec:discussion}, we discuss several implications of these findings.
-Taken together, the 
+
 %In particular, we examine these questions using a web-based replication of the classic Tangrams task \citep{ClarkWilkesGibbs86_ReferringCollaborative}.
 
 
@@ -238,18 +240,145 @@ We used a three step pre-processing pipeline to prepare our corpus for subsequen
 
 %Still, we verified that all results reported were robust to these exclusion criteria, and to our data pre-processing steps\todo{check}.
 
+\section{Results: characterizing the dynamics of structure}
+\label{sec:structure}
+
+We begin with the observation that the mean number of words used by directors decreases over time (see Fig. \ref{fig:feedback}A)\footnote{A similar reduction curve was found in our pilot ``free matching'' version of the task, although it required more words overall. Participants needed to additionally mention which tangram they were referring to (i.e. ``number 3 is the \dots``)}.
+This result replicates the highly reliable reduction effect found throughout the literature on repeated reference games \citep[e.g.][]{KraussWeinheimer64_ReferencePhrases,BrennanClark96_ConceptualPactsConversation}, though
+participants in our task used fewer words overall than reported by \cite{ClarkWilkesGibbs86_ReferringCollaborative}. 
+This difference is likely due to the text-based (vs.~spoken) interface.
+The following analyses break down this general gain in efficiency into a finer-grained set of phenomena concerning the \emph{structure} of referring expressions over time.
+%In particular, we examine \emph{how} different pairs reduce the length of their utterances.
+What sequence of transformations is applied to reduce long initial descriptions into shorter final ones, and how does it depend on feedback?
+
+\begin{figure}[t]
+\centering
+\includegraphics[scale=.64]{listenerFeedback_combined.pdf}
+\caption{(A) Directors use fewer words per tangram over time. (B) Matchers reply with interactive feedback less often over time, and (C) directors are sensitive to feedback from the matcher's selection, increasing message length on the subsequent repetition of a tangram after an error is made.}
+\label{fig:feedback}
+\end{figure}
+
+\subsection{The effect of listener feedback on reduction}\label{listener-feedback}
+
+Conventions are formed \emph{collaboratively}, not in isolation \citep{ClarkWilkesGibbs86_ReferringCollaborative}: 
+directors and matchers engage in a bi-directional process where matchers ask follow-up questions, suggest corrections, and acknowledge or verbally confirm their understanding through a backchannel. 
+In the absence of feedback, descriptions may not necessarily get shorter \citep{KraussWeinheimer66_Tangrams, GarrodFayLeeOberlanderMacLeod07_GraphicalSymbolSystems}.
+While we automatically supplied minimal feedback about the matcher's response each trial, we predict that the additional feedback from backchannel replies should be highest on the first repetition and drop off once meanings are agreed upon. 
+To test this prediction, we coded whether the matcher sent a message or not on each trial and fit a mixed-effects logistic regression model with a fixed effect of repetition, random intercepts and slopes for each pair of participants, and a random intercept for each target. 
+We found that the probability of the matcher sending a message decreased significantly over the game $(b=-0.84, t = -9.1, p < 0.001$; Fig. \ref{fig:feedback}B).
+In aggregate, 76\% of matchers send at least one message in the first repetition block, but only 6\% sent a message in the last block.
+These rates found in our online text-based replication are lower overall than in-person lab experiments, but we nonetheless strongly replicated the overall trend.
+
+Next, we examined the extent to which directors were sensitive to feedback about the matcher's selection.
+If the matcher failed to select the correct target, the director may take this as evidence that their description was insufficient and attempt to provide more detail the next time they must refer to the same tangram. 
+If the matcher is correct, on the other hand, the director may take this as evidence of understanding and reduce their level of detail on future repetitions.
+We tested these predictions by comparing the proportional change in utterance length on the repetition after an error against the change in length after a correct response (i.e. $(n_t - n_{t-1})/n_{t-1}$).
+This measure could be positive, indicating a net increase in utterance length, or negative, indicating a reduction.
+
+We fit a mixed-effects regression model predicting this measure with an effect-coded categorical fixed effect of feedback on the previous repetition and a (centered) continuous effect of repetition number, including random intercepts and effects of feedback for each interaction.
+We found a significant main effect of feedback, even controlling for repetition: utterance length changed more in the shorter direction after correct responses than after negative responses, $b = -0.18, t = -6.2$ (see Fig. \ref{fig:feedback}C).
+Indeed, directors were more likely on average to \emph{add} words on the repetition after an error at any point in the game.
+Because repetitions of the same tangram were spaced out and errors were relatively rare, this effect is unlikely to simply reflect heightened attention on trials after an error.
+Instead, this pattern of results is consistent with sensitivity to tangram-specific evidence of the matcher's understanding.
+
+%\begin{figure}[t]
+%\centering
+%\includegraphics[scale=.6]{reduction.pdf}
+%\caption{ Error ribbons are 95\% confidence intervals. \todo[inline]{Incorporate this into previous Fig (3 columns).}}
+%\label{fig:reduction}
+%\end{figure}
+
+\begin{table*}[t]
+\centering
+\begin{tabular}{|r||l|l|l|}
+  \hline
+ & unigrams & bigrams & trigrams \\ 
+  \hline
+\#1 & a & look like & look like a \\ 
+  \#2 & the & like a & look like -PRON- \\ 
+  \#3 & -PRON- & to the & to the right \\ 
+  \#4 & like & -PRON- be & like -PRON- be \\ 
+  \#5 & be & this one & like a person \\ 
+  \#6 & look & the right & to the left \\ 
+  \#7 & on & the left & this one look \\ 
+  \#8 & one & like -PRON- & one look like \\ 
+  \#9 & with & on the & this one be \\ 
+  \#10 & to & with a & -PRON- look like \\ 
+  \#11 & and & a person & look like someone \\ 
+  \#12 & right & on top & diamond on top \\ 
+  \#13 & this & in the & in the air \\ 
+  \#14 & of & a diamond & on top of \\ 
+  \#15 & head & have a & a diamond on \\ 
+   \hline
+\end{tabular}
+\caption{Top 15 unigrams, bigrams, and trigrams with the highest numeric reduction from first repetition to last repetition. Text lemmatized before n-grams computed. } 
+\label{tab:words}
+\end{table*}
+
+
+\subsection{Breaking down reduction}\label{reduction}
+
+\paragraph{Reduction in parts of speech}
+
+
+The first level of granularity concerns which \emph{kinds} of words are most likely to be dropped. 
+We used the SpaCy part-of-speech tagger \citep{spacy2} to count the number of words belonging to different parts of speech in each message.
+In Fig. \ref{fig:pos}A, we show the shifting proportions of different parts of speech at each repetition.
+We find that nouns account for proportionally more of the words being used over time, while determiners and prepositions account for fewer.
+To test which kinds of words are more likely to be dropped, we measured the percent reduction in the number of words in each part of speech from the first repetition to the sixth repetition. 
+We find that determiners (`the', `a', `an') are the most likely class of words to be dropped (90\%) and nouns (`dancer', `rabbit') are the least likely to be dropped (61\%). % with only an Y\% rate. 
+More generally, closed-class parts of speech, including function words like determiners, are strictly more likely to be dropped than open-class parts of speech (Fig. \ref{fig:pos}B).
+Because open-class parts of speech are statistically more likely to supply \emph{distinctive} words than closed-class parts of speech, these structural considerations may contribute to the patterns in distinctiveness reported in section \ref{sec:distinctive}.
+
+
+\begin{figure}[t!]
+\centering
+\includegraphics[scale=.8]{posResults.pdf}
+\caption{(A) proportion of words in different part of speech on each repetition. (B) Closed-class parts of speech are more likely to be dropped than open-class parts of speech. Error bars are bootstrapped 95\% confidence intervals.} 
+\label{fig:pos}
+\end{figure}
+
+One possible interpretation of these findings is that reduction may be driven mostly by the loss of function words as directors shift to a less-grammatical shorthand over the course of the task.
+However, when examining the n-grams most likely to be dropped (see Table \ref{tab:words}), we find that many of the most dropped closed-class words are used to form conjunctions (`and') or prepositional phases (`of', `with').
+Others are modifiers (`the right \dots'). 
+These examples suggest an alternative explanation: the higher reduction of closed-class function words may be a consequence of entire meaningful grammatical units being dropped at once.
+If initial descriptions tend to be syntactically complex, combining multiple partially redundant sources of information for identifying the target, then the director may omit entire modifying clauses with additional evidence of a matcher's understanding.
+
+\paragraph{Reduction in syntactic constituents} 
+We explicitly examined this hypothesis by examining whether dropped words tend to come from the same syntactic units, relative to a random deletion baseline.
+We quantified the extend to which dropped words `cluster' by examining dependency lengths between the dropped words \citep{jurafsky2014speech,futrell2015large}.
+Specifically, we compared each referring expression to the one produced on the subsequent repetition to determine which words were dropped.
+Then we looked up each pair of dropped words and found the shortest path between them in the dependency parse tree (see Fig. \ref{fig:dependency}).
+We then took the mean dependency length across all such pairs in all games.
+
+This empirical `syntactic clustering' statistic was then compared to a random baseline.
+For this baseline, instead of examining dependency lengths for the words that were actually dropped, we randomly sampled the same number of words from the referring expression and computed the dependency length between them.
+We repeated this procedure 100 times to obtain a null distribution of the mean dependency length that would be expected if words were being dropped \emph{randomly} from anywhere in the message.
+
+\begin{figure}[t!]
+\centering
+\includegraphics[scale=.8]{dependency.pdf}
+\caption{Example dependency parse for referring expression. If the sub-phase ``arms out in front'' were dropped, we would find a mean dependency length of 1.33 among the dropped words.} 
+\label{fig:dependency}
+\end{figure}
+
+%running the SpaCy dependency parser
+We found a mean empirical dependency length of 4.22, which lay outside the null distribution ($95\% CI: [4.38, 4.44]$), indicating a small but reliable effect of syntactic clustering.
+The words that were dropped tended to be closer to one another in the dependency parse than expected by chance.
+Other statistics such as the minimum dependency path or the raw distance in the sequence of words gave similar results.
+This result accords with early observations by \cite{Carroll80_NamingHedges}, which found that in three-quarters of transcripts from \cite{KraussWeinheimer64_ReferencePhrases} the short names that participants converged upon were prominent in some syntactic construction at the beginning, often as a head noun that was initially modified or qualified by other information. 
+
 \section{Results: characterizing the dynamics of semantic content}
 \label{sec:content} 
 
-We begin by examining the semantic content of the labels speakers chose to use. 
+Having established the structural changes that transform long initial descriptions into efficient labels, we now turn to the actual semantic content of the referring expressions speakers chose to use at each point. 
 We focus on two core questions about how this content changes over time: (1) why are some words from a speaker's initial description more likely than others to become conventionalized in their final labels, and (2) what trajectory do these conventions take as they stabilize within interactions and diverge from other interactions?
 In exploring these questions, we find support for a view of adaptation as a path-dependent process of gradually paring down redundant information and honing in on the most relevant features for the given context.
 
 \subsection{Initially distinctive words are more likely to conventionalize}
 \label{sec:distinctive}
 
-We begin by investigating which content is dropped and which is preserved.
-Two general computational principles guide our exploration of this question.
+Two general computational principles guide our exploration of which content is dropped and which is preserved.
 First, if directors are attempting to be informative in a particular context of other tangrams then Gricean principles suggest that a good referring expression is one that applies more strongly to the target than to the distractors. 
 Properties that are shared in common across multiple objects are poor candidates for conventions that must distinguish among them.
 Second, principles of cross-situational learning suggest that these informativity considerations will be strengthened over time.
@@ -306,7 +435,7 @@ In other words, once there is evidence that a particular label is successfully u
 \end{figure}
 
 
-To operationalize these constructs, we used a continuous measure of similarity based on distances computed between continuous vector space embeddings of referring expressions (see Appendix A for an alternative approach based on discrete word distributions). 
+To operationalize these constructs, we used a continuous measure of similarity based on distances computed between continuous vector space embeddings of referring expressions.
 Although the idea of using such representations of words to measure similarity is an old one \citep{osgood1952nature,landauer_solution_1997,bengio_neural_2003}, recent breakthroughs in machine learning have yielded rapid improvements in the quality of these representations \citep[e.g.][]{mikolov2013distributed,pennington2014glove}.
 To quantify the dynamics of semantic context in referring expressions across and within games, we therefore first extracted the 300-dimensional GloVe vector for each word. 
 We then averaged these word vectors to obtain a single sentence vector for each referring expression\footnote{Variations on such naive averaging methods are surprisingly strong baselines for sentence representations \citep{arora2017asimple}, performing better than supervised LSTM representations or unsupervised skip-thought vectors \citep{KirosEtAl15_SkipThought}}.
@@ -389,149 +518,28 @@ We found that the estimated slope was highly unlikely under this distribution $(
 
 \subsection{Discussion}
 
-\todo[inline]{Flesh this out further}
-In this section, we examined the dynamics of semantic content.
-We found that pairs converged systematically on distinctive words but different pairs discovered different solutions to the same coordination problem. 
-In Appendix B, we report additional baselines controlling for the way we averaged together word embeddings to form sentence embeddings, and comparing the divergence of utterances that different pairs use to refer to the same object against the utterances a single pair uses to refer to different objects. 
+In this section, we moved beyond the phenomenon of increasing \emph{efficiency} to examine how the same learning mechanisms shape the \emph{semantic content} of referring expressions over time.
+First, we found that these mechanisms selectively preserved the more informative, distinguishing words from an initial utterance while allowing less informative words to be dropped. 
+The conventions formed through this process thus have the property of being both sensitive to the communicative context, since different words would be distinguishing in different contexts, and  sensitive to the speaker's initial preferences over descriptions.
+Second, we found evidence of arbitrariness and stability using a measure of similarity in semantic space: different pairs discovered different solutions to the same coordination problem, and these solutions became increasingly stable once established. 
 
-\section{Results: characterizing the dynamics of structure}
-\label{sec:structure}
+We address two possible concerns about these analyses in the Appendix.
+First, in Appendix A, we provide an alternative diagnostic for the properties of arbitrariness and stability based on the discrete distributions of words appearing in each utterance instead of continuous utterance embeddings.
+This analysis provides converging evidence and does not depend upon the quality or quirks of the semantic space provided by GloVe vectors.
+Second, in Appendix B, we report additional baselines controlling for the method we used to form utterance embeddings by averaging word embeddings.
+This analysis also allows us to examine the overlap in the utterances a single speaker initially uses to refer to the 12 different tangrams.
+Surprisingly, we find that this within-game overlap is roughly the same as the initial overlap between the utterances used to refer to a single tangram by the different speakers in our corpus, but it diverges much more strongly (consistent with our findings in Section \ref{sec:distinctive}).
+These baselines are therefore consistent with an intriguing contrast between the differentiation processes within an interaction and across interactions.
+Just as different speakers initially mention many of the same properties but diverge to distinct labels for the same tangram, a single speaker begins by re-using certain attributes for several tangrams but rapidly diverges to distinctive labels.
 
-Next, we examine the dynamics of \emph{structure}, testing the extent to which different pairs share more abstract commonalities in the structural changes of their referring expressions over time, even while differing in their content. 
-In particular, we examine \emph{how} different pairs reduce the length of their utterances.
-What sequence of transformations is applied to reduce long initial descriptions into shorter final ones?
-
-\begin{figure}[t]
-\centering
-\includegraphics[scale=.8]{listenerFeedback_combined.pdf}
-\caption{(A) Matchers reply with interactive feedback less often over repetitions, and (B) directors are sensitive to feedback from the matcher's selection, increasing message length on the subsequent repetition of a tangram after an error is made.}
-\label{fig:feedback}
-\end{figure}
-
-\subsection{Dialogue between director and matcher}\label{listener-feedback}
-
-Before focusing our analysis on the dynamics of how \emph{directors} transform their referring expressions over time, we first on the broader structure of bi-directional dialogue exchanges.
-Pacts are formed \emph{collaboratively}, not in isolation \citep{ClarkWilkesGibbs86_ReferringCollaborative}: 
-directors and matchers engage in a bi-directional process where matchers ask follow-up questions, suggest corrections, and acknowledge or verbally confirm their understanding through a backchannel. 
-In the absence of feedback, descriptions may not necessarily get shorter \citep{KraussWeinheimer66_Tangrams, GarrodFayLeeOberlanderMacLeod07_GraphicalSymbolSystems}.
-
-While we automatically supplied minimal feedback about the matcher's response each trial, we predict that the additional feedback from backchannel replies should be highest on the first repetition and drop off once meanings are agreed upon. 
-To test this prediction, we coded whether the matcher sent a message or not on each trial and fit a mixed-effects logistic regression model with a fixed effect of repetition, random intercepts and slopes for each pair of participants, and a random intercept for each target. 
-We found that the probability of the matcher sending a message decreased significantly over the game $(b=-0.84, t = -9.1, p < 0.001$; Fig. \ref{fig:feedback}A).
-In aggregate, 76\% of matchers send at least one message in the first repetition block, but only 6\% sent a message in the last block.
-These rates found in our online text-based replication are lower overall than in-person lab experiments, but we nonetheless strongly replicated the overall trend.
-
-Next, we examined the extent to which directors were sensitive to feedback about the matcher's selection.
-If the matcher failed to select the correct target, the director may take this as evidence that their description was insufficient and attempt to provide more detail the next time they must refer to the same tangram. 
-If the matcher is correct, on the other hand, the director may take this as evidence of understanding and reduce their level of detail on future repetitions.
-We tested these predictions by comparing the proportional change in utterance length on the repetition after an error against the change in length after a correct response (i.e. $(n_t - n_{t-1})/n_{t-1}$).
-This measure could be positive, indicating a net increase in utterance length, or negative, indicating a reduction.
-
-We fit a mixed-effects regression model predicting this measure with an effect-coded categorical fixed effect of feedback on the previous repetition and a (centered) continuous effect of repetition number, including random intercepts and effects of feedback for each interaction.
-We found a significant main effect of feedback, even controlling for repetition: utterance length changed more in the shorter direction after correct responses than after negative responses, $b = -0.18, t = -6.2$ (see Fig. \ref{fig:feedback}B).
-Indeed, directors were more likely on average to \emph{add} words on the repetition after an error at any point in the game.
-Because repetitions of the same tangram were spaced out and errors were relatively rare, this effect is unlikely to simply reflect heightened attention on trials after an error.
-Instead, this pattern of results is consistent with sensitivity to tangram-specific evidence of the matcher's understanding.
-
-\begin{figure}[t]
-\centering
-\includegraphics[scale=.6]{reduction.pdf}
-\caption{Reduction in \# words per tangram. Error ribbons are 95\% confidence intervals. \todo[inline]{Incorporate this into previous Fig (3 columns).}}
-\label{fig:reduction}
-\end{figure}
-
-\begin{table*}[t]
-\centering
-\begin{tabular}{|r||l|l|l|}
-  \hline
- & unigrams & bigrams & trigrams \\ 
-  \hline
-\#1 & a & look like & look like a \\ 
-  \#2 & the & like a & look like -PRON- \\ 
-  \#3 & -PRON- & to the & to the right \\ 
-  \#4 & like & -PRON- be & like -PRON- be \\ 
-  \#5 & be & this one & like a person \\ 
-  \#6 & look & the right & to the left \\ 
-  \#7 & on & the left & this one look \\ 
-  \#8 & one & like -PRON- & one look like \\ 
-  \#9 & with & on the & this one be \\ 
-  \#10 & to & with a & -PRON- look like \\ 
-  \#11 & and & a person & look like someone \\ 
-  \#12 & right & on top & diamond on top \\ 
-  \#13 & this & in the & in the air \\ 
-  \#14 & of & a diamond & on top of \\ 
-  \#15 & head & have a & a diamond on \\ 
-   \hline
-\end{tabular}
-\caption{Top 15 unigrams, bigrams, and trigrams with the highest numeric reduction from first repetition to last repetition. Text lemmatized before n-grams computed. } 
-\label{tab:words}
-\end{table*}
-
-
-\subsection{Understanding reduction}\label{reduction}
-
-Next, we turn to a set of analyses examining the reduction in utterance length over the course of the experiment. 
-At the coarsest level, we find that the mean number of words used by directors decreases over time (see Fig. \ref{fig:reduction})\footnote{A similar reduction curve was found in our pilot ``free matching'' version of the task, although it required more words overall. Participants needed to additionally mention which tangram they were referring to (i.e. ``number 3 is the \dots``)}.
-This result replicates the highly reliable reduction effect found throughout the literature on repeated reference games \citep[e.g.][]{KraussWeinheimer64_ReferencePhrases,BrennanClark96_ConceptualPactsConversation}. 
-Perhaps because of the text-based (vs.~spoken) interface, participants in our task used fewer words overall than reported by \cite{ClarkWilkesGibbs86_ReferringCollaborative}. 
-The following analyses break down this broad reduction into a finer-grained set of phenomena.
-
-\paragraph{Reduction in parts of speech}
-
-
-The first level of granularity concerns which \emph{kinds} of words are most likely to be dropped. 
-We used the SpaCy part-of-speech tagger \citep{spacy2} to count the number of words belonging to different parts of speech in each message.
-In Fig. \ref{fig:pos}A, we show the shifting proportions of different parts of speech at each repetition.
-We find that nouns account for proportionally more of the words being used over time, while determiners and prepositions account for fewer.
-To test which kinds of words are more likely to be dropped, we measured the percent reduction in the number of words in each part of speech from the first repetition to the sixth repetition. 
-We find that determiners (`the', `a', `an') are the most likely class of words to be dropped (90\%) and nouns (`dancer', `rabbit') are the least likely to be dropped (61\%). % with only an Y\% rate. 
-More generally, closed-class parts of speech, including function words like determiners, are strictly more likely to be dropped than open-class parts of speech (Fig. \ref{fig:pos}B).
-Because open-class parts of speech are statistically more likely to supply \emph{distinctive} words than closed-class parts of speech, these structural considerations may contribute to the patterns in distinctiveness reported in section \ref{sec:distinctive}.
-
-
-\begin{figure}[t!]
-\centering
-\includegraphics[scale=.8]{posResults.pdf}
-\caption{(A) proportion of words in different part of speech on each repetition. (B) Closed-class parts of speech are more likely to be dropped than open-class parts of speech. Error bars are bootstrapped 95\% confidence intervals.} 
-\label{fig:pos}
-\end{figure}
-
-One possible interpretation of these findings is that reduction may be driven mostly by the loss of function words as directors shift to a less-grammatical shorthand over the course of the task.
-However, when examining the n-grams most likely to be dropped (see Table \ref{tab:words}), we find that many of the most dropped closed-class words are used to form conjunctions (`and') or prepositional phases (`of', `with').
-Others are modifiers (`the right \dots'). 
-These examples suggest an alternative explanation: the higher reduction of closed-class function words may be a consequence of entire meaningful grammatical units being dropped at once.
-If initial descriptions tend to be syntactically complex, combining multiple partially redundant sources of information for identifying the target, then the director may omit entire modifying clauses with additional evidence of a matcher's understanding.
-
-\paragraph{Reduction in syntactic constituents} 
-We explicitly examined this hypothesis by examining whether dropped words tend to come from the same syntactic units, relative to a random deletion baseline.
-We quantified the extend to which dropped words `cluster' by examining dependency lengths between the dropped words \citep{jurafsky2014speech,futrell2015large}.
-Specifically, we compared each referring expression to the one produced on the subsequent repetition to determine which words were dropped.
-Then we looked up each pair of dropped words and found the shortest path between them in the dependency parse tree (see Fig. \ref{fig:dependency}).
-We then took the mean dependency length across all such pairs in all games.
-
-This empirical `syntactic clustering' statistic was then compared to a random baseline.
-For this baseline, instead of examining dependency lengths for the words that were actually dropped, we randomly sampled the same number of words from the referring expression and computed the dependency length between them.
-We repeated this procedure 100 times to obtain a null distribution of the mean dependency length that would be expected if words were being dropped \emph{randomly} from anywhere in the message.
-
-\begin{figure}[t!]
-\centering
-\includegraphics[scale=.8]{dependency.pdf}
-\caption{Example dependency parse for referring expression. If the sub-phase ``arms out in front'' were dropped, we would find a mean dependency length of 1.33 among the dropped words.} 
-\label{fig:dependency}
-\end{figure}
-
-%running the SpaCy dependency parser
-We found a mean empirical dependency length of 4.22, which lay outside the null distribution ($95\% CI: [4.38, 4.44]$), indicating a small but reliable effect of syntactic clustering.
-The words that were dropped tended to be closer to one another in the dependency parse than expected by chance.
-Other statistics such as the minimum dependency path or the raw distance in the sequence of words gave similar results.
-This result accords with early observations by \cite{Carroll80_NamingHedges}, which found that in three-quarters of transcripts from \cite{KraussWeinheimer64_ReferencePhrases} the short names that participants converged upon were prominent in some syntactic construction at the beginning, often as a head noun that was initially modified or qualified by other information. 
-
-\section{Discussion}
+\section{General Discussion}
 \label{sec:discussion}
 
-In this paper, we characterized the dynamics of convention formation in a classic repeated reference game paradigm.
-First, we found that pairs of participants systematically tend to conventionalize words that are more distinctive in the initial context.
-Using both discrete and continuous measures of semantic content, we found this process leads to stable usage within pairs but multiple equilibria across different pairs.
+Our language changes as we get to know a social partner.
+We gradually learn what is meaningful to them and establish common ground.
+In this paper, we characterized the dynamics of this process in a classic repeated reference game.
+%First, we found that pairs of participants systematically tend to conventionalize words that are more distinctive in the initial context.
+%Using a vector space measure of semantic content, we found this process leads to stable usage within pairs but multiple equilibria across different pairs.
 Second, directors reduce the length of their descriptions over the course of the task in a way that is sensitive to evidence of matcher understanding and syntactically structured to omit entire meaningful units.
 In sum, these results establish new benchmark phenomena that computational models of adaptation and convention formation must account for.
 
@@ -552,8 +560,14 @@ Our results rule out the possibility of a homogeneously rigid population, but it
 
 While prior empirical work has indirectly tested initial expectations and  preferences -- for instance, by asking directors to either produce descriptions for others or for themselves in the future \citep{FussellKrauss89_IntendedAudienceCommonGround} -- an important direction for further work is to design experiments that disentangle these possibilities.
 For instance, a Bayesian truth serum approach \citep{prelec2004bayesian} could estimate both an individual's own subjective preferences and their expectations about whether these would be shared by others.
-More broadly, following recent attempts to estimate the true variability across speakers in phonetic properties of speech production \citep{kleinschmidt2019structure}, it would be valuable to estimate how much variability in semantic expectations there really is in the population \citep{FurnasEtAl87_VocabularyProblem}.
-Taken together, this work provides a new window into the quantitative dynamics of adaptation in communication and illuminates new phenomena that constrain computational models of communication. 
+ following recent attempts to estimate the true variability across speakers in phonetic properties of speech production \citep{kleinschmidt2019structure}, it would be valuable to estimate how much variability in semantic expectations there really is in the population \citep{FurnasEtAl87_VocabularyProblem}.
+ 
+While referring to individual objects is a core function of language, our stimuli also limit the kinds of conventions that can be studied. 
+In particular, it is likely our participants converged to distinctive `names' because the targets were distinctive objects.
+If the targets of communication were instead objects that varied along clear latent dimensions, scenes containing multiple objects in relation to one another, or videos depicting activities unfolding over time, participants might instead have converged on more compositional systems making use of adjectives, verbs, and prepositions.
+
+Finally, 
+Taken together, this work provides a new window into the quantitative dynamics of adaptation in communication and illuminates phenomena that constrain computational models of communication. 
 %\section*{acknowledgements}
 %We 
 %

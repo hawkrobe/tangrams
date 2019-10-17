@@ -72,16 +72,16 @@
 
 \begin{abstract}
 \small
-When talking with novel partners about novel referents, speakers must continually adapt to coordinate on meaning. 
+The language we use changes over the course of conversation as we establish common ground and learn what our partner finds meaningful. % peakers and listeners must continually adapt to one another in conversation
 %How do speakers understand one another in conversation? 
 % for increasingly effective, efficient communication.
 % \emph{How} the structure and content of natural language referring expressions change through continued interaction. %While such adaptation has been demonstrated under a variety of conditions, p
-Here we draw upon recent advances in natural language processing to provide a finer-grained characterization of the dynamics of such adaptation.
-We release an open corpus ($>$15,000 utterances) of extended dyadic interactions in a classic repeated reference game task where pairs of partners had to coordinate on how to talk about initially difficult-to-describe tangram stimuli.
-We find that different pairs coordinate on a wide range of idiosyncratic solutions to the problem of reference, but they do so in a highly systematic manner. 
-Words that are more discriminative in the initial context (i.e. that were used for one target more than others) are more likely to persist through the final repetition.
-Structurally, we found that utterances reduce in length: entire modifying syntactic units drop out as conventions are established, leaving only contentful open-class parts of speech.
-These findings provide a higher resolution look at the quantitative dynamics of \emph{ad hoc} convention formation: based on a shared history of usage, words systematically acquire new meaning to support more efficient communication with a partner.
+Here we draw upon recent advances in natural language processing to provide a finer-grained characterization of the dynamics of this learning process.
+We release an open corpus ($>$15,000 utterances) of extended dyadic interactions in a classic repeated reference game task where pairs of partners had to coordinate on how to refer to initially difficult-to-describe tangram stimuli.
+We find that different pairs discover a wide variety of idiosyncratic but stable solutions to the problem of reference, consistent with viewing these pacts as ad hoc conventions. 
+Furthermore, these conventions are shaped by the communicative context: words that are more discriminative in the initial context (i.e. that are used for one target more than others) are more likely to persist through the final repetition.
+Finally, we find systematic structure in how a speaker's referring expressions become more efficient over time: syntactic units drop out in clusters following positive feedback from the listener, eventually leaving short labels containing open-class parts of speech.
+These findings provide a higher resolution look at the quantitative dynamics of \emph{ad hoc} convention formation and support further development of computational models of learning in communication. %: based on a shared history of usage, words systematically acquire new meaning to support more efficient communication with a partner.
 
 % Please include a maximum of seven keywords
 \keywords{social coordination, conventions, semantics, syntax, natural language processing, semantic embeddings}
@@ -151,7 +151,8 @@ Our investigations of semantic content in Section \ref{sec:content} revolve arou
 Arbitrariness refers to the claim that multiple equally successful solutions exist in the space of possible conventions: there is no single optimal solution that all speakers should use.
 Stability refers to the claim that, once a solution has been found, speakers should not deviate from it.
 Our contribution is to operationalize these claims in the high-dimensional space of vector embeddings for referring expressions (e.g. GloVe vectors).
-By measuring the similarity between referring expressions in this space, we show that signatures of arbitrariness and stability increase over the course of the interaction, but also clarify the (non-arbitrary) processes shaping which words produced on early trials eventually become conventions.
+By measuring the similarity between referring expressions in this space, we show that signatures of arbitrariness and stability increase over the course of the interaction.
+We also clarify the (non-arbitrary) processes shaping which words produced on early trials eventually become conventions.
 In particular, we test the prediction that pragmatic pressures to be informative in context lead more discriminative words to conventionalize \citep{KirbyTamarizCornishSmith15_CompressionCommunication,GibsonEtAl17_ColorNamingUse,hawkins_emerging_abstractions_2018}. % cause words that were more discriminative in the initial context (i.e. that were used for one target more than others) are more likely to persist through the final repetition. 
 
 %while constructs like arbitrariness or stability have loomed over the theoretical analysis of conventions , it has been unclear how exactly to measure the extent to which these properties hold in a particular task and how they may evolve over the course of interaction. 
@@ -162,6 +163,7 @@ Raw word counts alone are not sufficient for disambiguating this simple model fr
 To move beyond word counts, we extracted part-of-speech tags and syntax trees from the text to understand which parts of utterances were being dropped, and in which sequence.
 We find that entire modifying phrases are likely to be dropped in clusters, leaving only open-class parts of speech (e.g. an adjective and noun) by the final repetition. 
 In Section \ref{sec:discussion}, we discuss several implications of these findings.
+Taken together, the 
 %In particular, we examine these questions using a web-based replication of the classic Tangrams task \citep{ClarkWilkesGibbs86_ReferringCollaborative}.
 
 

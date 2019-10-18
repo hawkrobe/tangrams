@@ -19,6 +19,8 @@
 \usepackage{todonotes}
 \graphicspath{{./figs/}}
 \newcommand{\rdh}[1]{\textcolor{Red}{[rdh: #1]}}  
+\newcommand{\ndg}[1]{\textcolor{green}{[ndg: #1]}}  
+
 
 % Update article type if known
 \papertype{Original Article}
@@ -78,7 +80,7 @@ The language we use changes over the course of conversation as we establish comm
 % \emph{How} the structure and content of natural language referring expressions change through continued interaction. %While such adaptation has been demonstrated under a variety of conditions, p
 Here we draw upon recent advances in natural language processing to provide a finer-grained characterization of the dynamics of this learning process.
 We release an open corpus ($>$15,000 utterances) of extended dyadic interactions in a classic repeated reference game task where pairs of partners had to coordinate on how to refer to initially difficult-to-describe tangram stimuli.
-We find that different pairs discover a wide variety of idiosyncratic but stable solutions to the problem of reference, consistent with viewing these pacts as ad hoc conventions. 
+We find that different pairs discover a wide variety of idiosyncratic but stable solutions to the problem of reference. %, consistent with viewing these pacts as ad hoc conventions. 
 Furthermore, these conventions are shaped by the communicative context: words that are more discriminative in the initial context (i.e. that are used for one target more than others) are more likely to persist through the final repetition.
 Finally, we find systematic structure in how a speaker's referring expressions become more efficient over time: syntactic units drop out in clusters following positive feedback from the listener, eventually leaving short labels containing open-class parts of speech.
 These findings provide a higher resolution look at the quantitative dynamics of \emph{ad hoc} convention formation and support further development of computational models of learning in communication. %: based on a shared history of usage, words systematically acquire new meaning to support more efficient communication with a partner.
@@ -115,14 +117,14 @@ These findings provide a higher resolution look at the quantitative dynamics of 
 
 Human language use is remarkably flexible. 
 We are able to coax new meanings out of existing words --- or even coin new ones --- to handle the diverse challenges encountered in everyday communication \citep{Clark83_NonceSense,davidson_nice_1986}.
-This flexibility is partially explained by one-shot pragmatic reasoning, which allows listeners to use context to infer an intended meaning even in cases of ambiguous or non-literal usage \citep{LascaridesCopestake98_PragmaticsWordMeaning,Glucksberg01_FigurativeLanguage,GoodmanFrank16_RSATiCS}.
-However, a rich theoretical thread in the literature has suggested that learning mechanisms may also play an important role, allowing speakers and listeners to dynamically adapt their representations of meaning over the course of an interaction \citep{BrennanClark96_ConceptualPactsConversation,pickering2004toward,delaney2019neural}.
+This flexibility is partially explained by \emph{de novo} pragmatic reasoning, which allows listeners to use context to infer an intended meaning even in cases of ambiguous or non-literal usage \citep{LascaridesCopestake98_PragmaticsWordMeaning,Glucksberg01_FigurativeLanguage,GoodmanFrank16_RSATiCS}.
+However, a rich theoretical thread has suggested that learning mechanisms may also play an important role, allowing speakers and listeners to dynamically adapt their representations of meaning over the course of an interaction \citep{BrennanClark96_ConceptualPactsConversation,pickering2004toward,delaney2019neural}.
 
 Two functional considerations motivate the need for continued learning in communication, even among adults.
-First, just as there is substantial phonetic variability across speakers with different accents \citep{kleinschmidt2019structure}, meanings may vary in meaning from speaker to speaker. 
+First, just as there is substantial phonetic variability across speakers with different accents \citep{kleinschmidt2019structure}, words may vary in meaning from speaker to speaker. 
 This variability is clear for cases like slang, technical lingo, nicknames, or colloquialisms \citep[e.g.][]{Clark98_CommunalLexicons}, but may extend even to more ordinary nouns and adjectives. 
-It may be difficult to know at the outset of an interaction exactly which meanings will be shared and which will not.
-Second, because we live in a changing environment, we often experience novel entities, events, thoughts, and feelings we want to talk about but do not already share (literal) words to express.
+It may be difficult to know at the outset of an interaction exactly which meanings will be shared and which will not, requiring ongoing adaptation.
+Second, because we live in a changing environment, we often experience novel entities, events, thoughts, and feelings that we want to talk about but do not already share (literal) words to express.
 Both of these obstacles can be overcome using feedback from one's partner to dynamically re-calibrate expectations about meaning.
 %A learning mechanism thus allows us to understand one another increasingly well and allows our knowledge of language to extend further. 
 
@@ -144,14 +146,15 @@ Third, they are \emph{sticky} in the sense that they persist through precedent w
 Taken together, these qualitative effects provide an empirical backbone that theories of communication must explain. %adaptation, common ground, and conventionalization 
 However, as theories are increasingly formalized as computational models that aim to make precise quantitative predictions, setting criteria to distinguish between them will depend critically upon a finer-grained, quantitative characterization of the dynamics of adaptation in rich natural language data.
 The computational techniques necessary to provide such a characterization were limited at the time of prior work, but have become newly tractable given developments in natural language processing (NLP).
+\ndg{this makes it sound like the main value of our data is testing computational models. that is a value, but i think the main value is having enough data to resolve more detailed theoretical questions. make this point? maybe say the actual number of data points from comparable previous studies and from ours, to give the idea?}
 In this paper, rather than arguing for a particular theory, we release a large corpus of repeated reference games and conduct a variety of analyses to address current gaps in measurement and establish a firmer foundation for future model development.
 Our analyses roughly divide into two broad categories corresponding to the dynamics of syntactic \emph{structure} and semantic \emph{content}.
 
 Our investigations of syntactic structure in Section \ref{sec:structure} focus on the process by which referring expressions are shortened to communicate the same idea more efficiently.
-One particularly simple model, for example, might predict that shortening is purely driven by a noisy-channel corruption process: at each repetition, each word from the previous repetition's utterance has some probability of being dropped.
+One particularly simple model, for example, might predict that shortening is purely driven by a random corruption process: at each repetition, each word from the previous repetition's utterance has some probability of being dropped.
 Raw word counts alone are not sufficient for disambiguating this simple model from more cognitively complex proposals.
 To move beyond word counts, we extracted part-of-speech tags and syntax trees from the text to understand which parts of utterances were being dropped, and in which sequence.
-We find that entire modifying phrases are likely to be dropped in clusters, leaving only open-class parts of speech (e.g. an adjective and noun) by the final repetition, and that the choice to shorten an utterance or not depends on listener feedback. 
+We find that entire modifying phrases are likely to be dropped in clusters, leaving only open-class parts of speech (e.g. an adjective and noun) by the final repetition, and that the choice to shorten an utterance or not depends on listener feedback. \ndg{this sentence sounds a little inconsistent... if we drop phrases we'll keep closed class parts of the remaining phrases. how do we end up with only open class?}
 
 Our investigations of semantic content in Section \ref{sec:content} revolve around the constructs of \emph{arbitrariness} and \emph{stability}, which have been central to accounts of convention since \cite{Lewis69_Convention}.
 Arbitrariness refers to the claim that multiple equally successful solutions exist in the space of possible conventions: there is no single optimal solution that all speakers should use.
@@ -405,7 +408,7 @@ It can be shown for our case that \emph{tf-idf} is the maximum likelihood estima
 \label{fig:distinct}
 \end{figure}
 
-Given this simple but principled measure of word distinctiveness at the speaker-by-speaker level -- the number of tangrams it was initially used with -- we were interested in the extent to which it accounts for conventionalization, the probability that a word in the director's initial description is preserved until the end of the game. 
+Given this simple but principled measure of word distinctiveness at the speaker-by-speaker level -- the number of tangrams it was initially used with -- we were interested in the extent to which it accounts for conventionalization, the probability that a word in the director's initial description is preserved until the end of the game. 
 More than half of the words used to refer to a tangram on the final repetition (57\%) appeared in the initial utterance\footnote{The 43\% of final repetition words that did not exactly match were sometimes synonyms or otherwise semantically related to words used on the first repetition, e.g. ``foot'' on the first repetition vs. ``leg'' on the last. In other cases, the labels used at the end were introduced after the first repetition, e.g. one pair only started using the conventionalized label ``portrait'' on repetition 3.}.
 We thus restricted our attention to this subset of words, coding them with a 1 if they later appeared at the final repetition and 0 if they did not.
 We then ran a mixed-effects logistic regression including a fixed effect of initial distinctiveness and maximal random effect structure with intercepts and slopes for each tangram and pair of participants.

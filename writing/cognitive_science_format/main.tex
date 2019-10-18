@@ -374,9 +374,9 @@ This result accords with early observations by \cite{Carroll80_NamingHedges}, wh
 \section{Results: characterizing the dynamics of semantic content}
 \label{sec:content} 
 
-Having established the structural changes that transform long initial descriptions into efficient labels, we now turn to the actual semantic content of the referring expressions speakers chose to use at each point. 
+Having established the structural changes that transform long initial descriptions into efficient labels, we now move beyond the phenomenon of increasing \emph{efficiency} to examine how the same learning mechanisms shape the \emph{semantic content} of  the referring expressions speakers chose to use over time.
 We focus on two core questions about how this content changes over time: (1) why are some words from a speaker's initial description more likely than others to become conventionalized in their final labels, and (2) what trajectory do these conventions take as they stabilize within interactions and diverge from other interactions?
-In exploring these questions, we find support for a view of adaptation as a path-dependent process of gradually paring down redundant information and honing in on the most relevant features for the given context.
+In exploring these questions, we find support for a view of adaptation as a path-dependent process of gradually paring down redundant information and coalescing around the most diagnostic features for the given context.
 
 \subsection{Initially distinctive words are more likely to conventionalize}
 \label{sec:distinctive}
@@ -519,52 +519,53 @@ We found a strong negative linear fixed effect of repetition on between-game sem
 We again conducted a permutation test to compare this $t$ value with what would be expected from scrambling utterances across repetitions for each pair and target.
 We found that the estimated slope was highly unlikely under this distribution $(CI = [-2.5, 2.9],~p~<~0.001)$. 
 
-\subsection{Discussion}
-
-In this section, we moved beyond the phenomenon of increasing \emph{efficiency} to examine how the same learning mechanisms shape the \emph{semantic content} of referring expressions over time.
-First, we found that these mechanisms selectively preserved the more informative, distinguishing words from an initial utterance while allowing less informative words to be dropped. 
-The conventions formed through this process thus have the property of being both sensitive to the communicative context, since different words would be distinguishing in different contexts, and  sensitive to the speaker's initial preferences over descriptions.
-Second, we found evidence of arbitrariness and stability using a measure of similarity in semantic space: different pairs discovered different solutions to the same coordination problem, and these solutions became increasingly stable once established. 
-
-We address two possible concerns about these analyses in the Appendix.
-First, in Appendix A, we provide an alternative diagnostic for the properties of arbitrariness and stability based on the discrete distributions of words appearing in each utterance instead of continuous utterance embeddings.
-This analysis provides converging evidence and does not depend upon the quality or quirks of the semantic space provided by GloVe vectors.
-Second, in Appendix B, we report additional baselines controlling for the method we used to form utterance embeddings by averaging word embeddings.
-This analysis also allows us to examine the overlap in the utterances a single speaker initially uses to refer to the 12 different tangrams.
-Surprisingly, we find that this within-game overlap is roughly the same as the initial overlap between the utterances used to refer to a single tangram by the different speakers in our corpus, but it diverges much more strongly (consistent with our findings in Section \ref{sec:distinctive}).
-These baselines are therefore consistent with an intriguing contrast between the differentiation processes within an interaction and across interactions.
-Just as different speakers initially mention many of the same properties but diverge to distinct labels for the same tangram, a single speaker begins by re-using certain attributes for several tangrams but rapidly diverges to distinctive labels.
+%First, we found that these mechanisms selectively preserved the more informative, distinguishing words from an initial utterance while allowing less informative words to be dropped. 
+%The conventions formed through this process thus have the property of being both sensitive to the communicative context, since different words would be distinguishing in different contexts, and  sensitive to the speaker's initial preferences over descriptions.
+%Second, we found evidence of arbitrariness and stability using a measure of similarity in semantic space: different pairs discovered different solutions to the same coordination problem, and these solutions became increasingly stable once established. 
 
 \section{General Discussion}
 \label{sec:discussion}
 
 Our language changes as we get to know a social partner.
 We gradually learn what is meaningful to them and establish common ground.
-In this paper, we characterized the dynamics of this process in a classic repeated reference game.
+In this paper, we characterized the quantitative dynamics of this process by examining behavior in a new corpus of natural-language repeated reference games.
+This corpus is sufficiently larger than previous studies to provide new traction toward resolving detailed theoretical questions about adaptation in communication.
 %First, we found that pairs of participants systematically tend to conventionalize words that are more distinctive in the initial context.
 %Using a vector space measure of semantic content, we found this process leads to stable usage within pairs but multiple equilibria across different pairs.
-Second, directors reduce the length of their descriptions over the course of the task in a way that is sensitive to evidence of matcher understanding and syntactically structured to omit entire meaningful units.
-In sum, these results establish new benchmark phenomena that computational models of adaptation and convention formation must account for.
+We find that directors not only reduce the length of their descriptions over the course of the task but do so in a way that is sensitive to evidence of matcher understanding and structured to omit redundant syntactic chunks of information, leaving only the most distinguishing words.
+The labels formed through this process are thus influenced both by the speaker's general-purpose beliefs about good descriptions and by the communicative context, since different words would be distinguishing in different contexts. %, and  .
+Finally, these labels display quantitative signatures of increasing \emph{arbitrariness} in the sense that different pairs increasingly diverge to distinct solutions, and \emph{stability} in the sense that speakers do not deviate from a solution once it is discovered.
 
-\todo[inline]{Make this whole section less obscure}
-Our results in this paper also raise a subtle cognitive question about classic definitional notions of arbitrariness in convention \citep{Lewis69_Convention}, which hold that there must counterfactually exist an alternative solution to the coordination problem for any particular solution to be conventional.
-How can such systematicity in the formation process co-exist with conventionality?
-The symmetry of different solutions must break somewhere to account for the empirical existence of many alternative but equally successful referential conventions at the population level, but our results are consistent with two different cognitive realities \emph{within} games.
-
-One possibility is that this arbitrariness is a product of substantial variability in a population of fairly rigid speakers.
-That is, each individual speaker may have strong but idiosyncratic initial preferences for how to refer to each tangram. 
-They may begin with additional elaboration given their representation of uncertainty about whether these strong preferences are shared, and in the absence of misunderstandings they will persist with their preferred and pre-meditated label.
-A second possibility, reflected in recent probabilistic models of convention formation \cite{smith_learning_2013,hawkins_convention-formation_2017,Brochagen17}, is that the population of speakers is homogenous but only weakly constrained by prior preferences. 
-That is, speakers may not only be uncertain of which messages their partner will understand, but are themselves unclear on an appropriate way to refer to these unfamiliar objects.
-If speakers initially produce an utterance from a broad distribution of acceptable labels, and update their distribution on subsequent repetitions, different pairs may end up in different equilibria due to the path-dependence of the process. 
-In this way, the symmetry may be broken through randomness in the sampling step (or in the updating step, if learning is stochastic.)
+These findings clarify the theoretical properties of adaptation and establish new benchmarks for computational models of adaptation and convention formation.
+In particular, our findings are consistent with viewing adaptation as a process of \emph{ad hoc convention formation}, as general-purpose semantics are gradually tailored to the needs of the current interaction.
+At the same time, these findings raise new and subtle theoretical questions about the cognitive mechanisms driving the tendency toward communicative efficiency within a single interaction.
+One key question concerns the observed property of arbitrariness: what breaks the `symmetry' among different possible descriptions and leads different pairs to diverge from one another?
+One possibility is that arbitrariness is a product of variability in a population of fairly rigid speakers.
+That is, each individual speaker may initially have strong but idiosyncratic initial preferences for how to refer to each tangram. 
+Under this possibility, speakers begin with long, elaborated descriptions due to uncertainty about whether these strong preferences will be shared, but in the absence of misunderstandings will  with their preferred and pre-meditated label.
+A second possibility is that the population of speakers is homogenous but only weakly constrained by prior preferences. 
+Speakers may not only be uncertain of which messages their partner will understand, but are \emph{themselves} unclear on an appropriate way to refer to unfamiliar objects.
+If speakers initially produce an utterance from a broad distribution of acceptable labels, and update their distribution on subsequent repetitions, different pairs may end up in different equilibria due to randomness in sampling from their initial distribution\footnote{This is the mechanism proposed in recent probabilistic models of convention formation \citep{smith_learning_2013,hawkins_convention-formation_2017,Brochagen17}, which have captured several of these properties in simulations.}. 
+%That is, the symmetry may be broken through randomness in the sampling step (or in the updating step, if learning is stochastic.)
 These possibilities are not mutually exclusive.
-Our results rule out the possibility of a homogeneously rigid population, but it is possible that some speakers have strong preferences about labels while others are uncertain. Recent probabilistic models of convention formation however, 
+Our results rule out the possibility of a homogeneously rigid population, but it is possible that some speakers have strong preferences about labels while others are initially more uncertain. 
 
-While prior empirical work has indirectly tested initial expectations and  preferences -- for instance, by asking directors to either produce descriptions for others or for themselves in the future \citep{FussellKrauss89_IntendedAudienceCommonGround} -- an important direction for further work is to design experiments that disentangle these possibilities.
-For instance, a Bayesian truth serum approach \citep{prelec2004bayesian} could estimate both an individual's own subjective preferences and their expectations about whether these would be shared by others.
- following recent attempts to estimate the true variability across speakers in phonetic properties of speech production \citep{kleinschmidt2019structure}, it would be valuable to estimate how much variability in semantic expectations there really is in the population \citep{FurnasEtAl87_VocabularyProblem}.
- 
+One way for future work to disentangle these possibilities is to elicit better measurements of initial preferences.
+For instance, an approach proposed by \cite{FussellKrauss89_IntendedAudienceCommonGround} asked directors to either produce descriptions for others or for themselves in the future, and Bayesian truth serum approaches \citep{prelec2004bayesian} estimate both an individual's own subjective preferences and their expectations about whether these would be shared by others.
+Finally, it would be valuable to estimate how much variability in semantic expectations there really is in the population \citep{FurnasEtAl87_VocabularyProblem,kleinschmidt2019structure}.
+
+We address two possible concerns about our analyses in the Appendix.
+First, in Appendix A, we provide an alternative diagnostic for the properties of arbitrariness and stability based on the \emph{discrete distributions} of words appearing in each utterance instead of continuous utterance embeddings.
+This analysis provides converging evidence and does not depend upon the quality of the semantic space provided by GloVe vectors.
+Second, in Appendix B, we report additional baselines controlling for the method we used to form utterance embeddings by averaging word embeddings.
+This analysis also allows us to examine the overlap in the utterances a single speaker initially uses to refer to the 12 different tangrams.
+Surprisingly, we find that this within-game overlap is roughly the same as the initial overlap between the utterances used to refer to a single tangram by the different speakers in our corpus, but it diverges much more strongly (consistent with our findings in Section \ref{sec:distinctive}).
+These baselines are therefore consistent with an intriguing contrast between the differentiation processes within an interaction and across interactions.
+Just as different speakers initially mention many of the same properties but diverge to distinct labels for the same tangram, a single speaker begins by re-using certain attributes for several tangrams but rapidly diverges to distinctive labels.
+
+%Our results in this paper also raise a subtle cognitive question about classic definitional notions of arbitrariness in convention \citep{Lewis69_Convention}, which hold that there must counterfactually exist an alternative solution to the coordination problem for any particular solution to be conventional.
+
+
 While referring to individual objects is a core function of language, our stimuli also limit the kinds of conventions that can be studied. 
 In particular, it is likely our participants converged to distinctive `names' because the targets were distinctive objects.
 If the targets of communication were instead objects that varied along clear latent dimensions, scenes containing multiple objects in relation to one another, or videos depicting activities unfolding over time, participants might instead have converged on more compositional systems making use of adjectives, verbs, and prepositions.

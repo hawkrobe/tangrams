@@ -195,8 +195,8 @@ A total of 480 participants (218 in the \emph{free-matching} version and 262 in 
 
 After excluding games that terminated before the completion of the experiment due to server error or network disconnection (40 in \emph{free matching} and 33 in \emph{cued}), as well as games where participants reported a native language different from English (2 in \emph{free matching} and 3 in \emph{cued}), we implemented an additional exclusion criterion based on accuracy. 
 % Because the classic work using the repeated reference game paradigm reported near ceiling accuracy for all pairs, and b
-We used a 66/66 rule, excluding pairs that got fewer than 66\% of the tangrams correct ($\ge8$ of 12) on more than 66\% of blocks ($\ge4$ of 6). 
-While the most pairs were near ceiling accuracy by the final repetition, this rule excluded 11 in \emph{free matching} and 8 in \emph{cued} who appeared to be guessing or rushing to completion. 
+We used a 66/66 rule, excluding pairs that got fewer than 66\% of the tangrams \ndg{items? trials?} correct ($\ge8$ of 12) \ndg{this is the exlcusion criteria, so should it be less than 8?} on more than 66\% of blocks ($\ge4$ of 6). 
+While most pairs were near ceiling accuracy by the final repetition, this rule excluded 11 in \emph{free matching} and 8 in \emph{cued} who appeared to be guessing or rushing to completion. 
 After all exclusions, we were left with a \emph{free matching} corpus containing a total of 8,639 messages over 56 complete games and a \emph{cued} corpus containing 9,164 messages over 83 games.
 
 \subsection{Stimuli \& Procedure}\label{stimuli}
@@ -208,7 +208,7 @@ Both participants could freely use the chat box to communicate at any time.
 In the \emph{free-matching} version, our procedure closely followed \cite{ClarkWilkesGibbs86_ReferringCollaborative}. 
 The director and matcher began each trial with scrambled boards. 
 The director's tangrams were fixed in place, but the matcher's could be clicked and dragged into new positions.
-The players was instructed to communicate through the chat box such that the matcher could rearrange their shapes to match the order of the director's board.
+The players were instructed to communicate through the chat box such that the matcher could rearrange their shapes to match the order of the director's board.
 When the players were satisfied that their boards matched, the matcher clicked a `submit' button that gave players batched feedback on their score (out of 12) and scrambled the tangrams for the next round. 
 After six rounds, players were redirected to a short exit survey. 
 Cells were labeled with fixed numbers from one to twelve in order to help participants easily refer to locations in the grid.
@@ -229,13 +229,13 @@ The grid of tangrams was scrambled on every trial, and participants were given f
 
 \subsection{Data pre-processing}
 
-We used a three step pre-processing pipeline to prepare our corpus for subsequent analyses. Unless otherwise noted, we used the open-source Python package \texttt{spaCy} to implement all NLP tasks. 
+We used a three step pre-processing pipeline to prepare our corpus for subsequent analyses. Unless otherwise noted, we used the open-source Python package \texttt{spaCy} to implement all NLP analyses. 
 
 \begin{enumerate}
 
 \item \textbf{Spell-checking and regularization}: We conservatively extracted all tokens that did not exist in the vocabulary of the smallest available ($\sim$ 50,000 word) \texttt{spaCy} model and passed them through the SymSpell spell-checker \footnote{\texttt{https://github.com/wolfgarbe/SymSpell}. We used the smallest model because larger models include typo forms (e.g. `teh') in their vocabulary and thus cannot catch errors.}. These suggested corrections were then sequentially presented to the first author and either accepted or overridden at their judgement. This process constructed a reproducible spell-correction dictionary we applied to our dataset.
 
-\item \textbf{Cleaning unrelated discourse}: Because we allowed our participants to interact in real-time through the chat box, many pairs produced text unrelated to the task of referring to the current target (e.g. greeting one another, asking personal questions, commenting on the length of the task or the results of previous trials). We wanted to ensure that our results were not confounded by patterns in this kind of discourse across the task, and that the semantic content we observe on a particular trial is in fact being used to refer to the current target rather than task-irrelevant topics or, as we found in some cases, referring to other tangrams while debriefing previous errors. We therefore conducted a manual review removing any text not directly referring to the current target. For example, utterances like ``the dancing woman'' and ``this is the one we got wrong last time'' were kept in because they were referring to properties of the current tangram, but utterances like ``good job'' and ``they'll go quicker if you remember what I say!'' were not. We also saved these corrections in a dictionary.
+\item \textbf{Cleaning unrelated discourse}: Because we allowed our participants to interact in real-time through the chat box, many pairs produced text unrelated to the task of referring to the current target (e.g. greeting one another, asking personal questions, commenting on the length of the task or the results of previous trials). We wanted to ensure that our results were not confounded by patterns in this kind of discourse across the task, and that the semantic content we observe on a particular trial is in fact being used to refer to the current target rather than task-irrelevant topics or, as we found in some cases, referring to other tangrams while debriefing previous errors. We therefore conducted a manual review removing any text not directly referring to the current target. For example, utterances like ``the dancing woman'' and ``this is the one we got wrong last time'' were kept in because they were referring to properties of the current tangram, but utterances like ``good job'' and ``they'll go quicker if you remember what I say!'' were not. We also saved these corrections in a dictionary. \ndg{say something about how much was removed.}
 
 \item \textbf{Collapsing multiple messages within a trial}: Finally, some directors used our chat box like an texting interface, hitting the enter key between every micro-phrase of text. This made it difficult to interpret the output of syntactic parses. We therefore collapsed repeated messages by a participant within a trial into a single message by inserting commas between successive messages. We chose to use commas because it tends to maintain grammaticality and does not inflate word counts.
 

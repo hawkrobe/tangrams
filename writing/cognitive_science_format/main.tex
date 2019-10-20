@@ -143,23 +143,26 @@ Second, the resulting labels are \emph{partner-specific} in the sense that they 
 Third, they are \emph{sticky} in the sense that they persist through precedent with the same partner even after the referential context changes \citep{BrennanClark96_ConceptualPactsConversation}, and are readily extended to similar objects \citep{MarkmanMakin98_ReferentialCommunicationCategory}.
 
 %A variety of models, at varying levels of formal precision, have been proposed to explain these qualitative effects.
-Taken together, these qualitative effects provide an empirical backbone that theories of communication must explain. %adaptation, common ground, and conventionalization 
-However, as theories are increasingly formalized as computational models that aim to make precise quantitative predictions, setting criteria to distinguish between them will depend critically upon a finer-grained, quantitative characterization of the dynamics of adaptation in rich natural language data.
-The computational techniques necessary to provide such a characterization were limited at the time of prior work, but have become newly tractable given developments in natural language processing (NLP).
-\ndg{this makes it sound like the main value of our data is testing computational models. that is a value, but i think the main value is having enough data to resolve more detailed theoretical questions. make this point? maybe say the actual number of data points from comparable previous studies and from ours, to give the idea?}
-In this paper, rather than arguing for a particular theory, we release a large corpus of repeated reference games and conduct a variety of analyses to address current gaps in measurement and establish a firmer foundation for future model development.
-Our analyses roughly divide into two broad categories corresponding to the dynamics of syntactic \emph{structure} and semantic \emph{content}.
+Taken together, these qualitative effects provide an empirical backbone for theories of communication to explain. %adaptation, common ground, and conventionalization 
+However, as theories are increasingly formalized as computational models making more precise quantitative predictions, setting criteria to distinguish between them will depend critically upon resolving more detailed theoretical questions about the dynamics of adaptation in natural language communication.
+In this paper, rather than arguing in favor of particular theory, we release a new, open corpus of repeated reference games and conduct a variety of analyses to address current gaps in measurement and establish a firmer theoretical foundation facilitating future modeling work.
+In particular, we address two methodological challenges that have limited the ability of previous studies to provide a sufficiently fine-grained characterization of behavior.
+First, we need more data.
+Recent technical developments have allowed interactive multi-player experiments to be run on the web \citep{Hawkins15_RealTimeWebExperiments}, boosting sample sizes by an order of magnitude. 
+For comparison, seminal work by \cite{ClarkWilkesGibbs86_ReferringCollaborative} used a sample of 8 pairs of participants, while our confirmatory sample alone contains 83 pairs.
+Second, the computational techniques needed to work with rich natural language data were limited at the time of prior work, but have become newly tractable given developments in natural language processing (NLP).
+Our analyses roughly divide into two broad categories, corresponding to the dynamics of syntactic \emph{structure} and semantic \emph{content}.
 
 Our investigations of syntactic structure in Section \ref{sec:structure} focus on the process by which referring expressions are shortened to communicate the same idea more efficiently.
 One particularly simple model, for example, might predict that shortening is purely driven by a random corruption process: at each repetition, each word from the previous repetition's utterance has some probability of being dropped.
 Raw word counts alone are not sufficient for disambiguating this simple model from more cognitively complex proposals.
 To move beyond word counts, we extracted part-of-speech tags and syntax trees from the text to understand which parts of utterances were being dropped, and in which sequence.
-We find that entire modifying phrases are likely to be dropped in clusters, leaving only open-class parts of speech (e.g. an adjective and noun) by the final repetition, and that the choice to shorten an utterance or not depends on listener feedback. \ndg{this sentence sounds a little inconsistent... if we drop phrases we'll keep closed class parts of the remaining phrases. how do we end up with only open class?}
+In contrast to random corruption, we find that clauses and modifiers tend to be dropped in clusters, preferentially leaving open-class parts of speech (e.g. an adjective and noun) by the final repetition, and that the choice to shorten an utterance or not depends on sources of listener feedback.  %\ndg{this sentence sounds a little inconsistent... if we drop phrases we'll keep closed class parts of the remaining phrases. how do we end up with only open class?}
 
 Our investigations of semantic content in Section \ref{sec:content} revolve around the constructs of \emph{arbitrariness} and \emph{stability}, which have been central to accounts of convention since \cite{Lewis69_Convention}.
-Arbitrariness refers to the claim that multiple equally successful solutions exist in the space of possible conventions: there is no single optimal solution that all speakers should use.
+Arbitrariness refers to the claim that multiple equally successful solutions exist in the space of possible conventions: there is no single optimal solution that all speakers should objectively use.
 Stability refers to the claim that, once a solution has been found, speakers should not deviate from it.
-Our contribution is to operationalize these claims in the high-dimensional space of vector embeddings for referring expressions (e.g. GloVe vectors).
+Our contribution is to operationalize these claims in the high-dimensional space of vector embeddings for referring expressions (i.e. GloVe embeddings).
 By measuring the similarity between referring expressions in this space, we show that signatures of arbitrariness and stability increase over the course of the interaction.
 We also clarify the (non-arbitrary) processes shaping which words eventually become conventions.
 In particular, we test the prediction that pragmatic pressures to be informative in context lead more discriminative words to conventionalize \citep{KirbyTamarizCornishSmith15_CompressionCommunication,GibsonEtAl17_ColorNamingUse,hawkins_emerging_abstractions_2018}. 
@@ -176,8 +179,8 @@ Taken together, our findings characterize core processes operating within the mi
 
 We developed two variants of the repeated reference task used in classic work by \cite{ClarkWilkesGibbs86_ReferringCollaborative}: a relatively unconstrained \emph{free-matching} version that more closely replicates classic in-lab designs, and a more tightly controlled \emph{cued} version. 
 Most importantly, the \emph{cued} version allows us to identify which object each utterance refers to, supporting higher-resolution analyses at the object-by-object level.
-We considered the free-matching version to be an exploratory pilot sample and subsequently pre-registered our predictions for the \emph{cued} version\footnote{https://osf.io/2zwmx}.
-While we are also releasing the corpus from the free-matching version, we restrict our analyses to the \emph{cued} version throughout the paper as a confirmatory sample.
+We considered the free-matching version to be an exploratory pilot sample and subsequently pre-registered several planned analyses for the \emph{cued} version\footnote{https://osf.io/2zwmx}.
+While we are also releasing the corpus from the free-matching version, we restrict our analyses to the \emph{cued} version throughout the paper as a cleaner confirmatory sample.
 
 \begin{figure}
 \centering
@@ -189,15 +192,15 @@ While we are also releasing the corpus from the free-matching version, we restri
 
 \subsection{Participants}\label{participants}
 
-A total of 480 participants (218 in the \emph{free-matching} version and 262 in the \emph{cued} version) were recruited from Amazon's Mechanical Turk and paired into dyads to play a real-time communication game using the software framework for running multi-player web experiments described by \cite{Hawkins15_RealTimeWebExperiments}. 
+A total of 480 participants (218 in the \emph{free-matching} version and 262 in the \emph{cued} version) were recruited from Amazon's Mechanical Turk and paired into dyads to play a real-time communication game. 
 
 \subsection{Exclusion criteria}
 
 After excluding games that terminated before the completion of the experiment due to server error or network disconnection (40 in \emph{free matching} and 33 in \emph{cued}), as well as games where participants reported a native language different from English (2 in \emph{free matching} and 3 in \emph{cued}), we implemented an additional exclusion criterion based on accuracy. 
 % Because the classic work using the repeated reference game paradigm reported near ceiling accuracy for all pairs, and b
-We used a 66/66 rule, excluding pairs that got fewer than 66\% of the tangrams \ndg{items? trials?} correct ($\ge8$ of 12) \ndg{this is the exlcusion criteria, so should it be less than 8?} on more than 66\% of blocks ($\ge4$ of 6). 
+We used a 66/66 rule, excluding pairs that got fewer than 66\% of trials correct ($\le8$ of 12)  on more than 66\% of blocks ($\ge4$ of 6). 
 While most pairs were near ceiling accuracy by the final repetition, this rule excluded 11 in \emph{free matching} and 8 in \emph{cued} who appeared to be guessing or rushing to completion. 
-After all exclusions, we were left with a \emph{free matching} corpus containing a total of 8,639 messages over 56 complete games and a \emph{cued} corpus containing 9,164 messages over 83 games.
+After all exclusions, we were left with a \emph{free matching} corpus containing a total of 8,639 ($\sim$ 51,271 words) messages over 56 complete games and a \emph{cued} corpus containing 9,164 messages ($\sim$ 46,000 words) over 83 games.
 
 \subsection{Stimuli \& Procedure}\label{stimuli}
 
@@ -233,9 +236,9 @@ We used a three step pre-processing pipeline to prepare our corpus for subsequen
 
 \begin{enumerate}
 
-\item \textbf{Spell-checking and regularization}: We conservatively extracted all tokens that did not exist in the vocabulary of the smallest available ($\sim$ 50,000 word) \texttt{spaCy} model and passed them through the SymSpell spell-checker \footnote{\texttt{https://github.com/wolfgarbe/SymSpell}. We used the smallest model because larger models include typo forms (e.g. `teh') in their vocabulary and thus cannot catch errors.}. These suggested corrections were then sequentially presented to the first author and either accepted or overridden at their judgement. This process constructed a reproducible spell-correction dictionary we applied to our dataset.
+\item \textbf{Spell-checking and regularization}: We conservatively extracted all tokens that did not exist in the vocabulary of the smallest available ($\sim$ 50,000 word) \texttt{spaCy} model and passed them through the SymSpell spell-checker \footnote{\texttt{https://github.com/wolfgarbe/SymSpell}. We used the smallest model because larger models include typo forms (e.g. `teh') in their vocabulary and thus cannot catch errors.}. These suggested corrections were then sequentially presented to the first author and either accepted or overridden at their judgement. This process constructed a spell-correction dictionary containing 677 corrections. 
 
-\item \textbf{Cleaning unrelated discourse}: Because we allowed our participants to interact in real-time through the chat box, many pairs produced text unrelated to the task of referring to the current target (e.g. greeting one another, asking personal questions, commenting on the length of the task or the results of previous trials). We wanted to ensure that our results were not confounded by patterns in this kind of discourse across the task, and that the semantic content we observe on a particular trial is in fact being used to refer to the current target rather than task-irrelevant topics or, as we found in some cases, referring to other tangrams while debriefing previous errors. We therefore conducted a manual review removing any text not directly referring to the current target. For example, utterances like ``the dancing woman'' and ``this is the one we got wrong last time'' were kept in because they were referring to properties of the current tangram, but utterances like ``good job'' and ``they'll go quicker if you remember what I say!'' were not. We also saved these corrections in a dictionary. \ndg{say something about how much was removed.}
+\item \textbf{Cleaning unrelated discourse}: Because we allowed our participants to interact in real-time through the chat box, many pairs produced text unrelated to the task of referring to the current target (e.g. greeting one another, asking personal questions, commenting on the length of the task or the results of previous trials). We wanted to ensure that our results were not confounded by patterns in this kind of discourse across the task, and that the semantic content we observe on a particular trial is in fact being used to refer to the current target rather than task-irrelevant topics or, as we found in some cases, referring to other tangrams while debriefing previous errors. We therefore conducted a manual review removing any text not directly referring to the current target. For example, utterances like ``the dancing woman'' and ``this is the one we got wrong last time'' were kept in because they were referring to properties of the current tangram, but words like ``yeah'' or ``ok'' and messages like ``good job'' and ``they'll go quicker if you remember what I say!'' were not. This review affected 1,427 messages, and we also saved these corrections in a dictionary. 
 
 \item \textbf{Collapsing multiple messages within a trial}: Finally, some directors used our chat box like an texting interface, hitting the enter key between every micro-phrase of text. This made it difficult to interpret the output of syntactic parses. We therefore collapsed repeated messages by a participant within a trial into a single message by inserting commas between successive messages. We chose to use commas because it tends to maintain grammaticality and does not inflate word counts.
 
@@ -547,12 +550,12 @@ A second possibility is that the population of speakers is homogenous but only w
 Speakers may not only be uncertain of which messages their partner will understand, but are \emph{themselves} unclear on an appropriate way to refer to unfamiliar objects.
 If speakers initially produce an utterance from a broad distribution of acceptable labels, and update their distribution on subsequent repetitions, different pairs may end up in different equilibria due to randomness in sampling from their initial distribution\footnote{This is the mechanism proposed in recent probabilistic models of convention formation \citep{smith_learning_2013,hawkins_convention-formation_2017,Brochagen17}, which have captured several of these properties in simulations.}. 
 %That is, the symmetry may be broken through randomness in the sampling step (or in the updating step, if learning is stochastic.)
+
 These possibilities are not mutually exclusive.
 Our results rule out the possibility of a homogeneously rigid population, but it is possible that some speakers have strong preferences about labels while others are initially more uncertain. 
-
 One way for future work to disentangle these possibilities is to elicit better measurements of initial preferences.
 For instance, an approach proposed by \cite{FussellKrauss89_IntendedAudienceCommonGround} asked directors to either produce descriptions for others or for themselves in the future, and Bayesian truth serum approaches \citep{prelec2004bayesian} estimate both an individual's own subjective preferences and their expectations about whether these would be shared by others.
-Finally, it would be valuable to estimate how much variability in semantic expectations there really is in the population \citep{FurnasEtAl87_VocabularyProblem,kleinschmidt2019structure}.
+%Finally, it would be valuable to estimate how much variability in semantic expectations there really is in the population \citep{FurnasEtAl87_VocabularyProblem,kleinschmidt2019structure}.
 
 We address two possible concerns about our analyses in the Appendix.
 First, in Appendix A, we provide an alternative diagnostic for the properties of arbitrariness and stability based on the \emph{discrete distributions} of words appearing in each utterance instead of continuous utterance embeddings.

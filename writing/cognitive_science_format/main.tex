@@ -255,7 +255,8 @@ participants in our task used fewer words overall than reported by \cite{ClarkWi
 This difference is likely due to the text-based (vs.~spoken) interface.
 The following analyses break down this general gain in efficiency into a finer-grained set of phenomena concerning the \emph{structure} of referring expressions over time.
 %In particular, we examine \emph{how} different pairs reduce the length of their utterances.
-What sequence of transformations is applied to reduce long initial descriptions into shorter final ones?
+What sequence of transformations do descriptions undergo over the course of repeated reference?
+
 
 \begin{figure}[t]
 \centering
@@ -274,11 +275,12 @@ To test this prediction, we coded whether the matcher sent a message or not on e
 We found that the probability of the matcher sending a message decreased significantly over the game $(b=-0.84, t = -9.1, p < 0.001$; Fig. \ref{fig:feedback}B).
 In aggregate, 76\% of matchers send at least one message in the first repetition block, but only 6\% sent a message in the last block.
 These rates found in our online text-based replication are lower overall than in-person lab experiments, but we nonetheless strongly replicated the overall trend.
+\ndg{i'm curious what the back channel messages contained. any qualitative stats on those? eg how may questions? (don't need this to submit, i'm just curious...)}
 
 Next, we examined the extent to which directors were sensitive to feedback about the matcher's selection.
 If the matcher failed to select the correct target, the director may take this as evidence that their description was insufficient and attempt to provide more detail the next time they must refer to the same tangram. 
 If the matcher is correct, on the other hand, the director may take this as evidence of understanding and reduce their level of detail on future repetitions.
-We tested these predictions by comparing the proportional change in utterance length on the repetition after an error against the change in length after a correct response (i.e. $(n_t - n_{t-1})/n_{t-1}$).
+We tested these predictions by comparing the proportional change in utterance length (i.e. $(n_t - n_{t-1})/n_{t-1}$) on the repetition after an error against the change in length after a correct response.
 This measure could be positive, indicating a net increase in utterance length, or negative, indicating a reduction.
 
 We fit a mixed-effects regression model predicting this measure with an effect-coded categorical fixed effect of feedback on the previous repetition and a (centered) continuous effect of repetition number, including random intercepts and effects of feedback for each interaction.
@@ -286,6 +288,8 @@ We found a significant main effect of feedback, even controlling for repetition:
 Indeed, directors were more likely on average to \emph{add} words on the repetition after an error at any point in the game.
 Because repetitions of the same tangram were spaced out and errors were relatively rare, this effect is unlikely to simply reflect heightened attention on trials after an error.
 Instead, this pattern of results is consistent with sensitivity to tangram-specific evidence of the matcher's understanding.
+\ndg{did they also add words to the trial (not repetition) after an error? more or less for next trial than next repetition?}
+
 
 %\begin{figure}[t]
 %\centering
@@ -327,14 +331,15 @@ Instead, this pattern of results is consistent with sensitivity to tangram-speci
 \paragraph{Reduction in parts of speech}
 
 
-The first level of granularity concerns which \emph{kinds} of words are most likely to be dropped. 
+We first explore which \emph{kinds} of words are most likely to be dropped. 
 We used the SpaCy part-of-speech tagger \citep{spacy2} to count the number of words belonging to different parts of speech in each message.
 In Fig. \ref{fig:pos}A, we show the shifting proportions of different parts of speech at each repetition.
 We find that nouns account for proportionally more of the words being used over time, while determiners and prepositions account for fewer.
 To test which kinds of words are more likely to be dropped, we measured the percent reduction in the number of words in each part of speech from the first repetition to the sixth repetition. 
-We find that determiners (`the', `a', `an') are the most likely class of words to be dropped (90\%) and nouns (`dancer', `rabbit') are the least likely to be dropped (61\%). % with only an Y\% rate. 
+We find that determiners (`the', `a', `an') are the most likely class of words to be dropped (90\%) \ndg{looks like pronouns from the fig?} and nouns (`dancer', `rabbit') are the least likely to be dropped (61\%). % with only an Y\% rate. 
 More generally, closed-class parts of speech, including function words like determiners, are strictly more likely to be dropped than open-class parts of speech (Fig. \ref{fig:pos}B).
-Because open-class parts of speech are statistically more likely to supply \emph{distinctive} words than closed-class parts of speech, these structural considerations may contribute to the patterns in distinctiveness reported in section \ref{sec:distinctive}.
+Open-class parts of speech are statistically more likely to supply \emph{distinctive} words than closed-class parts of speech, perhaps accounting for why they are dropped. We return to the role of distinctiveness in section \ref{sec:distinctive}.
+%these structural considerations may contribute to the patterns in distinctiveness reported in section \ref{sec:distinctive}.
 
 
 \begin{figure}[t!]
@@ -347,11 +352,11 @@ Because open-class parts of speech are statistically more likely to supply \emph
 One possible interpretation of these findings is that reduction may be driven mostly by the loss of function words as directors shift to a less-grammatical shorthand over the course of the task.
 However, when examining the n-grams most likely to be dropped (see Table \ref{tab:words}), we find that many of the most dropped closed-class words are used to form conjunctions (`and') or prepositional phases (`of', `with').
 Others are modifiers (`the right \dots'). 
-These examples suggest an alternative explanation: the higher reduction of closed-class function words may be a consequence of entire meaningful grammatical units being dropped at once.
-If initial descriptions tend to be syntactically complex, combining multiple partially redundant sources of information for identifying the target, then the director may omit entire modifying clauses with additional evidence of a matcher's understanding.
+These examples suggest an alternative explanation: the higher reduction of closed-class function words may be a consequence of entire meaningful grammatical units (e.g.~clauses) being dropped at once.
+If initial descriptions tend to be syntactically complex because they are redundant, combining multiple sources of information for identifying the target, then the director may omit entire modifying clauses when evidence suggests that the matcher understands.
 
 \paragraph{Reduction in syntactic constituents} 
-We explicitly examined this hypothesis by examining whether dropped words tend to come from the same syntactic units, relative to a random deletion baseline.
+We explicitly tested this hypothesis by examining whether pairs of words dropped from one reference to the next tend to come from the same syntactic units, relative to a random deletion baseline.
 We quantified the extend to which dropped words `cluster' by examining dependency lengths between the dropped words \citep{jurafsky2014speech,futrell2015large}.
 Specifically, we compared each referring expression to the one produced on the subsequent repetition to determine which words were dropped.
 Then we looked up each pair of dropped words and found the shortest path between them in the dependency parse tree (see Fig. \ref{fig:dependency}).
@@ -360,6 +365,9 @@ We then took the mean dependency length across all such pairs in all games.
 This empirical `syntactic clustering' statistic was then compared to a random baseline.
 For this baseline, instead of examining dependency lengths for the words that were actually dropped, we randomly sampled the same number of words from the referring expression and computed the dependency length between them.
 We repeated this procedure 100 times to obtain a null distribution of the mean dependency length that would be expected if words were being dropped \emph{randomly} from anywhere in the message.
+
+\ndg{also do a baseline where you drop the same number of function words (if possible) drawn randomly from the expression?}
+\ndg{explore this statistic as a function of repetition number, to see eg if people tend to drop clauses initially and then function words alone later?}
 
 \begin{figure}[t!]
 \centering
@@ -532,7 +540,7 @@ We found that the estimated slope was highly unlikely under this distribution $(
 Our language changes as we get to know a social partner.
 We gradually learn what is meaningful to them and establish common ground.
 In this paper, we characterized the quantitative dynamics of this process by examining behavior in a new corpus of natural-language repeated reference games.
-This corpus is sufficiently larger than previous studies to provide new traction toward resolving detailed theoretical questions about adaptation in communication.
+This corpus is sufficiently larger than previous studies to provide new traction toward resolving detailed theoretical questions about adaptation in communication.
 %First, we found that pairs of participants systematically tend to conventionalize words that are more distinctive in the initial context.
 %Using a vector space measure of semantic content, we found this process leads to stable usage within pairs but multiple equilibria across different pairs.
 We find that directors not only reduce the length of their descriptions over the course of the task but do so in a way that is sensitive to evidence of matcher understanding and structured to omit redundant syntactic chunks of information, leaving only the most distinguishing words.

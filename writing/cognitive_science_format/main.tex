@@ -385,8 +385,15 @@ This result accords with early observations by \cite{Carroll80_NamingHedges}, wh
 \section{Results: characterizing the dynamics of semantic content}
 \label{sec:content} 
 
-Having established the structural changes that transform long initial descriptions into efficient labels, we now move beyond the phenomenon of increasing \emph{efficiency} to examine how the same learning mechanisms shape the \emph{semantic content} of  the referring expressions speakers chose to use over time.
-We focus on two core questions about how this content changes over time: (1) why are some words from a speaker's initial description more likely than others to become conventionalized in their final labels, and (2) what trajectory do these conventions take as they stabilize within interactions and diverge from other interactions?
+%NDG: i removed this sentence, because it felt weird and laden with theory that hasn't been discussed:
+%Having established the structural changes that transform long initial descriptions into efficient labels, we now move beyond the phenomenon of increasing \emph{efficiency} to examine how the same learning mechanisms shape the \emph{semantic content} of  the referring expressions speakers chose to use over time.
+So far we have established the increasing efficiency of referring expressions in terms of their (syntactic) structure. 
+We next explore how the \emph{semantic content} of referring expressions changes over repeated reference.
+This raises a series of questions:
+Which words from a speaker's initial description are most likely to become conventionalized in their final labels?
+Why do all dyads not end up with the same conventions?
+Once efficient conventions are formed, are they stable?
+%We focus on two core questions: (1) why are some words from a speaker's initial description more likely than others to become conventionalized in their final labels, and (2) what trajectory do these conventions take as they stabilize within interactions and diverge from other interactions?
 In exploring these questions, we find support for a view of adaptation as a path-dependent process of gradually paring down redundant information and coalescing around the most diagnostic features for the given context.
 
 \subsection{Initially distinctive words are more likely to conventionalize}
@@ -402,7 +409,7 @@ Putting these principles together, we hypothesized that the labels that conventi
 
 For each pair of participants, we quantified the distinctiveness of a word $w$ as $n_w$: the number of tangrams that it was used to describe on the first repetition. 
 A word that is only used in the description of a single tangram (e.g. a descriptive noun like ``rabbit'') would be very distinctive, while a word used with all 12 tangrams (e.g. an article like ``the'') would be not distinctive at all.
-While this formulation is the most transparent to state in words, it is equivalent (up to a constant) to two popular  and theoretically motivated measures of distinctiveness used in natural language processing \citep{salton1988term}.
+While this formulation is the most transparent to state in words, it is equivalent (up to a constant) to two popular  and theoretically motivated measures of distinctiveness used in natural language processing \citep{salton1988term}:\emph{tf-idf} and \emph{PPMI}.\footnote{
 The first is \emph{term frequency-inverse document frequency} \citep[tf-idf,][]{sparck1972statistical}, which multiplies the term frequency $tf(w,d)$ of a word $w$ in a document $d$ by a ``global'' term $\log(N/n_w)$ where $N$ is the total number of documents and $n_w$ is the number of documents containing $w$. 
 In our case, the ``documents'' are just the referring expressions used for a distinct tangram on the first repetition, so $N=12$ and we can take $tf(w,d)$ to be a boolean for simplicity: 1 if the word occurs, 0 if it does not.
 We can thus retrieve our simpler measure by exponentiating, dividing by $12$, and taking the inverse.
@@ -410,23 +417,23 @@ The second is \emph{positive point-wise mutual information} (PPMI).
 Point-wise mutual information compares the joint probability of a word occurring with a particular tangram to the probability of the two occurring independently: 
 $$PMI_{\textrm{word},\textrm{tangram}} = \log\frac{P(\textrm{word}, \textrm{tangram})}{P(\textrm{word})P(\textrm{tangram})}$$
 \emph{Positive} point-wise mutual information is given by $\min(0, \textrm{PMI})$, restricting the lower bound to 0. 
-It can be shown for our case that \emph{tf-idf} is the maximum likelihood estimator for PPMI: the numerator reduces to a boolean when we only have one observation per tangram \citep{robertson2004understanding}.
-
+It can be shown for our case that \emph{tf-idf} is the maximum likelihood estimator for PPMI: the numerator reduces to a boolean when we only have one observation per tangram \citep{robertson2004understanding}.}
+%
 \begin{figure}[t!]
 \centering
 \includegraphics[scale=.85]{distinctiveness.pdf}
 \caption{More distinctive words are more likely to conventionalize. Points represent estimates of the mean probability of conventionalizing across all words with a given distinctiveness value. Size of points represent the number of words at that value. Curve shows regression fit; error bars are bootstrapped 95\% CIs.}
 \label{fig:distinct}
 \end{figure}
-
-Given this simple but principled measure of word distinctiveness at the speaker-by-speaker level -- the number of tangrams it was initially used with -- we were interested in the extent to which it accounts for conventionalization, the probability that a word in the director's initial description is preserved until the end of the game. 
+%
+Given this simple but principled measure of word distinctiveness at the speaker-by-speaker level, we were interested in the extent to which it accounts for conventionalization: the probability that a word in the director's initial description is preserved until the end of the game. 
 More than half of the words used to refer to a tangram on the final repetition (57\%) appeared in the initial utterance\footnote{The 43\% of final repetition words that did not exactly match were sometimes synonyms or otherwise semantically related to words used on the first repetition, e.g. ``foot'' on the first repetition vs. ``leg'' on the last. In other cases, the labels used at the end were introduced after the first repetition, e.g. one pair only started using the conventionalized label ``portrait'' on repetition 3.}.
 We thus restricted our attention to this subset of words, coding them with a 1 if they later appeared at the final repetition and 0 if they did not.
 We then ran a mixed-effects logistic regression including a fixed effect of initial distinctiveness and maximal random effect structure with intercepts and slopes for each tangram and pair of participants.
 We found a significant positive effect of distinctiveness: words that were used with a larger number of tangrams on the first repetition were less likely to conventionalize, $b = -0.23, z = -6.1$ (see Fig. \ref{fig:distinct}). 
 Similar results are found using the \emph{tf-idf}.
 
-Finally, we conducted a non-parametric permutation test.
+To evaluate how influential distinctiveness was, we conducted a non-parametric permutation test.
 For each speaker and tangram, we sampled from the words with \emph{maximal distinctiveness} and computed the mean probability of this word also being used on the final repetition, obtaining a distribution ranging from 24\% to 31\%.
 As a baseline null model, we randomly sampled from the list of all words contained in the initial utterance instead of the most distinctive one.
 Repeating this procedure 1000 times yielded a null distribution ranging from 2.5\% to 6.6\%, which was significantly lower than the one derived from distinctive words.

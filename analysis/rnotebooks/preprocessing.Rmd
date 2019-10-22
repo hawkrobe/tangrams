@@ -145,17 +145,18 @@ write_csv(unconstrainedCombined, '../data/tangramsUnconstrained.csv')
 numGames <- length(unique(unconstrainedCombined$gameid))
 numUtterances <- length(unconstrainedCombined$contents)
 print(paste0(numUtterances, ' utterances in ', numGames, ' games'))
+print(paste0(sum(unconstrainedCombined$numRawWords), ' words'))
 ```
 
 # Import and preprocess *sequential* data
 
 ```{r}
-sequentialMsgs = read_csv("../data/tangrams_sequential/message/sequential_message_raw.csv") %>%
+sequentialMsgs = read_csv("../../data/tangrams_sequential/message/sequential_message_raw.csv") %>%
   rename(msgTime = time, role = sender, repetitionNum = occurrenceNum, trialNum = roundNum)
 
-sequentialClicks = read_csv("../data/tangrams_sequential/clickedObj/sequential_clicks.csv") %>% 
+sequentialClicks = read_csv("../../data/tangrams_sequential/clickedObj/sequential_clicks.csv") %>% 
   rename(repetitionNum = occurrenceNum, trialNum = roundNum)
-sequentialSubjInfo = read.csv("../data/tangrams_sequential/tangrams_sequential-subject_information.csv") 
+sequentialSubjInfo = read.csv("../../data/tangrams_sequential/tangrams_sequential-subject_information.csv") 
 
 sequentialCombined.raw <- sequentialMsgs %>% 
   left_join(sequentialSubjInfo, by = c('gameid', 'role')) %>% 
@@ -295,7 +296,7 @@ print(paste0('excluding ', length(badGames), ' of ', length(unique(sequentialCom
 
 
 
-other sketchy gameids... 
+notes on other sketchy-seeming gameids... 
 '9116-d8b8c5c1-f549-48bf-a362-ed159302a106' was super distracted and kept complaining and talking about how they'd skip through rounds...
 '7229-0a7402b0-329e-4b26-bc3a-ae26a388a6cc' was having too much fun with wordplay...
 '1202-a64916b2-49d2-4ca4-bd76-cfd3e1ec3954', '7391-0be22306-9b90-402c-82b0-6bf7ce3ac35e' listeners seemed like theyd done it before (but dont have subject info from them to be able to tell...))
@@ -309,7 +310,8 @@ Check and remove all games of duplicate turkers (note that I accidentally exclud
 ## First, apply spell check and create filtered version of messages data (for potential hand-cleaning)
 
 ```{r}
-corrector = read_json('../data/tangrams_sequential/message/spell_correction.json')
+corrector = read_json('../../data/tangrams_sequential/message/spell_correction.json')
+print(paste0(length(corrector), ' corrections'))
 
 # only match on full words
 names(corrector) <- paste0('\\b', names(corrector), '\\b')
@@ -319,37 +321,33 @@ messagesFiltered <- sequentialMsgs %>%
   mutate(contents = tolower(contents)) %>%
   mutate(contents = str_replace_all(contents, unlist(corrector, use.names = T)))
 
-write_csv(messagesFiltered, '../data/tangrams_sequential/message/sequential_message_filtered.csv')
-
-numGames <- length(unique(messagesFiltered$gameid))
-numUtterances <- length(messagesFiltered$contents)
-print(paste0(numUtterances, ' utterances in ', numGames, ' games'))
+write_csv(messagesFiltered, '../../data/tangrams_sequential/message/sequential_message_filtered.csv')
 ```
 
 ## Then read in hand-cleaned meta data & record that to json
 
 ```{r}
-full_messages_to_delete <- anti_join(messagesFiltered, read_csv('../data/tangrams_sequential/message/sequential_message_no_meta.csv'),
+full_messages_to_delete <- anti_join(messagesFiltered, read_csv('../../data/tangrams_sequential/message/sequential_message_no_meta.csv'),
             by = c('gameid', 'trialNum', 'msgTime')) %>%
   mutate(new = "~~~") %>%
   #unite(old, gameid, trialNum , old, sep = '~~~') %>%
-  select(gameid, trialNum, contents, new)# %>%
+  select(gameid, trialNum, contents, role, msgTime, new)# %>%
   #distinct() %>%
   #spread(old, new)
 
 partial_messages_to_swap <- messagesFiltered %>%
-  right_join(read_csv('../data/tangrams_sequential/message/sequential_message_no_meta.csv'),
-            by = c('gameid', 'trialNum', 'msgTime')) %>%
+  right_join(read_csv('../../data/tangrams_sequential/message/sequential_message_no_meta.csv'),
+            by = c('gameid', 'trialNum', 'msgTime', 'role')) %>%
   mutate(contents.x = str_trim(contents.x),
          contents.y = str_trim(contents.y)) %>%
   filter(contents.x != contents.y) %>%
   mutate(contents = contents.x, #str_replace_all(contents.x, corrections), 
          new = contents.y) %>%
   #unite(old, gameid.x, trialNum , old, sep = '~~~') %>%
-  select(gameid, trialNum, contents, new) #%>%
+  select(gameid, trialNum, contents, role, msgTime, new) #%>%
   #spread(old, new) 
 
-write_csv(rbind(partial_messages_to_swap, full_messages_to_delete), '../data/tangrams_sequential/message/meta-cleaning.csv')
+write_csv(rbind(partial_messages_to_swap, full_messages_to_delete), '../../data/tangrams_sequential/message/meta-cleaning.csv')
 # j <- toJSON(partial_messages_to_swap %>% cbind(full_messages_to_delete), 
 #             dataframe = 'rows', pretty = T)
 # write(substr(j, 2, nchar(j) - 1), 
@@ -359,24 +357,23 @@ write_csv(rbind(partial_messages_to_swap, full_messages_to_delete), '../data/tan
 Finally, now apply both removals, count numbers of words, examine size of dataset
 
 ```{r}
-spellcorrector = read_json('../data/tangrams_sequential/message/spell_correction.json')
-additional_spellcorrector = read_json('../data/tangrams_sequential/message/additional_spell_correction.json')
-metacorrector = read_csv('../data/tangrams_sequential/message/meta-cleaning.csv')
-
+spellcorrector = read_json('../../data/tangrams_sequential/message/spell_correction.json')
+additional_spellcorrector = read_json('../../data/tangrams_sequential/message/additional_spell_correction.json')
+metacorrector = read_csv('../../data/tangrams_sequential/message/meta-cleaning.csv')
 # only match full words
 names(spellcorrector) <- paste0('\\b', names(spellcorrector), '\\b')
 names(additional_spellcorrector) <- paste0('\\b', names(additional_spellcorrector), '\\b')
-# only match whole messages
-# names(metacorrector) <- paste0('^', names(metacorrector), '$')
 
+print(paste0(length(spellcorrector) + length(additional_spellcorrector), ' spell corrections'))
+print(paste0(length(metacorrector$gameid), ' messages affected by meta-corrections'))
 
 #write_csv(sequentialCombined, '../data/tangramsSequential_nocleaning.csv')
 sequentialCombined <- sequentialCombined.raw %>%
   filter(!(gameid %in% badGames)) %>%
   mutate(contents = tolower(contents)) %>%
   mutate(contents = str_replace_all(contents, unlist(spellcorrector, use.names = T))) %>%
-  left_join(metacorrector, by = c('contents', 'trialNum', 'gameid')) %>%
-  mutate(contents = ifelse(!is.na(new), new, contents)) %>%
+  left_join(metacorrector, by = c('trialNum', 'gameid', 'msgTime', 'role')) %>%
+  mutate(contents = ifelse(!is.na(new), new, contents.x)) %>%
   mutate(contents = str_replace_all(contents, unlist(additional_spellcorrector, use.names = T))) %>%
   mutate(contents = str_trim(contents)) %>%
   filter(contents != "~~~") %>%
@@ -385,10 +382,10 @@ sequentialCombined <- sequentialCombined.raw %>%
     group_by(repetitionNum, gameid) %>%
     summarize(repetitionScore = sum(correct))) %>%
   filter(numRawWords > 0) %>% # filter out empty messages
-  select(-score, -workerid_uniq)
+  select(-score, -workerid_uniq, -contents.y, -contents.x, -new)
   #filter(numRawWords < mean(numRawWords) + 3*sd(numRawWords)) # Get rid of outliers
 
-write_csv(sequentialCombined, '../data/tangramsSequential.csv')
+write_csv(sequentialCombined, '../../data/tangramsSequential.csv')
 write_csv(sequentialCombined %>%
             filter(role == 'director') %>%
             mutate(contents = str_replace_all(contents, "\\.\\.+", ".")) %>%
@@ -398,11 +395,12 @@ write_csv(sequentialCombined %>%
             summarize(contents = paste0(contents, collapse = ', '),
                       numRawWords = sum(numRawWords),
                       correct = mean(correct)), 
-          '../data/tangramsSequential_collapsed.csv')
+          '../../data/tangramsSequential_collapsed.csv')
 
 numGames <- length(unique(sequentialCombined$gameid))
 numUtterances <- length(sequentialCombined$contents)
 print(paste0(numUtterances, ' utterances in ', numGames, ' games'))
+print(paste0(sum(sequentialCombined$numRawWords), ' words'))
 ```
 
 # Make combined dataset

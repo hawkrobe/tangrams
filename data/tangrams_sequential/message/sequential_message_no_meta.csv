@@ -382,7 +382,6 @@ gameid,msgTime,trialNum,repetitionNum,role,intendedName,timeElapsed,contents
 1567-e80221b4-f349-4b3b-9921-224ee47eea1f,1490376741065,57,5,director,I,744,yoga
 1567-e80221b4-f349-4b3b-9921-224ee47eea1f,1490376742929,57,5,director,I,719,yoga
 1567-e80221b4-f349-4b3b-9921-224ee47eea1f,1490376770969,58,5,director,L,20135,"arms east triangle head, straight is back, look like a road arrow on his legs\"
-1567-e80221b4-f349-4b3b-9921-224ee47eea1f,1490376797376,59,5,matcher,D,3690,i got that guy as squatting
 1567-e80221b4-f349-4b3b-9921-224ee47eea1f,1490376805696,59,5,director,D,6183,straight west
 1567-e80221b4-f349-4b3b-9921-224ee47eea1f,1490376822049,60,5,director,K,6887,woman getting gifts
 1567-e80221b4-f349-4b3b-9921-224ee47eea1f,1490376838072,61,6,director,J,8527,dude straight facing east
@@ -653,8 +652,7 @@ gameid,msgTime,trialNum,repetitionNum,role,intendedName,timeElapsed,contents
 3419-7061f84e-30ba-48dc-9bc3-133c5fdf8fa3,1490381298044,71,6,director,D,3128,man takes up offering
 3419-7061f84e-30ba-48dc-9bc3-133c5fdf8fa3,1490381311074,72,6,director,F,5098,"man sits on the floor, not plant"
 5792-f5aa5cf6-b3d0-4444-8442-4ef42e3b7c08,1490378568952,1,1,director,B,21939,this object looks like they are kneeling with their feet like a triangle at the bottom
-5792-f5aa5cf6-b3d0-4444-8442-4ef42e3b7c08,1490378595824,1,1,matcher,B,9438,hands up or just like playing?
-5792-f5aa5cf6-b3d0-4444-8442-4ef42e3b7c08,1490378601179,1,1,matcher,B,3284,praying?
+5792-f5aa5cf6-b3d0-4444-8442-4ef42e3b7c08,1490378595824,1,1,matcher,B,9438,hands up or just like praying?
 5792-f5aa5cf6-b3d0-4444-8442-4ef42e3b7c08,1490378633900,1,1,director,B,16576,the head looks more like a square tilted down with a triangle coming off of it
 5792-f5aa5cf6-b3d0-4444-8442-4ef42e3b7c08,1490378764647,2,1,director,I,20172,this one has a square head and it looks like they are sticking their right foot back with two triangles for hands
 5792-f5aa5cf6-b3d0-4444-8442-4ef42e3b7c08,1490378863534,3,1,director,G,45004,this one has a square head leaning back with a triangle up in the air and a triangle close to the bottom right of the box
@@ -3471,8 +3469,6 @@ gameid,msgTime,trialNum,repetitionNum,role,intendedName,timeElapsed,contents
 1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490641627149,7,1,director,B,20920,"sort of like an angel kneeling, facing right, with a triangle in her teeth"
 1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490641659108,8,1,director,C,8520,a ghost flying to the left with arms outstretched
 1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490641698469,9,1,director,K,24061,"kneeling, facing right, back very straight, holding a book or tablet"
-1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490641703452,9,1,director,K,1910,"book, not book"
-1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490641709999,9,1,director,K,3350,"you can ask questions, too"
 1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490641736369,10,1,director,J,18851,"head on a pedestal - straight left side, sculpted right side"
 1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490641774761,11,1,director,G,5280,"shovelling show, facing left"
 1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490641814461,12,1,director,A,18087,"a bear walking to the left, but looking behind him (one leg raised toward the left)"
@@ -3543,7 +3539,7 @@ gameid,msgTime,trialNum,repetitionNum,role,intendedName,timeElapsed,contents
 1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642842101,70,6,director,E,960,bunny
 1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642851800,71,6,director,H,1210,japanese
 1242-e6fcc1c9-ab33-44c7-b31c-4a391beb2b8c,1490642867440,72,6,director,G,7369,shovelling snow
-7484-32a69501-b5bc-4166-ac2b-43214360890e,1490643622235,1,1,director,B,19288,ok this one is mostly long and flat at the bottom
+7484-32a69501-b5bc-4166-ac2b-43214360890e,1490643622235,1,1,director,B,19288,this one is mostly long and flat at the bottom
 7484-32a69501-b5bc-4166-ac2b-43214360890e,1490643644134,1,1,director,B,15575,but it is not completely flat
 7484-32a69501-b5bc-4166-ac2b-43214360890e,1490643658193,1,1,director,B,12008,and it looks like it has angel wings
 7484-32a69501-b5bc-4166-ac2b-43214360890e,1490643705394,2,1,director,D,14267,this one looks like a person standing straight up and pointing from its side
@@ -3683,7 +3679,6 @@ gameid,msgTime,trialNum,repetitionNum,role,intendedName,timeElapsed,contents
 0723-9b842133-a121-4b53-9c37-784e6023e022,1490644881361,22,2,director,G,7781,ugly bunny with triangle tail
 0723-9b842133-a121-4b53-9c37-784e6023e022,1490644920813,23,2,director,A,18701,standing with one foot and leg lifted up pointing to the left
 0723-9b842133-a121-4b53-9c37-784e6023e022,1490644936801,23,2,matcher,A,3328,kicker
-0723-9b842133-a121-4b53-9c37-784e6023e022,1490644945609,24,2,director,I,3218,kicker good word
 0723-9b842133-a121-4b53-9c37-784e6023e022,1490644970392,24,2,director,I,17356,the one standing with the tail to the right
 0723-9b842133-a121-4b53-9c37-784e6023e022,1490644975488,24,2,director,I,4181,let's call it the flyer
 0723-9b842133-a121-4b53-9c37-784e6023e022,1490644997192,25,3,director,B,1333,the mouse
@@ -3746,8 +3741,7 @@ gameid,msgTime,trialNum,repetitionNum,role,intendedName,timeElapsed,contents
 7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490644200428,2,1,director,H,1743,looking right
 7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490644296654,3,1,director,E,12840,looks like a man sitting down with two triangles on its head
 7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490644301183,3,1,director,E,2870,looking to the right
-7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490644332007,4,1,director,I,15743,looks like a man facing left with to hands and a foot in the air
-7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490644336089,4,1,director,I,929,two*
+7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490644332007,4,1,director,I,15743,looks like a man facing left with two hands and a foot in the air
 7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490644388887,5,1,director,G,29758,a man with his two hands point right and a foot pointing right and his head and another foot facing left
 7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490644414354,5,1,director,G,7804,standing like he's dancing
 7971-85165980-35a3-4070-8ebf-ca2d159dc715,1490644483911,6,1,director,A,21952,man standing with right food in the air head facing right both arms in the air
@@ -3894,9 +3888,6 @@ gameid,msgTime,trialNum,repetitionNum,role,intendedName,timeElapsed,contents
 4824-58d5c545-a718-4653-89db-4be922da59d7,1490643276077,28,3,director,G,963,yes
 4824-58d5c545-a718-4653-89db-4be922da59d7,1490643292630,29,3,director,I,8981,bird with diamond
 4824-58d5c545-a718-4653-89db-4be922da59d7,1490643331077,30,3,director,F,17804,"leaning on wall feet to the left, head bowed"
-4824-58d5c545-a718-4653-89db-4be922da59d7,1490643349537,31,3,matcher,K,748,poncho
-4824-58d5c545-a718-4653-89db-4be922da59d7,1490643375685,31,3,director,K,21216,"we just need to agree on the bird. "
-4824-58d5c545-a718-4653-89db-4be922da59d7,1490643385520,31,3,matcher,K,294,yes
 4824-58d5c545-a718-4653-89db-4be922da59d7,1490643401267,31,3,director,K,16164,"kneeling , tall one"
 4824-58d5c545-a718-4653-89db-4be922da59d7,1490643438859,32,3,director,D,14972,"grad, with something on the left"
 4824-58d5c545-a718-4653-89db-4be922da59d7,1490643455194,33,3,director,J,4468,right grad
@@ -4256,8 +4247,6 @@ gameid,msgTime,trialNum,repetitionNum,role,intendedName,timeElapsed,contents
 8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648498151,15,2,director,G,4063,it's kind of a parallelogram
 8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648541952,16,2,director,H,20676,this one has no arms or legs and is kinda bent towards the right
 8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648588157,17,2,director,L,22840,"um, creepy knees bent dude offering something, arms to the right"
-8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648594781,17,2,director,L,5155,we should start nicknaming these guys
-8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648610634,18,2,director,C,2781,let's call that one the nun
 8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648626927,18,2,director,C,3064,this is crazy arm waver
 8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648661217,19,2,director,I,8322,enormous boobs! 
 8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490648727418,20,2,director,B,46654,this is the non human that i guess is sitting down? with a hood on that's triangle shaped? and then a square and triangle to the right of his hood
@@ -4282,7 +4271,6 @@ gameid,msgTime,trialNum,repetitionNum,role,intendedName,timeElapsed,contents
 8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649237546,37,4,director,K,4243,the nun that isn't the nun
 8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649248367,38,4,director,E,2632,windmill head
 8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649261877,39,4,director,F,5685,"sitting down, knees up to left"
-8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649274671,40,4,director,D,6133,i'm gonna call that one lazy boy btw
 8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649282154,40,4,director,D,5114,this is the monk
 8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649298354,41,4,director,H,4779,"no arms or legs, bent right"
 8659-24ecfb2c-6a3d-4607-ab5e-a37e6183634c,1490649309817,42,4,matcher,I,4136,can we just call that one 'the blob' 
@@ -6060,7 +6048,6 @@ gameid,msgTime,trialNum,repetitionNum,role,intendedName,timeElapsed,contents
 6335-f2ee42fb-60a5-4238-9bfc-e23b14160049,1490657241468,49,5,director,K,28152,"the one with the two diamonds on top, one on top fo the other, there is a kind of wide base on the bottom, has two points to the right side"
 6335-f2ee42fb-60a5-4238-9bfc-e23b14160049,1490657292394,50,5,director,D,3527,robed person pointing to the left
 6335-f2ee42fb-60a5-4238-9bfc-e23b14160049,1490657336777,51,5,director,B,33743,"mouse looking one with square on top, triangle below the square hanging off to the right, wide based bottom, small is triangle on the bottom left side."
-6335-f2ee42fb-60a5-4238-9bfc-e23b14160049,1490657345257,51,5,director,B,7327,"i hate describing this one, it's kind of hard"
 6335-f2ee42fb-60a5-4238-9bfc-e23b14160049,1490657370951,52,5,matcher,H,8587, it got it right once 
 6335-f2ee42fb-60a5-4238-9bfc-e23b14160049,1490657389148,52,5,director,H,23109,"diamond on top, kind of thick base below it, small protrusion on bottom right."
 6335-f2ee42fb-60a5-4238-9bfc-e23b14160049,1490657418418,53,5,director,C,1880,belly flop

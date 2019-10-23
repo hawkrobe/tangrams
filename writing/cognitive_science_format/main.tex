@@ -74,13 +74,13 @@
 
 \begin{abstract}
 \small
-The language we use changes over the course of conversation as we establish common ground and learn what our partner finds meaningful. % peakers and listeners must continually adapt to one another in conversation
+The language we use over the course of conversation changes as we establish common ground and learn what our partner finds meaningful. 
 %How do speakers understand one another in conversation? 
 % for increasingly effective, efficient communication.
 % \emph{How} the structure and content of natural language referring expressions change through continued interaction. %While such adaptation has been demonstrated under a variety of conditions, p
 Here we draw upon recent advances in natural language processing to provide a finer-grained characterization of the dynamics of this learning process.
-We release an open corpus ($>$15,000 utterances) of extended dyadic interactions in a classic repeated reference game task where pairs of partners had to coordinate on how to refer to initially difficult-to-describe tangram stimuli.
-We find that different pairs discover a wide variety of idiosyncratic but stable solutions to the problem of reference. %, consistent with viewing these pacts as ad hoc conventions. 
+We release an open corpus ($>$15,000 utterances) of extended dyadic interactions in a classic repeated reference game task where pairs of participants had to coordinate on how to refer to initially difficult-to-describe tangram stimuli.
+We find that different pairs discover a wide variety of idiosyncratic but efficient and stable solutions to the problem of reference. 
 Furthermore, these conventions are shaped by the communicative context: words that are more discriminative in the initial context (i.e. that are used for one target more than others) are more likely to persist through the final repetition.
 Finally, we find systematic structure in how a speaker's referring expressions become more efficient over time: syntactic units drop out in clusters following positive feedback from the listener, eventually leaving short labels containing open-class parts of speech.
 These findings provide a higher resolution look at the quantitative dynamics of \emph{ad hoc} convention formation and support further development of computational models of learning in communication. %: based on a shared history of usage, words systematically acquire new meaning to support more efficient communication with a partner.
@@ -184,7 +184,8 @@ While we are also releasing the corpus from the free-matching version, we restri
 
 \begin{figure}
 \centering
-\includegraphics[scale=.9]{designAndExample.pdf}
+\vspace{-1em}
+\includegraphics[scale=.87]{designAndExample.pdf}
 \caption{Display and procedure for the repeated reference game task.}
 \label{fig:design}
 \end{figure}
@@ -200,7 +201,7 @@ After excluding games that terminated before the completion of the experiment du
 % Because the classic work using the repeated reference game paradigm reported near ceiling accuracy for all pairs, and b
 We used a 66/66 rule, excluding pairs that got fewer than 66\% of trials correct ($\le8$ of 12)  on more than 66\% of blocks ($\ge4$ of 6). 
 While most pairs were near ceiling accuracy by the final repetition, this rule excluded 11 in \emph{free matching} and 8 in \emph{cued} who appeared to be guessing or rushing to completion. 
-After all exclusions, we were left with a \emph{free matching} corpus containing a total of 8,639 ($\sim$ 51,271 words) messages over 56 complete games and a \emph{cued} corpus containing 9,164 messages ($\sim$ 46,000 words) over 83 games.
+After all exclusions, we were left with a \emph{free matching} corpus containing a total of 8,639 ($\sim$ 51,271 words) messages over 56 complete games and a \emph{cued} corpus containing 7,867 messages ($\sim$ 46,000 words) over 83 games after cleaning.
 
 \subsection{Stimuli \& Procedure}\label{stimuli}
 
@@ -238,7 +239,7 @@ We used a three step pre-processing pipeline to prepare our corpus for subsequen
 
 \item \textbf{Spell-checking and regularization}: We conservatively extracted all tokens that did not exist in the vocabulary of the smallest available ($\sim$ 50,000 word) \texttt{spaCy} model and passed them through the SymSpell spell-checker \footnote{\texttt{https://github.com/wolfgarbe/SymSpell}. We used the smallest model because larger models include typo forms (e.g. `teh') in their vocabulary and thus cannot catch errors.}. These suggested corrections were then sequentially presented to the first author and either accepted or overridden at their judgement. This process constructed a spell-correction dictionary containing 677 corrections. 
 
-\item \textbf{Cleaning unrelated discourse}: Because we allowed our participants to interact in real-time through the chat box, many pairs produced text unrelated to the task of referring to the current target (e.g. greeting one another, asking personal questions, commenting on the length of the task or the results of previous trials). We wanted to ensure that our results were not confounded by patterns in this kind of discourse across the task, and that the semantic content we observe on a particular trial is in fact being used to refer to the current target rather than task-irrelevant topics or, as we found in some cases, referring to other tangrams while debriefing previous errors. We therefore conducted a manual review removing any text not directly referring to the current target. For example, utterances like ``the dancing woman'' and ``this is the one we got wrong last time'' were kept in because they were referring to properties of the current tangram, but words like ``yeah'' or ``ok'' and messages like ``good job'' and ``they'll go quicker if you remember what I say!'' were not. This review affected 1,427 messages, and we also saved these corrections in a dictionary. 
+\item \textbf{Cleaning unrelated discourse}: Because we allowed our participants to interact in real-time through the chat box, many pairs produced text unrelated to the task of referring to the current target (e.g. greeting one another, asking personal questions, commenting on the length of the task or the results of previous trials). We wanted to ensure that our results were not confounded by patterns in this kind of discourse across the task, and that the semantic content we observe on a particular trial is in fact being used to refer to the current target rather than task-irrelevant topics or, as we found in some cases, referring to other tangrams while debriefing previous errors. We therefore conducted a manual review removing any text not directly referring to the current target. For example, utterances like ``the dancing woman'' and ``this is the one we got wrong last time'' were kept in because they were referring to properties of the current tangram, but words like ``yeah'' or ``ok'' and messages like ``good job'' and ``they'll go quicker if you remember what I say!'' were not. This review affected 1,448 messages, and we also saved these corrections in a dictionary. 
 
 \item \textbf{Collapsing multiple messages within a trial}: Finally, some directors used our chat box like an texting interface, hitting the enter key between every micro-phrase of text. This made it difficult to interpret the output of syntactic parses. We therefore collapsed repeated messages by a participant within a trial into a single message by inserting commas between successive messages. We chose to use commas because it tends to maintain grammaticality and does not inflate word counts.
 
@@ -249,9 +250,8 @@ We used a three step pre-processing pipeline to prepare our corpus for subsequen
 \section{Results: characterizing the dynamics of structure}
 \label{sec:structure}
 
-We begin with the observation that the mean number of words used by directors decreases over time (see Fig. \ref{fig:feedback}A)\footnote{A similar reduction curve was found in our pilot ``free matching'' version of the task, although it required more words overall. Participants needed to additionally mention which tangram they were referring to (i.e. ``number 3 is the \dots``)}.
-This result replicates the highly reliable reduction effect found throughout the literature on repeated reference games \citep[e.g.][]{KraussWeinheimer64_ReferencePhrases,BrennanClark96_ConceptualPactsConversation}, though
-participants in our task used fewer words overall than reported by \cite{ClarkWilkesGibbs86_ReferringCollaborative}. 
+We begin with the observation that the mean number of words used by directors decreases over time (see Fig. \ref{fig:feedback}A)\footnote{A similar reduction curve was found in our  ``free matching'' pilot version of the task, though it required more words overall. Participants needed to additionally mention which tangram they were referring to (i.e. ``number 3 is the \dots``)}.
+This result replicates a highly reliable reduction effect found throughout the literature on repeated reference games \citep[e.g.][]{KraussWeinheimer64_ReferencePhrases,BrennanClark96_ConceptualPactsConversation}, though participants in our task used fewer words overall than reported by \cite{ClarkWilkesGibbs86_ReferringCollaborative}. 
 This difference is likely due to the text-based (vs.~spoken) interface.
 The following analyses break down this general gain in efficiency into a finer-grained set of phenomena concerning the \emph{structure} of referring expressions over time.
 %In particular, we examine \emph{how} different pairs reduce the length of their utterances.
@@ -268,27 +268,32 @@ What sequence of transformations do descriptions undergo over the course of repe
 \subsection{The effect of listener feedback on reduction}\label{listener-feedback}
 
 Conventions are formed \emph{collaboratively}, not in isolation \citep{ClarkWilkesGibbs86_ReferringCollaborative}: 
-directors and matchers engage in a bi-directional process where matchers ask follow-up questions, suggest corrections, and acknowledge or verbally confirm their understanding through a backchannel. 
+directors and matchers engage in a bi-directional process where matchers are allowed to ask follow-up questions, suggest corrections, and acknowledge or verbally confirm their understanding through a backchannel. 
 In the absence of feedback, descriptions may not necessarily get shorter \citep{KraussWeinheimer66_Tangrams, GarrodFayLeeOberlanderMacLeod07_GraphicalSymbolSystems}.
-While we automatically supplied minimal feedback about the matcher's response each trial, we predict that the additional feedback from backchannel replies should be highest on the first repetition and drop off once meanings are agreed upon. 
+While we automatically supplied minimal feedback about the matcher's response and the true target on each trial, we predicted that additional feedback provided through backchannel replies should be highest on the first repetition and drop off once meanings are agreed upon. 
 To test this prediction, we coded whether the matcher sent a message or not on each trial and fit a mixed-effects logistic regression model with a fixed effect of repetition, random intercepts and slopes for each pair of participants, and a random intercept for each target. 
 We found that the probability of the matcher sending a message decreased significantly over the game $(b=-0.84, t = -9.1, p < 0.001$; Fig. \ref{fig:feedback}B).
-In aggregate, 76\% of matchers send at least one message in the first repetition block, but only 6\% sent a message in the last block.
-These rates found in our online text-based replication are lower overall than in-person lab experiments, but we nonetheless strongly replicated the overall trend.
-\ndg{i'm curious what the back channel messages contained. any qualitative stats on those? eg how may questions? (don't need this to submit, i'm just curious...)}
+While usage of the backchannel in our online text-based task was less frequent overall than reported in previous verbal lab experiments, we nonetheless strongly replicated the overall trend.
+In aggregate, 75\% of matchers responded with at least one message in the first repetition block, but only 4\% sent a message in the last block.
+These messages were frequently questions: as a lower bound, we observed that 49\% of matcher messages explicitly contained question marks (e.g. ``is it standing?'')
+Other messages simply echoed the director's label or suggested alternative labels.
+A deeper quantitative analysis of the content of these backchannel messages is an interesting direction for follow-up work. 
 
-Next, we examined the extent to which directors were sensitive to feedback about the matcher's selection.
+Next, we examined the extent to which directors were sensitive to the feedback that was provided at the end of each trial about the matcher's \emph{selection}.
 If the matcher failed to select the correct target, the director may take this as evidence that their description was insufficient and attempt to provide more detail the next time they must refer to the same tangram. 
-If the matcher is correct, on the other hand, the director may take this as evidence of understanding and reduce their level of detail on future repetitions.
-We tested these predictions by comparing the proportional change in utterance length (i.e. $(n_t - n_{t-1})/n_{t-1}$) on the repetition after an error against the change in length after a correct response.
+If the matcher is correct, on the other hand, the director may take this as evidence of understanding and reduce their level of detail when the tangram next appears.
+We tested these predictions by comparing the proportional change in utterance length (i.e. $\log(n_{t}/n_{t-1})$) on the block after an error against the change after a correct response.
 This measure could be positive, indicating a net increase in utterance length, or negative, indicating a reduction.
 
-We fit a mixed-effects regression model predicting this measure with an effect-coded categorical fixed effect of feedback on the previous repetition and a (centered) continuous effect of repetition number, including random intercepts and effects of feedback for each interaction.
-We found a significant main effect of feedback, even controlling for repetition: utterance length changed more in the shorter direction after correct responses than after negative responses, $b = -0.18, t = -6.2$ (see Fig. \ref{fig:feedback}C).
-Indeed, directors were more likely on average to \emph{add} words on the repetition after an error at any point in the game.
-Because repetitions of the same tangram were spaced out and errors were relatively rare, this effect is unlikely to simply reflect heightened attention on trials after an error.
-Instead, this pattern of results is consistent with sensitivity to tangram-specific evidence of the matcher's understanding.
-\ndg{did they also add words to the trial (not repetition) after an error? more or less for next trial than next repetition?}
+We fit a mixed-effects regression model predicting this measure with a categorical fixed effect of the matcher's response for the same at the previous repetition block (correct vs. incorrect) and a (centered) continuous effect of repetition block number, including maximum random effects at the speaker level. 
+We found a significant main effect of feedback, controlling for block number: utterance length decreased more after correct responses than after incorrect responses, $b = -0.28$, 95\% credible interval: $[-0.36, -0.20]$ (see Fig. \ref{fig:feedback}C).
+Although appearances of the same tangram were spaced out by block, it is still possible that this effect is not item-specific but the result of lower level attentional or affective mechanisms triggered in the aftermath of an error signal. 
+
+To evaluate this possibility, we also measured the proportional change in utterance length on the following \emph{trial}, when feedback about the matcher's response would be freshest but the target tangram would be different.
+We then constructed a second regression model including categorical fixed effects of matcher response (correct vs. incorrect) and item-specificity (change measured relative to previous trial vs. previous repetition block), as well as their interaction. 
+We found a significant cross-over interaction, $b = -0.31$, 95\% credible interval: $[-0.42, -0.19]$\footnote{Because errors were infrequent, an asymmetry in cell size caused singularity issues during optimization of this model. We instead decided to use Bayesian regression as implemented by the \texttt{brms} package. Smoother priors prevent variance estimates from going to zero.}.
+The sensitivity to feedback we observed on the subsequent repetition block is not present on the subsequent trial: speakers are equally likely to use more or less words after a correct response, and actually use fewer words after an \emph{incorrect} response due to a regression to the mean: more words than average are used for harder tangrams. 
+This pattern of results is consistent with sensitivity to \emph{tangram-specific} evidence of the matcher's understanding.
 
 
 %\begin{figure}[t]
@@ -297,6 +302,13 @@ Instead, this pattern of results is consistent with sensitivity to tangram-speci
 %\caption{ Error ribbons are 95\% confidence intervals. \todo[inline]{Incorporate this into previous Fig (3 columns).}}
 %\label{fig:reduction}
 %\end{figure}
+
+\begin{figure}[t!]
+\centering
+\includegraphics[scale=.8]{posResults.pdf}
+\caption{(A) proportion of words in different part of speech on each repetition. (B) Closed-class parts of speech are more likely to be dropped than open-class parts of speech. Error bars are bootstrapped 95\% confidence intervals.} 
+\label{fig:pos}
+\end{figure}
 
 \begin{table*}[t]
 \centering
@@ -330,8 +342,8 @@ Instead, this pattern of results is consistent with sensitivity to tangram-speci
 
 \paragraph{Reduction in parts of speech}
 
-
-We first explore which \emph{kinds} of words are most likely to be dropped. 
+Having established the conditions under which speakers are willing to shorten their utterances, we turn to structure in the shortening process.
+First, we explore which \emph{kinds} of words are most likely to be dropped. 
 We used the SpaCy part-of-speech tagger \citep{spacy2} to count the number of words belonging to different parts of speech in each message.
 In Fig. \ref{fig:pos}A, we show the shifting proportions of different parts of speech at each repetition.
 We find that nouns account for proportionally more of the words being used over time, while determiners and prepositions account for fewer.
@@ -341,13 +353,6 @@ More generally, closed-class parts of speech, including function words like dete
 Open-class parts of speech are statistically more likely to supply \emph{distinctive} words than closed-class parts of speech, perhaps accounting for why they are dropped. We return to the role of distinctiveness in section \ref{sec:distinctive}.
 %these structural considerations may contribute to the patterns in distinctiveness reported in section \ref{sec:distinctive}.
 
-
-\begin{figure}[t!]
-\centering
-\includegraphics[scale=.8]{posResults.pdf}
-\caption{(A) proportion of words in different part of speech on each repetition. (B) Closed-class parts of speech are more likely to be dropped than open-class parts of speech. Error bars are bootstrapped 95\% confidence intervals.} 
-\label{fig:pos}
-\end{figure}
 
 One possible interpretation of these findings is that reduction may be driven mostly by the loss of function words as directors shift to a less-grammatical shorthand over the course of the task.
 However, when examining the n-grams most likely to be dropped (see Table \ref{tab:words}), we find that many of the most dropped closed-class words are used to form conjunctions (`and') or prepositional phases (`of', `with').
@@ -372,7 +377,7 @@ We repeated this procedure 100 times to obtain a null distribution of the mean d
 \begin{figure}[t!]
 \centering
 \includegraphics[scale=.8]{dependency.pdf}
-\caption{Example dependency parse for referring expression. If the sub-phase ``arms out in front'' were dropped, we would find a mean dependency length of 1.33 among the dropped words.} 
+\caption{Example dependency parse for referring expression. If the words ``arms out in front'' were dropped, we would find a mean dependency length of 1.33 among the dropped words.} 
 \label{fig:dependency}
 \end{figure}
 

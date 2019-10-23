@@ -91,40 +91,59 @@ message_df %>% filter(role == 'matcher') %>% mutate(containQ = str_detect(conten
 
 ```{r}
 feedback <- listenerMsgs %>% 
-  group_by(gameid) %>% arrange(gameid, trialNum) %>%  mutate(
-    trial_prevcorrect = lag(correct),
-    trial_reduction = (numRawWords - lag(numRawWords))) %>%
-  group_by(gameid, intendedName) %>% arrange(gameid, repetitionNum) %>% mutate(
-    rep_prevcorrect = lag(correct), 
-    rep_reduction = (numRawWords - lag(numRawWords))) %>% 
+  group_by(gameid) %>% arrange(gameid, trialNum) %>%  
+  mutate(trial_prevcorrect = lag(correct),
+         trial_reduction = log(numRawWords/lag(numRawWords))) %>%
+  group_by(gameid, intendedName) %>% arrange(gameid, repetitionNum) %>% 
+  mutate(rep_prevcorrect = lag(correct), 
+         rep_reduction = log(numRawWords/lag(numRawWords))) %>% 
   gather(comparison, val, trial_prevcorrect : rep_reduction) %>%
   separate(comparison, into = c('comparison', 'metric')) %>%
   spread(metric, val) %>%
+  group_by(gameid) %>%
+  filter(sum(prevcorrect == 0, na.rm = T) > 0) %>%
+  ungroup() %>%
   filter(!is.na(prevcorrect)) %>%
-  mutate(prevcorrect = as.factor(ifelse(prevcorrect == 1, 'correct', 'incorrect'))) %>%
-  mutate(prevcorrect = as.factor(prevcorrect))
+  filter(!is.na(reduction)) %>%
+  mutate(prevcorrect = ifelse(prevcorrect == 1, 'correct', 'incorrect'))# %>%
+  #mutate(comparison = as.factor(comparison))
+```
 
-contrasts(feedback$prevcorrect) <- contr.sum(2)
-summary(lmer(reduction ~ prevcorrect * comparison +  repetitionNum + (1 + prevcorrect | gameid), 
-             data = feedback %>% mutate(repetitionNum = scale(repetitionNum, scale = F))))
+Stats 
+
+```{r}
+# test simple effect for repetition comparison only
+summary(brm(reduction ~ prevcorrect + I(repetitionNum) + (1 + prevcorrect | gameid), chains = 1,
+             data = feedback %>% filter(comparison == 'rep')))
+
+# test interaction
+summary(brm(reduction ~ prevcorrect * comparison + (1 + prevcorrect*comparison | gameid) , chains = 1,
+             data = feedback, iter = 5000))
 ```
 
 ```{r}
+
+ggplot(feedback, aes(x = reduction)) +
+  geom_histogram()
+
 feedback.toplot <- feedback %>%
-  group_by(repetitionNum, comparison, prevcorrect) %>%
-  tidyboot_mean(na.rm =T) 
+  group_by(comparison, prevcorrect) %>%
+  tidyboot_mean(column = reduction, na.rm =T, nboot = 1000) 
 
 feedback.toplot %>%
-  ggplot(aes(x = repetitionNum, y = empirical_stat, color = factor(prevcorrect))) +
-    geom_point() +
-    geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), width = 0) +
-    geom_hline(aes(yintercept = 0)) +
-    facet_wrap(~ comparison) +
+  ungroup() %>%
+  mutate(comparison = ifelse(comparison == 'rep', 'next repetition', 'next trial')) %>%
+  ggplot(aes(x = prevcorrect, y = empirical_stat, fill = factor(comparison))) +
+    geom_bar(stat = 'identity', position = 'dodge') +
+    geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), width = 0, position = 'dodge') +
+    #geom_hline(aes(yintercept = 0)) +
+    #facet_wrap(~ comparison) +
     theme_few()  +
     theme(aspect.ratio = 1) +
+    ylab('(log) ratio of # words vs. previous round') +
     ylim(-0.8, 0.8)
 
-ggsave('../writing/tangrams/figs/responseToFeedback.pdf', 
+ggsave('../../writing/cognitive_science_format/figs/responseToFeedback_withtrial.pdf', 
        height = 8, width = 16, units = 'cm', useDingbats = F)
 ```
 

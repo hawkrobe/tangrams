@@ -74,11 +74,11 @@ ggplot(listenerReduction, aes(x = repetitionNum, y = mean*100)) +
   xlab('repetition #') +
   ylim(0,100) +
   scale_x_continuous(breaks = round(seq(1, 6, by = 1),1)) +
-  theme_few() +
+  theme_cowplot() +
   theme(aspect.ratio = 1)
 
-ggsave('../writing/tangrams/figs/listenerResponses.pdf', 
-       height = 8, width = 8, units = 'cm', useDingbats = F)
+ggsave('../../writing/cognitive_science_format/figs/listenerResponses.pdf', 
+       height = 8, width = 12, units = 'cm', useDingbats = F)
 ```
 
 ### what is actually contained in listener response messages?
@@ -126,24 +126,24 @@ summary(brm(reduction ~ prevcorrect * comparison + (1 + prevcorrect*comparison |
 ggplot(feedback, aes(x = reduction)) +
   geom_histogram()
 
-feedback.toplot <- feedback %>%
-  group_by(comparison, prevcorrect) %>%
+feedback.toplot <- feedback %>% filter(comparison == 'rep') %>%
+  group_by(repetitionNum, prevcorrect) %>%
   tidyboot_mean(column = reduction, na.rm =T, nboot = 1000) 
 
 feedback.toplot %>%
   ungroup() %>%
-  mutate(comparison = ifelse(comparison == 'rep', 'next repetition', 'next trial')) %>%
-  ggplot(aes(x = prevcorrect, y = empirical_stat, fill = factor(comparison))) +
-    geom_bar(stat = 'identity', position = 'dodge') +
+  ggplot(aes(x = repetitionNum, y = empirical_stat, color = factor(prevcorrect))) +
+    geom_point() +
+    geom_line() +
     geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), width = 0, position = 'dodge') +
-    #geom_hline(aes(yintercept = 0)) +
+    geom_hline(aes(yintercept = 0)) +
     #facet_wrap(~ comparison) +
-    theme_few()  +
+    theme_cowplot()  +
     theme(aspect.ratio = 1) +
     ylab('(log) ratio of # words vs. previous round') +
     ylim(-0.8, 0.8)
 
-ggsave('../../writing/cognitive_science_format/figs/responseToFeedback_withtrial.pdf', 
+ggsave('../../writing/cognitive_science_format/figs/responseToFeedback.pdf', 
        height = 8, width = 16, units = 'cm', useDingbats = F)
 ```
 
@@ -161,26 +161,30 @@ Seems to be markers of figurative descriptions, determiners, and modifying phras
 
 ```{r, cache = T, warning=F}
 tagged_df <- read_csv('../outputs/posTagged_tangramsSequential_collapsed.csv', 
-                      col_types = 'ciicciiiiiiiiiiii') 
+                      col_types = 'ciicciiiiiiiiiiiiiiiiiiiiiii') 
 ```
 
 ```{r}
-tagged_df %>%
+library(cowplot)
+to.plot <- tagged_df %>%
    group_by(repetitionNum) %>% #taskVersion
-   tidyboot_mean(numWords, na.rm = T) %>%
+   tidyboot_mean(numWords, na.rm = T) 
+
+to.plot %>%
    mutate(measure = '# words per tangram') %>%
    ggplot(aes(x = repetitionNum, y = empirical_stat)) + #, color = taskVersion
-    geom_ribbon(aes(ymax = ci_upper, ymin = ci_lower), alpha= 0.1) +
+    geom_ribbon(aes(ymax = ci_upper, ymin = ci_lower), alpha= 0.2) +
     geom_line() +
     xlab('repetition #') +
     ylab('mean # words used \n per tangram') +
     #facet_wrap(~ taskVersion, nrow = 1, ncol = 2) +
     scale_x_continuous(breaks = round(seq(1, 6, by = 1),1)) +
-    ylim(c(0, NA)) +
-    theme_few() +
+    ylim(c(0, 20)) +
+    theme_cowplot()  + 
+    #theme_few() +
     theme(aspect.ratio = 1)
-ggsave('../writing/tangrams/figs/wordReduction.pdf',
-        height = 8, width = 10, units = 'cm', useDingbats = F)
+ggsave('../../writing/cognitive_science_format/figs/reduction.pdf',
+        height = 8, width = 12, units = 'cm', useDingbats = F)
 ```
 
 Statistics:
@@ -190,7 +194,6 @@ summary(lmer(log(numRawWords) ~ poly(repetitionNum,2) +
                (1 + repetitionNum | gameid) + 
                (1 + repetitionNum | intendedName), 
              data = tagged_df %>% 
-               #filter(taskVersion == 'cued') %>%
                group_by(gameid, trialNum, repetitionNum, intendedName) %>% 
                summarize(numRawWords = sum(numWords))))
 ```
@@ -200,22 +203,23 @@ summary(lmer(log(numRawWords) ~ poly(repetitionNum,2) +
 examine reduction in different parts of speech
 
 ```{r}
-tagged_df %>%
+read_csv('../outputs/posTagged_tangramsSequential_collapsed.csv') %>%
   group_by(repetitionNum) %>%
   summarize(numWords = sum(numWords),
             nouns = sum(NOUNcount)/sum(numWords),
             verbs = sum(VERBcount)/sum(numWords),
             dets= sum(DETcount)/sum(numWords),
+            #nums= sum(NUMcount)/sum(numWords),
             #pronouns = sum(PRONcount)/sum(numWords),
             preps = sum(ADPcount)/sum(numWords),
             #adverbs = sum(ADVcount)/sum(numWords),
-            #conjunctions = sum(CCONJcount)/sum(numWords),
+            conjunctions_pronouns = (sum(CCONJcount) + sum(SCONJcount) + sum(PRONcount))/sum(numWords),
             adjectives = sum(ADJcount)/sum(numWords)) %>%
-  mutate(OTHER = (1 - nouns - verbs - dets - #pronouns - conjunctions - adverbs
+  mutate(OTHER = (1 - nouns - verbs - dets -conjunctions_pronouns -#pronouns - conjunctions - adverbs
                       preps - adjectives)) %>%
   gather(POS, prop, nouns:OTHER) %>%
-  mutate(POS = factor(POS, levels = c('nouns',  'verbs', 'adjectives', #'adverbs',
-                              'preps', 'dets', 'OTHER'))) %>%
+  mutate(POS = factor(POS, levels = c('nouns',  'verbs', 'preps', 'adjectives', #'adverbs',
+                               'conjunctions_pronouns', 'dets', 'OTHER'))) %>%
   select(repetitionNum, POS, prop) %>%
   #mutate(POS = fct_reorder(POS, prop)) %>%
   ggplot(aes(x = repetitionNum, y = prop, fill = POS)) +
@@ -223,9 +227,9 @@ tagged_df %>%
     scale_fill_brewer(palette = "Set1") +
     theme_few() +
     scale_x_continuous(breaks = c(1,2,3,4,5,6))+
-    theme(aspect.ratio = 2) +
+    theme(aspect.ratio = 2.5) +
     ylab('% words')
-ggsave('../writing/tangrams/figs/posChange.pdf',
+ggsave('../../writing/cognitive_science_format/figs/posChange.pdf',
         height = 8, width = 16, units = 'cm', useDingbats = F)
 
 
@@ -246,7 +250,7 @@ posReduction <- tagged_df %>%
             pronouns = sum(PRONcount),
             preps = sum(ADPcount),
             adverbs = sum(ADVcount),
-            conjunctions = sum(CCONJcount),
+            conjunctions = sum(CCONJcount) + sum(SCONJcount),
             adjectives = sum(ADJcount)) %>%
   gather(POS, count, nouns:adjectives) %>%
   select(gameid, repetitionNum, POS, count) %>%
@@ -271,6 +275,8 @@ posReduction <- tagged_df %>%
   transform(POS=reorder(POS, -mean))
 
 detReductionRate <- (posReduction %>% filter(POS == 'dets'))$mean * 100
+conjReductionRate <- (posReduction %>% filter(POS == 'conjunctions'))$mean * 100
+pronounReductionRate <- (posReduction %>% filter(POS == 'pronouns'))$mean * 100
 nounReductionRate <- (posReduction %>% filter(POS == 'nouns'))$mean * 100
 
 ggplot(posReduction, aes(x = POS, y = mean, fill = cat)) +
@@ -285,7 +291,7 @@ ggplot(posReduction, aes(x = POS, y = mean, fill = cat)) +
   theme(aspect.ratio = 1)
 
 
-ggsave('../writing/tangrams/figs/posReduction.pdf',
+ggsave('../../writing/cognitive_science_format/figs/posReduction.pdf',
         height = 8, width = 16, units = 'cm', useDingbats = F)
 ```
 
@@ -294,10 +300,21 @@ ggsave('../writing/tangrams/figs/posReduction.pdf',
 Get list of all words dropped on each round...
 
 ```{r}
-d <- read_csv('../../data/tangramsSequential_collapsed.csv', col_types = 'ciiccil')
-true <- 4.362526534753067
-permuted <- read_delim('../outputs/permuted_dependency_distribution.txt', ',', col_names = c('vals'))
-cat('95% CI:', sort(permuted$vals)[2], ',', sort(permuted$vals)[98])
+syntactic <- read_csv('../outputs/permuted_dependency_distribution.csv') %>%
+  mutate(repetitionNum = fct_rev(factor(paste0('repetition ', repetitionNum))))
+
+ggplot(syntactic, aes(x = repetitionNum, y= value, fill=baselineName, color = baselineName)) +
+  geom_point(data = subset(syntactic, baselineName == 'true'), size = 4) +
+  geom_violin(data = subset(syntactic, baselineName != 'true'))  +
+  theme_few() +
+  ylab('mean dependency length between dropped words') +
+  xlab('') +
+  coord_flip() +
+  #scale_x_continuous(breaks = NULL) +
+  theme(aspect.ratio = 1/2)
+
+ggsave('../../writing/cognitive_science_format/figs/syntactic_reduction_baselines.pdf',
+       height = 8, width = 16, units = 'cm', useDingbats = F)
 ```
 
 

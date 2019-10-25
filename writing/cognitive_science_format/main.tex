@@ -201,7 +201,7 @@ After excluding games that terminated before the completion of the experiment du
 % Because the classic work using the repeated reference game paradigm reported near ceiling accuracy for all pairs, and b
 We used a 66/66 rule, excluding pairs that got fewer than 66\% of trials correct ($\le8$ of 12)  on more than 66\% of blocks ($\ge4$ of 6). 
 While most pairs were near ceiling accuracy by the final repetition, this rule excluded 11 in \emph{free matching} and 8 in \emph{cued} who appeared to be guessing or rushing to completion. 
-After all exclusions, we were left with a \emph{free matching} corpus containing a total of 8,639 ($\sim$ 51,271 words) messages over 56 complete games and a \emph{cued} corpus containing 7,867 messages ($\sim$ 46,000 words) over 83 games after cleaning.
+After all exclusions, we were left with a \emph{free matching} corpus containing a total of 8,639 ($\sim$ 51,271 words) messages over 56 complete games and a \emph{cued} corpus containing 7,867 messages ($\sim$ 46,000 words) over 83 games, after cleaning.
 
 \subsection{Stimuli \& Procedure}\label{stimuli}
 
@@ -250,7 +250,7 @@ We used a three step pre-processing pipeline to prepare our corpus for subsequen
 \section{Results: characterizing the dynamics of structure}
 \label{sec:structure}
 
-We begin with the observation that the mean number of words used by directors decreases over time (see Fig. \ref{fig:feedback}A)\footnote{A similar reduction curve was found in our  ``free matching'' pilot version of the task, though it required more words overall. Participants needed to additionally mention which tangram they were referring to (i.e. ``number 3 is the \dots``)}.
+We begin with the observation that the mean number of words used by directors for each tangram decreases strongly over time (see Fig. \ref{fig:feedback}A)\footnote{A similar reduction curve was found in our  ``free matching'' pilot version of the task, though it required more words overall. Participants needed to additionally mention which tangram they were referring to (i.e. ``number 3 is the \dots``)}.
 This result replicates a highly reliable reduction effect found throughout the literature on repeated reference games \citep[e.g.][]{KraussWeinheimer64_ReferencePhrases,BrennanClark96_ConceptualPactsConversation}, though participants in our task used fewer words overall than reported by \cite{ClarkWilkesGibbs86_ReferringCollaborative}. 
 This difference is likely due to the text-based (vs.~spoken) interface.
 The following analyses break down this general gain in efficiency into a finer-grained set of phenomena concerning the \emph{structure} of referring expressions over time.
@@ -261,7 +261,7 @@ What sequence of transformations do descriptions undergo over the course of repe
 \begin{figure}[t]
 \centering
 \includegraphics[scale=.64]{listenerFeedback_combined.pdf}
-\caption{(A) Directors use fewer words per tangram over time. (B) Matchers reply with interactive feedback less often over time, and (C) directors are sensitive to feedback from the matcher's selection, increasing message length on the subsequent repetition of a tangram after an error is made.}
+\caption{(A) Directors use fewer words per tangram over time, (B) matchers are less likely to send a message over time, and (C) directors are sensitive to feedback from the matcher's selection, modulating the reduction in message length on the subsequent repetition of a tangram after an error is made.}
 \label{fig:feedback}
 \end{figure}
 
@@ -270,11 +270,12 @@ What sequence of transformations do descriptions undergo over the course of repe
 Conventions are formed \emph{collaboratively}, not in isolation \citep{ClarkWilkesGibbs86_ReferringCollaborative}: 
 directors and matchers engage in a bi-directional process where matchers are allowed to ask follow-up questions, suggest corrections, and acknowledge or verbally confirm their understanding through a backchannel. 
 In the absence of feedback, descriptions may not necessarily get shorter \citep{KraussWeinheimer66_Tangrams, GarrodFayLeeOberlanderMacLeod07_GraphicalSymbolSystems}.
-While we automatically supplied minimal feedback about the matcher's response and the true target on each trial, we predicted that additional feedback provided through backchannel replies should be highest on the first repetition and drop off once meanings are agreed upon. 
+While we automatically supplied minimal feedback about the matcher's response and the true target on each trial, we predicted that additional feedback provided by the matcher through backchannel replies should be highest on the first repetition and drop off once meanings are agreed upon. 
+
 To test this prediction, we coded whether the matcher sent a message or not on each trial and fit a mixed-effects logistic regression model with a fixed effect of repetition, random intercepts and slopes for each pair of participants, and a random intercept for each target. 
-We found that the probability of the matcher sending a message decreased significantly over the game $(b=-0.84, t = -9.1, p < 0.001$; Fig. \ref{fig:feedback}B).
+We found that the probability of the matcher sending a message decreased significantly over the game $(b=-0.84, t = -9.1, p < 0.001$).
 While usage of the backchannel in our online text-based task was less frequent overall than reported in previous verbal lab experiments, we nonetheless strongly replicated the overall trend.
-In aggregate, 75\% of matchers responded with at least one message in the first repetition block, but only 4\% sent a message in the last block.
+In aggregate, 75\% of matchers responded with at least one message in the first repetition block, but only 4\% sent a message in the last block (see Fig. \ref{fig:feedback}B).
 These messages were frequently questions: as a lower bound, we observed that 49\% of matcher messages explicitly contained question marks (e.g. ``is it standing?'')
 Other messages simply echoed the director's label or suggested alternative labels.
 A deeper quantitative analysis of the content of these backchannel messages is an interesting direction for follow-up work. 
@@ -284,16 +285,15 @@ If the matcher failed to select the correct target, the director may take this a
 If the matcher is correct, on the other hand, the director may take this as evidence of understanding and reduce their level of detail when the tangram next appears.
 We tested these predictions by comparing the proportional change in utterance length (i.e. $\log(n_{t}/n_{t-1})$) on the block after an error against the change after a correct response.
 This measure could be positive, indicating a net increase in utterance length, or negative, indicating a reduction.
-
 We fit a mixed-effects regression model predicting this measure with a categorical fixed effect of the matcher's response for the same at the previous repetition block (correct vs. incorrect) and a (centered) continuous effect of repetition block number, including maximum random effects at the speaker level. 
 We found a significant main effect of feedback, controlling for block number: utterance length decreased more after correct responses than after incorrect responses, $b = -0.28$, 95\% credible interval: $[-0.36, -0.20]$ (see Fig. \ref{fig:feedback}C).
-Although appearances of the same tangram were spaced out by block, it is still possible that this effect is not item-specific but the result of lower level attentional or affective mechanisms triggered in the aftermath of an error signal. 
 
+Although appearances of the same tangram were spaced out by block, it is still possible that this effect is not item-specific but the result of lower level attentional or affective mechanisms triggered in the aftermath of an error signal. 
 To evaluate this possibility, we also measured the proportional change in utterance length on the following \emph{trial}, when feedback about the matcher's response would be freshest but the target tangram would be different.
 We then constructed a second regression model including categorical fixed effects of matcher response (correct vs. incorrect) and item-specificity (change measured relative to previous trial vs. previous repetition block), as well as their interaction. 
 We found a significant cross-over interaction, $b = -0.31$, 95\% credible interval: $[-0.42, -0.19]$\footnote{Because errors were infrequent, an asymmetry in cell size caused singularity issues during optimization of this model. We instead decided to use Bayesian regression as implemented by the \texttt{brms} package. Smoother priors prevent variance estimates from going to zero.}.
-The sensitivity to feedback we observed on the subsequent repetition block is not present on the subsequent trial: speakers are equally likely to use more or less words after a correct response, and actually use fewer words after an \emph{incorrect} response due to a regression to the mean: more words than average are used for harder tangrams. 
-This pattern of results is consistent with sensitivity to \emph{tangram-specific} evidence of the matcher's understanding.
+The sensitivity to feedback we observed on the subsequent repetition block is not present on the subsequent trial: speakers are equally likely to use more or less words immediately after a correct response, and actually use fewer words after an \emph{incorrect} response due to a regression to the mean: statistically, more words than average are used for harder tangrams. 
+This pattern of results is consistent with sensitivity to \emph{tangram-specific} evidence of the matcher's understanding when deciding to modify referring expressions.
 
 
 %\begin{figure}[t]
@@ -306,7 +306,7 @@ This pattern of results is consistent with sensitivity to \emph{tangram-specific
 \begin{figure}[t!]
 \centering
 \includegraphics[scale=.8]{posResults.pdf}
-\caption{(A) proportion of words in different part of speech on each repetition. (B) Closed-class parts of speech are more likely to be dropped than open-class parts of speech. Error bars are bootstrapped 95\% confidence intervals.} 
+\caption{(A) Proportion of words from different part of speech at each repetition block (orange combines pronouns and conjunctions). (B) Closed-class parts of speech are more likely to be dropped than open-class parts of speech. Error bars are bootstrapped 95\% confidence intervals.} 
 \label{fig:pos}
 \end{figure}
 
@@ -342,34 +342,35 @@ This pattern of results is consistent with sensitivity to \emph{tangram-specific
 
 \paragraph{Reduction in parts of speech}
 
-Having established the conditions under which speakers are willing to shorten their utterances, we turn to structure in the shortening process.
+Having established the matcher-dependent conditions under which directors are willing to shorten their utterances, we now examine the way they are shortened in more detail.
 First, we explore which \emph{kinds} of words are most likely to be dropped. 
 We used the SpaCy part-of-speech tagger \citep{spacy2} to count the number of words belonging to different parts of speech in each message.
 In Fig. \ref{fig:pos}A, we show the shifting proportions of different parts of speech at each repetition.
 We find that nouns account for proportionally more of the words being used over time, while determiners and prepositions account for fewer.
 To test which kinds of words are more likely to be dropped, we measured the percent reduction in the number of words in each part of speech from the first repetition to the sixth repetition. 
-We find that determiners (`the', `a', `an') are the most likely class of words to be dropped (90\%) \ndg{looks like pronouns from the fig?} and nouns (`dancer', `rabbit') are the least likely to be dropped (61\%). % with only an Y\% rate. 
-More generally, closed-class parts of speech, including function words like determiners, are strictly more likely to be dropped than open-class parts of speech (Fig. \ref{fig:pos}B).
-Open-class parts of speech are statistically more likely to supply \emph{distinctive} words than closed-class parts of speech, perhaps accounting for why they are dropped. We return to the role of distinctiveness in section \ref{sec:distinctive}.
-%these structural considerations may contribute to the patterns in distinctiveness reported in section \ref{sec:distinctive}.
-
+We find that pronouns (`it', `he'), determiners (`the', `a', `an'), and conjunctions (`and', `that') are the most likely classes of words to be dropped (94\%, 93\% and 91\%, respectively) and nouns (`dancer', `rabbit') are the least likely to be dropped (59\%).
+More generally, closed-class parts of speech, including function words, are strictly more likely to be dropped than open-class parts of speech (Fig. \ref{fig:pos}B).
+Open-class parts of speech are statistically more likely to supply \emph{distinctive} words than closed-class parts of speech, perhaps accounting for why they are dropped. 
+We return to the role of distinctiveness in section \ref{sec:distinctive}.
 
 One possible interpretation of these findings is that reduction may be driven mostly by the loss of function words as directors shift to a less-grammatical shorthand over the course of the task.
-However, when examining the n-grams most likely to be dropped (see Table \ref{tab:words}), we find that many of the most dropped closed-class words are used to form conjunctions (`and') or prepositional phases (`of', `with').
+However, when examining the n-grams most likely to be dropped (see Table \ref{tab:words}), we noticed that many of the most dropped closed-class words are used to  form prepositional phases (`of', `with') or combine different clauses (`and'). 
 Others are modifiers (`the right \dots'). 
 These examples suggest an alternative explanation: the higher reduction of closed-class function words may be a consequence of entire meaningful grammatical units (e.g.~clauses) being dropped at once.
-If initial descriptions tend to be syntactically complex because they are redundant, combining multiple sources of information for identifying the target, then the director may omit entire modifying clauses when evidence suggests that the matcher understands.
+If initial descriptions tend to be syntactically complex because they are redundant, combining multiple sources of information for identifying the target, then the director may omit entire modifying clauses when feedback suggests that the matcher understands.
 
 \paragraph{Reduction in syntactic constituents} 
 We explicitly tested this hypothesis by examining whether pairs of words dropped from one reference to the next tend to come from the same syntactic units, relative to a random deletion baseline.
 We quantified the extend to which dropped words `cluster' by examining dependency lengths between the dropped words \citep{jurafsky2014speech,futrell2015large}.
-Specifically, we compared each referring expression to the one produced on the subsequent repetition to determine which words were dropped.
-Then we looked up each pair of dropped words and found the shortest path between them in the dependency parse tree (see Fig. \ref{fig:dependency}).
+Specifically, we compared each referring expression to the one produced on the subsequent repetition block to determine which words were dropped, and which reappeared.
+Then we looked up each pair of dropped words in the earlier utterance and found the shortest path between them in the dependency parse tree (see Fig. \ref{fig:dependency}).
 We then took the mean dependency length across all such pairs in all games.
 
-This empirical `syntactic clustering' statistic was then compared to a random baseline.
-For this baseline, instead of examining dependency lengths for the words that were actually dropped, we randomly sampled the same number of words from the referring expression and computed the dependency length between them.
+This empirical `syntactic clustering' statistic was compared to two baseline.
+For the \emph{random} baseline, instead of examining dependency lengths between the words that were actually dropped, we randomly sampled the same number of words from the referring expression and computed the dependency length between them.
 We repeated this procedure 100 times to obtain a null distribution of the mean dependency length that would be expected if words were being dropped \emph{randomly} from anywhere in the message.
+For the \emph{function words} baseline, we were specifically interested in the null distribution that should be expected if function words were preferentially dropped independent of the syntactic sub-units they belong to.
+We thus first sampled from the set of function words in the utterance, and if this set was smaller than the total number of words dropped, we filled the remainder with random non-function words. 
 
 \ndg{also do a baseline where you drop the same number of function words (if possible) drawn randomly from the expression?}
 \ndg{explore this statistic as a function of repetition number, to see eg if people tend to drop clauses initially and then function words alone later?}
@@ -511,6 +512,7 @@ To rigorously test this prediction we conducted analyses on how the semantic vec
 \label{fig:similarity}
 \end{figure}
 
+\todo[inline]{remove this section}
 \paragraph{Later utterances are increasingly different from initial utterance}
 
 First, we hypothesized that there was cumulative change in the semantic content of a particular pair's utterances across repetitions: utterances on later repetitions would become increasingly dissimilar from their initial utterance.
@@ -518,13 +520,10 @@ We predicted cosine similarity in a mixed-effects regression model including (or
 We found a significant linear decrease in similarity to the initial repetition as the lag becomes larger, $b = -3.5,~t = 12.2$, as well as a significant quadratic term, $b=1.1, t=5.3$, suggesting that this decrease in similarity slows down over time (see Fig.~\ref{fig:similarity}A).
 
 Because the entire distribution of utterances may have drifted to a different region of the semantic space for generic reasons (e.g., because they were shorter overall), we compared this estimated drift within pairs of participants to a permuted baseline.
-We scrambled utterances across different pairs of participants, preserving repetition order, and re-ran our mixed-effects model to obtain a null distribution representing the decrease in semantic distance from a \emph{random} speaker's utterance on the first repetition.
-We found that this permuted baseline also showed a linear decrease over time, but our true estimate ($b=-3.5$) fell narrowly outside the null distribution of effects $(95\%~CI= [-3.34, -3.04])$, showing that utterances by a particular speaker drifted from their own initial utterance to a slightly greater degree than would be expected due to generic differences between utterances made at different timepoints in an interaction\footnote{Both here and for the permuted baselines in the subsequent two analyses we needed to simplify the random effects structure to contain only random intercepts due to convergence issues over the large number of permutations. However, we were interested in the coefficient estimate rather than statistical significance in these permuted models, and estimates appeared stable across different random effects structures.}.
+We scrambled utterances across different pairs of participants, preserving repetition order, and re-ran our mixed-effects model to obtain a null distribution representing the decrease in semantic distance from a \emph{random} speaker's utterance on the first repetition.\footnote{Both here and for the permuted baselines in the subsequent two analyses we needed to simplify the random effects structure to contain only random intercepts due to convergence issues over the large number of permutations. However, we were interested in the coefficient estimate rather than statistical significance in these permuted models, and estimates appeared stable across different random effects structures.}
+We found that this permuted baseline also showed a linear decrease over time, but our true estimate ($b=-3.5$) fell narrowly outside the null distribution of effects $(95\%~CI= [-3.34, -3.04])$, showing that utterances by a particular speaker drifted from their own initial utterance to a slightly greater degree than would be expected due to generic differences between utterances made at different timepoints in an interaction.
 This difference is mainly due to utterances from different speakers being dissimilar at the initial point while self-similarity is by definition maximized within a speaker, thus depressing the overall slope of the baseline.
 %We expect that this is a consequence of random pairs beginning as  the beginning, depressing 
-\ndg{the way this is phrased i feel like your trying to sell me on a result that isn't really there. the whole population seems to become more diverse in about the same way as within-pair (with that little analysis artifact at 1,2), which is consistent with all pairs having a similar initial distribution.}
-
-\ndg{actually, i'm not sure that the analysis in the subsection adds anything? could delete and just keep the next two, which are clearer?}
 
 \paragraph{Utterances become increasingly consistent within interaction} 
 As directors modified their utterances across successive repetitions, we additionally hypothesized that they would converge on increasingly consistent, stable ways of referring to each tangram.

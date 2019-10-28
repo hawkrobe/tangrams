@@ -1,6 +1,6 @@
 # Function takes a countType ['unigrams', 'bigrams', 'trigrams'] and returns a table of most reduced n-gram
 getMostReduced = function(countType) {
-  filename <- paste0("./outputs/", countType, "Counts.csv")
+  filename <- paste0("../outputs/", countType, "Counts.csv")
   return(read_csv(filename, col_names = T, col_types = 'cici') %>%
            group_by(word, repetitionNum) %>%
            summarize(count = sum(count)) %>%

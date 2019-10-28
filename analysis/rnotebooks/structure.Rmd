@@ -231,13 +231,9 @@ read_csv('../outputs/posTagged_tangramsSequential_collapsed.csv') %>%
     ylab('% words')
 ggsave('../../writing/cognitive_science_format/figs/posChange.pdf',
         height = 8, width = 16, units = 'cm', useDingbats = F)
-
-
 ```
 
 TODO: distance in depth of the tree between the nouns
-
-TODO: consider only showing full curve like this for ones we want to highlight (e.g. nouns vs. verbs vs. adjectives or something?), and a supplemental bar plot version with % decrease in appearance of each POS (like in the cogsci paper).
 
 ```{r}
 posReduction <- tagged_df %>%
@@ -295,13 +291,17 @@ ggsave('../../writing/cognitive_science_format/figs/posReduction.pdf',
         height = 8, width = 16, units = 'cm', useDingbats = F)
 ```
 
-### Reduction in syntactic features 
+### Dependency lengths
 
 Get list of all words dropped on each round...
 
 ```{r}
 syntactic <- read_csv('../outputs/permuted_dependency_distribution.csv') %>%
   mutate(repetitionNum = fct_rev(factor(paste0('repetition ', repetitionNum))))
+
+syntactic %>% group_by(sampleNum, baselineName) %>% summarize(v = mean(value)) %>%
+  group_by(baselineName) %>%
+  summarize(lower = min(v), upper = max(v))
 
 ggplot(syntactic, aes(x = repetitionNum, y= value, fill=baselineName, color = baselineName)) +
   geom_point(data = subset(syntactic, baselineName == 'true'), size = 4) +

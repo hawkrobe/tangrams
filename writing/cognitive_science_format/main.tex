@@ -151,19 +151,20 @@ First, we need more data.
 Recent technical developments have allowed interactive multi-player experiments to be run on the web \citep{Hawkins15_RealTimeWebExperiments}, boosting sample sizes by an order of magnitude. 
 For comparison, seminal work by \cite{ClarkWilkesGibbs86_ReferringCollaborative} used a sample of 8 pairs of participants, while our confirmatory sample alone contains 83 pairs.
 Second, the computational techniques needed to work with rich natural language data were limited at the time of prior work, but have become newly tractable given developments in natural language processing (NLP).
-Our analyses roughly divide into two broad categories, corresponding to the dynamics of syntactic \emph{structure} and semantic \emph{content}.
 
+Our analyses roughly divide into two broad categories, corresponding to the dynamics of syntactic \emph{structure} and semantic \emph{content}.
 Our investigations of syntactic structure in Section \ref{sec:structure} focus on the process by which referring expressions are shortened to communicate the same idea more efficiently.
 One particularly simple model, for example, might predict that shortening is purely driven by a random corruption process: at each repetition, each word from the previous repetition's utterance has some probability of being dropped.
 Raw word counts alone are not sufficient for disambiguating this simple model from more cognitively complex proposals.
 To move beyond word counts, we extracted part-of-speech tags and syntax trees from the text to understand which parts of utterances were being dropped, and in which sequence.
 In contrast to random corruption, we find that clauses and modifiers tend to be dropped in clusters, preferentially leaving open-class parts of speech (e.g. an adjective and noun) by the final repetition, and that the choice to shorten an utterance or not depends on sources of listener feedback.  %\ndg{this sentence sounds a little inconsistent... if we drop phrases we'll keep closed class parts of the remaining phrases. how do we end up with only open class?}
 
-Our investigations of semantic content in Section \ref{sec:content} revolve around the constructs of \emph{arbitrariness} and \emph{stability}, which have been central to accounts of convention since \cite{Lewis69_Convention}.
+In Section \ref{sec:content}, we examine the semantic content of utterances over the course of this shortening process.
+Our revolve around the theoretical constructs of \emph{arbitrariness} and \emph{stability}, which have been central to accounts of convention since \cite{Lewis69_Convention}.
 Arbitrariness refers to the claim that multiple equally successful solutions exist in the space of possible conventions: there is no single optimal solution that all speakers should objectively use.
 Stability refers to the claim that, once a solution has been found, speakers should not deviate from it.
 Our contribution is to operationalize these claims in the high-dimensional space of vector embeddings for referring expressions (i.e. GloVe embeddings).
-By measuring the similarity between referring expressions in this space, we show that signatures of arbitrariness and stability increase over the course of the interaction.
+By measuring the similarity between referring expressions in this space, we find that signatures of arbitrariness and stability gradually increase over the course of the interaction.
 We also clarify the (non-arbitrary) processes shaping which words eventually become conventions.
 In particular, we test the prediction that pragmatic pressures to be informative in context lead more discriminative words to conventionalize \citep{KirbyTamarizCornishSmith15_CompressionCommunication,GibsonEtAl17_ColorNamingUse,hawkins_emerging_abstractions_2018}. 
 Taken together, our findings characterize core processes operating within the microcosm of dyadic, natural-language interactions that may ultimately contribute to the adaptive properties of conventions shared across a language community.
@@ -319,18 +320,18 @@ This pattern of results is consistent with sensitivity to \emph{tangram-specific
 \#1 & a & look like & look like a \\ 
   \#2 & the & like a & look like -PRON- \\ 
   \#3 & -PRON- & to the & to the right \\ 
-  \#4 & like & -PRON- be & like -PRON- be \\ 
-  \#5 & be & this one & like a person \\ 
-  \#6 & look & the right & to the left \\ 
-  \#7 & on & the left & this one look \\ 
-  \#8 & one & like -PRON- & one look like \\ 
-  \#9 & with & on the & this one be \\ 
-  \#10 & to & with a & -PRON- look like \\ 
-  \#11 & and & a person & look like someone \\ 
+  \#4 & like & this one & like a person \\ 
+  \#5 & look & the right & to the left \\ 
+  \#6 & be & the left & one look like \\ 
+  \#7 & on & like -PRON- & this one look \\ 
+  \#8 & one & on the & like -PRON- be \\ 
+  \#9 & with & with a & this one be \\ 
+  \#10 & to & a person & -PRON- look like \\ 
+  \#11 & and & -PRON- be & look like someone \\ 
   \#12 & right & on top & diamond on top \\ 
-  \#13 & this & in the & in the air \\ 
-  \#14 & of & a diamond & on top of \\ 
-  \#15 & head & have a & a diamond on \\ 
+  \#13 & this & a diamond & in the air \\ 
+  \#14 & of & in the & on top of \\ 
+  \#15 & head & one look & a diamond on \\ 
    \hline
 \end{tabular}
 \caption{Top 15 unigrams, bigrams, and trigrams with the highest numeric reduction from first repetition to last repetition. Text lemmatized before n-grams computed. } 
@@ -364,29 +365,27 @@ We explicitly tested this hypothesis by examining whether pairs of words dropped
 We quantified the extend to which dropped words `cluster' by examining dependency lengths between the dropped words \citep{jurafsky2014speech,futrell2015large}.
 Specifically, we compared each referring expression to the one produced on the subsequent repetition block to determine which words were dropped, and which reappeared.
 Then we looked up each pair of dropped words in the earlier utterance and found the shortest path between them in the dependency parse tree (see Fig. \ref{fig:dependency}).
-We then took the mean dependency length across all such pairs in all games.
+Finally, we computed the mean dependency lengths between all such pairs of dropped word on each given trial, and took the mean across all trials. 
+We used this mean of means to prevent trials with more words from dominating.
 
 This empirical `syntactic clustering' statistic was compared to two baseline.
 For the \emph{random} baseline, instead of examining dependency lengths between the words that were actually dropped, we randomly sampled the same number of words from the referring expression and computed the dependency length between them.
 We repeated this procedure 100 times to obtain a null distribution of the mean dependency length that would be expected if words were being dropped \emph{randomly} from anywhere in the message.
 For the \emph{function words} baseline, we were specifically interested in the null distribution that should be expected if function words were preferentially dropped independent of the syntactic sub-units they belong to.
-We thus first sampled from the set of function words in the utterance, and if this set was smaller than the total number of words dropped, we filled the remainder with random non-function words. 
+We first sampled from the set of function words in the utterance, and if this set was smaller than the total number of words dropped, we filled the remainder with random non-function words. 
 
-\ndg{also do a baseline where you drop the same number of function words (if possible) drawn randomly from the expression?}
-\ndg{explore this statistic as a function of repetition number, to see eg if people tend to drop clauses initially and then function words alone later?}
-
-\begin{figure}[t!]
+\begin{figure}[b!]
 \centering
-\includegraphics[scale=.8]{dependency.pdf}
+\vspace{-1em}
+\includegraphics[scale=.75]{dependency.pdf}
 \caption{Example dependency parse for referring expression. If the words ``arms out in front'' were dropped, we would find a mean dependency length of 1.33 among the dropped words.} 
 \label{fig:dependency}
 \end{figure}
 
-%running the SpaCy dependency parser
-We found a mean empirical dependency length of 4.22, which lay outside the null distribution ($95\% CI: [4.38, 4.44]$), indicating a small but reliable effect of syntactic clustering.
-The words that were dropped tended to be closer to one another in the dependency parse than expected by chance.
-Other statistics such as the minimum dependency path or the raw distance in the sequence of words gave similar results.
-This result accords with early observations by \cite{Carroll80_NamingHedges}, which found that in three-quarters of transcripts from \cite{KraussWeinheimer64_ReferencePhrases} the short names that participants converged upon were prominent in some syntactic construction at the beginning, often as a head noun that was initially modified or qualified by other information. 
+We found a mean empirical dependency length of 4.22, which lay outside the both the random null distribution ($95\%$CI: $[4.38, 4.44]$) and the function word null distribution($95\%$ CI: $[]$), indicating a small but reliable effect of syntactic clustering among the words that were dropped on each round.
+That is, these words tended to be closer to one another in the dependency parse than expected by total chance or by preferentially dropping function words independently of their corresponding syntactic units.
+Furthermore, while overall dependency lengths get smaller as utterances become shorter, this result holds within every repetition block (see Supplemental Fig. \ref{fig:dependency_length_by_rep}), and other statistics gave similar results, including the minimum dependency length and the raw distance in the sequence of words. 
+This result accords with earlier observations by \cite{Carroll80_NamingHedges}, which found that in three-quarters of transcripts from \cite{KraussWeinheimer64_ReferencePhrases} the short names that participants converged upon were prominent in some syntactic construction at the beginning, often as a head noun that was initially modified or qualified by other information. 
 
 \section{Results: characterizing the dynamics of semantic content}
 \label{sec:content} 
@@ -415,7 +414,7 @@ Putting these principles together, we hypothesized that the labels that conventi
 
 For each pair of participants, we quantified the distinctiveness of a word $w$ as $n_w$: the number of tangrams that it was used to describe on the first repetition. 
 A word that is only used in the description of a single tangram (e.g. a descriptive noun like ``rabbit'') would be very distinctive, while a word used with all 12 tangrams (e.g. an article like ``the'') would be not distinctive at all.
-While this formulation is the most transparent to state in words, it is equivalent (up to a constant) to two popular  and theoretically motivated measures of distinctiveness used in natural language processing \citep{salton1988term}:\emph{tf-idf} and \emph{PPMI}.\footnote{
+While this formulation is the most transparent to state in words, it is equivalent (up to a simple deterministic transformation) to two popular and theoretically motivated measures of distinctiveness used in natural language processing \citep{salton1988term}: \emph{tf-idf} and \emph{PPMI}.\footnote{
 The first is \emph{term frequency-inverse document frequency} \citep[tf-idf,][]{sparck1972statistical}, which multiplies the term frequency $tf(w,d)$ of a word $w$ in a document $d$ by a ``global'' term $\log(N/n_w)$ where $N$ is the total number of documents and $n_w$ is the number of documents containing $w$. 
 In our case, the ``documents'' are just the referring expressions used for a distinct tangram on the first repetition, so $N=12$ and we can take $tf(w,d)$ to be a boolean for simplicity: 1 if the word occurs, 0 if it does not.
 We can thus retrieve our simpler measure by exponentiating, dividing by $12$, and taking the inverse.
@@ -437,9 +436,9 @@ More than half of the words used to refer to a tangram on the final repetition (
 We thus restricted our attention to this subset of words, coding them with a 1 if they later appeared at the final repetition and 0 if they did not.
 We then ran a mixed-effects logistic regression including a fixed effect of initial distinctiveness and maximal random effect structure with intercepts and slopes for each tangram and pair of participants.
 We found a significant positive effect of distinctiveness: words that were used with a larger number of tangrams on the first repetition were less likely to conventionalize, $b = -0.23, z = -6.1$ (see Fig. \ref{fig:distinct}). 
-Similar results are found using the \emph{tf-idf}.
+Similar results are found explicitly using the \emph{tf-idf} measure. 
 
-To evaluate how influential distinctiveness was, we conducted a non-parametric permutation test.
+To further evaluate how influential distinctiveness was, we conducted a non-parametric permutation test.
 For each speaker and tangram, we sampled from the words with \emph{maximal distinctiveness} and computed the mean probability of this word also being used on the final repetition, obtaining a distribution ranging from 24\% to 31\%.
 As a baseline null model, we randomly sampled from the list of all words contained in the initial utterance instead of the most distinctive one.
 Repeating this procedure 1000 times yielded a null distribution ranging from 2.5\% to 6.6\%, which was significantly lower than the one derived from distinctive words.
@@ -681,7 +680,14 @@ A likelihood ratio test between these models shows that the full model fits the 
 To summarize, we suggested the use of a baseline to better interpret our core result showing divergence in labels across different speakers as pairs discover different conventions.
 This baseline---the divergence in a speaker's \emph{own} utterances for different tangrams---begins at a similar level, indicating that the initial utterances used by different speakers overlap approximately as much as the different initial utterances used by a single speaker.
 While both subsequent trajectories indicate divergence, the different labels used by a single speaker rapidly spread out in vector space and become more distinct from one another than the labels used by different speakers.
-%In light of our results in Section 3.1, the effect of dropping overlapping words shared many tangrams
+
+\section*{Appendix C: Supplemental figures}
+\begin{figure}[b!]
+\centering
+\includegraphics[scale=.6]{syntactic_reduction_baselines.pdf}
+\caption{The empirical dependency lengths between dropped words are lower than expected under two baselines for every repetition block. Samples from the baselines are shown as densities. }
+\label{fig:dependency_length_by_rep}
+\end{figure}
 
 % \begin{biography}[example-image-1x1]{A.~One}
 % Please check with the journal's author guidelines whether author biographies are required. They are usually only included for review-type articles, and typically require photos and brief biographies (up to 75 words) for each author.

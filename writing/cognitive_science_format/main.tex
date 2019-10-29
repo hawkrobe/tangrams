@@ -365,7 +365,7 @@ We explicitly tested this hypothesis by examining whether pairs of words dropped
 We quantified the extend to which dropped words `cluster' by examining dependency lengths between the dropped words \citep{jurafsky2014speech,futrell2015large}.
 Specifically, we compared each referring expression to the one produced on the subsequent repetition block to determine which words were dropped, and which reappeared.
 Then we looked up each pair of dropped words in the earlier utterance and found the shortest path between them in the dependency parse tree (see Fig. \ref{fig:dependency}).
-Finally, we computed the mean dependency lengths between all such pairs of dropped word on each given trial, and took the mean across all trials. 
+Finally, we computed the mean dependency lengths between all such pairs of dropped word on each given trial, and took the mean across all trials (excluding blocks where no words were dropped). 
 We used this mean of means to prevent trials with more words from dominating.
 
 This empirical `syntactic clustering' statistic was compared to two baseline.
@@ -382,7 +382,7 @@ We first sampled from the set of function words in the utterance, and if this se
 \label{fig:dependency}
 \end{figure}
 
-We found a mean empirical dependency length of 4.22, which lay outside the both the random null distribution ($95\%$CI: $[4.38, 4.44]$) and the function word null distribution($95\%$ CI: $[]$), indicating a small but reliable effect of syntactic clustering among the words that were dropped on each round.
+We found a mean empirical dependency length of 2.77, which lay outside the both the random null distribution (range: $[2.90, 2.99]$) and the function word null distribution (range: $[3.03, 3.08]$), indicating a small but reliable effect of syntactic clustering among the words that were dropped on each round.
 That is, these words tended to be closer to one another in the dependency parse than expected by total chance or by preferentially dropping function words independently of their corresponding syntactic units.
 Furthermore, while overall dependency lengths get smaller as utterances become shorter, this result holds within every repetition block (see Supplemental Fig. \ref{fig:dependency_length_by_rep}), and other statistics gave similar results, including the minimum dependency length and the raw distance in the sequence of words. 
 This result accords with earlier observations by \cite{Carroll80_NamingHedges}, which found that in three-quarters of transcripts from \cite{KraussWeinheimer64_ReferencePhrases} the short names that participants converged upon were prominent in some syntactic construction at the beginning, often as a head noun that was initially modified or qualified by other information. 
@@ -455,8 +455,8 @@ In other words, once there is evidence that a particular label is successfully u
 
 \begin{figure}[t!]
 \centering
-\includegraphics[scale=.6]{tsne-tangramC_annotated.pdf}
-\caption{2D projection of semantic embeddings for example tangram. Each arrow represents the trajectory between the first repetition to last repetition for a distinct pair of participants. Color represents the rotational angle of the final location to more easily see where each pair began. Annotations are provided for select utterances, representing different equilibria found by different participants. \ndg{could we include small versions of the other 11 similar figs?}}
+\includegraphics[scale=.8]{tsne-tangramC_annotated.pdf}
+\caption{2D projection of semantic embeddings for example tangram. Each arrow represents the trajectory between the first repetition to last repetition for a distinct pair of participants. Color represents the rotational angle of the final location to more easily see where each pair began. Annotations are provided for select utterances, representing different equilibria found by different participants. Arrows in black are highlighted to show both initial and final utterances.}
 \label{fig:tsne}
 \end{figure}
 
@@ -469,7 +469,7 @@ To avoid artifacts from function words, we only included open-class content word
 We then defined a similarity metric between any pair of sentence vectors $\langle u_i, u_j \rangle$.
 Our results are robust to several choices of metric, but for simplicity we will use cosine similarity throughout the presentation below: $$\langle u_i, u_j \rangle = \cos \theta_{ij} = \frac{u_i \cdot u_j}{\| u_i\| \| u_j \|}$$
 
-To gain intuition, we begin by visualizing the trajectories taken by each pair of participants when referring to a particular example tangram.
+To gain intuition, we begin by visualizing the trajectories taken by each pair of participants when referring to a particular example tangram (see Supplemental Figure \ref{fig:all-tsne} for similar plots for the other items).
 To create this visualization, we took the first 50 components recovered by running Principal Components Analysis (PCA) on the 300-dimensional embeddings for all utterances used to refer to this tangram, including all speakers and all repetition blocks.
 We then used t-SNE \citep{maaten2008visualizing} to stochastically embed the lower-dimensional PCA representation of these utterances in a common 2D vector space\footnote{Unlike linear techniques like PCA or MDS which seek to keep dissimilar vectors far apart, nonlinear techniques like t-SNE focus on keeping neighboring points close together in the lower-dimensional space; a direct projection to 2D with linear techniques may be unable to preserve non-linear structure in the high-dimensional space. However, an initial linear step to an intermediate dimensionality is commonly used to speed up computation and reduce noise from the high-dimensional space.}. 
 Finally, we connected the first and last utterance a particular pair used to refer to this tangram with an arrow (Fig. \ref{fig:tsne}), and annotated utterances in several regions of the space.
@@ -506,7 +506,7 @@ To rigorously test this prediction we conducted analyses on how the semantic vec
 \centering
 \includegraphics[scale=.5]{similarity_analysis.pdf}
 \vspace{1em}
-\caption{Utterances within a pair (A) become more dissimilar from initial utterance and (B) become more similar to successive utterances on later repetitions, but (C) utterances across pairs become steadily more dissimilar. Error bars are bootstrapped 95\% CIs; dotted line represents permuted baseline.}
+\caption{(A) Utterances within a pair become more similar to successive utterances on later repetitions, converging on a stable convention, but (B) utterances across pairs become steadily more dissimilar, diverging to different solutions. Error bars are bootstrapped 95\% CIs. }
 %\vspace{1em}
 \label{fig:similarity}
 \end{figure}
@@ -593,7 +593,7 @@ Our use of classic tangram stimuli also raises an important question about how o
 In particular, it is likely that participants converge to distinctive `names' because the target of reference were distinctive objects.
 If the targets of communication instead varied along clear latent dimensions \citep[e.g.][]{nolle2018emergence}, contained multiple objects in relation to one another, or depicted events or activities unfolding over time, participants might instead have converged on more compositional systems making use of adjectives, verbs, and prepositions.
 Future work should examine how the structure of the target space affects the dynamics of adaptation. 
-Similarly how the \emph{ad hoc} meanings formed in one novel context generalize to other contexts with the same partner.
+Similarly, it will be important to determine how the \emph{ad hoc} meanings formed in one novel context generalize to other contexts with the same partner.
 
 The rapid timescale of adaptation we have investigated in dyadic reference games is not only of interest in its own right for theories of meaning and social coordination; it is a key building block toward grounding the adaptiveness and efficiency of larger-scale human language in the cognitive mechanisms of individual minds \citep{KirbyTamarizCornishSmith15_CompressionCommunication,gibson2019efficiency}.
 If community-wide conventions emerge from agents generalizing across different dyadic interactions, then local learning mechanisms leading to efficiency and informativity \emph{within} a dyad may explain how a community's conventions remain well-calibrated to the demands of the current environment.
@@ -644,7 +644,7 @@ We found that the mean empirical entropy lay well outside the null distribution 
 
 Finally, it is worth noting some advantages and disadvantages of this discrete measure compared to the continuous vector space measure used in the main text.
 A key advantage is that the entropy is not dependent on any particular choice of pre-trained vector embedding.
-Due to biases in the vocabulary of their training corpora, vector representations also may not capture some of the more idiosyncratic conventions that participants converge on (e.g. ``YMCA'' or ``zig zag'' or ``Frank'' -- short for ``Frankenstein'').
+Due to biases in the vocabulary of their training corpora, vector representations also may not capture some of the more idiosyncratic conventions that participants converge on (e.g.  ``zig zag'' or ``Frank'' -- short for ``Frankenstein'').
 Thus, to the extent we find converging results, the discrete measure may address concerns about the quality of the continuous representation.
 A key disadvantage, on the other hand, is that our permutation test methodology is more indirect and does not have a natural scale. 
 We can strongly reject the complete absence of arbitrariness and stability --- a lower bound --- but there is no clear derivation for a corresponding upper bound showing exactly how strong these effects are.
@@ -681,12 +681,23 @@ To summarize, we suggested the use of a baseline to better interpret our core re
 This baseline---the divergence in a speaker's \emph{own} utterances for different tangrams---begins at a similar level, indicating that the initial utterances used by different speakers overlap approximately as much as the different initial utterances used by a single speaker.
 While both subsequent trajectories indicate divergence, the different labels used by a single speaker rapidly spread out in vector space and become more distinct from one another than the labels used by different speakers.
 
+\newpage
+
 \section*{Appendix C: Supplemental figures}
-\begin{figure}[b!]
+
+
+\begin{figure}[h!]
 \centering
-\includegraphics[scale=.6]{syntactic_reduction_baselines.pdf}
+\includegraphics[scale=.8]{syntactic_reduction_baselines.pdf}
 \caption{The empirical dependency lengths between dropped words are lower than expected under two baselines for every repetition block. Samples from the baselines are shown as densities. }
 \label{fig:dependency_length_by_rep}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=.53]{tsne-alltangrams.pdf}
+\caption{t-SNE visualizations of utterance trajectories for all 12 tangrams; panel C is annotated in Fig \ref{fig:tsne}. }
+\label{fig:all-tsne}
 \end{figure}
 
 % \begin{biography}[example-image-1x1]{A.~One}

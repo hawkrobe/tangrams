@@ -296,22 +296,24 @@ ggsave('../../writing/cognitive_science_format/figs/posReduction.pdf',
 Get list of all words dropped on each round...
 
 ```{r}
-syntactic <- read_csv('../outputs/permuted_dependency_distribution.csv') %>%
-  mutate(repetitionNum = fct_rev(factor(paste0('repetition ', repetitionNum))))
+syntactic <- read_csv('../outputs/permuted_dependency_distribution.csv') 
 
-syntactic %>% group_by(sampleNum, baselineName) %>% summarize(v = mean(value)) %>%
+syntactic %>%   
+  filter(repetitionNum == 'avg') %>%
   group_by(baselineName) %>%
-  summarize(lower = min(v), upper = max(v))
+  summarize(lower = min(value), upper = max(value))
 
-ggplot(syntactic, aes(x = repetitionNum, y= value, fill=baselineName, color = baselineName)) +
-  geom_point(data = subset(syntactic, baselineName == 'true'), size = 4) +
-  geom_violin(data = subset(syntactic, baselineName != 'true'))  +
-  theme_few() +
-  ylab('mean dependency length between dropped words') +
-  xlab('') +
-  coord_flip() +
-  #scale_x_continuous(breaks = NULL) +
-  theme(aspect.ratio = 1/2)
+syntactic %>% 
+  mutate(repetitionNum = fct_rev(factor(paste0('repetition ', repetitionNum)))) %>%
+  ggplot(aes(x = repetitionNum, y= value, fill=baselineName, color = baselineName)) +
+    geom_point(data = subset(syntactic, baselineName == 'true'), size = 4) +
+    geom_violin(data = subset(syntactic, baselineName != 'true'))  +
+    theme_few() +
+    ylab('mean dependency length between dropped words') +
+    xlab('') +
+    coord_flip() +
+    #scale_x_continuous(breaks = NULL) +
+    theme(aspect.ratio = 1/2)
 
 ggsave('../../writing/cognitive_science_format/figs/syntactic_reduction_baselines.pdf',
        height = 8, width = 16, units = 'cm', useDingbats = F)

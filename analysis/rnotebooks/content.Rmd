@@ -308,34 +308,37 @@ ggsave(filename = '../../writing/cognitive_science_format/figs/tsne-tangramC.pdf
        width = 5, height = 5)
 ```
 
-MDS ...
+make supplemental figure showing all 12 tangrams
 
 ```{r}
-ggplot(tsne %>% filter(intendedName == 'C'), 
-       aes(x = x_tsne, y = y_tsne, group = gameid, frame = paste0('repetition: ', repetitionNum))) +
-  geom_line(alpha = 0.2) +
-  geom_point(aes(shape = factor(-repetitionNum), 
-                 color = finalTheta, 
-                 alpha = factor(repetitionNum)),
-             size = 1.5, stroke = 2,
-             data = tsne %>% filter(repetitionNum %in% c(1,6))) +
-  #facet_wrap(~ intendedName) +
-  theme_few(20) +
-  ggtitle('mds embeddings') +
-  scale_shape_manual(values = c(16, 21)) +
-  scale_alpha_discrete(range = c(0.5, 1))+
-  scale_color_gradientn(colours = tableau_color_pal()(3))+
-  guides(color = F, shape = F, alpha = F) +
-  theme(aspect.ratio = 1) 
+tsne.all <- tsne %>%
+  filter(repetitionNum %in% c(1, 6)) %>%
+  filter(!is.na(x_tsne)) %>%
+  group_by(gameid, intendedName) %>%
+  mutate(next_x = lead(x_tsne) ,
+         next_y = lead(y_tsne))
 
-ggsave('../writing/tangrams/figs/mds_embeddings.pdf', width = 15, height = 15)
-```
+ggplot(tsne.all, aes(x = x_tsne, y = y_tsne, color = finalTheta)) +
+    geom_point(data = subset(tsne.all, repetitionNum == 1),
+               size = 1) +
+    facet_wrap(~ intendedName, nrow = 4, ncol = 3) +
+    geom_segment(aes(xend = next_x, yend = next_y), arrow.fill = NULL, 
+                 arrow = arrow(length=unit(0.30,"cm"), angle=15, type = "closed"), ) +
+    # remove text for official version...
+    #geom_text(aes(label=contents), size = 1)+
+    theme_few(20) +
+    scale_shape_manual(values = c(21)) +
+    scale_alpha_continuous(range = c(0.5, 1))+
+    scale_color_gradientn(colours = viridis(5))+
+      theme(axis.title=element_blank(),
+        axis.text=element_blank(),
+        axis.ticks=element_blank()) +
+    labs(x = "", y = "") +
+    guides(color = F, shape = F, alpha = F) +
+    theme(aspect.ratio = 1) 
 
-TODO: how do tangrams cluster?
-
-```{r}
-
-#? 
+ggsave(filename = '../../writing/cognitive_science_format/figs/tsne-alltangrams.pdf',
+       width = 15, height = 15)
 ```
 ## Supplemental 
 

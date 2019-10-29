@@ -15,10 +15,10 @@ library(jsonlite)
 # Read in and compile data... 
 
 ```{r}
-unconstrainedMsgs = read_csv("../data/tangrams_unconstrained/message/rawUnconstrainedMessages.csv") %>%
+unconstrainedMsgs = read_csv("../../data/tangrams_unconstrained/message/rawUnconstrainedMessages.csv") %>%
   rename(msgTime = time, repetitionNum = roundNum, role = sender)
 
-unconstrainedResponses = read_csv("../data/tangrams_unconstrained/finalBoard/tangramsFinalBoards.csv") %>%
+unconstrainedResponses = read_csv("../../data/tangrams_unconstrained/finalBoard/tangramsFinalBoards.csv") %>%
   rename(finalTime = time, repetitionScore = score, repetitionNum = roundNum) %>%
   group_by(gameid, repetitionNum) %>%
   gather(tangramCat, position, subA:trueL) %>%
@@ -27,7 +27,7 @@ unconstrainedResponses = read_csv("../data/tangrams_unconstrained/finalBoard/tan
   mutate(correct = sub == true) %>%
   select(-sub, -true) 
 
-unconstrainedSubjInfo = read.csv("../data/tangrams_unconstrained/turk/tangrams-subject_information.csv") %>%
+unconstrainedSubjInfo = read.csv("../../data/tangrams_unconstrained/turk/tangrams-subject_information.csv") %>%
   rename(gameid = gameID) %>%
   select(-workerid, -DirectorBoards, -initialMatcherBoards)
 

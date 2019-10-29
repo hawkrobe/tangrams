@@ -345,7 +345,7 @@ This pattern of results is consistent with sensitivity to \emph{tangram-specific
 
 Having established the matcher-dependent conditions under which directors are willing to shorten their utterances, we now examine the way they are shortened in more detail.
 First, we explore which \emph{kinds} of words are most likely to be dropped. 
-We used the SpaCy part-of-speech tagger \citep{spacy2} to count the number of words belonging to different parts of speech in each message.
+We used the SpaCy part-of-speech tagger \citep{spacy2} to count the number of words belonging to different parts of speech in each message\footnote{The SpaCy tagger is statistical, obtaining comparable accuracy ($\sim 97\%$) to other modern taggers \cite{manning2011part}. However, it is important to note that the language used in our task likely differs from the tagger's training sample, containing many sentence fragments, bare NPs, and `ungrammatical' language that human annotators might also find difficult to classify into standard parts of speech.}.
 In Fig. \ref{fig:pos}A, we show the shifting proportions of different parts of speech at each repetition.
 We find that nouns account for proportionally more of the words being used over time, while determiners and prepositions account for fewer.
 To test which kinds of words are more likely to be dropped, we measured the percent reduction in the number of words in each part of speech from the first repetition to the sixth repetition. 
@@ -392,7 +392,7 @@ This result accords with earlier observations by \cite{Carroll80_NamingHedges}, 
 
 %NDG: i removed this sentence, because it felt weird and laden with theory that hasn't been discussed:
 %Having established the structural changes that transform long initial descriptions into efficient labels, we now move beyond the phenomenon of increasing \emph{efficiency} to examine how the same learning mechanisms shape the \emph{semantic content} of  the referring expressions speakers chose to use over time.
-So far we have established the increasing efficiency of referring expressions in terms of their (syntactic) structure. 
+So far we have examined the increasing efficiency of referring expressions in terms of their (syntactic) structure. 
 We next explore how the \emph{semantic content} of referring expressions changes over repeated reference.
 This raises a series of questions:
 Which words from a speaker's initial description are most likely to become conventionalized in their final labels?

@@ -27,13 +27,13 @@ library(modeest)
 library(reticulate)
 np <- import("numpy")
 
-source('./utils/analysis_helpers.R')
+source('../utils/analysis_helpers.R')
 ```
 
 # Dynamics of content
 
 ```{r}
-d <- read_csv('../data/tangramsSequential_collapsed.csv', col_types = 'ciiccil')
+d <- read_csv('../../data/tangramsSequential_collapsed.csv', col_types = 'ciiccil')
 ```
 
 
@@ -42,7 +42,7 @@ d <- read_csv('../data/tangramsSequential_collapsed.csv', col_types = 'ciiccil')
 Note that the only way to get an exact 0 is if word never appeared with tangram... so we want to filter these out ()
 
 ```{r}
-distinctiveness_d <- read.csv("outputs/PMI.csv", header = TRUE) %>%
+distinctiveness_d <- read.csv("../outputs/PMI.csv", header = TRUE) %>%
   mutate(finalRoundMatch = ifelse(finalRoundMatch == 'True', 1, 0)) %>%
   filter(!is.na(tf.idf)) %>%
   mutate(num_tangrams_occurred_with =  round(1 / ((2^tf.idf) /12))) 
@@ -109,12 +109,12 @@ cat('range for highest=', sort(highest)[1], sort(highest)[1000])
 ## semantic similarity analyses
 
 ```{r}
-M_mat = read_csv('./outputs/meta_tangrams_embeddings.csv', col_types = "nccnlc", na = c('[nan]')) %>%
+M_mat = read_csv('../outputs/meta_tangrams_embeddings.csv', col_types = "nccnlc", na = c('[nan]')) %>%
   mutate(feature_ind = X1 + 1, # Have to correct for R's (stupid) 1-indexing...
          gameID = gameid,
          target = intendedName,
          repetition = as.numeric(repetitionNum)) #%>% 
-F_mat <- np$load('outputs/feats_tangrams_embeddings_rawavg.npy')
+F_mat <- np$load('../outputs/feats_tangrams_embeddings_rawavg.npy')
 ```
 
 ### overall btw vs. within similarity
@@ -135,75 +135,6 @@ combined.df %>%
     theme_few()
 
 ggsave('../writing/tangrams/figs/across_vs_within.pdf',  height = 7, width = 10, units = 'cm', useDingbats = F)
-```
-
-### Drift
-
-Stats 
-
-```{r}
-permuted.drift <- compute_permuted_estimates(M_mat, F_mat, 'drift', 100)
-cat('CI for drift analysis=', sort(permuted.drift)[2], sort(permuted.drift)[98])
-
-true_lmer.drift <- make_within_df(M_mat, F_mat, 'cosine') %>% filter(rep1 == 1) %>% ungroup()
-true_lmer.drift.out <- lmer(sim ~ poly(rep2,2) + (1 + poly(rep2, 2)  | gameID) + (1 + poly(rep2, 2)| target), data = true_lmer.drift)
-cat('true for drift analysis=', (tidy(true_lmer.drift.out, effects = 'fixed') %>% filter(term == 'poly(rep2, 2)1'))$estimate)
-summary(true_lmer.drift.out)
-```
-
-Viz (raw data)
-
-```{r}
-true_lmer.drift %>% 
-  unite('repdiff', rep1, rep2, sep = '->') %>%
-  bind_rows(data.frame(repdiff ='1->1', sim = 1)) %>%
-  group_by(repdiff) %>%
-  mutate(group_mean = mean(sim, na.rm = T)) %>%
-  ggplot(aes(x = repdiff, y = sim)) +
-    geom_boxplot() +#width = .1, outlier.size=0
-    scale_x_discrete(labels = c('(1,1)','(1,2)', '(1,3)', '(1,4)', '(1,5)' ,'(1,6)','(1,7)')) +
-    ylim(0, 1) +
-    ylab('cosine similarity') +
-    ggtitle('drift from initial within game') +
-    theme_few() +
-    xlab('repetition pair') +
-    guides(color = F, fill = F) +
-    theme(aspect.ratio = 1, legend.position = c(0.5, 0.8), text = element_text(size=18), 
-          element_line(size=1), element_rect(size=2, color="#00000"))
-
-ggsave('../writing/tangrams/figs/drift_boxplot.pdf', height = 10, width = 10, units = 'cm', useDingbats = F)
-```
-
-Viz (mean estimates w/ baseline)
-
-```{r}
-empirical_baselines.drift <- combine_empirical_and_baselines(M_mat, F_mat, 'drift', 10) %>%
-    bind_rows(data.frame(IV ='1->1', empirical_stat=1, ci_lower=1, 
-                         ci_upper=1, sample_id='empirical')) %>%
-    bind_rows(compute_across_similarity(M_mat, F_mat, 'baseline', 'cosine') %>%
-                filter(IV == 1) %>% select(-n, -mean) %>%
-                mutate(IV = '1->1')) 
-
-empirical_baselines.drift %>%
-  mutate(sample_id = fct_relevel(sample_id, 'empirical', 'baseline')) %>%
-  ggplot(aes(x = IV, y = empirical_stat, color = sample_id, linetype = sample_id, group = sample_id)) +
-    geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), width = 0) + 
-    geom_line()  +
-    #geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), width = 0, data = empirical_baselines.drift %>% filter(sample_id == 'empirical')) +
-    #geom_line()  +
-    #geom_ribbon(aes(ymin = ci_lower, ymax = ci_upper), alpha = 0.5, color = NA, data = empirical_baselines.drift %>% filter(sample_id == 'baseline')) +
-    scale_x_discrete(labels = c('(1,1)','(1,2)', '(1,3)', '(1,4)', '(1,5)' ,'(1,6)','(1,7)')) +
-    ylim(0.4, 1) +
-    ylab('cosine similarity') +
-    ggtitle('drift from initial within game') +
-    theme_few() +
-    xlab('repetition pair') +
-    guides(color = F, fill = F) +
-    theme(aspect.ratio = 1, legend.position = c(0.8, 0.8), text = element_text(size=18), 
-          element_line(size=1), element_rect(size=2, color="#00000"))
-
-ggsave('../writing/tangrams/figs/drift_mean.pdf', height = 10, width = 10, units = 'cm', useDingbats = F)
-
 ```
 
 ### Within-interaction convergence
@@ -332,6 +263,82 @@ ggsave('../writing/tangrams/figs/divergence_mean.pdf', height = 10, width = 10, 
 
 ```
 
+## tsne visualizations
+
+```{r}
+tsne <- read_csv('../outputs/embeddings.csv') %>%
+  left_join(read_csv('../../data/tangramsSequential_collapsed.csv') ) %>%
+  select(gameid, intendedName, repetitionNum, x_tsne, y_tsne, contents) %>%
+  mutate(r = useful::cart2pol(x_tsne, y_tsne)$r,
+         theta = useful::cart2pol(x_tsne, y_tsne)$theta) %>%
+  group_by(gameid,  intendedName) %>%
+  arrange(repetitionNum) %>%
+  mutate(finalTheta = last(theta)) 
+
+tsne.toplot <- tsne %>% 
+  filter(intendedName == 'C') %>% 
+  filter(repetitionNum %in% c(1, 6)) %>%
+  filter(!is.na(x_tsne)) %>%
+  group_by(gameid) %>%
+  mutate(next_x = lead(x_tsne) ,
+         next_y = lead(y_tsne))
+
+ggplot(tsne.toplot, aes(x = x_tsne, y = y_tsne, color = finalTheta)) +
+    geom_point(data = subset(tsne.toplot, repetitionNum == 1),
+               size = 1) +
+    geom_segment(aes(xend = next_x, yend = next_y), arrow.fill = NULL, 
+                 arrow = arrow(length=unit(0.30,"cm"), angle=15, type = "closed"), ) +
+    # remove text for official version...
+    #geom_text(aes(label=contents), size = 1)+
+    theme_few(20) +
+    scale_shape_manual(values = c(21)) +
+    scale_alpha_continuous(range = c(0.5, 1))+
+    scale_color_gradientn(colours = viridis(5))+
+      theme(axis.title=element_blank(),
+        axis.text=element_blank(),
+        axis.ticks=element_blank()) +
+    labs(x = "", y = "") +
+    guides(color = F, shape = F, alpha = F) +
+    theme(aspect.ratio = 1)  #+
+# make it big to see text... remove
+ggsave(filename = '../../writing/cognitive_science_format/figs/tsne-tangramC_enlarged.pdf',
+       width = 15, height = 15)
+
+ggsave(filename = '../../writing/cognitive_science_format/figs/tsne-tangramC.pdf',
+       width = 5, height = 5)
+```
+
+MDS ...
+
+```{r}
+ggplot(tsne %>% filter(intendedName == 'C'), 
+       aes(x = x_tsne, y = y_tsne, group = gameid, frame = paste0('repetition: ', repetitionNum))) +
+  geom_line(alpha = 0.2) +
+  geom_point(aes(shape = factor(-repetitionNum), 
+                 color = finalTheta, 
+                 alpha = factor(repetitionNum)),
+             size = 1.5, stroke = 2,
+             data = tsne %>% filter(repetitionNum %in% c(1,6))) +
+  #facet_wrap(~ intendedName) +
+  theme_few(20) +
+  ggtitle('mds embeddings') +
+  scale_shape_manual(values = c(16, 21)) +
+  scale_alpha_discrete(range = c(0.5, 1))+
+  scale_color_gradientn(colours = tableau_color_pal()(3))+
+  guides(color = F, shape = F, alpha = F) +
+  theme(aspect.ratio = 1) 
+
+ggsave('../writing/tangrams/figs/mds_embeddings.pdf', width = 15, height = 15)
+```
+
+TODO: how do tangrams cluster?
+
+```{r}
+
+#? 
+```
+## Supplemental 
+
 #### some controls
 
 i'm making this claim in the paper that people start out with something shared in how they talk about particular tangrams; people are closer together at the beginning in a tangram-specific way. but maybe everyone is using long utterances at the beginning which makes it look similar. if that were true, then sampling of the content wouldn't matter. if you scramble words across tangrams within games and recompute the averaged utterance vector, then you'd expect that permutation to be equally similar. instead, we find that similarity drops.
@@ -421,77 +428,74 @@ bind_rows(acrossGames,diffTangramWithinGames) %>%
             `across tangrams in game` = mean(`across tangrams in game`, na.rm = T))
 ```
 
-## tsne visualizations
+
+### Drift
+
+Stats 
 
 ```{r}
-tsne <- read_csv('outputs/embeddings.csv') %>%
-  left_join(read_csv('../data/tangramsSequential_collapsed.csv') ) %>%
-  select(gameid, intendedName, repetitionNum, x_tsne, y_tsne, contents, feats_type) %>%
-  mutate(r = useful::cart2pol(x_tsne, y_tsne)$r,
-         theta = useful::cart2pol(x_tsne, y_tsne)$theta) %>%
-  group_by(gameid, feats_type, intendedName) %>%
-  arrange(repetitionNum) %>%
-  mutate(finalTheta = last(theta)) 
+permuted.drift <- compute_permuted_estimates(M_mat, F_mat, 'drift', 100)
+cat('CI for drift analysis=', sort(permuted.drift)[2], sort(permuted.drift)[98])
 
-tsne.toplot <- tsne %>% 
-  filter(intendedName == 'C') %>% 
-  filter(repetitionNum %in% c(1, 6)) %>%
-  filter(!is.na(x_tsne)) %>%
-  filter(feats_type == 'raw_avg') %>%
-  group_by(feats_type, gameid) %>%
-  mutate(next_x = lead(x_tsne) ,
-         next_y = lead(y_tsne))
-
-ggplot(tsne.toplot, aes(x = x_tsne, y = y_tsne, color = finalTheta)) +
-    geom_point(data = subset(tsne.toplot, repetitionNum == 1),
-               size = 1) +
-    geom_segment(aes(xend = next_x, yend = next_y), arrow.fill = NULL, 
-                 arrow = arrow(length=unit(0.30,"cm"), angle=15, type = "closed"), ) +
-    # remove text for official version...
-    geom_text(aes(label=contents), size = 1)+
-    theme_few(20) +
-    ggtitle('pca + tsne embeddings') +
-    scale_shape_manual(values = c(21)) +
-    scale_alpha_continuous(range = c(0.5, 1))+
-    scale_color_gradientn(colours = viridis(5))+
-      theme(axis.title=element_blank(),
-        axis.text=element_blank(),
-        axis.ticks=element_blank()) +
-    labs(x = "", y = "") +
-    guides(color = F, shape = F, alpha = F) +
-    theme(aspect.ratio = 1)  #+
-# make it big to see text... remove
-ggsave(filename = '../writing/tangrams/figs/tsne-tangramC.pdf', width = 15, height = 15)
+true_lmer.drift <- make_within_df(M_mat, F_mat, 'cosine') %>% filter(rep1 == 1) %>% ungroup()
+true_lmer.drift.out <- lmer(sim ~ poly(rep2,2) + (1 + poly(rep2, 2)  | gameID) + (1 + poly(rep2, 2)| target), data = true_lmer.drift)
+cat('true for drift analysis=', (tidy(true_lmer.drift.out, effects = 'fixed') %>% filter(term == 'poly(rep2, 2)1'))$estimate)
+summary(true_lmer.drift.out)
 ```
 
-MDS ...
+Viz (raw data)
 
 ```{r}
-ggplot(tsne %>% filter(intendedName == 'C'), 
-       aes(x = x_tsne, y = y_tsne, group = gameid, frame = paste0('repetition: ', repetitionNum))) +
-  geom_line(alpha = 0.2) +
-  geom_point(aes(shape = factor(-repetitionNum), 
-                 color = finalTheta, 
-                 alpha = factor(repetitionNum)),
-             size = 1.5, stroke = 2,
-             data = tsne %>% filter(repetitionNum %in% c(1,6))) +
-  #facet_wrap(~ intendedName) +
-  theme_few(20) +
-  ggtitle('mds embeddings') +
-  scale_shape_manual(values = c(16, 21)) +
-  scale_alpha_discrete(range = c(0.5, 1))+
-  scale_color_gradientn(colours = tableau_color_pal()(3))+
-  guides(color = F, shape = F, alpha = F) +
-  theme(aspect.ratio = 1) 
+true_lmer.drift %>% 
+  unite('repdiff', rep1, rep2, sep = '->') %>%
+  bind_rows(data.frame(repdiff ='1->1', sim = 1)) %>%
+  group_by(repdiff) %>%
+  mutate(group_mean = mean(sim, na.rm = T)) %>%
+  ggplot(aes(x = repdiff, y = sim)) +
+    geom_boxplot() +#width = .1, outlier.size=0
+    scale_x_discrete(labels = c('(1,1)','(1,2)', '(1,3)', '(1,4)', '(1,5)' ,'(1,6)','(1,7)')) +
+    ylim(0, 1) +
+    ylab('cosine similarity') +
+    ggtitle('drift from initial within game') +
+    theme_few() +
+    xlab('repetition pair') +
+    guides(color = F, fill = F) +
+    theme(aspect.ratio = 1, legend.position = c(0.5, 0.8), text = element_text(size=18), 
+          element_line(size=1), element_rect(size=2, color="#00000"))
 
-ggsave('../writing/tangrams/figs/mds_embeddings.pdf', width = 15, height = 15)
+ggsave('../writing/tangrams/figs/drift_boxplot.pdf', height = 10, width = 10, units = 'cm', useDingbats = F)
 ```
 
-TODO: how do tangrams cluster?
+Viz (mean estimates w/ baseline)
 
 ```{r}
+empirical_baselines.drift <- combine_empirical_and_baselines(M_mat, F_mat, 'drift', 10) %>%
+    bind_rows(data.frame(IV ='1->1', empirical_stat=1, ci_lower=1, 
+                         ci_upper=1, sample_id='empirical')) %>%
+    bind_rows(compute_across_similarity(M_mat, F_mat, 'baseline', 'cosine') %>%
+                filter(IV == 1) %>% select(-n, -mean) %>%
+                mutate(IV = '1->1')) 
 
-#? 
+empirical_baselines.drift %>%
+  mutate(sample_id = fct_relevel(sample_id, 'empirical', 'baseline')) %>%
+  ggplot(aes(x = IV, y = empirical_stat, color = sample_id, linetype = sample_id, group = sample_id)) +
+    geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), width = 0) + 
+    geom_line()  +
+    #geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), width = 0, data = empirical_baselines.drift %>% filter(sample_id == 'empirical')) +
+    #geom_line()  +
+    #geom_ribbon(aes(ymin = ci_lower, ymax = ci_upper), alpha = 0.5, color = NA, data = empirical_baselines.drift %>% filter(sample_id == 'baseline')) +
+    scale_x_discrete(labels = c('(1,1)','(1,2)', '(1,3)', '(1,4)', '(1,5)' ,'(1,6)','(1,7)')) +
+    ylim(0.4, 1) +
+    ylab('cosine similarity') +
+    ggtitle('drift from initial within game') +
+    theme_few() +
+    xlab('repetition pair') +
+    guides(color = F, fill = F) +
+    theme(aspect.ratio = 1, legend.position = c(0.8, 0.8), text = element_text(size=18), 
+          element_line(size=1), element_rect(size=2, color="#00000"))
+
+ggsave('../writing/tangrams/figs/drift_mean.pdf', height = 10, width = 10, units = 'cm', useDingbats = F)
+
 ```
 
 ## Discrete analyses: How much is within-game similarity disrupted by scrambling utterances across games?
@@ -570,65 +574,6 @@ summary(lmer(ent ~ permutation + (1 + permutation | gameid) + (1 + permutation |
              data = allEntropies))
 ```
 
-# Supplemental analyses
-
-## Slightly sketchy way of looking at arbitrariness by comparing across-pair and within-pair entropy
-
-```{r}
-library(entropy)
-
-withinPair <- oldGrams %>% 
-  group_by(gameid, tangramRef) %>%
-  summarize(ent = entropy(colSums(as.matrix(DocumentTermMatrix(Corpus(VectorSource(paste(cleanMsg, collapse = " ")))))))) %>%
-  group_by(tangramRef) %>%
-  summarize(withinEnt = mean(ent), withinSE = sd(ent)/sqrt(length(ent))) 
-
-withinPair
-
-acrossPair <- oldGrams %>% 
-  filter(tangramRef != 0) %>%
-  filter(tangramRef != 'None') %>%
-  filter(tangramRef != '*') %>%
-  group_by(tangramRef, repetitionNum) %>% 
-  summarize(acrossEnt = entropy(colSums(as.matrix(DocumentTermMatrix(Corpus(VectorSource(paste(cleanMsg, collapse = " ")))))))) %>%
-  left_join(withinPair, by = "tangramRef") %>%
-  gather(type, entropy, acrossEnt, withinEnt)
-
-ggplot(acrossPair, aes(x = repetitionNum, y = entropy, 
-                       color = type, linetype = tangramRef)) +
-  geom_line()
-```
-
-Or we could look at both on each half? 
-
-```{r}
-library(entropy)
-
-withinPair <- oldGrams %>% 
-  filter(tangram != 0) %>%
-  mutate(half = factor(ifelse(repetitionNum <= 3, "beg", "end"))) %>%
-  group_by(gameid, tangram, half) %>%
-  summarize(ent = entropy(colSums(as.matrix(DocumentTermMatrix(Corpus(VectorSource(paste(cleanMsg, collapse = " ")))))))) %>%
-  group_by(tangram, half) %>%
-  summarize(withinEnt = mean(ent), withinSE = sd(ent)/sqrt(length(ent))) 
-
-withinPair
-
-acrossPair <- oldGrams %>% 
-  filter(tangram != 0) %>%
-  mutate(half = factor(ifelse(repetitionNum <= 3, "beg", "end"))) %>%
-  group_by(tangram, half) %>% 
-  summarize(acrossEnt = entropy(colSums(as.matrix(DocumentTermMatrix(Corpus(VectorSource(paste(cleanMsg, collapse = " ")))))))) %>%
-  left_join(withinPair, by = c("tangram", "half")) %>%
-  gather(type, entropy, acrossEnt, withinEnt)
-
-acrossPair
-
-ggplot(acrossPair,
-       aes(x = half, y = entropy, 
-           color = tangram, linetype = type, group = interaction(tangram, type))) +
-  geom_line()
-```
 
 ## tsne animation
 

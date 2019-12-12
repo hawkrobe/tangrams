@@ -101,24 +101,39 @@ feedback <- listenerMsgs %>%
   separate(comparison, into = c('comparison', 'metric')) %>%
   spread(metric, val) %>%
   group_by(gameid) %>%
+  # only look at games where at least one error was made
   filter(sum(prevcorrect == 0, na.rm = T) > 0) %>%
   ungroup() %>%
   filter(!is.na(prevcorrect)) %>%
   filter(!is.na(reduction)) %>%
-  mutate(prevcorrect = ifelse(prevcorrect == 1, 'correct', 'incorrect'))# %>%
+  mutate(prevcorrectFactor = factor(ifelse(prevcorrect == 1, 'correct', 'incorrect'))) %>%
+  mutate(comparisonNumeric = ifelse(comparison == "rep", 1, 0))
   #mutate(comparison = as.factor(comparison))
 ```
 
 Stats 
 
 ```{r}
-# test simple effect for repetition comparison only
-summary(brm(reduction ~ prevcorrect + I(repetitionNum) + (1 + prevcorrect | gameid), chains = 1,
+library(optimx)
+summary(lmer(reduction ~ 1 + prevcorrect + I(repetitionNum) 
+             + (1 + prevcorrect + I(repetitionNum)  | gameid),
+             control=lmerControl(optimizer="bobyqa",optCtrl=list(maxfun=100000)),
              data = feedback %>% filter(comparison == 'rep')))
 
 # test interaction
-summary(brm(reduction ~ prevcorrect * comparison + (1 + prevcorrect*comparison | gameid) , chains = 1,
-             data = feedback, iter = 5000))
+summary(lm(reduction ~ prevcorrectFactor * comparison, data = feedback))
+summary(lmer(reduction ~ prevcorrectFactor * comparison + 
+               (1 + prevcorrectFactor * comparison | gameid),
+#             control=lmerControl(optimizer="bobyqa",optCtrl=list(maxfun=100000)),
+             data = feedback ))
+library(brms)
+library(rstan)
+summary(brm(reduction ~ prevcorrectFactor * comparison + 
+               (1 + prevcorrectFactor * comparison | gameid),
+            chains = 1,
+            iter = 5000,
+             data = feedback ))
+
 ```
 
 ```{r}

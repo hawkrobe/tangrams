@@ -91,6 +91,7 @@ message_df %>% filter(role == 'matcher') %>% mutate(containQ = str_detect(conten
 
 ```{r}
 feedback <- listenerMsgs %>% 
+  mutate(matcherBin = matcher > 0) %>%
   group_by(gameid) %>% arrange(gameid, trialNum) %>%  
   mutate(trial_prevcorrect = lag(correct),
          trial_reduction = log(numRawWords/lag(numRawWords))) %>%
@@ -107,7 +108,7 @@ feedback <- listenerMsgs %>%
   filter(!is.na(prevcorrect)) %>%
   filter(!is.na(reduction)) %>%
   mutate(prevcorrectFactor = factor(ifelse(prevcorrect == 1, 'correct', 'incorrect'))) %>%
-  mutate(comparisonNumeric = ifelse(comparison == "rep", 1, 0))
+  mutate(comparisonNumeric = ifelse(comparison == "rep", 1, 0)) 
   #mutate(comparison = as.factor(comparison))
 ```
 
@@ -133,6 +134,15 @@ summary(brm(reduction ~ prevcorrectFactor * comparison +
             chains = 1,
             iter = 5000,
              data = feedback ))
+
+```
+
+```{r}
+feedback %>% filter(repetitionNum == 1) %>% group_by(matcherBin) %>% summarize(m = 1 - mean(correct))
+
+tab <- table((feedback %>% filter(repetitionNum == 1))$matcherBin, (feedback %>% filter(repetitionNum == 1))$correct)
+chisq.test(tab)
+dist(rbind(feedback$matcherBin, feedback$correct), method = "binary")
 
 ```
 

@@ -86,7 +86,7 @@ Finally, we find systematic structure in how a speaker's referring expressions b
 These findings provide a higher resolution look at the quantitative dynamics of \emph{ad hoc} convention formation and support further development of computational models of learning in communication. %: based on a shared history of usage, words systematically acquire new meaning to support more efficient communication with a partner.
 
 % Please include a maximum of seven keywords
-\keywords{social coordination, conventions, semantics, syntax, natural language processing, semantic embeddings}
+\keywords{language use; interaction; conventions; meaning; syntax; natural language processing; semantic embeddings}
 \end{abstract}
 
 \section{Introduction}\label{introduction}
@@ -311,7 +311,7 @@ This pattern of results is consistent with sensitivity to \emph{tangram-specific
 \begin{figure}[t!]
 \centering
 \includegraphics[scale=.8]{posResults.pdf}
-\caption{(A) Proportion of words from different part of speech at each repetition block (orange combines pronouns and conjunctions). (B) Closed-class parts of speech are more likely to be dropped than open-class parts of speech. Error bars are bootstrapped 95\% confidence intervals.}
+\caption{(A) Proportion of words from different part of speech at each repetition block. For legibility, pronouns and conjunctions are combined in the orange strip while adverbs were grouped into ``OTHER''. (B) Closed-class parts of speech are more likely to be dropped than open-class parts of speech. Note that the classification of adverbs is controversial, as many common adverbs are considered closed-class items (e.g. ``only,'' ``now,'' ``there'') while others are open. Error bars are bootstrapped 95\% confidence intervals.}
 \label{fig:pos}
 \end{figure}
 
@@ -338,7 +338,7 @@ This pattern of results is consistent with sensitivity to \emph{tangram-specific
   \#15 & head & one look & a diamond on \\
    \hline
 \end{tabular}
-\caption{Top 15 unigrams, bigrams, and trigrams with the highest numeric reduction from first repetition to last repetition. Text lemmatized before n-grams computed. }
+\caption{Top 15 unigrams, bigrams, and trigrams with the highest numeric reduction from first repetition to last repetition. Text lemmatized before n-grams computed, which also mapped all pronouns to the ``-PRON-'' token. }
 \label{tab:words}
 \end{table*}
 
@@ -380,7 +380,7 @@ We repeated this procedure 100 times to obtain a null distribution of the mean d
 For the \emph{function words} baseline, we were specifically interested in the null distribution that should be expected if function words were preferentially dropped independent of the syntactic sub-units they belong to.
 We first sampled from the set of function words in the utterance, and if this set was smaller than the total number of words dropped, we filled the remainder with random non-function words.
 
-\begin{figure}[b!]
+\begin{figure}[t!]
 \centering
 \vspace{-1em}
 \includegraphics[scale=.75]{dependency.pdf}
@@ -466,7 +466,7 @@ In other words, once there is evidence that a particular label is successfully u
 \begin{figure}[t!]
 \centering
 \includegraphics[scale=.8]{tsne-tangramC_annotated.pdf}
-\caption{2D projection of semantic embeddings for example tangram. Each arrow represents the trajectory between the first repetition to last repetition for a distinct pair of participants. Color represents the rotational angle of the final location to more easily see where each pair began. Annotations are provided for select utterances, representing different equilibria found by different participants. Arrows in black are highlighted to show both initial and final utterances.}
+\caption{2D projection of semantic embeddings for example tangram using t-SNE. Each arrow represents the trajectory between the first repetition to last repetition for a distinct pair of participants. Color represents the rotational angle of the final location to more easily see where each pair began. Annotations are provided for select utterances, representing different equilibria found by different participants. Arrows in black highlight a pair of trajectories where the initial utterances were similar but the final equilibria were differentiated. Because t-SNE is a stochastic algorithm, even identical words (e.g. the many instances of ``ghost'') will map to slightly different locations.}
 \label{fig:tsne}
 \end{figure}
 
@@ -481,7 +481,7 @@ Our results are robust to several choices of metric, but for simplicity we will 
 
 We begin by visualizing the trajectories taken by each pair of participants when referring to a particular example tangram (see Supplemental Figure \ref{fig:all-tsne} for similar plots for the other items).
 To create this visualization, we took the first 50 components recovered by running Principal Components Analysis (PCA) on the 300-dimensional embeddings for all utterances used to refer to this tangram, including all speakers and all repetition blocks.
-We then used t-SNE \citep{maaten2008visualizing} to stochastically embed the lower-dimensional PCA representation of these utterances in a common 2D vector space.\footnote{Unlike linear techniques like PCA or MDS which seek to keep dissimilar vectors far apart, nonlinear techniques like t-SNE focus on keeping neighboring points close together in the lower-dimensional space; a direct projection to 2D with linear techniques may be unable to preserve non-linear structure in the high-dimensional space. However, an initial linear step to an intermediate dimensionality is commonly used to speed up computation and reduce noise from the high-dimensional space.}
+We then used t-SNE \citep{maaten2008visualizing} to stochastically embed the lower-dimensional PCA representation of these utterances in a common 2D vector space.\footnote{t-SNE is a stochastic, non-linear dimensionality reduction technique which focuses on keeping neighboring points in the high-dimensional space close together in the lower-dimensional space. An initial linear reduction to an intermediate dimensionality is commonly used to speed up computation and reduce noise in the high-dimensional space, compared to applying t-SNE directly to the 300-dimensional vectors. Conversely, the advantage of using t-SNE over projecting directly to 2-dimensions with a linear technique like PCA is its ability to preserve non-linear structure in the high-dimensional space.}
 Finally, we connected the first and last utterance a particular pair used to refer to this tangram with an arrow (Fig. \ref{fig:tsne}), and annotated utterances in several regions of the space.
 
 Most strikingly, we observed that the initial utterances of each game tend to cluster tightly near the center of the space and the final utterances are \emph{dispersed} more widely around the edges.
@@ -516,7 +516,7 @@ To explore this question, we conducted analyses on how the semantic vectors chan
 \centering
 \includegraphics[scale=.5]{similarity_analysis.pdf}
 \vspace{1em}
-\caption{(A) Utterances within a pair become more similar to successive utterances on later repetitions, converging on a stable convention, but (B) utterances across pairs become steadily more dissimilar, diverging to different solutions. Error bars are bootstrapped 95\% CIs. }
+\caption{(A) Utterances within a pair become more similar to successive utterances on later repetitions, converging on a stable convention, but (B) utterances across pairs become steadily more dissimilar, diverging to different solutions. These patterns are depicted schematically by dots within a pair changing less over time while dots in different pairs move further apart. Error bars are bootstrapped 95\% CIs. }
 %\vspace{1em}
 \label{fig:similarity}
 \end{figure}
@@ -575,18 +575,19 @@ In our corpus, we replicate the classic finding that directors reduce the length
 %The labels formed through this process are thus influenced both by the speaker's general-purpose beliefs about good descriptions and by the communicative context, since different words would be distinguishing in different contexts. %, and  .
 The resulting labels display quantitative signatures of increasing \emph{arbitrariness} in the sense that different pairs increasingly diverge to distinct solutions, and \emph{stability} in the sense that speakers do not deviate from a solution once it is discovered.
 Taken together, these findings clarify the desiderata for theories of \emph{ad hoc convention formation}.
-For a model of communication to explain how general-purpose meanings are systematically tailored to the needs of the current interaction in the way we observed, it must provide a mechanism to select and combine syntactic phrases that are initially distinctive and to amplify them over time, modifying them if they are unsuccessful.
+For a model of communication to explain how general-purpose meanings are systematically tailored to the needs of the current interaction in the way we observed, it must provide a mechanism to select and combine syntactic phrases that are initially distinctive and to prune them over time, modifying them if they are unsuccessful.
 
 Our findings also raise new and subtle questions about the cognitive mechanisms giving rise to these properties.
 One key question concerns the source of arbitrariness: what breaks the `symmetry' among different possible descriptions and leads different pairs to diverge from one another?
 One possibility is that each individual speaker may initially have strong but idiosyncratic initial preferences for short labels, and arbitrariness emerges from variability in these preferences throughout the population.
 Under this possibility, speakers begin with long, elaborated descriptions due to uncertainty about whether their preferred label will be understood, but in the absence of misunderstandings will proceed with their pre-meditated label.
-A second possibility is that speakers \emph{themselves} may be unclear on an appropriate way to refer to unfamiliar objects.
-If uncertain speakers initially produce an utterance from a broad distribution of acceptable labels, and update their distribution on subsequent repetitions, different pairs may end up in different equilibria due to randomness in sampling from a more or less shared initial distribution. This is the mechanism proposed in recent probabilistic models of convention formation \citep{smith_learning_2013,hawkins_convention-formation_2017,Brochagen17}, which have captured several of these properties in simulations.
+A second possibility is that speakers \emph{themselves} may be unclear about a mutually understandable way to refer to these unfamiliar objects.
+If uncertain speakers initially sample an utterance from a broad distribution of acceptable labels, and update their distribution on subsequent repetitions conditioned on feedback, different pairs may end up in different equilibria due to randomness in sampling from a more or less shared initial distribution. 
+This is the mechanism proposed in recent probabilistic models of convention formation \citep{smith_learning_2013,hawkins_convention-formation_2017,Brochagen17}, which have captured in simulations several of the properties we observed.
 %That is, the symmetry may be broken through randomness in the sampling step (or in the updating step, if learning is stochastic.)
 
-These two possibilities -- initial idiosyncratic preferences or initial uncertainty and breadth -- are not mutually exclusive.
-Our results rule out the possibility of strong shared preferences, but it is possible that some speakers vary in strong preferences about labels while others are initially more uncertain.
+These two possibilities -- strong but idiosyncratic initial preferences or initial uncertainty and breadth -- are not mutually exclusive.
+Our results rule out the possibility of universally shared strong preferences, but it is possible that some speakers have different strong preferences about labels while others are initially more uncertain.
 One way for future work to disentangle these possibilities is to elicit better measurements of initial preferences over appropriate labels.
 For instance, an approach proposed by \cite{FussellKrauss89_IntendedAudienceCommonGround} asked directors to either produce descriptions for others or for themselves in the future, and Bayesian truth serum approaches \citep{prelec2004bayesian} estimate both an individual's own subjective preferences and their expectations about whether these would be shared by others.
 %Finally, it would be valuable to estimate how much variability in semantic expectations there really is in the population \citep{FurnasEtAl87_VocabularyProblem,kleinschmidt2019structure}.
@@ -595,14 +596,14 @@ The rapid timescale of adaptation we have investigated in dyadic reference games
 If community-wide conventions emerge from agents generalizing across different dyadic interactions, then local learning mechanisms leading to efficiency and informativity \emph{within} a dyad may explain how a community's conventions remain well-calibrated to the demands of the current environment.
 The sensitivity of such calibration has been previous tested using small artificial languages in the lab \cite[e.g.][]{WintersKirbySmith14_LanguagesAdapt,hawkins_emerging_abstractions_2018}, but our observation of similar dynamics in ordinary natural language use emphasizes that local learning may be an ongoing and pervasive influence.
 
-Although our analyses go beyond previous work by using new vector-space semantic models, they still have some limitations based on these models.
+Although our analyses go beyond previous work by using new vector-space semantic models, they still face some limitations based on these models.
 We address two potential limitations with supplemental analyses included in the Appendix.
-First, measures of similarity relying on vector space representations like GloVe are fundamentally limited by the quality of the semantic space provided by the embedding approach.
-To address this concern, we provide an supplemental diagnostic that provides converging evidence for the properties of arbitrariness and stability based on the \emph{discrete distributions} of word tokens appearing in each utterance instead of continuous utterance embeddings (see Appendix A).
+First, measures of similarity relying on vector space representations like GloVe are fundamentally limited by the quality of the semantic space provided by the embedding technique.
+To address this concern, we provide a supplemental diagnostic that provides converging evidence for the properties of arbitrariness and stability based on the \emph{discrete distributions} of word tokens appearing in each utterance instead of continuous utterance embeddings (see Appendix A).
 Second, a related concern is that the gradual divergence we observed between different interactions could be an artifact of the way we constructed utterance embeddings by averaging word embeddings.
 If averaging together more words creates a distinctive type of `washed out' utterance embedding, and early descriptions contain more words, then high initial similarity across interactions may not reflect semantic overlap.
-We address this concern by providing an additional permutation test baseline scrambling words across utterances prior to averaging word embeddings (see Appendix B).
-This baseline also presents an opportunity to compare the divergence across different interactions against the divergence within a \emph{single speaker's} descriptions of their twelve different tangrams.
+We address this concern by providing an additional permutation test baseline that scrambles words across utterances prior to averaging word embeddings (see Appendix B).
+This baseline also presents an opportunity to compare the divergence we observed across different interactions against the divergence within a \emph{single speaker's} descriptions of their twelve different tangrams.
 Just as different speakers initially include many of the same attributes in their descriptions for a tangram but eventually (unknowingly) diverge to distinct labels, a single speaker also begins by re-using certain attributes for several tangrams but (knowingly) prunes them down to be as distinctive as possible due to informativity pressures (consistent with our findings in Section \ref{sec:distinctive}).
 
 %Our results in this paper also raise a subtle cognitive question about classic definitional notions of arbitrariness in convention \citep{Lewis69_Convention}, which hold that there must counterfactually exist an alternative solution to the coordination problem for any particular solution to be conventional.
@@ -615,8 +616,8 @@ Future work should examine how the structure of the target space affects the dyn
 Similarly, the generality of our results is limited by the population we sampled.
 Our use of online data collection allowed us to create a relatively large number of arbitrary dyads within a convenience population, but also limits the opportunities for study of these dyads across contexts.
 it will be important to determine how the \emph{ad hoc} meanings formed in one novel context generalize to other contexts with the same partner.
-Further, though our dyads are likely diverse in many ways relative to US national population \citep{levay2016demographic} they are in no way representative of either the US population or any broader population.
-Thus, further cross-cultural work examining the validity of our conclusions across populations would be a valuable contribution for future work.
+Further, though our dyads are likely diverse in many ways relative to the US national population \citep{levay2016demographic} they are in no way representative of either the US population or any broader population.
+Thus, further cross-cultural work examining the validity of our conclusions across populations, and in different languages, would be a valuable contribution for future work.
 
 In sum, the resolution provided by the larger corpus we have collected, in combination with recent advances in natural language processing techniques, provides a new window into the quantitative dynamics of adaptation in dyadic communication and beyond.
 We hope that both the new corpus and new analytic techniques contribute to the testing and elaboration of theories of human language.

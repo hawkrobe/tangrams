@@ -250,7 +250,7 @@ read_csv('../outputs/posTagged_tangramsSequential_collapsed.csv') %>%
   ggplot(aes(x = repetitionNum, y = prop, fill = POS)) +
     geom_area(alpha=0.6 , size=1, colour="black") +
     scale_fill_brewer(palette = "Set1") +
-    theme_few() +
+    ggthemes::theme_few() +
     scale_x_continuous(breaks = c(1,2,3,4,5,6))+
     theme(aspect.ratio = 2.5) +
     ylab('% words')
@@ -258,7 +258,7 @@ ggsave('../../writing/cognitive_science_format/figs/posChange.pdf',
         height = 8, width = 16, units = 'cm', useDingbats = F)
 ```
 
-TODO: distance in depth of the tree between the nouns
+Explicitly look at reduction for each POS.
 
 ```{r}
 posReduction <- tagged_df %>%
@@ -286,14 +286,16 @@ posReduction <- tagged_df %>%
   # Filter out handful of people who skipped first round w/ negative %...
   filter(diffPct >= 0) %>%
   filter(POS != "OTHER") %>%
-  group_by(POS) %>%
-  # Take mean & se over participants
-  tidyboot_mean(column = diffPct, na.rm = T) %>%
   mutate(cat = ifelse(POS %in% c('dets', 'pronouns', 'preps', 'conjunctions'), 'closed', 
                       ifelse(POS == 'adverbs', '?', 'open'))) %>%
   mutate(cat = factor(cat, levels = c('closed', '?', 'open'))) %>%
   # rearrange
-  transform(POS=reorder(POS, -mean))
+  transform(POS=reorder(POS, -diffPct))
+
+posReduction.boot <- posReduction %>%
+  group_by(POS) %>%
+  # Take mean & se over participants
+  tidyboot_mean(column = diffPct, na.rm = T)
 
 detReductionRate <- (posReduction %>% filter(POS == 'dets'))$mean * 100
 conjReductionRate <- (posReduction %>% filter(POS == 'conjunctions'))$mean * 100
@@ -314,6 +316,15 @@ ggplot(posReduction, aes(x = POS, y = mean, fill = cat)) +
 
 ggsave('../../writing/cognitive_science_format/figs/posReduction.pdf',
         height = 8, width = 16, units = 'cm', useDingbats = F)
+```
+
+Stats for open class vs. closed class
+```{r}
+posReduction %>% 
+  filter(cat != '?') %>%
+  lmer(diffPct ~ cat + (1 + cat | gameid) + (1 | POS),
+       data = .) %>%
+  summary()
 ```
 
 ### Dependency lengths

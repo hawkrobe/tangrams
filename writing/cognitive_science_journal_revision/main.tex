@@ -352,16 +352,18 @@ First, we explore which \emph{kinds} of words are most likely to be dropped.
 We used the SpaCy part-of-speech tagger \citep{spacy2} to count the number of words belonging to different parts of speech in each message\footnote{The SpaCy tagger is statistical, obtaining comparable accuracy ($\sim 97\%$) to other modern taggers \citep{manning2011part}. However, it is important to note that the language used in our task likely differs from the tagger's training sample, containing higher rates of sentence fragments, bare NPs, and `ungrammatical' language that human annotators might also find difficult to classify into standard parts of speech.}. %In spite of these potential limitations, the resulting tags are good enough for our purposes
 In Fig. \ref{fig:pos}A, we show the shifting proportions of different parts of speech at each repetition.
 We find that nouns account for proportionally more of the words being used over time, while determiners and prepositions account for fewer.
-To test which kinds of words are more likely to be dropped, we measured the percent reduction in the number of words in each part of speech from the first repetition to the sixth repetition.
+
+To test which kinds of words are more likely to be dropped, we measured the percent reduction in the number of words in each part of speech from the first repetition to the sixth repetition (i.e. $(n_1 - n_6)/n_1$).
 We find that pronouns (`it', `he'), determiners (`the', `a', `an'), and conjunctions (`and', `that') are the most likely classes of words to be dropped (94\%, 93\% and 91\%, respectively) and nouns (`dancer', `rabbit') are the least likely to be dropped (59\%).
-More generally, closed-class parts of speech, including function words, are strictly more likely to be dropped than open-class parts of speech (Fig. \ref{fig:pos}B).
-Open-class parts of speech are statistically more likely to supply \emph{distinctive} words than closed-class parts of speech, perhaps accounting for why open-class words are preserved.
-We return to the role of distinctiveness in section \ref{sec:distinctive}.
+More generally, closed-class parts of speech, including function words, appear strictly more likely to be dropped than open-class parts of speech (Fig. \ref{fig:pos}B).
+To statistically test this claim, we constructed a mixed-effects model predicting the reduction of each part of speech from the first round to the final round.
+We included the binary fixed effect of open class vs. closed class (excluding adverbs), as well as random intercepts and slopes for each pair of participants, and random intercepts for each individual part of speech within each class.
+We found a significant effect of class, $b=0.23, t = 4.5, p = 0.006$, supporting the observation that closed class parts of speech are more likely to be dropped. 
 
 One possible interpretation of these findings is that reduction may be driven mostly by the loss of function words as directors shift to a less-grammatical shorthand over the course of the task.
 However, when examining the n-grams most likely to be dropped (see Table \ref{tab:words}), we noticed that many of the most dropped closed-class words are used to  form prepositional phases (`of', `with') or combine different clauses (`and').
 Others are modifiers (`the right \dots').
-These examples suggest an alternative explanation: the higher reduction of closed-class function words may be a consequence of entire meaningful grammatical units (e.g.~clauses) being dropped at once.
+These examples suggest an alternative explanation: the higher reduction of closed-class function words may be a consequence of entire meaningful grammatical units (e.g.~clauses, prepositional phrases) being dropped at once.
 
 \paragraph{Reduction in syntactic constituents}
 If initial descriptions tend to be syntactically complex because they are redundant, then the director may omit entire modifying clauses.
@@ -391,7 +393,8 @@ We first sampled from the set of function words in the utterance, and if this se
 We found a mean empirical dependency length of 2.77, which lay outside the both the random null distribution (range: $[2.90, 2.99]$) and the function word null distribution (range: $[3.03, 3.08]$), indicating a small but reliable effect of syntactic clustering among the words that were dropped on each round.
 That is, these words tended to be closer to one another in the dependency parse than expected by total chance or by preferentially dropping function words independently of their corresponding syntactic units.
 Furthermore, while overall dependency lengths get smaller as utterances become shorter, this result holds within every repetition block (see Supplemental Fig. \ref{fig:dependency_length_by_rep}), and other statistics gave similar results, including the minimum dependency length and the raw distance in the sequence of words.
-This result accords with earlier observations by \cite{Carroll80_NamingHedges}, who reanalyzed transcripts from \cite{KraussWeinheimer64_ReferencePhrases}. In those data, the short names that participants converged upon were prominent in some syntactic construction at the beginning of the session, often as a head noun that was initially modified or qualified by other information.
+This result accords with earlier observations by \cite{Carroll80_NamingHedges}, who reanalyzed transcripts from \cite{KraussWeinheimer64_ReferencePhrases}. 
+In those data, the short names that participants converged upon were prominent in some syntactic construction at the beginning of the session, often as a head noun that was initially modified or qualified by other information.
 
 \section{Results: characterizing the dynamics of semantic content}
 \label{sec:content}
@@ -451,6 +454,7 @@ For each speaker and tangram, we sampled from the words with \emph{maximal disti
 As a baseline null model, we randomly sampled from the list of all words contained in the initial utterance instead of the most distinctive one.
 Repeating this procedure 1000 times yielded a null distribution ranging from 2.5\% to 6.6\%, which was significantly lower than the one derived from distinctive words.
 Thus, distinctiveness is strongly related to eventual conventionalization.
+These results are also consistent with our earlier finding that open-class parts of speech are more likely to be preserved on the final repetition than closed-class parts of speech (see Section \ref{reduction}), since open-class parts of speech are statistically more likely to supply distinctive words. 
 % Thus, if we must make a bet on which words will become conventionalized, placing our bet on the most distinctive ones will yield much higher returns.
 
 \subsection{Semantic meaning diverges across pairs and stabilizes within pairs}

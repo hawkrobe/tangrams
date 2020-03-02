@@ -181,8 +181,8 @@ Taken together, our findings characterize core processes operating within the mi
 We developed two variants of the repeated reference task used in classic work by \cite{ClarkWilkesGibbs86_ReferringCollaborative}: a relatively unconstrained \emph{free-matching} version that more closely replicates classic in-lab designs, and a more tightly controlled \emph{cued} version.
 Most importantly, the \emph{cued} version allows us to identify which object each utterance refers to, supporting higher-resolution analyses at the object-by-object level.
 We considered the free-matching version to be an exploratory pilot sample and subsequently pre-registered planned analyses for the \emph{cued} version:\footnote{https://osf.io/2zwmx}.
-While we are also releasing the corpus from the free-matching version, we restrict our analyses to the \emph{cued} version throughout the paper as a cleaner confirmatory sample.
-Exploratory analyses and changes to our pre-registered plan are described as relevant in each section below.
+While we are releasing the corpora we collected in both versions, we restrict our analyses to the \emph{cued} version throughout the paper as a cleaner confirmatory sample.
+Any exploratory analyses and changes to our pre-registered plan are described as relevant in each section below.
 
 \begin{figure}
 \centering
@@ -197,19 +197,13 @@ Exploratory analyses and changes to our pre-registered plan are described as rel
 
 A total of 480 participants (218 in the \emph{free-matching} version and 262 in the \emph{cued} version) were recruited from Amazon's Mechanical Turk and paired into dyads to play a real-time communication game.
 
-\subsection{Exclusion criteria}
-
-After excluding games that terminated before the completion of the experiment due to server error or network disconnection (40 in \emph{free matching} and 33 in \emph{cued}), as well as games where participants reported a native language different from English (2 in \emph{free matching} and 3 in \emph{cued}), we implemented an additional exclusion criterion based on accuracy.
-% Because the classic work using the repeated reference game paradigm reported near ceiling accuracy for all pairs, and b
-We used a 66/66 rule, excluding pairs that got fewer than 66\% of trials correct ($\le8$ of 12)  on more than 66\% of blocks ($\ge4$ of 6).
-While most pairs were near ceiling accuracy by the final repetition, this rule excluded 11 in \emph{free matching} and 8 in \emph{cued} who appeared to be guessing or rushing to completion.
-After all exclusions, we were left with a \emph{free matching} corpus containing a total of 8,639 ($\sim$ 51,271 words) messages over 56 complete games and a \emph{cued} corpus containing 7,867 messages ($\sim$ 46,000 words) over 83 games, after cleaning.
-
 \subsection{Stimuli \& Procedure}\label{stimuli}
 
 On every trial, participants were shown a \(6 \times 2\) grid containing twelve tangram shapes (see Fig. \ref{fig:design}), reproduced from \cite{ClarkWilkesGibbs86_ReferringCollaborative}.
 After passing a short quiz about task instructions, participants were randomly assigned the role of either `director' or `matcher' and automatically paired into virtual rooms containing a chat box and the grid of stimuli.
-Both participants could freely use the chat box to communicate at any time.
+The chat box was a standard modern messaging interface. 
+Participants saw a binary indicator that their partner was currently typing, but only saw the message once their partner hit the \emph{Enter} key or clicked the \emph{Send} button.
+Use of the chat box was completely unrestricted in both versions of the task: both participants could freely use the chat box to communicate at any time and there was no limit on the number or length of messages that could be sent.
 
 In the \emph{free-matching} version, our procedure closely followed \cite{ClarkWilkesGibbs86_ReferringCollaborative}.
 The director and matcher began each trial with scrambled boards.
@@ -228,14 +222,21 @@ To address these problems, we designed a more straightforwardly sequential \emph
 This additional structure allowed us to conduct analyses at the object-by-object level.
 On each trial, one of the twelve tangrams was privately highlighted for the director as the \emph{target}.
 Instead of clicking and dragging into place, matchers simply clicked the one they believed was the target.
-They were not allowed to click until after a message was sent by the director.
+They were not allowed to click until after a message was sent by the director, but were not restricted in their use of the chat box.
 We constructed a sequence of six blocks of twelve trials (for a total of 72 trials), where each tangram appeared once per block.
 Because targets were cued one at a time, numbers labeling each square in the grid were irrelevant and we removed them.
 The grid of tangrams was scrambled on every trial, and participants were given full, immediate feedback: the director saw which tangram their partner clicked, and the matcher saw the intended tangram.
 
+\subsection{Exclusion criteria}
+
+After excluding games that terminated before the completion of the experiment due to server error or network disconnection (40 in \emph{free matching} and 33 in \emph{cued}), as well as games where participants reported a native language different from English (2 in \emph{free matching} and 3 in \emph{cued}), we implemented an additional exclusion criterion based on accuracy.
+% Because the classic work using the repeated reference game paradigm reported near ceiling accuracy for all pairs, and b
+We used a 66/66 rule, excluding pairs that got fewer than 66\% of trials correct ($\le8$ of 12)  on more than 66\% of blocks ($\ge4$ of 6).
+While most pairs were near ceiling accuracy by the final repetition, this rule excluded 11 in \emph{free matching} and 8 in \emph{cued} who appeared to be guessing or rushing to completion.
+
 \subsection{Data pre-processing}
 
-We have made the raw, unprocessed data available, but we used a three step pre-processing pipeline to prepare this corpus for subsequent analyses. Unless otherwise noted, we used the open-source Python package \texttt{spaCy} (version 2.2) to implement all NLP analyses.
+We used a three step pre-processing pipeline to prepare this corpus for subsequent analyses. Unless otherwise noted, we used the open-source Python package \texttt{spaCy} (version 2.2) to implement all NLP analyses.
 
 \begin{enumerate}
 
@@ -244,6 +245,8 @@ We have made the raw, unprocessed data available, but we used a three step pre-p
 \item \textbf{Cleaning unrelated discourse}: Because we allowed our participants to interact in real-time through the chat box, many pairs produced text unrelated to the task of referring to the current target (e.g. greeting one another, asking personal questions, commenting on the length of the task or the results of previous trials). We wanted to ensure that our results were not confounded by patterns in this kind of discourse across the task, and that the semantic content we observe on a particular trial is in fact being used to refer to the current target rather than task-irrelevant topics or, as we found in some cases, referring to other tangrams while debriefing previous errors. We therefore conducted a manual review removing any text not directly referring to the current target. For example, utterances like ``the dancing woman'' and ``this is the one we got wrong last time'' were kept in because they were referring to properties of the current tangram, but words like ``yeah'' or ``ok'' and messages like ``good job'' and ``they'll go quicker if you remember what I say!'' were not. This review affected 1,448 messages, and we also saved these corrections in a dictionary.
 
 \item \textbf{Collapsing multiple messages within a trial}: Finally, some directors used our chat box like an texting interface, hitting the enter key between every micro-phrase of text. Because many of our analysis techniques depend upon having a single referring expression for each trial, we collapsed all messages sent by each participant within a trial into a single message by inserting commas between messages. We chose to use commas because it tends to maintain grammaticality and does not inflate word counts. Importantly, we used this strategy even on trials where there were multiple rounds of interaction between the director and matcher, joining together a director's original message with their follow-up to the matcher's response. This strategy had the advantage of preserving all of the referential content produced by the director on a trial, compared to a `purer' strategy of removing messages sent in response to the matcher, but the disadvantage of losing the precise interactional structure of the dialogue. 
+
+After implementing exclusions and cleaning, we were left with a \emph{free matching} corpus containing a total of 8,639 ($\sim$ 51,271 words) messages over 56 complete games and a \emph{cued} corpus containing 7,867 messages ($\sim$ 46,000 words) over 83 games.
 
 \end{enumerate}
 

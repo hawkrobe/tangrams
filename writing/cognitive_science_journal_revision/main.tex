@@ -271,10 +271,11 @@ What sequence of transformations do descriptions undergo over the course of repe
 \subsection{The effect of listener feedback on reduction}\label{listener-feedback}
 
 Conventions are formed \emph{collaboratively}, not in isolation \citep{ClarkWilkesGibbs86_ReferringCollaborative}, and thus depend on some form of social feedback.
-If feedback channels are restricted, descriptions may not necessarily get shorter \citep{KraussWeinheimer66_Tangrams, GarrodFayLeeOberlanderMacLeod07_GraphicalSymbolSystems}.
-We consider two channels of feedback.
+We consider two channels of feedback that were available to speakers.
 First, matchers could voluntarily initiate a bi-directional feedback process at any point within a trial by asking follow-up questions, suggesting corrections, and acknowledging or verbally confirming their own understanding through a backchannel.
 Second, we automatically supplied ground-truth feedback about the matcher's selection and the true target at the end of each trial.
+We expect that speakers integrate both sources of evidence about the listener's understanding to determine how to shorten their utterances.
+If either feedback channel is restricted, or if they provide conflicting evidence, descriptions may not reduce as strongly \citep{KraussWeinheimer66_Tangrams, HupetChantraine92_CollaborationOrRepitition, GarrodFayLeeOberlanderMacLeod07_GraphicalSymbolSystems}.
 
 We predicted that the matcher's use of backchannel feedback should be highest on the first repetition and drop off once meanings are agreed upon, consistent with the patterns observed by \citep{ClarkWilkesGibbs86_ReferringCollaborative}.
 To test this prediction, we coded whether the matcher sent a message or not on each trial and fit a mixed-effects logistic regression model with a fixed effect of repetition, random intercepts and slopes for each pair of participants, and a random intercept for each target.
@@ -349,7 +350,7 @@ This pattern of results is consistent with sensitivity to \emph{tangram-specific
 
 Having established the matcher-dependent conditions under which directors are willing to shorten their utterances, we now examine the way they are shortened in more detail.
 First, we explore which \emph{kinds} of words are most likely to be dropped.
-We used the SpaCy part-of-speech tagger \citep{spacy2} to count the number of words belonging to different parts of speech in each message\footnote{The SpaCy tagger is statistical, obtaining comparable accuracy ($\sim 97\%$) to other modern taggers \citep{manning2011part}. However, it is important to note that the language used in our task likely differs from the tagger's training sample, containing higher rates of sentence fragments, bare NPs, and `ungrammatical' language that human annotators might also find difficult to classify into standard parts of speech.}. %In spite of these potential limitations, the resulting tags are good enough for our purposes
+We used the SpaCy part-of-speech tagger \citep{spacy2} to count the number of words belonging to different parts of speech in each message sent by the director\footnote{The SpaCy tagger is statistical, meaning it uses a neural network to return the (uniquely) most probable assignment of tags under its model. It obtains comparable accuracy ($\sim 97\%$) to other modern taggers \citep{manning2011part}. However, it is important to note that the language used in our task likely differs from the tagger's training sample, containing higher rates of sentence fragments, bare NPs, and `ungrammatical' language that human annotators might also find difficult to classify into standard parts of speech. The SpaCy dependency parser (see below) is similarly statistical and unlikely to be perfect. For example, neural parsers experience particular difficulty determining exactly where to attach conjunction relations \citep{ficler-goldberg-2017-improving}. As the state-of-the-art techniques for these tasks continue to improve, we hope future work using our corpus will be able to achieve more precise estimates.}.
 In Fig. \ref{fig:pos}A, we show the shifting proportions of different parts of speech at each repetition.
 We find that nouns account for proportionally more of the words being used over time, while determiners and prepositions account for fewer.
 
@@ -365,15 +366,19 @@ However, when examining the n-grams most likely to be dropped (see Table \ref{ta
 Others are modifiers (`the right \dots').
 These examples suggest an alternative explanation: the higher reduction of closed-class function words may be a consequence of entire meaningful grammatical units (e.g.~clauses, prepositional phrases) being dropped at once.
 
-\paragraph{Reduction in syntactic constituents}
-If initial descriptions tend to be syntactically complex because they are redundant, then the director may omit entire modifying clauses.
+\paragraph{Reduction in syntactic units}
+If initial descriptions tend to be syntactically complex because they combine multiple pieces of identifying information about the target, then the director may gradually omit meaningful `chunks' as they become informationally redundant.
  % when feedback suggests that the matcher understands.
 % combining multiple sources of information for identifying the target,
-We explicitly tested this hypothesis by examining whether pairs of words dropped from one reference to the next tend to come from the same syntactic units, relative to what would be expected by random deletion.
-We quantified the extent to which dropped words `cluster' by examining dependency lengths between the dropped words \citep{jurafsky2014speech,futrell2015large}\footnote{We pre-registered a different version of this analysis using the pure prevalence of higher-order syntactic units  extracted from a constituency parser at each repetition (e.g. adjectival clauses or subordinate clauses). While we found evidence for our pre-registered predictions, we later realized that this measure failed to capture the relevant notion of clustering: clausal features can disappear due to rephrasing without the words in the clause necessarily being dropped together, and conversely, entire meaningful units can be dropped at once (e.g. noun phrases) without any clausal features being present at all. Dependency lengths are better suited for assessing these questions at the word-by-word level.}.
-Specifically, we compared each referring expression to the one produced on the subsequent repetition block to determine which words were dropped and which reappeared.
-Then we looked up each pair of dropped words in the earlier utterance and found the shortest path between them in the dependency parse tree (see Fig. \ref{fig:dependency}).
-Finally, we computed the mean dependency lengths between all such pairs of dropped words on each given trial, and took the mean across all trials (excluding blocks where no words were dropped).
+We explicitly tested this hypothesis by examining whether pairs of words dropped from one reference to the next tend to come from the same syntactic units, relative to what would be expected by random deletions.
+We quantified the extent to which dropped words `cluster' by examining syntactic closeness between the dropped words in a dependency parse tree (see Fig. \ref{fig:dependency}).
+Dependency grammars represent syntax in terms of directed dependency relations between pairs of words \citep{hudson1984word,corbett1993heads}. 
+Dependency parsing, the task of extracting a tree of dependency relations from raw input text, is a canonical task in computational linguistics \citep{jurafsky2014speech,kubler2009dependency}\footnote{Dependency grammars are an alternative to phrase structure grammars, which represent constituency relations between abstract units like noun phrases and verb phrases. We pre-registered a different version of this analysis using the pure prevalence of different higher-order units extracted from a constituency parse at each repetition (e.g. adjectival clauses or subordinate clauses). While we found evidence for our pre-registered predictions, we later realized that this measure failed to capture the relevant notion of clustering: clausal features can disappear due to rephrasing without the words in the clause necessarily being dropped together, and conversely, entire meaningful units can be dropped at once (e.g. noun phrases) without any clausal features being present at all. Path lengths in the dependency tree are better suited for assessing these questions at the word-by-word level.}. 
+
+We used the state-of-the-art statistical dependency parser from SpaCy, using the ClearNLP dependency labels \citep{choi_palmer2012}, to extract a parse tree for every utterance in our corpus \citep[see][for details on neural network architectures for parsing]{honnibal2015improved, kiperwasser2016simple}.
+We then compared each referring expression to the one produced on the subsequent repetition block to determine which words were dropped and which reappeared.
+For each each pair of words that were dropped, we used a standard shortest-path algorithm to find the minimal distance between them in the dependency parse tree we extracted (see Fig. \ref{fig:dependency}).
+Finally, we computed the mean path lengths between all such pairs of dropped words on each given trial, and then took the mean across all trials (excluding blocks where no words were dropped).
 This method weights each utterance evenly, preventing trials with more words from dominating the global average.
 
 We compared this empirical `syntactic clustering' statistic to two baselines.
@@ -386,7 +391,7 @@ We first sampled from the set of function words in the utterance, and if this se
 \centering
 \vspace{-1em}
 \includegraphics[scale=.75]{dependency.pdf}
-\caption{Example dependency parse for referring expression. If the words ``arms out in front'' were dropped, we would find a mean dependency length of 1.33 among the dropped words.}
+\caption{Example dependency parse for a referring expression in our task. If the words ``and arms in front'' were dropped, we would find a mean path length of 2.17 among the dropped words.}
 \label{fig:dependency}
 \end{figure}
 
@@ -449,11 +454,13 @@ We then ran a mixed-effects logistic regression including a fixed effect of init
 We found a significant positive effect of distinctiveness: words that were used with a larger number of tangrams on the first repetition were less likely to conventionalize, $b = -0.23, z = -6.1$ (see Fig. \ref{fig:distinct}).
 Similar results are found explicitly using the \emph{tf-idf} measure.
 
-To further evaluate how influential distinctiveness was, we conducted a non-parametric permutation test.
-For each speaker and tangram, we sampled from the words with \emph{maximal distinctiveness} and computed the mean probability of this word also being used on the final repetition, obtaining a distribution ranging from 24\% to 31\%.
+To further evaluate how distinctiveness is related to eventual conventionalization, we conducted a non-parametric permutation test.
+For each speaker and tangram, we extracted the word with the \emph{highest distinctiveness value} and computed the mean probability of this word also being used on the final repetition. 
+In the case of a tie, we sampled from the set of words sharing the highest distinctiveness value.
+After repeating this procedure 1000 times, we found a distribution ranging from 24\% to 31\%.
 As a baseline null model, we randomly sampled from the list of all words contained in the initial utterance instead of the most distinctive one.
-Repeating this procedure 1000 times yielded a null distribution ranging from 2.5\% to 6.6\%, which was significantly lower than the one derived from distinctive words.
-Thus, distinctiveness is strongly related to eventual conventionalization.
+Repeating this procedure yielded a null distribution ranging from 2.5\% to 6.6\%, which was significantly lower than the one derived from the most distinctive words.
+%Thus, distinctiveness is strongly related to eventual conventionalization.
 These results are also consistent with our earlier finding that open-class parts of speech are more likely to be preserved on the final repetition than closed-class parts of speech (see Section \ref{reduction}), since open-class parts of speech are statistically more likely to supply distinctive words. 
 % Thus, if we must make a bet on which words will become conventionalized, placing our bet on the most distinctive ones will yield much higher returns.
 
@@ -478,8 +485,12 @@ In other words, once there is evidence that a particular label is successfully u
 To operationalize these constructs, we used a measure of similarity based on distances computed between continuous vector space embeddings of referring expressions\footnote{We pre-registered discrete analogs of these analyses, which we have included in Appendix A, but we later decided that the continuous vector space measures present a more interpretable and direct test of our hypothesis.}.
 Although the idea of using such representations of words to measure similarity is an old one \citep{osgood1952nature,landauer_solution_1997,bengio_neural_2003}, recent progress in machine learning has yielded substantial improvements in the quality of these representations.
 To quantify the dynamics of semantic context in referring expressions across and within games, we therefore first extracted the 300-dimensional GloVe vector for each word \citep{pennington2014glove}.
-We then averaged these word vectors to obtain a single sentence vector for each referring expression\footnote{Variations on such averaging methods are surprisingly strong baselines for sentence representations \citep{arora2017asimple}, providing better downstream task performance than whole-sentence encoders based on LSTM representations \citep{KirosEtAl15_SkipThought}.}.
-To avoid artifacts from function words, we only included open-class content words (nouns, adjectives, verbs, and adverbs) in this average\footnote{Because different forms of a word may have slightly different representation, we also applied a lemmatizer to further standardize the input. Lemmatization maps multiple morphological variants (e.g. `played,' `playing,' `plays') to the same stem (`play'). We did not want an observed difference between two pairs to be driven simply by different forms of the same word.}.
+We then averaged these word vectors to obtain a single sentence vector for each referring expression.
+Variations on such simple averaging methods are surprisingly strong baselines for sentence representations \citep{arora2017asimple}, providing better downstream task performance than whole-sentence encoders \citep{KirosEtAl15_SkipThought}.
+
+To avoid artifacts from function words, we only included open-class content words (nouns, adjectives, verbs, and adverbs) in this average
+Because different forms of a word may have slightly different representation, we also applied a lemmatizer to further standardize the input. Lemmatization maps multiple morphological variants (e.g. `played,' `playing,' `plays') to the same stem (`play'). 
+We did not want an observed difference between two pairs to be driven simply by different forms of the same word.
 We then defined a similarity metric between any pair of sentence vectors $\langle u_i, u_j \rangle$.
 Our results are robust to several choices of metric, but for simplicity we will use cosine similarity throughout the presentation below: $$\langle u_i, u_j \rangle = \cos \theta_{ij} = \frac{u_i \cdot u_j}{\| u_i\| \| u_j \|}$$
 
@@ -520,7 +531,7 @@ To explore this question, we conducted analyses on how the semantic vectors chan
 \centering
 \includegraphics[scale=.5]{similarity_analysis.pdf}
 \vspace{1em}
-\caption{(A) Utterances within a pair become more similar to successive utterances on later repetitions, converging on a stable convention, but (B) utterances across pairs become steadily more dissimilar, diverging to different solutions. These patterns are depicted schematically by dots within a pair changing less over time while dots in different pairs move further apart. Error bars are bootstrapped 95\% CIs. }
+\caption{(A) Utterances within a pair become more similar to successive utterances on later repetitions, converging on a stable convention, but (B) utterances across pairs become steadily more dissimilar, diverging to different solutions. These patterns are depicted schematically by dots within a pair changing less over time while dots in different pairs move further apart. Error bars are bootstrapped 95\% CIs. Due to the large number of pairwise measurements, these bars are not visible in panel (B).}
 %\vspace{1em}
 \label{fig:similarity}
 \end{figure}
@@ -582,47 +593,50 @@ Taken together, these findings clarify the desiderata for theories of \emph{ad h
 For a model of communication to explain how general-purpose meanings are systematically tailored to the needs of the current interaction in the way we observed, it must provide a mechanism to select and combine syntactic phrases that are initially distinctive and to prune them over time, modifying them if they are unsuccessful.
 
 Our findings also raise new and subtle questions about the cognitive mechanisms giving rise to these properties.
-One key question concerns the source of arbitrariness: what breaks the `symmetry' among different possible descriptions and leads different pairs to diverge from one another?
+One such question concerns the mechanisms supporting arbitrariness over such short interactions: what breaks the `symmetry' among different possible descriptions and leads different pairs to diverge from one another?
 One possibility is that each individual speaker may initially have strong but idiosyncratic initial preferences for short labels, and arbitrariness emerges from variability in these preferences throughout the population.
 Under this possibility, speakers begin with long, elaborated descriptions due to uncertainty about whether their preferred label will be understood, but in the absence of misunderstandings will proceed with their pre-meditated label.
 A second possibility is that speakers \emph{themselves} may be unclear about a mutually understandable way to refer to these unfamiliar objects.
 If uncertain speakers initially sample an utterance from a broad distribution of acceptable labels, and update their distribution on subsequent repetitions conditioned on feedback, different pairs may end up in different equilibria due to randomness in sampling from a more or less shared initial distribution. 
-This is the mechanism proposed in recent probabilistic models of convention formation \citep{smith_learning_2013,hawkins_convention-formation_2017,Brochagen17}, which have captured in simulations several of the properties we observed.
+This latter mechanism has been proposed in recent probabilistic models of convention formation \citep{smith_learning_2013,hawkins_convention-formation_2017,Brochagen17}, which present simulations reproducing several of the properties we observed in our data.
 %That is, the symmetry may be broken through randomness in the sampling step (or in the updating step, if learning is stochastic.)
-
 These two possibilities -- strong but idiosyncratic initial preferences or initial uncertainty and breadth -- are not mutually exclusive.
 Our results rule out the possibility of universally shared strong preferences, but it is possible that some speakers have different strong preferences about labels while others are initially more uncertain.
-One way for future work to disentangle these possibilities is to elicit better measurements of initial preferences over appropriate labels.
-For instance, an approach proposed by \cite{FussellKrauss89_IntendedAudienceCommonGround} asked directors to either produce descriptions for others or for themselves in the future, and Bayesian truth serum approaches \citep{prelec2004bayesian} estimate both an individual's own subjective preferences and their expectations about whether these would be shared by others.
+One way for future work to disentangle these possibilities is to elicit better measurements of speakers' initial beliefs about appropriate labels.
+For instance, an approach proposed by \cite{FussellKrauss89_IntendedAudienceCommonGround} asked directors to either produce descriptions for others or for themselves in the future, and Bayesian truth serum approaches \citep{prelec2004bayesian} compare an individual's own subjective preferences with their expectations about whether these would be shared by others.
 %Finally, it would be valuable to estimate how much variability in semantic expectations there really is in the population \citep{FurnasEtAl87_VocabularyProblem,kleinschmidt2019structure}.
 
-The rapid timescale of adaptation we have investigated in dyadic reference games is not only of interest in its own right for theories of meaning and social coordination; it is a key building block toward grounding the adaptiveness and efficiency of larger-scale human language in the cognitive mechanisms of individual minds \citep{KirbyTamarizCornishSmith15_CompressionCommunication,gibson2019efficiency}.
-If community-wide conventions emerge from agents generalizing across different dyadic interactions, then local learning mechanisms leading to efficiency and informativity \emph{within} a dyad may explain how a community's conventions remain well-calibrated to the demands of the current environment.
-The sensitivity of such calibration has been previous tested using small artificial languages in the lab \cite[e.g.][]{WintersKirbySmith14_LanguagesAdapt,hawkins_emerging_abstractions_2018}, but our observation of similar dynamics in ordinary natural language use emphasizes that local learning may be an ongoing and pervasive influence.
 
-Although our analyses go beyond previous work by using new vector-space semantic models, they still face some limitations based on these models.
-We address two potential limitations with supplemental analyses included in the Appendix.
-First, measures of similarity relying on vector space representations like GloVe are fundamentally limited by the quality of the semantic space provided by the embedding technique.
-To address this concern, we provide a supplemental diagnostic that provides converging evidence for the properties of arbitrariness and stability based on the \emph{discrete distributions} of word tokens appearing in each utterance instead of continuous utterance embeddings (see Appendix A).
+Although our analyses go beyond previous work by using recent vector-space semantic models, they still face several limitations.
+We address two such limitations with supplemental analyses included in the Appendix.
+First, measures of similarity relying on vector space representations like GloVe are fundamentally limited by the quality of the semantic space that has been learned.
+To address this concern, we provide converging evidence for the properties of arbitrariness and stability using the \emph{discrete distributions} of word tokens appearing in each utterance instead of continuous utterance embeddings (see Appendix A).
 Second, a related concern is that the gradual divergence we observed between different interactions could be an artifact of the way we constructed utterance embeddings by averaging word embeddings.
-If averaging together more words creates a distinctive type of `washed out' utterance embedding, and early descriptions contain more words, then high initial similarity across interactions may reflect length rather than actual semantic overlap.
-We address this concern by providing an additional permutation test baseline that scrambles words across utterances prior to averaging word embeddings (see Appendix B).
+If averaging together more words creates a distinctive type of `washed out' utterance embedding, and early descriptions contain more words, then high initial similarity across interactions may reflect utterance length rather than actual semantic overlap.
+We address this concern by providing an additional permutation test baseline that scrambles words across different tangrams prior to averaging word embeddings (see Appendix B).
 This baseline also presents an opportunity to compare the divergence we observed across different interactions against the divergence within a \emph{single speaker's} descriptions of their twelve different tangrams.
-Just as different speakers initially include many of the same attributes in their descriptions for a tangram but eventually (unknowingly) diverge to distinct labels, a single speaker also begins by re-using certain attributes for several tangrams but (knowingly) prunes them down to be as distinctive as possible due to informativity pressures (consistent with our findings in Section \ref{sec:distinctive}).
+Just as different speakers initially include many of the same attributes in their descriptions for a tangram but eventually (unknowingly) diverge to distinct labels, a single speaker also begins by re-using certain attributes for several tangrams but (knowingly) prunes them down to be as distinctive as possible due to informativity pressures, consistent with our findings in Section \ref{sec:distinctive}.
 
 %Our results in this paper also raise a subtle cognitive question about classic definitional notions of arbitrariness in convention \citep{Lewis69_Convention}, which hold that there must counterfactually exist an alternative solution to the coordination problem for any particular solution to be conventional.
 
 Our use of classic tangram stimuli also raises an important question about how our findings would be expected to apply to other spaces of novel objects.
 In particular, it is likely that participants converge to distinctive `names' because the target of reference were distinctive objects.
 If the targets of communication instead varied along clear latent dimensions \citep[e.g.][]{nolle2018emergence}, contained multiple objects in relation to one another, or depicted events or activities unfolding over time, participants might instead have converged on more compositional systems making use of adjectives, verbs, and prepositions.
-Future work should examine how the structure of the target space affects the dynamics of adaptation.
-
+%Future work should examine how the structure of the target space affects the dynamics of adaptation.
 Similarly, the generality of our results is limited by the population we sampled.
-Our use of online data collection allowed us to create a relatively large number of arbitrary dyads within a convenience population, but also limits the opportunities for study of these dyads across contexts.
-it will be important to determine how the \emph{ad hoc} meanings formed in one novel context generalize to other contexts with the same partner.
-Further, though our dyads are likely diverse in many ways relative to the US national population \citep{levay2016demographic} they are in no way representative of either the US population or any broader population.
+Our use of online data collection allowed us to create a relatively large number of arbitrary dyads within a convenience population, but also limits opportunities for studying these dyads over longer time periods.
+It will be important to determine how the \emph{ad hoc} meanings formed in one novel context generalize to other contexts with the same partner.
+Further, though our dyads are likely diverse in many ways relative to the US national population \citep{levay2016demographic} they not representative of either the US population or any broader population.
 Thus, further cross-cultural work examining the validity of our conclusions across populations, and in different languages, would be a valuable contribution for future work.
 
+Finally, it is worth noting several important methodological differences between classic face-to-face referential games conducted in the lab, and our text-mediated online replication. 
+First, our messaging system required participants to 
+involves more systematic investigation of the messages sent by the matcher. 
+All of our analyses of content were limited to the director’s utterances only to preserve the interpretation of the embeddings as representations of the referring expressions produced by a consistent individual on each repetition. Given this comment and the reviewer’s first comment about how we collapsed utterances in multi-round dialogues, we have added a paragraph to the general discussion explicitly exploring the ramifications of these analysis decisions, and suggesting possible directions for extending our analyses to more carefully incorporate the content of matchers’ utterances in future work. 
+
+The rapid timescale of adaptation we have investigated in dyadic reference games is not only of interest in its own right for theories of meaning and social coordination; it is a key building block toward grounding the adaptiveness and efficiency of larger-scale human language in the cognitive mechanisms of individual minds \citep{KirbyTamarizCornishSmith15_CompressionCommunication,gibson2019efficiency}.
+If community-wide conventions emerge from agents generalizing across different dyadic interactions, then local learning mechanisms leading to efficiency and informativity \emph{within} a dyad may explain how a community's conventions remain well-calibrated to the demands of the current environment.
+The sensitivity of such calibration has been previous tested using small artificial languages in the lab \cite[e.g.][]{WintersKirbySmith14_LanguagesAdapt,hawkins_emerging_abstractions_2018}, but our observation of similar dynamics in ordinary natural language use emphasizes that local learning may be an ongoing and pervasive influence.
 In sum, the resolution provided by the larger corpus we have collected, in combination with recent advances in natural language processing techniques, provides a new window into the quantitative dynamics of adaptation in dyadic communication and beyond.
 We hope that both the new corpus and new analytic techniques contribute to the testing and elaboration of theories of human language.
 

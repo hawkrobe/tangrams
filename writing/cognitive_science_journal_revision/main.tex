@@ -487,8 +487,9 @@ In other words, once there is evidence that a particular label is successfully u
 
 To operationalize these constructs, we used a measure of similarity based on distances computed between continuous vector space embeddings of referring expressions\footnote{We pre-registered discrete analogs of these analyses, which we have included in Appendix A, but we later decided that the continuous vector space measures present a more interpretable and direct test of our hypothesis.}.
 Although the idea of using such representations of words to measure similarity is an old one \citep{osgood1952nature,landauer_solution_1997,bengio_neural_2003}, recent progress in machine learning has yielded substantial improvements in the quality of these representations.
-To quantify the dynamics of semantic context in referring expressions across and within games, we therefore first extracted the 300-dimensional GloVe vector for each word \citep{pennington2014glove}.
-We then averaged these word vectors to obtain a single sentence vector for each referring expression.
+To quantify the dynamics of semantic content in referring expressions across and within games, we therefore first extracted the 300-dimensional GloVe vector \citep{pennington2014glove} for each word in the messages produced by the director on each trial.
+We limited our analysis to messages produced by the director, rather than collapsing together director and matcher messages, in order to preserve consistency in the source of semantic content.
+We then averaged these word vectors to obtain a single sentence vector for each trial.
 Variations on such simple averaging methods are surprisingly strong baselines for sentence representations \citep{arora2017asimple}, providing better downstream task performance than whole-sentence encoders \citep{KirosEtAl15_SkipThought}.
 
 To avoid artifacts from function words, we only included open-class content words (nouns, adjectives, verbs, and adverbs) in this average

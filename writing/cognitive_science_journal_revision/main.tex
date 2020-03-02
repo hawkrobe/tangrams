@@ -20,7 +20,7 @@
 \graphicspath{{./figs/}}
 \newcommand{\rdh}[1]{\textcolor{Red}{[rdh: #1]}}
 \newcommand{\ndg}[1]{\textcolor{green}{[ndg: #1]}}
-
+\usepackage{hyperref}
 
 % Update article type if known
 \papertype{Original Article}
@@ -180,8 +180,8 @@ Taken together, our findings characterize core processes operating within the mi
 
 We developed two variants of the repeated reference task used in classic work by \cite{ClarkWilkesGibbs86_ReferringCollaborative}: a relatively unconstrained \emph{free-matching} version that more closely replicates classic in-lab designs, and a more tightly controlled \emph{cued} version.
 Most importantly, the \emph{cued} version allows us to identify which object each utterance refers to, supporting higher-resolution analyses at the object-by-object level.
-We considered the free-matching version to be an exploratory pilot sample and subsequently pre-registered planned analyses for the \emph{cued} version:\footnote{https://osf.io/2zwmx}.
-While we are releasing the corpora we collected in both versions, we restrict our analyses to the \emph{cued} version throughout the paper as a cleaner confirmatory sample.
+We considered the free-matching version to be an exploratory pilot sample and subsequently pre-registered planned analyses for the \emph{cued} version at \mbox{\texttt{\url{https://osf.io/vzvmf}}}.
+While we are releasing the corpora from both versions, we restrict our analyses to the \emph{cued} version throughout the paper as a cleaner confirmatory sample.
 Any exploratory analyses and changes to our pre-registered plan are described as relevant in each section below.
 
 \begin{figure}
@@ -246,9 +246,9 @@ We used a three step pre-processing pipeline to prepare this corpus for subseque
 
 \item \textbf{Collapsing multiple messages within a trial}: Finally, some directors used our chat box like an texting interface, hitting the enter key between every micro-phrase of text. Because many of our analysis techniques depend upon having a single referring expression for each trial, we collapsed all messages sent by each participant within a trial into a single message by inserting commas between messages. We chose to use commas because it tends to maintain grammaticality and does not inflate word counts. Importantly, we used this strategy even on trials where there were multiple rounds of interaction between the director and matcher, joining together a director's original message with their follow-up to the matcher's response. This strategy had the advantage of preserving all of the referential content produced by the director on a trial, compared to a `purer' strategy of removing messages sent in response to the matcher, but the disadvantage of losing the precise interactional structure of the dialogue. 
 
-After implementing exclusions and cleaning, we were left with a \emph{free matching} corpus containing a total of 8,639 ($\sim$ 51,271 words) messages over 56 complete games and a \emph{cued} corpus containing 7,867 messages ($\sim$ 46,000 words) over 83 games.
-
 \end{enumerate}
+
+\noindent After implementing exclusions and cleaning, we were left with a \emph{free matching} corpus containing a total of 8,639 ($\sim$ 51,271 words) messages over 56 complete games and a \emph{cued} corpus containing 7,867 messages ($\sim$ 46,000 words) over 83 games.
 
 %Still, we verified that all results reported were robust to these exclusion criteria, and to our data pre-processing steps\todo{check}.
 
@@ -273,7 +273,7 @@ What sequence of transformations do descriptions undergo over the course of repe
 
 \subsection{The effect of listener feedback on reduction}\label{listener-feedback}
 
-Conventions are formed \emph{collaboratively}, not in isolation \citep{ClarkWilkesGibbs86_ReferringCollaborative}, and thus depend on some form of social feedback.
+Conventions are formed \emph{collaboratively}, not in isolation \citep{ClarkWilkesGibbs86_ReferringCollaborative,SchoberClark89_Overhearers}, and thus depend on some form of social feedback.
 We consider two channels of feedback that were available to speakers.
 First, matchers could voluntarily initiate a bi-directional feedback process at any point within a trial by asking follow-up questions, suggesting corrections, and acknowledging or verbally confirming their own understanding through a backchannel.
 Second, we automatically supplied ground-truth feedback about the matcher's selection and the true target at the end of each trial.
@@ -632,10 +632,16 @@ It will be important to determine how the \emph{ad hoc} meanings formed in one n
 Further, though our dyads are likely diverse in many ways relative to the US national population \citep{levay2016demographic} they not representative of either the US population or any broader population.
 Thus, further cross-cultural work examining the validity of our conclusions across populations, and in different languages, would be a valuable contribution for future work.
 
-Finally, it is worth noting several important methodological differences between classic face-to-face referential games conducted in the lab, and our text-mediated online replication. 
-First, our messaging system required participants to 
-involves more systematic investigation of the messages sent by the matcher. 
-All of our analyses of content were limited to the director’s utterances only to preserve the interpretation of the embeddings as representations of the referring expressions produced by a consistent individual on each repetition. Given this comment and the reviewer’s first comment about how we collapsed utterances in multi-round dialogues, we have added a paragraph to the general discussion explicitly exploring the ramifications of these analysis decisions, and suggesting possible directions for extending our analyses to more carefully incorporate the content of matchers’ utterances in future work. 
+Finally, there are important differences between face-to-face verbal communication and online text-mediated communication.
+Text message interfaces do not transmit the message character-by-character as it is being written; messages are seen in their entirety upon being sent. 
+Meanwhile, speech is processed incrementally, allowing for a real-time ``backchannel'' where the director may be interrupted as soon as the matcher is confident they understand.
+The timing of verbal interruptions may provide stronger evidence of understanding than a reply to a fully-composed message.
+Still, we believe it is a strength of our study to collaborative reference through a text-based chat modality which is an increasingly common site of communication in the real-world. 
+All of the key results from classic work in face-to-face verbal conversations were strongly replicated in our text-based data, suggesting that these processes are modality-general features of communication. 
+Moreover, while a simple heuristic to keep talking until being interrupted could in principle suffice to explain speaker reduction face-to-face conversation, our evidence shows that speakers \emph{plan} shorter utterances even when they cannot be interrupted; social feedback is being used as latent evidence of understanding.
+While our analyses of referential content were limited to those produced by the director to preserve the consistency of their source, it is important for future work to more systematically examine the matcher's contributions to establishing reference. 
+For instance, in some cases the matcher may supply the label that goes on to be conventionalized, and may systematically produce different discourse acts in different contexts.
+%Modern language models remain poorly suited for representing the kinds of discourse acts performed by the matcher, and our corpus may provide a useful new testbed for developing models of task-oriented dialogue \citep{anderson1991hcrc,Stolcke2000,}.
 
 The rapid timescale of adaptation we have investigated in dyadic reference games is not only of interest in its own right for theories of meaning and social coordination; it is a key building block toward grounding the adaptiveness and efficiency of larger-scale human language in the cognitive mechanisms of individual minds \citep{KirbyTamarizCornishSmith15_CompressionCommunication,gibson2019efficiency}.
 If community-wide conventions emerge from agents generalizing across different dyadic interactions, then local learning mechanisms leading to efficiency and informativity \emph{within} a dyad may explain how a community's conventions remain well-calibrated to the demands of the current environment.

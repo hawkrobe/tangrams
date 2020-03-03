@@ -166,7 +166,7 @@ Stability refers to the claim that, once a solution has been found, speakers sho
 Our contribution is to operationalize these claims in the high-dimensional space of vector embeddings for referring expressions (i.e. GloVe embeddings).
 By measuring the similarity between referring expressions in this space, we find that signatures of arbitrariness and stability gradually increase over the course of the interaction.
 We also clarify the (non-arbitrary) processes shaping which words eventually become conventions.
-In particular, we test the prediction that pragmatic pressures to be informative in context lead more discriminative words to conventionalize \citep{KirbyTamarizCornishSmith15_CompressionCommunication,GibsonEtAl17_ColorNamingUse,hawkins_emerging_abstractions_2018}.
+In particular, we test the prediction that pragmatic pressures to be informative in context lead more discriminative words to conventionalize \citep{KirbyTamarizCornishSmith15_CompressionCommunication,GibsonEtAl17_ColorNamingUse}.
 Taken together, our findings characterize core processes operating within the microcosm of dyadic, natural-language interactions. These processes may ultimately contribute to the adaptive properties of conventions shared across a language community.
 % cause words that were more discriminative in the initial context (i.e. that were used for one target more than others) are more likely to persist through the final repetition.
 
@@ -376,7 +376,7 @@ If initial descriptions tend to be syntactically complex because they combine mu
 We explicitly tested this hypothesis by examining whether pairs of words dropped from one reference to the next tend to come from the same syntactic units, relative to what would be expected by random deletions.
 We quantified the extent to which dropped words `cluster' by examining syntactic closeness between the dropped words in a dependency parse tree (see Fig. \ref{fig:dependency}).
 Dependency grammars represent syntax in terms of directed dependency relations between pairs of words \citep{hudson1984word,corbett1993heads}. 
-Dependency parsing, the task of extracting a tree of dependency relations from raw input text, is a canonical task in computational linguistics \citep{jurafsky2014speech,kubler2009dependency}\footnote{Dependency grammars are an alternative to phrase structure grammars, which represent constituency relations between abstract units like noun phrases and verb phrases. We pre-registered a different version of this analysis using the pure prevalence of different higher-order units extracted from a constituency parse at each repetition (e.g. adjectival clauses or subordinate clauses). While we found evidence for our pre-registered predictions, we later realized that this measure failed to capture the relevant notion of clustering: clausal features can disappear due to rephrasing without the words in the clause necessarily being dropped together, and conversely, entire meaningful units can be dropped at once (e.g. noun phrases) without any clausal features being present at all. Path lengths in the dependency tree are better suited for assessing these questions at the word-by-word level.}. 
+Dependency parsing, the task of extracting a tree of dependency relations from raw input text, has become a canonical task in computational linguistics \citep{jurafsky2014speech,kubler2009dependency}\footnote{Dependency grammars are an alternative to phrase structure grammars, which represent constituency relations between abstract units like noun phrases and verb phrases. We pre-registered a different version of this analysis using the pure prevalence of different higher-order clausal features extracted from a constituency parse at each repetition (e.g. adjectival clauses or subordinate clauses). While we found evidence for our pre-registered predictions, we later realized that this measure failed to capture the relevant notion of clustering: clausal features can disappear due to rephrasing without the words in the clause necessarily being dropped together, and conversely, entire meaningful units can be dropped at once (e.g. noun phrases) without any clausal features being present at all. Path lengths in the dependency tree are better suited for assessing these questions at the word-by-word level.}. 
 
 We used the state-of-the-art statistical dependency parser from SpaCy, using the ClearNLP dependency labels \citep{choi_palmer2012}, to extract a parse tree for every utterance in our corpus \citep[see][for details on neural network architectures for parsing]{honnibal2015improved, kiperwasser2016simple}.
 We then compared each referring expression to the one produced on the subsequent repetition block to determine which words were dropped and which reappeared.
@@ -646,7 +646,7 @@ For instance, in some cases the matcher may supply the label that goes on to be 
 
 The rapid timescale of adaptation we have investigated in dyadic reference games is not only of interest in its own right for theories of meaning and social coordination; it is a key building block toward grounding the adaptiveness and efficiency of larger-scale human language in the cognitive mechanisms of individual minds \citep{KirbyTamarizCornishSmith15_CompressionCommunication,gibson2019efficiency}.
 If community-wide conventions emerge from agents generalizing across different dyadic interactions, then local learning mechanisms leading to efficiency and informativity \emph{within} a dyad may explain how a community's conventions remain well-calibrated to the demands of the current environment.
-The sensitivity of such calibration has been previous tested using small artificial languages in the lab \cite[e.g.][]{WintersKirbySmith14_LanguagesAdapt,hawkins_emerging_abstractions_2018}, but our observation of similar dynamics in ordinary natural language use emphasizes that local learning may be an ongoing and pervasive influence.
+The sensitivity of such calibration has been previous tested using small artificial languages in the lab \cite[e.g.][]{WintersKirbySmith14_LanguagesAdapt}, but our observation of similar dynamics in ordinary natural language use emphasizes that local learning may be an ongoing and pervasive influence.
 In sum, the resolution provided by the larger corpus we have collected, in combination with recent advances in natural language processing techniques, provides a new window into the quantitative dynamics of adaptation in dyadic communication and beyond.
 We hope that both the new corpus and new analytic techniques contribute to the testing and elaboration of theories of human language.
 
@@ -675,19 +675,13 @@ The entropy of the word distribution for a pair is maximized when all words are 
 To compare word distributions across games, we use a permutation test methodology.
 By scrambling referring expressions for each tangram across games and recomputing the entropy of the scrambled word distribution, we effectively disrupt any structure within each pair.
 There are two important inferences we can draw from this test.
-\begin{figure}[t!]
-\centering
-\includegraphics[scale=.9]{permutedDiscrete.pdf}
-\caption{Permuting utterances across pairs increases entropy of word distribution, consistent with internal stability and multiple equilibria. Mean empirical entropy (red) and mean permuted entropy (blue) are shown for each tangram. Error bars are 95\% CIs for bootstrapped empirical entropy and the permuted distribution, respectively.}
-\label{fig:permuted}
-\end{figure}
 First, in a null scenario where different pairs did \emph{not} diverge as predicted and instead every pair coordinated on roughly the same (optimal) convention for each tangram, this permutation operation would have no effect since it would be mixing together copies of the same distribution.
 Second, in another null scenario where pairs did not converge and instead varied wildly in the words they used from repetition to repetition, then permuting across games would also have no effect since it would simply mix together word distributions that already have high entropy.
 Hence, scrambling should \emph{increase} the average game's entropy only in the case where both predictions hold: each game's idiosyncratic but concentrated distribution of words would be mixed together to form more heterogeneous and therefore high-entropy distributions.
 
 Following this logic, we computed the average within-game entropy for 1000 different permutations of director utterances.
 We permuted utterances within repetition blocks rather than across the entire data set to control for the fact that earlier trials may generically differ from later ones (e.g. in utterance length).
-Because we are permuting and measuring entropy at the tangram-level, this yields 12 permuted distributions (see Fig. \ref{fig:permuted}).
+Because we are permuting and measuring entropy at the tangram-level, this yields 12 permuted distributions (see Supplementary Fig. \ref{fig:permuted}).
 We found that the mean empirical entropy lay well outside the null distribution for all twelve tangrams, $p < .001$, consistent with our predictions of internal stability within pairs and multiple equilibria across pairs.
 
 Finally, it is worth noting some advantages and disadvantages of this discrete measure compared to the continuous vector space measure used in the main text.
@@ -733,17 +727,23 @@ While both subsequent trajectories indicate divergence, the different labels use
 
 \section*{Appendix C: Supplemental figures}
 
+\begin{figure}[t!]
+\centering
+\includegraphics[scale=.9]{Sup_Mat_permutedDiscrete.pdf}
+\caption{Permuting utterances across pairs increases entropy of word distribution, consistent with internal stability and multiple equilibria. Mean empirical entropy (red) and mean permuted entropy (blue) are shown for each tangram. Error bars are 95\% CIs for bootstrapped empirical entropy and the permuted distribution, respectively.}
+\label{fig:permuted}
+\end{figure}
 
 \begin{figure}[h!]
 \centering
-\includegraphics[scale=.8]{syntactic_reduction_baselines.pdf}
+\includegraphics[scale=.8]{Sup_Mat_syntactic_reduction_baselines.pdf}
 \caption{The empirical dependency lengths between dropped words are lower than expected under two baselines for every repetition block. Samples from the baselines are shown as densities. }
 \label{fig:dependency_length_by_rep}
 \end{figure}
 
 \begin{figure}[h]
 \centering
-\includegraphics[scale=.53]{tsne-alltangrams.pdf}
+\includegraphics[scale=.53]{Sup_Mat_tsne-alltangrams.pdf}
 \caption{t-SNE visualizations of utterance trajectories for all 12 tangrams; panel C is annotated in Fig \ref{fig:tsne}. }
 \label{fig:all-tsne}
 \end{figure}

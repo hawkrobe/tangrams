@@ -1,5 +1,5 @@
 ---
-title: "R Notebook"
+title: "Section 3: Structure analyses"
 output: html_notebook
 ---
 
@@ -12,12 +12,13 @@ library(ggthemes)
 library(tm)
 library(tidyboot)
 library(xtable)
-library(ggthemes)
 library(entropy)
 library(useful)
 library(viridis)
 library(broom)
-library(gganimate)
+
+library(ggthemes)
+library(cowplot)
 
 # reticulate lets us import npy files with numpy python package
 library(reticulate)
@@ -26,14 +27,12 @@ np <- import("numpy")
 source('../utils/analysis_helpers.R')
 ```
 
-# Dynamics of structure/syntax
+# 3 | RESULTS: CHARACTERIZING THE DYNAMICS OF STRUCTURE
 
-We've already done most of the pre-processing work in preprocessing.Rmd and the jupyter notebook, so here we just read in the csv files we created there, do a bit of post-processing, and make plots.
-
-
-### Reduction in listener exchanges
+## Section 3.1: The effect of matcher feedback on reduction
 
 ```{r}
+# Import uncollapsed version of data to examine matcher
 message_df = read_csv('../../data/tangramsSequential.csv') %>%
   mutate(numRawWords = str_count(contents, "\\S+")) 
 
@@ -57,18 +56,26 @@ listenerReduction <- listenerMsgs %>%
    mutate(measure = '# listener messages')  
 ```
 
+Statistics for reduction in matcher message rates
+
 ```{r}
-listenerMsg_lm = summary(glmer(matcherBin ~ repetitionNum + (1 + repetitionNum | gameid) + (1  | intendedName), 
-                               data = listenerMsgs %>% mutate(matcherBin = matcher > 0), 
-                               family = 'binomial'))
-print(listenerMsg_lm)
+listenerMsgs %>% 
+  mutate(matcherBin = matcher > 0) %>%
+  glmer(matcherBin ~ repetitionNum + 
+          (1 + repetitionNum | gameid) + 
+          (1  | intendedName), 
+        data = , 
+        family = 'binomial') %>%
+  summary()
 ```
 
-Plot it.
+### Visualization of matcher rates (Fig. 2B)
 
 ```{r}
 ggplot(listenerReduction, aes(x = repetitionNum, y = mean*100)) +
-  geom_ribbon(aes(ymax = 100*ci_upper, ymin = 100*ci_lower), alpha = 0.1, color = F) +
+  geom_ribbon(aes(ymax = 100 * ci_upper, 
+                  ymin = 100 * ci_lower), 
+              alpha = 0.1, color = F) +
   geom_line() +
   ylab('% games where \n matcher sent message') +
   xlab('repetition #') +
@@ -77,19 +84,28 @@ ggplot(listenerReduction, aes(x = repetitionNum, y = mean*100)) +
   theme_cowplot() +
   theme(aspect.ratio = 1)
 
-ggsave('../../writing/cognitive_science_format/figs/listenerResponses.pdf', 
+ggsave('../../writing/figs/listenerResponses.pdf', 
        height = 8, width = 12, units = 'cm', useDingbats = F)
 ```
 
-### what is actually contained in listener response messages?
+### mini-analysis of what is actually contained in listener response messages
 
 ```{r}
-message_df %>% filter(role == 'matcher') %>% mutate(containQ = str_detect(contents, "\\?")) %>% group_by(containQ) %>% tally() %>% ungroup() %>% mutate(proportion = n / sum(n))
+# Count question marks
+message_df %>% 
+  filter(role == 'matcher') %>% 
+  mutate(containQ = str_detect(contents, "\\?")) %>% 
+  group_by(containQ) %>% 
+  tally() %>% 
+  ungroup() %>% 
+  mutate(proportion = n / sum(n))
 ```
 
-### Did people take feedback into account?
+### Were directors sensitive to ground-truth accuracy feedback?
 
 ```{r}
+# Extract reduction in response to feedback for 
+# both repetition and trial-by-trial baseline
 feedback <- listenerMsgs %>% 
   mutate(matcherBin = matcher > 0) %>%
   group_by(gameid) %>% arrange(gameid, trialNum) %>%  
@@ -102,52 +118,53 @@ feedback <- listenerMsgs %>%
   separate(comparison, into = c('comparison', 'metric')) %>%
   spread(metric, val) %>%
   group_by(gameid) %>%
-  # only look at games where at least one error was made
+  # only look at games where at least one error was made 
+  # (otherwise no rounds after error to compare)
   filter(sum(prevcorrect == 0, na.rm = T) > 0) %>%
   ungroup() %>%
   filter(!is.na(prevcorrect)) %>%
   filter(!is.na(reduction)) %>%
   mutate(prevcorrectFactor = factor(ifelse(prevcorrect == 1, 'correct', 'incorrect'))) %>%
   mutate(comparisonNumeric = ifelse(comparison == "rep", 1, 0)) 
-  #mutate(comparison = as.factor(comparison))
 ```
 
-Stats 
+Test interaction with traditional regression b/c even minimal lmer does not converge
 
 ```{r}
-library(optimx)
-summary(lmer(reduction ~ 1 + prevcorrect + I(repetitionNum) 
-             + (1 + prevcorrect + I(repetitionNum)  | gameid),
-             control=lmerControl(optimizer="bobyqa",optCtrl=list(maxfun=100000)),
-             data = feedback %>% filter(comparison == 'rep')))
-
-# test interaction
 summary(lm(reduction ~ prevcorrectFactor * comparison, data = feedback))
-summary(lmer(reduction ~ prevcorrectFactor * comparison + 
-               (1 + prevcorrectFactor * comparison | gameid),
-#             control=lmerControl(optimizer="bobyqa",optCtrl=list(maxfun=100000)),
-             data = feedback ))
+```
+
+Backup Bayesian mixed-effects model mentioned in footnote
+
+```{r}
 library(brms)
 library(rstan)
-summary(brm(reduction ~ prevcorrectFactor * comparison + 
+brm(reduction ~ prevcorrectFactor * comparison + 
                (1 + prevcorrectFactor * comparison | gameid),
-            chains = 1,
-            iter = 5000,
-             data = feedback ))
-
+    chains = 1,
+    iter = 5000,
+    data = feedback) %>%
+  summary()
 ```
 
-```{r}
-feedback %>% filter(repetitionNum == 1) %>% group_by(matcherBin) %>% summarize(m = 1 - mean(correct))
 
-tab <- table((feedback %>% filter(repetitionNum == 1))$matcherBin, (feedback %>% filter(repetitionNum == 1))$correct)
+```{r}
+feedback %>% 
+  filter(repetitionNum == 1) %>% 
+  group_by(matcherBin) %>% 
+  summarize(m = 1 - mean(correct))
+
+tab <- table((feedback %>% filter(repetitionNum == 1))$matcherBin, 
+             (feedback %>% filter(repetitionNum == 1))$correct)
+
 chisq.test(tab)
 dist(rbind(feedback$matcherBin, feedback$correct), method = "binary")
 
 ```
 
-```{r}
+Make Fig. 2C
 
+```{r}
 ggplot(feedback, aes(x = reduction)) +
   geom_histogram()
 
@@ -160,55 +177,45 @@ feedback.toplot %>%
   ggplot(aes(x = repetitionNum, y = empirical_stat, color = factor(prevcorrect))) +
     geom_point() +
     geom_line() +
-    geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), width = 0, position = 'dodge') +
+    geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), 
+                  width = 0, position = 'dodge') +
     geom_hline(aes(yintercept = 0)) +
-    #facet_wrap(~ comparison) +
     theme_cowplot()  +
     theme(aspect.ratio = 1) +
     ylab('(log) ratio of # words vs. previous round') +
     ylim(-0.8, 0.8)
 
-ggsave('../../writing/cognitive_science_format/figs/responseToFeedback.pdf', 
+ggsave('../../writing/figs/responseToFeedback.pdf', 
        height = 8, width = 16, units = 'cm', useDingbats = F)
 ```
 
-## What are the unigrams/bigrams/trigrams that drop the most in frequency across whole data set?
-
-```{r}
-makeNGramTable(15)
-```
-
-Seems to be markers of figurative descriptions, determiners, and modifying phrases like 'on the left'?
-
-## How do various properties reduce over time?
-
-### Reduction in utterance length
+## Section 3.2 | Breaking down the structure of reduction
 
 ```{r, cache = T, warning=F}
 tagged_df <- read_csv('../outputs/posTagged_tangramsSequential_collapsed.csv', 
                       col_types = 'ciicciiiiiiiiiiiiiiiiiiiiiii') 
 ```
 
+### Pure reduction in utterance length
+
 ```{r}
-library(cowplot)
 to.plot <- tagged_df %>%
-   group_by(repetitionNum) %>% #taskVersion
+   group_by(repetitionNum) %>% 
    tidyboot_mean(numWords, na.rm = T) 
 
 to.plot %>%
    mutate(measure = '# words per tangram') %>%
-   ggplot(aes(x = repetitionNum, y = empirical_stat)) + #, color = taskVersion
+   ggplot(aes(x = repetitionNum, y = empirical_stat)) +
     geom_ribbon(aes(ymax = ci_upper, ymin = ci_lower), alpha= 0.2) +
     geom_line() +
     xlab('repetition #') +
     ylab('mean # words used \n per tangram') +
-    #facet_wrap(~ taskVersion, nrow = 1, ncol = 2) +
     scale_x_continuous(breaks = round(seq(1, 6, by = 1),1)) +
     ylim(c(0, 20)) +
     theme_cowplot()  + 
-    #theme_few() +
     theme(aspect.ratio = 1)
-ggsave('../../writing/cognitive_science_format/figs/reduction.pdf',
+
+ggsave('../../writing/figs/reduction.pdf',
         height = 8, width = 12, units = 'cm', useDingbats = F)
 ```
 
@@ -223,7 +230,15 @@ summary(lmer(log(numRawWords) ~ poly(repetitionNum,2) +
                summarize(numRawWords = sum(numWords))))
 ```
 
-### Reduction in POS features 
+### Table 1
+
+What are the unigrams/bigrams/trigrams that drop the most in frequency across whole data set?
+
+```{r}
+makeNGramTable(15)
+```
+
+### Reduction in parts of speech (Fig. 3)
 
 examine reduction in different parts of speech
 
@@ -234,19 +249,16 @@ read_csv('../outputs/posTagged_tangramsSequential_collapsed.csv') %>%
             nouns = sum(NOUNcount)/sum(numWords),
             verbs = sum(VERBcount)/sum(numWords),
             dets= sum(DETcount)/sum(numWords),
-            #nums= sum(NUMcount)/sum(numWords),
-            #pronouns = sum(PRONcount)/sum(numWords),
             preps = sum(ADPcount)/sum(numWords),
-            #adverbs = sum(ADVcount)/sum(numWords),
-            conjunctions_pronouns = (sum(CCONJcount) + sum(SCONJcount) + sum(PRONcount))/sum(numWords),
+            conjunctions_pronouns = (sum(CCONJcount) + sum(SCONJcount) +
+                                       sum(PRONcount))/sum(numWords),
             adjectives = sum(ADJcount)/sum(numWords)) %>%
-  mutate(OTHER = (1 - nouns - verbs - dets -conjunctions_pronouns -#pronouns - conjunctions - adverbs
+  mutate(OTHER = (1 - nouns - verbs - dets -conjunctions_pronouns -
                       preps - adjectives)) %>%
   gather(POS, prop, nouns:OTHER) %>%
-  mutate(POS = factor(POS, levels = c('nouns',  'verbs', 'preps', 'adjectives', #'adverbs',
+  mutate(POS = factor(POS, levels = c('nouns',  'verbs', 'preps', 'adjectives',
                                'conjunctions_pronouns', 'dets', 'OTHER'))) %>%
   select(repetitionNum, POS, prop) %>%
-  #mutate(POS = fct_reorder(POS, prop)) %>%
   ggplot(aes(x = repetitionNum, y = prop, fill = POS)) +
     geom_area(alpha=0.6 , size=1, colour="black") +
     scale_fill_brewer(palette = "Set1") +
@@ -254,7 +266,7 @@ read_csv('../outputs/posTagged_tangramsSequential_collapsed.csv') %>%
     scale_x_continuous(breaks = c(1,2,3,4,5,6))+
     theme(aspect.ratio = 2.5) +
     ylab('% words')
-ggsave('../../writing/cognitive_science_format/figs/posChange.pdf',
+ggsave('../../writing/figs/posChange.pdf',
         height = 8, width = 16, units = 'cm', useDingbats = F)
 ```
 
@@ -277,8 +289,8 @@ posReduction <- tagged_df %>%
   select(gameid, repetitionNum, POS, count) %>%
   # Need to put in ids to spread
   rowwise() %>%
-  mutate(id = row_number()) %>%
-  mutate(repetitionNum = paste0('rep', repetitionNum, collapse = '')) %>%
+  mutate(id = row_number(),
+         repetitionNum = paste0('rep', repetitionNum, collapse = '')) %>%
   spread(repetitionNum, count) %>%
   # Compute % reduction from first to last round
   mutate(diffPct = (rep1 - rep6)/rep1) %>%
@@ -286,9 +298,10 @@ posReduction <- tagged_df %>%
   # Filter out handful of people who skipped first round w/ negative %...
   filter(diffPct >= 0) %>%
   filter(POS != "OTHER") %>%
-  mutate(cat = ifelse(POS %in% c('dets', 'pronouns', 'preps', 'conjunctions'), 'closed', 
-                      ifelse(POS == 'adverbs', '?', 'open'))) %>%
-  mutate(cat = factor(cat, levels = c('closed', '?', 'open'))) %>%
+  mutate(cat = case_when(POS %in% c('dets', 'pronouns', 'preps', 'conjunctions') ~ 'closed', 
+                         POS == 'adverbs' ~ '?',
+                         TRUE ~ 'open'),
+         cat = factor(cat, levels = c('closed', '?', 'open'))) %>%
   # rearrange
   transform(POS=reorder(POS, -diffPct))
 
@@ -314,11 +327,12 @@ ggplot(posReduction, aes(x = POS, y = mean, fill = cat)) +
   theme(aspect.ratio = 1)
 
 
-ggsave('../../writing/cognitive_science_format/figs/posReduction.pdf',
+ggsave('../../writing/figs/posReduction.pdf',
         height = 8, width = 16, units = 'cm', useDingbats = F)
 ```
 
 Stats for open class vs. closed class
+
 ```{r}
 posReduction %>% 
   filter(cat != '?') %>%
@@ -327,7 +341,7 @@ posReduction %>%
   summary()
 ```
 
-### Dependency lengths
+### Reduction in syntactic units
 
 Get list of all words dropped on each round...
 
@@ -351,315 +365,7 @@ syntactic %>%
     #scale_x_continuous(breaks = NULL) +
     theme(aspect.ratio = 1/2)
 
-ggsave('../../writing/cognitive_science_format/figs/syntactic_reduction_baselines.pdf',
+ggsave('../../writing/figs/syntactic_reduction_baselines.pdf',
        height = 8, width = 16, units = 'cm', useDingbats = F)
-```
-
-
-# Supplemental analyses
-
-## Compare cleaned vs. uncleaned on basic measures
-
-```{r}
-read_csv('../data/tangramsSequential_nocleaning.csv') %>%
-   group_by(gameid, repetitionNum) %>% #taskVersion
-  filter(role != 'matcher') %>%
-   summarize(numRawWords = sum(numRawWords)/12) %>%
-    group_by(repetitionNum) %>%
-   tidyboot_mean(numRawWords, na.rm = T) 
-```
-
-```{r}
-read_csv('../data/tangramsSequential_collapsed.csv') %>%
-   group_by(repetitionNum) %>% #taskVersion
-   tidyboot_mean(numRawWords, na.rm = T) 
-```
-
-## What proportion of messages sent by director vs. matcher, respectively?
-
-At beginning, directors send about 60% of total messages (close to equal!) At end, they send 80% -- listeners stop talking as much. This is just another way of looking at the total number of listener messages dropping.
-
-```{r}
-tangramCombined %>% 
-  group_by(gameid, repetitionNum, role) %>% 
-  summarize(individualM = n()) %>% 
-  ungroup() %>%
-  complete(role, repetitionNum, gameid, fill = list(individualM = 0)) %>% 
-  spread(role, individualM) %>% 
-  mutate(ratio = director / (director + matcher)) %>%
-   group_by(repetitionNum) %>% 
-   summarize(m = mean(ratio), 
-             se = sd(ratio)/sqrt(length(ratio))) %>%
-ggplot(aes(x = repetitionNum, y = m)) +
-  geom_line() +
-  geom_errorbar(aes(ymax = m + se, ymin = m - se), width = .1) +
-  ylab("% of total messages sent by director") +
-  xlab("trials") +
-  ylim(.5,1) +
-  xlim(0, 7) +
-  theme_bw() 
-```
-
-
-## Look at pmi across POS...
-
-```{r}
-pos_d <- read.csv("sequential_matchAndPMI.csv", header = TRUE) %>%
-  filter(pmi > 0) %>%
-  mutate(POS = as.character(POS)) %>%
-  mutate(POS = ifelse(POS %in% c('NN', 'NNS', 'NNP', 'NNPS'), "noun", POS)) %>%
-  mutate(POS = ifelse(POS %in% c('MD', 'VB', 'VBZ', 'VBP', 'VBD', 'VBN', 'VBG'), "verb", POS)) %>%
-  mutate(POS = ifelse(POS %in% c('DT', 'WDT'), 'det', POS)) %>%
-  mutate(POS = ifelse(POS %in% c('PRP', 'PRP$', 'WP', 'WP$'), 'pronoun', POS)) %>%
-  mutate(POS = ifelse(POS %in% c('CC'), 'conjunction', POS)) %>%
-  mutate(POS = ifelse(POS %in% c('JJ', 'JJR', 'JJS'), 'adjective', POS)) %>%
-  mutate(POS = ifelse(POS == 'IN', 'preposition', POS)) %>%
-  mutate(POS = ifelse(POS %in% c('noun', 'verb', 'det', 'pronoun', 'conjunction', 'adjective', 'preposition'), POS, 'other')) %>%
-  group_by(POS) %>%
-  summarize(se = sd(pmi)/sqrt(length(pmi)),
-            mean_pmi = mean(pmi),
-            num = sum(total),
-            mean_match = mean(match)) %>%
-  filter(num > 200)
-cbbPalette <- c("#000000", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
-
-ggplot(pos_d %>% filter(POS != 'other'), aes(x = reorder(POS,mean_pmi,
-                     function(x)-x), y = mean_pmi)) +
-  geom_bar(stat='identity') +
-  geom_errorbar(aes(ymax = mean_pmi + se, ymin = mean_pmi - se)) +
-  theme_few() +
-  xlab("part of speech") +
-  ylab("pointwise mutual information")
-```
-
-
-## Visualize word frequencies on final round...
-
-```{r}
-library(wordcloud)   
-
-textPerGram = read_csv('../data/tangrams.csv') %>% 
-  filter(role == "director" & taskVersion == 'cued') %>%
-  filter(repetitionNum %in% c(1,6)) %>%
-  group_by(repetitionNum, intendedName) %>%
-  # summarize(a = paste(contents, collapse = " ")) %>%
-  summarize(text = paste(contents, collapse = " ")) %>%
-  rename(docs = intendedName) %>%
-  mutate(docs = paste("doc ", docs))
-
-corpus = Corpus(VectorSource(textPerGram$text))
-corpus <- tm_map(corpus, removePunctuation)
-corpus <- tm_map(corpus, removeNumbers)
-#corpus <- tm_map(corpus, removeWords, stopwords('english'))
-
-dtm = DocumentTermMatrix(corpus)
-
-numDocs = dim(dtm)[1]
-numTerms = dim(dtm)[2]
-  
-for(i in 1:numDocs) {
-  round = ifelse(floor((i-1) / 12) < 1, 'first', 'last')
-  print(round)
-  tangramNum = ((i-1) %% 12) + 1
-  print(tangramNum)
-  pdf(paste("../writing/tangrams/figs/wordclouds/wordcloudForTangram", tangramNum, "on", round ,"Round.pdf", sep = ""), 
-      bg = "transparent")
-  freq <- sort(colSums(as.matrix(dtm[i,])), decreasing=TRUE)
-  # print(entropy(freq))
-   wordcloud(names(freq), freq, min.freq = 1, colors=brewer.pal(6, "Dark2"))   
-  dev.off()
-}
-```
-
-Unused analysis of whether talking more at beginning leads to bigger reduction (but abandoned b/c duh talking more at the beginning means there's more words to reduce from, so this doesn't say much...)
-
-```{r}
-turnTaking <- listenerMsgs %>%
-  filter(repetitionNum %in% c(1,2,3,4,5)) %>%
-  group_by(gameid) %>%
-  summarize(numListenerMsgs = sum(matcher)) %>%
-  ungroup() %>%
-  select(gameid, numListenerMsgs)#taskVersion
-
-efficiency <- message_df %>%
-  filter(role == "director") %>%
-  group_by(gameid, repetitionNum) %>%  #taskVersion
-  summarize(individualM = sum(numRawWords, na.rm = T)) %>%
-  rowwise() %>%
-  mutate(id = row_number()) %>%
-  mutate(repetitionNum = paste0('round', repetitionNum, collapse = '')) %>%
-  spread(repetitionNum, individualM) %>%
-  mutate(diffPct = (round1 - round6)/round1) %>%
-  filter(diffPct >= 0) %>% # Filter out handful of people who skipped first round...
-  select(gameid, diffPct, round1,round6) #taskVersion
-
-qplot(log1p(efficiency$round6))
-qplot(log1p(turnTaking$numListenerMsgs))
-```
-
-```{r}
-turnTakingEfficiencyPlot <- ggplot(turnTaking %>% left_join(efficiency), 
-                                   aes(x = log1p(numListenerMsgs), y = log1p(round6))) +
-  geom_point() +
-  geom_smooth(method = 'lm') +
-  theme_bw(9) +
-  ylab("% reduction") +
-  xlab("log # listener messages on 1st round")
-turnTakingEfficiencyPlot
-```
-
-```{r}
-cor.test(x = log1p((efficiency %>% left_join(turnTaking))$round6), log1p((efficiency %>% left_join(turnTaking))$numListenerMsgs))
-
-summary(lmer(log1p(round6) ~ log1p(numListenerMsgs) + (1|gameid), data = efficiency %>% left_join(turnTaking)))
-
-turnTakingdf <- turnTakingEfficiency_lm$df[2]
-turnTakingCoefs <- turnTakingEfficiency_lm$coefficients[2,]
-turnTakingResult <- paste0("b = ", round(turnTakingCoefs[1],2),
-                           ", t(", turnTakingdf, ") = ", round(turnTakingCoefs[3],2), 
-                           ", p = ", round(turnTakingCoefs[4],2))
-turnTakingResult
-turnTakingEfficiencyPlot
-```
-
-TODO: include % including NPs? (shouldn't go down as much)
-
-```{r}
-read_csv('./outputs/constituency_tags.csv', col_names = T , col_types = '-cicccccc') %>%
-      replace_na(list(SBAR = FALSE, PP = FALSE, CC = FALSE, NP = FALSE)) %>%
-      mutate(SBAR = ifelse(SBAR == 'True', TRUE, FALSE),
-           PP = ifelse(PP == 'True', TRUE, FALSE),
-           NP = ifelse(NP == 'True', TRUE, FALSE),
-           CC = ifelse(CC == 'True', TRUE, FALSE)) %>%
-  #filter(taskVersion == 'cued') %>%
-  select(gameid, repetitionNum, SBAR, CC, PP, NP) %>% #, taskVersion
-  gather(measure, occurrence, SBAR:NP) %>%
-  group_by(repetitionNum, gameid, measure) %>%#taskVersion, 
-  summarize(m = mean(occurrence)) %>%
-  group_by(repetitionNum, measure) %>%#taskVersion, 
-  tidyboot_mean(m, na.rm = T) %>%
-  filter(measure != "NP") %>%
-  ggplot(aes(x = repetitionNum, y = empirical_stat)) +
-    geom_ribbon(aes(ymax = ci_upper, ymin = ci_lower), width = .1,
-                  color = 'grey50') +
-    geom_line(color = 'white') +
-    xlab('repetition #') +
-    ylab('% of messages \n with syntactic feature') +
-    facet_grid(. ~ measure) +#taskVersion
-    ylim(c(0, NA)) +
-    mytheme(24) +
-    scale_x_continuous(breaks = round(seq(1, 6, by = 1),1)) +
-    theme(aspect.ratio = .75)
-
-ggsave('../writing/tangrams/figs/syntacticReduction.pdf', width = 8, height = 3, bg = 'transparent')
-```
-
-
-TODO: compare starting to ending proportions;
-
-### Broken out by tangram
-
-Broken out by tangrams for cued condition
-
-```{r}
-library(directlabels)
-
-lengthReduction <- tagged_df %>%
-   filter(taskVersion == "cued") %>%
-   group_by(gameid, repetitionNum, intendedName) %>%
-   summarize(individualM = sum(numRawWords)) %>%
-   group_by(repetitionNum, intendedName) %>%
-   tidyboot_mean(individualM) %>%
-   mutate(measure = '# words per tangram')
-
-ggplot(lengthReduction, aes(x = repetitionNum, y = empirical_stat ,group = intendedName)) +
-  geom_line() +
-  theme_few() +
-  geom_dl(aes(label = intendedName), method = list(dl.trans(x = x - .1), "first.points")) +
-  xlab("repetition #") +
-  ylab("mean # words") +
-  theme(aspect.ratio = 1)
-  
-ggsave('../writing/tangrams/figs/num_words_sequential.pdf')
-```
-
-Just noun broken out by tangram
-
-```{r}
-tagged_df %>% 
-  filter(taskVersion == 'cued') %>%
-  mutate(numNPWords = ifelse(noun_chunks == "[]", 0, str_count(noun_chunks, "\\S+"))) %>%
-  group_by(gameid, repetitionNum, intendedName) %>% 
-  summarize(NOUN = sum(NOUNcount)) %>%
-  group_by(repetitionNum, intendedName) %>%
-  tidyboot_mean(NOUN) %>%
-  ggplot(aes(x = repetitionNum, y = empirical_stat, group = intendedName)) +
-    geom_line() +
-    theme_few() +
-    # geom_ribbon(aes(ymax = ci_upper, ymin = ci_lower), alpha = .2) +
-    geom_dl(aes(label = intendedName), method = list(dl.trans(x = x - .1), "first.points")) +
-    xlab("repetition #") +
-    ylab("# nouns per description") +
-    theme(aspect.ratio = 1)
-```
-
-Same thing broken out by tangram
-
-```{r}
-tagged_df %>%
-  filter(taskVersion == 'cued') %>%
-  select(gameid, intendedName, repetitionNum, SBAR, CC, PP) %>%
-  gather(measure, occurrence, SBAR:PP) %>%
-  group_by(repetitionNum, intendedName, gameid, measure) %>%
-  summarize(m = mean(occurrence)) %>%
-  group_by(intendedName, repetitionNum, measure) %>%
-  tidyboot_mean(m) %>%
-  ggplot(aes(x = repetitionNum, y = empirical_stat, group = intendedName)) +
-    geom_line() +
-    xlab('round #') +
-    ylab('% of messages containing syntactic feature') +
-    #geom_errorbar(aes(ymax = ci_upper, ymin = ci_lower), width = .1) +
-    facet_wrap(~ measure, nrow = 1, ncol = 3) +
-    ylim(c(0, NA)) +
-    theme_few(9) +
-    theme(aspect.ratio = .75)
-```
-
-un-normalized POS breakdown
-
-```{r}
-cum_pos.d <- tagged_df %>%
-  group_by(repetitionNum) %>%
-  summarize(numWords = sum(numWords),
-            numMessages = length(gameid),
-            nouns = sum(NOUNcount),
-            verbs = sum(VERBcount),
-            dets= sum(DETcount),
-            pronouns = sum(PRONcount),
-            preps = sum(ADPcount),
-            adverbs = sum(ADVcount),
-            conjunctions = sum(CCONJcount),
-            adjectives = sum(ADJcount)) %>%
-  mutate(OTHER = (numWords - nouns - verbs - dets - pronouns -
-                      preps - adjectives - conjunctions - adverbs)) %>%
-  gather(POS, total, nouns:OTHER) %>%
-  mutate(total = total/numMessages) %>% # normalize to # / message
-  mutate(POS = factor(POS, levels = c('nouns', 'verbs',  'preps', 'dets', 
-                                      'adjectives', 'adverbs', 'pronouns', 'conjunctions', 'OTHER'))) %>%
-  select(repetitionNum, POS, total) 
-
-ggplot(cum_pos.d, aes(x = repetitionNum, y = total, fill = POS)) +
-    geom_area(alpha=0.6 , size=.5) +
-    geom_text(data=cum_pos.d %>% 
-                filter(repetitionNum == 1) %>%
-                arrange(POS) %>%
-                mutate(cum = rev(cumsum(rev(total)))), 
-              aes(x=1, y=cum-.5, label=POS),
-              hjust = 0, size=7) +
-    scale_fill_brewer(palette = "Set1") +
-    guides(fill = FALSE) +
-  theme_few()
-
-ggsave('../writing/tangrams/figs/wordReduction_by_POS.png', bg = 'transparent')
 ```
 

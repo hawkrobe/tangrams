@@ -1,0 +1,403 @@
+---
+title: "Additional analysis not included in paper"
+output: html_notebook
+---
+
+```{r}
+library(gganimate)
+```
+
+# Section 4
+
+```{r}
+M_mat = read_csv('../outputs/meta_tangrams_embeddings.csv', col_types = "nccnlc", na = c('[nan]')) %>%
+  mutate(feature_ind = X1 + 1, # Have to correct for R's (stupid) 1-indexing...
+         gameID = gameid,
+         target = intendedName,
+         repetition = as.numeric(repetitionNum)) #%>% 
+F_mat <- np$load('../outputs/feats_tangrams_embeddings_rawavg.npy')
+```
+
+## Vizualize raw data of similarity distributions
+
+```{r}
+true_lmer.within <- make_within_df(M_mat, F_mat, 'cosine') %>% filter(rep2 == rep1 + 1) %>% ungroup()
+
+true_lmer.within %>% 
+  unite('repdiff', rep1, rep2, sep = '->') %>%
+  group_by(repdiff) %>%
+  mutate(group_mean = mean(sim, na.rm = T)) %>%
+  ggplot(aes(x = repdiff, y = sim)) +
+    geom_boxplot() +#width = .1, outlier.size=0
+    scale_x_discrete(labels = c('(1,1)','(1,2)', '(1,3)', '(1,4)', '(1,5)' ,'(1,6)','(1,7)')) +
+    ylim(0, 1) +
+    ylab('cosine similarity') +
+    ggtitle('convergence within game') +
+    theme_few() +
+    xlab('repetition pair') +
+    guides(color = F, fill = F) +
+    theme(aspect.ratio = 1, legend.position = c(0.5, 0.8), text = element_text(size=18), 
+          element_line(size=1), element_rect(size=2, color="#00000"))
+ggsave('../writing/figs/stability_boxplot.pdf', height = 10, width = 10, units = 'cm', useDingbats = F)
+```
+
+```{r}
+true_lmer.across <- M_mat %>% 
+   group_by(target, repetition) %>%  
+   do(flatten_sim_matrix(get_sim_matrix(., F_mat, method = 'cosine'), .$gameID)) %>% 
+  ungroup() %>%
+  mutate(target = factor(target))
+
+true_lmer.across %>%
+  ggplot(aes(x = factor(repetition), y = sim)) +
+    geom_boxplot() +#width = .1, outlier.size=0
+    scale_x_discrete(labels = c('(1,1)','(1,2)', '(1,3)', '(1,4)', '(1,5)' ,'(1,6)','(1,7)')) +
+    ylim(0, 1) +
+    ylab('cosine similarity') +
+    ggtitle('convergence within game') +
+    theme_few() +
+    xlab('repetition pair') +
+    guides(color = F, fill = F) +
+    theme(aspect.ratio = 1, legend.position = c(0.5, 0.8), text = element_text(size=18), 
+          element_line(size=1), element_rect(size=2, color="#00000"))
+ggsave('../writing/figs/divergence_boxplot.pdf', height = 10, width = 10, units = 'cm', useDingbats = F)
+
+```
+
+## Look at drift from initial vector
+
+```{r}
+permuted.drift <- compute_permuted_estimates(M_mat, F_mat, 'drift', 100)
+cat('CI for drift analysis=', sort(permuted.drift)[2], sort(permuted.drift)[98])
+
+true_lmer.drift <- make_within_df(M_mat, F_mat, 'cosine') %>% filter(rep1 == 1) %>% ungroup()
+true_lmer.drift.out <- lmer(sim ~ poly(rep2,2) + (1 + poly(rep2, 2)  | gameID) + (1 + poly(rep2, 2)| target), data = true_lmer.drift)
+cat('true for drift analysis=', (tidy(true_lmer.drift.out, effects = 'fixed') %>% filter(term == 'poly(rep2, 2)1'))$estimate)
+summary(true_lmer.drift.out)
+```
+
+```{r}
+true_lmer.drift %>% 
+  unite('repdiff', rep1, rep2, sep = '->') %>%
+  bind_rows(data.frame(repdiff ='1->1', sim = 1)) %>%
+  group_by(repdiff) %>%
+  mutate(group_mean = mean(sim, na.rm = T)) %>%
+  ggplot(aes(x = repdiff, y = sim)) +
+    geom_boxplot() +#width = .1, outlier.size=0
+    scale_x_discrete(labels = c('(1,1)','(1,2)', '(1,3)', '(1,4)', '(1,5)' ,'(1,6)','(1,7)')) +
+    ylim(0, 1) +
+    ylab('cosine similarity') +
+    ggtitle('drift from initial within game') +
+    theme_few() +
+    xlab('repetition pair') +
+    guides(color = F, fill = F) +
+    theme(aspect.ratio = 1, legend.position = c(0.5, 0.8), text = element_text(size=18), 
+          element_line(size=1), element_rect(size=2, color="#00000"))
+
+ggsave('../writing/figs/drift_boxplot.pdf', height = 10, width = 10, units = 'cm', useDingbats = F)
+```
+
+```{r}
+empirical_baselines.drift <- combine_empirical_and_baselines(M_mat, F_mat, 'drift', 10) %>%
+    bind_rows(data.frame(IV ='1->1', empirical_stat=1, ci_lower=1, 
+                         ci_upper=1, sample_id='empirical')) %>%
+    bind_rows(compute_across_similarity(M_mat, F_mat, 'baseline', 'cosine') %>%
+                filter(IV == 1) %>% select(-n, -mean) %>%
+                mutate(IV = '1->1')) 
+
+empirical_baselines.drift %>%
+  mutate(sample_id = fct_relevel(sample_id, 'empirical', 'baseline')) %>%
+  ggplot(aes(x = IV, y = empirical_stat, color = sample_id, linetype = sample_id, group = sample_id)) +
+    geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), width = 0) + 
+    geom_line()  +
+    scale_x_discrete(labels = c('(1,1)','(1,2)', '(1,3)', '(1,4)', '(1,5)' ,'(1,6)','(1,7)')) +
+    ylim(0.4, 1) +
+    ylab('cosine similarity') +
+    ggtitle('drift from initial within game') +
+    theme_few() +
+    xlab('repetition pair') +
+    guides(color = F, fill = F) +
+    theme(aspect.ratio = 1, legend.position = c(0.8, 0.8), text = element_text(size=18), 
+          element_line(size=1), element_rect(size=2, color="#00000"))
+
+ggsave('../writing/figs/drift_mean.pdf', height = 10, width = 10, units = 'cm', useDingbats = F)
+
+```
+
+## make a tsne animation
+
+```{r}
+p <- ggplot(tsne %>% filter(repetitionNum %in% c(1,6)) %>% group_by(gameid, intendedName) %>% filter(length(gameid) == 2), aes(x = x_tsne, y = y_tsne, group = interaction(gameid,intendedName))) +
+  #geom_line(alpha = 0.2) +
+  geom_point(aes(#shape = factor(-repetitionNum),
+                 color = finalTheta,
+                 alpha = 1
+    ),
+             size = 1.5, stroke = 2
+             ) +
+  facet_wrap(~ intendedName) +
+  theme_few(20) +
+  ggtitle('pca + tsne embeddings') +
+  scale_shape_manual(values = c(21)) +
+  scale_alpha_continuous(range = c(0.5, 1))+
+  scale_color_gradientn(colours = viridis(5))+
+  guides(color = F, shape = F, alpha = F) +
+  theme(aspect.ratio = 1)  +
+  labs(title = "Rep. {floor(frame_time)}", x = "", y = "") +
+  theme(axis.title=element_blank(),
+      axis.text=element_blank(),
+      axis.ticks=element_blank()) +
+  transition_time(as.numeric(repetitionNum)) # speed it up!
+
+   
+animate(p, nframes = 50)
+anim_save(filename = '../writing/tangrams/figs/tsne-animation.gif')
+```
+
+# Section 3
+
+## Compare cleaned vs. uncleaned on basic measures
+
+```{r}
+read_csv('../data/tangramsSequential_nocleaning.csv') %>%
+   group_by(gameid, repetitionNum) %>% #taskVersion
+  filter(role != 'matcher') %>%
+   summarize(numRawWords = sum(numRawWords)/12) %>%
+    group_by(repetitionNum) %>%
+   tidyboot_mean(numRawWords, na.rm = T) 
+```
+
+```{r}
+read_csv('../data/tangramsSequential_collapsed.csv') %>%
+   group_by(repetitionNum) %>% #taskVersion
+   tidyboot_mean(numRawWords, na.rm = T) 
+```
+
+## What proportion of messages sent by director vs. matcher, respectively?
+
+At beginning, directors send about 60% of total messages (close to equal!) At end, they send 80% -- listeners stop talking as much. This is just another way of looking at the total number of listener messages dropping.
+
+```{r}
+tangramCombined %>% 
+  group_by(gameid, repetitionNum, role) %>% 
+  summarize(individualM = n()) %>% 
+  ungroup() %>%
+  complete(role, repetitionNum, gameid, fill = list(individualM = 0)) %>% 
+  spread(role, individualM) %>% 
+  mutate(ratio = director / (director + matcher)) %>%
+   group_by(repetitionNum) %>% 
+   summarize(m = mean(ratio), 
+             se = sd(ratio)/sqrt(length(ratio))) %>%
+ggplot(aes(x = repetitionNum, y = m)) +
+  geom_line() +
+  geom_errorbar(aes(ymax = m + se, ymin = m - se), width = .1) +
+  ylab("% of total messages sent by director") +
+  xlab("trials") +
+  ylim(.5,1) +
+  xlim(0, 7) +
+  theme_bw() 
+```
+
+## Look at pmi across POS...
+
+```{r}
+pos_d <- read.csv("sequential_matchAndPMI.csv", header = TRUE) %>%
+  filter(pmi > 0) %>%
+  mutate(POS = as.character(POS)) %>%
+  mutate(POS = ifelse(POS %in% c('NN', 'NNS', 'NNP', 'NNPS'), "noun", POS)) %>%
+  mutate(POS = ifelse(POS %in% c('MD', 'VB', 'VBZ', 'VBP', 'VBD', 'VBN', 'VBG'), "verb", POS)) %>%
+  mutate(POS = ifelse(POS %in% c('DT', 'WDT'), 'det', POS)) %>%
+  mutate(POS = ifelse(POS %in% c('PRP', 'PRP$', 'WP', 'WP$'), 'pronoun', POS)) %>%
+  mutate(POS = ifelse(POS %in% c('CC'), 'conjunction', POS)) %>%
+  mutate(POS = ifelse(POS %in% c('JJ', 'JJR', 'JJS'), 'adjective', POS)) %>%
+  mutate(POS = ifelse(POS == 'IN', 'preposition', POS)) %>%
+  mutate(POS = ifelse(POS %in% c('noun', 'verb', 'det', 'pronoun', 'conjunction', 'adjective', 'preposition'), POS, 'other')) %>%
+  group_by(POS) %>%
+  summarize(se = sd(pmi)/sqrt(length(pmi)),
+            mean_pmi = mean(pmi),
+            num = sum(total),
+            mean_match = mean(match)) %>%
+  filter(num > 200)
+cbbPalette <- c("#000000", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
+
+ggplot(pos_d %>% filter(POS != 'other'), aes(x = reorder(POS,mean_pmi,
+                     function(x)-x), y = mean_pmi)) +
+  geom_bar(stat='identity') +
+  geom_errorbar(aes(ymax = mean_pmi + se, ymin = mean_pmi - se)) +
+  theme_few() +
+  xlab("part of speech") +
+  ylab("pointwise mutual information")
+```
+
+## Visualize word frequencies on final round...
+
+```{r}
+library(wordcloud)   
+
+textPerGram = read_csv('../data/tangrams.csv') %>% 
+  filter(role == "director" & taskVersion == 'cued') %>%
+  filter(repetitionNum %in% c(1,6)) %>%
+  group_by(repetitionNum, intendedName) %>%
+  # summarize(a = paste(contents, collapse = " ")) %>%
+  summarize(text = paste(contents, collapse = " ")) %>%
+  rename(docs = intendedName) %>%
+  mutate(docs = paste("doc ", docs))
+
+corpus = Corpus(VectorSource(textPerGram$text))
+corpus <- tm_map(corpus, removePunctuation)
+corpus <- tm_map(corpus, removeNumbers)
+#corpus <- tm_map(corpus, removeWords, stopwords('english'))
+
+dtm = DocumentTermMatrix(corpus)
+
+numDocs = dim(dtm)[1]
+numTerms = dim(dtm)[2]
+  
+for(i in 1:numDocs) {
+  round = ifelse(floor((i-1) / 12) < 1, 'first', 'last')
+  print(round)
+  tangramNum = ((i-1) %% 12) + 1
+  print(tangramNum)
+  pdf(paste("../writing/tangrams/figs/wordclouds/wordcloudForTangram", tangramNum, "on", round ,"Round.pdf", sep = ""), 
+      bg = "transparent")
+  freq <- sort(colSums(as.matrix(dtm[i,])), decreasing=TRUE)
+  # print(entropy(freq))
+   wordcloud(names(freq), freq, min.freq = 1, colors=brewer.pal(6, "Dark2"))   
+  dev.off()
+}
+```
+
+Unused analysis of whether talking more at beginning leads to bigger reduction (but abandoned b/c duh talking more at the beginning means there's more words to reduce from, so this doesn't say much...)
+
+```{r}
+turnTaking <- listenerMsgs %>%
+  filter(repetitionNum %in% c(1,2,3,4,5)) %>%
+  group_by(gameid) %>%
+  summarize(numListenerMsgs = sum(matcher)) %>%
+  ungroup() %>%
+  select(gameid, numListenerMsgs)#taskVersion
+
+efficiency <- message_df %>%
+  filter(role == "director") %>%
+  group_by(gameid, repetitionNum) %>%  #taskVersion
+  summarize(individualM = sum(numRawWords, na.rm = T)) %>%
+  rowwise() %>%
+  mutate(id = row_number()) %>%
+  mutate(repetitionNum = paste0('round', repetitionNum, collapse = '')) %>%
+  spread(repetitionNum, individualM) %>%
+  mutate(diffPct = (round1 - round6)/round1) %>%
+  filter(diffPct >= 0) %>% # Filter out handful of people who skipped first round...
+  select(gameid, diffPct, round1,round6) #taskVersion
+
+qplot(log1p(efficiency$round6))
+qplot(log1p(turnTaking$numListenerMsgs))
+```
+
+```{r}
+turnTakingEfficiencyPlot <- ggplot(turnTaking %>% left_join(efficiency), 
+                                   aes(x = log1p(numListenerMsgs), y = log1p(round6))) +
+  geom_point() +
+  geom_smooth(method = 'lm') +
+  theme_bw(9) +
+  ylab("% reduction") +
+  xlab("log # listener messages on 1st round")
+turnTakingEfficiencyPlot
+```
+
+```{r}
+cor.test(x = log1p((efficiency %>% left_join(turnTaking))$round6), log1p((efficiency %>% left_join(turnTaking))$numListenerMsgs))
+
+summary(lmer(log1p(round6) ~ log1p(numListenerMsgs) + (1|gameid), data = efficiency %>% left_join(turnTaking)))
+
+turnTakingdf <- turnTakingEfficiency_lm$df[2]
+turnTakingCoefs <- turnTakingEfficiency_lm$coefficients[2,]
+turnTakingResult <- paste0("b = ", round(turnTakingCoefs[1],2),
+                           ", t(", turnTakingdf, ") = ", round(turnTakingCoefs[3],2), 
+                           ", p = ", round(turnTakingCoefs[4],2))
+turnTakingResult
+turnTakingEfficiencyPlot
+```
+
+
+### Broken out by tangram
+
+Broken out by tangrams for cued condition
+
+```{r}
+library(directlabels)
+
+lengthReduction <- tagged_df %>%
+   filter(taskVersion == "cued") %>%
+   group_by(gameid, repetitionNum, intendedName) %>%
+   summarize(individualM = sum(numRawWords)) %>%
+   group_by(repetitionNum, intendedName) %>%
+   tidyboot_mean(individualM) %>%
+   mutate(measure = '# words per tangram')
+
+ggplot(lengthReduction, aes(x = repetitionNum, y = empirical_stat ,group = intendedName)) +
+  geom_line() +
+  theme_few() +
+  geom_dl(aes(label = intendedName), method = list(dl.trans(x = x - .1), "first.points")) +
+  xlab("repetition #") +
+  ylab("mean # words") +
+  theme(aspect.ratio = 1)
+  
+ggsave('../writing/figs/num_words_sequential.pdf')
+```
+
+Just noun broken out by tangram
+
+```{r}
+tagged_df %>% 
+  mutate(numNPWords = ifelse(noun_chunks == "[]", 0, str_count(noun_chunks, "\\S+"))) %>%
+  group_by(gameid, repetitionNum, intendedName) %>% 
+  summarize(NOUN = sum(NOUNcount)) %>%
+  group_by(repetitionNum, intendedName) %>%
+  tidyboot_mean(NOUN) %>%
+  ggplot(aes(x = repetitionNum, y = empirical_stat, group = intendedName)) +
+    geom_line() +
+    theme_few() +
+    geom_dl(aes(label = intendedName), method = list(dl.trans(x = x - .1), "first.points")) +
+    xlab("repetition #") +
+    ylab("# nouns per description") +
+    theme(aspect.ratio = 1)
+```
+
+
+un-normalized POS breakdown
+
+```{r}
+cum_pos.d <- tagged_df %>%
+  group_by(repetitionNum) %>%
+  summarize(numWords = sum(numWords),
+            numMessages = length(gameid),
+            nouns = sum(NOUNcount),
+            verbs = sum(VERBcount),
+            dets= sum(DETcount),
+            pronouns = sum(PRONcount),
+            preps = sum(ADPcount),
+            adverbs = sum(ADVcount),
+            conjunctions = sum(CCONJcount),
+            adjectives = sum(ADJcount)) %>%
+  mutate(OTHER = (numWords - nouns - verbs - dets - pronouns -
+                      preps - adjectives - conjunctions - adverbs)) %>%
+  gather(POS, total, nouns:OTHER) %>%
+  mutate(total = total/numMessages) %>% # normalize to # / message
+  mutate(POS = factor(POS, levels = c('nouns', 'verbs',  'preps', 'dets', 
+                                      'adjectives', 'adverbs', 'pronouns', 'conjunctions', 'OTHER'))) %>%
+  select(repetitionNum, POS, total) 
+
+ggplot(cum_pos.d, aes(x = repetitionNum, y = total, fill = POS)) +
+    geom_area(alpha=0.6 , size=.5) +
+    geom_text(data=cum_pos.d %>% 
+                filter(repetitionNum == 1) %>%
+                arrange(POS) %>%
+                mutate(cum = rev(cumsum(rev(total)))), 
+              aes(x=1, y=cum-.5, label=POS),
+              hjust = 0, size=7) +
+    scale_fill_brewer(palette = "Set1") +
+    guides(fill = FALSE) +
+  theme_few()
+
+ggsave('../writing/figs/wordReduction_by_POS.png', bg = 'transparent')
+```

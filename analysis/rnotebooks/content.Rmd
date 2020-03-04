@@ -22,7 +22,7 @@ library(xtable)
 library(entropy)
 library(useful)
 library(viridis)
-library(broom)
+library(broom.mixed)
 library(gganimate)
 library(modeest)
 
@@ -44,26 +44,33 @@ d <- read_csv('../../data/tangramsSequential_collapsed.csv', col_types = 'ciicci
 ## Section 4.1: Initially distinctive words are more likely to conventionalize
 
 ```{r}
-distinctiveness_d <- read.csv("../outputs/PMI.csv", header = TRUE) %>%
+distinctiveness_d_raw <- read.csv("../outputs/PMI.csv", header = TRUE) %>%
   mutate(finalRoundMatch = ifelse(finalRoundMatch == 'True', 1, 0)) %>%
   filter(!is.na(tf.idf)) %>% 
-  mutate(num_tangrams_occurred_with =  round(1 / ((2^tf.idf) /12))) 
+  mutate(num_tangrams_occurred_with = ifelse(tf.idf == 0, 0, round(1 / ((2^tf.idf) /12))) )
+
+# exclude words that didn't appear on first round
+distinctiveness_d <- distinctiveness_d_raw %>%
+  filter(num_tangrams_occurred_with > 0 )
 ```
 
-look at how often final round occurred on early round
+look at how often final round occurred on early round (noted in main text)
 
 ```{r}
-distinctiveness_d %>% 
-  mutate(didNotOccurOnFirstRound = num_tangrams_occurred_with == 0) %>% 
-  group_by(finalRoundMatch, didNotOccurOnFirstRound) %>% 
-  tally()
+distinctiveness_d_raw %>% 
+  mutate(occuredOnFirstRound = num_tangrams_occurred_with > 0) %>% 
+  group_by(finalRoundMatch, occuredOnFirstRound) %>% 
+  tally() %>%
+  filter(finalRoundMatch == 1) %>%
+  spread(occuredOnFirstRound,n) %>%
+  mutate(proportionOfMatchesInInitialRound = `TRUE`/(`TRUE`+`FALSE`)) %>%
+  pull(proportionOfMatchesInInitialRound)
 ```
 
 stats
 
 ```{r}
 distinctiveness_d %>% 
-  filter(num_tangrams_occurred_with > 0 ) %>%
   glmer(finalRoundMatch ~ num_tangrams_occurred_with + 
             (1 + num_tangrams_occurred_with | intendedName) + 
             (1 + num_tangrams_occurred_with | gameid), 
@@ -75,9 +82,8 @@ distinctiveness_d %>%
 
 ```{r}
 distinctiveness_d %>%
-  filter(num_tangrams_occurred_with > 0) %>%
   group_by(num_tangrams_occurred_with) %>%
-  tidyboot_mean(finalRoundMatch) %>%
+  tidyboot_mean(finalRoundMatch,nboot = 1000) %>%
   rename(sample_size = n) %>%
   ggplot(aes(x = as.integer(num_tangrams_occurred_with), y =empirical_stat)) +
     geom_point(aes(size = sample_size), stat = 'identity') +
@@ -101,7 +107,7 @@ Then we can take the highest PMI word (or words) for each tangram/gameid pair an
 We see that it's much higher than expected under the null.
 
 ```{r}
-nonparametric_ds = seq_len(1000) %>%
+nonparametric_ds = seq_len(10) %>%
   map_dbl(~ { distinctiveness_d %>%
     group_by(intendedName, gameid) %>%
     sample_n(1) %>%
@@ -109,7 +115,7 @@ nonparametric_ds = seq_len(1000) %>%
       summarize(m = mean(finalRoundMatch)) %>%
       pull(m)})
     
-highest <- seq_len(1000) %>%
+highest <- seq_len(10) %>%
   map_dbl(~ { distinctiveness_d %>%
     group_by(intendedName, gameid) %>%
     filter(num_tangrams_occurred_with == min(num_tangrams_occurred_with)) %>%
@@ -125,8 +131,10 @@ cat('range for highest=', sort(highest)[1], sort(highest)[1000])
 ## Section 4.2: Semantic meaning diverges across pairs and stabilizes within pairs
 
 ```{r}
-M_mat = read_csv('../outputs/meta_tangrams_embeddings.csv', col_types = "nccnlc", na = c('[nan]')) %>%
-  mutate(feature_ind = X1 + 1, # need to correct for R's (terrible) 1-indexing...
+M_mat = read_csv('../outputs/meta_tangrams_embeddings.csv', 
+                 col_types = "nccnlc", na = c('[nan]')) %>%
+  # need to correct for R's (terrible) 1-indexing...
+  mutate(feature_ind = X1 + 1, 
          gameID = gameid,
          target = intendedName,
          repetition = as.numeric(repetitionNum)) #%>% 
@@ -140,7 +148,7 @@ combined.df <- compute_within_vs_across(M_mat, F_mat)
 
 true_dprime = dprime(combined.df)
 
-permuted_dprimes <- seq_len(1000) %>%
+permuted_dprimes <- seq_len(10) %>%
   map_dbl(~ dprime(combined.df %>% mutate(source = sample(source))))
 
 cat('CI for permuted=', sort(permuted_dprimes)[25], sort(permuted_dprimes)[975])
@@ -149,11 +157,11 @@ cat('true=', true_dprime)
 combined.df %>%
   ggplot(aes(x = empirical_stat, fill = source)) +
     geom_density(adjust = 1.5, alpha = .5) +
-    #facet_wrap(~ target) +
     xlab('pairwise cosine similarity') +
     theme_few()
 
-ggsave('../../writing/figs/across_vs_within.pdf',  height = 7, width = 10, units = 'cm', useDingbats = F)
+ggsave('../../writing/figs/across_vs_within.pdf',  
+       height = 7, width = 10, units = 'cm', useDingbats = F)
 ```
 
 ### Utterances become increasingly consistent within interaction
@@ -167,8 +175,10 @@ true_lmer.within <- make_within_df(M_mat, F_mat, 'cosine') %>%
 
 true_lmer.within.out <- true_lmer.within %>%
   lmer(sim ~ poly(rep1, 2) + 
-         (1 + poly(rep1, 2) | gameID) + 
-         (1 + poly(rep1, 2) | target), 
+         (1 + poly(rep1, 1) | gameID) + 
+         (1 + poly(rep1, 1) | target), 
+       control = lmerControl(optimizer ='optimx', 
+                             optCtrl=list(method='nlminb')),  
        data = .)
 
 summary(true_lmer.within.out)
@@ -177,19 +187,17 @@ cat('true for within analysis=',
     tidy(true_lmer.within.out, effects = 'fixed') %>% 
        filter(term == 'poly(rep1, 2)1') %>%
        pull(estimate))
-
-permuted.within <- compute_permuted_estimates(M_mat, F_mat, 'within', 100)
-cat('CI for within analysis=', sort(permuted.within)[2], sort(permuted.within)[98])
 ```
 
 Viz
 
 ```{r}
-combined.within <- combine_empirical_and_baselines(M_mat, F_mat, 'within', 2)
+true_lmer.within.toplot <- true_lmer.within %>%
+  group_by(rep1) %>%
+  tidyboot_mean(sim, na.rm=T)
 
-combined.within %>%
-  mutate(sample_id = fct_relevel(sample_id, 'empirical', 'baseline')) %>%
-  ggplot(aes(x = IV, y = empirical_stat, color = sample_id, linetype = sample_id, group = sample_id)) +
+true_lmer.within.toplot %>%
+  ggplot(aes(x = as.character(rep1), y = empirical_stat, group = 1)) +
     geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), width = 0) + 
     geom_line()  +
     scale_x_discrete(labels = c('(1,2)','(2,3)', '(3,4)', '(4,5)', '(5,6)' )) +
@@ -202,7 +210,8 @@ combined.within %>%
     theme(aspect.ratio = 1, legend.position = c(0.6, 0.5), text = element_text(size=18), 
           element_line(size=1), element_rect(size=2, color="#00000"))
 
-ggsave('../../writing/figs/stability_mean.pdf', height = 10, width = 10, units = 'cm', useDingbats = F)
+ggsave('../../writing/figs/stability_mean.pdf', 
+       height = 10, width = 10, units = 'cm', useDingbats = F)
 ```
 
 ### Utterances become increasingly different across interactions
@@ -224,19 +233,15 @@ true_lmer.across.out <- true_lmer.across %>%
 
 summary(true_lmer.across.out)
 cat('true for within analysis=', (tidy(true_lmer.across.out, effects = 'fixed') %>% filter(term == 'poly(repetition, 2)1'))$estimate)
-
-permuted.across <- compute_permuted_estimates(M_mat, F_mat, 'across', 100)
-cat('CI for within analysis=', sort(permuted.across)[2], sort(permuted.across)[99])
 ```
 
 Viz 
 
 ```{r}
-combined.across <- combine_empirical_and_baselines(M_mat, F_mat, 'across', 100)
-combined.across %>%
-  mutate(sample_id = fct_relevel(sample_id, 'empirical', 'baseline')) %>%
-ggplot(aes(x = IV, y = empirical_stat, 
-           fill = sample_id, color = sample_id, linetype = sample_id, group = sample_id)) +
+true_lmer.within %>%
+  group_by(rep1) %>%
+  tidyboot_mean(sim, na.rm=T) %>%
+  ggplot(aes(x = IV, y = empirical_stat)) +
     geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), width = 0) +
     geom_line()  +
     scale_x_continuous(breaks = c(1,2,3,4,5,6), labels = c(1,2,3,4,5,6)) +

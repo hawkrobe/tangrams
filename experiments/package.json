@@ -1,12 +1,10 @@
 {
-  "name": "couzin_replication",
-  "description": "Unofficial fork of MWERT, adapted to replicate sensing experiment",
-  "version": "0.0.0",
+  "name": "tangrams",
+  "description": "Unofficial fork of MWERT, adapted for tangrams experiment",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "color-convert": "~1.0.0",
     "csv-parse": "~0.0.6",
-    "delta-e": "~0.0.7",
     "express": "^4.17.1",
     "jsonfile": "~2.4.0",
     "node-uuid": "1.4.1",

@@ -1,7 +1,5 @@
 var _ = require('underscore');
 var fs = require('fs');
-var converter = require("color-convert");
-var DeltaE = require('../node_modules/delta-e');
 
 var UUID = function() {
   var baseName = (Math.floor(Math.random() * 10) + '' +
@@ -31,9 +29,6 @@ var establishStream = function(game, streamName, outputFileName, header) {
   game.streams[streamName] = stream;
 };
 
-var hsl2lab = function(hsl) {
-  return converter.hsl.lab(hsl);
-};
 
 function fillArray(value, len) {
   var arr = [];
@@ -109,14 +104,6 @@ var randomPoint = function(options) {
     y: _.sample(yRange)
   }
 }
-
-var colorDiff = function(color1, color2) {
-  var subLAB = _.object(['L', 'A', 'B'], hsl2lab(color1));
-  var tarLAB = _.object(['L', 'A', 'B'], hsl2lab(color2));
-  var diff = Math.round(DeltaE.getDeltaE00(subLAB, tarLAB));
-  return diff;
-};
-
 
 // --- below added by jefan March 2017
 // extracts all the values of the javascript dictionary by key

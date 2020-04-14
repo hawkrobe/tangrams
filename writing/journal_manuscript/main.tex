@@ -256,7 +256,7 @@ We used a three step pre-processing pipeline to prepare this corpus for subseque
 \label{sec:structure}
 
 Our first set of analyses examines how the structure of participants' utterances changes over the course of our experiment.
-We begin with the observation that the mean number of words used by directors for each tangram decreases strongly over time (see Fig. \ref{fig:feedback}A).\footnote{A similar reduction curve was found in our  ``free matching'' pilot version of the task, though it required more words overall. Participants needed to additionally mention which tangram they were referring to (i.e. ``number 3 is the \dots``).}
+We begin with the observation that the mean number of words used by directors for each tangram decreases strongly over time (see Fig. \ref{fig:feedback}A).\footnote{A similar reduction curve was found in the  ``free matching'' version of the task, though it required more words overall. Participants needed to additionally mention the spatial location where the tangram needed to be moved (i.e. ``number 3 is the \dots``).}
 This result replicates a highly reliable reduction effect found throughout the literature on repeated reference games \citep[e.g.][]{KraussWeinheimer64_ReferencePhrases,BrennanClark96_ConceptualPactsConversation}, though participants in our task used fewer words overall than reported by \cite{ClarkWilkesGibbs86_ReferringCollaborative}.
 This difference is likely due to the text-based (vs.~spoken) interface.
 The following analyses break down this general gain in efficiency into a finer-grained set of phenomena concerning the \emph{structure} of referring expressions over time.
@@ -267,7 +267,7 @@ What sequence of transformations do descriptions undergo over the course of repe
 \begin{figure}[t]
 \centering
 \includegraphics[scale=.64]{listenerFeedback_combined.pdf}
-\caption{(A) Directors use fewer words per tangram over time, (B) matchers are less likely to send a message over time, and (C) directors are sensitive to feedback from the matcher's selection, modulating the reduction in message length on the subsequent repetition of a tangram after an error is made.}
+\caption{(A) Directors use fewer words per tangram over time, (B) matchers are less likely to send messages over time, and (C) directors are sensitive to feedback from the matcher's selection, modulating the reduction in message length on the subsequent repetition of a tangram after an error is made.}
 \label{fig:feedback}
 \end{figure}
 
@@ -284,24 +284,26 @@ We predicted that the matcher's use of backchannel feedback should be highest on
 To test this prediction, we coded whether the matcher sent a message or not on each trial and fit a mixed-effects logistic regression model with a fixed effect of repetition, random intercepts and slopes for each pair of participants, and a random intercept for each target.
 We found that the probability of the matcher sending a message decreased significantly over the game $(b=-0.84, t = -9.1, p < 0.001$).
 While usage of the backchannel in our online text-based task was less frequent overall than reported in previous verbal lab experiments, we nonetheless strongly replicated the overall trend.
-In aggregate, 75\% of matchers responded with at least one message in the first repetition block, but only 4\% sent a message in the last block (see Fig. \ref{fig:feedback}B).
+In aggregate, 75\% of matchers responded with at least one message over the twelve trials in the first repetition block, but only 4\% sent a message in the last block (see Fig. \ref{fig:feedback}B).
 These messages were frequently questions: as a lower bound, we observed that 49\% of matcher messages explicitly contained question marks (e.g. ``is it standing?'')
-Other messages simply echoed the director's label or suggested alternative labels\footnote{We also pre-registered an analysis examining whether a higher proportion of listener messages on early rounds would lead to greater overall reduction, due to reaching a stronger consensus, but later realized that this analysis was confounded; when listeners sent more messages on early rounds, the speaker produced more words in response, which led by definition to greater reduction from this higher initial verbosity.}.
+Other messages simply echoed the director's label or suggested alternative labels\footnote{We also pre-registered an analysis examining whether a higher rate of listener messages on early rounds would lead to greater overall reduction in speaker descriptions, but later realized that this analysis was confounded. When listeners send more messages on early rounds, the speaker produced more words in response, which led by definition to greater reduction from this higher initial verbosity.}.
 
 Next, as an exploratory analysis, we examined the extent to which directors were sensitive to the ground-truth feedback that was provided at the end of each trial about which tangram the matcher actually \emph{selected}.
 If the matcher failed to select the correct target, the director may take this as evidence that their description was insufficient and attempt to provide more detail the next time they must refer to the same tangram.
 If the matcher is correct, on the other hand, the director may take this as evidence of understanding and reduce their level of detail when the tangram next appears.
-Note that ground-truth feedback provided the speaker distinct information from backchannel feedback within the trial: backchannel feedback did not guarantee a correct response, and matchers often made the correct response without replying at all\footnote{For example, errors were only slightly less likely on the first repetition when matchers engaged in dialogue through the chatbox (20\%) than when they stayed silent (23\%), although it is also likely that matchers were more likely to engage in dialogue on harder trials, preventing us from observing any counterfactual errors they would have made if they had not initiated dialogue.}.
+Note that ground-truth feedback provided the speaker distinct information from backchannel feedback within the trial: backchannel feedback did not guarantee a correct response, and matchers often made the correct response without sending any messages in response. 
+For example, errors on the first repetition block were only slightly less likely when matchers engaged in dialogue through the chatbox (20\%) than when they stayed silent (23\%; difference not significant, $\chi^2(1) = 0.56, p = 0.45$), although matchers may also have been more likely to initiate backchannel responses on more difficult trials.
+
 We tested the speaker's sensitivity to ground-truth feedback by comparing the proportional change in utterance length (i.e. $\log(n_{t}/n_{t-1})$) on the block after an error against the change after a correct response.
 This measure could be positive, indicating a net increase in utterance length, or negative, indicating a reduction.
 We fit a mixed-effects regression model predicting this measure with a categorical fixed effect of the matcher's response for the same at the previous repetition block (correct vs. incorrect) and a (centered) continuous effect of repetition block number, including maximum random effects at the speaker level.
-We found a significant main effect of feedback, controlling for block number: utterance length decreased more after correct responses than after incorrect responses, $b = -0.24, t = -6.1, p < 0.001$ (see Fig. \ref{fig:feedback}C).
+We found a significant main effect of feedback, controlling for block number: utterance length decreased more after correct responses than after incorrect responses, $b = -0.28, t = -7.2, p < 0.001$ (see Fig. \ref{fig:feedback}C).
 
 Although appearances of the same tangram were spaced out by block, it is still possible that this effect is not item-specific but the result of lower level attentional or affective mechanisms triggered in the aftermath of an error signal.
 To evaluate this possibility, we also measured the proportional change in utterance length on the following \emph{trial}, when feedback about the matcher's response would be freshest but the target tangram would be different.
 We then constructed a second regression model including categorical fixed effects of matcher response (correct vs. incorrect) and item-specificity (change measured relative to previous trial vs. previous repetition block), as well as their interaction, with no random effects.
 We found a significant cross-over interaction, $b = -0.32, t = -6.2, p <0.001$.\footnote{We report the results of a traditional linear regression model because even the most minimal random effect structure encountered singularity issues during optimization. Because matcher errors were relatively infrequent, these singularities were likely caused by an asymmetry in cell size between the correct and incorrect levels of the matcher response variable. However, when we fit a Bayesian regression with maximal random effects, using the default priors implemented by the \texttt{brms} package to prevent variances from collapsing to boundary values, we found a nearly identical estimate of the interaction coefficient, $b = -0.31$, 95\% credible interval: $[-0.42, -0.19]$.}
-The sensitivity to feedback we observed on the subsequent repetition block is not present on the subsequent trial: speakers are equally likely to use more or less words immediately after a correct response, and actually use fewer words after an \emph{incorrect} response due to a regression to the mean: statistically, more words than average are used for harder tangrams.
+The sensitivity to feedback we observed on the subsequent repetition block is not present on the subsequent trial: speakers are equally likely to use more or less words immediately after a correct response, and actually use slightly fewer words on the trial immediately after an \emph{incorrect} response due to a regression to the mean: statistically, more words than average are used for harder tangrams.
 This pattern of results is consistent with sensitivity to \emph{tangram-specific} evidence of the matcher's understanding when deciding to modify referring expressions.
 
 
@@ -358,11 +360,11 @@ In Fig. \ref{fig:pos}A, we show the shifting proportions of different parts of s
 We find that nouns account for proportionally more of the words being used over time, while determiners and prepositions account for fewer.
 
 To test which kinds of words are more likely to be dropped, we measured the percent reduction in the number of words in each part of speech from the first repetition to the sixth repetition (i.e. $(n_1 - n_6)/n_1$).
-We find that pronouns (`it', `he'), determiners (`the', `a', `an'), and conjunctions (`and', `that') are the most likely classes of words to be dropped (94\%, 93\% and 91\%, respectively) and nouns (`dancer', `rabbit') are the least likely to be dropped (59\%).
+We find that pronouns (`it', `he'), conjunctions (`and', `that'), and determiners (`the', `a', `an') are the most likely classes of words to be dropped (94\%, 93\% and 91\%, respectively) and nouns (`dancer', `rabbit') are the least likely to be dropped (59\%).
 More generally, closed-class parts of speech, including function words, appear strictly more likely to be dropped than open-class parts of speech (Fig. \ref{fig:pos}B).
 To statistically test this claim, we constructed a mixed-effects model predicting the reduction of each part of speech from the first round to the final round.
 We included the binary fixed effect of open class vs. closed class (excluding adverbs), as well as random intercepts and slopes for each pair of participants, and random intercepts for each individual part of speech within each class.
-We found a significant effect of class, $b=0.23, t = 4.5, p = 0.006$, supporting the observation that closed class parts of speech are more likely to be dropped. 
+We found a significant effect of class, $b=0.24, t = 4.5, p = 0.006$, supporting the observation that closed class parts of speech are more likely to be dropped. 
 
 One possible interpretation of these findings is that reduction may be driven mostly by the loss of function words as directors shift to a less-grammatical shorthand over the course of the task.
 However, when examining the n-grams most likely to be dropped (see Table \ref{tab:words}), we noticed that many of the most dropped closed-class words are used to  form prepositional phases (`of', `with') or combine different clauses (`and').
@@ -374,9 +376,8 @@ If initial descriptions tend to be syntactically complex because they combine mu
  % when feedback suggests that the matcher understands.
 % combining multiple sources of information for identifying the target,
 We explicitly tested this hypothesis by examining whether pairs of words dropped from one reference to the next tend to come from the same syntactic units, relative to what would be expected by random deletions.
-We quantified the extent to which dropped words `cluster' by examining syntactic closeness between the dropped words in a dependency parse tree (see Fig. \ref{fig:dependency}).
-Dependency grammars represent syntax in terms of directed dependency relations between pairs of words \citep{hudson1984word,corbett1993heads}. 
-Dependency parsing, the task of extracting a tree of dependency relations from raw input text, has become a canonical task in computational linguistics \citep{jurafsky2014speech,kubler2009dependency}\footnote{Dependency grammars are an alternative to phrase structure grammars, which represent constituency relations between abstract units like noun phrases and verb phrases. We pre-registered a different version of this analysis using the pure prevalence of different higher-order clausal features extracted from a constituency parse at each repetition (e.g. adjectival clauses or subordinate clauses). While we found evidence for our pre-registered predictions, we later realized that this measure failed to capture the relevant notion of clustering: clausal features can disappear due to rephrasing without the words in the clause necessarily being dropped together, and conversely, entire meaningful units can be dropped at once (e.g. noun phrases) without any clausal features being present at all. Path lengths in the dependency tree are better suited for assessing these questions at the word-by-word level.}. 
+We quantified the extent to which dropped words `cluster' by examining closeness between the dropped words in a dependency parse tree (see Fig. \ref{fig:dependency}).
+Dependency grammars represent syntax in terms of directed dependency relations between pairs of words \citep{hudson1984word,corbett1993heads}, and dependency parsing, the task of extracting a tree of dependency relations from raw input text, has become a canonical task in computational linguistics \citep{jurafsky2014speech,kubler2009dependency}\footnote{Dependency grammars are an alternative to phrase structure grammars, which represent \emph{constituency} relations between abstract units like noun phrases and verb phrases. We pre-registered a different version of this analysis using the pure prevalence of different higher-order clausal features extracted from a constituency parse at each repetition (e.g. adjectival clauses or subordinate clauses). While we found evidence for our pre-registered predictions, we later realized that this measure failed to capture the relevant notion of clustering: clausal features can disappear due to rephrasing without the words in the clause necessarily being dropped together, and conversely, entire meaningful units can be dropped at once (e.g. noun phrases) without any clausal features being present at all. Path lengths in the dependency tree are better suited for assessing these questions at the word-by-word level.}. 
 
 We used the state-of-the-art statistical dependency parser from SpaCy, using the ClearNLP dependency labels \citep{choi_palmer2012}, to extract a parse tree for every utterance in our corpus \citep[see][for details on neural network architectures for parsing]{honnibal2015improved, kiperwasser2016simple}.
 We then compared each referring expression to the one produced on the subsequent repetition block to determine which words were dropped and which reappeared.
@@ -398,7 +399,7 @@ We first sampled from the set of function words in the utterance, and if this se
 \label{fig:dependency}
 \end{figure}
 
-We found a mean empirical dependency length of 2.77, which lay outside the both the random null distribution (range: $[2.90, 2.99]$) and the function word null distribution (range: $[3.03, 3.08]$), indicating a small but reliable effect of syntactic clustering among the words that were dropped on each round.
+We found a mean empirical dependency length of 2.77, which lay outside the both the random null distribution (range: $[2.90, 2.99]$) and the function word null distribution (range: $[3.03, 3.08]$), indicating a reliable effect of syntactic clustering among the words that were dropped on each round.
 That is, these words tended to be closer to one another in the dependency parse than expected by total chance or by preferentially dropping function words independently of their corresponding syntactic units.
 Furthermore, while overall dependency lengths get smaller as utterances become shorter, this result holds within every repetition block (see Supplemental Fig. \ref{fig:dependency_length_by_rep}), and other statistics gave similar results, including the minimum dependency length and the raw distance in the sequence of words.
 This result accords with earlier observations by \cite{Carroll80_NamingHedges}, who reanalyzed transcripts from \cite{KraussWeinheimer64_ReferencePhrases}. 
@@ -521,7 +522,7 @@ In the remainder of this section, we test these observations.
 Before examining the dynamics of how these vectors change over time, we test the basic prediction that referring expressions used by a single speaker \emph{within} a game are more similar overall than those used by different speakers \emph{across} games.
 For each tangram, we computed the pairwise similarities between all utterances used by a speaker to refer to that tangram at different times \emph{within} a game and also between all utterances used by different speakers \emph{across} games.
 The distributions of these values are shown in Fig. \ref{fig:withinvsacross}.
-We estimated the distance between these distributions using the standard normalized sensitivity $d' = \frac{\mu_A - \mu_W}{\sqrt{1/2(\sigma^2_A+\sigma^2_W)}} = 2.71$.
+We estimated the distance between these distributions using the standard normalized sensitivity $d' = \frac{\mu_A - \mu_W}{\sqrt{1/2(\sigma^2_A+\sigma^2_W)}} = 2.65$.
 To compare this estimated difference against the null hypotheses that within- and across-game similarities are drawn from the same distribution, we conducted a permutation test by scrambling `within' and `across' labels for each similarity and re-computing $d'$ 1000 times.
 We found that our observed value was extremely unlikely under this null distribution, $95\%~CI: [-0.09, 0.09], p < 0.001$.
 In other words, utterances from a single pair tend to cluster together in semantic space while different pairs are spread out in different parts of the space.
@@ -535,7 +536,7 @@ To explore this question, we conducted analyses on how the semantic vectors chan
 \centering
 \includegraphics[scale=.5]{similarity_analysis.pdf}
 \vspace{1em}
-\caption{(A) Utterances within a pair become more similar to successive utterances on later repetitions, converging on a stable convention, but (B) utterances across pairs become steadily more dissimilar, diverging to different solutions. These patterns are depicted schematically by dots within a pair changing less over time while dots in different pairs move further apart. Error bars are bootstrapped 95\% CIs. Due to the large number of pairwise measurements, these bars are not visible in panel (B).}
+\caption{(A) Utterances within a pair become more similar to successive utterances on later repetitions, converging on a stable convention, but (B) utterances across pairs become steadily more dissimilar, diverging to different solutions. These patterns are depicted schematically by dots within a pair changing less over time while dots in different pairs move further apart. Error bars are bootstrapped 95\% CIs over participant-level means.}
 %\vspace{1em}
 \label{fig:similarity}
 \end{figure}
@@ -554,8 +555,8 @@ To explore this question, we conducted analyses on how the semantic vectors chan
 \paragraph{Utterances become increasingly consistent within interaction}
 As directors modified their utterances across successive repetitions, we hypothesized that they would converge on increasingly consistent, stable ways of referring to each tangram.
 To test this prediction, we computed the cosine similarity between successive utterances produced by each speaker (see Fig.~\ref{fig:similarity}A). %.^, and evaluated how this similarity changed across repetitions.
-A mixed-effects model with (orthogonalized) linear and quadratic fixed effects of repetition number and maximal random effects for both tangram and pair of participants showed that similarity between successive utterances increased substantially throughout an interaction ($b = 2.7,~t = 10.9$).
-The quadratic term was not significant ($b= -0.4,~t=-1.8$).
+A mixed-effects model with (orthogonalized) linear and quadratic fixed effects of repetition number and maximal random effects for both tangram and pair of participants showed that similarity between successive utterances increased substantially throughout an interaction ($b = 2.8,~t = 11.0, p < 0.001$).
+The quadratic term was also weakly significant ($b= -0.44,~t=-2.2, p = 0.035$).
 
 %It is possible, however, that the observed stabilization is not specific to a given interaction but instead a property of the entire distribution of utterances ,
 %we compared this estimated drift within pairs of participants to a permuted baseline.
@@ -566,11 +567,11 @@ The quadratic term was not significant ($b= -0.4,~t=-1.8$).
 
 Finally, we predicted that although the referring expressions used by different pairs may begin with substantial overlap, they would become increasingly dissimilar from each other across time, gradually diverging into different equilibria.
 We tested this prediction by computing the mean similarity between referring expressions used by different speakers.
-The large sample of similarities ($N = 257040 = 12~\texttt{tangrams} \times 6~\texttt{repetitions} \times \frac{85 \cdot 84}{2}~\texttt{distinct pairs}$) presented both advantages and disadvantages for this analysis.
+The large sample of similarities ($N = 245,016 = 12~\texttt{tangrams} \times 6~\texttt{repetitions} \times \frac{83 \cdot 82}{2}~\texttt{distinct pairs}$) presented both advantages and disadvantages for this analysis.
 On one hand, we could obtain highly reliable estimates of mean similarity.
 On the other hand, larger random-effects structures led to convergence problems.
 We therefore ran a mixed-effects regression model including linear and quadratic fixed effects of repetition number including random effects only at the tangram-level.
-We found a strong negative linear fixed effect of repetition on between-game semantic similarity ($b = -50.7, t= 16.8$) as well as a significant quadratic effect ($b= 16.1, t = 12$), indicating that this divergence slows over time (likely due to stabilization within interactions; see Fig.~\ref{fig:similarity}B).
+We found a strong negative linear fixed effect of repetition on between-game semantic similarity ($b = -48.6, t= -16.7, p <0.001$) as well as a significant quadratic effect ($b= 15.2, t = 10.9$), indicating that this divergence slows over time (likely due to stabilization within interactions; see Fig.~\ref{fig:similarity}B).
 %We conducted a permutation test to compare this $t$ value with what would be expected from scrambling utterances across repetitions for each pair and target.
 % We found that the estimated slope was highly unlikely under this distribution $(CI = [-2.5, 2.9],~p~<~0.001)$.
 

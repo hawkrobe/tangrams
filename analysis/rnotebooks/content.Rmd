@@ -107,7 +107,7 @@ Then we can take the highest PMI word (or words) for each tangram/gameid pair an
 We see that it's much higher than expected under the null.
 
 ```{r}
-nonparametric_ds = seq_len(10) %>%
+nonparametric_ds = seq_len(1000) %>%
   map_dbl(~ { distinctiveness_d %>%
     group_by(intendedName, gameid) %>%
     sample_n(1) %>%
@@ -115,7 +115,7 @@ nonparametric_ds = seq_len(10) %>%
       summarize(m = mean(finalRoundMatch)) %>%
       pull(m)})
     
-highest <- seq_len(10) %>%
+highest <- seq_len(1000) %>%
   map_dbl(~ { distinctiveness_d %>%
     group_by(intendedName, gameid) %>%
     filter(num_tangrams_occurred_with == min(num_tangrams_occurred_with)) %>%
@@ -148,7 +148,7 @@ combined.df <- compute_within_vs_across(M_mat, F_mat)
 
 true_dprime = dprime(combined.df)
 
-permuted_dprimes <- seq_len(10) %>%
+permuted_dprimes <- seq_len(1000) %>%
   map_dbl(~ dprime(combined.df %>% mutate(source = sample(source))))
 
 cat('CI for permuted=', sort(permuted_dprimes)[25], sort(permuted_dprimes)[975])
@@ -173,28 +173,25 @@ true_lmer.within <- make_within_df(M_mat, F_mat, 'cosine') %>%
   filter(rep2 == rep1 + 1) %>% 
   ungroup()
 
-true_lmer.within.out <- true_lmer.within %>%
+library(optimx)
+true_lmer.within %>%
   lmer(sim ~ poly(rep1, 2) + 
-         (1 + poly(rep1, 1) | gameID) + 
-         (1 + poly(rep1, 1) | target), 
+         (1 + poly(rep1, 2) | gameID) + 
+         (1 + poly(rep1, 2) | target), 
        control = lmerControl(optimizer ='optimx', 
                              optCtrl=list(method='nlminb')),  
-       data = .)
-
-summary(true_lmer.within.out)
-
-cat('true for within analysis=', 
-    tidy(true_lmer.within.out, effects = 'fixed') %>% 
-       filter(term == 'poly(rep1, 2)1') %>%
-       pull(estimate))
+       data = .) %>%
+  summary()
 ```
 
 Viz
 
 ```{r}
 true_lmer.within.toplot <- true_lmer.within %>%
+  group_by(gameID, rep1) %>%
+  summarize(m = mean(sim,na.rm=T)) %>%
   group_by(rep1) %>%
-  tidyboot_mean(sim, na.rm=T)
+  tidyboot_mean(m, na.rm=T)
 
 true_lmer.within.toplot %>%
   ggplot(aes(x = as.character(rep1), y = empirical_stat, group = 1)) +
@@ -225,23 +222,23 @@ true_lmer.across <- M_mat %>%
   ungroup() %>%
   mutate(target = factor(target))
 
-true_lmer.across.out <- true_lmer.across %>%
+true_lmer.across %>%
   lmer(sim ~ poly(repetition, 2) + (1 +poly(repetition, 2)  | target), 
        control = lmerControl(optimizer ='optimx', 
                              optCtrl=list(method='nlminb')),  
-       data = .)
-
-summary(true_lmer.across.out)
-cat('true for within analysis=', (tidy(true_lmer.across.out, effects = 'fixed') %>% filter(term == 'poly(repetition, 2)1'))$estimate)
+       data = .) %>%
+  summary()
 ```
 
 Viz 
 
 ```{r}
-true_lmer.within %>%
-  group_by(rep1) %>%
-  tidyboot_mean(sim, na.rm=T) %>%
-  ggplot(aes(x = IV, y = empirical_stat)) +
+true_lmer.across %>%
+  group_by(dim1, repetition) %>%
+  summarize(m = mean(sim, na.rm=T)) %>%
+  group_by(repetition) %>%
+  tidyboot_mean(m, na.rm=T) %>%
+  ggplot(aes(x = repetition, y = empirical_stat)) +
     geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), width = 0) +
     geom_line()  +
     scale_x_continuous(breaks = c(1,2,3,4,5,6), labels = c(1,2,3,4,5,6)) +

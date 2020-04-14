@@ -64,7 +64,7 @@ listenerMsgs %>%
   glmer(matcherBin ~ repetitionNum + 
           (1 + repetitionNum | gameid) + 
           (1  | intendedName), 
-        data = , 
+        data = ., 
         family = 'binomial') %>%
   summary()
 ```
@@ -124,8 +124,32 @@ feedback <- listenerMsgs %>%
   ungroup() %>%
   filter(!is.na(prevcorrect)) %>%
   filter(!is.na(reduction)) %>%
-  mutate(prevcorrectFactor = factor(ifelse(prevcorrect == 1, 'correct', 'incorrect'))) %>%
-  mutate(comparisonNumeric = ifelse(comparison == "rep", 1, 0)) 
+  mutate(prevcorrectFactor = factor(ifelse(prevcorrect == 1, 'correct', 'incorrect')),
+         comparisonNumeric = ifelse(comparison == "rep", 1, 0))
+```
+
+
+```{r}
+feedback %>% 
+  filter(repetitionNum == 1) %>% 
+  group_by(matcherBin) %>% 
+  summarize(m = 1 - mean(correct))
+
+tab <- table((feedback %>% filter(repetitionNum == 1))$matcherBin, 
+             (feedback %>% filter(repetitionNum == 1))$correct)
+
+chisq.test(tab)
+```
+
+```{r}
+feedback %>%
+  filter(comparison == 'rep') %>%
+  #mutate(repetitionNum = scale(repetitionNum, scale=F)) %>%
+  lmer(reduction ~ 1 + prevcorrect + I(repetitionNum) + 
+         (1 + prevcorrect + I(repetitionNum) | gameid), 
+       data = .,
+      control=lmerControl(optimizer="bobyqa",optCtrl=list(maxfun=100000))) %>%
+  summary()
 ```
 
 Test interaction with traditional regression b/c even minimal lmer does not converge
@@ -145,21 +169,6 @@ brm(reduction ~ prevcorrectFactor * comparison +
     iter = 5000,
     data = feedback) %>%
   summary()
-```
-
-
-```{r}
-feedback %>% 
-  filter(repetitionNum == 1) %>% 
-  group_by(matcherBin) %>% 
-  summarize(m = 1 - mean(correct))
-
-tab <- table((feedback %>% filter(repetitionNum == 1))$matcherBin, 
-             (feedback %>% filter(repetitionNum == 1))$correct)
-
-chisq.test(tab)
-dist(rbind(feedback$matcherBin, feedback$correct), method = "binary")
-
 ```
 
 Make Fig. 2C
@@ -306,16 +315,11 @@ posReduction <- tagged_df %>%
   transform(POS=reorder(POS, -diffPct))
 
 posReduction.boot <- posReduction %>%
-  group_by(POS) %>%
+  group_by(POS, cat) %>%
   # Take mean & se over participants
   tidyboot_mean(column = diffPct, na.rm = T)
 
-detReductionRate <- (posReduction %>% filter(POS == 'dets'))$mean * 100
-conjReductionRate <- (posReduction %>% filter(POS == 'conjunctions'))$mean * 100
-pronounReductionRate <- (posReduction %>% filter(POS == 'pronouns'))$mean * 100
-nounReductionRate <- (posReduction %>% filter(POS == 'nouns'))$mean * 100
-
-ggplot(posReduction, aes(x = POS, y = mean, fill = cat)) +
+ggplot(posReduction.boot, aes(x = POS, y = mean, fill = cat)) +
   geom_bar(stat = 'identity') +
   geom_errorbar(aes(ymax = ci_upper, ymin = ci_lower), width = .1)+
   ylab("absolute % reduction") +
@@ -326,9 +330,20 @@ ggplot(posReduction, aes(x = POS, y = mean, fill = cat)) +
   coord_flip() +
   theme(aspect.ratio = 1)
 
-
 ggsave('../../writing/figs/posReduction.pdf',
         height = 8, width = 16, units = 'cm', useDingbats = F)
+```
+
+```{r}
+detReductionRate <- (posReduction.boot %>% filter(POS == 'dets'))$mean * 100
+conjReductionRate <- (posReduction.boot %>% filter(POS == 'conjunctions'))$mean * 100
+pronounReductionRate <- (posReduction.boot %>% filter(POS == 'pronouns'))$mean * 100
+nounReductionRate <- (posReduction.boot %>% filter(POS == 'nouns'))$mean * 100
+
+cat('determiners reduce by', detReductionRate, '\n')
+cat('conjunctions reduce by', conjReductionRate, '\n')
+cat('pronouns reduce by', pronounReductionRate, '\n')
+cat('nouns reduce by', nounReductionRate, '\n')
 ```
 
 Stats for open class vs. closed class
@@ -341,7 +356,7 @@ posReduction %>%
   summary()
 ```
 
-### Reduction in syntactic units
+### Reduction in syntactic units (+ Supplemental Fig. 10)
 
 Get list of all words dropped on each round...
 

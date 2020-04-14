@@ -12,7 +12,7 @@ gameid,msgTime,repetitionNum,role,contents,totalLength,thinksHuman,comments,rate
 0955-2,1459974438533,1,director,number 7 looks like a person praying,1061162,yes,,okay,yes,6,7
 0955-2,1459974446274,1,director,number 8 looks like a blob with no arms,1061162,yes,,okay,yes,6,9
 0955-2,1459974454278,1,director,number 9 looks like a rabbit sitting on the groud,1061162,yes,,okay,yes,6,10
-0955-2,1459974462e3,1,director,number 10 looks like a woman praying with her arms to the left,1061162,yes,,okay,yes,6,13
+0955-2,1459974462000,1,director,number 10 looks like a woman praying with her arms to the left,1061162,yes,,okay,yes,6,13
 0955-2,1459974478277,1,director,number 11 is a skinnier version of a blob with no arms that is 8,1061162,yes,,okay,yes,6,15
 0955-2,1459974494897,1,director,number 12 is a man sitting with his legs pointed to the left,1061162,yes,,okay,yes,6,13
 0955-2,1459974548044,2,matcher,harder than it looked :/,940237,yes,Harder than i expected!,okay,yes,10,5
@@ -1366,155 +1366,6 @@ gameid,msgTime,repetitionNum,role,contents,totalLength,thinksHuman,comments,rate
 2699-6,1459981022396,6,director,12 man sitting looking at knees,2314445,yes,"this was fun, but took quite a long time",loved,yes,8,6
 2699-6,1459981027557,6,director,this was fun cheers!,2314445,yes,"this was fun, but took quite a long time",loved,yes,8,4
 2699-6,1459981041638,6,matcher,lets goayyeee cheers bud good luck  on turk,2231167,yes,Very Fun and Thanks,liked,yes,8,8
-4862-d,1459979221017,1,director,ok in position 1 I have the thing that has a square on the top and looks like a person standing up with arms outstretched,2187368,yes,very difficult,liked,yes,8,25
-4862-d,1459979227437,1,director,does that make sense?,2187368,yes,very difficult,liked,yes,8,4
-4862-d,1459979262602,1,matcher,facing left?,2040653,yes,maybe a larger bonus payment for time spent,liked,yes,8,2
-4862-d,1459979278428,1,director,yes,2187368,yes,very difficult,liked,yes,8,1
-4862-d,1459979283732,1,matcher,got it,2040653,yes,maybe a larger bonus payment for time spent,liked,yes,8,2
-4862-d,1459979344339,1,director,"ok position 7 is a square on top (facing left again), standing, with 'foot' outstretched behind",2187368,yes,very difficult,liked,yes,8,16
-4862-d,1459979347638,1,director,the foot is a triangle,2187368,yes,very difficult,liked,yes,8,5
-4862-d,1459979371427,1,matcher,got it,2040653,yes,maybe a larger bonus payment for time spent,liked,yes,8,2
-4862-d,1459979434808,1,matcher,"given we have 72 of these to do, maybe try and keep info short and sweet or this will take quite a while",2040653,yes,maybe a larger bonus payment for time spent,liked,yes,8,23
-4862-d,1459979463785,1,director,"alright, i'll try, 8 is a superman pose",2187368,yes,very difficult,liked,yes,8,8
-4862-d,1459979473764,1,director,like flying,2187368,yes,very difficult,liked,yes,8,2
-4862-d,1459979479107,1,matcher,got it,2040653,yes,maybe a larger bonus payment for time spent,liked,yes,8,2
-4862-d,1459979493880,1,director,2 looks like a J shape,2187368,yes,very difficult,liked,yes,8,6
-4862-d,1459979500067,1,matcher,OK,2040653,yes,maybe a larger bonus payment for time spent,liked,yes,8,1
-4862-d,1459979513343,1,director,3 is a square on the right of the head,2187368,yes,very difficult,liked,yes,8,10
-4862-d,1459979531557,1,matcher,where's the K shape?,2040653,yes,maybe a larger bonus payment for time spent,liked,yes,8,4
-4862-d,1459979559861,1,director,9,2187368,yes,very difficult,liked,yes,8,1
-4862-d,1459979564287,1,matcher,good,2040653,yes,maybe a larger bonus payment for time spent,liked,yes,8,1
-4862-d,1459979576681,1,director,4 looks like a windmill on top,2187368,yes,very difficult,liked,yes,8,7
-4862-d,1459979590013,1,matcher,"ok, how abouut no arms",2040653,yes,maybe a larger bonus payment for time spent,liked,yes,8,5
-4862-d,1459979601737,1,director,10,2187368,yes,very difficult,liked,yes,8,1
-4862-d,1459979616561,1,director,5 is diamond shape on top,2187368,yes,very difficult,liked,yes,8,6
-4862-d,1459979632907,1,matcher,need more for 5,2040653,yes,maybe a larger bonus payment for time spent,liked,yes,8,4
-4862-d,1459979653337,1,matcher,where's sitting facing left,2040653,yes,maybe a larger bonus payment for time spent,liked,yes,8,4
-4862-d,1459979656483,1,director,ok diamond and then flat across,2187368,yes,very difficult,liked,yes,8,6
-4862-d,1459979660591,1,director,that's 6,2187368,yes,very difficult,liked,yes,8,2
-4862-d,1459979673747,1,matcher,OK for both,2040653,yes,maybe a larger bonus payment for time spent,liked,yes,8,3
-4862-d,1459979688380,1,director,12 is kneeling facing right,2187368,yes,very difficult,liked,yes,8,5
-4862-d,1459979697627,1,director,and then 11 should be the last,2187368,yes,very difficult,liked,yes,8,7
-4862-d,1459979708617,1,matcher,wee're done then,2040653,yes,maybe a larger bonus payment for time spent,liked,yes,8,3
-4862-d,1459979725107,2,director,sitting facing left is 7,2187368,yes,very difficult,liked,yes,9,5
-4862-d,1459979745412,2,matcher,ok,2040653,yes,maybe a larger bonus payment for time spent,liked,yes,9,1
-4862-d,1459979752718,2,director,flying/superman is 1,2187368,yes,very difficult,liked,yes,9,3
-4862-d,1459979778492,2,matcher,ok where's no arms,2040653,yes,maybe a larger bonus payment for time spent,liked,yes,9,4
-4862-d,1459979780577,2,director,no arms is 2,2187368,yes,very difficult,liked,yes,9,4
-4862-d,1459979805573,2,director,"8 is diamond on top, flat across",2187368,yes,very difficult,liked,yes,9,7
-4862-d,1459979815782,2,matcher,where's skating left with leg up,2040653,yes,maybe a larger bonus payment for time spent,liked,yes,9,6
-4862-d,1459979821923,2,director,9,2187368,yes,very difficult,liked,yes,9,1
-4862-d,1459979838632,2,matcher,got both,2040653,yes,maybe a larger bonus payment for time spent,liked,yes,9,2
-4862-d,1459979867516,2,director,3 is the one with the foot half out square on top facing right but body facing left,2187368,yes,very difficult,liked,yes,9,18
-4862-d,1459979900642,2,matcher,is 3 looking down?,2040653,yes,maybe a larger bonus payment for time spent,liked,yes,9,4
-4862-d,1459979905299,2,director,yes,2187368,yes,very difficult,liked,yes,9,1
-4862-d,1459979910642,2,matcher,ok,2040653,yes,maybe a larger bonus payment for time spent,liked,yes,9,1
-4862-d,1459979931497,2,matcher,where kneeling right,2040653,yes,maybe a larger bonus payment for time spent,liked,yes,9,3
-4862-d,1459979931705,2,director,do you see how 3 of them have diamond shapes on top?,2187368,yes,very difficult,liked,yes,9,12
-4862-d,1459979938579,2,director,4,2187368,yes,very difficult,liked,yes,9,1
-4862-d,1459979952347,2,matcher,ok,2040653,yes,maybe a larger bonus payment for time spent,liked,yes,9,1
-4862-d,1459979953189,2,director,that's one of the diamond shapes,2187368,yes,very difficult,liked,yes,9,6
-4862-d,1459979962467,2,matcher,got it,2040653,yes,maybe a larger bonus payment for time spent,liked,yes,9,2
-4862-d,1459979974429,2,director,like 4 but with the lower sticking up is 6,2187368,yes,very difficult,liked,yes,9,10
-4862-d,1459980034083,2,matcher,"maybe got it, where, arms out to the left body straight on right",2040653,yes,maybe a larger bonus payment for time spent,liked,yes,9,13
-4862-d,1459980051773,2,director,that's 10,2187368,yes,very difficult,liked,yes,9,2
-4862-d,1459980075080,2,director,the one with two triangles and a square on top (like a windmill) is 5,2187368,yes,very difficult,liked,yes,9,15
-4862-d,1459980080212,2,matcher,where's pac man mouth open on right,2040653,yes,maybe a larger bonus payment for time spent,liked,yes,9,7
-4862-d,1459980094357,2,matcher,ok,2040653,yes,maybe a larger bonus payment for time spent,liked,yes,9,1
-4862-d,1459980123591,2,director,11,2187368,yes,very difficult,liked,yes,9,1
-4862-d,1459980126117,2,matcher,ok,2040653,yes,maybe a larger bonus payment for time spent,liked,yes,9,1
-4862-d,1459980132287,2,director,and then 12 for the last yes?,2187368,yes,very difficult,liked,yes,9,7
-4862-d,1459980135447,2,matcher,that leaves 4 & 12,2040653,yes,maybe a larger bonus payment for time spent,liked,yes,9,5
-4862-d,1459980157641,2,director,oh ok 4 is the triangle facing right with diamond on top,2187368,yes,very difficult,liked,yes,9,12
-4862-d,1459980195017,2,matcher,ok,2040653,yes,maybe a larger bonus payment for time spent,liked,yes,9,1
-4862-d,1459980205938,3,director,skating guy is 1,2187368,yes,very difficult,liked,yes,6,4
-4862-d,1459980213777,3,matcher,ok,2040653,yes,maybe a larger bonus payment for time spent,liked,yes,6,1
-4862-d,1459980218582,3,director,looking down to the left is 7,2187368,yes,very difficult,liked,yes,6,7
-4862-d,1459980227617,3,matcher,ok,2040653,yes,maybe a larger bonus payment for time spent,liked,yes,6,1
-4862-d,1459980241122,3,director,"diamond on top, triangle in middle pointing right is 2",2187368,yes,very difficult,liked,yes,6,10
-4862-d,1459980280292,3,matcher,does 2 have falat left side or angular,2040653,yes,maybe a larger bonus payment for time spent,liked,yes,6,8
-4862-d,1459980284423,3,matcher,flat,2040653,yes,maybe a larger bonus payment for time spent,liked,yes,6,1
-4862-d,1459980293501,3,director,angular,2187368,yes,very difficult,liked,yes,6,1
-4862-d,1459980298562,3,matcher,ok,2040653,yes,maybe a larger bonus payment for time spent,liked,yes,6,1
-4862-d,1459980313112,3,matcher,WHere's sitting facing right,2040653,yes,maybe a larger bonus payment for time spent,liked,yes,6,4
-4862-d,1459980321612,3,matcher,facing left,2040653,yes,maybe a larger bonus payment for time spent,liked,yes,6,2
-4862-d,1459980327016,3,director,11,2187368,yes,very difficult,liked,yes,6,1
-4862-d,1459980330952,3,director,no arms is 3,2187368,yes,very difficult,liked,yes,6,4
-4862-d,1459980335182,3,matcher,ok,2040653,yes,maybe a larger bonus payment for time spent,liked,yes,6,1
-4862-d,1459980339679,3,director,flying is 5,2187368,yes,very difficult,liked,yes,6,3
-4862-d,1459980367353,3,matcher,where's flat shoulders,2040653,yes,maybe a larger bonus payment for time spent,liked,yes,6,3
-4862-d,1459980375290,3,director,9,2187368,yes,very difficult,liked,yes,6,1
-4862-d,1459980393339,3,director,windmill is 6,2187368,yes,very difficult,liked,yes,6,3
-4862-d,1459980403392,3,matcher,ok,2040653,yes,maybe a larger bonus payment for time spent,liked,yes,6,1
-4862-d,1459980417436,3,director,"4, 10, and 12 left right?",2187368,yes,very difficult,liked,yes,6,6
-4862-d,1459980423772,3,matcher,yep,2040653,yes,maybe a larger bonus payment for time spent,liked,yes,6,1
-4862-d,1459980435644,3,director,ok 4 is the one standing up straight,2187368,yes,very difficult,liked,yes,6,8
-4862-d,1459980451338,3,director,10 is facing left (sitting?),2187368,yes,very difficult,liked,yes,6,5
-4862-d,1459980459403,3,director,12 is facing right (kneeling?),2187368,yes,very difficult,liked,yes,6,5
-4862-d,1459980490642,3,matcher,"I'm not sure about that,",2040653,yes,maybe a larger bonus payment for time spent,liked,yes,6,5
-4862-d,1459980512112,3,matcher,It's only a penny I'm going to submit,2040653,yes,maybe a larger bonus payment for time spent,liked,yes,6,8
-4862-d,1459980519343,4,director,good with me,2187368,yes,very difficult,liked,yes,6,3
-4862-d,1459980532492,4,matcher,where superman,2040653,yes,maybe a larger bonus payment for time spent,liked,yes,6,2
-4862-d,1459980533640,4,director,should we just focus on the easier ones?,2187368,yes,very difficult,liked,yes,6,8
-4862-d,1459980535397,4,director,2,2187368,yes,very difficult,liked,yes,6,1
-4862-d,1459980544732,4,matcher,that sounds good to me,2040653,yes,maybe a larger bonus payment for time spent,liked,yes,6,5
-4862-d,1459980547021,4,director,ok,2187368,yes,very difficult,liked,yes,6,1
-4862-d,1459980553056,4,director,skating one is 9,2187368,yes,very difficult,liked,yes,6,4
-4862-d,1459980556856,4,director,windmill is 10,2187368,yes,very difficult,liked,yes,6,3
-4862-d,1459980562893,4,director,sitting facing left is 4,2187368,yes,very difficult,liked,yes,6,5
-4862-d,1459980571689,4,director,flat shoulders is 3,2187368,yes,very difficult,liked,yes,6,4
-4862-d,1459980579040,4,director,no arms is 12,2187368,yes,very difficult,liked,yes,6,4
-4862-d,1459980587902,4,matcher,ok,2040653,yes,maybe a larger bonus payment for time spent,liked,yes,6,1
-4862-d,1459980614380,4,director,standing facing left is 1,2187368,yes,very difficult,liked,yes,6,5
-4862-d,1459980620712,4,matcher,flying?,2040653,yes,maybe a larger bonus payment for time spent,liked,yes,6,1
-4862-d,1459980623644,4,director,2,2187368,yes,very difficult,liked,yes,6,1
-4862-d,1459980640103,4,matcher,lokking down?,2040653,yes,maybe a larger bonus payment for time spent,liked,yes,6,2
-4862-d,1459980655946,4,director,1,2187368,yes,very difficult,liked,yes,6,1
-4862-d,1459980678222,4,matcher,you have 2 #1s,2040653,yes,maybe a larger bonus payment for time spent,liked,yes,6,4
-4862-d,1459980702372,4,director,"yeah it's the second, not facing left, looking down instead",2187368,yes,very difficult,liked,yes,6,10
-4862-d,1459980705852,4,director,messed up the first time,2187368,yes,very difficult,liked,yes,6,5
-4862-d,1459980718397,4,matcher,no prob,2040653,yes,maybe a larger bonus payment for time spent,liked,yes,6,2
-4862-d,1459980742429,4,director,any others that look easy to you?,2187368,yes,very difficult,liked,yes,6,7
-4862-d,1459980746028,4,director,//you can describe easy?,2187368,yes,very difficult,liked,yes,6,4
-4862-d,1459980753872,4,director,cause I don't know how to describe a few of these,2187368,yes,very difficult,liked,yes,6,11
-4862-d,1459980765487,4,matcher,no prob lets submit,2040653,yes,maybe a larger bonus payment for time spent,liked,yes,6,4
-4862-d,1459980782692,4,director,ok,2187368,yes,very difficult,liked,yes,6,1
-4862-d,1459980790065,5,director,superman is 7,2187368,yes,very difficult,liked,yes,7,3
-4862-d,1459980796068,5,director,no arms is 1,2187368,yes,very difficult,liked,yes,7,4
-4862-d,1459980804328,5,matcher,well never get 12,2040653,yes,maybe a larger bonus payment for time spent,liked,yes,7,4
-4862-d,1459980822135,5,director,nope,2187368,yes,very difficult,liked,yes,7,1
-4862-d,1459980826343,5,director,windmill is 2,2187368,yes,very difficult,liked,yes,7,3
-4862-d,1459980832027,5,matcher,ok,2040653,yes,maybe a larger bonus payment for time spent,liked,yes,7,1
-4862-d,1459980833029,5,director,flat shoulders is 8,2187368,yes,very difficult,liked,yes,7,4
-4862-d,1459980839217,5,director,skating is 4,2187368,yes,very difficult,liked,yes,7,3
-4862-d,1459980848313,5,director,facing down/left is 5,2187368,yes,very difficult,liked,yes,7,4
-4862-d,1459980855953,5,director,sitting looking left is 12,2187368,yes,very difficult,liked,yes,7,5
-4862-d,1459980894513,5,matcher,kneeling to the right( open pacman body),2040653,yes,maybe a larger bonus payment for time spent,liked,yes,7,7
-4862-d,1459980913429,5,director,10,2187368,yes,very difficult,liked,yes,7,1
-4862-d,1459980948659,5,matcher,indian chief facing right?,2040653,yes,maybe a larger bonus payment for time spent,liked,yes,7,4
-4862-d,1459980962773,5,matcher,insitting position,2040653,yes,maybe a larger bonus payment for time spent,liked,yes,7,2
-4862-d,1459980990718,5,director,11,2187368,yes,very difficult,liked,yes,7,1
-4862-d,1459980991670,5,director,?,2187368,yes,very difficult,liked,yes,7,1
-4862-d,1459981002307,5,matcher,SUBMIT?,2040653,yes,maybe a larger bonus payment for time spent,liked,yes,7,1
-4862-d,1459981005070,5,director,sure,2187368,yes,very difficult,liked,yes,7,1
-4862-d,1459981016627,6,matcher,good game,2040653,yes,maybe a larger bonus payment for time spent,liked,yes,7,2
-4862-d,1459981022679,6,director,flat shoulders is 1,2187368,yes,very difficult,liked,yes,7,4
-4862-d,1459981025719,6,director,yeah for sure,2187368,yes,very difficult,liked,yes,7,3
-4862-d,1459981033814,6,director,windmill is 4,2187368,yes,very difficult,liked,yes,7,3
-4862-d,1459981038338,6,matcher,where flying?,2040653,yes,maybe a larger bonus payment for time spent,liked,yes,7,2
-4862-d,1459981039560,6,director,superman/flying is 5,2187368,yes,very difficult,liked,yes,7,3
-4862-d,1459981047796,6,director,skating is 10,2187368,yes,very difficult,liked,yes,7,3
-4862-d,1459981051567,6,matcher,skating?,2040653,yes,maybe a larger bonus payment for time spent,liked,yes,7,1
-4862-d,1459981053319,6,director,no arms is 9,2187368,yes,very difficult,liked,yes,7,4
-4862-d,1459981074617,6,matcher,looking down?,2040653,yes,maybe a larger bonus payment for time spent,liked,yes,7,2
-4862-d,1459981075934,6,director,oh 10 is the skating//facing left with right foot up,2187368,yes,very difficult,liked,yes,7,10
-4862-d,1459981082489,6,director,looking down is 3,2187368,yes,very difficult,liked,yes,7,4
-4862-d,1459981100377,6,matcher,indian chief facing right?,2040653,yes,maybe a larger bonus payment for time spent,liked,yes,7,4
-4862-d,1459981108574,6,director,8,2187368,yes,very difficult,liked,yes,7,1
-4862-d,1459981129527,6,matcher,sitting left?,2040653,yes,maybe a larger bonus payment for time spent,liked,yes,7,2
-4862-d,1459981136136,6,director,11,2187368,yes,very difficult,liked,yes,7,1
-4862-d,1459981161608,6,matcher,go for it?,2040653,yes,maybe a larger bonus payment for time spent,liked,yes,7,3
-4862-d,1459981165550,6,director,sounds good,2187368,yes,very difficult,liked,yes,7,2
 1447-6,1459979370468,1,director,The first one is a diamond on top triangle on the right square bottom with a point facing up on the left,1413631,yes,Interesting and fun,liked,yes,10,22
 1447-6,1459979405672,1,matcher,I think I got it,1393297,yes,,okay,yes,10,5
 1447-6,1459979409901,1,director,2nd one is a diamond on top and a fairly square bottom with a triangle pointing right,1413631,yes,Interesting and fun,liked,yes,10,17
@@ -1734,6 +1585,142 @@ gameid,msgTime,repetitionNum,role,contents,totalLength,thinksHuman,comments,rate
 6212-1,1459982850025,5,matcher,"Awesome, thanks!",2993380,yes,,okay,yes,12,2
 6212-1,1459982938722,6,director,"Awesome, okay. 1.) Figure kneeling, facing right, no straight back, spike coming out of the stomach. 2.) Rectangle, no parts cut out. 3.) Figure kneeling, facing to the right. 4.) Figure sitting, facing left, no knees. 5.) Figure standing on one leg, other leg pointing right. 6.) Bunny ears.",3059299,yes,No comments on the experiment. ,okay,yes,12,49
 6212-1,1459983012636,6,director,"7.) Figure standing on one leg, other leg in the air on the left. 8.) Figure sitting, facing left, with knees. 9.) Figure of the man pointing left. 10.) Rectangle with parts cut out. 11.) Figure of the man with his arms in the air. 12.) Figure sitting, facing right, straight back, spike coming out of the stomach.",3059299,yes,No comments on the experiment. ,okay,yes,12,58
+8085-3,1459980657877,1,director,first resting or sitting with back to right,1349146,yes,This was a lot of fun!,loved,yes,3,8
+8085-3,1459980661904,1,director,next bunny,1349146,yes,This was a lot of fun!,loved,yes,3,2
+8085-3,1459980676291,1,director,next serving tea with bent knees,1349146,yes,This was a lot of fun!,loved,yes,3,6
+8085-3,1459980706073,1,director,warrior lunge back leg to the left,1349146,yes,This was a lot of fun!,loved,yes,3,7
+8085-3,1459980713036,1,director,falling backward,1349146,yes,This was a lot of fun!,loved,yes,3,2
+8085-3,1459980738359,1,director,last on this row kneeling with arms spread,1349146,yes,This was a lot of fun!,loved,yes,3,8
+8085-3,1459980767576,1,director,are you ok with those?,1349146,yes,This was a lot of fun!,loved,yes,3,5
+8085-3,1459980775648,1,matcher,Yup,1316220,yes,"It was really enjoyable to do this. I had a bug on the first round though, my box of images turned grey and I couldn&quotechart see the images. I had to guess and just move my mouse randomly.",loved,yes,3,1
+8085-3,1459980789934,1,director,next line: first one wrapped up like baby or burrito,1349146,yes,This was a lot of fun!,loved,yes,3,10
+8085-3,1459980814909,1,director,serving tea with straight legs to left,1349146,yes,This was a lot of fun!,loved,yes,3,7
+8085-3,1459980833413,1,director,geisha style arm almost covering face,1349146,yes,This was a lot of fun!,loved,yes,3,6
+8085-3,1459980845310,1,director,serving tea on knees to the right,1349146,yes,This was a lot of fun!,loved,yes,3,7
+8085-3,1459980853300,1,director,zombie or walking dead,1349146,yes,This was a lot of fun!,loved,yes,3,4
+8085-3,1459980866519,1,director,flamingo with the leg up and arms out,1349146,yes,This was a lot of fun!,loved,yes,3,8
+8085-3,1459980885400,1,matcher,Good to go,1316220,yes,"It was really enjoyable to do this. I had a bug on the first round though, my box of images turned grey and I couldn&quotechart see the images. I had to guess and just move my mouse randomly.",loved,yes,3,3
+8085-3,1459980886606,1,matcher,submitting,1316220,yes,"It was really enjoyable to do this. I had a bug on the first round though, my box of images turned grey and I couldn&quotechart see the images. I had to guess and just move my mouse randomly.",loved,yes,3,1
+8085-3,1459980921203,2,director,first row 1: walking dead zombie,1349146,yes,This was a lot of fun!,loved,yes,12,6
+8085-3,1459980926209,2,matcher,Woah wth,1316220,yes,"It was really enjoyable to do this. I had a bug on the first round though, my box of images turned grey and I couldn&quotechart see the images. I had to guess and just move my mouse randomly.",loved,yes,12,2
+8085-3,1459980930577,2,matcher,My board of images is just a gray box,1316220,yes,"It was really enjoyable to do this. I had a bug on the first round though, my box of images turned grey and I couldn&quotechart see the images. I had to guess and just move my mouse randomly.",loved,yes,12,9
+8085-3,1459980937579,2,director,we will try again,1349146,yes,This was a lot of fun!,loved,yes,12,4
+8085-3,1459980949131,2,director,Mine says round two,1349146,yes,This was a lot of fun!,loved,yes,12,4
+8085-3,1459980965807,2,director,Let me know when you're ready,1349146,yes,This was a lot of fun!,loved,yes,12,6
+8085-3,1459980970138,2,matcher,Ready,1316220,yes,"It was really enjoyable to do this. I had a bug on the first round though, my box of images turned grey and I couldn&quotechart see the images. I had to guess and just move my mouse randomly.",loved,yes,12,1
+8085-3,1459980973007,2,matcher,My board just reappeard,1316220,yes,"It was really enjoyable to do this. I had a bug on the first round though, my box of images turned grey and I couldn&quotechart see the images. I had to guess and just move my mouse randomly.",loved,yes,12,4
+8085-3,1459980973562,2,director,Ok,1349146,yes,This was a lot of fun!,loved,yes,12,1
+8085-3,1459980978467,2,director,first row 1: walking dead zombie,1349146,yes,This was a lot of fun!,loved,yes,12,6
+8085-3,1459980992682,2,director,2: flamingo leg kicked out arms open,1349146,yes,This was a lot of fun!,loved,yes,12,7
+8085-3,1459980998339,2,director,3: resting bunny,1349146,yes,This was a lot of fun!,loved,yes,12,3
+8085-3,1459981016185,2,director,4: runner's lunge with head back and one arm up,1349146,yes,This was a lot of fun!,loved,yes,12,10
+8085-3,1459981036321,2,director,5: serving tea to the left in robe with toes out,1349146,yes,This was a lot of fun!,loved,yes,12,11
+8085-3,1459981054808,2,director,6: kneeling with arms spread,1349146,yes,This was a lot of fun!,loved,yes,12,5
+8085-3,1459981065177,2,director,Ready for next line? Let me know when,1349146,yes,This was a lot of fun!,loved,yes,12,8
+8085-3,1459981070286,2,matcher,Yeah,1316220,yes,"It was really enjoyable to do this. I had a bug on the first round though, my box of images turned grey and I couldn&quotechart see the images. I had to guess and just move my mouse randomly.",loved,yes,12,1
+8085-3,1459981077238,2,matcher,Im not sure what you mean for 4,1316220,yes,"It was really enjoyable to do this. I had a bug on the first round though, my box of images turned grey and I couldn&quotechart see the images. I had to guess and just move my mouse randomly.",loved,yes,12,8
+8085-3,1459981110904,2,director,"4: one leg laying on ground, with one foot slightly lifted and head is leaning back with a raised arm",1349146,yes,This was a lot of fun!,loved,yes,12,20
+8085-3,1459981134102,2,director,how about this: falling bride,1349146,yes,This was a lot of fun!,loved,yes,12,5
+8085-3,1459981141117,2,director,better?,1349146,yes,This was a lot of fun!,loved,yes,12,1
+8085-3,1459981142916,2,matcher,Sure,1316220,yes,"It was really enjoyable to do this. I had a bug on the first round though, my box of images turned grey and I couldn&quotechart see the images. I had to guess and just move my mouse randomly.",loved,yes,12,1
+8085-3,1459981157402,2,matcher,Im good with 1-6 now I think,1316220,yes,"It was really enjoyable to do this. I had a bug on the first round though, my box of images turned grey and I couldn&quotechart see the images. I had to guess and just move my mouse randomly.",loved,yes,12,7
+8085-3,1459981159702,2,director,4: dancing bride with long train,1349146,yes,This was a lot of fun!,loved,yes,12,6
+8085-3,1459981161020,2,director,ok,1349146,yes,This was a lot of fun!,loved,yes,12,1
+8085-3,1459981164847,2,director,next line,1349146,yes,This was a lot of fun!,loved,yes,12,2
+8085-3,1459981174965,2,director,7: burrito,1349146,yes,This was a lot of fun!,loved,yes,12,2
+8085-3,1459981186110,2,director,8: sitting down with head hung low,1349146,yes,This was a lot of fun!,loved,yes,12,7
+8085-3,1459981196871,2,director,9: falling backward with open arms,1349146,yes,This was a lot of fun!,loved,yes,12,6
+8085-3,1459981233061,2,director,"10: ninja, straight left side like retangle",1349146,yes,This was a lot of fun!,loved,yes,12,7
+8085-3,1459981246693,2,director,11: serving tea with bent knees,1349146,yes,This was a lot of fun!,loved,yes,12,6
+8085-3,1459981253558,2,director,12 serving tea on knees,1349146,yes,This was a lot of fun!,loved,yes,12,5
+8085-3,1459981280342,2,matcher,Think Im good,1316220,yes,"It was really enjoyable to do this. I had a bug on the first round though, my box of images turned grey and I couldn&quotechart see the images. I had to guess and just move my mouse randomly.",loved,yes,12,3
+8085-3,1459981300418,3,director,"ok, just let me know if I need to clarify anything",1349146,yes,This was a lot of fun!,loved,yes,12,11
+8085-3,1459981303276,3,director,yay!,1349146,yes,This was a lot of fun!,loved,yes,12,1
+8085-3,1459981306331,3,director,amazing,1349146,yes,This was a lot of fun!,loved,yes,12,1
+8085-3,1459981311292,3,matcher,Much better,1316220,yes,"It was really enjoyable to do this. I had a bug on the first round though, my box of images turned grey and I couldn&quotechart see the images. I had to guess and just move my mouse randomly.",loved,yes,12,2
+8085-3,1459981315160,3,matcher,Youre looking at them left to right,1316220,yes,"It was really enjoyable to do this. I had a bug on the first round though, my box of images turned grey and I couldn&quotechart see the images. I had to guess and just move my mouse randomly.",loved,yes,12,7
+8085-3,1459981318180,3,matcher,so that makes more sense now,1316220,yes,"It was really enjoyable to do this. I had a bug on the first round though, my box of images turned grey and I couldn&quotechart see the images. I had to guess and just move my mouse randomly.",loved,yes,12,6
+8085-3,1459981333187,3,director,"same clues, sorry if I was confusing",1349146,yes,This was a lot of fun!,loved,yes,12,7
+8085-3,1459981351385,3,matcher,No I was looking right to left so it was just different. I understand better now,1316220,yes,"It was really enjoyable to do this. I had a bug on the first round though, my box of images turned grey and I couldn&quotechart see the images. I had to guess and just move my mouse randomly.",loved,yes,12,16
+8085-3,1459981351945,3,director,First line: 1: serving tea to the left with robe on and toes out,1349146,yes,This was a lot of fun!,loved,yes,12,14
+8085-3,1459981366175,3,director,2: serving tea on knees,1349146,yes,This was a lot of fun!,loved,yes,12,5
+8085-3,1459981377465,3,director,3: falling backward with arms open,1349146,yes,This was a lot of fun!,loved,yes,12,6
+8085-3,1459981388136,3,director,4: bride dancing with long train,1349146,yes,This was a lot of fun!,loved,yes,12,6
+8085-3,1459981393948,3,director,5: rabbit sitting,1349146,yes,This was a lot of fun!,loved,yes,12,3
+8085-3,1459981408802,3,director,6: Flamingo with raised leg and arms extended,1349146,yes,This was a lot of fun!,loved,yes,12,8
+8085-3,1459981410815,3,matcher,5 rabbit sitting is a long left side right?,1316220,yes,"It was really enjoyable to do this. I had a bug on the first round though, my box of images turned grey and I couldn&quotechart see the images. I had to guess and just move my mouse randomly.",loved,yes,12,9
+8085-3,1459981427250,3,matcher,With back on the left correct?,1316220,yes,"It was really enjoyable to do this. I had a bug on the first round though, my box of images turned grey and I couldn&quotechart see the images. I had to guess and just move my mouse randomly.",loved,yes,12,6
+8085-3,1459981435305,3,director,5 rabbit with two long ears with back to the left,1349146,yes,This was a lot of fun!,loved,yes,12,11
+8085-3,1459981439340,3,matcher,Okay,1316220,yes,"It was really enjoyable to do this. I had a bug on the first round though, my box of images turned grey and I couldn&quotechart see the images. I had to guess and just move my mouse randomly.",loved,yes,12,1
+8085-3,1459981440960,3,matcher,Thank you,1316220,yes,"It was really enjoyable to do this. I had a bug on the first round though, my box of images turned grey and I couldn&quotechart see the images. I had to guess and just move my mouse randomly.",loved,yes,12,2
+8085-3,1459981444951,3,director,Next line?,1349146,yes,This was a lot of fun!,loved,yes,12,2
+8085-3,1459981447286,3,matcher,Yes,1316220,yes,"It was really enjoyable to do this. I had a bug on the first round though, my box of images turned grey and I couldn&quotechart see the images. I had to guess and just move my mouse randomly.",loved,yes,12,1
+8085-3,1459981457879,3,director,7: man sitting with back to the right,1349146,yes,This was a lot of fun!,loved,yes,12,8
+8085-3,1459981472040,3,director,"8: ninja, long rectangular side",1349146,yes,This was a lot of fun!,loved,yes,12,5
+8085-3,1459981477343,3,director,9: burrito,1349146,yes,This was a lot of fun!,loved,yes,12,2
+8085-3,1459981492357,3,director,10: kneeling with open arms and feet on ground,1349146,yes,This was a lot of fun!,loved,yes,12,9
+8085-3,1459981504883,3,director,11: serving tea with bent knees,1349146,yes,This was a lot of fun!,loved,yes,12,6
+8085-3,1459981512117,3,director,12 walking dead zombie,1349146,yes,This was a lot of fun!,loved,yes,12,4
+8085-3,1459981517716,3,matcher,Think Im good,1316220,yes,"It was really enjoyable to do this. I had a bug on the first round though, my box of images turned grey and I couldn&quotechart see the images. I had to guess and just move my mouse randomly.",loved,yes,12,3
+8085-3,1459981537373,4,director,Amazing again!,1349146,yes,This was a lot of fun!,loved,yes,12,2
+8085-3,1459981540099,4,matcher,:),1316220,yes,"It was really enjoyable to do this. I had a bug on the first round though, my box of images turned grey and I couldn&quotechart see the images. I had to guess and just move my mouse randomly.",loved,yes,12,1
+8085-3,1459981550472,4,director,First line: 1: ninja,1349146,yes,This was a lot of fun!,loved,yes,12,4
+8085-3,1459981550654,4,matcher,"Ive got the clues now, so if you use the same ones we'll be good to go",1316220,yes,"It was really enjoyable to do this. I had a bug on the first round though, my box of images turned grey and I couldn&quotechart see the images. I had to guess and just move my mouse randomly.",loved,yes,12,17
+8085-3,1459981558798,4,director,2: rabbitt,1349146,yes,This was a lot of fun!,loved,yes,12,2
+8085-3,1459981572799,4,director,3: serving tea with bent knees,1349146,yes,This was a lot of fun!,loved,yes,12,6
+8085-3,1459981576396,4,director,4: man resting,1349146,yes,This was a lot of fun!,loved,yes,12,3
+8085-3,1459981587118,4,director,4: serving tea to the left with robe and toes out,1349146,yes,This was a lot of fun!,loved,yes,12,11
+8085-3,1459981595291,4,director,sorry!:,1349146,yes,This was a lot of fun!,loved,yes,12,1
+8085-3,1459981604396,4,director,5: serving tea to the left with robe and toes out,1349146,yes,This was a lot of fun!,loved,yes,12,11
+8085-3,1459981607990,4,director,6: burrito,1349146,yes,This was a lot of fun!,loved,yes,12,2
+8085-3,1459981616242,4,matcher,1-6 good,1316220,yes,"It was really enjoyable to do this. I had a bug on the first round though, my box of images turned grey and I couldn&quotechart see the images. I had to guess and just move my mouse randomly.",loved,yes,12,2
+8085-3,1459981617443,4,director,7: bride,1349146,yes,This was a lot of fun!,loved,yes,12,2
+8085-3,1459981626715,4,director,8: kneeling arms open,1349146,yes,This was a lot of fun!,loved,yes,12,4
+8085-3,1459981630153,4,director,9: walking dead,1349146,yes,This was a lot of fun!,loved,yes,12,3
+8085-3,1459981639141,4,director,10: kneeling serving tea to the left,1349146,yes,This was a lot of fun!,loved,yes,12,7
+8085-3,1459981647498,4,director,11: falling back,1349146,yes,This was a lot of fun!,loved,yes,12,3
+8085-3,1459981652682,4,director,12: flamingo,1349146,yes,This was a lot of fun!,loved,yes,12,2
+8085-3,1459981658927,4,matcher,for 10,1316220,yes,"It was really enjoyable to do this. I had a bug on the first round though, my box of images turned grey and I couldn&quotechart see the images. I had to guess and just move my mouse randomly.",loved,yes,12,2
+8085-3,1459981663392,4,matcher,you mean serving tea to the right?,1316220,yes,"It was really enjoyable to do this. I had a bug on the first round though, my box of images turned grey and I couldn&quotechart see the images. I had to guess and just move my mouse randomly.",loved,yes,12,7
+8085-3,1459981673193,4,director,omg went too fast,1349146,yes,This was a lot of fun!,loved,yes,12,4
+8085-3,1459981682617,4,director,10: kneeling serving tea to the right,1349146,yes,This was a lot of fun!,loved,yes,12,7
+8085-3,1459981686050,4,matcher,Okay good,1316220,yes,"It was really enjoyable to do this. I had a bug on the first round though, my box of images turned grey and I couldn&quotechart see the images. I had to guess and just move my mouse randomly.",loved,yes,12,2
+8085-3,1459981709390,5,matcher,There we go!,1316220,yes,"It was really enjoyable to do this. I had a bug on the first round though, my box of images turned grey and I couldn&quotechart see the images. I had to guess and just move my mouse randomly.",loved,yes,12,3
+8085-3,1459981718289,5,director,"1: kneeling serving tea to the right, this time I do mean right",1349146,yes,This was a lot of fun!,loved,yes,12,13
+8085-3,1459981724425,5,director,2: kneeling with open arms,1349146,yes,This was a lot of fun!,loved,yes,12,5
+8085-3,1459981731224,5,director,3: serving tea in robe with toes out,1349146,yes,This was a lot of fun!,loved,yes,12,8
+8085-3,1459981734337,5,director,4: ninja,1349146,yes,This was a lot of fun!,loved,yes,12,2
+8085-3,1459981739392,5,director,5: bride,1349146,yes,This was a lot of fun!,loved,yes,12,2
+8085-3,1459981743032,5,director,6: flamingo,1349146,yes,This was a lot of fun!,loved,yes,12,2
+8085-3,1459981747537,5,director,7: walking dead,1349146,yes,This was a lot of fun!,loved,yes,12,3
+8085-3,1459981767112,5,director,8: serving tea with bent knees to the right,1349146,yes,This was a lot of fun!,loved,yes,12,9
+8085-3,1459981773160,5,director,9: falling bacj,1349146,yes,This was a lot of fun!,loved,yes,12,3
+8085-3,1459981777887,5,director,10: rabbit,1349146,yes,This was a lot of fun!,loved,yes,12,2
+8085-3,1459981782192,5,director,1: man sitting,1349146,yes,This was a lot of fun!,loved,yes,12,3
+8085-3,1459981786472,5,director,11: man sitting,1349146,yes,This was a lot of fun!,loved,yes,12,3
+8085-3,1459981790784,5,director,12: burrito,1349146,yes,This was a lot of fun!,loved,yes,12,2
+8085-3,1459981799098,6,matcher,Nice!,1316220,yes,"It was really enjoyable to do this. I had a bug on the first round though, my box of images turned grey and I couldn&quotechart see the images. I had to guess and just move my mouse randomly.",loved,yes,12,1
+8085-3,1459981803671,6,director,we are on a roll!,1349146,yes,This was a lot of fun!,loved,yes,12,5
+8085-3,1459981806686,6,director,1: ninja,1349146,yes,This was a lot of fun!,loved,yes,12,2
+8085-3,1459981808141,6,matcher,Finish strong :),1316220,yes,"It was really enjoyable to do this. I had a bug on the first round though, my box of images turned grey and I couldn&quotechart see the images. I had to guess and just move my mouse randomly.",loved,yes,12,3
+8085-3,1459981811374,6,director,2: man sitting,1349146,yes,This was a lot of fun!,loved,yes,12,3
+8085-3,1459981814174,6,director,3: zombie,1349146,yes,This was a lot of fun!,loved,yes,12,2
+8085-3,1459981822287,6,director,4: kneeling with open arms,1349146,yes,This was a lot of fun!,loved,yes,12,5
+8085-3,1459981826935,6,director,5: bride,1349146,yes,This was a lot of fun!,loved,yes,12,2
+8085-3,1459981830342,6,director,6: rabbit,1349146,yes,This was a lot of fun!,loved,yes,12,2
+8085-3,1459981835636,6,director,7: falling back,1349146,yes,This was a lot of fun!,loved,yes,12,3
+8085-3,1459981838709,6,director,8: flamingo,1349146,yes,This was a lot of fun!,loved,yes,12,2
+8085-3,1459981845678,6,director,9: serving tea in robe with toes out,1349146,yes,This was a lot of fun!,loved,yes,12,8
+8085-3,1459981852655,6,director,10: burrito,1349146,yes,This was a lot of fun!,loved,yes,12,2
+8085-3,1459981862982,6,director,11: serving tea with bent knees to the right,1349146,yes,This was a lot of fun!,loved,yes,12,9
+8085-3,1459981875341,6,matcher,11 bent 12 kneeling?,1316220,yes,"It was really enjoyable to do this. I had a bug on the first round though, my box of images turned grey and I couldn&quotechart see the images. I had to guess and just move my mouse randomly.",loved,yes,12,4
+8085-3,1459981879552,6,director,12: kneeling serving tea,1349146,yes,This was a lot of fun!,loved,yes,12,4
+8085-3,1459981882237,6,matcher,Okay,1316220,yes,"It was really enjoyable to do this. I had a bug on the first round though, my box of images turned grey and I couldn&quotechart see the images. I had to guess and just move my mouse randomly.",loved,yes,12,1
+8085-3,1459981890749,6,matcher,If we dont chat again great job :). Apologize for first one!,1316220,yes,"It was really enjoyable to do this. I had a bug on the first round though, my box of images turned grey and I couldn&quotechart see the images. I had to guess and just move my mouse randomly.",loved,yes,12,12
+8085-3,1459981891700,6,director,this was fun,1349146,yes,This was a lot of fun!,loved,yes,12,3
+8085-3,1459981900069,6,director,great job partner :),1349146,yes,This was a lot of fun!,loved,yes,12,4
+8085-3,1459981903447,6,matcher,You as well,1316220,yes,"It was really enjoyable to do this. I had a bug on the first round though, my box of images turned grey and I couldn&quotechart see the images. I had to guess and just move my mouse randomly.",loved,yes,12,3
+8085-3,1459981906569,6,matcher,Have a good day,1316220,yes,"It was really enjoyable to do this. I had a bug on the first round though, my box of images turned grey and I couldn&quotechart see the images. I had to guess and just move my mouse randomly.",loved,yes,12,4
 0604-1,1459980688206,1,director,11 looks like a person sitting,1801215,yes,that was fun!!!!,loved,yes,12,6
 0604-1,1459980702423,1,matcher,Got it,1795305,yes,I had a great director.,loved,yes,12,2
 0604-1,1459980713206,1,director,12 looks like a person kneeling,1801215,yes,that was fun!!!!,loved,yes,12,6
@@ -2519,177 +2506,6 @@ gameid,msgTime,repetitionNum,role,contents,totalLength,thinksHuman,comments,rate
 0168-f,1459983191338,6,director,11 is bunny ears square head,2215607,yes,thanks,loved,yes,10,6
 0168-f,1459983194925,6,director,12 is person flying,2215607,yes,thanks,loved,yes,10,4
 0168-f,1459983231523,6,matcher,"ok, submitting",2177303,yes,none,okay,yes,10,2
-0561-5,1459981453522,1,director,hi there,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,7,2
-0561-5,1459981468198,1,director,"ok, lets see",2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,7,3
-0561-5,1459981473630,1,matcher,I have to match an image that looks like a tie. It crooks to the left. Hello to you as well. Thanks!,2828360,yes,Please raise the pay on this. Both my partner and I feel that we were not fairly compensated and that the time was greatly underestimated. It took 1 hour to complete for $1.50 plus a small bonus. That is appalling!,loved,yes,7,22
-0561-5,1459981487708,1,director,"that's number 6, I think",2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,7,5
-0561-5,1459981495002,1,director,like a Y leaning left,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,7,5
-0561-5,1459981495235,1,matcher,I made an error. It actually bends to the right.,2828360,yes,Please raise the pay on this. Both my partner and I feel that we were not fairly compensated and that the time was greatly underestimated. It took 1 hour to complete for $1.50 plus a small bonus. That is appalling!,loved,yes,7,10
-0561-5,1459981500453,1,director,"er, right yes",2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,7,3
-0561-5,1459981513641,1,director,the bottom skews right,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,7,4
-0561-5,1459981524242,1,matcher,I should pick 6 then. Okay.,2828360,yes,Please raise the pay on this. Both my partner and I feel that we were not fairly compensated and that the time was greatly underestimated. It took 1 hour to complete for $1.50 plus a small bonus. That is appalling!,loved,yes,7,6
-0561-5,1459981570705,1,matcher,I have another image that looks less like the longer tie image. It goes right at the top and bottom.,2828360,yes,Please raise the pay on this. Both my partner and I feel that we were not fairly compensated and that the time was greatly underestimated. It took 1 hour to complete for $1.50 plus a small bonus. That is appalling!,loved,yes,7,20
-0561-5,1459981595843,1,director,sounds like my number 4,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,7,5
-0561-5,1459981611668,1,director,the square is at the top center,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,7,7
-0561-5,1459981621094,1,director,with the top of the tie turned toward the right,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,7,10
-0561-5,1459981669048,1,matcher,"Sticking with the tie shape, I have one that crooks right at the top, has another jagged edge slightly below the middle, then it skews left at the bottom.",2828360,yes,Please raise the pay on this. Both my partner and I feel that we were not fairly compensated and that the time was greatly underestimated. It took 1 hour to complete for $1.50 plus a small bonus. That is appalling!,loved,yes,7,29
-0561-5,1459981699217,1,director,"number 1 looks like a candle sort of, with a flat top and the square standing on its corner in the center",2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,7,22
-0561-5,1459981706733,1,director,"that sounds like my number 11, I think",2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,7,8
-0561-5,1459981731053,1,director,"number 2 looks like a person facing right, with their arms out and knees bent (but standing)",2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,7,17
-0561-5,1459981754643,1,director,"3 looks like a rabbit? two triangles on top of the square, with the figure facing right",2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,7,17
-0561-5,1459981798564,1,matcher,"Okay, I moved to 1.",2828360,yes,Please raise the pay on this. Both my partner and I feel that we were not fairly compensated and that the time was greatly underestimated. It took 1 hour to complete for $1.50 plus a small bonus. That is appalling!,loved,yes,7,5
-0561-5,1459981803708,1,director,"5 looks like a person on their knees, with their foot sticking out to the left and their arms (triangles) spread wide",2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,7,22
-0561-5,1459981804892,1,matcher,I moved 3.,2828360,yes,Please raise the pay on this. Both my partner and I feel that we were not fairly compensated and that the time was greatly underestimated. It took 1 hour to complete for $1.50 plus a small bonus. That is appalling!,loved,yes,7,3
-0561-5,1459981846669,1,director,7 looks like a person facing left doing a yoga pose - standing on one foot with the other legt stuck out behind them to the right,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,7,27
-0561-5,1459981865619,1,matcher,I moved 7.,2828360,yes,Please raise the pay on this. Both my partner and I feel that we were not fairly compensated and that the time was greatly underestimated. It took 1 hour to complete for $1.50 plus a small bonus. That is appalling!,loved,yes,7,3
-0561-5,1459981899949,1,director,"8 looks like a person facing left, wearing a robe (there's a square 'sleeve') hanging below the arm. arm and a foot both stick out to the left, back is straight",2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,7,31
-0561-5,1459981909866,1,matcher,One looks like a person praying with hands extended to the right and legs up in the back left.,2828360,yes,Please raise the pay on this. Both my partner and I feel that we were not fairly compensated and that the time was greatly underestimated. It took 1 hour to complete for $1.50 plus a small bonus. That is appalling!,loved,yes,7,19
-0561-5,1459981916169,1,director,that's 12,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,7,2
-0561-5,1459981939555,1,director,"9 is a person sitting with their legs bent, facing left",2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,7,11
-0561-5,1459981942713,1,matcher,I moved 8.,2828360,yes,Please raise the pay on this. Both my partner and I feel that we were not fairly compensated and that the time was greatly underestimated. It took 1 hour to complete for $1.50 plus a small bonus. That is appalling!,loved,yes,7,3
-0561-5,1459981961545,1,director,"10 is a person kneeling, cant see their feet or arms. facing right",2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,7,13
-0561-5,1459981975297,1,matcher,I moved twelve. Which one has arms extended and is bent to the right.,2828360,yes,Please raise the pay on this. Both my partner and I feel that we were not fairly compensated and that the time was greatly underestimated. It took 1 hour to complete for $1.50 plus a small bonus. That is appalling!,loved,yes,7,14
-0561-5,1459981982177,1,matcher,Moved 10.,2828360,yes,Please raise the pay on this. Both my partner and I feel that we were not fairly compensated and that the time was greatly underestimated. It took 1 hour to complete for $1.50 plus a small bonus. That is appalling!,loved,yes,7,2
-0561-5,1459981993306,1,director,"that's 11 I think, odd pose. Head faces right, legs and arms stick out left",2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,7,15
-0561-5,1459982033224,1,matcher,A person has their feet extended in front of them to the left. No arms.,2828360,yes,Please raise the pay on this. Both my partner and I feel that we were not fairly compensated and that the time was greatly underestimated. It took 1 hour to complete for $1.50 plus a small bonus. That is appalling!,loved,yes,7,15
-0561-5,1459982054117,1,director,that's 9,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,7,2
-0561-5,1459982136423,1,matcher,"I have one where both one arm is on right, the other on the left, head extends leftward with no feet.",2828360,yes,Please raise the pay on this. Both my partner and I feel that we were not fairly compensated and that the time was greatly underestimated. It took 1 hour to complete for $1.50 plus a small bonus. That is appalling!,loved,yes,7,21
-0561-5,1459982189579,1,director,that doesn't sound like one I have... I have 12 in total? wonder if they threw in an extra,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,7,19
-0561-5,1459982192196,1,matcher,"Another shape has a flag on their back, and one foot kicked up with both feet facing left.",2828360,yes,Please raise the pay on this. Both my partner and I feel that we were not fairly compensated and that the time was greatly underestimated. It took 1 hour to complete for $1.50 plus a small bonus. That is appalling!,loved,yes,7,18
-0561-5,1459982241084,1,matcher,I have twelve also. This is hard to describe so that may be it. Let me know when you are ready to submit.,2828360,yes,Please raise the pay on this. Both my partner and I feel that we were not fairly compensated and that the time was greatly underestimated. It took 1 hour to complete for $1.50 plus a small bonus. That is appalling!,loved,yes,7,23
-0561-5,1459982269302,1,director,"the one with the flag on its back might be 5. to me it looks like a person on their knees facing left, with their arms spread one on each side",2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,7,31
-0561-5,1459982289555,1,matcher,I think we may have matched all that we can then.,2828360,yes,Please raise the pay on this. Both my partner and I feel that we were not fairly compensated and that the time was greatly underestimated. It took 1 hour to complete for $1.50 plus a small bonus. That is appalling!,loved,yes,7,11
-0561-5,1459982292278,1,director,but the arm on the right is kind of disconnected from the figure a bit,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,7,15
-0561-5,1459982295148,1,director,ok,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,7,1
-0561-5,1459982327306,1,matcher,I will submit then.,2828360,yes,Please raise the pay on this. Both my partner and I feel that we were not fairly compensated and that the time was greatly underestimated. It took 1 hour to complete for $1.50 plus a small bonus. That is appalling!,loved,yes,7,4
-0561-5,1459982374017,2,matcher,I have a person standing with back foot raised to the right.,2828360,yes,Please raise the pay on this. Both my partner and I feel that we were not fairly compensated and that the time was greatly underestimated. It took 1 hour to complete for $1.50 plus a small bonus. That is appalling!,loved,yes,6,12
-0561-5,1459982388148,2,matcher,The arms extend forward.,2828360,yes,Please raise the pay on this. Both my partner and I feel that we were not fairly compensated and that the time was greatly underestimated. It took 1 hour to complete for $1.50 plus a small bonus. That is appalling!,loved,yes,6,4
-0561-5,1459982392933,2,director,that is 2,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,6,3
-0561-5,1459982420249,2,director,1 is the Y (with square in middle) necktie type figure,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,6,11
-0561-5,1459982463552,2,director,3 is a figure facing right with arm extended and knees bent,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,6,12
-0561-5,1459982502352,2,director,4 is the praying figure facing right,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,6,7
-0561-5,1459982515831,2,matcher,I have one that looks like they are praising something. Both arms on each side. It cust off at the torso.,2828360,yes,Please raise the pay on this. Both my partner and I feel that we were not fairly compensated and that the time was greatly underestimated. It took 1 hour to complete for $1.50 plus a small bonus. That is appalling!,loved,yes,6,21
-0561-5,1459982543350,2,matcher,Does 4 look like it has it's knees on an altar bench?,2828360,yes,Please raise the pay on this. Both my partner and I feel that we were not fairly compensated and that the time was greatly underestimated. It took 1 hour to complete for $1.50 plus a small bonus. That is appalling!,loved,yes,6,12
-0561-5,1459982546810,2,director,yes,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,6,1
-0561-5,1459982550312,2,director,exactly,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,6,1
-0561-5,1459982573238,2,matcher,The tie figure that skews left is which one?,2828360,yes,Please raise the pay on this. Both my partner and I feel that we were not fairly compensated and that the time was greatly underestimated. It took 1 hour to complete for $1.50 plus a small bonus. That is appalling!,loved,yes,6,9
-0561-5,1459982585613,2,matcher,It skews right.,2828360,yes,Please raise the pay on this. Both my partner and I feel that we were not fairly compensated and that the time was greatly underestimated. It took 1 hour to complete for $1.50 plus a small bonus. That is appalling!,loved,yes,6,3
-0561-5,1459982591213,2,matcher,Sorry.,2828360,yes,Please raise the pay on this. Both my partner and I feel that we were not fairly compensated and that the time was greatly underestimated. It took 1 hour to complete for $1.50 plus a small bonus. That is appalling!,loved,yes,6,1
-0561-5,1459982596441,2,director,the one with the bottom skewed right is 1,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,6,9
-0561-5,1459982604631,2,director,the one with its bottom skewed left is 12,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,6,9
-0561-5,1459982647981,2,director,"5 is the candle type figure, with a flat left side and the square centered on top sitting on its corner",2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,6,21
-0561-5,1459982681779,2,matcher,There is a praying figure that looks like it is kneeling with one foot in front to the left. It looks like a triangle shaped hood hands at the back.,2828360,yes,Please raise the pay on this. Both my partner and I feel that we were not fairly compensated and that the time was greatly underestimated. It took 1 hour to complete for $1.50 plus a small bonus. That is appalling!,loved,yes,6,30
-0561-5,1459982710881,2,director,that's 4,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,6,2
-0561-5,1459982731985,2,director,"the other praying-type figure is 9. sorry, they're really similar",2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,6,10
-0561-5,1459982749073,2,director,9 has no 'hood' and the arms arent extended,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,6,9
-0561-5,1459982764966,2,director,its just kneeling,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,6,3
-0561-5,1459982785839,2,director,legs arent well defined on 9 either,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,6,7
-0561-5,1459982809628,2,director,6 is the strange 'thriller' type pose with the head hanging off to the right and the arms/legs pointing left,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,6,20
-0561-5,1459982828144,2,director,one foot raised,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,6,3
-0561-5,1459982830040,2,matcher,One is sitting with its legs up and you can see a foot shape.,2828360,yes,Please raise the pay on this. Both my partner and I feel that we were not fairly compensated and that the time was greatly underestimated. It took 1 hour to complete for $1.50 plus a small bonus. That is appalling!,loved,yes,6,14
-0561-5,1459982838770,2,director,that is 10,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,6,3
-0561-5,1459982857808,2,director,11 is the 'rabbit',2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,6,4
-0561-5,1459982884864,2,matcher,Pointing person is which one. Pointing left.,2828360,yes,Please raise the pay on this. Both my partner and I feel that we were not fairly compensated and that the time was greatly underestimated. It took 1 hour to complete for $1.50 plus a small bonus. That is appalling!,loved,yes,6,7
-0561-5,1459982893044,2,director,7,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,6,1
-0561-5,1459982920374,2,matcher,Other rabbit shape with one arm on ground.,2828360,yes,Please raise the pay on this. Both my partner and I feel that we were not fairly compensated and that the time was greatly underestimated. It took 1 hour to complete for $1.50 plus a small bonus. That is appalling!,loved,yes,6,8
-0561-5,1459982936462,2,matcher,Person with flag shape on back?,2828360,yes,Please raise the pay on this. Both my partner and I feel that we were not fairly compensated and that the time was greatly underestimated. It took 1 hour to complete for $1.50 plus a small bonus. That is appalling!,loved,yes,6,6
-0561-5,1459982939524,2,director,8,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,6,1
-0561-5,1459982994164,2,matcher,looks like they may be carrying hand but you cannot see the other side.,2828360,yes,Please raise the pay on this. Both my partner and I feel that we were not fairly compensated and that the time was greatly underestimated. It took 1 hour to complete for $1.50 plus a small bonus. That is appalling!,loved,yes,6,14
-0561-5,1459983003556,2,matcher,i meant flag.,2828360,yes,Please raise the pay on this. Both my partner and I feel that we were not fairly compensated and that the time was greatly underestimated. It took 1 hour to complete for $1.50 plus a small bonus. That is appalling!,loved,yes,6,3
-0561-5,1459983038421,2,matcher,"After that, I will submit. I think that will be it.",2828360,yes,Please raise the pay on this. Both my partner and I feel that we were not fairly compensated and that the time was greatly underestimated. It took 1 hour to complete for $1.50 plus a small bonus. That is appalling!,loved,yes,6,11
-0561-5,1459983041395,2,director,I think the toughest thing is that there are 3 similar 'praying' type figures,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,6,14
-0561-5,1459983051179,2,director,"in this case they're 3,4 and 9",2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,6,7
-0561-5,1459983062212,2,matcher,Kicked up foot to the left and flag shape on back.,2828360,yes,Please raise the pay on this. Both my partner and I feel that we were not fairly compensated and that the time was greatly underestimated. It took 1 hour to complete for $1.50 plus a small bonus. That is appalling!,loved,yes,6,11
-0561-5,1459983082425,2,director,"that sounds like my triller pose guy, number 6",2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,6,9
-0561-5,1459983093170,2,director,is the flag a square or triangle?,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,6,7
-0561-5,1459983110178,2,matcher,Square.,2828360,yes,Please raise the pay on this. Both my partner and I feel that we were not fairly compensated and that the time was greatly underestimated. It took 1 hour to complete for $1.50 plus a small bonus. That is appalling!,loved,yes,6,1
-0561-5,1459983111954,2,director,*thriller,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,6,1
-0561-5,1459983114572,2,director,"yes, that's 6",2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,6,3
-0561-5,1459983133721,2,matcher,That is it for me. Ready to submit?,2828360,yes,Please raise the pay on this. Both my partner and I feel that we were not fairly compensated and that the time was greatly underestimated. It took 1 hour to complete for $1.50 plus a small bonus. That is appalling!,loved,yes,6,8
-0561-5,1459983139289,2,director,"yep, go for it",2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,6,4
-0561-5,1459983154260,3,director,"ouch, how did we actually get worse... lol",2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,8,8
-0561-5,1459983160101,3,matcher,Rabbit ears facing right.,2828360,yes,Please raise the pay on this. Both my partner and I feel that we were not fairly compensated and that the time was greatly underestimated. It took 1 hour to complete for $1.50 plus a small bonus. That is appalling!,loved,yes,8,4
-0561-5,1459983164388,3,director,10,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,8,1
-0561-5,1459983184234,3,matcher,Dog shaped ears with one paw to the right.,2828360,yes,Please raise the pay on this. Both my partner and I feel that we were not fairly compensated and that the time was greatly underestimated. It took 1 hour to complete for $1.50 plus a small bonus. That is appalling!,loved,yes,8,9
-0561-5,1459983200611,3,matcher,I know. This is time consuming.,2828360,yes,Please raise the pay on this. Both my partner and I feel that we were not fairly compensated and that the time was greatly underestimated. It took 1 hour to complete for $1.50 plus a small bonus. That is appalling!,loved,yes,8,6
-0561-5,1459983218059,3,matcher,Person praying with knees on altar bench.,2828360,yes,Please raise the pay on this. Both my partner and I feel that we were not fairly compensated and that the time was greatly underestimated. It took 1 hour to complete for $1.50 plus a small bonus. That is appalling!,loved,yes,8,7
-0561-5,1459983249180,3,director,"if it's the one with no hood, then 6",2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,8,9
-0561-5,1459983257558,3,director,6 has the little hood thing on his back,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,8,9
-0561-5,1459983270005,3,director,"3 has the hood, I mean",2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,8,6
-0561-5,1459983277212,3,director,"ugh, I'm confusing myself now",2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,8,5
-0561-5,1459983281319,3,director,6 no hood,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,8,3
-0561-5,1459983282861,3,director,3 hood,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,8,2
-0561-5,1459983293459,3,director,both praying,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,8,2
-0561-5,1459983313838,3,matcher,Tie shaped that skews right?,2828360,yes,Please raise the pay on this. Both my partner and I feel that we were not fairly compensated and that the time was greatly underestimated. It took 1 hour to complete for $1.50 plus a small bonus. That is appalling!,loved,yes,8,5
-0561-5,1459983348971,3,director,"with the top of the tie on the left and the square in the middle of it, bottom of the tie skewing right - 2",2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,8,25
-0561-5,1459983388200,3,director,"the other tie-like figure with the square kind of hanging off the top, with the 'neck' of the tie on the right and the tail of the tie on the left, is number 5",2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,8,34
-0561-5,1459983424100,3,matcher,depressed looking shape with knees bent up towards torso and feet pointing upwards.,2828360,yes,Please raise the pay on this. Both my partner and I feel that we were not fairly compensated and that the time was greatly underestimated. It took 1 hour to complete for $1.50 plus a small bonus. That is appalling!,loved,yes,8,13
-0561-5,1459983444362,3,director,that's 1,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,8,2
-0561-5,1459983450859,3,matcher,Pointing figure that points left.,2828360,yes,Please raise the pay on this. Both my partner and I feel that we were not fairly compensated and that the time was greatly underestimated. It took 1 hour to complete for $1.50 plus a small bonus. That is appalling!,loved,yes,8,5
-0561-5,1459983454532,3,director,4,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,8,1
-0561-5,1459983497083,3,matcher,Looks like a conductor or choir director. Both arms extended on each side of figure. No legs and cuts off at torso.,2828360,yes,Please raise the pay on this. Both my partner and I feel that we were not fairly compensated and that the time was greatly underestimated. It took 1 hour to complete for $1.50 plus a small bonus. That is appalling!,loved,yes,8,22
-0561-5,1459983508095,3,director,7,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,8,1
-0561-5,1459983545890,3,matcher,Person with square hanging that is flag shaped. Foot kicked up to the left.,2828360,yes,Please raise the pay on this. Both my partner and I feel that we were not fairly compensated and that the time was greatly underestimated. It took 1 hour to complete for $1.50 plus a small bonus. That is appalling!,loved,yes,8,14
-0561-5,1459983550613,3,director,11,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,8,1
-0561-5,1459983563745,3,matcher,Yoga pose?,2828360,yes,Please raise the pay on this. Both my partner and I feel that we were not fairly compensated and that the time was greatly underestimated. It took 1 hour to complete for $1.50 plus a small bonus. That is appalling!,loved,yes,8,2
-0561-5,1459983567496,3,director,9,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,8,1
-0561-5,1459983614449,3,matcher,I start to get confused at this point. It does not tell you what has already been moved.,2828360,yes,Please raise the pay on this. Both my partner and I feel that we were not fairly compensated and that the time was greatly underestimated. It took 1 hour to complete for $1.50 plus a small bonus. That is appalling!,loved,yes,8,18
-0561-5,1459983631899,3,director,"8 and 12 are similar, 8 looks like a candle to me and 12 is the other kneeling figure",2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,8,19
-0561-5,1459983659025,3,director,"8 has the square sitting on a flat top, 12 has the square sitting on angled 'shoulders'",2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,8,17
-0561-5,1459983693933,3,director,I think those are the last two,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,8,7
-0561-5,1459983697614,3,matcher,"At this rate, we should submit. I am at 50 minutes so I don't want time to run out.",2828360,yes,Please raise the pay on this. Both my partner and I feel that we were not fairly compensated and that the time was greatly underestimated. It took 1 hour to complete for $1.50 plus a small bonus. That is appalling!,loved,yes,8,19
-0561-5,1459983706181,3,director,"yea, this is way longer than they stated",2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,8,8
-0561-5,1459983719565,3,matcher,I think I already filled those slots so I will submit.,2828360,yes,Please raise the pay on this. Both my partner and I feel that we were not fairly compensated and that the time was greatly underestimated. It took 1 hour to complete for $1.50 plus a small bonus. That is appalling!,loved,yes,8,11
-0561-5,1459983729645,4,director,1 square flag guy,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,7,4
-0561-5,1459983731550,4,director,2 candle,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,7,2
-0561-5,1459983741848,4,director,3 praying figure no hood,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,7,5
-0561-5,1459983760582,4,director,"4 tie with 'neck' on right, tail on left",2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,7,9
-0561-5,1459983780065,4,director,5 similar to candle but with sloped sholders,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,7,8
-0561-5,1459983788162,4,director,6 figure pointing left,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,7,4
-0561-5,1459983792449,4,director,7 depressed guy,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,7,3
-0561-5,1459983797175,4,director,8 praying guy with hood,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,7,5
-0561-5,1459983809532,4,director,"9 other necktie, square in center of 'neck'",2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,7,8
-0561-5,1459983813232,4,director,10 rabbit,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,7,2
-0561-5,1459983818678,4,director,11 conductor,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,7,2
-0561-5,1459983822093,4,director,12 yoga pose,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,7,3
-0561-5,1459983855019,4,matcher,Got better. Pointing finger?,2828360,yes,Please raise the pay on this. Both my partner and I feel that we were not fairly compensated and that the time was greatly underestimated. It took 1 hour to complete for $1.50 plus a small bonus. That is appalling!,loved,yes,7,4
-0561-5,1459983862330,4,director,6,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,7,1
-0561-5,1459983875874,4,matcher,That's it.  Let's submit!,2828360,yes,Please raise the pay on this. Both my partner and I feel that we were not fairly compensated and that the time was greatly underestimated. It took 1 hour to complete for $1.50 plus a small bonus. That is appalling!,loved,yes,7,4
-0561-5,1459983881532,4,director,gogo :),2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,7,2
-0561-5,1459983888661,5,director,1 depressed guy,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,8,3
-0561-5,1459983895108,5,director,"2 praying, no hood",2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,8,4
-0561-5,1459983897140,5,director,3 rabbit,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,8,2
-0561-5,1459983903051,5,director,4 finger pointing left,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,8,4
-0561-5,1459983907373,5,director,5 square flag guy,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,8,4
-0561-5,1459983911304,5,director,6 praying with hood,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,8,4
-0561-5,1459983915501,5,director,7 yoga pose,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,8,3
-0561-5,1459983918308,5,director,8 candle,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,8,2
-0561-5,1459983934804,5,director,"9 necktie with neck on right, square not in neck",2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,8,10
-0561-5,1459983936202,5,matcher,got it so far.,2828360,yes,Please raise the pay on this. Both my partner and I feel that we were not fairly compensated and that the time was greatly underestimated. It took 1 hour to complete for $1.50 plus a small bonus. That is appalling!,loved,yes,8,4
-0561-5,1459983940382,5,director,10 conductor,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,8,2
-0561-5,1459983946718,5,director,11 necktie with square in neck,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,8,6
-0561-5,1459983954478,5,director,12 candle with sloped shoulders,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,8,5
-0561-5,1459983963792,5,director,I think it's lying to us on our results lol,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,8,10
-0561-5,1459984032920,5,matcher,Not sure. Ready to submit?,2828360,yes,Please raise the pay on this. Both my partner and I feel that we were not fairly compensated and that the time was greatly underestimated. It took 1 hour to complete for $1.50 plus a small bonus. That is appalling!,loved,yes,8,5
-0561-5,1459984035895,5,director,yep,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,8,1
-0561-5,1459984041789,6,director,1 rabbit,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,9,2
-0561-5,1459984044445,6,director,2 depressed guy,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,9,3
-0561-5,1459984047685,6,director,3 yoga pose,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,9,3
-0561-5,1459984051167,6,director,4 praying no hood,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,9,4
-0561-5,1459984054058,6,director,5 praying with hood,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,9,4
-0561-5,1459984059567,6,matcher,They lied about the time so I would not doubt it. lol,2828360,yes,Please raise the pay on this. Both my partner and I feel that we were not fairly compensated and that the time was greatly underestimated. It took 1 hour to complete for $1.50 plus a small bonus. That is appalling!,loved,yes,9,12
-0561-5,1459984063529,6,director,6 necktie with square in neck,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,9,6
-0561-5,1459984067587,6,director,"yea, no joke XD",2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,9,4
-0561-5,1459984070764,6,director,7 candle,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,9,2
-0561-5,1459984075637,6,director,8 finger pointing left,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,9,4
-0561-5,1459984079685,6,director,9 square flag guy,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,9,4
-0561-5,1459984084637,6,director,10 candle sloped shoulders,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,9,4
-0561-5,1459984091094,6,director,11 necktie with square not in neck,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,9,7
-0561-5,1459984094505,6,director,12 conductor,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,9,2
-0561-5,1459984145022,6,matcher,Ready to submit.,2828360,yes,Please raise the pay on this. Both my partner and I feel that we were not fairly compensated and that the time was greatly underestimated. It took 1 hour to complete for $1.50 plus a small bonus. That is appalling!,loved,yes,9,3
-0561-5,1459984149181,6,director,I'm going to write them a nicely worded angry letter after this submits,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,9,13
-0561-5,1459984155461,6,director,go for it,2993434,yes,"This was much, MUCH longer than the stated time estimate. 52 minutes, including wait time!!!! Extremely underpaid.",liked,yes,9,3
-0561-5,1459984157541,6,matcher,I will too.,2828360,yes,Please raise the pay on this. Both my partner and I feel that we were not fairly compensated and that the time was greatly underestimated. It took 1 hour to complete for $1.50 plus a small bonus. That is appalling!,loved,yes,9,3
 3425-5,1459981622545,1,director,hi,1950788,yes,I thought it was fun. My partner was patient with me as I learned how to describe.,loved,yes,9,1
 3425-5,1459981630458,1,matcher,hi~,1840989,yes,,loved,yes,9,1
 3425-5,1459981658558,1,director,how do you want me to describe?,1950788,yes,I thought it was fun. My partner was patient with me as I learned how to describe.,loved,yes,9,7
@@ -2728,7 +2544,7 @@ gameid,msgTime,repetitionNum,role,contents,totalLength,thinksHuman,comments,rate
 3425-5,1459982759388,2,director,2 looks like a lightnig bolt with a diamond on top,1950788,yes,I thought it was fun. My partner was patient with me as I learned how to describe.,loved,yes,12,11
 3425-5,1459982783361,2,director,3 looks like diamond balancing on flat surface,1950788,yes,I thought it was fun. My partner was patient with me as I learned how to describe.,loved,yes,12,8
 3425-5,1459982804553,2,director,"4 is very basic, diamond on top",1950788,yes,I thought it was fun. My partner was patient with me as I learned how to describe.,loved,yes,12,7
-3425-5,1459982826e3,2,director,"7 looks like guy with two legs, standing, one leg in the air",1950788,yes,I thought it was fun. My partner was patient with me as I learned how to describe.,loved,yes,12,13
+3425-5,1459982826000,2,director,"7 looks like guy with two legs, standing, one leg in the air",1950788,yes,I thought it was fun. My partner was patient with me as I learned how to describe.,loved,yes,12,13
 3425-5,1459982843996,2,director,8 looks like man in robe holding out a flat bowl,1950788,yes,I thought it was fun. My partner was patient with me as I learned how to describe.,loved,yes,12,11
 3425-5,1459982865214,2,director,9 looks like movie camera balancing on the edge of a cliff,1950788,yes,I thought it was fun. My partner was patient with me as I learned how to describe.,loved,yes,12,12
 3425-5,1459982909898,2,director,12 looks like two diamonds stacked on top of pac man,1950788,yes,I thought it was fun. My partner was patient with me as I learned how to describe.,loved,yes,12,11
@@ -2867,6 +2683,199 @@ gameid,msgTime,repetitionNum,role,contents,totalLength,thinksHuman,comments,rate
 3150-8,1459983435593,6,director,10 prayer bent at knees,1460206,yes,It was fun.,loved,yes,12,5
 3150-8,1459983441824,6,director,11 dancer flowing dress,1460206,yes,It was fun.,loved,yes,12,4
 3150-8,1459983450075,6,director,125 kneeled outstreched arms,1460206,yes,It was fun.,loved,yes,12,4
+2742-0,1459982345293,1,director,1st square,4214034,yes,pretty fun,loved,yes,12,2
+2742-0,1459982349095,1,matcher,Are you there?,NA,NA,NA,NA,NA,12,3
+2742-0,1459982356820,1,director,yeh,4214034,yes,pretty fun,loved,yes,12,1
+2742-0,1459982379996,1,director,triangle pointing to left mid chest,4214034,yes,pretty fun,loved,yes,12,6
+2742-0,1459982403066,1,director,looks a bit like a person with bent knees,4214034,yes,pretty fun,loved,yes,12,9
+2742-0,1459982424501,1,matcher,okay. done,NA,NA,NA,NA,NA,12,2
+2742-0,1459982457647,1,director,looks like a person sitting down,4214034,yes,pretty fun,loved,yes,12,6
+2742-0,1459982510983,1,matcher,with legs extended and a square head or more like a triangle butt and a bow in hair,NA,NA,NA,NA,NA,12,18
+2742-0,1459982591346,1,director,"triangle head large body, bent up knees with small triangle foot",4214034,yes,pretty fun,loved,yes,12,11
+2742-0,1459982601942,1,matcher,Done,NA,NA,NA,NA,NA,12,1
+2742-0,1459982652141,1,director,"almost square body area with small point on upper right, triangle ontop",4214034,yes,pretty fun,loved,yes,12,12
+2742-0,1459982698192,1,matcher,Is the left side a straight vertical line?,NA,NA,NA,NA,NA,12,8
+2742-0,1459982702357,1,director,yes,4214034,yes,pretty fun,loved,yes,12,1
+2742-0,1459982733865,1,matcher,"okay, done. I guess I can describe some of mine to you as well?",NA,NA,NA,NA,NA,12,14
+2742-0,1459982753624,1,director,i didnt see anything against that,4214034,yes,pretty fun,loved,yes,12,6
+2742-0,1459982799309,1,director,next is a beak looking head pointing left with a square right behind it on upper back,4214034,yes,pretty fun,loved,yes,12,17
+2742-0,1459982823478,1,matcher,You're good at describing these though.,NA,NA,NA,NA,NA,12,6
+2742-0,1459982830317,1,matcher,"Okay, got that one.",NA,NA,NA,NA,NA,12,4
+2742-0,1459982832147,1,director,cool tks,4214034,yes,pretty fun,loved,yes,12,2
+2742-0,1459982899226,1,director,"next is triagle facing right, a square on top, then 2 inverted triangles on the square",4214034,yes,pretty fun,loved,yes,12,16
+2742-0,1459982937626,1,matcher,kind of like a little girl with a big bow in her hair? like Madeline?,NA,NA,NA,NA,NA,12,15
+2742-0,1459982978309,1,matcher,Does that make any sense?,NA,NA,NA,NA,NA,12,5
+2742-0,1459982981863,1,director,"idk madeline...short sides of triangle are left and bottom, if you slid it back it would fit in corner",4214034,yes,pretty fun,loved,yes,12,19
+2742-0,1459982993387,1,matcher,"Yep, got it.",NA,NA,NA,NA,NA,12,3
+2742-0,1459983064364,1,director,"fat triangle on top, large body almost rectangular, then angles off to the right at bottom",4214034,yes,pretty fun,loved,yes,12,16
+2742-0,1459983091283,1,matcher,"ok, got it",NA,NA,NA,NA,NA,12,3
+2742-0,1459983127289,1,director,almost like an extended Y with triangle in middle....sort of a hands in the air jesus post,4214034,yes,pretty fun,loved,yes,12,17
+2742-0,1459983131963,1,director,pose,4214034,yes,pretty fun,loved,yes,12,1
+2742-0,1459983169078,1,director,this is killing our hourly rate,4214034,yes,pretty fun,loved,yes,12,6
+2742-0,1459983170676,1,matcher,"haha, the lopsided angel",NA,NA,NA,NA,NA,12,4
+2742-0,1459983178361,1,director,drunk jesus,4214034,yes,pretty fun,loved,yes,12,2
+2742-0,1459983187495,1,matcher,"Yeah, and we have 5 more rounds",NA,NA,NA,NA,NA,12,7
+2742-0,1459983194837,1,matcher,drunk jesus Wahahaha,NA,NA,NA,NA,NA,12,3
+2742-0,1459983314176,1,director,"next is triangle on top, another small triangle into a peak facing right that forms a V with the bottom,and opposite is a small triangle",4214034,yes,pretty fun,loved,yes,12,25
+2742-0,1459983392241,1,matcher,is the left corner of it the same as the one I referred to as madeline? it would slide into a left fitting corner?,NA,NA,NA,NA,NA,12,24
+2742-0,1459983440623,1,director,"yeh, if it a person it would look like they are kneeling sort of",4214034,yes,pretty fun,loved,yes,12,14
+2742-0,1459983458056,1,director,with pointy madonna boobs,4214034,yes,pretty fun,loved,yes,12,4
+2742-0,1459983464469,1,matcher,got it,NA,NA,NA,NA,NA,12,2
+2742-0,1459983503201,1,matcher,"haha, this is worth the time hit we're taking, i've been at it for 6 hours today already so this is a nice break",NA,NA,NA,NA,NA,12,24
+2742-0,1459983547828,1,director,"this one is short, thick at bottom with small tri pointing left, big triangle above it pointing left, cube on top, triangle hanging off cube to the right",4214034,yes,pretty fun,loved,yes,12,28
+2742-0,1459983584817,1,director,i just banged a 30mg addie so im all bouncy and ready to move fast..lol,4214034,yes,pretty fun,loved,yes,12,15
+2742-0,1459983656134,1,matcher,"a) okay, got that one, and b) we sound like maybe we're twins separated at birth, I took one about 45 mins. ago",NA,NA,NA,NA,NA,12,23
+2742-0,1459983749248,1,director,"cube on top, 2 triangles right together pointing left, bowtie where ass would be, skiiny single lef",4214034,yes,pretty fun,loved,yes,12,17
+2742-0,1459983751620,1,director,leg,4214034,yes,pretty fun,loved,yes,12,1
+2742-0,1459983848728,1,matcher,"got it. out of the last two, one looks kind of like a geisha or someone wearing a graduation gown to me. the other one is just a gd mess. Do you know which is which?",NA,NA,NA,NA,NA,12,36
+2742-0,1459983894235,1,director,"next is geisha looking one, last is abstract art looking thing",4214034,yes,pretty fun,loved,yes,12,11
+2742-0,1459983925285,1,matcher,Finished. Do I submit or do you?,NA,NA,NA,NA,NA,12,7
+2742-0,1459983955186,1,director,"you, i dont have a button",4214034,yes,pretty fun,loved,yes,12,6
+2742-0,1459983979189,2,matcher,sending...we aced it,NA,NA,NA,NA,NA,10,3
+2742-0,1459984009103,2,director,nice,4214034,yes,pretty fun,loved,yes,10,1
+2742-0,1459984027852,2,director,well this should go faster,4214034,yes,pretty fun,loved,yes,10,5
+2742-0,1459984035573,2,director,hands in the air,4214034,yes,pretty fun,loved,yes,10,4
+2742-0,1459984189324,2,director,yo,4214034,yes,pretty fun,loved,yes,10,1
+2742-0,1459984283669,2,matcher,drunk jesus again?,NA,NA,NA,NA,NA,10,3
+2742-0,1459984305094,2,director,yeh,4214034,yes,pretty fun,loved,yes,10,1
+2742-0,1459984329589,2,matcher,what number is geisha lady?,NA,NA,NA,NA,NA,10,5
+2742-0,1459984342255,2,director,7,4214034,yes,pretty fun,loved,yes,10,1
+2742-0,1459984374180,2,matcher,modern art disaster? #12 last time,NA,NA,NA,NA,NA,10,6
+2742-0,1459984379088,2,director,10,4214034,yes,pretty fun,loved,yes,10,1
+2742-0,1459984429477,2,matcher,sitting person with leg extended? sitting person that would fit into a left corner with inverted triangles on head?,NA,NA,NA,NA,NA,10,19
+2742-0,1459984455658,2,director,legs 11,4214034,yes,pretty fun,loved,yes,10,2
+2742-0,1459984464787,2,director,corner 3,4214034,yes,pretty fun,loved,yes,10,2
+2742-0,1459984482214,2,director,no 6,4214034,yes,pretty fun,loved,yes,10,2
+2742-0,1459984516773,2,matcher,person leaning forward on one leg with leg stretched behind?,NA,NA,NA,NA,NA,10,10
+2742-0,1459984521487,2,director,2,4214034,yes,pretty fun,loved,yes,10,1
+2742-0,1459984566725,2,matcher,"body that's vertical rectangle on left, angles on right, diamond for head?",NA,NA,NA,NA,NA,10,12
+2742-0,1459984584384,2,director,9,4214034,yes,pretty fun,loved,yes,10,1
+2742-0,1459984600233,2,director,shit 4,4214034,yes,pretty fun,loved,yes,10,2
+2742-0,1459984613668,2,director,flat on left and bottom?,4214034,yes,pretty fun,loved,yes,10,5
+2742-0,1459984625845,2,matcher,yeah.,NA,NA,NA,NA,NA,10,1
+2742-0,1459984627055,2,director,flat top with diamond?,4214034,yes,pretty fun,loved,yes,10,4
+2742-0,1459984630024,2,director,yeh 4,4214034,yes,pretty fun,loved,yes,10,2
+2742-0,1459984674517,2,matcher,"next - looks kind of like a t-rex to me, walking forward with one leg up and a square on the back of it's neck?",NA,NA,NA,NA,NA,10,25
+2742-0,1459984691137,2,director,12,4214034,yes,pretty fun,loved,yes,10,1
+2742-0,1459984748837,2,matcher,"looks like someone kneeling on floor with a foot out behind them, diamond head, two triangles for arms?",NA,NA,NA,NA,NA,10,18
+2742-0,1459984765221,2,matcher,You're much better at the descriptions ha,NA,NA,NA,NA,NA,10,7
+2742-0,1459984796242,2,director,3,4214034,yes,pretty fun,loved,yes,10,1
+2742-0,1459984833269,2,matcher,"mostly blob with small triangle on bottom right, diamond head",NA,NA,NA,NA,NA,10,10
+2742-0,1459984852297,2,director,9,4214034,yes,pretty fun,loved,yes,10,1
+2742-0,1459984875495,2,matcher,graduate/geisha person?,NA,NA,NA,NA,NA,10,2
+2742-0,1459984882623,2,director,7,4214034,yes,pretty fun,loved,yes,10,1
+2742-0,1459984909977,2,matcher,somewhat kneeling graduate/geisha with pointy right triangle at middle?,NA,NA,NA,NA,NA,10,9
+2742-0,1459984924341,2,director,5,4214034,yes,pretty fun,loved,yes,10,1
+2742-0,1459984983109,2,matcher,If you can describe #8 (you can definitely do it better than me) then I think we're done,NA,NA,NA,NA,NA,10,18
+2742-0,1459985017484,2,director,um idk which one we havent done since we did them out of ordere,4214034,yes,pretty fun,loved,yes,10,14
+2742-0,1459985082117,2,matcher,"All of them but 8, I'm pretty sure.",NA,NA,NA,NA,NA,10,8
+2742-0,1459985092126,2,director,"did we do the short fat one with a small triangle on bottom left, big tri top left, cube on right with triangle hanging off",4214034,yes,pretty fun,loved,yes,10,25
+2742-0,1459985106304,2,director,thats 8 on my side,4214034,yes,pretty fun,loved,yes,10,5
+2742-0,1459985134693,2,director,sounds good,4214034,yes,pretty fun,loved,yes,10,2
+2742-0,1459985178121,3,director,god how many rounds,4214034,yes,pretty fun,loved,yes,4,4
+2742-0,1459985180623,3,matcher,Fu.......10/12 My fault for going out of order trying to hurry. sorry.,NA,NA,NA,NA,NA,4,12
+2742-0,1459985195444,3,matcher,"4 more rounds, we can kill it quickly",NA,NA,NA,NA,NA,4,8
+2742-0,1459985199215,3,director,ok,4214034,yes,pretty fun,loved,yes,4,1
+2742-0,1459985212589,3,director,"bent knees, triangle to righ",4214034,yes,pretty fun,loved,yes,4,5
+2742-0,1459985214539,3,director,t,4214034,yes,pretty fun,loved,yes,4,1
+2742-0,1459985228100,3,matcher,ok,NA,NA,NA,NA,NA,4,1
+2742-0,1459985235948,3,director,8 from last round,4214034,yes,pretty fun,loved,yes,4,4
+2742-0,1459985247748,3,matcher,got it,NA,NA,NA,NA,NA,4,2
+2742-0,1459985263666,3,director,"kneeling, triangle to right at chest",4214034,yes,pretty fun,loved,yes,4,6
+2742-0,1459985299541,3,matcher,left side would fit into a corner or is there a triangle extended on the bottom left,NA,NA,NA,NA,NA,4,17
+2742-0,1459985345734,3,director,"yeh it would fit corner, 1 triangle on top for head",4214034,yes,pretty fun,loved,yes,4,11
+2742-0,1459985356424,3,matcher,next,NA,NA,NA,NA,NA,4,1
+2742-0,1459985361238,3,director,art project,4214034,yes,pretty fun,loved,yes,4,2
+2742-0,1459985393333,3,matcher,done,NA,NA,NA,NA,NA,4,1
+2742-0,1459985395851,3,director,flat top with triangle,4214034,yes,pretty fun,loved,yes,4,4
+2742-0,1459985473894,3,matcher,long straight line on left?,NA,NA,NA,NA,NA,4,5
+2742-0,1459985487658,3,director,yeh next is sitting with legs to left,4214034,yes,pretty fun,loved,yes,4,8
+2742-0,1459985522341,3,matcher,"legs out, right?",NA,NA,NA,NA,NA,4,3
+2742-0,1459985536255,3,director,yeh toward left of box,4214034,yes,pretty fun,loved,yes,4,5
+2742-0,1459985542071,3,matcher,got it,NA,NA,NA,NA,NA,4,2
+2742-0,1459985548716,3,director,trex,4214034,yes,pretty fun,loved,yes,4,1
+2742-0,1459985568794,3,matcher,k,NA,NA,NA,NA,NA,4,1
+2742-0,1459985577927,3,director,triangle that fits corner 2 triangles on top,4214034,yes,pretty fun,loved,yes,4,8
+2742-0,1459985598244,3,matcher,k,NA,NA,NA,NA,NA,4,1
+2742-0,1459985599138,3,director,drunk jesus,4214034,yes,pretty fun,loved,yes,4,2
+2742-0,1459985604661,3,matcher,k,NA,NA,NA,NA,NA,4,1
+2742-0,1459985607045,3,director,leg extended,4214034,yes,pretty fun,loved,yes,4,2
+2742-0,1459985613565,3,director,geisha,4214034,yes,pretty fun,loved,yes,4,1
+2742-0,1459985621849,3,director,blob with triangle,4214034,yes,pretty fun,loved,yes,4,3
+2742-0,1459985642644,3,matcher,last one kneeling with triangle foot behind?,NA,NA,NA,NA,NA,4,7
+2742-0,1459985652721,3,director,no thats 3,4214034,yes,pretty fun,loved,yes,4,3
+2742-0,1459985677668,3,matcher,wha? I thought 3 was art project disaster,NA,NA,NA,NA,NA,4,8
+2742-0,1459985688646,3,director,no that was 4,4214034,yes,pretty fun,loved,yes,4,4
+2742-0,1459985710373,3,matcher,what's 12?,NA,NA,NA,NA,NA,4,2
+2742-0,1459985737490,3,director,big blob with big cube triangle head,4214034,yes,pretty fun,loved,yes,4,7
+2742-0,1459985890344,3,matcher,"1-kneeling-ish with feet to left 2-pointy boobs 3-kneeling, extended triangle foot behind to left 4-art disaster 5-sitting, legs out 6-t.rex 7-sitting, triangles on head 8-drunk jesus 9-standing on one leg 10-half rectangle, diamond head 11-geisha 12-blob with diamond head, triangle bottom right?",NA,NA,NA,NA,NA,4,42
+2742-0,1459985969028,3,director,"no but jsut move on  so we can get teh 1.5...been on this for hour, need to get back to making money",4214034,yes,pretty fun,loved,yes,4,22
+2742-0,1459985984560,4,director,flat left,4214034,yes,pretty fun,loved,yes,10,2
+2742-0,1459985994822,4,matcher,ok,NA,NA,NA,NA,NA,10,1
+2742-0,1459985998447,4,director,jesus,4214034,yes,pretty fun,loved,yes,10,1
+2742-0,1459986004884,4,matcher,k,NA,NA,NA,NA,NA,10,1
+2742-0,1459986007829,4,director,blob with cube head,4214034,yes,pretty fun,loved,yes,10,4
+2742-0,1459986014564,4,matcher,k,NA,NA,NA,NA,NA,10,1
+2742-0,1459986020432,4,director,sitting feet to left,4214034,yes,pretty fun,loved,yes,10,4
+2742-0,1459986032685,4,matcher,yep,NA,NA,NA,NA,NA,10,1
+2742-0,1459986033340,4,director,kneeling boob to right,4214034,yes,pretty fun,loved,yes,10,4
+2742-0,1459986041317,4,matcher,k,NA,NA,NA,NA,NA,10,1
+2742-0,1459986042289,4,director,giesha,4214034,yes,pretty fun,loved,yes,10,1
+2742-0,1459986051686,4,matcher,go,NA,NA,NA,NA,NA,10,1
+2742-0,1459986053543,4,director,triangle with 2 triangles on top,4214034,yes,pretty fun,loved,yes,10,6
+2742-0,1459986060949,4,matcher,k,NA,NA,NA,NA,NA,10,1
+2742-0,1459986071456,4,director,"2 tria left, cube head with triangle hanging",4214034,yes,pretty fun,loved,yes,10,8
+2742-0,1459986122805,4,matcher,go,NA,NA,NA,NA,NA,10,1
+2742-0,1459986123720,4,director,trex,4214034,yes,pretty fun,loved,yes,10,1
+2742-0,1459986128980,4,director,art project,4214034,yes,pretty fun,loved,yes,10,2
+2742-0,1459986138424,4,matcher,k,NA,NA,NA,NA,NA,10,1
+2742-0,1459986143832,4,director,bent knees boobs to right,4214034,yes,pretty fun,loved,yes,10,5
+2742-0,1459986150732,4,director,leg behind,4214034,yes,pretty fun,loved,yes,10,2
+2742-0,1459986152374,4,matcher,k,NA,NA,NA,NA,NA,10,1
+2742-0,1459986180823,5,director,geisha,4214034,yes,pretty fun,loved,yes,7,1
+2742-0,1459986184958,5,director,trex,4214034,yes,pretty fun,loved,yes,7,1
+2742-0,1459986194102,5,director,jesus pose,4214034,yes,pretty fun,loved,yes,7,2
+2742-0,1459986205623,5,director,leg behind,4214034,yes,pretty fun,loved,yes,7,2
+2742-0,1459986226645,5,matcher,leg behind standing>,NA,NA,NA,NA,NA,7,3
+2742-0,1459986231449,5,matcher,?,NA,NA,NA,NA,NA,7,1
+2742-0,1459986235043,5,director,yeh,4214034,yes,pretty fun,loved,yes,7,1
+2742-0,1459986241365,5,director,like an ice skater,4214034,yes,pretty fun,loved,yes,7,4
+2742-0,1459986246933,5,matcher,got it,NA,NA,NA,NA,NA,7,2
+2742-0,1459986259159,5,director,short fat cube head with triangle hanging,4214034,yes,pretty fun,loved,yes,7,7
+2742-0,1459986275767,5,matcher,k,NA,NA,NA,NA,NA,7,1
+2742-0,1459986281072,5,director,triangle that fits left corner with 2 tria on top,4214034,yes,pretty fun,loved,yes,7,10
+2742-0,1459986291973,5,matcher,yep,NA,NA,NA,NA,NA,7,1
+2742-0,1459986292737,5,director,art project,4214034,yes,pretty fun,loved,yes,7,2
+2742-0,1459986300310,5,matcher,go,NA,NA,NA,NA,NA,7,1
+2742-0,1459986303000,5,director,"flat left, flat top wit cube",4214034,yes,pretty fun,loved,yes,7,6
+2742-0,1459986310581,5,matcher,k,NA,NA,NA,NA,NA,7,1
+2742-0,1459986317003,5,director,kneeling with boobs right,4214034,yes,pretty fun,loved,yes,7,4
+2742-0,1459986325542,5,director,knees bent boobs rigth,4214034,yes,pretty fun,loved,yes,7,4
+2742-0,1459986331656,5,matcher,ok,NA,NA,NA,NA,NA,7,1
+2742-0,1459986332878,5,director,blob,4214034,yes,pretty fun,loved,yes,7,1
+2742-0,1459986343119,5,director,sitting with feet left,4214034,yes,pretty fun,loved,yes,7,4
+2742-0,1459986350165,5,matcher,last,NA,NA,NA,NA,NA,7,1
+2742-0,1459986359532,5,director,sitting with feet to left,4214034,yes,pretty fun,loved,yes,7,5
+2742-0,1459986369935,6,director,damn,4214034,yes,pretty fun,loved,yes,8,1
+2742-0,1459986370986,6,director,lol,4214034,yes,pretty fun,loved,yes,8,1
+2742-0,1459986376324,6,matcher,da fuq sorry,NA,NA,NA,NA,NA,8,3
+2742-0,1459986382359,6,director,idc,4214034,yes,pretty fun,loved,yes,8,1
+2742-0,1459986385492,6,matcher,there goes our 70 cent bonus,NA,NA,NA,NA,NA,8,6
+2742-0,1459986386852,6,director,geisha,4214034,yes,pretty fun,loved,yes,8,1
+2742-0,1459986393611,6,director,i just want to move on,4214034,yes,pretty fun,loved,yes,8,6
+2742-0,1459986399895,6,matcher,go it's the end,NA,NA,NA,NA,NA,8,4
+2742-0,1459986411414,6,director,geisha,4214034,yes,pretty fun,loved,yes,8,1
+2742-0,1459986417521,6,director,kneeling boobs right,4214034,yes,pretty fun,loved,yes,8,3
+2742-0,1459986420184,6,director,blob,4214034,yes,pretty fun,loved,yes,8,1
+2742-0,1459986426253,6,director,knees bent,4214034,yes,pretty fun,loved,yes,8,2
+2742-0,1459986430745,6,director,jesus,4214034,yes,pretty fun,loved,yes,8,1
+2742-0,1459986438992,6,director,short fat cube head,4214034,yes,pretty fun,loved,yes,8,4
+2742-0,1459986449228,6,director,triangle with 2 on top,4214034,yes,pretty fun,loved,yes,8,5
+2742-0,1459986451599,6,director,skater,4214034,yes,pretty fun,loved,yes,8,1
+2742-0,1459986459189,6,director,flat left flat top,4214034,yes,pretty fun,loved,yes,8,4
+2742-0,1459986463834,6,director,art project,4214034,yes,pretty fun,loved,yes,8,2
+2742-0,1459986471526,6,director,trex,4214034,yes,pretty fun,loved,yes,8,1
+2742-0,1459986477563,6,director,sitting legs left,4214034,yes,pretty fun,loved,yes,8,3
 9438-2,1459982812800,1,matcher,Hi,1157176,yes,None,okay,yes,10,1
 9438-2,1459982815355,1,director,Heyo!,1184677,yes,Interesting experiment!,okay,yes,10,1
 9438-2,1459982823902,1,matcher,Lets get started,1157176,yes,None,okay,yes,10,3
@@ -3298,6 +3307,108 @@ gameid,msgTime,repetitionNum,role,contents,totalLength,thinksHuman,comments,rate
 4272-e,1459984969823,6,director,yep,1365346,yes,it was fun.,loved,yes,12,1
 4272-e,1459984972482,6,matcher,nice working with you!,1330781,yes,Great HIT!,loved,yes,12,4
 4272-e,1459984976349,6,director,you too!,1365346,yes,it was fun.,loved,yes,12,2
+2966-7,1459984431608,1,matcher,Hello?,1489079,yes,Thank you!!,loved,yes,1,1
+2966-7,1459984434024,1,director,hey,1717769,yes,Good HIT...thank you.,loved,yes,1,1
+2966-7,1459984448849,1,matcher,what number is in the upper left corner?,1489079,yes,Thank you!!,loved,yes,1,8
+2966-7,1459984458436,1,matcher,Or what shape?,1489079,yes,Thank you!!,loved,yes,1,3
+2966-7,1459984478647,2,director,"whoa, what happened?",1717769,yes,Good HIT...thank you.,loved,yes,4,3
+2966-7,1459984494661,2,matcher,I submitted it. Are you supposed to tell me how to match your board?,1489079,yes,Thank you!!,loved,yes,4,14
+2966-7,1459984505921,2,director,yes...now it's borked,1717769,yes,Good HIT...thank you.,loved,yes,4,3
+2966-7,1459984516251,2,matcher,Okay well there's 6 rounds.,1489079,yes,Thank you!!,loved,yes,4,5
+2966-7,1459984545354,2,director,first one looks like a guy laying down...pointing left...square head,1717769,yes,Good HIT...thank you.,loved,yes,4,10
+2966-7,1459984562362,2,director,not laying down..i mean sitting,1717769,yes,Good HIT...thank you.,loved,yes,4,5
+2966-7,1459984592088,2,matcher,Okay got that one. What about the one that looks like a bunny rabbit sitting down? Yikes. This is a lot harder than I thought,1489079,yes,Thank you!!,loved,yes,4,25
+2966-7,1459984605236,2,director,"yeah, I might throw this back....",1717769,yes,Good HIT...thank you.,loved,yes,4,6
+2966-7,1459984612993,2,director,what do you think?,1717769,yes,Good HIT...thank you.,loved,yes,4,4
+2966-7,1459984621464,2,matcher,Lol Nah. Let's give it a shot.,1489079,yes,Thank you!!,loved,yes,4,7
+2966-7,1459984648593,2,director,"2 is a square head, then triangle, then big square, then like a rhombus butt",1717769,yes,Good HIT...thank you.,loved,yes,4,15
+2966-7,1459984685790,2,director,"3 looks like a bird, but has point in the back pointing up",1717769,yes,Good HIT...thank you.,loved,yes,4,13
+2966-7,1459984703729,2,director,"4 also looks like a bird, but does not have the point in the back",1717769,yes,Good HIT...thank you.,loved,yes,4,15
+2966-7,1459984718138,2,director,5 looks like a mouse with a square ear and a triangle ear,1717769,yes,Good HIT...thank you.,loved,yes,4,13
+2966-7,1459984737249,2,director,6 looks like some ogre with one foot off the ground,1717769,yes,Good HIT...thank you.,loved,yes,4,11
+2966-7,1459984741420,2,matcher,Got that one. I think I'm getting them right. Not sure.,1489079,yes,Thank you!!,loved,yes,4,11
+2966-7,1459984750721,2,director,7 looks like a guy with his hands up,1717769,yes,Good HIT...thank you.,loved,yes,4,9
+2966-7,1459984756602,2,director,8 looks like a bunny,1717769,yes,Good HIT...thank you.,loved,yes,4,5
+2966-7,1459984782938,2,director,"9 is just a square head, and mostly rectangular body after that",1717769,yes,Good HIT...thank you.,loved,yes,4,12
+2966-7,1459984799220,2,director,10 looks like a person pointing to the left,1717769,yes,Good HIT...thank you.,loved,yes,4,9
+2966-7,1459984821418,2,director,"11 looks like a person with two hands pointing left, and one foot off the ground",1717769,yes,Good HIT...thank you.,loved,yes,4,16
+2966-7,1459984847738,2,director,"12 is a square head, and then an undescribable body..",1717769,yes,Good HIT...thank you.,loved,yes,4,10
+2966-7,1459984870615,2,matcher,Alright. Well. Here goes nothing. You're doing a really great job! Hope this works!,1489079,yes,Thank you!!,loved,yes,4,14
+2966-7,1459984882196,3,director,"eh, not bad",1717769,yes,Good HIT...thank you.,loved,yes,10,3
+2966-7,1459984885803,3,matcher,Haha... Well 4 is better than 1 i guess.,1489079,yes,Thank you!!,loved,yes,10,9
+2966-7,1459984889213,3,director,OK,1717769,yes,Good HIT...thank you.,loved,yes,10,1
+2966-7,1459984895380,3,director,1 is the bunny,1717769,yes,Good HIT...thank you.,loved,yes,10,4
+2966-7,1459984904556,3,matcher,Got that one,1489079,yes,Thank you!!,loved,yes,10,3
+2966-7,1459984905773,3,director,2 is person pointing one hand to the left,1717769,yes,Good HIT...thank you.,loved,yes,10,9
+2966-7,1459984913210,3,director,3 is mouse looking thing,1717769,yes,Good HIT...thank you.,loved,yes,10,5
+2966-7,1459984917784,3,matcher,My left or his left?,1489079,yes,Thank you!!,loved,yes,10,5
+2966-7,1459984927210,3,director,your left,1717769,yes,Good HIT...thank you.,loved,yes,10,2
+2966-7,1459984937168,3,matcher,Gotcha okay!,1489079,yes,Thank you!!,loved,yes,10,2
+2966-7,1459984947846,3,matcher,The mouse... I truly don't see a mouse.,1489079,yes,Thank you!!,loved,yes,10,8
+2966-7,1459984965604,3,matcher,But keep going and we can try to do a process of elimination,1489079,yes,Thank you!!,loved,yes,10,13
+2966-7,1459984982945,3,director,got like a triangle ear and a square ear...pointy nose to the the left,1717769,yes,Good HIT...thank you.,loved,yes,10,14
+2966-7,1459984998177,3,matcher,Ha! I totally see it now. Okay MOUSE. Got it!,1489079,yes,Thank you!!,loved,yes,10,10
+2966-7,1459985013054,3,director,4 is guy sitting,1717769,yes,Good HIT...thank you.,loved,yes,10,4
+2966-7,1459985034497,3,director,"5 is guy with one foot off ground, head turned towards the right",1717769,yes,Good HIT...thank you.,loved,yes,10,13
+2966-7,1459985048674,3,matcher,4 is the guy sitting with his knees up with the plain square head?,1489079,yes,Thank you!!,loved,yes,10,14
+2966-7,1459985070817,3,director,yes,1717769,yes,Good HIT...thank you.,loved,yes,10,1
+2966-7,1459985084532,3,matcher,Okay got it.,1489079,yes,Thank you!!,loved,yes,10,3
+2966-7,1459985112347,3,director,"6 looks like a bird with beak pointing towards the right, and a pointer sticking up in his back",1717769,yes,Good HIT...thank you.,loved,yes,10,19
+2966-7,1459985121831,3,director,7 looks like a guy with both hands up,1717769,yes,Good HIT...thank you.,loved,yes,10,9
+2966-7,1459985138401,3,director,"8 is square head, with mostly rectangular body..",1717769,yes,Good HIT...thank you.,loved,yes,10,8
+2966-7,1459985163716,3,director,"9 is guy on one foot, two hands pointing left, and other foot pointing right",1717769,yes,Good HIT...thank you.,loved,yes,10,15
+2966-7,1459985211143,3,director,"10 is also square head, but has a pointer near the bottom pointing right",1717769,yes,Good HIT...thank you.,loved,yes,10,14
+2966-7,1459985251754,3,director,11 is hard to describe.....,1717769,yes,Good HIT...thank you.,loved,yes,10,5
+2966-7,1459985262482,3,director,12 is other bird looking thing...but no pointer in back,1717769,yes,Good HIT...thank you.,loved,yes,10,10
+2966-7,1459985284949,3,matcher,Okay I think we may have gotten them this time. At least I hope. You ready?,1489079,yes,Thank you!!,loved,yes,10,16
+2966-7,1459985292525,3,director,do it,1717769,yes,Good HIT...thank you.,loved,yes,10,2
+2966-7,1459985299692,4,matcher,Muuuch better,1489079,yes,Thank you!!,loved,yes,10,2
+2966-7,1459985300813,4,director,nice..,1717769,yes,Good HIT...thank you.,loved,yes,10,1
+2966-7,1459985307364,4,matcher,Alright this should go quicker now,1489079,yes,Thank you!!,loved,yes,10,6
+2966-7,1459985320350,4,director,1 is the hard to describe one,1717769,yes,Good HIT...thank you.,loved,yes,10,7
+2966-7,1459985331949,4,director,2 is guy pointing left with one hand,1717769,yes,Good HIT...thank you.,loved,yes,10,8
+2966-7,1459985339789,4,director,3 is bird with no pointer in back,1717769,yes,Good HIT...thank you.,loved,yes,10,8
+2966-7,1459985344807,4,director,4 is bird with pointer,1717769,yes,Good HIT...thank you.,loved,yes,10,5
+2966-7,1459985349719,4,director,5 is mousie,1717769,yes,Good HIT...thank you.,loved,yes,10,3
+2966-7,1459985373665,4,director,"6 is guy with one foot off ground, and head pointing right",1717769,yes,Good HIT...thank you.,loved,yes,10,12
+2966-7,1459985406110,4,director,"7 is mostly rectangular body, with pointer on bottom pointing right",1717769,yes,Good HIT...thank you.,loved,yes,10,11
+2966-7,1459985424241,4,director,"8 is guy on one foot, two hands out, back leg extended.",1717769,yes,Good HIT...thank you.,loved,yes,10,12
+2966-7,1459985429294,4,director,9 is guy sitting down,1717769,yes,Good HIT...thank you.,loved,yes,10,5
+2966-7,1459985449201,4,director,"10 is square head, mostly rectangular body...small pointer near head pointing right",1717769,yes,Good HIT...thank you.,loved,yes,10,12
+2966-7,1459985455544,4,director,11 is guy with two hands up,1717769,yes,Good HIT...thank you.,loved,yes,10,7
+2966-7,1459985458253,4,director,12 is bunny,1717769,yes,Good HIT...thank you.,loved,yes,10,3
+2966-7,1459985466266,4,matcher,alright awesome. Lets do this.,1489079,yes,Thank you!!,loved,yes,10,5
+2966-7,1459985474489,5,director,not bad,1717769,yes,Good HIT...thank you.,loved,yes,10,2
+2966-7,1459985482702,5,matcher,Lol we are missing 2 each time. I have two switched up somewhere.,1489079,yes,Thank you!!,loved,yes,10,13
+2966-7,1459985499274,5,director,"1 is guy with one foot up, head pointing right",1717769,yes,Good HIT...thank you.,loved,yes,10,10
+2966-7,1459985508270,5,director,2 is hard to describe damn thing,1717769,yes,Good HIT...thank you.,loved,yes,10,7
+2966-7,1459985514154,5,director,3 is bird with no pointer,1717769,yes,Good HIT...thank you.,loved,yes,10,6
+2966-7,1459985526081,5,director,"4 is square head, small pointer near head pointing right",1717769,yes,Good HIT...thank you.,loved,yes,10,10
+2966-7,1459985540298,5,director,"5 is guy on one foot, two hands pointing right",1717769,yes,Good HIT...thank you.,loved,yes,10,10
+2966-7,1459985553289,5,director,6 is guy with one hand pointing left,1717769,yes,Good HIT...thank you.,loved,yes,10,8
+2966-7,1459985560346,5,director,7 is bird with pointer on back,1717769,yes,Good HIT...thank you.,loved,yes,10,7
+2966-7,1459985565121,5,director,8 is dude sitting down,1717769,yes,Good HIT...thank you.,loved,yes,10,5
+2966-7,1459985568705,5,director,9 is mouse,1717769,yes,Good HIT...thank you.,loved,yes,10,3
+2966-7,1459985586478,5,director,"10 is square head, mostly rectangular body...pointer near bottom pointing right",1717769,yes,Good HIT...thank you.,loved,yes,10,11
+2966-7,1459985593179,5,director,11 is dude with two hands up,1717769,yes,Good HIT...thank you.,loved,yes,10,7
+2966-7,1459985596050,5,director,12 is bunny,1717769,yes,Good HIT...thank you.,loved,yes,10,3
+2966-7,1459985614305,6,director,haha,1717769,yes,Good HIT...thank you.,loved,yes,12,1
+2966-7,1459985637668,6,matcher,Alright well. I guess this is the last round. 10 out of 12 isn't too bad.,1489079,yes,Thank you!!,loved,yes,12,16
+2966-7,1459985647326,6,director,I'll take it...here we go.,1717769,yes,Good HIT...thank you.,loved,yes,12,5
+2966-7,1459985650631,6,director,1 is mouse,1717769,yes,Good HIT...thank you.,loved,yes,12,3
+2966-7,1459985678590,6,director,"2 is square head, mostly rectangular body...pointer near bottom pointing right",1717769,yes,Good HIT...thank you.,loved,yes,12,11
+2966-7,1459985686039,6,director,3 is dude with two hands up,1717769,yes,Good HIT...thank you.,loved,yes,12,7
+2966-7,1459985699095,6,director,4 is guy with one leg up...looking right,1717769,yes,Good HIT...thank you.,loved,yes,12,8
+2966-7,1459985727063,6,director,5 is the hard to describe one....like two triangles for hands?,1717769,yes,Good HIT...thank you.,loved,yes,12,11
+2966-7,1459985730983,6,director,6 is bunny,1717769,yes,Good HIT...thank you.,loved,yes,12,3
+2966-7,1459985737479,6,director,7 is bird with no pointer,1717769,yes,Good HIT...thank you.,loved,yes,12,6
+2966-7,1459985757601,6,director,8 is rectangular body..small pointer near head pointing right,1717769,yes,Good HIT...thank you.,loved,yes,12,9
+2966-7,1459985775012,6,director,9 is standing guy with one hand pointing left,1717769,yes,Good HIT...thank you.,loved,yes,12,9
+2966-7,1459985782103,6,director,10 is guy sitting down,1717769,yes,Good HIT...thank you.,loved,yes,12,5
+2966-7,1459985800234,6,director,11 is guy with two hands pointing left...one foot off ground pointing right,1717769,yes,Good HIT...thank you.,loved,yes,12,13
+2966-7,1459985814058,6,director,12 is bird with pointer on back,1717769,yes,Good HIT...thank you.,loved,yes,12,7
+2966-7,1459985839307,6,matcher,Okay let me double check right quick,1489079,yes,Thank you!!,loved,yes,12,7
+2966-7,1459985853345,6,director,OK,1717769,yes,Good HIT...thank you.,loved,yes,12,1
 4532-0,1459985556781,1,director,"image one has a square on the very top,",2448152,yes,"This was fun, especially at the end when we had our ""code"" down",loved,yes,7,9
 4532-0,1459985564979,1,director,and 2 triangles pointing to the right,2448152,yes,"This was fun, especially at the end when we had our ""code"" down",loved,yes,7,7
 4532-0,1459985578298,1,director,with a 90 degree angle on the bottom left,2448152,yes,"This was fun, especially at the end when we had our ""code"" down",loved,yes,7,9
@@ -3318,7 +3429,7 @@ gameid,msgTime,repetitionNum,role,contents,totalLength,thinksHuman,comments,rate
 4532-0,1459985741200,1,director,their back would be to the right with feet out in front,2448152,yes,"This was fun, especially at the end when we had our ""code"" down",loved,yes,7,12
 4532-0,1459985753290,1,matcher,"got it, 4?",2216809,yes,"It was intense, hard work, but also fun, especially trying to understand how someone else sees geometrical shapes and how they see the whole image as a person or other common item",loved,yes,7,3
 4532-0,1459985759760,1,director,looksl ike someone waving their arms in the air,2448152,yes,"This was fun, especially at the end when we had our ""code"" down",loved,yes,7,9
-4532-0,1459985764e3,1,director,upward,2448152,yes,"This was fun, especially at the end when we had our ""code"" down",loved,yes,7,1
+4532-0,1459985764000,1,director,upward,2448152,yes,"This was fun, especially at the end when we had our ""code"" down",loved,yes,7,1
 4532-0,1459985770997,1,matcher,"got it, 5?",2216809,yes,"It was intense, hard work, but also fun, especially trying to understand how someone else sees geometrical shapes and how they see the whole image as a person or other common item",loved,yes,7,3
 4532-0,1459985786704,1,director,"2 triangles pointing opposite directions, square on top triangle bottom left ocrner",2448152,yes,"This was fun, especially at the end when we had our ""code"" down",loved,yes,7,12
 4532-0,1459985794682,1,director,flat on the bottom right side,2448152,yes,"This was fun, especially at the end when we had our ""code"" down",loved,yes,7,6
@@ -4116,6 +4227,252 @@ gameid,msgTime,repetitionNum,role,contents,totalLength,thinksHuman,comments,rate
 7176-e,1459987443185,6,director,man with box #11,1302234,yes,My partner was great and we had tons of fun!,loved,yes,12,4
 7176-e,1459987446177,6,director,figure skater #12,1302234,yes,My partner was great and we had tons of fun!,loved,yes,12,3
 7176-e,1459987449792,6,matcher,done,1310958,yes,"It was very fun and engaging, I had a good director!",loved,yes,12,1
+3017-0,1459986366073,1,matcher,Hi! What does the image look like?,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,7
+3017-0,1459986455781,1,director,a priest holding a pan,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,5
+3017-0,1459986481542,1,matcher,ah! A diamond head and he is facing left? Standing straight?,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,11
+3017-0,1459986495313,1,director,yes,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,1
+3017-0,1459986514652,1,matcher,ok I think I got that one,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,7
+3017-0,1459986523303,1,director,okay,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,1
+3017-0,1459986553784,1,director,next one is a guy in a sleeping bag standing up almost fully,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,13
+3017-0,1459986578852,1,matcher,"ahaha, ok got it",2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,4
+3017-0,1459986624725,1,director,"next is a guy that looks like he is sitting down, maybe panhandling with no arms facing left",2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,18
+3017-0,1459986657629,1,matcher,head lowered and knees bent?,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,5
+3017-0,1459986662238,1,director,yes,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,1
+3017-0,1459986667729,1,matcher,ok done,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,2
+3017-0,1459986697255,1,director,next is an ice skater facing left on one leg arms out,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,12
+3017-0,1459986719163,1,matcher,ok!,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,1
+3017-0,1459986780915,1,director,"next one guy is facing right, on knees  and triangle arms maybe a donation taker",2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,15
+3017-0,1459986826363,1,matcher,does it have a small triangle coming out of his back,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,11
+3017-0,1459986837976,1,director,yes,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,1
+3017-0,1459986845370,1,matcher,got it,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,2
+3017-0,1459986861525,1,director,next on is a diamond on a pedastal,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,8
+3017-0,1459986878203,1,matcher,ok,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,1
+3017-0,1459986892482,1,director,next looks like an angel flying away,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,7
+3017-0,1459986904330,1,matcher,got it!,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,2
+3017-0,1459986922740,1,director,"next guy is walking with a bag, like a hobo",2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,10
+3017-0,1459986962998,1,matcher,hmm,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,1
+3017-0,1459986984135,1,director,"face looking down, heading left",2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,5
+3017-0,1459987007790,1,matcher,with a leg lifted off the ground?,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,7
+3017-0,1459987012253,1,director,yes,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,1
+3017-0,1459987017292,1,matcher,ok!,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,1
+3017-0,1459987056866,1,director,"next, another guy donating bent knees facing right",2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,8
+3017-0,1459987068232,1,matcher,ok!,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,1
+3017-0,1459987124948,1,director,next is a two petal plant on a square about to fall off the double edged triangle,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,17
+3017-0,1459987147633,1,matcher,got it,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,2
+3017-0,1459987184444,1,director,next is a square about to tumble off a slope,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,10
+3017-0,1459987190101,1,director,to the left,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,3
+3017-0,1459987216834,1,matcher,Almost looks like a woman taking her dress off?,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,9
+3017-0,1459987229059,1,director,yeah,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,1
+3017-0,1459987232279,1,matcher,ok,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,1
+3017-0,1459987265568,1,director,"next is similar, but has a crack in the middle",2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,10
+3017-0,1459987319300,1,matcher,ok! ready to submit,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,4
+3017-0,1459987324975,1,director,k,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,1
+3017-0,1459987353743,2,director,first guy offering bent knees facing right,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,7
+3017-0,1459987372672,2,matcher,ok,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,1
+3017-0,1459987400496,2,director,guy offering facing left standing straight up,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,7
+3017-0,1459987453829,2,matcher,got it,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,2
+3017-0,1459987456900,2,director,"the skater, one leg up",2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,5
+3017-0,1459987470769,2,matcher,yup!,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,1
+3017-0,1459987488253,2,director,"thing on a pedestal, crack in the middle",2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,8
+3017-0,1459987510671,2,matcher,alright,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,1
+3017-0,1459987527230,2,director,"guy on knees offering, facing right",2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,6
+3017-0,1459987542601,2,matcher,got it,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,2
+3017-0,1459987549874,2,director,homeless guy sitting left,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,4
+3017-0,1459987558580,2,matcher,mm hmm,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,2
+3017-0,1459987560243,2,director,woman taking off dress,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,4
+3017-0,1459987568679,2,matcher,k,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,1
+3017-0,1459987577638,2,director,hobo with napsak,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,3
+3017-0,1459987596301,2,matcher,got it!,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,2
+3017-0,1459987597205,2,director,angel,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,1
+3017-0,1459987604134,2,matcher,yep,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,1
+3017-0,1459987618694,2,director,thing on pedestal facing right,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,5
+3017-0,1459987627999,2,matcher,yep,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,1
+3017-0,1459987640165,2,director,two petal thing on square,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,5
+3017-0,1459987673027,2,matcher,got it,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,2
+3017-0,1459987674062,2,director,guy in sleeping bag,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,4
+3017-0,1459987700846,3,director,thing on pedestal,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,2,3
+3017-0,1459987716586,3,matcher,diamond? ok,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,2,2
+3017-0,1459987720523,3,director,guy offering standing up straight. facing left,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,2,7
+3017-0,1459987729031,3,matcher,alright,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,2,1
+3017-0,1459987749015,3,director,square on pedastal that is cracked in the middle,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,2,9
+3017-0,1459987766277,3,matcher,ok!,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,2,1
+3017-0,1459987766910,3,director,two petal thing on square,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,2,5
+3017-0,1459987779438,3,matcher,alright!,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,2,1
+3017-0,1459987780412,3,director,guy in sleeping bag,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,2,4
+3017-0,1459987785505,3,matcher,yep,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,2,1
+3017-0,1459987795670,3,director,homeless sitting left,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,2,3
+3017-0,1459987801439,3,matcher,got it,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,2,2
+3017-0,1459987802576,3,director,hobo walking,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,2,2
+3017-0,1459987808877,3,matcher,yep,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,2,1
+3017-0,1459987817759,3,director,offering bent knees facing right,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,2,5
+3017-0,1459987821325,3,matcher,k,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,2,1
+3017-0,1459987826548,3,director,the dress lady,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,2,3
+3017-0,1459987832749,3,matcher,kk,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,2,1
+3017-0,1459987836152,3,director,"the skater, one leg up",2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,2,5
+3017-0,1459987841994,3,matcher,yep,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,2,1
+3017-0,1459987850830,3,director,guy on knees offering,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,2,4
+3017-0,1459987857113,3,matcher,angel,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,2,1
+3017-0,1459987874830,3,matcher,last one the angel,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,2,4
+3017-0,1459987876996,3,matcher,alright!,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,2,1
+3017-0,1459987894712,4,director,oops,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,1
+3017-0,1459987899246,4,matcher,darn!!,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,1
+3017-0,1459987913235,4,director,"guy facing right, bent knees offering",2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,6
+3017-0,1459987930613,4,director,sorta standing,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,2
+3017-0,1459987930748,4,matcher,ok,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,1
+3017-0,1459987938879,4,director,lady with the dress,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,4
+3017-0,1459987945150,4,matcher,got it,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,2
+3017-0,1459987968697,4,director,"two petal thing on square, jagged triangle",2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,7
+3017-0,1459987974889,4,matcher,ok,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,1
+3017-0,1459987983859,4,director,hobo walking w/ napsak,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,4
+3017-0,1459987989313,4,matcher,alright,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,1
+3017-0,1459987997329,4,director,diamond on pedestal,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,3
+3017-0,1459988038642,4,matcher,ok,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,1
+3017-0,1459988043882,4,director,"man standing left, making offering",2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,5
+3017-0,1459988050659,4,matcher,got it,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,2
+3017-0,1459988058570,4,director,homeless guy sitting left,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,4
+3017-0,1459988063956,4,matcher,alright,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,1
+3017-0,1459988074993,4,director,guy on knees facing right making offering,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,7
+3017-0,1459988084629,4,matcher,yep!,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,1
+3017-0,1459988086196,4,director,angel,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,1
+3017-0,1459988096449,4,matcher,ok!,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,1
+3017-0,1459988097392,4,director,guy in sleeping bag,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,4
+3017-0,1459988102396,4,matcher,k,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,1
+3017-0,1459988105693,4,director,ice skater on one leg,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,5
+3017-0,1459988110665,4,matcher,got it,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,2
+3017-0,1459988128400,4,director,square on a thing with crack in the middle,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,9
+3017-0,1459988138252,4,matcher,ok!,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,1
+3017-0,1459988146771,5,director,dress lady,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,2
+3017-0,1459988153659,5,matcher,ok!,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,1
+3017-0,1459988156361,5,director,angel,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,1
+3017-0,1459988163221,5,matcher,got it,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,2
+3017-0,1459988169711,5,director,man standing left offering,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,4
+3017-0,1459988176074,5,matcher,yep,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,1
+3017-0,1459988183819,5,director,homeless sitting down,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,3
+3017-0,1459988188882,5,matcher,kk,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,1
+3017-0,1459988203978,5,director,two petal thing with square and jagged triangle,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,8
+3017-0,1459988210401,5,matcher,got it,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,2
+3017-0,1459988225049,5,director,"man facing right, bent knees making offering",2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,7
+3017-0,1459988233079,5,matcher,got it,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,2
+3017-0,1459988240591,5,director,skater on one leg,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,4
+3017-0,1459988247570,5,matcher,yep,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,1
+3017-0,1459988267141,5,director,guy making offering on his knees facing right,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,8
+3017-0,1459988274364,5,matcher,got it,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,2
+3017-0,1459988285909,5,director,diamond on pedestal,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,3
+3017-0,1459988293113,5,matcher,alright,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,1
+3017-0,1459988293731,5,director,hobo walking,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,2
+3017-0,1459988298622,5,matcher,yep,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,1
+3017-0,1459988302128,5,director,man in sleeping bag,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,4
+3017-0,1459988307089,5,matcher,got it,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,2
+3017-0,1459988314118,5,director,square over crack,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,3
+3017-0,1459988325291,5,matcher,"alright, one more round lets go!",2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,6
+3017-0,1459988331986,6,director,angel,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,1
+3017-0,1459988337441,6,matcher,si!,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,1
+3017-0,1459988349901,6,director,"offering facing right, on knees fully",2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,6
+3017-0,1459988360275,6,matcher,gotit,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,1
+3017-0,1459988361713,6,director,skater one leg,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,3
+3017-0,1459988368160,6,matcher,yep,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,1
+3017-0,1459988374926,6,director,offering standing facing left,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,4
+3017-0,1459988382512,6,matcher,ye[,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,1
+3017-0,1459988390813,6,director,square over crack,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,3
+3017-0,1459988402034,6,matcher,k,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,1
+3017-0,1459988404059,6,director,dress lady,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,2
+3017-0,1459988411024,6,matcher,got it,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,2
+3017-0,1459988415637,6,director,homeless sitting left,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,3
+3017-0,1459988421621,6,matcher,yep,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,1
+3017-0,1459988426310,6,director,hobo with sack,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,3
+3017-0,1459988432104,6,matcher,yep,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,1
+3017-0,1459988435433,6,director,man in sleep bag,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,4
+3017-0,1459988439716,6,matcher,kk!,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,1
+3017-0,1459988455550,6,director,"offering facing right, bent knees offering",2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,6
+3017-0,1459988461039,6,matcher,yep,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,1
+3017-0,1459988472981,6,director,"two petal on square, jagged triangle",2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,6
+3017-0,1459988477782,6,matcher,got it,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,2
+3017-0,1459988482174,6,director,thing on pedestal,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,3
+3017-0,1459988490173,6,director,sweet,2218404,yes,"Really awesome! wish there were more like this!
+Thank you!",loved,yes,12,1
+3017-0,1459988497435,6,matcher,my thoughts exactly,2214065,yes,"Great experiment! I only wish my partner were more enthusiastic, I think it would have made the game more fun!",okay,yes,12,3
 1503-c,1459986385836,1,director,Move the bunny to 4,NA,NA,NA,NA,NA,7,5
 1503-c,1459986414273,1,director,Move the sitting man to 5,NA,NA,NA,NA,NA,7,6
 1503-c,1459986443489,1,matcher,not sure which one the bunny is,NA,NA,NA,NA,NA,7,7
@@ -4252,7 +4609,7 @@ gameid,msgTime,repetitionNum,role,contents,totalLength,thinksHuman,comments,rate
 1503-c,1459989948022,3,director,It should be #2,NA,NA,NA,NA,NA,12,4
 1503-c,1459990099186,3,matcher,now i have a square at the top left of a very large figure that i cant describe  - but it has two small triangles on the right (one at top and one near bottom),NA,NA,NA,NA,NA,12,35
 1503-c,1459990163732,3,matcher,could that be 6,NA,NA,NA,NA,NA,12,4
-1503-c,1459990252e3,3,director,I don't have any square figures. Their all diamonds,NA,NA,NA,NA,NA,12,9
+1503-c,1459990252000,3,director,I don't have any square figures. Their all diamonds,NA,NA,NA,NA,NA,12,9
 1503-c,1459990287566,3,matcher,okay it is slightly tilted,NA,NA,NA,NA,NA,12,5
 1503-c,1459990329282,3,director,The only thing I have that is similar to that is #2,NA,NA,NA,NA,NA,12,12
 1503-c,1459990329644,3,matcher,the large part is wider on the bottom and then narrower as it goes up,NA,NA,NA,NA,NA,12,15
@@ -5352,7 +5709,7 @@ gameid,msgTime,repetitionNum,role,contents,totalLength,thinksHuman,comments,rate
 1796-8,1459985482350,6,matcher,no problem!,1390756,yes,"Definitely was fun, worked out well for me.",loved,yes,12,2
 2631-d,1459988131469,1,matcher,"Hi, This should be interesting!",2331865,yes,We had a great time and by the 6th round we had it down. We worked really well together. I&quotechard do it again.,loved,yes,12,5
 2631-d,1459988133676,1,director,hi there! I'm looking forward to playing with you,2475518,yes,"This was a really fun HIT! I was paired with the same partner through all the rounds, and by the end we had developed a kind of code together, where I didn&quotechart have to explain as much, but we had a shorthand for each of the symbols. I was a little sad when the task was over and I had to say goodbye :(",loved,yes,12,9
-2631-d,1459988199e3,1,director,"to start with, position 1 is the piece that looks like a standing person with no arms or legs protruding",2475518,yes,"This was a really fun HIT! I was paired with the same partner through all the rounds, and by the end we had developed a kind of code together, where I didn&quotechart have to explain as much, but we had a shorthand for each of the symbols. I was a little sad when the task was over and I had to say goodbye :(",loved,yes,12,20
+2631-d,1459988199000,1,director,"to start with, position 1 is the piece that looks like a standing person with no arms or legs protruding",2475518,yes,"This was a really fun HIT! I was paired with the same partner through all the rounds, and by the end we had developed a kind of code together, where I didn&quotechart have to explain as much, but we had a shorthand for each of the symbols. I was a little sad when the task was over and I had to say goodbye :(",loved,yes,12,20
 2631-d,1459988216895,1,director,"let me know when you have it, or if you need more information",2475518,yes,"This was a really fun HIT! I was paired with the same partner through all the rounds, and by the end we had developed a kind of code together, where I didn&quotechart have to explain as much, but we had a shorthand for each of the symbols. I was a little sad when the task was over and I had to say goodbye :(",loved,yes,12,13
 2631-d,1459988232077,1,matcher,Does their body look like they are wearing a sack?,2331865,yes,We had a great time and by the 6th round we had it down. We worked really well together. I&quotechard do it again.,loved,yes,12,10
 2631-d,1459988235709,1,director,yes,2475518,yes,"This was a really fun HIT! I was paired with the same partner through all the rounds, and by the end we had developed a kind of code together, where I didn&quotechart have to explain as much, but we had a shorthand for each of the symbols. I was a little sad when the task was over and I had to say goodbye :(",loved,yes,12,1
@@ -6835,7 +7192,7 @@ gameid,msgTime,repetitionNum,role,contents,totalLength,thinksHuman,comments,rate
 1229-a,1459990247080,1,director,#9 looks like a zombie,2973171,yes,"This game was really fun, and I would love to play it as a card game with my boyfriend!",loved,yes,12,5
 1229-a,1459990250382,1,matcher,look like they have a flag behind them?,2930388,yes,Awesome!! I had fun in this game.  It was enjoyable. ,loved,yes,12,8
 1229-a,1459990268686,1,matcher,make that #9?,2930388,yes,Awesome!! I had fun in this game.  It was enjoyable. ,loved,yes,12,3
-1229-a,1459990271e3,1,director,looking backwards,2973171,yes,"This game was really fun, and I would love to play it as a card game with my boyfriend!",loved,yes,12,2
+1229-a,1459990271000,1,director,looking backwards,2973171,yes,"This game was really fun, and I would love to play it as a card game with my boyfriend!",loved,yes,12,2
 1229-a,1459990284473,1,director,or it could nbe a flag,2973171,yes,"This game was really fun, and I would love to play it as a card game with my boyfriend!",loved,yes,12,6
 1229-a,1459990287817,1,matcher,yikes idk which one that is,2930388,yes,Awesome!! I had fun in this game.  It was enjoyable. ,loved,yes,12,6
 1229-a,1459990287839,1,director,be*,2973171,yes,"This game was really fun, and I would love to play it as a card game with my boyfriend!",loved,yes,12,1
@@ -7208,7 +7565,7 @@ gameid,msgTime,repetitionNum,role,contents,totalLength,thinksHuman,comments,rate
 8330-6,1459991824154,5,director,3 is centered diamond on platform,2382131,yes,Thanks for the chance to participate. It was fun. ,loved,yes,12,6
 8330-6,1459991835638,5,director,4 is person squatting with bowl in arms,2382131,yes,Thanks for the chance to participate. It was fun. ,loved,yes,12,8
 8330-6,1459991840043,5,director,5 is graduation speaker,2382131,yes,Thanks for the chance to participate. It was fun. ,loved,yes,12,4
-8330-6,1459991848e3,5,director,6 is person with arms wide open in the air,2382131,yes,Thanks for the chance to participate. It was fun. ,loved,yes,12,10
+8330-6,1459991848000,5,director,6 is person with arms wide open in the air,2382131,yes,Thanks for the chance to participate. It was fun. ,loved,yes,12,10
 8330-6,1459991862493,5,director,7 is person sitting their knees with bowl in arms,2382131,yes,Thanks for the chance to participate. It was fun. ,loved,yes,12,10
 8330-6,1459991867879,5,director,8 is big boob lady,2382131,yes,Thanks for the chance to participate. It was fun. ,loved,yes,12,5
 8330-6,1459991874732,5,director,9 is small house with box,2382131,yes,Thanks for the chance to participate. It was fun. ,loved,yes,12,6
@@ -7244,7 +7601,7 @@ gameid,msgTime,repetitionNum,role,contents,totalLength,thinksHuman,comments,rate
 7539-9,1459989892767,1,director,i have one that kind of looks like a guy wearing a robe with an arm outstretched,3218229,yes,,liked,yes,8,17
 7539-9,1459989897907,1,matcher,i have a diamond head with kneelind pointing right as #3,3261087,yes,I think my partner was very descriptive and very organized. He was patient. He helped a lot. We worked together. I think we did a great job. The task was long. An increase in pay would be hopeful. ,okay,yes,8,11
 7539-9,1459989918987,1,matcher,robe guy I see it what number as?,3261087,yes,I think my partner was very descriptive and very organized. He was patient. He helped a lot. We worked together. I think we did a great job. The task was long. An increase in pay would be hopeful. ,okay,yes,8,8
-7539-9,1459989923e3,1,director,#2,3218229,yes,,liked,yes,8,1
+7539-9,1459989923000,1,director,#2,3218229,yes,,liked,yes,8,1
 7539-9,1459989946379,1,director,ok so the kneeling guy,3218229,yes,,liked,yes,8,5
 7539-9,1459989950932,1,director,i have two similar ones,3218229,yes,,liked,yes,8,5
 7539-9,1459989971346,1,director,one is a diamond and 3/4 of a diamond underneath,3218229,yes,,liked,yes,8,10

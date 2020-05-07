@@ -1,11 +1,13 @@
 ---
-title: "Section 3: Structure analyses"
-output: html_notebook
+title: 'Section 3: Structure analyses'
+output:
+  html_document:
+    df_print: paged
 ---
 
 *Note: the analyses in this notebook expect certain files to have already been created by the preprocessing.Rmd and structure.ipynb notebooks*
 
-```{r}
+```{r message=FALSE,results='hide'}
 library(tidyverse)
 library(lme4)
 library(ggthemes)
@@ -16,13 +18,10 @@ library(entropy)
 library(useful)
 library(viridis)
 library(broom)
+library(broom.mixed)
 
 library(ggthemes)
 library(cowplot)
-
-# reticulate lets us import npy files with numpy python package
-library(reticulate)
-np <- import("numpy")
 
 source('../utils/analysis_helpers.R')
 ```
@@ -31,7 +30,7 @@ source('../utils/analysis_helpers.R')
 
 ## Section 3.1: The effect of matcher feedback on reduction
 
-```{r}
+```{r warning=FALSE,message=FALSE,results='hide'}
 # Import uncollapsed version of data to examine matcher
 message_df = read_csv('../../data/tangramsSequential.csv') %>%
   mutate(numRawWords = str_count(contents, "\\S+")) 
@@ -66,7 +65,7 @@ listenerMsgs %>%
           (1  | intendedName), 
         data = ., 
         family = 'binomial') %>%
-  summary()
+  tidy()
 ```
 
 ### Visualization of matcher rates (Fig. 2B)
@@ -144,23 +143,23 @@ chisq.test(tab)
 ```{r}
 feedback %>%
   filter(comparison == 'rep') %>%
-  #mutate(repetitionNum = scale(repetitionNum, scale=F)) %>%
   lmer(reduction ~ 1 + prevcorrect + I(repetitionNum) + 
          (1 + prevcorrect + I(repetitionNum) | gameid), 
        data = .,
       control=lmerControl(optimizer="bobyqa",optCtrl=list(maxfun=100000))) %>%
-  summary()
+  tidy()
 ```
 
 Test interaction with traditional regression b/c even minimal lmer does not converge
 
 ```{r}
-summary(lm(reduction ~ prevcorrectFactor * comparison, data = feedback))
+lm(reduction ~ prevcorrectFactor * comparison, data = feedback) %>%
+  tidy()
 ```
 
 Backup Bayesian mixed-effects model mentioned in footnote
 
-```{r}
+```{r warning=FALSE,message=FALSE, cache=TRUE}
 library(brms)
 library(rstan)
 brm(reduction ~ prevcorrectFactor * comparison + 
@@ -168,16 +167,14 @@ brm(reduction ~ prevcorrectFactor * comparison +
     chains = 1,
     iter = 5000,
     data = feedback) %>%
-  summary()
+  tidy()
 ```
 
 Make Fig. 2C
 
 ```{r}
-ggplot(feedback, aes(x = reduction)) +
-  geom_histogram()
-
-feedback.toplot <- feedback %>% filter(comparison == 'rep') %>%
+feedback.toplot <- feedback %>% 
+  filter(comparison == 'rep') %>%
   group_by(repetitionNum, prevcorrect) %>%
   tidyboot_mean(column = reduction, na.rm =T, nboot = 1000) 
 
@@ -200,17 +197,16 @@ ggsave('../../writing/figs/responseToFeedback.pdf',
 
 ## Section 3.2 | Breaking down the structure of reduction
 
-```{r, cache = T, warning=F}
-tagged_df <- read_csv('../outputs/posTagged_tangramsSequential_collapsed.csv', 
-                      col_types = 'ciicciiiiiiiiiiiiiiiiiiiiiii') 
+```{r, echo=FALSE,message=FALSE}
+tagged_df <- read_csv('../outputs/posTagged_tangramsSequential_collapsed.csv')
 ```
 
-### Pure reduction in utterance length
+### Pure reduction in utterance length (Fig. 2A)
 
 ```{r}
 to.plot <- tagged_df %>%
    group_by(repetitionNum) %>% 
-   tidyboot_mean(numWords, na.rm = T) 
+   tidyboot_mean(numWords, na.rm = T, nboot = 500) 
 
 to.plot %>%
    mutate(measure = '# words per tangram') %>%
@@ -231,12 +227,33 @@ ggsave('../../writing/figs/reduction.pdf',
 Statistics:
 
 ```{r}
-summary(lmer(log(numRawWords) ~ poly(repetitionNum,2) + 
+tagged_df %>% 
+   group_by(gameid, trialNum, repetitionNum, intendedName) %>% 
+   summarize(numRawWords = sum(numWords)) %>%
+  lmer(log(numRawWords) ~ poly(repetitionNum,2) + 
                (1 + repetitionNum | gameid) + 
                (1 + repetitionNum | intendedName), 
-             data = tagged_df %>% 
-               group_by(gameid, trialNum, repetitionNum, intendedName) %>% 
-               summarize(numRawWords = sum(numWords))))
+       data = .,
+       control=lmerControl(optimizer="bobyqa",optCtrl=list(maxfun=100000))) %>%
+  tidy()
+```
+
+Supplemental check -- we examined the number of total words a director produced for a tangram, but at the beginning when there is more back-and-forth dialogue, this set of words also includes responses to the matcher. Does the number of words in the *initial* description go down over time, too? (i.e. the description produced before the listener chimes in).
+
+```{r}
+message_df %>%
+  group_by(gameid, trialNum) %>%
+  mutate(uttNumInTrial = row_number()) %>%
+  filter(role == 'matcher') %>%
+  summarize(firstListenerUtt = first(uttNumInTrial)) %>%
+  right_join(message_df) %>%
+  mutate(firstListenerUtt = ifelse(is.na(firstListenerUtt), 1000, firstListenerUtt)) %>%
+  group_by(gameid, trialNum, repetitionNum) %>%
+  mutate(uttNumInTrial = row_number()) %>%
+  filter(uttNumInTrial < firstListenerUtt) %>%
+  summarize(m = sum(numRawWords)) %>%
+  group_by(repetitionNum) %>%
+  summarize(m = mean(m))
 ```
 
 ### Table 1
@@ -251,7 +268,7 @@ makeNGramTable(15)
 
 examine reduction in different parts of speech
 
-```{r}
+```{r message=F}
 read_csv('../outputs/posTagged_tangramsSequential_collapsed.csv') %>%
   group_by(repetitionNum) %>%
   summarize(numWords = sum(numWords),
@@ -281,7 +298,7 @@ ggsave('../../writing/figs/posChange.pdf',
 
 Explicitly look at reduction for each POS.
 
-```{r}
+```{r message=FALSE}
 posReduction <- tagged_df %>%
   group_by(gameid, repetitionNum) %>%
   summarize(numWords = sum(numWords),
@@ -349,11 +366,13 @@ cat('nouns reduce by', nounReductionRate, '\n')
 Stats for open class vs. closed class
 
 ```{r}
+library(broom.mixed)
+library(lmerTest)
 posReduction %>% 
   filter(cat != '?') %>%
-  lmer(diffPct ~ cat + (1 + cat | gameid) + (1 | POS),
+  lmer(diffPct ~ cat + (1 | gameid) + (1 | POS),
        data = .) %>%
-  summary()
+  tidy()
 ```
 
 ### Reduction in syntactic units (+ Supplemental Fig. 10)

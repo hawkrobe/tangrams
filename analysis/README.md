@@ -1,3 +1,10 @@
+# Quick access
+
+We have compiled html pages rendering our results directly from our analysis code for ease of access:
+
+* [Section 3](https://htmlpreview.github.io/?https://github.com/hawkrobe/tangrams/blob/master/analysis/rnotebooks/structure.html)
+* [Section 4](https://htmlpreview.github.io/?https://github.com/hawkrobe/tangrams/blob/master/analysis/rnotebooks/content.html)
+
 # Organization
 
 Because Python's NLP tools (particularly SpaCy) are stronger than R's at the time of writing, we used a mix of the two langauges.

@@ -7,7 +7,7 @@
     "csv-parse": "~0.0.6",
     "express": "^4.17.1",
     "jsonfile": "~2.4.0",
-    "node-uuid": "1.4.1",
+    "node-uuid": "1.4.8",
     "socket.io": "~1.3.0",
     "underscore": "~1.7.0"
   }

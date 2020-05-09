@@ -1,17 +1,15 @@
 ---
-title: "Section 4: Content analyses"
-output: 
+title: 'Section 4: Content analyses'
+output:
   html_document:
-    toc: true
-    toc_depth: 2
-
+    df_print: paged
 ---
 
 *Note: the analyses in this notebook expect certain files to have already been created by the preprocessing.Rmd and structure.ipynb notebooks*
 
 # Import data
 
-```{r}
+```{r message=FALSE,results='hide'}
 library(tidyverse)
 library(lme4)
 library(lmerTest)
@@ -25,10 +23,7 @@ library(viridis)
 library(broom.mixed)
 library(gganimate)
 library(modeest)
-
-# reticulate lets us import npy files with numpy python package
-library(reticulate)
-np <- import("numpy")
+library(knitr)
 
 source('../utils/analysis_helpers.R')
 ```
@@ -69,7 +64,7 @@ distinctiveness_d_raw %>%
 
 stats
 
-```{r}
+```{r, cache=TRUE, message=FALSE}
 distinctiveness_d %>% 
   glmer(finalRoundMatch ~ num_tangrams_occurred_with + 
             (1 + num_tangrams_occurred_with | intendedName) + 
@@ -77,13 +72,13 @@ distinctiveness_d %>%
         family = 'binomial', 
         control = glmerControl(optCtrl = list(maxfun = 200000)), 
         data = .) %>%
-  summary()
+  tidy()
 ```
 
-```{r}
+```{r, cache=TRUE, message=FALSE}
 distinctiveness_d %>%
   group_by(num_tangrams_occurred_with) %>%
-  tidyboot_mean(finalRoundMatch,nboot = 1000) %>%
+  tidyboot_mean(finalRoundMatch,nboot = 500) %>%
   rename(sample_size = n) %>%
   ggplot(aes(x = as.integer(num_tangrams_occurred_with), y =empirical_stat)) +
     geom_point(aes(size = sample_size), stat = 'identity') +
@@ -106,7 +101,7 @@ This gives a null distribution.
 Then we can take the highest PMI word (or words) for each tangram/gameid pair and look at the percentage of *those* that match. 
 We see that it's much higher than expected under the null.
 
-```{r}
+```{r, cache=TRUE, message=FALSE}
 nonparametric_ds = seq_len(1000) %>%
   map_dbl(~ { distinctiveness_d %>%
     group_by(intendedName, gameid) %>%
@@ -138,12 +133,13 @@ M_mat = read_csv('../outputs/meta_tangrams_embeddings.csv',
          gameID = gameid,
          target = intendedName,
          repetition = as.numeric(repetitionNum)) #%>% 
-F_mat <- np$load('../outputs/feats_tangrams_embeddings_rawavg.npy')
+
 ```
 
 ### Utterances are more similar overall within games than between games
 
-```{r}
+```{r, message=FALSE, cache=TRUE}
+load('F_mat_raw.Rdata')
 combined.df <- compute_within_vs_across(M_mat, F_mat)
 
 true_dprime = dprime(combined.df)
@@ -168,7 +164,7 @@ ggsave('../../writing/figs/across_vs_within.pdf',
 
 Stats 
 
-```{r}
+```{r, message=FALSE, cache=TRUE}
 true_lmer.within <- make_within_df(M_mat, F_mat, 'cosine') %>% 
   filter(rep2 == rep1 + 1) %>% 
   ungroup()
@@ -181,12 +177,12 @@ true_lmer.within %>%
        control = lmerControl(optimizer ='optimx', 
                              optCtrl=list(method='nlminb')),  
        data = .) %>%
-  summary()
+  tidy()
 ```
 
 Viz
 
-```{r}
+```{r, message=FALSE, cache=TRUE}
 true_lmer.within.toplot <- true_lmer.within %>%
   group_by(gameID, rep1) %>%
   summarize(m = mean(sim,na.rm=T)) %>%
@@ -215,7 +211,7 @@ ggsave('../../writing/figs/stability_mean.pdf',
 
 Stats 
 
-```{r}
+```{r, message=FALSE, cache=TRUE}
 true_lmer.across <- M_mat %>% 
    group_by(target, repetition) %>%  
    do(flatten_sim_matrix(get_sim_matrix(., F_mat, method = 'cosine'), .$gameID)) %>% 
@@ -227,7 +223,7 @@ true_lmer.across %>%
        control = lmerControl(optimizer ='optimx', 
                              optCtrl=list(method='nlminb')),  
        data = .) %>%
-  summary()
+  tidy()
 ```
 
 Viz 
@@ -348,7 +344,7 @@ Note that we explicitly do *not* normalize entropies, as this removes the contri
 
 Note: this is inefficient and takes a long time to run...
 
-```{r}
+```{r, message=FALSE, cache=TRUE}
 getCounts <- function(contents) {
   corpus <- Corpus(VectorSource(paste(contents, collapse = " ")))
   return(colSums(as.matrix(DocumentTermMatrix(corpus, control = list(
@@ -379,7 +375,7 @@ permutationTest <- function(d, sample_id) {
   return(permuted)
 }
 
-permutations <- map_dfr(seq_len(1000), ~permutationTest(d, .x)) %>%
+permutations <- map_dfr(seq_len(100), ~permutationTest(d, .x)) %>%
   group_by(intendedName) %>% 
   do(., getCI(.$meanEnt)) %>% mutate(sample_id = 'permuted')
 
@@ -410,32 +406,39 @@ ggplot(discrete.out, aes(x = empirical_stat, y = fct_reorder(factor(intendedName
 ggsave('../../writing/figs/permutedDiscrete_raw.pdf', height = 8, width = 16, units = 'cm', useDingbats = F)
 ```
 
-```{r}
-summary(lmer(ent ~ permutation + (1 + permutation | gameid) + (1 + permutation | intendedName), 
-             data = allEntropies))
-```
-
 ## Appendix B: Additional baselines for evaluating divergence
 
-we are making the claim that all people start out with something shared in how they talk about particular tangrams.
-but maybe everyone is using long utterances at the beginning which makes it look similar. 
-if that were true, then the actual content wouldn't matter. 
-if you scrambled words across tangrams within games and recompute the averaged utterance vector, then you'd expect that permutation to be equally similar. 
+we'd like to claim that all people start out with something shared in how they talk about particular tangrams.
+but maybe the similarity at the beginning is just a product of how we're averaging the embeddings, so that longer utterances are necessarily more similar.
+if that were true, then the actual content of the utterances wouldn't matter. 
+if you scramble words across tangrams within games and recompute the averaged utterance vector, then you'd expect that permutation to be equally similar. 
 instead, we find that similarity drops.
 
-
 ```{r}
-M_mat_scrambled <- read_csv('./outputs/meta_tangrams_embeddings_scrambled0.csv', col_types = "nccnlc", na = c('[nan]')) %>%
+# workaround for reticulate python integration not working with knitr
+# np <- import("numpy")
+# for(name in raw_npy_names) {
+#   mat = np$load(name)
+#   saveRDS(paste0(name, '.RData'))
+# }
+```
+
+```{r cache=TRUE}
+M_mat_scrambled <- read_csv('../outputs/meta_tangrams_embeddings_scrambled0.csv', col_types = "nccnlc", na = c('[nan]')) %>%
     mutate(feature_ind = X1 + 1, # Have to correct for R's (terrible) 1-indexing...
          gameID = gameid,
          target = intendedName,
          repetition = as.numeric(repetitionNum)) 
 
-raw_npy_names <- dir(path = './outputs/', pattern = "feats_tangrams_embeddings_rawavg_scrambled[0-9]*", full.names = T)
+raw_npy_names <- dir(path = '../outputs/', pattern = "feats_tangrams_embeddings_rawavg_scrambled[0-9]*.npy.RData", full.names = T)
+
 raw_data <- map(raw_npy_names, ~ {
+  print(.x)
+  scrambled_mat <- readRDS(paste0(.x))
    M_mat_scrambled %>% 
     group_by(target, repetition) %>%  
-    do(flatten_sim_matrix(get_sim_matrix(., np$load(.x), method = 'cosine'), .$gameID)) %>% 
+    do(flatten_sim_matrix(get_sim_matrix(., scrambled_mat,
+                                         method = 'cosine'), .$gameID)) %>% 
     ungroup() %>%
     group_by(repetition) %>%
     summarize(m = mean(sim, na.rm = T)) %>%

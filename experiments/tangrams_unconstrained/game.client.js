@@ -118,9 +118,6 @@ var client_addnewround = function(game) {
 
 // Associates callback functions corresponding to different socket messages
 var customSetup = function(game) {
-  //Store a local reference to our connection to the server
-  game.socket = io.connect();
-
   // Tell server when matncher presses the submit round button in order to advance to the next round
   $(document).ready(function() {
     $("#submitbutton").click(function(){

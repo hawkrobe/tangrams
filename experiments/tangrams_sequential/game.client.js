@@ -138,10 +138,7 @@ var client_addnewround = function(game) {
 };
 
 // Associates callback functions corresponding to different socket messages
-var customSetup = function(game) {
-  //Store a local reference to our connection to the server
-  game.socket = io.connect();
-  
+var customSetup = function(game) {  
   // Set up new round on client's browsers after submit round button is pressed. 
   // This means clear the chatboxes, update round number, and update score on screen
   game.socket.on('newRoundUpdate', function(data){

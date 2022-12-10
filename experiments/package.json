@@ -5,7 +5,7 @@
   "private": true,
   "dependencies": {
     "csv-parse": "~4.4.6",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "jsonfile": "~2.4.0",
     "node-uuid": "1.4.8",
     "socket.io": "~2.4.0",
